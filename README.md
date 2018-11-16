@@ -9,7 +9,27 @@
 	<artifactId>sdk-java</artifactId>
 	<version>1.0.7</version>
 </dependency>
+```
+如果直接使用jar包,需要自己导入依赖的包
 
+``` xml
+        <dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.47</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.3</version>
+		</dependency>
 ```
 2.使用RpcClient调用接口
 
