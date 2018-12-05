@@ -619,6 +619,32 @@ public class RpcClient {
 	}
 	
 	/**
+	 * 创建EVM合约交易 CreateTransaction
+	 * 
+	 * @param execer	执行器名称，这里固定为evm
+	 * @param actionName	操作名称，这里固定为CreateCall
+	 * @param payload	https://chain.33.cn/document/108#1.1%20%E5%88%9B%E5%BB%BAEVM%E5%90%88%E7%BA%A6%E4%BA%A4%E6%98%93%20CreateTransaction
+	 * @return
+	 * @throws Exception 
+	 */
+	public String createTransaction(String execer,String actionName,JSONObject payload) throws Exception {
+		RpcRequest postData = getPostData(RpcMethod.CREATE_TRASACTION);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("execer", execer);
+		requestParam.put("actionName", actionName);
+		requestParam.put("payload", payload);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject)) return null;
+			String result = parseObject.getString("result");
+			return result;
+		}
+		return null;
+	}
+	
+	/**
 	 *  生成预创建token 的交易
 	 * 
 	 * @param name 			token的全名，最大长度是128个字符。
