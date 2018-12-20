@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * 
- * @author logan 2018年5月14日
+ * @author logan 2018骞�5鏈�14鏃�
  */
 public class TransactionUtil {
 	
@@ -20,7 +20,7 @@ public class TransactionUtil {
 	}
 
 	/**
-	 * byte数组合并
+	 * byte鏁扮粍鍚堝苟
 	 * 
 	 * @param byte_1
 	 * @param byte_2
@@ -34,7 +34,7 @@ public class TransactionUtil {
 	}
 
 	/**
-	 * byte数组截取
+	 * byte鏁扮粍鎴彇
 	 * 
 	 * @param byteArr
 	 * @param start
@@ -65,7 +65,6 @@ public class TransactionUtil {
 		}
 
 	}
-
 
 
 	public static Long getRandomNonce() {
