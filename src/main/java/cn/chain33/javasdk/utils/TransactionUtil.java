@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * 
- * @author logan 2018骞�5鏈�14鏃�
+ * @author logan 2018年5月14日
  */
 public class TransactionUtil {
 	
@@ -20,7 +20,7 @@ public class TransactionUtil {
 	}
 
 	/**
-	 * byte鏁扮粍鍚堝苟
+	 * byte数组合并
 	 * 
 	 * @param byte_1
 	 * @param byte_2
@@ -34,7 +34,7 @@ public class TransactionUtil {
 	}
 
 	/**
-	 * byte鏁扮粍鎴彇
+	 * byte数组截取
 	 * 
 	 * @param byteArr
 	 * @param start
