@@ -75,4 +75,5 @@ client.接口();
  - submitRawTransaction(参数)    发送签名后的交易
  - sendToAddress(参数)    交易
  - createTransaction(参数) 创建合约交易
+ - CreateNoBalanceTransaction(参数) 创建代扣手续费合约交易
 
