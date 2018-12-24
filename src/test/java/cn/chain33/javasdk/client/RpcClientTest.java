@@ -18,8 +18,8 @@ import cn.chain33.javasdk.model.rpcresult.WalletStatusResult;
 
 public class RpcClientTest {
 	
-	String ip = "192.168.0.143";
-	RpcClient  client = new RpcClient(ip,8901);
+	String ip = "localhost";
+	RpcClient  client = new RpcClient(ip,8801);
 	
 	String testAddr = "1JiKPMmzRaJVbsuseSx14VK3ZLHbW9zcAf";
 	String testKey = "8f6fc7cc86e9d83179c09fdf2b03a3bf1eb307dacce9ba3af3fe7f6dbe5c0d86";
@@ -307,6 +307,18 @@ public class RpcClientTest {
 		String signRawTx = client.signRawTx(testAddr, testKey, createRawTokenFinishTx, 300 + "", 0);
 		String submitTransaction = client.submitTransaction(signRawTx);
 		System.out.println(submitTransaction);
+	}
+	
+	@Test
+	public void convertExecertoAddr() {
+		String address;
+		try {
+			address = client.convertExectoAddr("user.p.gameTest.game");
+			System.out.println(address);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 }
