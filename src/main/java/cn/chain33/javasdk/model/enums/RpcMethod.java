@@ -66,7 +66,9 @@ public enum RpcMethod {
 	
 	DUMP_PRIVKEY("Chain33.DumpPrivkey"),
 	
-	CREATE_NO_BALANCE_TX("Chain33.CreateNoBalanceTransaction");
+	CREATE_NO_BALANCE_TX("Chain33.CreateNoBalanceTransaction"),
+	
+	CONVERT_EXECER_TO_ADDRESS("Chain33.ConvertExectoAddr");
 
 	private String method;
 	

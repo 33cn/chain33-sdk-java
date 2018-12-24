@@ -615,6 +615,26 @@ public class RpcClient {
 	}
 	
 	/**
+	 * 将执行器名称换成地址
+	 * @param lang 
+	 * @return seedStr
+	 */
+	public String convertExectoAddr(String execername) {
+		RpcRequest postData = getPostData(RpcMethod.CONVERT_EXECER_TO_ADDRESS);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("execname", execername);
+		postData.addJsonParams(requestParam);
+		String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(result)) {
+			JSONObject parseObject = JSONObject.parseObject(result);
+			if (messageValidate(parseObject)) return null;
+			String address = parseObject.getString("result");
+			return address;
+		}
+		return null;
+	}
+	
+	/**
 	 * 2.4 设置标签 SetLabl
 	 * @param addr 例如 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
 	 * @param label 例如 macAddrlabel
