@@ -41,11 +41,11 @@
 		</dependency>
 		
 		<!-- utils dependency -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.bitcoinj</groupId>
 			<artifactId>bitcoinj-core</artifactId>
 			<version>0.14.7</version>
-		</dependency> -->
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -66,7 +66,7 @@
             <!-- <scope>test</scope> -->
         </dependency>
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcprov-jdk15on</artifactId>
 			<version>1.59</version>
@@ -76,7 +76,7 @@
 			<groupId>net.vrallev.ecc</groupId>
 			<artifactId>ecc-25519-java</artifactId>
 			<version>1.0.3</version>
-		</dependency> -->
+		</dependency>
 	</dependencies>
 	
 	<build>
