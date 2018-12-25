@@ -62,8 +62,16 @@ public enum RpcMethod {
 	
 	GET_ACCOUNT_BALANCE("Chain33.GetBalance"),
 	
-	CREATE_TRASACTION("Chain33.CreateTransaction");
+	CREATE_TRASACTION("Chain33.CreateTransaction"),
 	
+	DUMP_PRIVKEY("Chain33.DumpPrivkey"),
+	
+	IMPORT_PRIVKEY("Chain33.ImportPrivkey"),
+		
+	CREATE_NO_BALANCE_TX("Chain33.CreateNoBalanceTransaction"),
+	
+	CONVERT_EXECER_TO_ADDRESS("Chain33.ConvertExectoAddr");
+
 	private String method;
 	
 	private RpcMethod(String method) {

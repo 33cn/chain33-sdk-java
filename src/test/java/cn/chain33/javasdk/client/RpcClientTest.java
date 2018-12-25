@@ -17,21 +17,21 @@ import cn.chain33.javasdk.model.rpcresult.TxResult;
 import cn.chain33.javasdk.model.rpcresult.WalletStatusResult;
 
 public class RpcClientTest {
-	
-	String ip = "192.168.0.143";
-	RpcClient  client = new RpcClient(ip,8901);
-	
+
+	String ip = "localhost";
+	RpcClient client = new RpcClient(ip, 8801);
+
 	String testAddr = "1JiKPMmzRaJVbsuseSx14VK3ZLHbW9zcAf";
 	String testKey = "8f6fc7cc86e9d83179c09fdf2b03a3bf1eb307dacce9ba3af3fe7f6dbe5c0d86";
-	
+
 	@Test
 	public void checkStatus() {
 		RpcClient newClient = new RpcClient();
 		newClient.setUrl(ip, 8801);
-		
+
 		System.out.println("chain status:" + newClient.isSync());
 	}
-	
+
 	@Test
 	public void getWalletStatus() {
 		WalletStatusResult walletStatus;
@@ -41,9 +41,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void lock() {
 		BooleanResult lock;
@@ -53,9 +53,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void unlock() {
 		String passwd = "123456";
@@ -69,9 +69,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void seedGen() {
 		String seedGen;
@@ -81,9 +81,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void seedSave() {
 		String seedCn = "常 辉 觉 李 固 参 鲜 村 见 控 罩 戈 狠 亿 圣";
@@ -95,9 +95,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void seedGet() {
 		String passwd = "123456";
@@ -108,9 +108,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void newAccount() {
 		AccountResult newAccount;
@@ -120,9 +120,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void getAccounts() {
 		List<AccountResult> accountList;
@@ -134,9 +134,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void getBtyBalace() {
 		List<String> list = new ArrayList<>();
@@ -150,9 +150,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void setLabel() {
 		AccountResult accountResult;
@@ -162,10 +162,22 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
+
+	@Test
+	public void importPrivKey() {
+		String accountResult;
+		try {
+			accountResult = client.importPrivkey("3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8",
+					"genisis2");
+			System.out.println(accountResult);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 	@Test
 	public void queryTxDetail() {
 		String hash = "";
@@ -176,9 +188,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void queryCreateTokens() {
 		List<TokenResult> queryCreateTokens;
@@ -190,9 +202,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void queryUserTokens() {
 		List<TokenBalanceResult> queryAccountBalance;
@@ -204,9 +216,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void queryTokenBalace() {
 		List<String> addrList = new ArrayList<>();
@@ -220,9 +232,9 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void getTxByAddr() {
 		List<TxResult> txByAddr;
@@ -230,7 +242,7 @@ public class RpcClientTest {
 			txByAddr = client.getTxByAddr(testAddr, 0, 10, 0, -1L, 0);
 			for (TxResult txResult : txByAddr) {
 				System.out.println(txResult);
-				
+
 			}
 			for (TxResult txResult : txByAddr) {
 				System.out.println(client.queryTransaction(txResult.getHash()));
@@ -238,10 +250,8 @@ public class RpcClientTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+
 	}
-	
 
 	@Test
 	public void sendTrsansation() {
@@ -251,37 +261,36 @@ public class RpcClientTest {
 		SignType ty = SignType.SECP256K1;
 		String txHash;
 		try {
-			txHash = client.submitRawTransaction(unsignTx,sign,pubkey,ty);
+			txHash = client.submitRawTransaction(unsignTx, sign, pubkey, ty);
 			System.out.println(txHash);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@Test
 	public void transferBtyFirstFunc() throws Exception {
-		
+
 		String to = "XXXXXXXXXXXXXXXXXXX";
-		long amount =  1002;
+		long amount = 1002;
 		long fee = 1000000;
 		String note = "test transfer";
 		String tokenSymbol = "LGS";
 		String unsignTx = client.createRawTransaction(to, amount, fee, note, true, false, tokenSymbol, "");
-		
-		
+
 		String txhex = unsignTx;
 		Integer index = 1;
 		String expire = "300s";
 		String signedTX = client.signRawTx(testAddr, testKey, txhex, expire, index);
-		
+
 		client.submitTransaction(signedTX);
 	}
-	
+
 	@Test
 	public void transferBtySecondFunc() throws Exception {
-		
+
 		String from = testAddr;
 		String to = "xxxx";
 		Long amount = 1002L;
@@ -292,21 +301,34 @@ public class RpcClientTest {
 		System.out.println(txHash);
 		getAccounts();
 	}
-	
+
 	@Test
 	public void preCreateToken() throws Exception {
-		long total = (long) (1000*1e8);
-		String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS", "logan create the coin", testAddr, total, 0, (long)1e8);
+		long total = (long) (1000 * 1e8);
+		String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
+				"logan create the coin", testAddr, total, 0, (long) 1e8);
 		String signRawTx = client.signRawTx(testAddr, testKey, createRawTokenPreCreateTx, "300", 0);
 		client.submitTransaction(signRawTx);
 	}
-	
+
 	@Test
 	public void createTokenFinish() throws Exception {
-		String createRawTokenFinishTx = client.createRawTokenFinishTx((long)1e8, "LGS", testAddr);
+		String createRawTokenFinishTx = client.createRawTokenFinishTx((long) 1e8, "LGS", testAddr);
 		String signRawTx = client.signRawTx(testAddr, testKey, createRawTokenFinishTx, 300 + "", 0);
 		String submitTransaction = client.submitTransaction(signRawTx);
 		System.out.println(submitTransaction);
 	}
-	
+
+	@Test
+	public void convertExecertoAddr() {
+		String address;
+		try {
+			address = client.convertExectoAddr("user.p.gameTest.game");
+			System.out.println(address);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }
