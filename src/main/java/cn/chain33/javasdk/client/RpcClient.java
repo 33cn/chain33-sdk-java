@@ -68,7 +68,6 @@ public class RpcClient {
 
 	/**
 	 * 发送交易 SendTransaction
-	 * 
 	 * @param transactionJsonResult
 	 * @return
 	 */
@@ -88,8 +87,7 @@ public class RpcClient {
 	/**
 	 * 发送交易 SendTransaction
 	 * 
-	 * @param data
-	 *            hex transation
+	 * @param data hex transation
 	 * @return
 	 */
 	public String submitTransaction(String data) {
@@ -145,8 +143,7 @@ public class RpcClient {
 	/**
 	 * 4.2 根据哈希查询交易信息
 	 * 
-	 * @param hash
-	 *            交易hash
+	 * @param hash 交易hash
 	 */
 	public QueryTransactionResult queryTransaction(String hash) {
 		if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -175,8 +172,7 @@ public class RpcClient {
 	/**
 	 * 4.4 根据哈希数组批量获取交易信息 GetTxByHashes
 	 * 
-	 * @param hashIdList
-	 *            交易ID列表
+	 * @param hashIdList 交易ID列表
 	 * 
 	 * @return 交易结果对象列表
 	 */
@@ -213,9 +209,7 @@ public class RpcClient {
 
 	/**
 	 * 4.5 根据哈希获取交易的字符串 GetHexTxByHash
-	 * 
-	 * @param hash
-	 *            交易hash
+	 * @param hash 交易hash
 	 * @return 交易字符串
 	 */
 	public String getHexTxByHash(String hash) {
@@ -239,17 +233,9 @@ public class RpcClient {
 
 	/**
 	 * 5.2 获取区间区块 GetBlocks
-	 * 
-	 * @param start
-	 *            区块开始高度
-	 * 
-	 * @param end
-	 *            区块结束高度
-	 * 
-	 * @param isDetail
-	 *            是否获取详情
-	 * 
-	 * 
+	 * @param start 区块开始高度
+	 * @param end 区块结束高度
+	 * @param isDetail 是否获取详情
 	 */
 	public List<BlocksResult> getBlocks(Long start, Long end, boolean isDetail) {
 		JSONObject jsonObject = new JSONObject();
@@ -278,7 +264,6 @@ public class RpcClient {
 
 	/**
 	 * 5.3 获取最新的区块头 GetLastHeader
-	 * 
 	 * @return 最新区块信息
 	 */
 	public BlockResult getLastHeader() {
@@ -299,7 +284,6 @@ public class RpcClient {
 
 	/**
 	 * 5.4 获取区间区块头 GetHeaders 该接口用于获取指定高度区间的区块头部信息
-	 * 
 	 * @param start
 	 * @param end
 	 * @param isDetail
@@ -333,9 +317,7 @@ public class RpcClient {
 	/**
 	 * 5.5 获取区块的 hash 值 GetBlockHash 该接口用于获取指定高度区间的区块头部信息
 	 * 
-	 * @param height
-	 *            区块高度
-	 * 
+	 * @param height 区块高度
 	 * @return 区块hash
 	 */
 	public String getBlockHash(Long height) {
@@ -357,10 +339,7 @@ public class RpcClient {
 
 	/**
 	 * 5.6 获取区块的详细信息
-	 * 
-	 * @param hash
-	 *            区块hash
-	 * 
+	 * @param hash 区块hash
 	 */
 	public BlockOverViewResult getBlockOverview(String hash) {
 		if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -491,7 +470,6 @@ public class RpcClient {
 
 	/**
 	 * 2.1 上锁 Lock
-	 * 
 	 * @param method
 	 * @return
 	 */
@@ -513,10 +491,8 @@ public class RpcClient {
 	 * 2.2 解锁 Unlock
 	 * 
 	 * @param passwd
-	 * @param walletorticket
-	 *            true，只解锁ticket买票功能，false：解锁整个钱包。
-	 * @param timeout
-	 *            解锁时间，默认 0，表示永远解锁；非 0 值，表示超时之后继续锁住钱包，单位：秒。
+	 * @param walletorticket true，只解锁ticket买票功能，false：解锁整个钱包。
+	 * @param timeout 解锁时间，默认 0，表示永远解锁；非 0 值，表示超时之后继续锁住钱包，单位：秒。
 	 */
 	public BooleanResult unlock(String passwd, boolean walletorticket, int timeout) {
 		RpcRequest postData = getPostData(RpcMethod.UNLOCK_WALLET);
@@ -538,8 +514,7 @@ public class RpcClient {
 	}
 
 	/**
-	 * 2.5 创建账户 NewAccount
-	 * 
+	 * 2.5 创建账户 NewAccount 
 	 * @param label
 	 */
 	public AccountResult newAccount(String label) {
@@ -562,9 +537,7 @@ public class RpcClient {
 
 	/**
 	 * 7.1 生成随机的seed
-	 * 
-	 * @param lang
-	 *            lang=0:英语，lang=1:简体汉字
+	 * @param lang lang=0:英语，lang=1:简体汉字
 	 * @return seedStr
 	 */
 	public String seedGen(Integer lang) {
@@ -586,7 +559,6 @@ public class RpcClient {
 
 	/**
 	 * 7.2 保存seed并用密码加密
-	 * 
 	 * @param lang
 	 * @return seedStr
 	 */
@@ -610,7 +582,6 @@ public class RpcClient {
 
 	/**
 	 * 7.1 生成随机的seed
-	 * 
 	 * @param lang
 	 * @return seedStr
 	 */
@@ -633,7 +604,6 @@ public class RpcClient {
 
 	/**
 	 * 将执行器名称换成地址
-	 * 
 	 * @param lang
 	 * @return seedStr
 	 */
@@ -655,11 +625,8 @@ public class RpcClient {
 
 	/**
 	 * 2.4 设置标签 SetLabl
-	 * 
-	 * @param addr
-	 *            例如 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
-	 * @param label
-	 *            例如 macAddrlabel
+	 * @param addr 例如 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
+	 * @param label 例如 macAddrlabel
 	 * @return
 	 */
 	public AccountResult setlabel(String addr, String label) {
@@ -682,11 +649,8 @@ public class RpcClient {
 
 	/**
 	 * 2.6 获取账户列表 GetAccounts
-	 * 
-	 * @param testAddr
-	 *            例如 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
-	 * @param label
-	 *            例如 macAddrlabel
+	 * @param testAddr 例如 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
+	 * @param label 例如 macAddrlabel
 	 * @return
 	 */
 	public List<AccountResult> getAccountList() {
@@ -707,13 +671,9 @@ public class RpcClient {
 	/**
 	 * 创建EVM合约交易 CreateTransaction * 11.9 生成预创建token 的交易
 	 * 
-	 * @param execer
-	 *            执行器名称，这里固定为evm
-	 * @param actionName
-	 *            操作名称，这里固定为CreateCall
-	 * @param payload
-	 *            https://chain.33.cn/document/108#1.1%20%E5%88%9B%E5%BB%BAEVM%
-	 *            E5%90%88%E7%BA%A6%E4%BA%A4%E6%98%93%20CreateTransaction
+	 * @param execer 执行器名称，这里固定为evm
+	 * @param actionName 操作名称，这里固定为CreateCall
+	 * @param payload https://chain.33.cn/document/108#1.1%20%E5%88%9B%E5%BB%BAEVM%E5%90%88%E7%BA%A6%E4%BA%A4%E6%98%93%20CreateTransaction
 	 * @return
 	 * @throws Exception
 	 */
@@ -738,20 +698,13 @@ public class RpcClient {
 	/**
 	 * 11.9 生成预创建token 的交易
 	 * 
-	 * @param name
-	 *            token的全名，最大长度是128个字符。
-	 * @param symbol
-	 *            token标记符，最大长度是16个字符，且必须为大写字符。
-	 * @param introduction
-	 *            token介绍，最大长度为1024个字节。
-	 * @param ownerAddr
-	 *            token拥有者地址
-	 * @param total
-	 *            发行总量,需要乘以10的8次方，比如要发行100个币，需要100*1e8
-	 * @param price
-	 *            发行该token愿意承担的费用
-	 * @param fee
-	 *            交易的手续费
+	 * @param name token的全名，最大长度是128个字符。
+	 * @param symbol token标记符，最大长度是16个字符，且必须为大写字符。
+	 * @param introduction token介绍，最大长度为1024个字节。
+	 * @param ownerAddr token拥有者地址
+	 * @param total 发行总量,需要乘以10的8次方，比如要发行100个币，需要100*1e8
+	 * @param price 发行该token愿意承担的费用
+	 * @param fee 交易的手续费
 	 * @return 交易十六进制编码后的字符串
 	 */
 	public String createRawTokenPreCreateTx(String name, String symbol, String introduction, String ownerAddr,
@@ -780,12 +733,9 @@ public class RpcClient {
 	/**
 	 * 11.10 生成完成创建token 的交易（未签名）
 	 * 
-	 * @param symbol:
-	 *            token标记符，最大长度是16个字符，且必须为大写字符。
-	 * @param ownerAddr:
-	 *            token拥有者地址
-	 * @param fee:
-	 *            交易的手续费
+	 * @param symbol: token标记符，最大长度是16个字符，且必须为大写字符。
+	 * @param ownerAddr: token拥有者地址
+	 * @param fee: 交易的手续费
 	 * @return 交易十六进制编码后的字符串
 	 */
 	public String createRawTokenFinishTx(long fee, String symbol, String ownerAddr) {
@@ -809,19 +759,13 @@ public class RpcClient {
 	/**
 	 * 11.10 生成完成创建token 的交易（未签名）
 	 * 
-	 * @param to:
-	 *            发送到地址。
-	 * @param amount:
-	 *            发送金额。
-	 * @param fee
-	 *            手续费
-	 * @param note:
-	 *            备注。
-	 * @param isToken:
-	 *            是否是token类型的转账 （非token转账这个不用填）
+	 * @param to: 发送到地址。
+	 * @param amount: 发送金额。
+	 * @param fee 手续费
+	 * @param note: 备注。
+	 * @param isToken: 是否是token类型的转账 （非token转账这个不用填）
 	 * @param isWithdraw：是否为取款交易
-	 * @param tokenSymbol:
-	 *            token 的 symbol （非token转账这个不用填）
+	 * @param tokenSymbol: token 的 symbol （非token转账这个不用填）
 	 * @param execName：暂时不传，传coins会走到合约那边
 	 *            合约名称（"none", "coins", "hashlock", "retrieve", "ticket",
 	 *            "token", "trade"等等）
@@ -855,16 +799,12 @@ public class RpcClient {
 	 * 4.1.3.1 构造交易(平行链上会用到)
 	 * 
 	 * @param txHex
-	 * @param txHex:
-	 *            由上一步的createRawTx生成的交易再传入（比如，CreateRawTokenPreCreateTx：token预创建
+	 * @param txHex: 由上一步的createRawTx生成的交易再传入（比如，CreateRawTokenPreCreateTx：token预创建
 	 *            ；CreateRawTokenFinishTx：token完成；CreateRawTransaction：转移token）
-	 * @param payAddr:
-	 *            用于付费的地址，这个地址要在主链上存在，并且里面有比特元用于支付手续费。
-	 * @param Privkey：
-	 *            对应于payAddr的私钥。如果payAddr已经导入到平行链，那么这个私钥可以不传（建议做法是在平行链上导入地址，
+	 * @param payAddr: 用于付费的地址，这个地址要在主链上存在，并且里面有比特元用于支付手续费。
+	 * @param Privkey： 对应于payAddr的私钥。如果payAddr已经导入到平行链，那么这个私钥可以不传（建议做法是在平行链上导入地址，
 	 *            保证私钥安全）
-	 * @param Expire:
-	 *            超时时间
+	 * @param Expire: 超时时间
 	 * @return
 	 */
 	public String createRawTransaction(String txHex, String payAddr, String Privkey, String expire) {
@@ -892,12 +832,9 @@ public class RpcClient {
 	 * @param addr与key可以只输入其一
 	 * @param expire：过期时间可输入如"300ms"，"-1.5h"或者"2h45m"的字符串，有效时间单位为"ns",
 	 *            "us" (or "µs"), "ms", "s", "m", "h"。
-	 * @param index:
-	 *            若是签名交易组，则为要签名的交易序号，从1开始，小于等于0则为签名组内全部交易
-	 * @param txHex：
-	 *            上一步CreateNoBalanceTransaction生成的tx
-	 * @param index：
-	 *            固定填写2(这里是一个交易组，第1笔none的交易已经用pay address签过名了，此处签index=2的交易)
+	 * @param index: 若是签名交易组，则为要签名的交易序号，从1开始，小于等于0则为签名组内全部交易
+	 * @param txHex： 上一步CreateNoBalanceTransaction生成的tx
+	 * @param index： 固定填写2(这里是一个交易组，第1笔none的交易已经用pay address签过名了，此处签index=2的交易)
 	 * @return txhex
 	 */
 	public String signRawTx(String addr, String key, String txhex, String expire, int index) {
@@ -923,8 +860,7 @@ public class RpcClient {
 	/**
 	 * 9.2 查询地址token余额
 	 * 
-	 * @param execer:
-	 *            token 查询可用的余额 ，trade 查询正在交易合约里的token
+	 * @param execer: token 查询可用的余额 ，trade 查询正在交易合约里的token
 	 */
 	public List<AccountAccResult> getTokenBalance(List<String> addresses, String execer, String tokenSymbol) {
 		RpcRequest postData = getPostData(RpcMethod.GET_TOKEN_BALANCE);
@@ -971,8 +907,7 @@ public class RpcClient {
 	/**
 	 * 导入私钥 import privkey
 	 * 
-	 * @param key
-	 *            label
+	 * @param key label
 	 * @return
 	 */
 	public String importPrivkey(String privateKey, String label) {
@@ -996,12 +931,9 @@ public class RpcClient {
 	/**
 	 * 4.3 根据地址获取交易信息 GetTxByAddr
 	 * 
-	 * @param flag:
-	 *            0：addr 的所有交易；1：当 addr 为发送方时的交易；2：当 addr 为接收方时的交易。
-	 * @param height:
-	 *            交易所在的block高度，-1：表示从最新的开始向后取；大于等于0的值，从具体的高度+具体index开始取。
-	 * @param index:
-	 *            交易所在block中的索引，取值0--100000。
+	 * @param flag: 0：addr 的所有交易；1：当 addr 为发送方时的交易；2：当 addr 为接收方时的交易。
+	 * @param height: 交易所在的block高度，-1：表示从最新的开始向后取；大于等于0的值，从具体的高度+具体index开始取。
+	 * @param index: 交易所在block中的索引，取值0--100000。
 	 * @return
 	 */
 	public List<TxResult> getTxByAddr(String addr, Integer flag, Integer count, Integer direction, Long height,
@@ -1031,8 +963,7 @@ public class RpcClient {
 	/**
 	 * 11.6 查询所有预创建的token 11.7 查询所有创建成功的token 查询token列表
 	 * 
-	 * @param status
-	 *            0:预创建 1:创建成功 的token
+	 * @param status 0:预创建 1:创建成功 的token
 	 * @return
 	 */
 	public List<TokenResult> queryCreateTokens(Integer status) {
@@ -1063,14 +994,10 @@ public class RpcClient {
 	 * 
 	 * method: Chain33.Query。
 	 * 
-	 * @param execer:
-	 *            token
-	 * @param funcName:
-	 *            GetAccountTokenAssets
-	 * @param address:
-	 *            查询的地址
-	 * @param execer:
-	 *            token 或 trade
+	 * @param execer:  token
+	 * @param funcName: GetAccountTokenAssets
+	 * @param address: 查询的地址
+	 * @param execer: token 或 trade
 	 * @return
 	 */
 	public List<TokenBalanceResult> queryAccountBalance(String address, String payloadExecer) {
@@ -1099,10 +1026,8 @@ public class RpcClient {
 	/**
 	 * 9.1 查询地址余额
 	 * 
-	 * @param address
-	 *            地址
-	 * @param execer
-	 *            coins
+	 * @param address 地址
+	 * @param execer coins
 	 * @return
 	 */
 	public List<AccountAccResult> queryBtyBalance(List<String> addressList, String execer) {
@@ -1130,14 +1055,10 @@ public class RpcClient {
 	/**
 	 * 4.1.2 发送签名后的交易
 	 * 
-	 * @param unsignTx
-	 *            未签名的tx
-	 * @param sign
-	 *            sign:用私钥对unsigntx签名好的数据
-	 * @param pubkey
-	 *            私钥对应的公钥
-	 * @param signType
-	 *            签名类型
+	 * @param unsignTx 未签名的tx
+	 * @param sign sign:用私钥对unsigntx签名好的数据
+	 * @param pubkey 私钥对应的公钥
+	 * @param signType 签名类型
 	 * @return
 	 */
 	public String submitRawTransaction(String unsignTx, String sign, String pubkey, SignType signType) {
@@ -1163,18 +1084,12 @@ public class RpcClient {
 	 * 11.4 token转账
 	 * 
 	 * @param from
-	 * @param from:
-	 *            来源地址。
-	 * @param to:
-	 *            发送到地址。
-	 * @param amount:
-	 *            发送金额。
-	 * @param note:
-	 *            备注。
-	 * @param isToken:
-	 *            发送的是否是token。false 的情况下发送的bty
-	 * @param tokenSymbol:
-	 *            token标记符，最大长度是16个字符，且必须为大写字符。
+	 * @param from: 来源地址。
+	 * @param to: 发送到地址。
+	 * @param amount: 发送金额。
+	 * @param note: 备注。
+	 * @param isToken: 发送的是否是token。false 的情况下发送的bty
+	 * @param tokenSymbol: token标记符，最大长度是16个字符，且必须为大写字符。
 	 * @return
 	 */
 	public String sendToAddress(String from, String to, Long amount, String note, boolean isToken, String tokenSymbol) {
@@ -1200,12 +1115,9 @@ public class RpcClient {
 
 	/**
 	 * 
-	 * @param userAddr
-	 *            用户地址
-	 * @param reqStr
-	 *            请求参数
-	 * @param signAddr
-	 *            sys_sign_addr 系统签名地址？
+	 * @param userAddr 用户地址
+	 * @param reqStr 请求参数
+	 * @param signAddr sys_sign_addr 系统签名地址？
 	 * @return
 	 */
 	public String processTxGroup(String userAddr, String reqStr, String signAddr) {
@@ -1240,10 +1152,8 @@ public class RpcClient {
 	 * @descprition 在原有的交易基础上构建一个手续费代扣交易，需预先将payAddr对应的私钥导入到平行链
 	 * @author lyz
 	 * @create 2018/11/19 18:10
-	 * @param txHex
-	 *            划转交易的16进制字符串
-	 * @param payAddr
-	 *            代扣账户的地址
+	 * @param txHex 划转交易的16进制字符串
+	 * @param payAddr 代扣账户的地址
 	 * @return 包含原有划转交易与代扣交易的交易组16进制字符串
 	 */
 	public final String createNoBalanceTx(String txHex, String payAddr) {
@@ -1268,10 +1178,8 @@ public class RpcClient {
 	 * @descprition 处理RPC返回结果字符串
 	 * @author lyz
 	 * @create 2018/11/19 18:20
-	 * @param response
-	 *            RPC请求返回结果字符串
-	 * @param reqParam
-	 *            请求参数，主要是在出错的时候，显示到日志
+	 * @param response RPC请求返回结果字符串
+	 * @param reqParam 请求参数，主要是在出错的时候，显示到日志
 	 * @return RPC结果对象
 	 */
 	public static RpcResponse parseResponse(String response, String reqParam) {
