@@ -1184,7 +1184,7 @@ public class RpcClient {
 	 */
 	public static RpcResponse parseResponse(String response, String reqParam) {
 		RpcResponse rep = null;
-		if (response == null || "".equals(response) || "null".equals(response)) {
+		if (!StringUtil.isEmpty(response)) {
 			logger.info("RESPONSE:" + response);
 			rep = JSONObject.parseObject(response, RpcResponse.class);
 			if (rep.isValid()) {
