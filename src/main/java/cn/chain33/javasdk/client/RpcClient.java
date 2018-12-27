@@ -714,10 +714,10 @@ public class RpcClient {
 		requestParam.put("name", name);
 		requestParam.put("symbol", symbol);
 		requestParam.put("introduction", introduction);
-		requestParam.put("ownerAddr", ownerAddr);
+		requestParam.put("owner", ownerAddr);
 		requestParam.put("total", total);
 		requestParam.put("price", price);
-		requestParam.put("fee", fee);
+		//requestParam.put("fee", fee);
 		postData.addJsonParams(requestParam);
 		String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
 		if (StringUtil.isNotEmpty(requestResult)) {
@@ -743,7 +743,7 @@ public class RpcClient {
 		JSONObject requestParam = new JSONObject();
 		requestParam.put("fee", fee);
 		requestParam.put("symbol", symbol);
-		requestParam.put("ownerAddr", ownerAddr);
+		requestParam.put("owner", ownerAddr);
 		postData.addJsonParams(requestParam);
 		String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
 		if (StringUtil.isNotEmpty(requestResult)) {
@@ -890,7 +890,7 @@ public class RpcClient {
 	public String dumpPrivkey(String addr) {
 		RpcRequest postData = getPostData(RpcMethod.DUMP_PRIVKEY);
 		JSONObject requestParam = new JSONObject();
-		requestParam.put("ReqStr", addr);
+		requestParam.put("data", addr);
 		postData.addJsonParams(requestParam);
 		String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
 		if (StringUtil.isNotEmpty(requestResult)) {
@@ -898,7 +898,7 @@ public class RpcClient {
 			if (messageValidate(parseObject))
 				return null;
 			JSONObject resultObj = parseObject.getJSONObject("result");
-			String resultStr = resultObj.getString("replystr");
+			String resultStr = resultObj.getString("data");
 			return resultStr;
 		}
 		return null;
