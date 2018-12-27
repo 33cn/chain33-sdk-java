@@ -42,15 +42,15 @@ public enum RpcMethod {
 	
 	GET_ACCOUNT_LIST("Chain33.GetAccounts"),
 	
-	TOKEN_CREATE_PRE_CREATE_TX("Chain33.CreateRawTokenPreCreateTx"),
+	TOKEN_CREATE_PRE_CREATE_TX("token.CreateRawTokenPreCreateTx"),
 	
-	TOKEN_CREATE_FINISH_TX("Chain33.CreateRawTokenFinishTx"),
+	TOKEN_CREATE_FINISH_TX("token.CreateRawTokenFinishTx"),
 	
 	TOKEN_CREATE_RAW_TX("Chain33.CreateRawTransaction"),
 	
 	SIGN_RAW_TRANSACTION("Chain33.SignRawTx"),
 	
-	GET_TOKEN_BALANCE("Chain33.GetTokenBalance"),
+	GET_TOKEN_BALANCE("token.GetTokenBalance"),
 	
 	QUERY("Chain33.Query"),
 	
