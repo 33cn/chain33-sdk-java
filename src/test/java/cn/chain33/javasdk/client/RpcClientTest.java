@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.AccountResult;
@@ -15,14 +14,16 @@ import cn.chain33.javasdk.model.rpcresult.TokenBalanceResult;
 import cn.chain33.javasdk.model.rpcresult.TokenResult;
 import cn.chain33.javasdk.model.rpcresult.TxResult;
 import cn.chain33.javasdk.model.rpcresult.WalletStatusResult;
+import cn.chain33.javasdk.utils.HexUtil;
+import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-	String ip = "localhost";
+	String ip = "";
 	RpcClient client = new RpcClient(ip, 8801);
 
-	String testAddr = "1JiKPMmzRaJVbsuseSx14VK3ZLHbW9zcAf";
-	String testKey = "8f6fc7cc86e9d83179c09fdf2b03a3bf1eb307dacce9ba3af3fe7f6dbe5c0d86";
+	String testAddr = "address";
+	String testKey = "privateKey";
 
 	@Test
 	public void checkStatus() {
@@ -180,7 +181,7 @@ public class RpcClientTest {
 
 	@Test
 	public void queryTxDetail() {
-		String hash = "";
+		String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
 		QueryTransactionResult queryTransaction1;
 		try {
 			queryTransaction1 = client.queryTransaction(hash);
@@ -323,12 +324,44 @@ public class RpcClientTest {
 	public void convertExecertoAddr() {
 		String address;
 		try {
-			address = client.convertExectoAddr("user.p.gameTest.game");
+			address = client.convertExectoAddr("user.p.demo.game");
 			System.out.println(address);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
+	
+	@Test
+    public void createPriviteKey() {
+	    //create privateKey
+	    String hexPrivateKey = TransactionUtil.generatorPrivateKeyString();
+	    //get publicKey
+	    String hexPublicKey = TransactionUtil.getHexPubKeyFromPrivKey(hexPrivateKey);
+	    byte[] publicKeyByte = HexUtil.fromHexString(hexPublicKey);
+	    //get address
+        String genAddress = TransactionUtil.genAddress(publicKeyByte);
+        //validate address
+        boolean validAddressResult = TransactionUtil.validAddress(genAddress);
+        System.out.printf("privateKey:%s\n",hexPrivateKey);
+        System.out.printf("publicKey:%s\n",hexPublicKey);
+        System.out.printf("address:%s\n",genAddress);
+        System.out.printf("validate address:%s",validAddressResult);
+    }
+	
+	@Test
+    public void createCoinTransferTx() {
+	    String note = "";
+        String coinToken = "";
+        Long amount = 1*100000000L;//1 = real amount
+        String to = "toAddress";
+        byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
+        
+	    String fromAddressPriveteKey = testKey;
+	    String execer = "coins";
+	    String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey,to, execer, payload);
+	    String txHash = client.submitTransaction(createTransferTx);
+	    System.out.println(txHash);
+	    //queryTxDetail(txHash)
+    }
 
 }
