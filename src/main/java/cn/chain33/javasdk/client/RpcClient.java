@@ -156,7 +156,6 @@ public class RpcClient {
 		postData.addJsonParams(jsonObject);
 
 		String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-		System.out.println(result);
 		if (StringUtil.isNotEmpty(result)) {
 			JSONObject parseObject = JSONObject.parseObject(result);
 			if (messageValidate(parseObject))
