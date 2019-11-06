@@ -1,6 +1,7 @@
 package cn.chain33.javasdk.utils;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.util.Random;
@@ -14,6 +15,7 @@ import org.bouncycastle.crypto.generators.ECKeyPairGenerator;
 import org.bouncycastle.crypto.params.ECDomainParameters;
 import org.bouncycastle.crypto.params.ECKeyGenerationParameters;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
+import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
 
 import com.google.protobuf.ByteString;
 
@@ -22,6 +24,9 @@ import cn.chain33.javasdk.model.Signature;
 import cn.chain33.javasdk.model.Transaction;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TransferProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.AssetsTransfer;
+import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.CoinsAction;
 import cn.chain33.javasdk.model.sm2.SM2;
 import cn.chain33.javasdk.model.sm2.SM2.SM2Signature;
 import cn.chain33.javasdk.model.sm2.SM2KeyPair;
@@ -62,6 +67,45 @@ public class TransactionUtil {
 		System.arraycopy(byte_2, 0, byte_3, byte_1.length, byte_2.length);
 		return byte_3;
 	}
+	
+	/**
+     * 用公钥中生成地址
+     * 
+     * @description
+     * @param pubKey
+     * @return
+     */
+    public static String genAddress(byte[] pubKey) {
+        byte[] sha256 = TransactionUtil.Sha256(pubKey);
+        byte[] ripemd160 = TransactionUtil.ripemd160(sha256);
+        Address address = new Address();
+        address.setHash160(ripemd160);
+        return addressToString(address);
+    }
+    
+    /**
+     * 校验地址
+     * @description
+     * @param address
+     * @return
+     */
+    public static boolean validAddress(String address) {
+        try {
+            byte[] decodeBytes = Base58Util.decode(address);
+            byte[] checkByteByte = ByteUtils.subArray(decodeBytes, decodeBytes.length-4);
+            byte[] noCheckByte = ByteUtils.subArray(decodeBytes, 0, decodeBytes.length-4);
+            byte[] sha256 = Sha256(noCheckByte);
+            byte[] twice = Sha256(sha256);
+            for (int i = 0; i < 4; i++) {
+                if(twice[i] != checkByteByte[i]) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 	/**
 	 * byte数组截取
@@ -101,6 +145,30 @@ public class TransactionUtil {
 		return Math.abs(random.nextLong());
 	}
 	
+	public static byte[] createTransferPayLoad(String to,Long amount, String coinToken, String note) {
+        TransferProtoBuf.AssetsTransfer.Builder assetsTransferBuilder  = TransferProtoBuf.AssetsTransfer.newBuilder();
+        assetsTransferBuilder.setCointoken(coinToken);
+        assetsTransferBuilder.setAmount(amount);
+        try {
+            assetsTransferBuilder.setNote(ByteString.copyFrom(note, "utf-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        assetsTransferBuilder.setTo(to);
+        AssetsTransfer assetsTransfer = assetsTransferBuilder.build();
+        TransferProtoBuf.CoinsAction.Builder coinsActionBuilder = TransferProtoBuf.CoinsAction.newBuilder();
+        coinsActionBuilder.setTy(1);
+        coinsActionBuilder.setTransfer(assetsTransfer);
+        CoinsAction coinsAction = coinsActionBuilder.build();
+        byte[] payload = coinsAction.toByteArray();
+        return payload;
+    }
+	
+	public static String createTransferTx(String privateKey,String toAddress, String execer, byte[] payLoad) {
+        byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+        return createTxMain(privateKeyBytes,toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE,DEFAULT_FEE);
+    }
+	
 	public static String createTx(String privateKey, String execer, String payLoad) {
 		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
 		return createTx(privateKeyBytes, execer.getBytes(), payLoad.getBytes(), DEFAULT_SIGNTYPE,DEFAULT_FEE);
@@ -123,10 +191,11 @@ public class TransactionUtil {
 	 *
 	 */
 	public static String createTx(byte[] privateKey, byte[] execer, byte[] payLoad, SignType signType,long fee) {
-		return createTxMain(privateKey, execer, payLoad, signType,fee);
+	    String toAddress = getToAddress(execer);
+		return createTxMain(privateKey,toAddress, execer, payLoad, signType,fee);
 	}
 	
-	public static String createTxMain(byte[] privateKey, byte[] execer, byte[] payLoad, SignType signType,long fee) {
+	public static String createTxMain(byte[] privateKey,String toAddress, byte[] execer, byte[] payLoad, SignType signType,long fee) {
 		if (signType == null)
 			signType = DEFAULT_SIGNTYPE;
 
@@ -140,7 +209,6 @@ public class TransactionUtil {
 		transation.setFee(fee);
 		transation.setNonce(TransactionUtil.getRandomNonce());
 		// 计算To
-		String toAddress = getToAddress(execer);
 		transation.setTo(toAddress);
 		// 签名
 		byte[] protobufData = encodeProtobuf(transation);
@@ -201,6 +269,13 @@ public class TransactionUtil {
 		ECKey eckey = ECKey.fromPrivate(generatorPrivateKey);
 		return eckey.getPrivateKeyAsHex();
 	}
+	
+	public static String getHexPubKeyFromPrivKey(String privateKey) {
+        ECKey eckey = ECKey.fromPrivate(HexUtil.fromHexString(privateKey));
+        byte[] pubKey = eckey.getPubKey();
+        String pubKeyStr = HexUtil.toHexString(pubKey);
+        return pubKeyStr;
+    }
 	
 	/**
 	 */
