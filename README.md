@@ -76,10 +76,10 @@ client.接口();
  - client.sendToAddress(参数)    交易
  - client.createTransaction(参数)    创建合约交易
  - TransactionUtil.createTransferPayLoad(参数)	本地构造转账交易payload
-   TransactionUtil.createTransferTx(参数,payload)	本地构造转账交易体
-   创建好的交易体使用submitTransaction提交交易
+ - TransactionUtil.createTransferTx(参数,payload)	本地构造转账交易体
+ - 创建好的交易体使用submitTransaction提交交易
  - TransactionUtil.generatorPrivateKeyString()	创建私钥
-   TransactionUtil.getHexPubKeyFromPrivKey(私钥)	根据私钥获得公钥
-   TransactionUtil.genAddress(公钥)	根据公钥获取地址
-   TransactionUtil.validAddress(地址)	校验地址是否正确
+ - TransactionUtil.getHexPubKeyFromPrivKey(私钥)	根据私钥获得公钥
+ - TransactionUtil.genAddress(公钥)	根据公钥获取地址
+ - TransactionUtil.validAddress(地址)	校验地址是否正确
 
