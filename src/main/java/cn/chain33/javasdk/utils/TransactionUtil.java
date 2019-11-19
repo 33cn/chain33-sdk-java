@@ -40,7 +40,9 @@ public class TransactionUtil {
 	
 	private static final SignType DEFAULT_SIGNTYPE = SignType.SECP256K1;
 	
-	private static final long DEFAULT_FEE = 1000000;
+	public static final long DEFAULT_FEE = 1000000;
+	
+	private final static Long TX_HEIGHT_OFFSET = 1L<<62;
 	
 	private static byte[] addrSeed = "address seed bytes for public key".getBytes();
 	
@@ -69,11 +71,10 @@ public class TransactionUtil {
 	}
 	
 	/**
-     * 用公钥中生成地址
      * 
-     * @description
-     * @param pubKey
-     * @return
+     * @description 通过公钥生成地址
+     * @param pubKey    公钥
+     * @return  地址
      */
     public static String genAddress(byte[] pubKey) {
         byte[] sha256 = TransactionUtil.Sha256(pubKey);
@@ -84,10 +85,10 @@ public class TransactionUtil {
     }
     
     /**
-     * 校验地址
-     * @description
-     * @param address
-     * @return
+     * 
+     * @description 校验地址是否符合规则
+     * @param address   地址
+     * @return  校验结果
      */
     public static boolean validAddress(String address) {
         try {
@@ -108,7 +109,7 @@ public class TransactionUtil {
     }
 
 	/**
-	 * byte数组截取
+	 * @description byte数组截取
 	 * 
 	 * @param byteArr
 	 * @param start
@@ -145,6 +146,15 @@ public class TransactionUtil {
 		return Math.abs(random.nextLong());
 	}
 	
+	/**
+	 * 
+	 * @description 本地创建转账payload
+	 * @param to   目标地址
+	 * @param amount       数量
+	 * @param coinToken   主代币则为"",其他为token symbol
+	 * @param note 备注，没有为""
+	 * @return payload 
+	 */
 	public static byte[] createTransferPayLoad(String to,Long amount, String coinToken, String note) {
         TransferProtoBuf.AssetsTransfer.Builder assetsTransferBuilder  = TransferProtoBuf.AssetsTransfer.newBuilder();
         assetsTransferBuilder.setCointoken(coinToken);
@@ -164,6 +174,16 @@ public class TransactionUtil {
         return payload;
     }
 	
+	/**
+	 * 
+	 * @description    本地创建转账交易
+	 * @param privateKey
+	 * @param toAddress
+	 * @param execer
+	 * @param payLoad  
+	 * @return
+	 *
+	 */
 	public static String createTransferTx(String privateKey,String toAddress, String execer, byte[] payLoad) {
         byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
         return createTxMain(privateKeyBytes,toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE,DEFAULT_FEE);
@@ -179,23 +199,51 @@ public class TransactionUtil {
 		return createTx(privateKeyBytes, execer.getBytes(), payLoad.getBytes(), DEFAULT_SIGNTYPE,fee);
 	}
 	
-	/**
-	 * 
-	 * @description create transaction,then @cn.chain33.javasdk.RpcClient.submitTransaction
-	 * @param privateKey
-	 * @param execer
-	 * @param payLoad
-	 * @param signType
-	 * @param fee	num*100000000
-	 * @return
-	 *
-	 */
 	public static String createTx(byte[] privateKey, byte[] execer, byte[] payLoad, SignType signType,long fee) {
 	    String toAddress = getToAddress(execer);
 		return createTxMain(privateKey,toAddress, execer, payLoad, signType,fee);
 	}
 	
-	public static String createTxMain(byte[] privateKey,String toAddress, byte[] execer, byte[] payLoad, SignType signType,long fee) {
+	private static String createTxMain(byte[] privateKey,String toAddress, byte[] execer, byte[] payLoad, SignType signType,
+            long fee) {
+        if (signType == null)
+            signType = DEFAULT_SIGNTYPE;
+
+        // 如果没有私钥，创建私钥 privateKey =
+        if (privateKey == null) {
+            TransactionUtil.generatorPrivateKey();
+        }
+        Transaction transation = new Transaction();
+        transation.setExecer(execer);
+        transation.setPayload(payLoad);
+        transation.setFee(fee);
+        transation.setNonce(TransactionUtil.getRandomNonce());
+        // 计算To
+        transation.setTo(toAddress);
+        // 签名
+        byte[] protobufData = encodeProtobuf(transation);
+
+        sign(signType, protobufData, privateKey, transation);
+        // 序列化
+        byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
+        String transationStr = HexUtil.toHexString(encodeProtobufWithSign);
+        return transationStr;
+    }
+	
+	/**
+	 * 
+	 * @description 本地构造交易
+	 * @param privateKey   私钥
+	 * @param toAddress    目标地址
+	 * @param execer       例如user.p.xxchain.token
+	 * @param payLoad      内容
+	 * @param signType     签名方式，默认SignType.SECP256K1
+	 * @param fee          手续费
+	 * @param txHeight     联盟链需要，其他为null
+	 * @return
+	 *
+	 */
+	public static String createTxMain(byte[] privateKey,String toAddress, byte[] execer, byte[] payLoad, SignType signType,long fee,Long txHeight) {
 		if (signType == null)
 			signType = DEFAULT_SIGNTYPE;
 
@@ -208,6 +256,9 @@ public class TransactionUtil {
 		transation.setPayload(payLoad);
 		transation.setFee(fee);
 		transation.setNonce(TransactionUtil.getRandomNonce());
+		if(txHeight != null) {
+            transation.setExpire(txHeight + TX_HEIGHT_OFFSET);
+        }
 		// 计算To
 		transation.setTo(toAddress);
 		// 签名
@@ -241,9 +292,9 @@ public class TransactionUtil {
 	}
 	
 	/**
-	 * 创建私钥和公钥
+	 * @description 创建私钥和公钥
 	 * 
-	 * @return
+	 * @return 私钥
 	 */
 	public static byte[] generatorPrivateKey() {
 		int length = 0;
@@ -263,13 +314,26 @@ public class TransactionUtil {
 		} while (length != 32);
 		return privateKey;
 	}
-
+	
+	/**
+	 * 
+	 * @description 生成私钥
+	 * @return 私钥
+	 *
+	 */
 	public static String generatorPrivateKeyString() {
 		byte[] generatorPrivateKey = generatorPrivateKey();
 		ECKey eckey = ECKey.fromPrivate(generatorPrivateKey);
 		return eckey.getPrivateKeyAsHex();
 	}
 	
+	/**
+	 * 
+	 * @description 通过私钥生成公钥
+	 * @param privateKey   私钥
+	 * @return 公钥
+	 *
+	 */
 	public static String getHexPubKeyFromPrivKey(String privateKey) {
         ECKey eckey = ECKey.fromPrivate(HexUtil.fromHexString(privateKey));
         byte[] pubKey = eckey.getPubKey();
@@ -277,8 +341,6 @@ public class TransactionUtil {
         return pubKeyStr;
     }
 	
-	/**
-	 */
 	public static byte[] encodeProtobuf(Transaction transaction) {
 		TransactionProtoBuf.Transaction.Builder builder = TransactionProtoBuf.Transaction.newBuilder();
 
@@ -384,7 +446,7 @@ public class TransactionUtil {
 	}
 	
 	/**
-	 * 数据处理,sha256Twice
+	 * @description 数据处理,sha256 2次
 	 * 
 	 * @param sourceByte
 	 */

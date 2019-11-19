@@ -60,7 +60,7 @@ public enum RpcMethod {
 	
 	SEND_TO_ADDRESS("Chain33.SendToAddress"),
 	
-	GET_ACCOUNT_BALANCE("Chain33.GetBalance"),
+	GET_BALANCE("Chain33.GetBalance"),
 	
 	CREATE_TRASACTION("Chain33.CreateTransaction"),
 	

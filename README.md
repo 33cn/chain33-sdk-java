@@ -56,6 +56,7 @@ client.接口();
  - client.getTxByHashes()    根据哈希数组批量获取交易信息
  - client.getWalletStatus()    获取钱包状态
  - client.lock()    钱包上锁
+ - client.importPrivatekey()    导入私钥
  - client.unlock(passwd,walletorticket,timeout)   钱包解锁
  - client.newAccount(label)    创建账户
  - client.seedGen()    生成随机的seed
