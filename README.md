@@ -72,7 +72,7 @@ client.接口();
  - client.getTxByAddr(参数)    根据地址获取交易信息
  - client.queryCreateTokens(参数)    查询token列表
  - client.queryAccountBalance(参数)    查询地址下的token/trace合约下的token资产
- - client.queryBtyBalance(参数)    查询bty余额
+ - client.queryBalance(参数)    查询地址余额
  - client.submitRawTransaction(参数)    发送签名后的交易
  - client.sendToAddress(参数)    交易
  - client.createTransaction(参数)    创建合约交易

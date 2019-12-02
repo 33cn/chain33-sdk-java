@@ -1054,13 +1054,13 @@ public class RpcClient {
     }
 
     /**
-     * @description 查询地址bty余额
+     * @description 查询地址余额
      * 
      * @param address 地址
      * @param execer  coins
      * @return
      */
-    public List<AccountAccResult> queryBtyBalance(List<String> addressList, String execer) {
+    public List<AccountAccResult> queryBalance(List<String> addressList, String execer) {
         RpcRequest postData = getPostData(RpcMethod.GET_BALANCE);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", execer);
