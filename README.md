@@ -83,4 +83,10 @@ client.接口();
  - TransactionUtil.getHexPubKeyFromPrivKey(私钥)	根据私钥获得公钥
  - TransactionUtil.genAddress(公钥)	根据公钥获取地址
  - TransactionUtil.validAddress(地址)	校验地址是否正确
+ - StorageUtil.createOnlyNotaryStorage 创建内容存证模型(payload)
+ - StorageUtil.createHashStorage 创建哈希存证模型(payload)
+ - StorageUtil.createLinkNotaryStorage 创建链接存证模型(payload)
+ - StorageUtil.createEncryptNotaryStorage 隐私存证模型型(payload)
+ - StorageUtil.createEncryptShareNotaryStorage 创建分享隐私存证模型(payload)
+
 
