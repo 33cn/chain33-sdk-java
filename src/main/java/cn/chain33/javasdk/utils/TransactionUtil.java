@@ -46,16 +46,48 @@ public class TransactionUtil {
 	
 	private static byte[] addrSeed = "address seed bytes for public key".getBytes();
 	
-	public static String toHexString(byte[] byteArr) {
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < byteArr.length; i++) {
-			int b = byteArr[i] & 0xff;
-			String hexString = Integer.toHexString(b);
-			sb.append(hexString);
-		}
-		return sb.toString();
-	}
+    private static final long DURATION = 1;
 
+    private static final long MICROSECOND = DURATION * 1000;
+
+    private static final long MILLISECOND = MICROSECOND * 1000;
+
+    private static final long SECOND = MILLISECOND * 1000;
+
+    //private static final long MINUTE = SECOND * 1000;
+
+    private static final long EXPIREBOUND = 1000000000;
+    
+    public static String toHexString(byte[] byteArr) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < byteArr.length; i++) {
+            int b = byteArr[i] & 0xff;
+            String hexString = Integer.toHexString(b);
+            sb.append(hexString);
+        }
+        return sb.toString();
+    }
+    
+    /**
+     * 
+     * @description expire转换为纳秒为单位
+     * @param expire 单位为秒
+     * @return
+     *
+     */
+    public static long getExpire(long expire) {
+        expire = expire * EXPIREBOUND;
+        if (expire > EXPIREBOUND) {
+            if (expire < SECOND * 120) {
+                expire = SECOND * 120;
+            }
+            expire = System.currentTimeMillis() / 1000l + expire / SECOND;
+            return expire;
+        } else {
+            return expire;
+        }
+    }
+    
 	/**
 	 * byte数组合并
 	 * 
