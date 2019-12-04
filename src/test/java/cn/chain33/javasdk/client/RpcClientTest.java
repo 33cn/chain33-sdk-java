@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.AccountResult;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
@@ -19,349 +18,369 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-	String ip = "";
-	RpcClient client = new RpcClient(ip, 8801);
+    String ip = "";
+    RpcClient client = new RpcClient(ip, 8801);
 
-	String testAddr = "address";
-	String testKey = "privateKey";
+    String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
+    String withHoldAddress = "代扣地址";
 
-	@Test
-	public void checkStatus() {
-		RpcClient newClient = new RpcClient();
-		newClient.setUrl(ip, 8801);
-
-		System.out.println("chain status:" + newClient.isSync());
-	}
-
-	@Test
-	public void getWalletStatus() {
-		WalletStatusResult walletStatus;
-		try {
-			walletStatus = client.getWalletStatus();
-			System.out.println(walletStatus);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void lock() {
-		BooleanResult lock;
-		try {
-			lock = client.lock();
-			System.out.println(lock);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void unlock() {
-		String passwd = "123456";
-		passwd = "fzm123";
-		boolean walletorticket = false;
-		int timeout = 0;
-		BooleanResult unlock;
-		try {
-			unlock = client.unlock(passwd, walletorticket, timeout);
-			System.out.println(unlock);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void seedGen() {
-		String seedGen;
-		try {
-			seedGen = client.seedGen(1);
-			System.out.println(seedGen);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void seedSave() {
-		String seedCn = "常 辉 觉 李 固 参 鲜 村 见 控 罩 戈 狠 亿 圣";
-		String passwd = "123456";
-		BooleanResult booleanResult;
-		try {
-			booleanResult = client.seedSave(seedCn, passwd);
-			System.out.println(booleanResult);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void seedGet() {
-		String passwd = "123456";
-		String seedGet;
-		try {
-			seedGet = client.seedGet(passwd);
-			System.out.println(seedGet);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void newAccount() {
-		AccountResult newAccount;
-		try {
-			newAccount = client.newAccount("secondAccount");
-			System.out.println(newAccount);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void getAccounts() {
-		List<AccountResult> accountList;
-		try {
-			accountList = client.getAccountList();
-			for (AccountResult accountResult : accountList) {
-				System.out.println(accountResult);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void getBtyBalace() {
-		List<String> list = new ArrayList<>();
-		list.add("XXXXXX");
-		List<AccountAccResult> queryBtyBalance;
-		try {
-			queryBtyBalance = client.queryBtyBalance(list, "coins");
-			for (AccountAccResult accountAccResult : queryBtyBalance) {
-				System.out.println(accountAccResult);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void setLabel() {
-		AccountResult accountResult;
-		try {
-			accountResult = client.setlabel("19Sq2BSqX4CKvPMjsDsdwdfFzjUmfbSB7w", "first");
-			System.out.println(accountResult);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void importPrivKey() {
-		String accountResult;
-		try {
-			accountResult = client.importPrivkey("3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8",
-					"genisis2");
-			System.out.println(accountResult);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void queryTxDetail() {
-		String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
-		QueryTransactionResult queryTransaction1;
-		try {
-			queryTransaction1 = client.queryTransaction(hash);
-			System.out.println(queryTransaction1);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void queryCreateTokens() {
-		List<TokenResult> queryCreateTokens;
-		try {
-			queryCreateTokens = client.queryCreateTokens(1);
-			for (TokenResult tokenResult : queryCreateTokens) {
-				System.out.println(tokenResult);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void queryUserTokens() {
-		List<TokenBalanceResult> queryAccountBalance;
-		try {
-			queryAccountBalance = client.queryAccountBalance("12qyocayNF7Lv6C9qxxxxxx", "user.xxx");
-			for (TokenBalanceResult tokenBalanceResult : queryAccountBalance) {
-				System.out.println(tokenBalanceResult);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void queryTokenBalace() {
-		List<String> addrList = new ArrayList<>();
-		addrList.add("XXXXXXXXXXXX");
-		List<AccountAccResult> tokenBalance;
-		try {
-			tokenBalance = client.getTokenBalance(addrList, "XXXXXXXXXXXX", "tokenname");
-			for (AccountAccResult accountAccResult : tokenBalance) {
-				System.out.println(accountAccResult);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void getTxByAddr() {
-		List<TxResult> txByAddr;
-		try {
-			txByAddr = client.getTxByAddr(testAddr, 0, 10, 0, -1L, 0);
-			for (TxResult txResult : txByAddr) {
-				System.out.println(txResult);
-
-			}
-			for (TxResult txResult : txByAddr) {
-				System.out.println(client.queryTransaction(txResult.getHash()));
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void sendTrsansation() {
-		String unsignTx = "input unsigned tx";
-		String sign = "sign";
-		String pubkey = "public key";
-		SignType ty = SignType.SECP256K1;
-		String txHash;
-		try {
-			txHash = client.submitRawTransaction(unsignTx, sign, pubkey, ty);
-			System.out.println(txHash);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	@Test
-	public void transferBtyFirstFunc() throws Exception {
-
-		String to = "XXXXXXXXXXXXXXXXXXX";
-		long amount = 1002;
-		long fee = 1000000;
-		String note = "test transfer";
-		String tokenSymbol = "LGS";
-		String unsignTx = client.createRawTransaction(to, amount, fee, note, true, false, tokenSymbol, "");
-
-		String txhex = unsignTx;
-		Integer index = 1;
-		String expire = "300s";
-		String signedTX = client.signRawTx(testAddr, testKey, txhex, expire, index);
-
-		client.submitTransaction(signedTX);
-	}
-
-	@Test
-	public void transferBtySecondFunc() throws Exception {
-
-		String from = testAddr;
-		String to = "xxxx";
-		Long amount = 1002L;
-		String note = "test";
-		boolean isToken = true;
-		String tokenSymbol = "LGS";
-		String txHash = client.sendToAddress(from, to, amount, note, isToken, tokenSymbol);
-		System.out.println(txHash);
-		getAccounts();
-	}
-
-	@Test
-	public void preCreateToken() throws Exception {
-		long total = (long) (1000 * 1e8);
-		String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
-				"logan create the coin", testAddr, total, 0, (long) 1e8);
-		String signRawTx = client.signRawTx(testAddr, testKey, createRawTokenPreCreateTx, "300", 0);
-		client.submitTransaction(signRawTx);
-	}
-
-	@Test
-	public void createTokenFinish() throws Exception {
-		String createRawTokenFinishTx = client.createRawTokenFinishTx((long) 1e8, "LGS", testAddr);
-		String signRawTx = client.signRawTx(testAddr, testKey, createRawTokenFinishTx, 300 + "", 0);
-		String submitTransaction = client.submitTransaction(signRawTx);
-		System.out.println(submitTransaction);
-	}
-
-	@Test
-	public void convertExecertoAddr() {
-		String address;
-		try {
-			address = client.convertExectoAddr("user.p.demo.game");
-			System.out.println(address);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-    public void createPriviteKey() {
-	    //create privateKey
-	    String hexPrivateKey = TransactionUtil.generatorPrivateKeyString();
-	    //get publicKey
-	    String hexPublicKey = TransactionUtil.getHexPubKeyFromPrivKey(hexPrivateKey);
-	    byte[] publicKeyByte = HexUtil.fromHexString(hexPublicKey);
-	    //get address
-        String genAddress = TransactionUtil.genAddress(publicKeyByte);
-        //validate address
-        boolean validAddressResult = TransactionUtil.validAddress(genAddress);
-        System.out.printf("privateKey:%s\n",hexPrivateKey);
-        System.out.printf("publicKey:%s\n",hexPublicKey);
-        System.out.printf("address:%s\n",genAddress);
-        System.out.printf("validate address:%s",validAddressResult);
+    /**
+     * 
+     * @description 查询节点是否同步
+     *
+     */
+    @Test
+    public void checkStatus() {
+        System.out.println("is sync:" + client.isSync());
     }
-	
-	@Test
+
+    /**
+     * 
+     * @description 查询钱包状态
+     *
+     */
+    @Test
+    public void getWalletStatus() {
+        WalletStatusResult walletStatus;
+        walletStatus = client.getWalletStatus();
+        System.out.println(walletStatus);
+    }
+
+    /**
+     * 
+     * @description 锁定
+     *
+     */
+    @Test
+    public void lock() {
+        BooleanResult lock = client.lock();
+        System.out.println(lock);
+    }
+
+    @Test
+    public void unlock() {
+        String passwd = "123456";
+        passwd = "fzm123";
+        boolean walletorticket = false;
+        int timeout = 0;
+        BooleanResult unlock = client.unlock(passwd, walletorticket, timeout);
+        System.out.println(unlock);
+    }
+
+    /**
+     * 
+     * @description 生成seed
+     *
+     */
+    @Test
+    public void seedGen() {
+        String seedGen = client.seedGen(1);
+        System.out.println(seedGen);
+    }
+
+    /**
+     * 
+     * @description 保存seed
+     *
+     */
+    @Test
+    public void seedSave() {
+        String seedCn = "常 辉 觉 李 固 参 鲜 村 见 控 罩 戈 狠 亿 圣";
+        String passwd = "123456";
+        BooleanResult booleanResult = client.seedSave(seedCn, passwd);
+        System.out.println(booleanResult);
+    }
+
+    /**
+     * 
+     * @description 使用密码查询seed
+     *
+     */
+    @Test
+    public void seedGet() {
+        String passwd = "123456";
+        String seedGet = client.seedGet(passwd);
+        System.out.println(seedGet);
+    }
+
+    /**
+     * 
+     * @description 调用节点创建账户地址
+     *
+     */
+    @Test
+    public void newAccount() {
+        AccountResult newAccount = client.newAccount("secondAccount");
+        System.out.println(newAccount);
+    }
+
+    /**
+     * 
+     * @description 查询节点钱包 地址列表
+     *
+     */
+    @Test
+    public void getAccounts() {
+        List<AccountResult> accountList;
+        accountList = client.getAccountList();
+        for (AccountResult accountResult : accountList) {
+            System.out.println(accountResult);
+        }
+
+    }
+
+    /**
+     * 
+     * @description 查询主代币余额
+     *
+     */
+    @Test
+    public void getCoinsBalace() {
+        List<String> list = new ArrayList<>();
+        list.add("address1");
+        list.add("address2");
+        List<AccountAccResult> queryBtyBalance;
+        queryBtyBalance = client.getCoinsBalance(list, "coins", "tokenSymbol");
+        for (AccountAccResult accountAccResult : queryBtyBalance) {
+            System.out.println(accountAccResult);
+        }
+
+    }
+
+    /**
+     * 
+     * @description 查询token余额
+     *
+     */
+    @Test
+    public void getTokenBalace() {
+        List<String> addressList = new ArrayList<>();
+        addressList.add("address1");
+        addressList.add("address2");
+        List<AccountAccResult> queryBtyBalance;
+        queryBtyBalance = client.getTokenBalance(addressList, "user.p.xxchain.token", "tokenSymbol");
+        for (AccountAccResult accountAccResult : queryBtyBalance) {
+            System.out.println(accountAccResult);
+        }
+    }
+
+    /**
+     * 
+     * @description 设置地址label
+     * 
+     */
+    @Test
+    public void setLabel() {
+        AccountResult accountResult;
+        accountResult = client.setlabel("19Sq2BSqX4CKvPMjsDsdwdfFzjUmfxxxx", "first");
+        System.out.println(accountResult);
+
+    }
+
+    /**
+     * 
+     * @description 导入私钥
+     *
+     */
+    @Test
+    public void importPrivKey() {
+        String accountResult;
+        accountResult = client.importPrivatekey("privatekey", "labelname");
+        System.out.println(accountResult);
+
+    }
+
+    /**
+     * @description 查询交易hash详情
+     *
+     */
+    @Test
+    public void queryTxDetail() {
+        String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
+        QueryTransactionResult queryTransaction1;
+        queryTransaction1 = client.queryTransaction(hash);
+        System.out.println(queryTransaction1);
+        // 如果是上链内容,读取上链内容
+        String rawpayload = queryTransaction1.getTx().getRawpayload();
+        String content = new String(HexUtil.fromHexString(rawpayload));
+        System.out.println(content);
+
+    }
+
+    /**
+     * 
+     * @description 查询已经创建成功的token
+     *
+     */
+    @Test
+    public void queryCreateTokens() {
+        List<TokenResult> queryCreateTokens;
+        queryCreateTokens = client.queryCreateTokens(1);
+        for (TokenResult tokenResult : queryCreateTokens) {
+            System.out.println(tokenResult);
+        }
+
+    }
+
+    /**
+     * 
+     * @description 查询某地址下得token/合约资产列表
+     *
+     */
+    @Test
+    public void queryUserTokens() {
+        List<TokenBalanceResult> queryAccountBalance;
+        queryAccountBalance = client.queryAccountBalance("12qyocayNF7Lv6C9qxxxxxx", "user.p.xxchain.coins");
+        for (TokenBalanceResult tokenBalanceResult : queryAccountBalance) {
+            System.out.println(tokenBalanceResult);
+        }
+
+    }
+
+    /**
+     * 
+     * @description 查询地址列表token余额
+     *
+     */
+    @Test
+    public void queryTokenBalace() {
+        List<String> addrList = new ArrayList<>();
+        addrList.add("XXXXXXXXXXXX");
+        List<AccountAccResult> tokenBalance;
+        tokenBalance = client.getTokenBalance(addrList, "user.p.xxchain.token", "tokenSymbol");
+        for (AccountAccResult accountAccResult : tokenBalance) {
+            System.out.println(accountAccResult);
+        }
+
+    }
+
+    /**
+     * 
+     * @description 查询某地址的交易hash
+     *
+     */
+    @Test
+    public void getTxByAddr() {
+        List<TxResult> txByAddr;
+        txByAddr = client.getTxByAddr("address", 0, 10, 0, -1L, 0);
+        for (TxResult txResult : txByAddr) {
+            System.out.println(txResult);
+        }
+        for (TxResult txResult : txByAddr) {
+            System.out.println(client.queryTransaction(txResult.getHash()));
+        }
+    }
+
+    /**
+     * 
+     * @description 预创建token
+     */
+    @Test
+    public void preCreateToken() {
+        long total = (long) (1000 * 1e8);
+        // 调用节点接口预创建token 返回hash
+        String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
+                "logan create the coin", "owner address", total, 0, (long) 1e8);
+        // 签名
+        String signRawTx = client.signRawTx("address", "addressPrivateKey", createRawTokenPreCreateTx, "300", 0);
+        client.submitTransaction(signRawTx);
+    }
+
+    /**
+     * 
+     * @description 完成token创建
+     */
+    @Test
+    public void createTokenFinish() {
+        String createRawTokenFinishTx = client.createRawTokenFinishTx((long) 1e8, "LGS", "address");
+        String signRawTx = client.signRawTx("address", "addressPrivateKey", createRawTokenFinishTx, 300 + "", 0);
+        String submitTransaction = client.submitTransaction(signRawTx);
+        System.out.println(submitTransaction);
+    }
+
+    /**
+     * @description 合约转为地址
+     */
+    @Test
+    public void convertExecertoAddr() {
+        String address;
+        address = client.convertExectoAddr("user.p.demo.game");
+        System.out.println(address);
+    }
+
+    /**
+     * @description 本地创建私钥->公钥->地址
+     */
+    @Test
+    public void createPriviteKey() {
+        // create privateKey
+        String hexPrivateKey = TransactionUtil.generatorPrivateKeyString();
+        // get publicKey
+        String hexPublicKey = TransactionUtil.getHexPubKeyFromPrivKey(hexPrivateKey);
+        byte[] publicKeyByte = HexUtil.fromHexString(hexPublicKey);
+        // get address
+        String genAddress = TransactionUtil.genAddress(publicKeyByte);
+        // validate address
+        boolean validAddressResult = TransactionUtil.validAddress(genAddress);
+        System.out.printf("privateKey:%s\n", hexPrivateKey);
+        System.out.printf("publicKey:%s\n", hexPublicKey);
+        System.out.printf("address:%s\n", genAddress);
+        System.out.printf("validate address:%s", validAddressResult);
+    }
+
+    /**
+     * @description 本地构造转账交易
+     */
+    @Test
     public void createCoinTransferTx() {
-	    String note = "";
-        String coinToken = "";
-        Long amount = 1*100000000L;//1 = real amount
+        String note = "";
+        String coinToken = "";// 具体看createTransferPayLoad注释
+        Long amount = 1 * 100000000L;// 1 = real amount
         String to = "toAddress";
         byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
-        
-	    String fromAddressPriveteKey = testKey;
-	    String execer = "coins";
-	    String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey,to, execer, payload);
-	    String txHash = client.submitTransaction(createTransferTx);
-	    System.out.println(txHash);
-	    //queryTxDetail(txHash)
+
+        String fromAddressPriveteKey = "from addrss privateKey";
+        String execer = "coins";
+        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, to, execer, payload);
+        String txHash = client.submitTransaction(createTransferTx);
+        System.out.println(txHash);
+    }
+
+    /**
+     * @description 本地构造上链交易数据。数据大手续费越高,推荐压缩之后再上链。
+     */
+    @Test
+    public void uploadDateToChain() {
+        String transactionHash = TransactionUtil.createTx(withHoldPrivateKey, "user.p.xxchain.coins", "content",
+                TransactionUtil.DEFAULT_FEE);
+        // 创建代扣交易 创建交易上链需要消耗手续费
+        String noBalanceHash = client.createNoBalanceTx(transactionHash, withHoldAddress);
+        String signedTxHash = client.signRawTx("user address", null, noBalanceHash, "1h", 2);
+        String withHoldTx = client.submitTransaction(signedTxHash);
+        System.out.println(withHoldTx);
+    }
+
+    /**
+     * @description 通过节点构造token/主代币转账
+     */
+    @Test
+    public void transferToken() {
+        String toAddr = "to address";
+        String tokenSymBol = "tokenSymbol";
+        String fromAddr = "from address";
+        Long amount = 10L;
+        Long tranAmount = amount * 100000000L;
+        Boolean isToken = false;// false为主代币转账，tokenSymbol不传，为""，true为token转账
+        // 通过节点创建转账交易
+        String rawTx = client.createRawTransaction(toAddr, tranAmount, TransactionUtil.DEFAULT_FEE, "", isToken, false,
+                tokenSymBol, null);
+        // 通过节点创建代扣交易
+        String createNoBalanceTx = client.createNoBalanceTx(rawTx, withHoldAddress);
+        // 通过节点签名
+        String signRawTx = client.signRawTx(fromAddr, null, createNoBalanceTx, "1h", 2);
+        // 发送交易
+        String signedTxHex = client.submitTransaction(signRawTx);
+        System.out.println(signedTxHex);
     }
 
 }
