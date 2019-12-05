@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
+import java.util.List;
 import java.util.Random;
 
 import org.bitcoinj.core.ECKey;
@@ -23,6 +24,7 @@ import cn.chain33.javasdk.model.Address;
 import cn.chain33.javasdk.model.Signature;
 import cn.chain33.javasdk.model.Transaction;
 import cn.chain33.javasdk.model.enums.SignType;
+import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.AssetsTransfer;
@@ -458,6 +460,92 @@ public class TransactionUtil {
 			break;
 		}
 	}
+	
+	/**
+	 * 
+	 * @description  本地签名
+	 * @param privateKey   私钥
+	 * @param expire   秒数
+	 * @param txHex    上一步CreateNoBalanceTransaction生成的交易hash 16进制
+	 * @param index    是签名交易组，则为要签名的交易序号，从1开始，小于等于0则为签名组内全部交易
+	 * @return
+	 *
+	 */
+    public static String signRawTx(String privateKey, long expire, String txHex, Integer index) throws Exception {
+        // 1.检查私钥是否存在 ->存在：->byte
+        if (StringUtil.isEmpty(privateKey)) {
+            throw new Exception("privateKey not Exist");
+        }
+        byte[] privKeyBytes = HexUtil.fromHexString(privateKey);
+        RawTransactionProtobuf.Transaction.Builder txBuilder = RawTransactionProtobuf.Transaction.newBuilder();
+        RawTransactionProtobuf.Transaction rawtransactionProtobuf = txBuilder.mergeFrom(HexUtil.fromHexString(txHex))
+                .build();
+        long changedExpire = getExpire(expire);
+        txBuilder.setExpire(changedExpire);
+        // 如果执行器为privacy 暂时不处理
+        /*
+         * if(Arrays.equals(ExecerPrivacy,rawtransactionProtobuf.getExecer().toByteArray
+         * ())) { //signTxWithPrivacy }
+         */
+        int groupCount = rawtransactionProtobuf.getGroupCount();
+        if (groupCount < 0 || groupCount == 1 || groupCount > 20) {
+            throw new Exception("ErrTxGroupCount");
+        } else if (groupCount > 0) {
+            byte[] txsBytes = rawtransactionProtobuf.getHeader().toByteArray();
+            RawTransactionProtobuf.Transactions.Builder txsBuilder = RawTransactionProtobuf.Transactions.newBuilder();
+            RawTransactionProtobuf.Transactions txs = txsBuilder.mergeFrom(txsBytes).build();
+            List<RawTransactionProtobuf.Transaction> txsList = txs.getTxsList();
+            if (index > txsList.size()) {
+                throw new Exception("ErrIndex");
+            }
+            if (index <= 0) {
+                for (int i = 0; i < txsList.size(); i++) {
+                    RawTransactionProtobuf.Transaction signTransactionsN = signTransactionsN(i, txsList, privKeyBytes);
+                    txsList.set(i, signTransactionsN);
+                }
+                RawTransactionProtobuf.Transaction transaction = txsList.get(0);
+                transaction.toBuilder().setHeader(ByteString.copyFrom(txs.toByteArray()));
+                byte[] byteArray = transaction.toByteArray();
+                String signHexString = HexUtil.toHexString(byteArray);
+                return signHexString;
+            }
+            index--;
+            RawTransactionProtobuf.Transaction signTransactionsN = signTransactionsN(index, txsList, privKeyBytes);
+            txsList.set(index, signTransactionsN);
+            RawTransactionProtobuf.Transaction transactionFirst = txsList.get(0);
+            transactionFirst.toBuilder().setHeader(ByteString.copyFrom(txs.toByteArray()));
+            byte[] byteArray = transactionFirst.toByteArray();
+            String signHexString = HexUtil.toHexString(byteArray);
+            return signHexString;
+        } else {
+            byte[] rawTxProtobufBytes = txBuilder.build().toByteArray();
+            RawTransactionProtobuf.Signature signatureProtobuf = signRawTx(rawTxProtobufBytes, privKeyBytes, txBuilder);
+            txBuilder.setSignature(signatureProtobuf);
+            String signedTx = HexUtil.toHexString(txBuilder.build().toByteArray());
+            return signedTx;
+        }
+    }
+    
+    private static RawTransactionProtobuf.Transaction signTransactionsN(int n,
+            List<RawTransactionProtobuf.Transaction> transactionList, byte[] privKeyBytes) {
+        RawTransactionProtobuf.Transaction.Builder newTxBuilder = transactionList.get(n).toBuilder();
+        RawTransactionProtobuf.Signature txSignature = signRawTx(transactionList.get(n).toByteArray(), privKeyBytes,
+                newTxBuilder);
+        newTxBuilder.setSignature(txSignature);
+        return newTxBuilder.build();
+    }
+
+    private static RawTransactionProtobuf.Signature signRawTx(byte[] data, byte[] privateKey,
+            RawTransactionProtobuf.Transaction.Builder txBuilder) {
+        Signature btcCoinSign = btcCoinSign(data, privateKey);
+        RawTransactionProtobuf.Signature.Builder signatureBuilder = RawTransactionProtobuf.Signature.newBuilder();
+        signatureBuilder.setPubkey(ByteString.copyFrom(btcCoinSign.getPubkey()));
+        signatureBuilder.setTy(btcCoinSign.getTy());
+        signatureBuilder.setSignature(ByteString.copyFrom(btcCoinSign.getSignature()));
+        RawTransactionProtobuf.Signature signatureProtuBuff = signatureBuilder.build();
+        return signatureProtuBuff;
+    }
+
 	
 	public static String addressToString(Address address) {
 		if (StringUtil.isEmpty(address.getEnc58Str())) {
