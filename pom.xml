@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>cn.chain33</groupId>
-	<artifactId>sdk-java</artifactId>
+	<artifactId>chain33-sdk-java</artifactId>
 	<version>1.0.8</version>
 	<packaging>jar</packaging>
 	
