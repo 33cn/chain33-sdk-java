@@ -1116,7 +1116,8 @@ public class RpcClient {
      * @param to:          发送到地址。
      * @param amount:      发送金额。
      * @param note:        备注。
-     * @param isToken:     发送的是否是token。false 的情况下发送的bty
+     * @param isToken:     发送的是否是token。false 的情况下发送的bt
+     * 
      * @param tokenSymbol: token标记符，最大长度是16个字符，且必须为大写字符。
      * @return
      */
