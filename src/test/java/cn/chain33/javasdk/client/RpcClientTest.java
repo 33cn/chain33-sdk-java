@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.AccountResult;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
@@ -381,6 +382,32 @@ public class RpcClientTest {
         // 发送交易
         String signedTxHex = client.submitTransaction(signRawTx);
         System.out.println(signedTxHex);
+    }
+    
+    /**
+     * 
+     * @description 本地创建转账交易,调用createNoBlance之后再将返回的数据解析,签名，发送交易
+     *
+     */
+    @Test
+    public void localTransfer() {
+        String note = "";
+        String coinToken = "XX";//具体的token名称
+        Long amount = 1 * 100000000L;// 转账数量为1
+        String to = "toAddress";//转账目标地址
+        byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
+        String fromAddressPriveteKey = "";//转账地址私钥
+        String execer = "user.p.xxchain.coins";//合约地址
+        String execerAddress = "execerAddress";//通过convertExectoAddr(execer)获取
+        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, execerAddress, execer, payload);
+        //create no balance 传入地址为空
+        String createNoBalanceTx = client.createNoBalanceTx(createTransferTx, "");
+        // 解析交易
+        List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+        String withHoldPrivateKey = "";//createNoBalance这一步签名的私钥,比如说代扣地址
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, execerAddress, fromAddressPriveteKey, withHoldPrivateKey);
+        String submitTransaction = client.submitTransaction(hexString);
+        System.out.println("submitTransaction:" + submitTransaction);
     }
 
 }

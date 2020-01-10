@@ -23,6 +23,7 @@ import com.google.protobuf.ByteString;
 import cn.chain33.javasdk.model.Address;
 import cn.chain33.javasdk.model.Signature;
 import cn.chain33.javasdk.model.Transaction;
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
@@ -594,5 +595,176 @@ public class TransactionUtil {
 		signature.setTy(SignType.SECP256K1.getType());
 		return signature;
 	}
+	
+	public static TransactionProtoBuf.Transaction decodeTxToProtobuf(DecodeRawTransaction unSignedTransaction, String execerAddress) {
+        TransactionProtoBuf.Transaction.Builder newBuilder = TransactionProtoBuf.Transaction.newBuilder();
+        newBuilder.setExecer(ByteString.copyFrom(unSignedTransaction.getExecer().getBytes()));
+        newBuilder.setExpire(unSignedTransaction.getExpire());
+        newBuilder.setFee(unSignedTransaction.getFee());
+        newBuilder.setNonce(unSignedTransaction.getNonce());
+        newBuilder.setPayload(ByteString.copyFrom(HexUtil.fromHexString(unSignedTransaction.getRawPayload())));
+        if(StringUtil.isEmpty(execerAddress)) {
+            newBuilder.setTo(unSignedTransaction.getTo());
+        }else {
+            newBuilder.setTo(execerAddress);
+        }
+        newBuilder.setHeader(ByteString.copyFrom(HexUtil.fromHexString(unSignedTransaction.getHeader())));
+        newBuilder.setNonce(unSignedTransaction.getNonce());
+        if(StringUtil.isNotEmpty(unSignedTransaction.getNext())) {
+            newBuilder.setNext(ByteString.copyFrom(HexUtil.fromHexString(unSignedTransaction.getNext())));
+        }
+        if(unSignedTransaction.getPayload() == null) {
+            newBuilder.setPayload(ByteString.copyFrom(HexUtil.fromHexString(unSignedTransaction.getRawPayload())));
+        }
+        if(unSignedTransaction.getGroupCount() != null) {
+            newBuilder.setGroupCount(unSignedTransaction.getGroupCount());
+        }
+        TransactionProtoBuf.Signature.Builder signatureBuilder = TransactionProtoBuf.Signature.newBuilder();
+        signatureBuilder.setTy(unSignedTransaction.getSignature().getTy());
+        signatureBuilder.setPubkey(ByteString.copyFrom(HexUtil.fromHexString(unSignedTransaction.getSignature().getPubkey())));
+        signatureBuilder.setSignature(ByteString.copyFrom(HexUtil.fromHexString(unSignedTransaction.getSignature().getSignature())));
+        newBuilder.setSignature(signatureBuilder.build());
+        return newBuilder.build();
+    }
+	
+	public static String signDecodeTx(List<DecodeRawTransaction> decodeRawTransactions,String execerAddress,String fromAddressPriveteKey,String withHoldPrivateKey) {
+        DecodeRawTransaction unSignedTransaction = null;
+        DecodeRawTransaction signedSeconedTx = null;
+        for (DecodeRawTransaction decodeRawTransaction2 : decodeRawTransactions) {
+            if (StringUtil.isEmpty(decodeRawTransaction2.getSignature().getSignature())) {
+                unSignedTransaction = decodeRawTransaction2;
+            } else {
+                signedSeconedTx = decodeRawTransaction2;
+            }
+        }
+        // 签名none交易 用代扣地址签名
+        
+        TransactionProtoBuf.Transaction noneTx = decodeTxToProtobuf(unSignedTransaction, null);
+        TransactionProtoBuf.Transaction unNoneTx = TransactionUtil.decodeTxToProtobuf(signedSeconedTx,"17hJRNrW9WgFJJ3mhhnnezWydwVLk3SN8y");
+        TransactionProtoBuf.Transaction.Builder unNoneTxBuilder = unNoneTx.toBuilder();
+        
+        String unNoneHash = TransactionUtil.getHash(unNoneTxBuilder.build(), execerAddress);
+        
+        TransactionProtoBuf.Transaction.Builder noneBuilder = TransactionProtoBuf.Transaction.newBuilder(noneTx);
+        noneBuilder.setNext(ByteString.copyFrom(HexUtil.fromHexString(unNoneHash)));
+        //noneBuilder.setGroupCount(2);
+        String noneHash = TransactionUtil.getHash(noneBuilder.build());
+        noneBuilder.setHeader(ByteString.copyFrom(HexUtil.fromHexString(noneHash)));
+        
+        unNoneTxBuilder.setHeader(ByteString.copyFrom(HexUtil.fromHexString(noneHash)));
+        TransactionProtoBuf.Transaction firstTxNew = unNoneTxBuilder.build();
+        
+        TransactionProtoBuf.Transaction noneTxNew = noneBuilder.build();
+        noneTxNew = TransactionUtil.signProbuf(noneTxNew,withHoldPrivateKey);
+        firstTxNew = TransactionUtil.signProbuf(firstTxNew, fromAddressPriveteKey);
+        
+        // 创建交易组
+        TransactionProtoBuf.Transactions.Builder txsBuilder = TransactionProtoBuf.Transactions.newBuilder();
+        txsBuilder.addTxs(noneTxNew);
+        txsBuilder.addTxs(firstTxNew);
+        TransactionProtoBuf.Transactions txs = txsBuilder.build();
+        TransactionProtoBuf.Transaction.Builder thirdBuilder = TransactionProtoBuf.Transaction.newBuilder(noneTxNew);
+        thirdBuilder.setHeader(ByteString.copyFrom(txs.toByteArray()));
+        TransactionProtoBuf.Transaction submitTx = thirdBuilder.build();
+        String groupTx = HexUtil.toHexString(submitTx.toByteArray());
+        return groupTx;
+    }
+	
+	public static String getHash(TransactionProtoBuf.Transaction transaction) {
+        TransactionProtoBuf.Transaction.Builder builder = TransactionProtoBuf.Transaction.newBuilder();
+        if(transaction.getPayload() != ByteString.EMPTY) {
+            builder.setPayload(transaction.getPayload());
+        }
+        builder.setExecer(transaction.getExecer());
+        builder.setFee(transaction.getFee());
+        builder.setExpire(0L);
+        builder.setNonce(transaction.getNonce());
+        builder.setTo(transaction.getTo());
+        builder.setGroupCount(transaction.getGroupCount());
+        if(transaction.getNext() != ByteString.EMPTY) {
+            builder.setNext(transaction.getNext());
+        }
+        TransactionProtoBuf.Transaction build = builder.build();
+        byte[] byteArray = build.toByteArray();
+        return HexUtil.toHexString(Sha256(byteArray));
+    }
+    
+    public static String getHash(TransactionProtoBuf.Transaction transaction,String to) {
+        TransactionProtoBuf.Transaction.Builder builder = TransactionProtoBuf.Transaction.newBuilder();
+        if(transaction.getPayload() != ByteString.EMPTY) {
+            builder.setPayload(transaction.getPayload());
+        }
+        builder.setExecer(transaction.getExecer());
+        builder.setFee(transaction.getFee());
+        builder.setExpire(0L);
+        builder.setNonce(transaction.getNonce());
+        if(!StringUtil.isEmpty(to)) {
+            builder.setTo(to);
+        }else {
+            builder.setTo(transaction.getTo());
+        }
+        
+        builder.setGroupCount(transaction.getGroupCount());
+        if(transaction.getNext() != ByteString.EMPTY) {
+            builder.setNext(transaction.getNext());
+        }
+        TransactionProtoBuf.Transaction build = builder.build();
+        byte[] byteArray = build.toByteArray();
+        return HexUtil.toHexString(Sha256(byteArray));
+    }
+    
+    /**
+     * 
+     * @description 签名
+     * @param tx
+     * @param privateKey
+     * @return
+     *
+     * @create 2020年1月9日 下午6:35:16
+     */
+    public static TransactionProtoBuf.Transaction signProbuf(TransactionProtoBuf.Transaction tx,String privateKey) {
+        TransactionProtoBuf.Transaction encodeTx = getSignProbuf(tx);
+        byte[] protobufData = encodeTx.toByteArray();
+        byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+        Signature btcCoinSign = btcCoinSign(protobufData, privateKeyBytes);
+        TransactionProtoBuf.Transaction.Builder builder = tx.toBuilder();
+        TransactionProtoBuf.Signature.Builder signatureBuilder = TransactionProtoBuf.Signature.newBuilder();
+        signatureBuilder.setPubkey(ByteString.copyFrom(btcCoinSign.getPubkey()));
+        signatureBuilder.setTy(btcCoinSign.getTy());
+        signatureBuilder.setSignature(ByteString.copyFrom(btcCoinSign.getSignature()));        // 序列化
+        TransactionProtoBuf.Transaction.Builder setSignature = builder.setSignature(signatureBuilder.build());
+        return setSignature.build();
+    }
+    
+    /**
+     * 
+     * @description 获取签名需要的protobuf
+     * @param tx
+     * @return
+     *
+     * @author lgang
+     * @create 2020年1月9日 下午6:35:30
+     */
+    public static TransactionProtoBuf.Transaction getSignProbuf(TransactionProtoBuf.Transaction tx) {
+        TransactionProtoBuf.Transaction.Builder builder = TransactionProtoBuf.Transaction.newBuilder();
+        builder.setExecer(tx.getExecer());
+        builder.setExpire(tx.getExpire());
+        builder.setFee(tx.getFee());
+        builder.setNonce(tx.getNonce());
+        builder.setPayload(tx.getPayload());
+        builder.setTo(tx.getTo());
+        if(tx.getNext() != null) {
+            builder.setNext(tx.getNext());
+        }
+        if(tx.getHeader() != null) {
+            builder.setHeader(tx.getHeader());
+        }
+        if(tx.getGroupCount() != 0) {
+            builder.setGroupCount(tx.getGroupCount());
+        }
+        TransactionProtoBuf.Transaction build = builder.build();
+        return build;
+    }
+
 	
 }
