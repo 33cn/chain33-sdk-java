@@ -640,7 +640,7 @@ public class TransactionUtil {
         // 签名none交易 用代扣地址签名
         
         TransactionProtoBuf.Transaction noneTx = decodeTxToProtobuf(unSignedTransaction, null);
-        TransactionProtoBuf.Transaction unNoneTx = TransactionUtil.decodeTxToProtobuf(signedSeconedTx,"17hJRNrW9WgFJJ3mhhnnezWydwVLk3SN8y");
+        TransactionProtoBuf.Transaction unNoneTx = TransactionUtil.decodeTxToProtobuf(signedSeconedTx,execerAddress);
         TransactionProtoBuf.Transaction.Builder unNoneTxBuilder = unNoneTx.toBuilder();
         
         String unNoneHash = TransactionUtil.getHash(unNoneTxBuilder.build(), execerAddress);
