@@ -677,7 +677,7 @@ public class TransactionUtil {
         }
         builder.setExecer(transaction.getExecer());
         builder.setFee(transaction.getFee());
-        builder.setExpire(0L);
+        builder.setExpire(transaction.getExpire());
         builder.setNonce(transaction.getNonce());
         builder.setTo(transaction.getTo());
         builder.setGroupCount(transaction.getGroupCount());
