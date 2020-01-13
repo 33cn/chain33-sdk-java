@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSONObject;
 
 import cn.chain33.javasdk.model.RpcRequest;
 import cn.chain33.javasdk.model.RpcResponse;
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.RpcMethod;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
@@ -1176,6 +1177,26 @@ public class RpcClient {
         }
         return txHash;
     }
+    
+
+    public List<DecodeRawTransaction> decodeRawTransaction(String rawTx) {
+        RpcRequest postData = getPostData(RpcMethod.DECODE_RAW_TX);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("txHex", rawTx);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultObj = parseObject.getJSONObject("result");
+            JSONArray jsonArray = resultObj.getJSONArray("txs");
+            List<DecodeRawTransaction> javaList = jsonArray.toJavaList(DecodeRawTransaction.class);
+            return javaList;
+        }
+        return null;
+    }
+
 
     /**
      * @descprition 在原有的交易基础上构建一个手续费代扣交易，需预先将payAddr对应的私钥导入到平行链
@@ -1192,7 +1213,7 @@ public class RpcClient {
         requestParam.put("expire", "1h");
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (requestResult != null || "".equals(requestResult) || "null".equals(requestResult)) {
+        if (requestResult == null || "".equals(requestResult) || "null".equals(requestResult)) {
             logger.error("create no balance tx error");
         }
         RpcResponse parseResponse = parseResponse(requestResult, requestParam.toJSONString());
@@ -1212,7 +1233,7 @@ public class RpcClient {
      */
     public static RpcResponse parseResponse(String response, String reqParam) {
         RpcResponse rep = null;
-        if (response == null || "".equals(response) || "null".equals(response)) {
+        if (response != null && !"".equals(response) && !"null".equals(response)) {
             logger.info("RESPONSE:" + response);
             rep = JSONObject.parseObject(response, RpcResponse.class);
             if (rep.isValid()) {

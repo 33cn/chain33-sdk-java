@@ -70,7 +70,9 @@ public enum RpcMethod {
 		
 	CREATE_NO_BALANCE_TX("Chain33.CreateNoBalanceTransaction"),
 	
-	CONVERT_EXECER_TO_ADDRESS("Chain33.ConvertExectoAddr");
+	CONVERT_EXECER_TO_ADDRESS("Chain33.ConvertExectoAddr"),
+	
+	DECODE_RAW_TX("Chain33.DecodeRawTransaction");
 
 	private String method;
 	
