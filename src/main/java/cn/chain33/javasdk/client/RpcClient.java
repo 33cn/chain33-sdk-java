@@ -532,6 +532,7 @@ public class RpcClient {
         }
         return null;
     }
+    
 
     /**
      * @description 生成随机的seed
@@ -893,13 +894,12 @@ public class RpcClient {
      * @param tokenSymbol   主代币名称
      * @return  余额列表
      */
-    public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer, String tokenSymbol) {
+    public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer) {
         RpcRequest postJsonData = new RpcRequest();
         postJsonData.setMethod(RpcMethod.GET_BALANCE);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addresses", addresses);
         requestParam.put("execer", execer);
-        requestParam.put("tokenSymbol", tokenSymbol);
         postJsonData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postJsonData.toJsonString());
         if (StringUtil.isNotEmpty(requestResult)) {

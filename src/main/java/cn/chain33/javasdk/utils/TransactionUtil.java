@@ -23,6 +23,7 @@ import com.google.protobuf.ByteString;
 import cn.chain33.javasdk.model.Address;
 import cn.chain33.javasdk.model.Signature;
 import cn.chain33.javasdk.model.Transaction;
+import cn.chain33.javasdk.model.TransferBalanceRequest;
 import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
@@ -304,6 +305,34 @@ public class TransactionUtil {
 		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
 		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationHash;
+	}
+	
+	/**
+	 * 构造转帐交易，并签名
+	 * 
+	 * @return 交易hash
+	 */
+	public static String transferBalanceMain(TransferBalanceRequest transferBalanceRequest) {
+		String to = transferBalanceRequest.getTo();
+		Long amount = transferBalanceRequest.getAmount();
+		String coinToken = transferBalanceRequest.getCoinToken();
+		String note = transferBalanceRequest.getNote();
+		SignType signType = transferBalanceRequest.getSignType();
+		String privateKey = transferBalanceRequest.getFromPrivateKey();
+		String execer = transferBalanceRequest.getExecer();
+		long fee = transferBalanceRequest.getFee();
+		byte[] payload = createTransferPayLoad(to, amount, coinToken, note);
+		
+		byte[] execerBytes;
+		if (StringUtil.isNotEmpty(execer)) {
+			execerBytes = execer.getBytes();
+		} else {
+			execerBytes = "none".getBytes();
+		}
+		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+		
+		String transferTx = createTxMain(privateKeyBytes,to, execerBytes, payload, signType, fee);
+		return transferTx;
 	}
 	
 	/**

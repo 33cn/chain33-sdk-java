@@ -141,11 +141,10 @@ public class RpcClientTest {
         list.add("address1");
         list.add("address2");
         List<AccountAccResult> queryBtyBalance;
-        queryBtyBalance = client.getCoinsBalance(list, "coins", "tokenSymbol");
+        queryBtyBalance = client.getCoinsBalance(list, "coins");
         for (AccountAccResult accountAccResult : queryBtyBalance) {
             System.out.println(accountAccResult);
         }
-
     }
 
     /**
@@ -309,26 +308,6 @@ public class RpcClientTest {
         System.out.println(address);
     }
 
-    /**
-     * @description 本地创建私钥->公钥->地址
-     */
-    @Test
-    public void createPriviteKey() {
-        // create privateKey
-        String hexPrivateKey = TransactionUtil.generatorPrivateKeyString();
-        // get publicKey
-        String hexPublicKey = TransactionUtil.getHexPubKeyFromPrivKey(hexPrivateKey);
-        byte[] publicKeyByte = HexUtil.fromHexString(hexPublicKey);
-        // get address
-        String genAddress = TransactionUtil.genAddress(publicKeyByte);
-        // validate address
-        boolean validAddressResult = TransactionUtil.validAddress(genAddress);
-        System.out.printf("privateKey:%s\n", hexPrivateKey);
-        System.out.printf("publicKey:%s\n", hexPublicKey);
-        System.out.printf("address:%s\n", genAddress);
-        System.out.printf("validate address:%s", validAddressResult);
-    }
-
 
     /**
      * @description 本地构造上链交易数据。数据大手续费越高,推荐压缩之后再上链。
@@ -344,28 +323,6 @@ public class RpcClientTest {
         System.out.println(withHoldTx);
     }
     
-    /**
-     * @description 本地构造主链主代币转账交易
-     */
-    @Test
-    public void createCoinTransferTxMain() {
-    	// 转账说明
-        String note = "转账说明";
-        // 主代币则为"",其他为token
-        String coinToken = "";
-        Long amount = 1 * 100000000L;// 1 = real amount
-        // 转到的地址
-        String to = "toAddress";
-        // 本地构造转账交易的payload
-        byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
-        // 签名私私钥
-        String fromAddressPriveteKey = "from addrss privateKey";
-        // 执行器名称，主链主代币固定为coins
-        String execer = "coins";
-        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, to, execer, payload);
-        String txHash = client.submitTransaction(createTransferTx);
-        System.out.println(txHash);
-    }
     
     /**
      * @description 本地构造平行链主代币转账交易
