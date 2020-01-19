@@ -700,6 +700,24 @@ public class RpcClient {
         }
         return null;
     }
+    
+    /**
+     * 调用管理合约（创建黑名单， 创建token-finisher）
+     * 
+     * @param execer
+     * @param actionName
+     * @param superManager
+     * @return
+     * @throws Exception 
+     */
+    public String createManageTransaction(String execer, String actionName, String key, String value, String op, String superManager) throws Exception {
+    	JSONObject blackListPayload = new JSONObject();
+    	blackListPayload.put("key", key);
+    	blackListPayload.put("value", value);
+    	blackListPayload.put("op", op);
+    	String managerResult = createTransaction(execer, actionName, blackListPayload);
+    	return null;
+    }
 
     /**
      * @description 生成预创建token的交易
