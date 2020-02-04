@@ -409,5 +409,16 @@ public class RpcClientTest {
         String submitTransaction = client.submitTransaction(hexString);
         System.out.println("submitTransaction:" + submitTransaction);
     }
+    
+    
+    /**
+     * @description 本地将执行器转为地址
+     */
+    @Test
+    public void convertExeceToAddress() {
+        String exece = "user.p.demo.game";
+        String addr = TransactionUtil.convertExectoAddr(exece);
+        System.out.println(addr);
+    }
 
 }

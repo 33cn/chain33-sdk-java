@@ -765,6 +765,18 @@ public class TransactionUtil {
         TransactionProtoBuf.Transaction build = builder.build();
         return build;
     }
+    
+    /**
+     * 
+     * @description 将执行器名称转为地址
+     * @param exec 执行器名称
+     * @return
+     *
+     */
+    public static String convertExectoAddr(String exec) {
+        String toAddress = getToAddress(exec.getBytes());
+        return toAddress;
+    }
 
 	
 }
