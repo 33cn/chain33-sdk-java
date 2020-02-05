@@ -64,8 +64,9 @@ client.接口();
  - client.seedGet(passwd)    通过钱包密码获取钱包的seed原文
  - client.setlabel(addr,label)    设置标签
  - client.getAccountList()     获取账户列表
- - client.createRawTokenPreCreateTx(参数)    生成预创建token的交易
- - client.createRawTokenFinishTx(参数)   生成完成创建token 的交易（未签名）
+ - client.createRawTokenPreCreateTx(参数)    创建预创建token的交易（未签名）
+ - client.createRawTokenFinishTx(参数)   创建完成创建token的交易（未签名）
+ - client.CreateRawTokenRevokeTx(参数)   创建撤销预创建token的交易（未签名）
  - client.createRawTransaction(参数)    构造交易
  - client.signRawTx(参数)    交易签名
  - client.getTokenBalance(参数)    查询地址token余额
@@ -75,7 +76,7 @@ client.接口();
  - client.queryBalance(参数)    查询地址余额
  - client.submitRawTransaction(参数)    发送签名后的交易
  - client.sendToAddress(参数)    交易
- - client.createTransaction(参数)    创建合约交易
+ - client.createTransaction(参数)    合约交易创建
  - TransactionUtil.createTransferPayLoad(参数)	本地构造转账交易payload
  - TransactionUtil.createTransferTx(参数,payload)	本地构造转账交易体
  - 创建好的交易体使用client.submitTransaction提交交易
@@ -83,10 +84,13 @@ client.接口();
  - TransactionUtil.getHexPubKeyFromPrivKey(私钥)	根据私钥获得公钥
  - TransactionUtil.genAddress(公钥)	根据公钥获取地址
  - TransactionUtil.validAddress(地址)	校验地址是否正确
+ - TransactionUtil.createPrecreateTokenTx(参数)    本地创建预创建token交易
+ - TransactionUtil.createTokenFinishTx(地址)   本地创建完成创建token交易
  - StorageUtil.createOnlyNotaryStorage 创建内容存证模型(payload)
  - StorageUtil.createHashStorage 创建哈希存证模型(payload)
  - StorageUtil.createLinkNotaryStorage 创建链接存证模型(payload)
  - StorageUtil.createEncryptNotaryStorage 隐私存证模型型(payload)
  - StorageUtil.createEncryptShareNotaryStorage 创建分享隐私存证模型(payload)
+
 
 
