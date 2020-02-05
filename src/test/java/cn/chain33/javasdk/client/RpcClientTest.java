@@ -19,7 +19,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "172.16.103.24";
+    String ip = "";
     RpcClient client = new RpcClient(ip, 8801);
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
@@ -470,7 +470,7 @@ public class RpcClientTest {
      */
     @Test
     public void revokePrecreateToken(){
-        String symbol = "TESTCOINB";
+        String symbol = "COINSDEVX";
         String owner = "创建token拥有者地址";
         String privateKey = "签名私钥";
         String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
