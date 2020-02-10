@@ -731,23 +731,21 @@ public class RpcClient {
      * @param fee          交易的手续费
      * @return 交易十六进制编码后的字符串
      */
-    public String createRawTokenPreCreateTx(String name, String symbol, String introduction, String ownerAddr,
-            long total, long price, long fee) {
+    public String createRawTokenPreCreateTx(String name,String symbol,String introduction,String ownerAddr,long total,long price,Integer category) {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_PRE_CREATE_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("name", name);
         requestParam.put("symbol", symbol);
         requestParam.put("introduction", introduction);
-        requestParam.put("ownerAddr", ownerAddr);
+        requestParam.put("owner", ownerAddr);
         requestParam.put("total", total);
         requestParam.put("price", price);
-        requestParam.put("fee", fee);
+        requestParam.put("category", category);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
         if (StringUtil.isNotEmpty(requestResult)) {
             JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
+            if (messageValidate(parseObject)) return null;
             String result = parseObject.getString("result");
             return result;
         }
@@ -762,18 +760,17 @@ public class RpcClient {
      * @param fee:       交易的手续费
      * @return 交易十六进制编码后的字符串
      */
-    public String createRawTokenFinishTx(long fee, String symbol, String ownerAddr) {
+    public String createRawTokenFinishTx(long fee,String symbol,String ownerAddr) {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_FINISH_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("fee", fee);
         requestParam.put("symbol", symbol);
-        requestParam.put("ownerAddr", ownerAddr);
+        requestParam.put("owner", ownerAddr);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
         if (StringUtil.isNotEmpty(requestResult)) {
             JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
+            if (messageValidate(parseObject)) return null;
             String result = parseObject.getString("result");
             return result;
         }
@@ -1017,10 +1014,10 @@ public class RpcClient {
      * @param status 0:预创建 1:创建成功 的token
      * @return  token信息列表
      */
-    public List<TokenResult> queryCreateTokens(Integer status) {
+    public List<TokenResult> queryCreateTokens(Integer status,String execer) {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
-        requestParam.put("execer", "token");
+        requestParam.put("execer", execer);
         requestParam.put("funcName", "GetTokens");
         JSONObject payloadJson = new JSONObject();
         payloadJson.put("status", status);
@@ -1259,6 +1256,31 @@ public class RpcClient {
             }
         }
         logger.error("RPC请求失败，错误信息：" + rep == null ? "" : rep.getError() + " , 请求参数：" + reqParam);
+        return null;
+    }
+    
+    
+    /**
+     * 
+     * @description    创建撤销预创建token交易
+     * @param symbol   积分symbol
+     * @param owner    积分拥有者地址
+     * @return
+     *
+     */
+    public String CreateRawTokenRevokeTx(String symbol,String owner) {
+        RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TOKEN_REVOKE_TX);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("symbol", symbol);
+        requestParam.put("owner", owner);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) return null;
+            String result = parseObject.getString("result");
+            return result;
+        }
         return null;
     }
 

@@ -209,13 +209,16 @@ public class RpcClientTest {
 
     /**
      * 
-     * @description 查询已经创建成功的token
+     * @description 查询已经创建的token
      *
      */
     @Test
     public void queryCreateTokens() {
+        String execer = "user.p.xxx.token";
+        //状态 0预创建的 1创建成功的
+        Integer status = 1;
         List<TokenResult> queryCreateTokens;
-        queryCreateTokens = client.queryCreateTokens(1);
+        queryCreateTokens = client.queryCreateTokens(status,execer);
         for (TokenResult tokenResult : queryCreateTokens) {
             System.out.println(tokenResult);
         }
@@ -280,7 +283,7 @@ public class RpcClientTest {
         long total = (long) (1000 * 1e8);
         // 调用节点接口预创建token 返回hash
         String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
-                "logan create the coin", "owner address", total, 0, (long) 1e8);
+                "logan create the coin", "owner address", total, 0,0);
         // 签名
         String signRawTx = client.signRawTx("address", "addressPrivateKey", createRawTokenPreCreateTx, "300", 0);
         client.submitTransaction(signRawTx);
@@ -412,5 +415,71 @@ public class RpcClientTest {
         String submitTransaction = client.submitTransaction(hexString);
         System.out.println("submitTransaction:" + submitTransaction);
     }
-
+    
+    
+    /**
+     * @description 本地将执行器转为地址
+     */
+    @Test
+    public void convertExeceToAddress() {
+        String exece = "user.p.demo.game";
+        String addr = TransactionUtil.convertExectoAddr(exece);
+        System.out.println(addr);
+    }
+    
+    /**
+          * 本地预创建token并提交
+     */
+    @Test
+    public void preCreateTokenLocal() {
+        //token总额
+        long total = 19900000000000000L;
+        //token的注释名称
+        String name = "DEVELOP COINS";
+        //token的名称，只支持大写字母，同一条链不允许相同symbol存在
+        String symbol = "COINSDEVX";
+        //token介绍
+        String introduction = "开发者币";
+        //发行token愿意承担的费用，填0就行
+        Long price = 0L;
+        //0 为普通token， 1 可增发和燃烧
+        Integer category = 0;
+        //链title + token后缀
+        String execer = "user.p.gxchain.token";
+        String owner = "创建token的拥有者地址";
+        String managerPrivateKey = "链超级管理员私钥";
+        String precreateTx = TransactionUtil.createPrecreateTokenTx(execer, name, symbol, introduction, total, price,
+                owner, category, managerPrivateKey);
+        String submitTransaction = client.submitTransaction(precreateTx);
+        System.out.println(submitTransaction);
+    }
+    
+    /**
+          *本地创建token完成交易并提交
+     */
+    @Test
+    public void createTokenFinishLocal() {
+        String symbol = "COINSDEVX";
+        String execer = "user.p.gxchain.token";
+        String managerPrivateKey = "链超级管理员私钥";
+        String owner = "token拥有者地址";
+        String hexData = TransactionUtil.createTokenFinishTx(symbol, execer, owner, managerPrivateKey);
+        String submitTransaction = client.submitTransaction(hexData);
+        System.out.println(submitTransaction);
+    }
+    
+    /**
+     * @description 撤销预创建的token
+     */
+    @Test
+    public void revokePrecreateToken(){
+        String symbol = "COINSDEVX";
+        String owner = "创建token拥有者地址";
+        String privateKey = "签名私钥";
+        String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
+        String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
+        String submitTransaction = client.submitTransaction(signRawTx);
+        System.out.println(submitTransaction);
+    }
+    
 }

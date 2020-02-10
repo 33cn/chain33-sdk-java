@@ -881,5 +881,141 @@ public class TransactionUtil {
 		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationHash;
     }
+    
+    
+    /**
+     * 
+     * @description 将执行器名称转为地址
+     * @param exec 执行器名称
+     * @return
+     *
+     */
+    public static String convertExectoAddr(String exec) {
+        String toAddress = getToAddress(exec.getBytes());
+        return toAddress;
+    }
 
+    public static String getExecerAddress(String exec) {
+        String toAddress = getToAddress(exec.getBytes());
+        return toAddress;
+    }
+
+    /**
+     * 
+     * @description 本地构造 预创建积分交易
+     * @param exece        user.p.xxx.token
+     * @param name         token名称
+     * @param symbol       tokenSymbol
+     * @param introduction token介绍
+     * @param total        发行总量,需要乘以10的8次方，比如要发行100个币，需要100*1e8
+     * @param price        发行该token愿意承担的费用
+     * @param owner        token地址拥有者
+     * @param category     token属性类别， 0 为普通token， 1 可增发和燃烧
+     * @param privateKey   超级管理员私钥
+     * @return 交易
+     *
+     */
+    public static String createPrecreateTokenTx(String exece, String name, String symbol, String introduction,
+            Long total, Long price, String owner, Integer category, String privateKey) {
+        TokenActionProtoBuf.TokenPreCreate.Builder precreateBuilder = TokenActionProtoBuf.TokenPreCreate.newBuilder();
+        precreateBuilder.setName(name);
+        precreateBuilder.setSymbol(symbol);
+        precreateBuilder.setIntroduction(introduction);
+        precreateBuilder.setTotal(total);
+        precreateBuilder.setPrice(price);
+        precreateBuilder.setOwner(owner);
+        precreateBuilder.setCategory(category);
+        TokenPreCreate tokenPreCreate = precreateBuilder.build();
+        TokenActionProtoBuf.TokenAction.Builder tokenActionBuilder = TokenActionProtoBuf.TokenAction.newBuilder();
+        tokenActionBuilder.setTy(7);
+        tokenActionBuilder.setTokenPreCreate(tokenPreCreate);
+        TokenAction tokenAction = tokenActionBuilder.build();
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(exece.getBytes(), tokenAction.toByteArray(),
+                DEFAULT_FEE, 0);
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionProtoBuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+            return null;
+        }
+        TransactionProtoBuf.Transaction signProbuf = signProbuf(parseFrom, privateKey);
+        return HexUtil.toHexString(signProbuf.toByteArray());
+    }
+
+    /**
+     * 
+     * @description 本地创建token完成交易
+     * @param symbol            token地址
+     * @param execer            user.p.xxx.token
+     * @param ownerAddr         token拥有者地址
+     * @param managerPrivateKey 超级管理员私钥
+     * @return 交易
+     *
+     */
+    public static String createTokenFinishTx(String symbol, String execer, String ownerAddr, String managerPrivateKey) {
+        TokenActionProtoBuf.TokenFinishCreate.Builder payloadBuilder = TokenActionProtoBuf.TokenFinishCreate
+                .newBuilder();
+        payloadBuilder.setSymbol(symbol);
+        payloadBuilder.setOwner(ownerAddr);
+        TokenFinishCreate tokenFinishCreate = payloadBuilder.build();
+        TokenActionProtoBuf.TokenAction.Builder tokenActionBuilder = TokenActionProtoBuf.TokenAction.newBuilder();
+        tokenActionBuilder.setTy(8);
+        tokenActionBuilder.setTokenFinishCreate(tokenFinishCreate);
+        TokenAction tokenAction = tokenActionBuilder.build();
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), tokenAction.toByteArray(),
+                DEFAULT_FEE, 0);
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionProtoBuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, managerPrivateKey);
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        return hexString;
+    }
+
+    /**
+     * 创建交易,不签名 默认使用比特币seck256K1
+     * 
+     * @param privateKey 私钥
+     * @param execer     执行器名称
+     * @param payLoad    内容
+     * @return
+     */
+    public static String createTxWithoutSign(String execer, String payLoad) {
+        return createTxWithoutSign(execer.getBytes(), payLoad.getBytes(), DEFAULT_FEE, 0);
+    }
+
+    /**
+     * 创建没有签名的交易
+     * 
+     * @param privateKey
+     * @param execer
+     * @param payLoad
+     * @param signType
+     * @param fee
+     * @return
+     */
+    public static String createTxWithoutSign(byte[] execer, byte[] payLoad, long fee, long txHeight) {
+        Transaction transation = new Transaction();
+        transation.setExecer(execer);
+        transation.setPayload(payLoad);
+        transation.setFee(fee);
+        transation.setExpire(TX_HEIGHT_OFFSET + txHeight);
+        transation.setNonce(TransactionUtil.getRandomNonce());
+        // 计算To
+        String toAddress = getToAddress(execer);
+        transation.setTo(toAddress);
+        // 签名
+        byte[] protobufData = encodeProtobuf(transation);
+
+        // 序列化
+        String transationStr = HexUtil.toHexString(protobufData);
+        return transationStr;
+    }
+   
 }
