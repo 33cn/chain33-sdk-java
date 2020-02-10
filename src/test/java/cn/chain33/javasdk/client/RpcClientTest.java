@@ -19,7 +19,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "";
+    String ip = "192.168.0.193";
     RpcClient client = new RpcClient(ip, 8801);
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
@@ -304,7 +304,7 @@ public class RpcClientTest {
     @Test
     public void convertExecertoAddr() {
         String address;
-        address = client.convertExectoAddr("user.p.gmchain.none");
+        address = client.convertExectoAddr("manage");
         System.out.println(address);
     }
 
