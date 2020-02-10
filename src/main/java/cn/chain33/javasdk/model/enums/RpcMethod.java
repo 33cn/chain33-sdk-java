@@ -72,7 +72,9 @@ public enum RpcMethod {
 	
 	CONVERT_EXECER_TO_ADDRESS("Chain33.ConvertExectoAddr"),
 	
-	DECODE_RAW_TX("Chain33.DecodeRawTransaction");
+	DECODE_RAW_TX("Chain33.DecodeRawTransaction"), 
+	
+	TOKEN_CREATE_RAW_TOKEN_REVOKE_TX("token.CreateRawTokenRevokeTx");
 
 	private String method;
 	
