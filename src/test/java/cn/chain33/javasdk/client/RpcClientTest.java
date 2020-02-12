@@ -19,7 +19,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "";
+    String ip = "192.168.0.193";
     RpcClient client = new RpcClient(ip, 8801);
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
@@ -141,11 +141,10 @@ public class RpcClientTest {
         list.add("address1");
         list.add("address2");
         List<AccountAccResult> queryBtyBalance;
-        queryBtyBalance = client.getCoinsBalance(list, "coins", "tokenSymbol");
+        queryBtyBalance = client.getCoinsBalance(list, "coins");
         for (AccountAccResult accountAccResult : queryBtyBalance) {
             System.out.println(accountAccResult);
         }
-
     }
 
     /**
@@ -308,47 +307,10 @@ public class RpcClientTest {
     @Test
     public void convertExecertoAddr() {
         String address;
-        address = client.convertExectoAddr("user.p.demo.game");
+        address = client.convertExectoAddr("manage");
         System.out.println(address);
     }
 
-    /**
-     * @description 本地创建私钥->公钥->地址
-     */
-    @Test
-    public void createPriviteKey() {
-        // create privateKey
-        String hexPrivateKey = TransactionUtil.generatorPrivateKeyString();
-        // get publicKey
-        String hexPublicKey = TransactionUtil.getHexPubKeyFromPrivKey(hexPrivateKey);
-        byte[] publicKeyByte = HexUtil.fromHexString(hexPublicKey);
-        // get address
-        String genAddress = TransactionUtil.genAddress(publicKeyByte);
-        // validate address
-        boolean validAddressResult = TransactionUtil.validAddress(genAddress);
-        System.out.printf("privateKey:%s\n", hexPrivateKey);
-        System.out.printf("publicKey:%s\n", hexPublicKey);
-        System.out.printf("address:%s\n", genAddress);
-        System.out.printf("validate address:%s", validAddressResult);
-    }
-
-    /**
-     * @description 本地构造转账交易
-     */
-    @Test
-    public void createCoinTransferTx() {
-        String note = "";
-        String coinToken = "";// 具体看createTransferPayLoad注释
-        Long amount = 1 * 100000000L;// 1 = real amount
-        String to = "toAddress";
-        byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
-
-        String fromAddressPriveteKey = "from addrss privateKey";
-        String execer = "coins";
-        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, to, execer, payload);
-        String txHash = client.submitTransaction(createTransferTx);
-        System.out.println(txHash);
-    }
 
     /**
      * @description 本地构造上链交易数据。数据大手续费越高,推荐压缩之后再上链。
@@ -362,6 +324,34 @@ public class RpcClientTest {
         String signedTxHash = client.signRawTx("user address", null, noBalanceHash, "1h", 2);
         String withHoldTx = client.submitTransaction(signedTxHash);
         System.out.println(withHoldTx);
+    }
+    
+    
+    /**
+     * @description 本地构造平行链主代币转账交易
+     */
+    @Test
+    public void createCoinTransferTxPara() {
+    	// 转账说明
+        String note = "转账说明";
+        // 主代币则为"",其他为token名
+        String coinToken = "";
+        Long amount = 1 * 100000000L;// 1 = real amount
+        // 转到的地址
+        String to = "toAddress";
+        //String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
+        // 本地构造转账交易的payload
+        byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
+        // 签名私私钥，里面需要有主链币，用于缴纳手续费
+        String fromAddressPriveteKey = "from addrss privateKey";
+        //String fromAddressPriveteKey = "0x1ce5a097b01e53d423275091e383a2c3a35d042144bd3bced44194eabxxxxxxx";
+        // 执行器名称，平行链主代币为平行链名称+coins(平行链对应配置文件中的title项)
+        String execer = "user.p.xxchain.coins";
+        // 平行链转账时，实际to的地址填在payload中，外层的to地址对应的是合约的地址
+        String contranctAddress = client.convertExectoAddr(execer);
+        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer, payload);
+        String txHash = client.submitTransaction(createTransferTx);
+        System.out.println(txHash);
     }
 
     /**
@@ -389,26 +379,39 @@ public class RpcClientTest {
     
     /**
      * 
-     * @description 本地创建转账交易,调用createNoBlance之后再将返回的数据解析,签名，发送交易
+     * @description 本地签名代扣交易组，调用createNoBlance之后再将返回的数据解析,签名，发送交易
+     * 代扣交易主要用在平行链的场合，主链上的交易不需要关注此实现
      *
      */
     @Test
     public void localTransfer() {
-        String note = "";
-        String coinToken = "XX";//具体的token名称
-        Long amount = 1 * 100000000L;// 转账数量为1
-        String to = "toAddress";//转账目标地址
+    	// 转账说明
+        String note = "转账说明";
+        // 主代币则为"",其他为token名
+        String coinToken = "";
+        // 转账数量为1
+        Long amount = 1 * 10000000L;
+        String to = "toAddress";
+        //String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
+        // 本地构造转账交易的payload
         byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
-        String fromAddressPriveteKey = "";//转账地址私钥
-        String execer = "user.p.xxchain.coins";//合约地址
-        String execerAddress = "execerAddress";//通过convertExectoAddr(execer)获取
-        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, execerAddress, execer, payload);
+        // 签名私私钥，主链上不会扣除本地址下的主链币，所以此地址下可以没有主链币
+        String fromAddressPriveteKey = "实际交易签名私钥";
+        //String fromAddressPriveteKey = "1ce5a097b01e53d423275091e383a2c3a35d042144bd3bced44194eab2ff18c9";
+        // 执行器名称，平行链主代币为平行链名称+coins(平行链对应配置文件中的title项)
+        String execer = "user.p.sec.coins";
+        // 平行链转账时，实际to的地址填在payload中，外层的to地址对应的是合约的地址
+        String contranctAddress = client.convertExectoAddr(execer);
+        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer, payload);
+        
         //create no balance 传入地址为空
         String createNoBalanceTx = client.createNoBalanceTx(createTransferTx, "");
         // 解析交易
         List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-        String withHoldPrivateKey = "";//createNoBalance这一步签名的私钥,比如说代扣地址
-        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, execerAddress, fromAddressPriveteKey, withHoldPrivateKey);
+        // 代扣交易签名的私钥
+        //String withHoldPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
+        String withHoldPrivateKey = "代扣地址私钥";
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, fromAddressPriveteKey, withHoldPrivateKey);
         String submitTransaction = client.submitTransaction(hexString);
         System.out.println("submitTransaction:" + submitTransaction);
     }
@@ -423,60 +426,18 @@ public class RpcClientTest {
         String addr = TransactionUtil.convertExectoAddr(exece);
         System.out.println(addr);
     }
-    
-    /**
-          * 本地预创建token并提交
-     */
-    @Test
-    public void preCreateTokenLocal() {
-        //token总额
-        long total = 19900000000000000L;
-        //token的注释名称
-        String name = "DEVELOP COINS";
-        //token的名称，只支持大写字母，同一条链不允许相同symbol存在
-        String symbol = "COINSDEVX";
-        //token介绍
-        String introduction = "开发者币";
-        //发行token愿意承担的费用，填0就行
-        Long price = 0L;
-        //0 为普通token， 1 可增发和燃烧
-        Integer category = 0;
-        //链title + token后缀
-        String execer = "user.p.gxchain.token";
-        String owner = "创建token的拥有者地址";
-        String managerPrivateKey = "链超级管理员私钥";
-        String precreateTx = TransactionUtil.createPrecreateTokenTx(execer, name, symbol, introduction, total, price,
-                owner, category, managerPrivateKey);
-        String submitTransaction = client.submitTransaction(precreateTx);
-        System.out.println(submitTransaction);
-    }
-    
-    /**
-          *本地创建token完成交易并提交
-     */
-    @Test
-    public void createTokenFinishLocal() {
-        String symbol = "COINSDEVX";
-        String execer = "user.p.gxchain.token";
-        String managerPrivateKey = "链超级管理员私钥";
-        String owner = "token拥有者地址";
-        String hexData = TransactionUtil.createTokenFinishTx(symbol, execer, owner, managerPrivateKey);
-        String submitTransaction = client.submitTransaction(hexData);
-        System.out.println(submitTransaction);
-    }
-    
-    /**
-     * @description 撤销预创建的token
-     */
-    @Test
-    public void revokePrecreateToken(){
-        String symbol = "COINSDEVX";
-        String owner = "创建token拥有者地址";
-        String privateKey = "签名私钥";
-        String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
-        String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
-        String submitTransaction = client.submitTransaction(signRawTx);
-        System.out.println(submitTransaction);
-    }
-    
+        
+	/**
+	* @description 撤销预创建的token
+	*/
+	@Test
+	public void revokePrecreateToken(){
+	   String symbol = "COINSDEVX";
+	   String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
+	   String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+	   String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
+	   String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
+	   String submitTransaction = client.submitTransaction(signRawTx);
+	   System.out.println(submitTransaction);
+	}
 }

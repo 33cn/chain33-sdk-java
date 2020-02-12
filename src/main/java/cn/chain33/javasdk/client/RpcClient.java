@@ -532,6 +532,7 @@ public class RpcClient {
         }
         return null;
     }
+    
 
     /**
      * @description 生成随机的seed
@@ -698,6 +699,24 @@ public class RpcClient {
             return result;
         }
         return null;
+    }
+    
+    /**
+     * 调用管理合约（创建黑名单， 创建token-finisher）
+     * 
+     * @param execer
+     * @param actionName
+     * @param superManager
+     * @return
+     * @throws Exception 
+     */
+    public String createManageTransaction(String execer, String actionName, String key, String value, String op, String superManager) throws Exception {
+    	JSONObject blackListPayload = new JSONObject();
+    	blackListPayload.put("key", key);
+    	blackListPayload.put("value", value);
+    	blackListPayload.put("op", op);
+    	String managerResult = createTransaction(execer, actionName, blackListPayload);
+    	return null;
     }
 
     /**
@@ -890,13 +909,12 @@ public class RpcClient {
      * @param tokenSymbol   主代币名称
      * @return  余额列表
      */
-    public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer, String tokenSymbol) {
+    public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer) {
         RpcRequest postJsonData = new RpcRequest();
         postJsonData.setMethod(RpcMethod.GET_BALANCE);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addresses", addresses);
         requestParam.put("execer", execer);
-        requestParam.put("tokenSymbol", tokenSymbol);
         postJsonData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postJsonData.toJsonString());
         if (StringUtil.isNotEmpty(requestResult)) {
