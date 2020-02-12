@@ -426,60 +426,18 @@ public class RpcClientTest {
         String addr = TransactionUtil.convertExectoAddr(exece);
         System.out.println(addr);
     }
-    
-    /**
-          * 本地预创建token并提交
-     */
-    @Test
-    public void preCreateTokenLocal() {
-        //token总额
-        long total = 19900000000000000L;
-        //token的注释名称
-        String name = "DEVELOP COINS";
-        //token的名称，只支持大写字母，同一条链不允许相同symbol存在
-        String symbol = "COINSDEVX";
-        //token介绍
-        String introduction = "开发者币";
-        //发行token愿意承担的费用，填0就行
-        Long price = 0L;
-        //0 为普通token， 1 可增发和燃烧
-        Integer category = 0;
-        //链title + token后缀
-        String execer = "user.p.gxchain.token";
-        String owner = "创建token的拥有者地址";
-        String managerPrivateKey = "链超级管理员私钥";
-        String precreateTx = TransactionUtil.createPrecreateTokenTx(execer, name, symbol, introduction, total, price,
-                owner, category, managerPrivateKey);
-        String submitTransaction = client.submitTransaction(precreateTx);
-        System.out.println(submitTransaction);
-    }
-    
-    /**
-          *本地创建token完成交易并提交
-     */
-    @Test
-    public void createTokenFinishLocal() {
-        String symbol = "COINSDEVX";
-        String execer = "user.p.gxchain.token";
-        String managerPrivateKey = "链超级管理员私钥";
-        String owner = "token拥有者地址";
-        String hexData = TransactionUtil.createTokenFinishTx(symbol, execer, owner, managerPrivateKey);
-        String submitTransaction = client.submitTransaction(hexData);
-        System.out.println(submitTransaction);
-    }
-    
-    /**
-     * @description 撤销预创建的token
-     */
-    @Test
-    public void revokePrecreateToken(){
-        String symbol = "COINSDEVX";
-        String owner = "创建token拥有者地址";
-        String privateKey = "签名私钥";
-        String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
-        String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
-        String submitTransaction = client.submitTransaction(signRawTx);
-        System.out.println(submitTransaction);
-    }
-    
+        
+	/**
+	* @description 撤销预创建的token
+	*/
+	@Test
+	public void revokePrecreateToken(){
+	   String symbol = "COINSDEVX";
+	   String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
+	   String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+	   String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
+	   String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
+	   String submitTransaction = client.submitTransaction(signRawTx);
+	   System.out.println(submitTransaction);
+	}
 }

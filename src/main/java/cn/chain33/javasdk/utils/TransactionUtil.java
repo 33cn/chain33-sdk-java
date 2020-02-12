@@ -20,6 +20,7 @@ import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
 
 import com.google.protobuf.ByteString;
+import com.google.protobuf.InvalidProtocolBufferException;
 
 import cn.chain33.javasdk.model.Address;
 import cn.chain33.javasdk.model.Signature;
@@ -31,6 +32,10 @@ import cn.chain33.javasdk.model.protobuf.ManageProtobuf;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder;
 import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
+import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction;
+import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate;
+import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate;
 import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.AssetsTransfer;
@@ -190,15 +195,11 @@ public class TransactionUtil {
 
 	/**
 	 * 
-	 * @description 本地创建转账payload
-	 * @param to
-	 *            目标地址
-	 * @param amount
-	 *            数量
-	 * @param coinToken
-	 *            主代币则为"",其他为token symbol
-	 * @param note
-	 *            备注，没有为""
+	 * @description 本地创建coins转账payload
+	 * @param to 目标地址
+	 * @param amount 数量
+	 * @param coinToken 主代币则为""
+	 * @param note 备注，没有为""
 	 * @return payload
 	 */
 	public static byte[] createTransferPayLoad(String to, Long amount, String coinToken, String note) {
@@ -219,6 +220,8 @@ public class TransactionUtil {
 		byte[] payload = coinsAction.toByteArray();
 		return payload;
 	}
+	
+
 
 	/**
 	 * 
@@ -849,37 +852,28 @@ public class TransactionUtil {
 	 * @param op 操作符，add或delete
 	 * @return
 	 */
-    public static String createAndSignManage(String key, String value, String op, String privateKey, SignType signType, String execer, String toAddress) {
+    public static String createManage(String key, String value, String op, String privateKey, String execer) {
         Builder managerBuilder = ManageProtobuf.ModifyConfig.newBuilder();
-        managerBuilder.setKey(value);
+        managerBuilder.setKey(key);
         managerBuilder.setValue(value);
-        managerBuilder.setOp(value);
+        managerBuilder.setOp(op);
         cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.Builder actionBuilder = ManageProtobuf.ManageAction.newBuilder();
+        actionBuilder.setTy(0);
         actionBuilder.setModify(managerBuilder.build());
-        actionBuilder.setTy(1);
         ManageAction managerAction = actionBuilder.build();
 
-        byte[] payload = managerAction.toByteArray();
-        
-        if (signType == null)
-			signType = DEFAULT_SIGNTYPE;
-
-		Transaction transation = new Transaction();
-		transation.setExecer(execer.getBytes());
-		transation.setPayload(payload);
-		transation.setNonce(TransactionUtil.getRandomNonce());
-		transation.setExpire(100 + TX_HEIGHT_OFFSET);
-  	
-		// 计算To
-    	transation.setTo(toAddress);
-		// 签名
-		byte[] protobufData = encodeProtobuf(transation);
-
-		sign(signType, protobufData, privateKey.getBytes(), transation);
-		// 序列化
-		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
-		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
-		return transationHash;
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), managerAction.toByteArray(),
+                DEFAULT_FEE, 0);
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionProtoBuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+            return null;
+        }
+        TransactionProtoBuf.Transaction signProbuf = signProbuf(parseFrom, privateKey);
+        return HexUtil.toHexString(signProbuf.toByteArray());
     }
     
     
@@ -915,7 +909,7 @@ public class TransactionUtil {
      * @return 交易
      *
      */
-    public static String createPrecreateTokenTx(String exece, String name, String symbol, String introduction,
+    public static String createPrecreateTokenTx(String execer, String name, String symbol, String introduction,
             Long total, Long price, String owner, Integer category, String privateKey) {
         TokenActionProtoBuf.TokenPreCreate.Builder precreateBuilder = TokenActionProtoBuf.TokenPreCreate.newBuilder();
         precreateBuilder.setName(name);
@@ -930,7 +924,7 @@ public class TransactionUtil {
         tokenActionBuilder.setTy(7);
         tokenActionBuilder.setTokenPreCreate(tokenPreCreate);
         TokenAction tokenAction = tokenActionBuilder.build();
-        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(exece.getBytes(), tokenAction.toByteArray(),
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), tokenAction.toByteArray(),
                 DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
         TransactionProtoBuf.Transaction parseFrom = null;
@@ -977,6 +971,52 @@ public class TransactionUtil {
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
+    
+	/**
+	 * 
+	 * @description 本地创建并签名token转账交易
+	 * @param privateKey
+	 * @param toAddress
+	 * @param execer
+	 * @param payLoad
+	 * @return
+	 *
+	 */
+	public static String createTokenTransferTx(String privateKey, String toAddress, String execer, Long amount, String coinToken, String note) {
+		
+		byte[] payload = createtTokenTransferPayLoad(toAddress, amount, coinToken, note);
+		
+		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+		return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payload, DEFAULT_SIGNTYPE, DEFAULT_FEE);
+	}
+	
+	/**
+	 * 
+	 * @description 本地创建token转账payload
+	 * @param to  目标地址
+	 * @param amount 数量
+	 * @param coinToken token symbol
+	 * @param note 备注，没有为""
+	 * @return payload
+	 */
+	public static byte[] createtTokenTransferPayLoad(String to, Long amount, String coinToken, String note) {
+		TokenActionProtoBuf.AssetsTransfer.Builder assetsTransferBuilder = TokenActionProtoBuf.AssetsTransfer.newBuilder();
+		assetsTransferBuilder.setCointoken(coinToken);
+		assetsTransferBuilder.setAmount(amount);
+		try {
+			assetsTransferBuilder.setNote(ByteString.copyFrom(note, "utf-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		assetsTransferBuilder.setTo(to);
+		cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer assetsTransfer = assetsTransferBuilder.build();
+		TokenActionProtoBuf.TokenAction.Builder tokenActionBuilder = TokenActionProtoBuf.TokenAction.newBuilder();
+		tokenActionBuilder.setTy(4);
+		tokenActionBuilder.setTransfer(assetsTransfer);
+		TokenAction tokenAction = tokenActionBuilder.build();
+		byte[] payload = tokenAction.toByteArray();
+		return payload;
+	}
 
     /**
      * 创建交易,不签名 默认使用比特币seck256K1

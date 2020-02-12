@@ -15,7 +15,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class AccountTest {
 	
-    String ip = "192.168.0.193";
+    String ip = "172.16.103.14";
     RpcClient client = new RpcClient(ip, 8801);
     
     Account account = new Account();
@@ -62,7 +62,7 @@ public class AccountTest {
     	transferBalanceRequest.setAmount(1 * 100000000L);
         // 转到的地址
     	transferBalanceRequest.setTo("1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs");
-        // 签名私私钥
+        // 签名私私钥,对应的测试地址是：1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7
     	transferBalanceRequest.setFromPrivateKey("55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4");
         // 执行器名称，主链主积分固定为coins
         transferBalanceRequest.setExecer("coins");
