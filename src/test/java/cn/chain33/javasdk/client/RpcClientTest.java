@@ -147,22 +147,6 @@ public class RpcClientTest {
         }
     }
 
-    /**
-     * 
-     * @description 查询token余额
-     *
-     */
-    @Test
-    public void getTokenBalace() {
-        List<String> addressList = new ArrayList<>();
-        addressList.add("address1");
-        addressList.add("address2");
-        List<AccountAccResult> queryBtyBalance;
-        queryBtyBalance = client.getTokenBalance(addressList, "user.p.xxchain.token", "tokenSymbol");
-        for (AccountAccResult accountAccResult : queryBtyBalance) {
-            System.out.println(accountAccResult);
-        }
-    }
 
     /**
      * 
@@ -207,23 +191,6 @@ public class RpcClientTest {
 
     }
 
-    /**
-     * 
-     * @description 查询已经创建的token
-     *
-     */
-    @Test
-    public void queryCreateTokens() {
-        String execer = "user.p.xxx.token";
-        //状态 0预创建的 1创建成功的
-        Integer status = 1;
-        List<TokenResult> queryCreateTokens;
-        queryCreateTokens = client.queryCreateTokens(status,execer);
-        for (TokenResult tokenResult : queryCreateTokens) {
-            System.out.println(tokenResult);
-        }
-
-    }
 
     /**
      * 

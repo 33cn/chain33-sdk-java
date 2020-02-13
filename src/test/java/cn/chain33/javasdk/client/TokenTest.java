@@ -1,7 +1,12 @@
 package cn.chain33.javasdk.client;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
+import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
+import cn.chain33.javasdk.model.rpcresult.TokenResult;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
@@ -137,6 +142,40 @@ public class TokenTest {
         String txHash = client.submitTransaction(createTransferTx);
         System.out.println(txHash);
     }
+    
+    /**
+     * 
+     * @description 查询已经创建的token
+     *
+     */
+    @Test
+    public void queryCreateTokens() {
+        String execer = "token";
+        //状态 0预创建的 1创建成功的
+        Integer status = 1;
+        List<TokenResult> queryCreateTokens;
+        queryCreateTokens = client.queryCreateTokens(status,execer);
+        for (TokenResult tokenResult : queryCreateTokens) {
+            System.out.println(tokenResult);
+        }
+    }
+    
 	
+    /**
+     * 
+     * @description 查询token余额
+     *
+     */
+    @Test
+    public void getTokenBalace() {
+        List<String> addressList = new ArrayList<>();
+        addressList.add("1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7");
+        addressList.add("1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs");
+        List<AccountAccResult> queryBtyBalance;
+        queryBtyBalance = client.getTokenBalance(addressList, "token", "COINSDEVX");
+        for (AccountAccResult accountAccResult : queryBtyBalance) {
+            System.out.println(accountAccResult);
+        }
+    }
 
 }
