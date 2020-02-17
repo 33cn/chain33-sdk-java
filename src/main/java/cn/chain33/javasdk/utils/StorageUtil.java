@@ -115,7 +115,7 @@ public class StorageUtil {
      * @return payload
      *
      */
-    public byte[] createEncryptNotaryStorage(byte[] encryptContent,byte[] contentHash,byte[] nonce) {
+    public static String createEncryptNotaryStorage(byte[] encryptContent,byte[] contentHash,byte[] nonce, String execer, String privateKey) {
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder storageBuilder = StorageProtobuf.EncryptNotaryStorage.newBuilder();
         storageBuilder.setEncryptContent(ByteString.copyFrom(encryptContent));
         storageBuilder.setContentHash(ByteString.copyFrom(contentHash));
@@ -125,7 +125,19 @@ public class StorageUtil {
         storageActionBuilder.setEncryptStorage(encryptNotaryStorage);
         storageActionBuilder.setTy(StorageEnum.EncryptNotaryStorage.getTy());
         StorageAction storageAction = storageActionBuilder.build();
-        return storageAction.toByteArray();
+        
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
+        		TransactionUtil.DEFAULT_FEE, 0);
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionProtoBuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        return hexString;
     }
     
     /**
@@ -139,7 +151,7 @@ public class StorageUtil {
      * @return payload
      *
      */
-    public byte[] createEncryptShareNotaryStorage(byte[] contentHash,byte[] content,byte[] nonce,byte[] keyName,byte[] keyWrap) {
+    public static String createEncryptShareNotaryStorage(byte[] contentHash,byte[] content,byte[] nonce,byte[] keyName,byte[] keyWrap, String execer, String privateKey) {
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder storageBuilder = StorageProtobuf.EncryptShareNotaryStorage.newBuilder();
         storageBuilder.setContentHash(ByteString.copyFrom(contentHash));
         storageBuilder.setEncryptContent(ByteString.copyFrom(content));
@@ -152,7 +164,19 @@ public class StorageUtil {
         storageActionBuilder.setEncryptShareStorage(encryptShareNotaryStorage);
         storageActionBuilder.setTy(StorageEnum.EncryptShareNotaryStorage.getTy());
         StorageAction storageAction = storageActionBuilder.build();
-        return storageAction.toByteArray();
+
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
+        		TransactionUtil.DEFAULT_FEE, 0);
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionProtoBuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        return hexString;
     }
 }
 
