@@ -1283,5 +1283,35 @@ public class RpcClient {
         }
         return null;
     }
+    
+    
+    /**
+     * @description 查询地址下的token/trace合约下的token资产
+     * 
+     * @param execer:   token
+     * @param funcName: GetAccountTokenAssets
+     * @param address:  查询的地址
+     * @param execer:   token 或 trade
+     * @return TokenBalanceResult
+     */
+    public JSONObject queryStorage(String hash) {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", "storage");
+        requestParam.put("funcName", "QueryStorage");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("txHash", hash);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            return resultJson;
+        }
+        return null;
+    }
 
 }
