@@ -17,15 +17,10 @@ import cn.chain33.javasdk.utils.TransactionUtil;
  */
 public class StorageTest {
 	
-    String ip = "172.16.103.14";
+    String ip = "localhost";
     RpcClient client = new RpcClient(ip, 8801);
     
     String content = "疫情发生后，NPO法人仁心会联合日本湖北总商会等四家机构第一时间向湖北捐赠3800套杜邦防护服，包装纸箱上用中文写有“岂曰无衣，与子同裳”。这句诗词出自《诗经·秦风·无衣》，翻译成白话的意思是“谁说我们没衣穿？与你同穿那战裙”。不料，这句诗词在社交媒体上引发热议，不少网民赞叹日本人的文学造诣。实际上，NPO法人仁心会是一家在日华人组织，由在日或有留日背景的医药保健从业者以及相关公司组成的新生公益组织。NPO法人仁心会事务局告诉环球时报-环球网记者，由于第一批捐赠物资是防护服，“岂曰无衣，与子同裳”恰好可以表达海外华人华侨与一线医护人员共同战胜病毒的同仇敌忾之情，流露出对同胞的守护之爱。";
-
-//	// AES加密KEY
-//	byte[] key = {-117, 119, -114, 66, -112, 72, -52, -54, 7, -101, -5, -20, 64, 89, 4, 57};
-//	// AES 加密向量 iv
-//	byte[] iv = {84, 101, -87, -68, 67, -69, 80, -102, -116, -30, 124, -18, 84, 4, -34, -83};
     
 	/**
 	 * 内容存证
@@ -87,43 +82,48 @@ public class StorageTest {
 		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
 		
 		// 生成AES加密KEY
-		byte[] key = AesUtil.generateDesKey(128);
+		String aesKeyHex = "ba940eabdf09ee0f37f8766841eee763";
+		//可用该方法生成 AesUtil.generateDesKey(128);
+		byte[] key = HexUtil.fromHexString(aesKeyHex);
+		System.out.println("key:" + HexUtil.toHexString(key));
 		// 生成iv
 		byte[] iv = AesUtil.generateIv();
 		// 对明文进行加密
 		String encrypt = AesUtil.encrypt(content, key, iv);
-		
-		byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
-		String txEncode = StorageUtil.createEncryptNotaryStorage(contentHash, encrypt.getBytes(), iv, execer, privateKey);
+		String decrypt = AesUtil.decrypt(encrypt, HexUtil.toHexString(key));
+		System.out.println("decrypt:" + decrypt);
+		byte[] contentHash = TransactionUtil.Sha256(content.getBytes("utf-8"));
+		String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt.getBytes(),contentHash, iv, execer, privateKey);
 		String submitTransaction = client.submitTransaction(txEncode);
 		System.out.println(submitTransaction);
 		
 	}
 	
     /**
+     * TODO: 暂不支持
      * 分享型存证模型
      * @throws Exception 
      */
-	@Test
-	public void EncryptShareNotaryStore() throws Exception {
-		// 存证智能合约的名称
-		String execer = "storage";
-		// 签名用的私钥
-		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-		
-		// 生成AES加密KEY
-		byte[] key = AesUtil.generateDesKey(128);
-		// 生成iv
-		byte[] iv = AesUtil.generateIv();
-		// 对明文进行加密
-		String encrypt = AesUtil.encrypt(content, key, iv);
-		
-		byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
-		String txEncode = StorageUtil.createEncryptNotaryStorage(contentHash, encrypt.getBytes(), iv, execer, privateKey);
-		String submitTransaction = client.submitTransaction(txEncode);
-		System.out.println(submitTransaction);
-		
-	}
+//	@Test
+//	public void EncryptShareNotaryStore() throws Exception {
+//		// 存证智能合约的名称
+//		String execer = "storage";
+//		// 签名用的私钥
+//		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+//		
+//		// 生成AES加密KEY
+//		byte[] key = AesUtil.generateDesKey(128);
+//		// 生成iv
+//		byte[] iv = AesUtil.generateIv();
+//		// 对明文进行加密
+//		String encrypt = AesUtil.encrypt(content, key, iv);
+//		
+//		byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
+//		String txEncode = StorageUtil.createEncryptNotaryStorage(contentHash, encrypt.getBytes(), iv, execer, privateKey);
+//		String submitTransaction = client.submitTransaction(txEncode);
+//		System.out.println(submitTransaction);
+//		
+//	}
 	
 	/**
 	 * 根据hash查询存证结果
@@ -156,6 +156,14 @@ public class StorageTest {
         	byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
         	String result = HexUtil.toHexString(contentHash);
     		System.out.println("存证前的hash是:" + result);
+        } else if (resultJson.containsKey("encryptStorage")) {
+            //隐私存证
+            String desKey = "ba940eabdf09ee0f37f8766841eee763";
+            resultArray = resultJson.getJSONObject("encryptStorage");
+            String content = resultArray.getString("encryptContent");
+            byte[] fromHexString = HexUtil.fromHexString(content);
+            String decrypt = AesUtil.decrypt(new String(fromHexString), desKey);
+            System.out.println(decrypt);
         } else {
         	// 内容型存证解析
         	resultArray = resultJson.getJSONObject("contentStorage");
@@ -165,4 +173,6 @@ public class StorageTest {
         	System.out.println("存证内容是:" + result);
         }
 	}
+	
+	
 }
