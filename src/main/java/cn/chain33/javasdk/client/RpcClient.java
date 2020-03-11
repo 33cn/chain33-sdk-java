@@ -155,6 +155,28 @@ public class RpcClient {
         }
         return null;
     }
+    
+    /**
+     * @description 根据交易哈希查询交易信息
+     * @param hash 交易hash
+     * @return 交易信息
+     */
+    public String queryTx(String hash) {
+        if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
+            hash = HexUtil.removeHexHeader(hash);
+        }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("hash", hash);
+        RpcRequest postData = getPostData(RpcMethod.QUERY_TRANSACTION);
+
+        postData.addJsonParams(jsonObject);
+
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            return "OK";
+        }
+        return null;
+    }
 
     /**
      * @description 根据哈希数组批量获取交易信息 GetTxByHashes

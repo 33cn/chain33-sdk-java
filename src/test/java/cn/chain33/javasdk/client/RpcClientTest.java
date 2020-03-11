@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.client;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,6 @@ import cn.chain33.javasdk.model.rpcresult.AccountResult;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.model.rpcresult.TokenBalanceResult;
-import cn.chain33.javasdk.model.rpcresult.TokenResult;
 import cn.chain33.javasdk.model.rpcresult.TxResult;
 import cn.chain33.javasdk.model.rpcresult.WalletStatusResult;
 import cn.chain33.javasdk.utils.HexUtil;
@@ -19,7 +19,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "192.168.0.193";
+    String ip = "localhost";
     RpcClient client = new RpcClient(ip, 8801);
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
@@ -406,5 +406,26 @@ public class RpcClientTest {
 	   String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
 	   String submitTransaction = client.submitTransaction(signRawTx);
 	   System.out.println(submitTransaction);
+	}
+	
+	/**
+	 * 接口QPS测试(单线程)
+	 */
+	@Test
+	public void qpsTest() {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");   
+    	System.out.println(df.format(System.currentTimeMillis())); 
+		
+        String hash = "0x441e91ff13f28fe104d66db4308ab12652868eaf8a0011dec2059a4be98bdfb3";
+        for (int i = 0; i <= 50000; i++) {
+
+            client.queryTx(hash);
+           // System.out.println(queryTransaction1);
+            if (i%1000 == 0) {
+            	System.out.println(i);
+            	System.out.println(df.format(System.currentTimeMillis())); 
+            }
+        }
+        
 	}
 }
