@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import cn.chain33.javasdk.model.pre.ReKeyFrag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -422,7 +423,6 @@ public class RpcClient {
      * 
      * @description 根据哈希数组批量获取交易信息
      * @param hashIdList    交易ID列表，用逗号“,”分割
-     * @param disableDetail 是否隐藏交易详情，默认为false
      * @return 交易信息列表
      */
     public List<QueryTransactionResult> getTxByHashes(String hashIdList) {
@@ -630,7 +630,7 @@ public class RpcClient {
     /**
      * @description 将合约转换为地址
      * 
-     * @param exec 例如user.p.xxchain.xxx
+     * @param execername 例如user.p.xxchain.xxx
      * @return 合约地址
      */
     public String convertExectoAddr(String execername) {
@@ -677,8 +677,6 @@ public class RpcClient {
     /**
      * @description 获取账户列表 GetAccounts
      * 
-     * @param testAddr 例如 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
-     * @param label    例如 macAddrlabel
      * @return 账号列表
      */
     public List<AccountResult> getAccountList() {
@@ -750,7 +748,6 @@ public class RpcClient {
      * @param ownerAddr    token拥有者地址
      * @param total        发行总量,需要乘以10的8次方，比如要发行100个币，需要100*1e8
      * @param price        发行该token愿意承担的费用
-     * @param fee          交易的手续费
      * @return 交易十六进制编码后的字符串
      */
     public String createRawTokenPreCreateTx(String name,String symbol,String introduction,String ownerAddr,long total,long price,Integer category) {
@@ -802,7 +799,6 @@ public class RpcClient {
     /**
      * @description 构造交易
      * 
-     * @param from:来源地址。
      * @param to:目标地址。
      * @param amount:发送金额，注意基础货币单位为10^8
      * @param fee:手续费，注意基础货币单位为10^8
@@ -843,7 +839,7 @@ public class RpcClient {
      * @param txHex:   由上一步的createRawTx生成的交易再传入（比如，CreateRawTokenPreCreateTx：token预创建；CreateRawTokenFinishTx：token完成；CreateRawTransaction：转移token）
      * @param payAddr: 用于付费的地址，这个地址要在主链上存在，并且里面有比特元用于支付手续费。
      * @param Privkey： 对应于payAddr的私钥。如果payAddr已经导入到平行链，那么这个私钥可以不传（建议做法是在平行链上导入地址，保证私钥安全）
-     * @param Expire:  超时时间
+     * @param expire:  超时时间
      * @return hash
      */
     public String createRawTransaction(String txHex, String payAddr, String Privkey, String expire) {
@@ -872,7 +868,6 @@ public class RpcClient {
      * @param key 私钥
      * @param expire 过期时间可输入如"300ms"，"-1.5h"或者"2h45m"的字符串，有效时间单位为"ns", "us" (or "µs"), "ms","s", "m","h"
      * @param index 若是签名交易组，则为要签名的交易序号，从1开始，小于等于0则为签名组内全部交易
-     * @param txHex 上一步CreateNoBalanceTransaction生成的tx
      * @param index 固定填写2(这里是一个交易组，第1笔none的交易已经用pay address签过名了，此处签index=2的交易)
      * @return txhex
      */
@@ -928,7 +923,6 @@ public class RpcClient {
      * 
      * @param addresses  地址列表
      * @param execer    coins
-     * @param tokenSymbol   主代币名称
      * @return  余额列表
      */
     public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer) {
@@ -976,7 +970,7 @@ public class RpcClient {
     /**
      * @description 导入私钥
      * 
-     * @param privkey 私钥
+     * @param privateKey 私钥
      * @param label   地址label
      * @return 导入结果
      */
@@ -1062,10 +1056,8 @@ public class RpcClient {
     /**
      * @description 查询地址下的token/trace合约下的token资产
      * 
-     * @param execer:   token
-     * @param funcName: GetAccountTokenAssets
      * @param address:  查询的地址
-     * @param execer:   token 或 trade
+     * @param payloadExecer:   token 或 trade
      * @return TokenBalanceResult
      */
     public List<TokenBalanceResult> queryAccountBalance(String address, String payloadExecer) {
@@ -1094,7 +1086,7 @@ public class RpcClient {
     /**
      * @description 查询地址余额
      * 
-     * @param address 地址
+     * @param addressList 地址
      * @param execer  coins
      * @return
      */
@@ -1310,10 +1302,7 @@ public class RpcClient {
     /**
      * @description 查询地址下的token/trace合约下的token资产
      * 
-     * @param execer:   token
-     * @param funcName: GetAccountTokenAssets
-     * @param address:  查询的地址
-     * @param execer:   token 或 trade
+     * @param hash:   hash
      * @return TokenBalanceResult
      */
     public JSONObject queryStorage(String hash) {
@@ -1332,6 +1321,81 @@ public class RpcClient {
                 return null;
             JSONObject resultJson = parseObject.getJSONObject("result");
             return resultJson;
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @description 发送重加秘钥分片给重加密节点
+     *
+     * @param pubOwner     数据共享者公钥
+     * @param pubRecipient 数据接收者公钥
+     * @param pubProofR    重加密随机公钥R
+     * @param pubProofU    重加密随机公钥U
+     * @param random       分片随机数
+     * @param value        分片秘钥片段
+     * @param expire       超时时间
+     * @param dhProof      身份证明
+     * @param precurPub    重加密预置公钥
+     * @return true/false
+     */
+    public boolean sendKeyFragment(String pubOwner, String pubRecipient, String pubProofR, String pubProofU, String random,
+                                  String value, int expire, String dhProof, String precurPub) {
+        RpcRequest postData = getPostData(RpcMethod.PRE_SEND_KEY_FRAGMENT);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("pubOwner", pubOwner);
+        requestParam.put("pubRecipient", pubRecipient);
+        requestParam.put("pubProofR", pubProofR);
+        requestParam.put("pubProofU", pubProofU);
+        requestParam.put("random", random);
+        requestParam.put("value", value);
+        requestParam.put("expire", expire);
+        requestParam.put("dhProof", dhProof);
+        requestParam.put("precurPub", precurPub);
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return false;
+            }
+
+            return parseObject.getJSONObject("result").getBoolean("result");
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @description 申请重加密
+     *
+     * @param pubOwner      数据共享者公钥
+     * @param pubRecipient  数据接收者公钥
+     * @return 重加密片段
+     */
+    public ReKeyFrag reencrypt(String pubOwner, String pubRecipient) {
+        RpcRequest postData = getPostData(RpcMethod.PRE_RE_ENCRYPT);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("pubOwner", pubOwner);
+        requestParam.put("pubRecipient", pubRecipient);
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            String rekeyObject = parseObject.getString("result");
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+            return JSONObject.parseObject(rekeyObject, ReKeyFrag.class);
         }
         return null;
     }

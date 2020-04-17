@@ -74,7 +74,11 @@ public enum RpcMethod {
 	
 	DECODE_RAW_TX("Chain33.DecodeRawTransaction"), 
 	
-	TOKEN_CREATE_RAW_TOKEN_REVOKE_TX("token.CreateRawTokenRevokeTx");
+	TOKEN_CREATE_RAW_TOKEN_REVOKE_TX("token.CreateRawTokenRevokeTx"),
+
+	PRE_SEND_KEY_FRAGMENT("Pre.CollectFragment"),
+
+	PRE_RE_ENCRYPT("Pre.Reencrypt");
 
 	private String method;
 	
