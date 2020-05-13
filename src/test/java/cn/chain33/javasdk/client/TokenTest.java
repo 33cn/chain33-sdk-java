@@ -16,13 +16,14 @@ import cn.chain33.javasdk.utils.TransactionUtil;
  *	2. 通过当前链的超级管理员来配置自定义积分的审核者(全局配置：通常情况下只需要执行一次)。
  *	3. 通过积分审核者来预发行自定义积分。
  *	4. 通过积分审核者来正式发行自定义积分。
+ *	试用场景：联盟链
  * @author fkeit
  */
 public class TokenTest {
 
 	
-    String ip = "172.16.103.14";
-    RpcClient client = new RpcClient(ip, 8801);
+    String ip = "fd.33.cn";
+    RpcClient client = new RpcClient(ip, 1263);
     
     /**
      * 
@@ -123,7 +124,7 @@ public class TokenTest {
 	}
 	
     /**
-     * @description 本地构造平行链主代币转账交易
+     * @description 本地构造token转账交易
      */
     @Test
     public void createTokenTransfer() {
@@ -134,7 +135,6 @@ public class TokenTest {
         Long amount = 10000 * 100000000L;// 1 = real amount
         // 转到的地址
         String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
-        // 签名私私钥，里面需要有主链币，用于缴纳手续费
         String fromAddressPriveteKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
         // 执行器名称
         String execer = "token";

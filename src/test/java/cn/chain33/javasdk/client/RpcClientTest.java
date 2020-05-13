@@ -19,8 +19,8 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "localhost";
-    RpcClient client = new RpcClient(ip, 8801);
+    String ip = "fd.33.cn";
+    RpcClient client = new RpcClient(ip, 1263);
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
     String withHoldAddress = "代扣地址";
