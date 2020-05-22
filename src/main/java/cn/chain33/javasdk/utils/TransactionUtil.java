@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.utils;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
@@ -493,7 +494,12 @@ public class TransactionUtil {
 			break;
 		case SM2: {
 			SM2KeyPair keyPair = SM2Util.fromPrivateKey(privateKey);
-			byte[] derSignBytes = SM2Util.sign(data, null, keyPair);
+			byte[] derSignBytes;
+			try {
+				derSignBytes = SM2Util.sign(data, null, keyPair);
+			} catch (IOException e) {
+				break;
+			}
 			Signature signature = new Signature();
 			signature.setPubkey(keyPair.getPublicKey().getEncoded(false));
 			signature.setSignature(derSignBytes);
