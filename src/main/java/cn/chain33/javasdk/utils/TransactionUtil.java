@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -40,9 +39,9 @@ import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.AssetsTransfer;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.CoinsAction;
-import cn.chain33.javasdk.model.sm2.SM2;
-import cn.chain33.javasdk.model.sm2.SM2.SM2Signature;
-import cn.chain33.javasdk.model.sm2.SM2KeyPair;
+import cn.chain33.javasdk.model.gm.SM2Util;
+import cn.chain33.javasdk.model.gm.SM2Util.SM2Signature;
+import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import net.vrallev.java.ecc.Ecc25519Helper;
 
 /**
@@ -494,19 +493,18 @@ public class TransactionUtil {
 		}
 			break;
 		case SM2: {
-			SM2KeyPair keyPair = SM2.fromPrivateKey(privateKey);
-			SM2Signature sign = SM2.sign(data, null, keyPair);
+			SM2KeyPair keyPair = SM2Util.fromPrivateKey(privateKey);
+			byte[] derSignBytes;
 			try {
-				byte[] derSignBytes = SM2.derByteStream(sign.getR(), sign.getS()).toByteArray();
-				Signature signature = new Signature();
-				signature.setPubkey(keyPair.getPublicKey().getEncoded(false));
-				signature.setSignature(derSignBytes);
-				signature.setTy(signType.getType());
-				transaction.setSignature(signature);
+				derSignBytes = SM2Util.sign(data, null, keyPair);
 			} catch (IOException e) {
-				e.printStackTrace();
+				break;
 			}
-
+			Signature signature = new Signature();
+			signature.setPubkey(keyPair.getPublicKey().getEncoded(false));
+			signature.setSignature(derSignBytes);
+			signature.setTy(signType.getType());
+			transaction.setSignature(signature);
 		}
 			break;
 		case ED25519: {
@@ -897,7 +895,7 @@ public class TransactionUtil {
     /**
      * 
      * @description 本地构造 预创建积分交易
-     * @param exece        user.p.xxx.token
+     * @param execer        user.p.xxx.token
      * @param name         token名称
      * @param symbol       tokenSymbol
      * @param introduction token介绍
@@ -978,7 +976,9 @@ public class TransactionUtil {
 	 * @param privateKey
 	 * @param toAddress
 	 * @param execer
-	 * @param payLoad
+	 * @param amount
+	 * @param coinToken
+	 * @param note
 	 * @return
 	 *
 	 */
@@ -1021,7 +1021,6 @@ public class TransactionUtil {
     /**
      * 创建交易,不签名 默认使用比特币seck256K1
      * 
-     * @param privateKey 私钥
      * @param execer     执行器名称
      * @param payLoad    内容
      * @return
@@ -1033,11 +1032,10 @@ public class TransactionUtil {
     /**
      * 创建没有签名的交易
      * 
-     * @param privateKey
      * @param execer
      * @param payLoad
-     * @param signType
      * @param fee
+	 * @param txHeight
      * @return
      */
     public static String createTxWithoutSign(byte[] execer, byte[] payLoad, long fee, long txHeight) {
