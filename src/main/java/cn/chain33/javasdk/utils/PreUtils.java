@@ -153,8 +153,12 @@ public class PreUtils {
         return kFrags;
     }
 
-    public static byte[] AssembleReencryptFragment(byte[] privRecipient, ReKeyFrag[] reKeyFrags) {
+    public static byte[] AssembleReencryptFragment(byte[] privRecipient, ReKeyFrag[] reKeyFrags) throws Exception {
         ECKey privRecipientKey = ECKey.fromPrivate(privRecipient);
+
+        if (reKeyFrags.length ==0 || reKeyFrags[0] == null){
+            throw new Exception("param error");
+        }
         ECKey precursor = ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[0].getPrecurPub()));
 
         int threshold = reKeyFrags.length;
@@ -203,5 +207,12 @@ public class PreUtils {
         }
 
         return enKey;
+    }
+
+    public static String ECDH(String pub, String priv) {
+        ECKey pubKey = ECKey.fromPublicOnly(HexUtil.fromHexString(pub));
+        ECKey privKey = ECKey.fromPrivate(HexUtil.fromHexString(priv));
+
+        return HexUtil.toHexString(pubKey.getPubKeyPoint().multiply(privKey.getPrivKey()).getEncoded());
     }
 }

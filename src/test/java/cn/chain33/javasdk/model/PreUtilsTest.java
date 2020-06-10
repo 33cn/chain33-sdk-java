@@ -1,5 +1,6 @@
-package cn.chain33.javasdk.client;
+package cn.chain33.javasdk.model;
 
+import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.pre.EncryptKey;
 import cn.chain33.javasdk.model.pre.KeyFrag;
 import cn.chain33.javasdk.model.pre.ReKeyFrag;
@@ -14,9 +15,9 @@ import javax.xml.bind.DatatypeConverter;
 public class PreUtilsTest {
     public static void bnEccUtils(int numSplit, int threshold, String serverPub) {
         RpcClient[] client = new RpcClient[]{
-                new RpcClient("http://172.16.101.82:11701"),
-                new RpcClient("http://172.16.101.82:11801"),
-                new RpcClient("http://172.16.101.82:11901"),
+                new RpcClient("http://192.168.0.155:11801"),
+                new RpcClient("http://192.168.0.155:11802"),
+                new RpcClient("http://192.168.0.155:11803"),
         };
 
         ECKey alice = ECKey.fromPrivate(TransactionUtil.generatorPrivateKey());
@@ -38,8 +39,7 @@ public class PreUtilsTest {
         String dhProof =  HexUtil.toHexString(server.getPubKeyPoint().multiply(alice.getPrivKey()).getEncoded());
         for(int i = 0; i < client.length; i++) {
             boolean result = client[i].sendKeyFragment(alice.getPublicKeyAsHex(), bob.getPublicKeyAsHex(),
-                    encryptKey.getPubProofR(), encryptKey.getPubProofU(), kFrags[i].getRandom(), kFrags[i].getValue(),
-                    100, dhProof, kFrags[i].getPrecurPub());
+                    encryptKey.getPubProofR(), encryptKey.getPubProofU(), 100, dhProof, kFrags[i]);
             if (!result) {
                 System.out.println("sendKeyFragment failed");
                 return;
@@ -64,7 +64,13 @@ public class PreUtilsTest {
 //        }
 
         // decrypt
-        byte[] shareKeyBob = PreUtils.AssembleReencryptFragment(bob.getPrivKeyBytes(), reKeyFrags);
+        byte[] shareKeyBob = new byte[0];
+        try {
+            shareKeyBob = PreUtils.AssembleReencryptFragment(bob.getPrivKeyBytes(), reKeyFrags);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
         System.out.println(DatatypeConverter.printHexBinary(shareKeyBob));
         String text = AesUtil.decrypt(cipher, HexUtil.toHexString(shareKeyBob));
         System.out.println(text);
