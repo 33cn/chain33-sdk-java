@@ -8,6 +8,7 @@ import org.bouncycastle.asn1.sec.SECNamedCurves;
 import org.bouncycastle.jcajce.provider.digest.Blake2b;
 import org.spongycastle.math.ec.ECPoint;
 
+import java.io.ByteArrayOutputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.ArrayList;
@@ -20,12 +21,21 @@ public class PreUtils {
 
     private static final int encKeyLength = 32;
 
-    private static BigInteger hashToModInt(byte[] digest) {
-        BigInteger sum = new BigInteger(digest);
-        BigInteger order_minus_1 = new BigInteger(baseN.toByteArray());
-        order_minus_1.subtract(BigInteger.ONE);
+    public static BigInteger hashToModInt(byte[] digest) {
+        int orderBits = baseN.bitLength();
+        int orderBytes = (orderBits + 7) / 8;
 
-        sum.mod(order_minus_1).add(BigInteger.ONE);
+        BigInteger sum;
+        if (digest.length > orderBytes) {
+            byte[] digest1 = java.util.Arrays.copyOf(digest,orderBytes);
+            sum = new BigInteger(digest1);
+        } else {
+            sum = new BigInteger(digest);
+        }
+        int excess = digest.length * 8 - orderBits;
+        if (excess > 0) {
+            sum.shiftRight(excess);
+        }
 
         return sum;
     }
@@ -84,6 +94,41 @@ public class PreUtils {
         return result;
     }
 
+    /**
+     * 密钥派生函数
+     *
+     * @param Z
+     * @param klen
+     *            生成klen字节数长度的密钥
+     * @return
+     */
+    private static byte[] KDF(byte[] Z, int klen) {
+        int ct = 1;
+        int end = (int) Math.ceil(klen * 1.0 / 32);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            for (int i = 1; i < end; i++) {
+                MessageDigest md = MessageDigest.getInstance("SHA-256");
+                md.update(Z);
+                md.update(HexUtil.intToBytes(ct));
+                baos.write(md.digest());
+                ct++;
+            }
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            md.update(Z);
+            md.update(HexUtil.intToBytes(ct));
+            byte[] last = md.digest();
+            if (klen % 32 == 0) {
+                baos.write(last);
+            } else
+                baos.write(last, 0, klen % 32);
+            return baos.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static EncryptKey GenerateEncryptKey(byte[] pubOwner) {
         ECKey pubOwnerKey = ECKey.fromPublicOnly(pubOwner);
 
@@ -96,10 +141,7 @@ public class PreUtils {
 
         byte[] shareKey = pubOwnerKey.getPubKeyPoint().multiply(sum).getEncoded();
 
-        byte[] enKey = new byte[encKeyLength];
-        for(int i = 0; i < encKeyLength; i++) {
-                enKey[i] = shareKey[i];
-        }
+        byte[] enKey = KDF(shareKey, encKeyLength);
         return new EncryptKey(enKey, priv_r.getPublicKeyAsHex(), priv_u.getPublicKeyAsHex());
     }
 
@@ -119,7 +161,6 @@ public class PreUtils {
         md.update(dh_Alice_poit);
 
         BigInteger dhAliceBN = hashToModInt(md.digest());
-        //System.out.println("dhAliceBN:"+dhAliceBN);
 
         BigInteger f0;
         f0 = dhAliceBN.modInverse(baseN).multiply(owner.getPrivKey()).mod(baseN);
@@ -178,7 +219,6 @@ public class PreUtils {
         md1.update(privRecipientKey.getPubKey());
         md1.update(dh_Bob_poit);
         BigInteger dhBobBN = hashToModInt(md1.digest());
-        //System.out.println("dhBobBN:  " + dhBobBN);
 
         byte[] shareKeyBob;
         if (reKeyFrags.length == 1) {
@@ -201,11 +241,7 @@ public class PreUtils {
             shareKeyBob = efinal.add(vfinal).multiply(dhBobBN).getEncoded();
         }
 
-        byte[] enKey = new byte[encKeyLength];
-        for(int i = 0; i < encKeyLength; i++) {
-            enKey[i] = shareKeyBob[i];
-        }
-
+        byte[] enKey = KDF(shareKeyBob, encKeyLength);
         return enKey;
     }
 

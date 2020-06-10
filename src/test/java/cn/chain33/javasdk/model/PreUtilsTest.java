@@ -9,10 +9,11 @@ import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.PreUtils;
 import cn.chain33.javasdk.utils.TransactionUtil;
 import org.bitcoinj.core.ECKey;
-
-import javax.xml.bind.DatatypeConverter;
+import org.junit.Assert;
 
 public class PreUtilsTest {
+    static String content = "chain33 pre test";
+
     public static void bnEccUtils(int numSplit, int threshold, String serverPub) {
         RpcClient[] client = new RpcClient[]{
                 new RpcClient("http://192.168.0.155:11801"),
@@ -22,8 +23,7 @@ public class PreUtilsTest {
 
         ECKey alice = ECKey.fromPrivate(TransactionUtil.generatorPrivateKey());
         EncryptKey encryptKey = PreUtils.GenerateEncryptKey(alice.getPubKey());
-        System.out.println(DatatypeConverter.printHexBinary(encryptKey.getShareKey()));
-        String cipher = AesUtil.encrypt("hello, pre", encryptKey.getShareKey(),  AesUtil.generateIv());
+        String cipher = AesUtil.encrypt(content, encryptKey.getShareKey(),  AesUtil.generateIv());
 
         ECKey bob = ECKey.fromPrivate(TransactionUtil.generatorPrivateKey());
         ECKey server = ECKey.fromPublicOnly(HexUtil.fromHexString(serverPub));
@@ -64,19 +64,24 @@ public class PreUtilsTest {
 //        }
 
         // decrypt
-        byte[] shareKeyBob = new byte[0];
+        byte[] shareKeyBob;
         try {
             shareKeyBob = PreUtils.AssembleReencryptFragment(bob.getPrivKeyBytes(), reKeyFrags);
         } catch (Exception e) {
             e.printStackTrace();
             return;
         }
-        System.out.println(DatatypeConverter.printHexBinary(shareKeyBob));
+
+        if (!HexUtil.toHexString(encryptKey.getShareKey()).equals(HexUtil.toHexString(shareKeyBob))) {
+            Assert.fail();
+        }
         String text = AesUtil.decrypt(cipher, HexUtil.toHexString(shareKeyBob));
-        System.out.println(text);
+        if (!text.equals(content)) {
+            Assert.fail();
+        }
     }
 
     public static void main(String args[]) {
-          bnEccUtils(3, 2, "0x02005d3a38feaff00f1b83014b2602d7b5b39506ddee7919dd66539b5428358f08");
+        bnEccUtils(3, 2, "0x02005d3a38feaff00f1b83014b2602d7b5b39506ddee7919dd66539b5428358f08");
     }
 }
