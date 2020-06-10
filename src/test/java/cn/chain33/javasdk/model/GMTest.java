@@ -1,12 +1,6 @@
-package cn.chain33.javasdk.gmtest;
+package cn.chain33.javasdk.model;
 
 import cn.chain33.javasdk.model.gm.*;
-import cn.chain33.javasdk.utils.TransactionUtil;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Sha256Hash;
-import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
-import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
-import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
 import org.junit.Assert;
 import org.junit.Test;
