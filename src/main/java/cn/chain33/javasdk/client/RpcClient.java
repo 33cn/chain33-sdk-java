@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import cn.chain33.javasdk.model.pre.KeyFrag;
 import cn.chain33.javasdk.model.pre.ReKeyFrag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -1333,15 +1334,13 @@ public class RpcClient {
      * @param pubRecipient 数据接收者公钥
      * @param pubProofR    重加密随机公钥R
      * @param pubProofU    重加密随机公钥U
-     * @param random       分片随机数
-     * @param value        分片秘钥片段
      * @param expire       超时时间
      * @param dhProof      身份证明
-     * @param precurPub    重加密预置公钥
+     * @param frag         重加密秘钥分片
      * @return true/false
      */
-    public boolean sendKeyFragment(String pubOwner, String pubRecipient, String pubProofR, String pubProofU, String random,
-                                  String value, int expire, String dhProof, String precurPub) {
+    public boolean sendKeyFragment(String pubOwner, String pubRecipient, String pubProofR, String pubProofU, int expire,
+                                   String dhProof, KeyFrag frag) {
         RpcRequest postData = getPostData(RpcMethod.PRE_SEND_KEY_FRAGMENT);
 
         JSONObject requestParam = new JSONObject();
@@ -1349,11 +1348,11 @@ public class RpcClient {
         requestParam.put("pubRecipient", pubRecipient);
         requestParam.put("pubProofR", pubProofR);
         requestParam.put("pubProofU", pubProofU);
-        requestParam.put("random", random);
-        requestParam.put("value", value);
+        requestParam.put("random", frag.getRandom());
+        requestParam.put("value", frag.getValue());
         requestParam.put("expire", expire);
         requestParam.put("dhProof", dhProof);
-        requestParam.put("precurPub", precurPub);
+        requestParam.put("precurPub", frag.getPrecurPub());
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());

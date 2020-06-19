@@ -1,13 +1,12 @@
-package cn.chain33.javasdk.client;
+package cn.chain33.javasdk.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.chain33.javasdk.client.RpcClient;
 import org.junit.Test;
 
 import cn.chain33.javasdk.client.Account;
-import cn.chain33.javasdk.model.AccountInfo;
-import cn.chain33.javasdk.model.TransferBalanceRequest;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;

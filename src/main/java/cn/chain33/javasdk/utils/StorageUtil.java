@@ -115,11 +115,14 @@ public class StorageUtil {
      * @return payload
      *
      */
-    public static String createEncryptNotaryStorage(byte[] encryptContent,byte[] contentHash,byte[] nonce, String execer, String privateKey) {
+    public static String createEncryptNotaryStorage(byte[] encryptContent,byte[] contentHash,byte[] nonce, String key,
+                                                    String value, String execer, String privateKey) {
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder storageBuilder = StorageProtobuf.EncryptNotaryStorage.newBuilder();
         storageBuilder.setEncryptContent(ByteString.copyFrom(encryptContent));
         storageBuilder.setContentHash(ByteString.copyFrom(contentHash));
         storageBuilder.setNonce(ByteString.copyFrom(nonce));
+        storageBuilder.setKey(key);
+        storageBuilder.setValue(value);
         EncryptNotaryStorage encryptNotaryStorage = storageBuilder.build();
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
         storageActionBuilder.setEncryptStorage(encryptNotaryStorage);
@@ -155,10 +158,10 @@ public class StorageUtil {
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder storageBuilder = StorageProtobuf.EncryptShareNotaryStorage.newBuilder();
         storageBuilder.setContentHash(ByteString.copyFrom(contentHash));
         storageBuilder.setEncryptContent(ByteString.copyFrom(content));
-        storageBuilder.setKeyName(ByteString.copyFrom(keyName));
-        storageBuilder.setNonce(ByteString.copyFrom(nonce));
-        storageBuilder.setKeyWrap(ByteString.copyFrom(keyWrap));
-        
+//        storageBuilder.setKeyName(ByteString.copyFrom(keyName));
+//        storageBuilder.setNonce(ByteString.copyFrom(nonce));
+//        storageBuilder.setKeyWrap(ByteString.copyFrom(keyWrap));
+
         EncryptShareNotaryStorage encryptShareNotaryStorage = storageBuilder.build();
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
         storageActionBuilder.setEncryptShareStorage(encryptShareNotaryStorage);

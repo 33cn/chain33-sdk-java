@@ -1,12 +1,6 @@
-package cn.chain33.javasdk.gmtest;
+package cn.chain33.javasdk.model;
 
-import cn.chain33.javasdk.model.gm.SM2KeyPair;
-import cn.chain33.javasdk.model.gm.SM2Util;
-import cn.chain33.javasdk.model.gm.SM3Util;
-import cn.chain33.javasdk.model.gm.SM4Util;
-import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
-import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
-import org.bouncycastle.crypto.params.ECPublicKeyParameters;
+import cn.chain33.javasdk.model.gm.*;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,7 +9,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class GMTest {
-    public static final byte[] SRC_DATA = new byte[]{1, 2, 3, 4, 5, 6, 7, 8};
+    public static final byte[] SRC_DATA = new byte[]{0x1, 0x23, 0x45, 0x67, (byte)0x89, (byte)0xab, (byte)0xcd, (byte)0xef, (byte)0xfe, (byte)0xdc, (byte)0xba, (byte)0x98, 0x76, 0x54, 0x32, 0x10};
     public static final String SRC_DATA_24B = "123456781234567812345678";
     public static final String WITH_ID = "1234";
 
@@ -92,11 +86,12 @@ public class GMTest {
     @Test
     public void testSM4() {
         try {
-            byte[] key = SM4Util.generateKey();
+            byte[] key;
             byte[] iv = SM4Util.generateKey();
-            byte[] cipherText = null;
-            byte[] decryptedData = null;
+            byte[] cipherText;
+            byte[] decryptedData;
 
+            key = new byte[]{0x1, 0x23, 0x45, 0x67, (byte)0x89, (byte)0xab, (byte)0xcd, (byte)0xef, (byte)0xfe, (byte)0xdc, (byte)0xba, (byte)0x98, 0x76, 0x54, 0x32, 0x10};
             cipherText = SM4Util.encryptECB(key, SRC_DATA);
             System.out.println("SM4 ECB Padding encrypt result:\n" + Arrays.toString(cipherText));
             decryptedData = SM4Util.decryptECB(key, cipherText);
