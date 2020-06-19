@@ -736,8 +736,25 @@ public class RpcClient {
     	blackListPayload.put("value", value);
     	blackListPayload.put("op", op);
     	String managerResult = createTransaction(execer, actionName, blackListPayload);
-    	return null;
+    	return managerResult;
     }
+    
+
+    /**
+     * 创建账号
+     * @param execer
+     * @param actionName
+     * @param accountId
+     * @return
+     * @throws Exception
+     */
+    public String registeAccount(String execer, String actionName, String accountId) throws Exception {
+    	JSONObject accountPayload = new JSONObject();
+    	accountPayload.put("accountID", accountId);
+    	String accountResult = createTransaction(execer, actionName, accountPayload);
+    	return accountResult;
+    }
+    
 
     /**
      * @description 生成预创建token的交易
