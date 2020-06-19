@@ -1,7 +1,8 @@
-package cn.chain33.javasdk.client;
+package cn.chain33.javasdk.model;
 
 import java.io.UnsupportedEncodingException;
 
+import cn.chain33.javasdk.client.RpcClient;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -93,7 +94,7 @@ public class StorageTest {
 		String decrypt = AesUtil.decrypt(encrypt, HexUtil.toHexString(key));
 		System.out.println("decrypt:" + decrypt);
 		byte[] contentHash = TransactionUtil.Sha256(content.getBytes("utf-8"));
-		String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt.getBytes(),contentHash, iv, execer, privateKey);
+		String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt.getBytes(),contentHash, iv, "", "", execer, privateKey);
 		String submitTransaction = client.submitTransaction(txEncode);
 		System.out.println(submitTransaction);
 		
