@@ -19,8 +19,9 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class AccountTest {
 	
-    String ip = "139.196.201.120";
-    RpcClient client = new RpcClient(ip, 8901);
+
+    String ip = "fd.33.cn";
+    RpcClient client = new RpcClient(ip, 1263);
     
     Account account = new Account();
 
