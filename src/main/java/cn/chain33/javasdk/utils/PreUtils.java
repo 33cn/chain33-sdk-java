@@ -44,7 +44,7 @@ public class PreUtils {
         BigInteger[] coeffs = new BigInteger[threshold - 1];
         for (int i = 0; i < threshold - 1; i++) {
             ECKey key = ECKey.fromPrivate(TransactionUtil.generatorPrivateKey());
-            coeffs[0] = key.getPrivKey();
+            coeffs[i] = key.getPrivKey();
         }
 
         return coeffs;
