@@ -19,7 +19,7 @@ import java.util.Random;
 public class PreUtils {
     private static final BigInteger baseN = SECNamedCurves.getByName("secp256k1").getN();
 
-    private static final int encKeyLength = 32;
+    private static final int encKeyLength = 16; // 兼容老版本jdk，使用aes-128
 
     public static BigInteger hashToModInt(byte[] digest) {
         int orderBits = baseN.bitLength();
