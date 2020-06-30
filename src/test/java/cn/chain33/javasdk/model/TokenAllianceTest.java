@@ -1,10 +1,11 @@
-package cn.chain33.javasdk.client;
+package cn.chain33.javasdk.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
+import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.TokenResult;
 import cn.chain33.javasdk.utils.TransactionUtil;

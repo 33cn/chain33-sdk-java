@@ -756,6 +756,42 @@ public class RpcClient {
     	return accountResult;
     }
     
+    /**
+     * 对账号进行授权
+     * @param execer
+     * @param actionName
+     * @param accountId
+     * @return
+     * @throws Exception
+     */
+    public String authAccount(String execer, String actionName, String[] accountIds, String op, String level) throws Exception {
+    	JSONObject accountPayload = new JSONObject();
+    	accountPayload.put("accountIDs", accountIds);
+    	accountPayload.put("op", op);
+    	if (StringUtil.isNotEmpty(level)) {
+        	accountPayload.put("level", level);
+    	}
+    	String accountResult = createTransaction(execer, actionName, accountPayload);
+    	return accountResult;
+    }
+    
+    /**
+     * 增加共识节点
+     * 
+     * @param execer
+     * @param actionName
+     * @param accountId
+     * @return
+     * @throws Exception
+     */
+    public String addConsensusNode(String execer, String actionName, String pubKey, int power) throws Exception {
+    	JSONObject nodePayload = new JSONObject();
+    	nodePayload.put("pubKey", pubKey);
+    	nodePayload.put("power", power);
+    	String nodeResult = createTransaction(execer, actionName, nodePayload);
+    	return nodeResult;
+    }
+    
 
     /**
      * @description 生成预创建token的交易
@@ -1318,7 +1354,7 @@ public class RpcClient {
     
     
     /**
-     * @description 查询地址下的token/trace合约下的token资产
+     * @description 查询存证信息
      * 
      * @param hash:   hash
      * @return TokenBalanceResult
@@ -1330,6 +1366,58 @@ public class RpcClient {
         requestParam.put("funcName", "QueryStorage");
         JSONObject payloadJson = new JSONObject();
         payloadJson.put("txHash", hash);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            return resultJson;
+        }
+        return null;
+    }
+    
+    /**
+     * @description 根据AccountId查账户信息
+     * 
+     * @param hash:   hash
+     * @return TokenBalanceResult
+     */
+    public JSONObject queryAccountById(String accountId) {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", "accountmanager");
+        requestParam.put("funcName", "QueryAccountByID");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("accountID", accountId);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            return resultJson;
+        }
+        return null;
+    }
+    
+    /**
+     * @description 根据账户状态查账户信息
+     * 
+     * @param hash:   hash
+     * @return TokenBalanceResult
+     */
+    public JSONObject queryAccountByStatus(String status) {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", "accountmanager");
+        requestParam.put("funcName", "QueryAccountsByStatus");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("status", status);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
