@@ -6,16 +6,21 @@ import java.util.List;
 import cn.chain33.javasdk.client.RpcClient;
 import org.junit.Test;
 
+import com.google.protobuf.InvalidProtocolBufferException;
+
 import cn.chain33.javasdk.client.Account;
 import cn.chain33.javasdk.model.enums.SignType;
+import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
+import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class AccountTest {
 	
-    String ip = "172.16.103.14";
-    RpcClient client = new RpcClient(ip, 8801);
+
+    String ip = "fd.33.cn";
+    RpcClient client = new RpcClient(ip, 1263);
     
     Account account = new Account();
 
@@ -95,5 +100,45 @@ public class AccountTest {
                 System.out.println(accountAccResult);
             }
     }
+    }
+    
+    /**
+     * 注册账户，并查询
+     * 
+     * @throws Exception
+     */
+    @Test
+    public void registeAndQueryAccount() throws Exception {
+    	
+    	AccountInfo accountInfo = account.newAccountLocal();
+        String createTxWithoutSign = client.registeAccount("accountmanager", "Register", "testAccount1");
+        
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionProtoBuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, accountInfo.getPrivateKey());
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        
+		String submitTransaction = client.submitTransaction(hexString);
+		System.out.println(submitTransaction);
+		
+        // 一般1秒一个区块
+        QueryTransactionResult queryTransaction1;
+        for (int i = 0; i < 10; i++) {
+			queryTransaction1 = client.queryTransaction(submitTransaction);
+			if (null == queryTransaction1) {
+				Thread.sleep(1000);
+			} else {
+				break;
+			}
+		}
+        
+        // 根据accountId查询账户信息
+        
+  
     }
 }
