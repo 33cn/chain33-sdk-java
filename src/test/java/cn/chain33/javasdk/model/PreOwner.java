@@ -12,13 +12,14 @@ public class PreOwner {
 
     // 代理重加密节点
     static RpcClient[]  preClient = new RpcClient[]{
-            new RpcClient("http://192.168.0.155:11801"),
-            new RpcClient("http://192.168.0.155:11802"),
-            new RpcClient("http://192.168.0.155:11803"),
+            new RpcClient("http://139.196.201.120:11801"),
+            new RpcClient("http://139.196.201.141:11801"),
+            new RpcClient("http://139.196.201.241:11801"),
+            new RpcClient("http://139.196.201.49:11801"),
     };
 
     // 区块链节点
-    static RpcClient chain33Client = new RpcClient("http://192.168.0.155:8801");
+    static RpcClient chain33Client = new RpcClient("http://139.196.201.120:8901");
 
     // 数据所有者私钥
     static String OwnerPrivateKey = "4247776e69fec9c72b03812302b98de6663de43ad9fe3674d953079fceea850c";
@@ -82,6 +83,6 @@ public class PreOwner {
     }
 
     public static void main(String args[]) {
-        preEncrypt(3, 2);
+        preEncrypt(4, 2);
     }
 }
