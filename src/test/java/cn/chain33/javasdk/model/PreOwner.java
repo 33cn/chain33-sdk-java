@@ -71,7 +71,7 @@ public class PreOwner {
 
         // 数据加密
         byte[] iv = AesUtil.generateIv();
-        String cipher = AesUtil.encrypt(content, encryptKey.getShareKey(), iv);
+        byte[] cipher = AesUtil.encrypt(content, encryptKey.getShareKey(), iv);
         System.out.println(cipher);
 
         // 加密数据上链
@@ -83,11 +83,12 @@ public class PreOwner {
             return;
         }
 
-        String txEncode = StorageUtil.createEncryptNotaryStorage(cipher.getBytes(), contentHash, iv,
-                "chain33-storage-key-pre-alice", "", "storage", OwnerPrivateKey);
+        String txEncode = StorageUtil.createEncryptNotaryStorage(cipher, contentHash, iv,
+                "chain33-storage-key-pre-alice1", "", "storage", OwnerPrivateKey);
         String submitTransaction = chain33Client.submitTransaction(txEncode);
         System.out.println(submitTransaction);
     }
+
 
     /**
      * 分片并上传加密私钥
@@ -115,5 +116,5 @@ public class PreOwner {
                 return;
             }
         }
-    }
+}
 }

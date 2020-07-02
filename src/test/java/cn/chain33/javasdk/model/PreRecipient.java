@@ -49,14 +49,13 @@ public class PreRecipient {
         byte[] shareKeyBob = downloadKey(bob);
 
         // 从链上获取密文
-        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice");
+        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice1");
         JSONObject resultArray = resultJson.getJSONObject("encryptStorage");
         String content = resultArray.getString("encryptContent");
         byte[] fromHexString = HexUtil.fromHexString(content);
-        System.out.println(new String(fromHexString));
 
         // 解密
-        String text = AesUtil.decrypt(new String(fromHexString), HexUtil.toHexString(shareKeyBob));
+        String text = AesUtil.decrypt(fromHexString, HexUtil.toHexString(shareKeyBob));
         System.out.println(text);
     }
     
@@ -76,10 +75,9 @@ public class PreRecipient {
         JSONObject resultArray = resultJson.getJSONObject("encryptStorage");
         String content = resultArray.getString("encryptContent");
         byte[] fromHexString = HexUtil.fromHexString(content);
-        System.out.println(new String(fromHexString));
 
         // 解密
-        String text = AesUtil.decrypt(new String(fromHexString), HexUtil.toHexString(shareKeyTom));
+        String text = AesUtil.decrypt(fromHexString, HexUtil.toHexString(shareKeyTom));
         System.out.println(text);
     }
     
@@ -102,7 +100,7 @@ public class PreRecipient {
         System.out.println(new String(fromHexString));
 
         // 解密
-        String text = AesUtil.decrypt(new String(fromHexString), HexUtil.toHexString(shareKeyJames));
+        String text = AesUtil.decrypt(fromHexString, HexUtil.toHexString(shareKeyJames));
         System.out.println(text);
     }
 
