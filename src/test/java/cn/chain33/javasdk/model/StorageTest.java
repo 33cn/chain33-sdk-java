@@ -90,11 +90,11 @@ public class StorageTest {
 		// 生成iv
 		byte[] iv = AesUtil.generateIv();
 		// 对明文进行加密
-		String encrypt = AesUtil.encrypt(content, key, iv);
+		byte[] encrypt = AesUtil.encrypt(content, key, iv);
 		String decrypt = AesUtil.decrypt(encrypt, HexUtil.toHexString(key));
 		System.out.println("decrypt:" + decrypt);
 		byte[] contentHash = TransactionUtil.Sha256(content.getBytes("utf-8"));
-		String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt.getBytes(),contentHash, iv, "", "", execer, privateKey);
+		String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt,contentHash, iv, "", "", execer, privateKey);
 		String submitTransaction = client.submitTransaction(txEncode);
 		System.out.println(submitTransaction);
 		
@@ -163,7 +163,7 @@ public class StorageTest {
             resultArray = resultJson.getJSONObject("encryptStorage");
             String content = resultArray.getString("encryptContent");
             byte[] fromHexString = HexUtil.fromHexString(content);
-            String decrypt = AesUtil.decrypt(new String(fromHexString), desKey);
+            String decrypt = AesUtil.decrypt(fromHexString, desKey);
             System.out.println(decrypt);
         } else {
         	// 内容型存证解析

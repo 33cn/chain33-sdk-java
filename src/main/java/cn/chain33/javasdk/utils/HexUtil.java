@@ -84,10 +84,10 @@ public class HexUtil {
 	
 	public static byte[] intToBytes(int num) {
 		byte[] bytes = new byte[4];
-		bytes[0] = (byte) (0xff & (num >> 0));
-		bytes[1] = (byte) (0xff & (num >> 8));
-		bytes[2] = (byte) (0xff & (num >> 16));
-		bytes[3] = (byte) (0xff & (num >> 24));
+		bytes[3] = (byte) (0xff & (num >> 0));
+		bytes[2] = (byte) (0xff & (num >> 8));
+		bytes[1] = (byte) (0xff & (num >> 16));
+		bytes[0] = (byte) (0xff & (num >> 24));
 		return bytes;
 	}
 
@@ -101,13 +101,13 @@ public class HexUtil {
 	public static int byteToInt(byte[] bytes) {
 		int num = 0;
 		int temp;
-		temp = (0x000000ff & (bytes[0])) << 0;
+		temp = (0x000000ff & (bytes[3])) << 0;
 		num = num | temp;
-		temp = (0x000000ff & (bytes[1])) << 8;
+		temp = (0x000000ff & (bytes[2])) << 8;
 		num = num | temp;
-		temp = (0x000000ff & (bytes[2])) << 16;
+		temp = (0x000000ff & (bytes[1])) << 16;
 		num = num | temp;
-		temp = (0x000000ff & (bytes[3])) << 24;
+		temp = (0x000000ff & (bytes[0])) << 24;
 		num = num | temp;
 		return num;
 	}

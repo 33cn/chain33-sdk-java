@@ -11,12 +11,14 @@ public class PreRecipient {
 
     // 代理重加密节点
     static RpcClient[]  preClient = new RpcClient[]{
-            new RpcClient("http://192.168.0.155:11801"),
-            new RpcClient("http://192.168.0.155:11802"),
+            new RpcClient("http://139.196.201.120:11801"),
+            new RpcClient("http://139.196.201.141:11801"),
+            new RpcClient("http://139.196.201.241:11801"),
+            new RpcClient("http://139.196.201.49:11801"),
     };
 
     // 区块链节点
-    static RpcClient chain33Client = new RpcClient("http://192.168.0.155:8801");
+    static RpcClient chain33Client =  new RpcClient("http://139.196.201.120:8901");
 
     // 数据所有者公钥
     static String OwnerPubKey = "02b009d9388d452677e4c00535ee60a0266f2688bb6c68cdd81543bc4b5d6adb80";
@@ -53,11 +55,11 @@ public class PreRecipient {
         System.out.println(new String(fromHexString));
 
         // 解密
-        String text = AesUtil.decrypt(new String(fromHexString), HexUtil.toHexString(shareKeyBob));
+        String text = AesUtil.decrypt(fromHexString, HexUtil.toHexString(shareKeyBob));
         System.out.println(text);
     }
 
     public static void main(String args[]) {
-        preDecrypt(2);
+        preDecrypt(3);
     }
 }
