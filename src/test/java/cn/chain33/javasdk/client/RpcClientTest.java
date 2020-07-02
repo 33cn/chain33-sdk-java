@@ -19,8 +19,9 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "localhost";
-    RpcClient client = new RpcClient(ip, 8801);
+    String ip = "fd.33.cn";
+    RpcClient client = new RpcClient(ip, 1263);
+	
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
     String withHoldAddress = "代扣地址";
@@ -28,7 +29,9 @@ public class RpcClientTest {
     /**
      * 
      * @description 查询节点是否同步
-     *
+     * 联盟链：适用
+     * 主链：适用
+     * 平行链：不适用
      */
     @Test
     public void checkStatus() {
@@ -60,8 +63,8 @@ public class RpcClientTest {
 
     @Test
     public void unlock() {
-        String passwd = "123456";
-        passwd = "fzm123";
+        // 钱包密码，长度8位，数字+字母
+        String passwd = "fzm12345";
         boolean walletorticket = false;
         int timeout = 0;
         BooleanResult unlock = client.unlock(passwd, walletorticket, timeout);
@@ -87,7 +90,7 @@ public class RpcClientTest {
     @Test
     public void seedSave() {
         String seedCn = "常 辉 觉 李 固 参 鲜 村 见 控 罩 戈 狠 亿 圣";
-        String passwd = "123456";
+        String passwd = "fzm12345";
         BooleanResult booleanResult = client.seedSave(seedCn, passwd);
         System.out.println(booleanResult);
     }
@@ -99,7 +102,7 @@ public class RpcClientTest {
      */
     @Test
     public void seedGet() {
-        String passwd = "123456";
+        String passwd = "fzm12345";
         String seedGet = client.seedGet(passwd);
         System.out.println(seedGet);
     }
@@ -180,7 +183,9 @@ public class RpcClientTest {
      */
     @Test
     public void queryTxDetail() {
-        String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
+    	// 交易hash
+    	// String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
+        String hash = "交易hash";
         QueryTransactionResult queryTransaction1;
         queryTransaction1 = client.queryTransaction(hash);
         System.out.println(queryTransaction1);
@@ -250,10 +255,11 @@ public class RpcClientTest {
         long total = (long) (1000 * 1e8);
         // 调用节点接口预创建token 返回hash
         String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
-                "logan create the coin", "owner address", total, 0,0);
+                "logan create the coin", "1Af1JWXYVJwMrSkC7QpG4KVckNKgXmnhm4", total, 0,0);
         // 签名
-        String signRawTx = client.signRawTx("address", "addressPrivateKey", createRawTokenPreCreateTx, "300", 0);
-        client.submitTransaction(signRawTx);
+        String signRawTx = client.signRawTx("1Af1JWXYVJwMrSkC7QpG4KVckNKgXmnhm4", "0x65622cbb675a62ec6de652811dc649286652b75c80850ccd7bb30ffb053c5af9", createRawTokenPreCreateTx, "300", 0);
+        String submitTransaction =  client.submitTransaction(signRawTx);
+        System.out.println(submitTransaction);
     }
 
     /**

@@ -501,7 +501,7 @@ public class TransactionUtil {
 				break;
 			}
 			Signature signature = new Signature();
-			signature.setPubkey(keyPair.getPublicKey().getEncoded(false));
+			signature.setPubkey(keyPair.getPublicKey().getEncoded(true));
 			signature.setSignature(derSignBytes);
 			signature.setTy(signType.getType());
 			transaction.setSignature(signature);
