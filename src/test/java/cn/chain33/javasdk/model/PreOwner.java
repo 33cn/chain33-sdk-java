@@ -11,6 +11,15 @@ import java.io.UnsupportedEncodingException;
 public class PreOwner {
 
     // 代理重加密节点
+//    static RpcClient[]  preClient = new RpcClient[]{
+//            new RpcClient("http://192.168.0.155:11801"),
+//            new RpcClient("http://192.168.0.155:11802"),
+//            new RpcClient("http://192.168.0.155:11803"),
+//    };
+//
+//    // 区块链节点
+//    static RpcClient chain33Client = new RpcClient("http://192.168.0.155:8801");
+
     static RpcClient[]  preClient = new RpcClient[]{
             new RpcClient("http://139.196.201.120:11801"),
             new RpcClient("http://139.196.201.141:11801"),
@@ -64,7 +73,7 @@ public class PreOwner {
 
         // 数据加密
         byte[] iv = AesUtil.generateIv();
-        String cipher = AesUtil.encrypt(content, encryptKey.getShareKey(), iv);
+        byte[] cipher = AesUtil.encrypt(content, encryptKey.getShareKey(), iv);
         System.out.println(cipher);
 
         // 加密数据上链
@@ -76,13 +85,13 @@ public class PreOwner {
             return;
         }
 
-        String txEncode = StorageUtil.createEncryptNotaryStorage(cipher.getBytes(), contentHash, iv,
+        String txEncode = StorageUtil.createEncryptNotaryStorage(cipher, contentHash, iv,
                 "chain33-storage-key-pre-"+kFrags[0].getPrecurPub(), "", "storage", OwnerPrivateKey);
         String submitTransaction = chain33Client.submitTransaction(txEncode);
         System.out.println(submitTransaction);
     }
 
     public static void main(String args[]) {
-        preEncrypt(4, 2);
+        preEncrypt(4, 3);
     }
 }

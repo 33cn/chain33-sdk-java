@@ -102,7 +102,7 @@ public class PreUtils {
      *            生成klen字节数长度的密钥
      * @return
      */
-    private static byte[] KDF(byte[] Z, int klen) {
+    public static byte[] KDF(byte[] Z, int klen) {
         int ct = 1;
         int end = (int) Math.ceil(klen * 1.0 / 32);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -155,9 +155,9 @@ public class PreUtils {
         ECKey owner = ECKey.fromPrivate(privOwner);
 
         byte[] dh_Alice_poit = recipient.getPubKeyPoint().multiply(precursor.getPrivKey()).getEncoded();
-        MessageDigest md = new Blake2b.Blake2b256();
-        md.update(precursor.getPubKey());
-        md.update(pubRecipient);
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        md.update(precursor.getPubKeyPoint().getXCoord().getEncoded());
+        md.update(recipient.getPubKeyPoint().getXCoord().getEncoded());
         md.update(dh_Alice_poit);
 
         BigInteger dhAliceBN = hashToModInt(md.digest());
@@ -168,7 +168,7 @@ public class PreUtils {
         KeyFrag[] kFrags = new KeyFrag[numSplit];
         Random random = new Random();
         if (numSplit == 1) {
-            BigInteger id = new BigInteger(baseN.bitLength(), random);
+            BigInteger id = new BigInteger(baseN.bitLength() - 1, random);
             kFrags[0] = new KeyFrag(id.toString(), f0.toString(), precursor.getPublicKeyAsHex());
         } else {
             BigInteger[] coeffs = makeShamirPolyCoeff(threshold);
@@ -178,10 +178,10 @@ public class PreUtils {
             coeffs = arrList.toArray(new BigInteger[arrList.size()]);
 
             for (int i = 0; i < numSplit; i++) {
-                BigInteger id = new BigInteger(baseN.bitLength(), random);
-                MessageDigest dShareHash = new Blake2b.Blake2b256();
-                dShareHash.update(precursor.getPubKey());
-                dShareHash.update(pubRecipient);
+                BigInteger id = new BigInteger(baseN.bitLength() - 1, random);
+                MessageDigest dShareHash = MessageDigest.getInstance("SHA-256");
+                dShareHash.update(precursor.getPubKeyPoint().getXCoord().getEncoded());
+                dShareHash.update(recipient.getPubKeyPoint().getXCoord().getEncoded());
                 dShareHash.update(dh_Alice_poit);
                 dShareHash.update(id.toByteArray());
                 BigInteger share = hashToModInt(dShareHash.digest());
@@ -206,17 +206,17 @@ public class PreUtils {
         byte[] dh_Bob_poit = precursor.getPubKeyPoint().multiply(privRecipientKey.getPrivKey()).getEncoded();
         BigInteger[] ids = new BigInteger[threshold];
         for (int i = 0; i < threshold; i++) {
-            MessageDigest xs = new Blake2b.Blake2b256();
-            xs.update(precursor.getPubKey());
-            xs.update(privRecipientKey.getPubKey());
+            MessageDigest xs = MessageDigest.getInstance("SHA-256");
+            xs.update(precursor.getPubKeyPoint().getXCoord().getEncoded());
+            xs.update(privRecipientKey.getPubKeyPoint().getXCoord().getEncoded());
             xs.update(dh_Bob_poit);
             xs.update(new BigInteger(reKeyFrags[i].getRandom()).toByteArray());
             ids[i] = hashToModInt(xs.digest());
         }
 
-        MessageDigest md1 = new Blake2b.Blake2b256();
-        md1.update(precursor.getPubKey());
-        md1.update(privRecipientKey.getPubKey());
+        MessageDigest md1 = MessageDigest.getInstance("SHA-256");
+        md1.update(precursor.getPubKeyPoint().getXCoord().getEncoded());
+        md1.update(privRecipientKey.getPubKeyPoint().getXCoord().getEncoded());
         md1.update(dh_Bob_poit);
         BigInteger dhBobBN = hashToModInt(md1.digest());
 

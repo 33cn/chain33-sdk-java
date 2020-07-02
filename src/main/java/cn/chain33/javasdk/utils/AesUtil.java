@@ -49,10 +49,10 @@ public class AesUtil {
             e.printStackTrace();
         }
         return null;
-      
+
     }
-    
-    public static String encrypt(String content,byte[] symKeyData,byte[] ivData) {
+
+    public static byte[] encrypt(String content,byte[] symKeyData,byte[] ivData) {
         final byte[] encodedMessage = content.getBytes(Charset
                 .forName("UTF-8"));
         try {
@@ -72,10 +72,7 @@ public class AesUtil {
             System.arraycopy(encryptedMessage, 0, ivAndEncryptedMessage,
                     blockSize, encryptedMessage.length);
 
-            String ivAndEncryptedMessageBase64 = DatatypeConverter
-                    .printBase64Binary(ivAndEncryptedMessage);
-
-            return ivAndEncryptedMessageBase64;
+            return ivAndEncryptedMessage;
         } catch (InvalidKeyException e) {
             throw new IllegalArgumentException(
                     "key argument does not contain a valid AES key");
@@ -85,12 +82,10 @@ public class AesUtil {
         }
     }
 
-    public static String decrypt(String ivAndEncryptedMessageBase64,
+    public static String decrypt(byte[] ivAndEncryptedMessage,
             String symKeyHex) {
         byte[] symKeyData = DatatypeConverter.parseHexBinary(symKeyHex);
 
-        byte[] ivAndEncryptedMessage = DatatypeConverter
-                .parseBase64Binary(ivAndEncryptedMessageBase64);
         try {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             int blockSize = cipher.getBlockSize();
@@ -132,7 +127,7 @@ public class AesUtil {
             //byte[] bytes = "G2F4ED5m123456abx6vDrScs".getBytes();
            // key = bytes;
             //iv = "1KSBd17H7ZK8iT37aJztFB22XGwsPTdwE4".getBytes();
-            String encrypt = encrypt("hello world", key, iv);
+            byte[] encrypt = encrypt("hello world", key, iv);
             String keyStr = HexUtil.toHexString(key);
             String ivStr = HexUtil.toHexString(iv);
             System.out.println("key:" + keyStr);
