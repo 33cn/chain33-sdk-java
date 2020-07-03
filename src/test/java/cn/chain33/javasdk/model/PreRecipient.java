@@ -23,16 +23,16 @@ public class PreRecipient {
     static RpcClient chain33Client = new RpcClient("http://139.196.201.120:8901");
 
     // 数据所有者公钥
-    static String OwnerPubKey = "03aeba7f887ac8978eb878d0a45e3938361604c3db0d2442695f3f226e9d5f5567";
+    static String OwnerPubKey = "02e8fd8762cf391266b7acb5d50e5f426e3740c8794dea50a69a3b0d5aae5e216c";
 
     // 被授权人私钥,Bob的私钥
-    static String RecipientBobPrivateKey = "407ba5d402e8760dab6f08b1743143eb31edb978d329f241f97ad71028d2cc3f";
+    static String RecipientBobPrivateKey = "2af2bb8745103ad7b29d6b9c8c9dd5707f910f002475cba9993785573ab4fadc";
     
     // 被授权人私钥,Tom的私钥
-    static String RecipientTomPrivateKey = "386fdbddbda034ed719321a723ed057542879199e18309cfc09e4264b3237833";
+    static String RecipientTomPrivateKey = "51638366c18b560359a4b6233cffee1d9cf9d6b146beb30a6a75fa4d754bed06";
     
     // 被授权人私钥,James的私钥
-    static String RecipientJamesPrivateKey = "41902240b8aed527841dd0cf257b9cab3e26638f3eb5c93c1f202e9af925b743";
+    static String RecipientJamesPrivateKey = "5f88f4a90bbcd83a299d42b3b49923d63137f142e37119c7730626cde50c6bf9";
     
     // 门限是3， 也就是通过3个分片就可以恢复私钥
     static int threshold = 3;
@@ -49,7 +49,7 @@ public class PreRecipient {
         byte[] shareKeyBob = downloadKey(bob);
 
         // 从链上获取密文
-        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice1");
+        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice");
         JSONObject resultArray = resultJson.getJSONObject("encryptStorage");
         String content = resultArray.getString("encryptContent");
         byte[] fromHexString = HexUtil.fromHexString(content);

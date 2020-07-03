@@ -30,7 +30,7 @@ public class PreOwner {
     static RpcClient chain33Client = new RpcClient("http://139.196.201.120:8901");
 
     // 数据所有者私钥
-    static String OwnerPrivateKey = "2974c5c4cae6f6336923cc834b8c7c946bf5693c56036ccc9f5204724c4832fb";
+    static String OwnerPrivateKey = "30a13eb5f155404e5973203293b4700a5759ec9b74af01c6512ff0450f51ed88";
 
 
     // 代理节点公钥，用于身份验证，不参与重加密和加解密算法
@@ -62,11 +62,11 @@ public class PreOwner {
         System.out.println(DatatypeConverter.printHexBinary(encryptKey.getShareKey()));
 
         // 数据被授权人公钥：授权Bob可以看
-        String RecipientBobPubKey = "028bacacbff6c2a040d1e6ec10834470419dafb698be977d762fbba75e2e46aee9";
+        String RecipientBobPubKey = "02eb159bfaea4a3c0e3dc74c7f5084162a5aea0f0a21d40ab8fa10914ad5e15a74";
         uploadKey(encryptKey, alice, RecipientBobPubKey);
 
         // 数据被授权人公钥：授权Tom可以看
-        String RecipientTomPubKey = "02d594b686be7273cbeede787ce687304e681f8198610c5e88b26f489f7d4e3ec7";
+        String RecipientTomPubKey = "02449aa75bd6f4313847eb9c2ac07f8dd26f0ca5a511e973ab1377ace32998391d";
         uploadKey(encryptKey, alice, RecipientTomPubKey);
 
         // 数据加密
@@ -84,7 +84,7 @@ public class PreOwner {
         }
 
         String txEncode = StorageUtil.createEncryptNotaryStorage(cipher, contentHash, iv,
-                "chain33-storage-key-pre-alice1", "", "storage", OwnerPrivateKey);
+                "chain33-storage-key-pre-alice", "", "storage", OwnerPrivateKey);
         String submitTransaction = chain33Client.submitTransaction(txEncode);
         System.out.println(submitTransaction);
     }
