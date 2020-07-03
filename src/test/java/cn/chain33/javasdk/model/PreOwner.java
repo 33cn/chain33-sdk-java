@@ -40,7 +40,7 @@ public class PreOwner {
     static int numSplit = 4;
     
     // 门限是3， 也就是通过3个分片就可以恢复私钥
-    static int threshold = 3;
+    static int threshold = 2;
 
     // 待加密的数据
     static String content = "Chain33 代理重加密测试";
@@ -59,7 +59,7 @@ public class PreOwner {
         
         // 生成对称秘钥
         EncryptKey encryptKey = PreUtils.GenerateEncryptKey(HexUtil.fromHexString(alice.getPublicKey()));
-        System.out.println(DatatypeConverter.printHexBinary(encryptKey.getShareKey()));
+        System.out.println("对称加密秘钥：" + DatatypeConverter.printHexBinary(encryptKey.getShareKey()));
 
         // 数据被授权人公钥：授权Bob可以看
         String RecipientBobPubKey = "02eb159bfaea4a3c0e3dc74c7f5084162a5aea0f0a21d40ab8fa10914ad5e15a74";
@@ -72,7 +72,7 @@ public class PreOwner {
         // 数据加密
         byte[] iv = AesUtil.generateIv();
         byte[] cipher = AesUtil.encrypt(content, encryptKey.getShareKey(), iv);
-        System.out.println(cipher);
+        System.out.println("加密后的密文：" + cipher.toString());
 
         // 加密数据上链
         byte[] contentHash;
@@ -84,9 +84,9 @@ public class PreOwner {
         }
 
         String txEncode = StorageUtil.createEncryptNotaryStorage(cipher, contentHash, iv,
-                "chain33-storage-key-pre-alice", "", "storage", OwnerPrivateKey);
+                "chain33-storage-key-pre-alice2", "", "storage", OwnerPrivateKey);
         String submitTransaction = chain33Client.submitTransaction(txEncode);
-        System.out.println(submitTransaction);
+        System.out.println("交易hash值：" + submitTransaction);
     }
 
 

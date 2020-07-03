@@ -35,7 +35,7 @@ public class PreRecipient {
     static String RecipientJamesPrivateKey = "5f88f4a90bbcd83a299d42b3b49923d63137f142e37119c7730626cde50c6bf9";
     
     // 门限是3， 也就是通过3个分片就可以恢复私钥
-    static int threshold = 3;
+    static int threshold = 2;
 
     /**
      * Bob解密
@@ -49,13 +49,17 @@ public class PreRecipient {
         byte[] shareKeyBob = downloadKey(bob);
 
         // 从链上获取密文
-        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice");
+        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice2");
         JSONObject resultArray = resultJson.getJSONObject("encryptStorage");
         String content = resultArray.getString("encryptContent");
         byte[] fromHexString = HexUtil.fromHexString(content);
-
+        
+        System.out.println("加密后的密文: " + fromHexString.toString());
+        
         // 解密
         String text = AesUtil.decrypt(fromHexString, HexUtil.toHexString(shareKeyBob));
+        System.out.println("秘钥: " + HexUtil.toHexString(shareKeyBob));
+        
         System.out.println(text);
     }
     
@@ -71,7 +75,7 @@ public class PreRecipient {
         byte[] shareKeyTom = downloadKey(tom);
 
         // 从链上获取密文
-        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice");
+        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice2");
         JSONObject resultArray = resultJson.getJSONObject("encryptStorage");
         String content = resultArray.getString("encryptContent");
         byte[] fromHexString = HexUtil.fromHexString(content);
@@ -93,11 +97,10 @@ public class PreRecipient {
         byte[] shareKeyJames = downloadKey(james);
 
         // 从链上获取密文
-        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice");
+        JSONObject resultJson = chain33Client.queryStorage("chain33-storage-key-pre-alice2");
         JSONObject resultArray = resultJson.getJSONObject("encryptStorage");
         String content = resultArray.getString("encryptContent");
         byte[] fromHexString = HexUtil.fromHexString(content);
-        System.out.println(new String(fromHexString));
 
         // 解密
         String text = AesUtil.decrypt(fromHexString, HexUtil.toHexString(shareKeyJames));
@@ -118,14 +121,14 @@ public class PreRecipient {
         }
 
         // 解密对称密钥，需要被授权人私钥
-        byte[] shareKeyBob;
+        byte[] shareKey;
         try {
-            shareKeyBob = PreUtils.AssembleReencryptFragment(HexUtil.fromHexString(accountInfo.getPrivateKey()), reKeyFrags);
+            shareKey = PreUtils.AssembleReencryptFragment(HexUtil.fromHexString(accountInfo.getPrivateKey()), reKeyFrags);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.print("出错：没有权限进行重加密解密！！");
             return null;
         }
-        System.out.println(DatatypeConverter.printHexBinary(shareKeyBob));
-        return shareKeyBob;
+        System.out.println(DatatypeConverter.printHexBinary(shareKey));
+        return shareKey;
     }
 }
