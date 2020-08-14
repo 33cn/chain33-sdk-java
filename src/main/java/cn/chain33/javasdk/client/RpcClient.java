@@ -1,11 +1,18 @@
 package cn.chain33.javasdk.client;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import cn.chain33.javasdk.model.cert.CertObject;
+import cn.chain33.javasdk.model.protobuf.CertService;
+import cn.chain33.javasdk.model.gm.SM2KeyPair;
+import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.pre.KeyFrag;
 import cn.chain33.javasdk.model.pre.ReKeyFrag;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.subgraph.orchid.encoders.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -760,7 +767,7 @@ public class RpcClient {
      * 对账号进行授权
      * @param execer
      * @param actionName
-     * @param accountId
+     * @param accountIds
      * @return
      * @throws Exception
      */
@@ -780,7 +787,6 @@ public class RpcClient {
      * 
      * @param execer
      * @param actionName
-     * @param accountId
      * @return
      * @throws Exception
      */
@@ -1382,7 +1388,7 @@ public class RpcClient {
     /**
      * @description 根据AccountId查账户信息
      * 
-     * @param hash:   hash
+     * @param accountId:   accountId
      * @return TokenBalanceResult
      */
     public JSONObject queryAccountById(String accountId) {
@@ -1408,7 +1414,7 @@ public class RpcClient {
     /**
      * @description 根据账户状态查账户信息
      * 
-     * @param hash:   hash
+     * @param status:   status
      * @return TokenBalanceResult
      */
     public JSONObject queryAccountByStatus(String status) {
@@ -1500,6 +1506,338 @@ public class RpcClient {
                 return null;
             }
             return JSONObject.parseObject(rekeyObject, ReKeyFrag.class);
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @description 证书用户注册
+     *
+     * @param userName   用户名
+     * @param identity   用户id
+     * @param userPub    用户公钥
+     * @param adminKey   管理员私钥
+     * @return 注册结果
+     */
+    public boolean certUserRegister(String userName, String identity, String userPub, String adminKey) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_USER_REGISTER);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("name", userName);
+        requestParam.put("identity", identity);
+        requestParam.put("pubKey", userPub);
+
+        CertService.ReqRegisterUser.Builder reqBuilder = CertService.ReqRegisterUser.newBuilder();
+        reqBuilder.setName(userName);
+        reqBuilder.setIdentity(identity);
+        reqBuilder.setPubKey(userPub);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(adminKey));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return false;
+            }
+
+            return parseObject.getJSONObject("result").getBoolean("result");
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @description 证书用户注销
+     *
+     * @param identity   用户id
+     * @return 注销结果
+     */
+    public boolean certUserRevoke(String identity, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_USER_REVOKE);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("identity", identity);
+
+        CertService.ReqRevokeUser.Builder reqBuilder = CertService.ReqRevokeUser.newBuilder();
+        reqBuilder.setIdentity(identity);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return false;
+            }
+
+            return parseObject.getJSONObject("result").getBoolean("result");
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @description 用户证书申请
+     *
+     * @param identity   用户id
+     * @return 注销结果
+     */
+    public CertObject.CertEnroll certEnroll(String identity, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_ENROLL);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("identity", identity);
+
+        CertService.ReqEnroll.Builder reqBuilder = CertService.ReqEnroll.newBuilder();
+        reqBuilder.setIdentity(identity);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            String certObject = parseObject.getString("result");
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            return JSONObject.parseObject(certObject, CertObject.CertEnroll.class);
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @description 用户证书重新申请，用于用户证书被注销后
+     *
+     * @param identity   用户id
+     * @return 注销结果
+     */
+    public CertObject.CertEnroll certReEnroll(String identity, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_REENROLL);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("identity", identity);
+
+        CertService.ReqEnroll.Builder reqBuilder = CertService.ReqEnroll.newBuilder();
+        reqBuilder.setIdentity(identity);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            String certObject = parseObject.getString("result");
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            return JSONObject.parseObject(certObject, CertObject.CertEnroll.class);
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @description 用户证书注销
+     *
+     * @param serial     证书序序列号
+     * @param identity   用户id
+     * @return 注销结果
+     */
+    public boolean certRevoke(String serial, String identity, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_REVOKE);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("serial", serial);
+        requestParam.put("identity", identity);
+
+        CertService.ReqRevokeCert.Builder reqBuilder = CertService.ReqRevokeCert.newBuilder();
+        reqBuilder.setIdentity(identity);
+        reqBuilder.setSerial(serial);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return false;
+            }
+
+            return parseObject.getJSONObject("result").getBoolean("result");
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @description 获取crl
+     *
+     * @param identity   用户id
+     * @return crl
+     */
+    public byte[] certGetCRL(String identity, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_GET_CRL);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("identity", identity);
+
+        CertService.ReqGetCRL.Builder reqBuilder = CertService.ReqGetCRL.newBuilder();
+        reqBuilder.setIdentity(identity);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            return parseObject.getJSONObject("result").getBytes("crl");
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @description 获取用户信息
+     *
+     * @param identity   用户id
+     * @return 用户信息
+     */
+    public CertService.RepGetUserInfo certGetUserInfo(String identity, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_GET_USERINFO);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("identity", identity);
+
+        CertService.ReqGetUserInfo.Builder reqBuilder = CertService.ReqGetUserInfo.newBuilder();
+        reqBuilder.setIdentity(identity);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            String rekeyObject = parseObject.getString("result");
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+            return JSONObject.parseObject(rekeyObject, CertService.RepGetUserInfo.class);
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @description 获取证书信息
+     *
+     * @param serial   证书序列号
+     * @return 证书信息
+     */
+    public CertService.RepGetCertInfo certGetCertInfo(String serial, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_GET_USERINFO);
+
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("serial", serial);
+
+        CertService.ReqGetCertInfo.Builder reqBuilder = CertService.ReqGetCertInfo.newBuilder();
+        reqBuilder.setSn(serial);
+        byte[] reqBytes = reqBuilder.build().toByteArray();
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        try {
+            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+            requestParam.put("sign", sig);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+
+            String rekeyObject = parseObject.getString("result");
+            if (messageValidate(parseObject)) {
+                return null;
+            }
+            return JSONObject.parseObject(rekeyObject, CertService.RepGetCertInfo.class);
         }
         return null;
     }

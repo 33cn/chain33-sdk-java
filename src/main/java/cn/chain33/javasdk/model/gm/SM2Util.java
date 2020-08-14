@@ -13,6 +13,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
+import cn.chain33.javasdk.utils.HexUtil;
 import org.bitcoinj.core.ECKey;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.crypto.params.ECDomainParameters;
@@ -48,6 +49,7 @@ public class SM2Util {
 	private static BigInteger _2w = new BigInteger("2").pow(w);
 	private static final int DIGEST_LENGTH = 32;
 
+	private static byte[] default_uid = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38};
 	private static SecureRandom random = new SecureRandom();
 	private static ECCurve.Fp curve = new ECCurve.Fp(p, a, b, n, null);
 	private static ECPoint G= curve.createPoint(gx, gy);
@@ -426,17 +428,17 @@ public class SM2Util {
 	/**
 	 * 取得用户标识字节数组
 	 * 
-	 * @param IDA
+	 * @param idaBytes
 	 * @param aPublicKey
 	 * @return
 	 */
-	private static byte[] ZA(String IDA, ECPoint aPublicKey) {
-		byte[] idaBytes = IDA.getBytes();
+	private static byte[] ZA(byte[] idaBytes, ECPoint aPublicKey) {
 		int entlenA = idaBytes.length * 8;
 		byte[] ENTLA = new byte[] { (byte) (entlenA & 0xFF00), (byte) (entlenA & 0x00FF) };
-		byte[] ZA = sm3hash(ENTLA, idaBytes, a.toByteArray(), b.toByteArray(), gx.toByteArray(), gy.toByteArray(),
-				aPublicKey.getXCoord().toBigInteger().toByteArray(),
-				aPublicKey.getYCoord().toBigInteger().toByteArray());
+		byte[] ZA = sm3hash(ENTLA, idaBytes, HexUtil.byteConvert32Bytes(a), HexUtil.byteConvert32Bytes(b),
+				HexUtil.byteConvert32Bytes(gx), HexUtil.byteConvert32Bytes(gy),
+				HexUtil.byteConvert32Bytes(aPublicKey.getXCoord().toBigInteger()),
+				HexUtil.byteConvert32Bytes(aPublicKey.getYCoord().toBigInteger()));
 		return ZA;
 	}
 
@@ -461,7 +463,10 @@ public class SM2Util {
 	 *            签名方密钥对
 	 * @return 签名
 	 */
-	public static byte[] sign(byte[] M, String IDA, SM2KeyPair keyPair) throws IOException {
+	public static byte[] sign(byte[] M, byte[] IDA, SM2KeyPair keyPair) throws IOException {
+		if (IDA == null) {
+			IDA = default_uid;
+		}
 		byte[] ZA = ZA(IDA, keyPair.getPublicKey());
 		byte[] M_ = join(ZA, M);
 		BigInteger e = new BigInteger(1, sm3hash(M_));
@@ -531,7 +536,7 @@ public class SM2Util {
 	 *            签名方公钥
 	 * @return true or false
 	 */
-	public static boolean verify(byte[] M, byte[] signatureByte, String IDA, ECPoint aPublicKey) {
+	public static boolean verify(byte[] M, byte[] signatureByte, byte[] IDA, ECPoint aPublicKey) {
         SM2Signature signature = decodeFromDER(signatureByte);
 		if (!between(signature.r, BigInteger.ONE, n))
 			return false;
@@ -539,6 +544,7 @@ public class SM2Util {
 			return false;
 
 		byte[] M_ = join(ZA(IDA, aPublicKey), M);
+
 		BigInteger e = new BigInteger(1, sm3hash(M_));
 		BigInteger t = signature.r.add(signature.s).mod(n);
 
@@ -617,10 +623,10 @@ public class SM2Util {
 		byte[] Z;
 		byte[] key;
 		
-		String ID;
+		byte[] ID;
 		SM2KeyPair keyPair;
 
-		public KeyExchange(String ID,SM2KeyPair keyPair) {
+		public KeyExchange(byte[] ID,SM2KeyPair keyPair) {
 			this.ID=ID;
 			this.keyPair = keyPair;
 			this.Z=ZA(ID, keyPair.getPublicKey());

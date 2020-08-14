@@ -261,19 +261,15 @@ public class TransactionUtil {
 		if (privateKey == null) {
 			TransactionUtil.generatorPrivateKey();
 		}
-		Transaction transation = new Transaction();
-		transation.setExecer(execer);
-		transation.setPayload(payLoad);
-		transation.setFee(fee);
-		transation.setNonce(TransactionUtil.getRandomNonce());
-		// 计算To
-		transation.setTo(toAddress);
-		// 签名
-		byte[] protobufData = encodeProtobuf(transation);
 
-		sign(signType, protobufData, privateKey, transation);
+		Transaction transaction = createTxRaw(toAddress, execer, payLoad, fee);
+
+		// 签名
+		byte[] protobufData = encodeProtobuf(transaction);
+
+		sign(signType, protobufData, privateKey, transaction);
 		// 序列化
-		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
+		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transaction);
 		String transationStr = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationStr;
 	}
@@ -307,16 +303,12 @@ public class TransactionUtil {
 		if (privateKey == null) {
 			TransactionUtil.generatorPrivateKey();
 		}
-		Transaction transation = new Transaction();
-		transation.setExecer(execer);
-		transation.setPayload(payLoad);
-		transation.setFee(fee);
-		transation.setNonce(TransactionUtil.getRandomNonce());
+
+		Transaction transation = createTxRaw(toAddress, execer, payLoad, fee);
 		if (txHeight != null) {
 			transation.setExpire(txHeight + TX_HEIGHT_OFFSET);
 		}
-		// 计算To
-		transation.setTo(toAddress);
+
 		// 签名
 		byte[] protobufData = encodeProtobuf(transation);
 
@@ -325,6 +317,44 @@ public class TransactionUtil {
 		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
 		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationHash;
+	}
+
+	public static String createTxWithCert(String privateKey, String execer, byte[] payLoad, SignType signType, byte[] cert) {
+		if (signType == null)
+			signType = DEFAULT_SIGNTYPE;
+
+		// 如果没有私钥，创建私钥 privateKey =
+		if (privateKey == null) {
+			TransactionUtil.generatorPrivateKey();
+		}
+
+		String toAddress = getToAddress(execer.getBytes());
+		Transaction transation = createTxRaw(toAddress, execer.getBytes(), payLoad, DEFAULT_FEE);
+		// 签名
+		byte[] protobufData = encodeProtobuf(transation);
+
+		sign(signType, protobufData, HexUtil.fromHexString(privateKey), transation);
+
+		byte[] certSign = CertUtils.EncodeCertToSignature(transation.getSignature().getSignature(), cert);
+		transation.getSignature().setSignature(certSign);
+
+		// 序列化
+		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
+		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
+		return transationHash;
+	}
+
+
+	public static Transaction createTxRaw(String toAddress, byte[] execer, byte[] payLoad, long fee) {
+		Transaction transation = new Transaction();
+		transation.setExecer(execer);
+		transation.setPayload(payLoad);
+		transation.setFee(fee);
+		transation.setNonce(TransactionUtil.getRandomNonce());
+		// 计算To
+		transation.setTo(toAddress);
+
+		return transation;
 	}
 
 	/**

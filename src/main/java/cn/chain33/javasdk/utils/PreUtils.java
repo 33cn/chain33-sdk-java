@@ -5,7 +5,6 @@ import cn.chain33.javasdk.model.pre.KeyFrag;
 import cn.chain33.javasdk.model.pre.ReKeyFrag;
 import org.bitcoinj.core.ECKey;
 import org.bouncycastle.asn1.sec.SECNamedCurves;
-import org.bouncycastle.jcajce.provider.digest.Blake2b;
 import org.spongycastle.math.ec.ECPoint;
 
 import java.io.ByteArrayOutputStream;

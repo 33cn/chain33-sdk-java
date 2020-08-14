@@ -1,0 +1,106 @@
+syntax = "proto3";
+option java_outer_classname = "CertService";
+option java_package = "cn.chain33.javasdk.model.protobuf";
+
+// 用户注册请求
+message ReqRegisterUser {
+    string   name      = 1; //用户名
+    string   identity  = 2; //用户ID
+    string   pubKey    = 3; //用户公钥
+    bytes    sign      = 4; //请求方签名
+}
+
+// 用户注销请求
+message ReqRevokeUser {
+    string    identity = 1; //用户ID
+    bytes     sign     = 2; //请求方签名
+}
+
+// 申请证书
+message ReqEnroll {
+    string   identity    = 1;
+    bytes    sign        = 2;
+}
+
+// 证书信息
+message RepEnroll {
+    string serial = 1;
+    bytes  cert   = 2;
+}
+
+// 证书注销请求
+message ReqRevokeCert {
+    string    serial   = 1;
+    string    identity = 2;
+    bytes     sign     = 3; //请求方签名
+}
+
+// 获取CRL请求
+message ReqGetCRL {
+    string   identity    = 1;
+    bytes    sign        = 2;
+}
+
+// 获取用户信息
+message ReqGetUserInfo {
+    string identity = 1;
+    bytes  sign     = 2;
+}
+
+// 返回用户信息
+message RepGetUserInfo {
+    string name     = 1;
+    bytes  pubKey   = 2;
+    string identity = 3;
+    string serial   = 4;
+}
+
+// 根据序列化查询证书
+message ReqGetCertInfo {
+    string sn       = 1;
+    bytes  sign     = 2;
+}
+
+// 返回证书信息
+message RepGetCertInfo {
+    string serial     = 1;
+    int32  status     = 2; // 0:正常 1:注销
+    int64  exipreTime = 3;
+    int64  revokeTime = 4;
+    bytes  cert       = 5;
+    string identity   = 6;
+}
+
+// cert合约action
+message CertAction {
+    oneof value {
+        CertNew new       = 1;
+        CertUpdate update = 2;
+        CertNormal normal = 3;
+    }
+    int32 ty = 4;
+}
+
+// 证书启用
+message CertNew {
+    string key   = 1;
+    bytes  value = 2;
+}
+
+// 证书更新
+message CertUpdate {
+    string key   = 1;
+    bytes  value = 2;
+}
+
+// 用户证书校验
+message CertNormal {
+    string key   = 1;
+    bytes  value = 2;
+}
+
+// 带证书签名结构
+message CertSignature {
+    bytes signature = 1;
+    bytes cert = 2;
+}

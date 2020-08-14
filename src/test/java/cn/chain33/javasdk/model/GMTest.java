@@ -18,9 +18,9 @@ public class GMTest {
         try {
             SM2KeyPair keyPair = SM2Util.generateKeyPair();
 
-            byte[] sign = SM2Util.sign(SRC_DATA, WITH_ID, keyPair);
+            byte[] sign = SM2Util.sign(SRC_DATA, WITH_ID.getBytes(), keyPair);
             System.out.println("SM2 sign with withId result:\n" + ByteUtils.toHexString(sign));
-            boolean flag = SM2Util.verify(SRC_DATA, sign, WITH_ID, keyPair.getPublicKey());
+            boolean flag = SM2Util.verify(SRC_DATA, sign, WITH_ID.getBytes(), keyPair.getPublicKey());
             if (!flag) {
                 Assert.fail("verify failed");
             }
@@ -53,11 +53,11 @@ public class GMTest {
         System.out.println("-----------------密钥协商-----------------");
         String aID = "AAAAAAAAAAAAA";
         SM2KeyPair aKeyPair = SM2Util.generateKeyPair();
-        SM2Util.KeyExchange initiator = new SM2Util.KeyExchange(aID, aKeyPair);
+        SM2Util.KeyExchange initiator = new SM2Util.KeyExchange(aID.getBytes(), aKeyPair);
 
         String bID = "BBBBBBBBBBBBB";
         SM2KeyPair bKeyPair = SM2Util.generateKeyPair();
-        SM2Util.KeyExchange responder = new SM2Util.KeyExchange(bID, bKeyPair);
+        SM2Util.KeyExchange responder = new SM2Util.KeyExchange(bID.getBytes(), bKeyPair);
 
         SM2Util.TransportEntity entity1 = initiator.InitiatorInit();
 
