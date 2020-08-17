@@ -10645,6 +10645,11 @@ public final class CertService {
      * <code>bytes cert = 2;</code>
      */
     com.google.protobuf.ByteString getCert();
+
+    /**
+     * <code>bytes uid = 3;</code>
+     */
+    com.google.protobuf.ByteString getUid();
   }
   /**
    * <pre>
@@ -10665,6 +10670,7 @@ public final class CertService {
     private CertSignature() {
       signature_ = com.google.protobuf.ByteString.EMPTY;
       cert_ = com.google.protobuf.ByteString.EMPTY;
+      uid_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -10705,6 +10711,11 @@ public final class CertService {
             case 18: {
 
               cert_ = input.readBytes();
+              break;
+            }
+            case 26: {
+
+              uid_ = input.readBytes();
               break;
             }
             default: {
@@ -10757,6 +10768,15 @@ public final class CertService {
       return cert_;
     }
 
+    public static final int UID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString uid_;
+    /**
+     * <code>bytes uid = 3;</code>
+     */
+    public com.google.protobuf.ByteString getUid() {
+      return uid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10777,6 +10797,9 @@ public final class CertService {
       if (!cert_.isEmpty()) {
         output.writeBytes(2, cert_);
       }
+      if (!uid_.isEmpty()) {
+        output.writeBytes(3, uid_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10793,6 +10816,10 @@ public final class CertService {
       if (!cert_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, cert_);
+      }
+      if (!uid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, uid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10813,6 +10840,8 @@ public final class CertService {
           .equals(other.getSignature())) return false;
       if (!getCert()
           .equals(other.getCert())) return false;
+      if (!getUid()
+          .equals(other.getUid())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10828,6 +10857,8 @@ public final class CertService {
       hash = (53 * hash) + getSignature().hashCode();
       hash = (37 * hash) + CERT_FIELD_NUMBER;
       hash = (53 * hash) + getCert().hashCode();
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10969,6 +11000,8 @@ public final class CertService {
 
         cert_ = com.google.protobuf.ByteString.EMPTY;
 
+        uid_ = com.google.protobuf.ByteString.EMPTY;
+
         return this;
       }
 
@@ -10997,6 +11030,7 @@ public final class CertService {
         cn.chain33.javasdk.model.protobuf.CertService.CertSignature result = new cn.chain33.javasdk.model.protobuf.CertService.CertSignature(this);
         result.signature_ = signature_;
         result.cert_ = cert_;
+        result.uid_ = uid_;
         onBuilt();
         return result;
       }
@@ -11050,6 +11084,9 @@ public final class CertService {
         }
         if (other.getCert() != com.google.protobuf.ByteString.EMPTY) {
           setCert(other.getCert());
+        }
+        if (other.getUid() != com.google.protobuf.ByteString.EMPTY) {
+          setUid(other.getUid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11134,6 +11171,35 @@ public final class CertService {
       public Builder clearCert() {
         
         cert_ = getDefaultInstance().getCert();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString uid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes uid = 3;</code>
+       */
+      public com.google.protobuf.ByteString getUid() {
+        return uid_;
+      }
+      /**
+       * <code>bytes uid = 3;</code>
+       */
+      public Builder setUid(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes uid = 3;</code>
+       */
+      public Builder clearUid() {
+        
+        uid_ = getDefaultInstance().getUid();
         onChanged();
         return this;
       }
@@ -11296,9 +11362,10 @@ public final class CertService {
       "\n\005value\"%\n\007CertNew\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
       "\030\002 \001(\014\"(\n\nCertUpdate\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
       "ue\030\002 \001(\014\"(\n\nCertNormal\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\014\"0\n\rCertSignature\022\021\n\tsignature" +
-      "\030\001 \001(\014\022\014\n\004cert\030\002 \001(\014B0\n!cn.chain33.javas" +
-      "dk.model.protobufB\013CertServiceb\006proto3"
+      "alue\030\002 \001(\014\"=\n\rCertSignature\022\021\n\tsignature" +
+      "\030\001 \001(\014\022\014\n\004cert\030\002 \001(\014\022\013\n\003uid\030\003 \001(\014B0\n!cn." +
+      "chain33.javasdk.model.protobufB\013CertServ" +
+      "iceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11393,7 +11460,7 @@ public final class CertService {
     internal_static_CertSignature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CertSignature_descriptor,
-        new java.lang.String[] { "Signature", "Cert", });
+        new java.lang.String[] { "Signature", "Cert", "Uid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

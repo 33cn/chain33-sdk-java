@@ -8,10 +8,11 @@ public class CertUtils {
     public static final int CertActionUpdate = 2;
     public static final int CertActionNormal = 3;
 
-    public static byte[] EncodeCertToSignature(byte[] signBytes, byte[] cert) {
+    public static byte[] EncodeCertToSignature(byte[] signBytes, byte[] cert, byte[] uid) {
         CertService.CertSignature.Builder certBuilder = CertService.CertSignature.newBuilder();
         certBuilder.setCert(ByteString.copyFrom(cert));
         certBuilder.setSignature(ByteString.copyFrom(signBytes));
+        certBuilder.setUid(ByteString.copyFrom(uid));
 
         return certBuilder.build().toByteArray();
     }

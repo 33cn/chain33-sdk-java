@@ -267,7 +267,7 @@ public class TransactionUtil {
 		// 签名
 		byte[] protobufData = encodeProtobuf(transaction);
 
-		sign(signType, protobufData, privateKey, transaction);
+		sign(signType, protobufData, privateKey, null, transaction);
 		// 序列化
 		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transaction);
 		String transationStr = HexUtil.toHexString(encodeProtobufWithSign);
@@ -312,14 +312,14 @@ public class TransactionUtil {
 		// 签名
 		byte[] protobufData = encodeProtobuf(transation);
 
-		sign(signType, protobufData, privateKey, transation);
+		sign(signType, protobufData, privateKey, null, transation);
 		// 序列化
 		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
 		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationHash;
 	}
 
-	public static String createTxWithCert(String privateKey, String execer, byte[] payLoad, SignType signType, byte[] cert) {
+	public static String createTxWithCert(String privateKey, String execer, byte[] payLoad, SignType signType, byte[] cert, byte[] uid) {
 		if (signType == null)
 			signType = DEFAULT_SIGNTYPE;
 
@@ -333,9 +333,9 @@ public class TransactionUtil {
 		// 签名
 		byte[] protobufData = encodeProtobuf(transation);
 
-		sign(signType, protobufData, HexUtil.fromHexString(privateKey), transation);
+		sign(signType, protobufData, HexUtil.fromHexString(privateKey), uid, transation);
 
-		byte[] certSign = CertUtils.EncodeCertToSignature(transation.getSignature().getSignature(), cert);
+		byte[] certSign = CertUtils.EncodeCertToSignature(transation.getSignature().getSignature(), cert, uid);
 		transation.getSignature().setSignature(certSign);
 
 		// 序列化
@@ -515,7 +515,7 @@ public class TransactionUtil {
 	 * @param transaction
 	 *            交易
 	 */
-	private static void sign(SignType signType, byte[] data, byte[] privateKey, Transaction transaction) {
+	private static void sign(SignType signType, byte[] data, byte[] privateKey, byte[] uid, Transaction transaction) {
 		switch (signType) {
 		case SECP256K1: {
 			Signature btcCoinSign = btcCoinSign(data, privateKey);
@@ -526,7 +526,7 @@ public class TransactionUtil {
 			SM2KeyPair keyPair = SM2Util.fromPrivateKey(privateKey);
 			byte[] derSignBytes;
 			try {
-				derSignBytes = SM2Util.sign(data, null, keyPair);
+				derSignBytes = SM2Util.sign(data, uid, keyPair);
 			} catch (IOException e) {
 				break;
 			}

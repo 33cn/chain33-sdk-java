@@ -25,24 +25,24 @@ public class CertUtilTest {
 //        boolean result = certclient.certUserRegister(UserName, Identity, UserPub, AdminKey);
 //        Assert.assertEquals(result, true);
 //
-//        CertObject.CertEnroll cert = certclient.certEnroll(Identity, UserKey);
-//        Assert.assertNotNull(cert);
-//        Assert.assertNotNull(cert.serial);
-//        Assert.assertNotNull(cert.cert);
-//
-//        System.out.println(cert.serial);
-//        CertService.CertAction.Builder builder = CertService.CertAction.newBuilder();
-//        builder.setTy(CertUtils.CertActionNormal);
-//        byte[] reqBytes = builder.build().toByteArray();
-//        String transactionHash = TransactionUtil.createTxWithCert(UserKey, "cert", reqBytes, SignType.SM2, cert.getCert());
-//        String hash = chain33client.submitTransaction(transactionHash);
-//        Assert.assertNotNull(hash);
-//        System.out.println(hash);
+        CertObject.CertEnroll cert = certclient.certEnroll(Identity, UserKey);
+        Assert.assertNotNull(cert);
+        Assert.assertNotNull(cert.serial);
+        Assert.assertNotNull(cert.cert);
 
-        CertObject.CertEnroll certReEnroll = certclient.certReEnroll(Identity, AdminKey);
-        Assert.assertNotNull(certReEnroll);
-        Assert.assertNotNull(certReEnroll.serial);
-        Assert.assertNotNull(certReEnroll.cert);
+        System.out.println(cert.serial);
+        CertService.CertAction.Builder builder = CertService.CertAction.newBuilder();
+        builder.setTy(CertUtils.CertActionNormal);
+        byte[] reqBytes = builder.build().toByteArray();
+        String transactionHash = TransactionUtil.createTxWithCert(UserKey, "cert", reqBytes, SignType.SM2, cert.getCert(), "ca test".getBytes());
+        String hash = chain33client.submitTransaction(transactionHash);
+        Assert.assertNotNull(hash);
+        System.out.println(hash);
+
+//        CertObject.CertEnroll certReEnroll = certclient.certReEnroll(Identity, AdminKey);
+//        Assert.assertNotNull(certReEnroll);
+//        Assert.assertNotNull(certReEnroll.serial);
+//        Assert.assertNotNull(certReEnroll.cert);
 
 //        result = certclient.certUserRevoke(Identity, AdminKey);
 //        Assert.assertEquals(result, true);
