@@ -261,19 +261,15 @@ public class TransactionUtil {
 		if (privateKey == null) {
 			TransactionUtil.generatorPrivateKey();
 		}
-		Transaction transation = new Transaction();
-		transation.setExecer(execer);
-		transation.setPayload(payLoad);
-		transation.setFee(fee);
-		transation.setNonce(TransactionUtil.getRandomNonce());
-		// 计算To
-		transation.setTo(toAddress);
-		// 签名
-		byte[] protobufData = encodeProtobuf(transation);
 
-		sign(signType, protobufData, privateKey, transation);
+		Transaction transaction = createTxRaw(toAddress, execer, payLoad, fee);
+
+		// 签名
+		byte[] protobufData = encodeProtobuf(transaction);
+
+		sign(signType, protobufData, privateKey, null, transaction);
 		// 序列化
-		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
+		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transaction);
 		String transationStr = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationStr;
 	}
@@ -307,24 +303,58 @@ public class TransactionUtil {
 		if (privateKey == null) {
 			TransactionUtil.generatorPrivateKey();
 		}
+
+		Transaction transation = createTxRaw(toAddress, execer, payLoad, fee);
+		if (txHeight != null) {
+			transation.setExpire(txHeight + TX_HEIGHT_OFFSET);
+		}
+
+		// 签名
+		byte[] protobufData = encodeProtobuf(transation);
+
+		sign(signType, protobufData, privateKey, null, transation);
+		// 序列化
+		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
+		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
+		return transationHash;
+	}
+
+	public static String createTxWithCert(String privateKey, String execer, byte[] payLoad, SignType signType, byte[] cert, byte[] uid) {
+		if (signType == null)
+			signType = DEFAULT_SIGNTYPE;
+
+		// 如果没有私钥，创建私钥 privateKey =
+		if (privateKey == null) {
+			TransactionUtil.generatorPrivateKey();
+		}
+
+		String toAddress = getToAddress(execer.getBytes());
+		Transaction transation = createTxRaw(toAddress, execer.getBytes(), payLoad, DEFAULT_FEE);
+		// 签名
+		byte[] protobufData = encodeProtobuf(transation);
+
+		sign(signType, protobufData, HexUtil.fromHexString(privateKey), uid, transation);
+
+		byte[] certSign = CertUtils.EncodeCertToSignature(transation.getSignature().getSignature(), cert, uid);
+		transation.getSignature().setSignature(certSign);
+
+		// 序列化
+		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
+		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
+		return transationHash;
+	}
+
+
+	public static Transaction createTxRaw(String toAddress, byte[] execer, byte[] payLoad, long fee) {
 		Transaction transation = new Transaction();
 		transation.setExecer(execer);
 		transation.setPayload(payLoad);
 		transation.setFee(fee);
 		transation.setNonce(TransactionUtil.getRandomNonce());
-		if (txHeight != null) {
-			transation.setExpire(txHeight + TX_HEIGHT_OFFSET);
-		}
 		// 计算To
 		transation.setTo(toAddress);
-		// 签名
-		byte[] protobufData = encodeProtobuf(transation);
 
-		sign(signType, protobufData, privateKey, transation);
-		// 序列化
-		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
-		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
-		return transationHash;
+		return transation;
 	}
 
 	/**
@@ -485,7 +515,7 @@ public class TransactionUtil {
 	 * @param transaction
 	 *            交易
 	 */
-	private static void sign(SignType signType, byte[] data, byte[] privateKey, Transaction transaction) {
+	private static void sign(SignType signType, byte[] data, byte[] privateKey, byte[] uid, Transaction transaction) {
 		switch (signType) {
 		case SECP256K1: {
 			Signature btcCoinSign = btcCoinSign(data, privateKey);
@@ -496,7 +526,7 @@ public class TransactionUtil {
 			SM2KeyPair keyPair = SM2Util.fromPrivateKey(privateKey);
 			byte[] derSignBytes;
 			try {
-				derSignBytes = SM2Util.sign(data, null, keyPair);
+				derSignBytes = SM2Util.sign(data, uid, keyPair);
 			} catch (IOException e) {
 				break;
 			}

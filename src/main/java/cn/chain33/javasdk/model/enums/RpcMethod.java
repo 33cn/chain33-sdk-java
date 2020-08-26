@@ -78,7 +78,23 @@ public enum RpcMethod {
 
 	PRE_SEND_KEY_FRAGMENT("Pre.CollectFragment"),
 
-	PRE_RE_ENCRYPT("Pre.Reencrypt");
+	PRE_RE_ENCRYPT("Pre.Reencrypt"),
+
+	CERT_USER_REGISTER("chain33-ca-server.RegisterUser"),
+
+	CERT_USER_REVOKE("chain33-ca-server.RevokeUser"),
+
+	CERT_ENROLL("chain33-ca-server.Enroll"),
+
+	CERT_REENROLL("chain33-ca-server.ReEnroll"),
+
+	CERT_REVOKE("chain33-ca-server.RevokeCert"),
+
+	CERT_GET_CRL("chain33-ca-server.GetCRL"),
+
+	CERT_GET_USERINFO("chain33-ca-server.GetUserInfo"),
+
+	CERT_GET_CERTINFO("chain33-ca-server.GetCertInfo");
 
 	private String method;
 	
