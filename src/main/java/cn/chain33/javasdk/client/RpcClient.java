@@ -1560,9 +1560,10 @@ public class RpcClient {
      * @description 证书用户注销
      *
      * @param identity   用户id
+     * @param adminKey   管理员私钥
      * @return 注销结果
      */
-    public boolean certUserRevoke(String identity, String key) {
+    public boolean certUserRevoke(String identity, String adminKey) {
         RpcRequest postData = getPostData(RpcMethod.CERT_USER_REVOKE);
 
         JSONObject requestParam = new JSONObject();
@@ -1571,7 +1572,7 @@ public class RpcClient {
         CertService.ReqRevokeUser.Builder reqBuilder = CertService.ReqRevokeUser.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(adminKey));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1598,6 +1599,7 @@ public class RpcClient {
      * @description 用户证书申请
      *
      * @param identity   用户id
+     * @param key        用户私钥
      * @return 注销结果
      */
     public CertObject.CertEnroll certEnroll(String identity, String key) {
@@ -1641,9 +1643,10 @@ public class RpcClient {
      * @description 用户证书重新申请，用于用户证书被注销后
      *
      * @param identity   用户id
+     * @param adminKey   管理员私钥
      * @return 注销结果
      */
-    public CertObject.CertEnroll certReEnroll(String identity, String key) {
+    public CertObject.CertEnroll certReEnroll(String identity, String adminKey) {
         RpcRequest postData = getPostData(RpcMethod.CERT_REENROLL);
 
         JSONObject requestParam = new JSONObject();
@@ -1652,7 +1655,7 @@ public class RpcClient {
         CertService.ReqEnroll.Builder reqBuilder = CertService.ReqEnroll.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(adminKey));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1765,7 +1768,7 @@ public class RpcClient {
      * @param identity   用户id
      * @return 用户信息
      */
-    public CertService.RepGetUserInfo certGetUserInfo(String identity, String key) {
+    public CertObject.UserInfo certGetUserInfo(String identity, String key) {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_USERINFO);
 
         JSONObject requestParam = new JSONObject();
@@ -1795,7 +1798,7 @@ public class RpcClient {
             if (messageValidate(parseObject)) {
                 return null;
             }
-            return JSONObject.parseObject(rekeyObject, CertService.RepGetUserInfo.class);
+            return JSONObject.parseObject(rekeyObject, CertObject.UserInfo.class);
         }
         return null;
     }
@@ -1807,11 +1810,11 @@ public class RpcClient {
      * @param serial   证书序列号
      * @return 证书信息
      */
-    public CertService.RepGetCertInfo certGetCertInfo(String serial, String key) {
-        RpcRequest postData = getPostData(RpcMethod.CERT_GET_USERINFO);
+    public CertObject.CertInfo certGetCertInfo(String serial, String key) {
+        RpcRequest postData = getPostData(RpcMethod.CERT_GET_CERTINFO);
 
         JSONObject requestParam = new JSONObject();
-        requestParam.put("serial", serial);
+        requestParam.put("sn", serial);
 
         CertService.ReqGetCertInfo.Builder reqBuilder = CertService.ReqGetCertInfo.newBuilder();
         reqBuilder.setSn(serial);
@@ -1837,7 +1840,7 @@ public class RpcClient {
             if (messageValidate(parseObject)) {
                 return null;
             }
-            return JSONObject.parseObject(rekeyObject, CertService.RepGetCertInfo.class);
+            return JSONObject.parseObject(rekeyObject, CertObject.CertInfo.class);
         }
         return null;
     }

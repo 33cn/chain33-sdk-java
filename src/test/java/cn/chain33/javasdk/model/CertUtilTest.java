@@ -5,7 +5,6 @@ import cn.chain33.javasdk.model.cert.CertObject;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.CertService;
 import cn.chain33.javasdk.utils.CertUtils;
-import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,31 +20,62 @@ public class CertUtilTest {
     public static final String UserKey = "03ffd7371d86246f9bf5682d4319c5767b051e2acf98f806fe724579d9124b53";
 
     @Test
-    public void testCertUtil() {
-//        boolean result = certclient.certUserRegister(UserName, Identity, UserPub, AdminKey);
-//        Assert.assertEquals(result, true);
-//
+    public void testCertUtilUser() {
+        boolean result = certclient.certUserRegister(UserName, Identity, UserPub, AdminKey);
+        Assert.assertEquals(result, true);
+
+        CertObject.UserInfo user = certclient.certGetUserInfo(Identity, UserKey);
+        Assert.assertEquals(UserName, user.name);
+
+        result = certclient.certRevoke("", Identity, AdminKey);
+        Assert.assertEquals(result, true);
+
+        result = certclient.certUserRevoke(Identity, AdminKey);
+        Assert.assertEquals(result, true);
+
+        user = certclient.certGetUserInfo(Identity, UserKey);
+        Assert.assertNull(user);
+    }
+
+    @Test
+    public void testCertUtilEnroll() {
+        boolean result = certclient.certUserRegister(UserName, Identity, UserPub, AdminKey);
+        Assert.assertEquals(result, true);
+
         CertObject.CertEnroll cert = certclient.certEnroll(Identity, UserKey);
         Assert.assertNotNull(cert);
         Assert.assertNotNull(cert.serial);
         Assert.assertNotNull(cert.cert);
 
-        System.out.println(cert.serial);
+        CertObject.CertInfo certInfo = certclient.certGetCertInfo(cert.serial, UserKey);
+        Assert.assertNotNull(certInfo);
+        Assert.assertEquals(Identity, certInfo.identity);
+
         CertService.CertAction.Builder builder = CertService.CertAction.newBuilder();
         builder.setTy(CertUtils.CertActionNormal);
         byte[] reqBytes = builder.build().toByteArray();
         String transactionHash = TransactionUtil.createTxWithCert(UserKey, "cert", reqBytes, SignType.SM2, cert.getCert(), "ca test".getBytes());
         String hash = chain33client.submitTransaction(transactionHash);
         Assert.assertNotNull(hash);
-        System.out.println(hash);
 
-//        CertObject.CertEnroll certReEnroll = certclient.certReEnroll(Identity, AdminKey);
-//        Assert.assertNotNull(certReEnroll);
-//        Assert.assertNotNull(certReEnroll.serial);
-//        Assert.assertNotNull(certReEnroll.cert);
+        result = certclient.certRevoke(cert.serial, "", AdminKey);
+        Assert.assertEquals(result, true);
 
-//        result = certclient.certUserRevoke(Identity, AdminKey);
-//        Assert.assertEquals(result, true);
+        certInfo = certclient.certGetCertInfo(cert.serial, UserKey);
+        Assert.assertNotNull(certInfo);
+        Assert.assertEquals(1, certInfo.status);
+
+        byte[] crl = certclient.certGetCRL(Identity, UserKey);
+        Assert.assertNotNull(crl);
+
+        CertObject.CertEnroll certReEnroll = certclient.certReEnroll(Identity, AdminKey);
+        Assert.assertNotNull(certReEnroll);
+        Assert.assertNotNull(certReEnroll.serial);
+        Assert.assertNotNull(certReEnroll.cert);
+
+        certInfo = certclient.certGetCertInfo(cert.serial, UserKey);
+        Assert.assertNotNull(certInfo);
+        Assert.assertEquals(Identity, certInfo.identity);
     }
 
 }
