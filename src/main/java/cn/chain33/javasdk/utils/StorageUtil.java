@@ -186,15 +186,15 @@ public class StorageUtil {
      *
      * @description 存证数据运算
      * @param encryptContent   操作数密文
-     * @param contentHash      存证数据索引
+     * @param key      存证数据索引
      * @param privateKey       用户私钥，用于签名
      * @return hash            交易哈希
      *
      */
-    public static String createEncryptNotaryAdd(byte[] encryptContent, String contentHash, String privateKey) {
+    public static String createEncryptNotaryAdd(byte[] encryptContent, String key, String privateKey) {
         StorageProtobuf.EncryptNotaryAdd.Builder storageBuilder = StorageProtobuf.EncryptNotaryAdd.newBuilder();
         storageBuilder.setEncryptAdd(ByteString.copyFrom(encryptContent));
-        storageBuilder.setContentHash(contentHash);
+        storageBuilder.setKey(key);
 
         StorageProtobuf.EncryptNotaryAdd encryptNotaryAdd = storageBuilder.build();
 

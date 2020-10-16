@@ -8530,21 +8530,21 @@ public final class StorageProtobuf {
 
     /**
      * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+     *源操作数存证索引
      * </pre>
      *
-     * <code>string contentHash = 1;</code>
+     * <code>string key = 1;</code>
      */
-    java.lang.String getContentHash();
+    java.lang.String getKey();
     /**
      * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+     *源操作数存证索引
      * </pre>
      *
-     * <code>string contentHash = 1;</code>
+     * <code>string key = 1;</code>
      */
     com.google.protobuf.ByteString
-        getContentHashBytes();
+        getKeyBytes();
 
     /**
      * <pre>
@@ -8572,7 +8572,7 @@ public final class StorageProtobuf {
       super(builder);
     }
     private EncryptNotaryAdd() {
-      contentHash_ = "";
+      key_ = "";
       encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -8609,7 +8609,7 @@ public final class StorageProtobuf {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              contentHash_ = s;
+              key_ = s;
               break;
             }
             case 18: {
@@ -8649,42 +8649,42 @@ public final class StorageProtobuf {
               cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder.class);
     }
 
-    public static final int CONTENTHASH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object contentHash_;
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
     /**
      * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+     *源操作数存证索引
      * </pre>
      *
-     * <code>string contentHash = 1;</code>
+     * <code>string key = 1;</code>
      */
-    public java.lang.String getContentHash() {
-      java.lang.Object ref = contentHash_;
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        contentHash_ = s;
+        key_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+     *源操作数存证索引
      * </pre>
      *
-     * <code>string contentHash = 1;</code>
+     * <code>string key = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getContentHashBytes() {
-      java.lang.Object ref = contentHash_;
+        getKeyBytes() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        contentHash_ = b;
+        key_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -8718,8 +8718,8 @@ public final class StorageProtobuf {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getContentHashBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contentHash_);
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
       if (!encryptAdd_.isEmpty()) {
         output.writeBytes(2, encryptAdd_);
@@ -8733,8 +8733,8 @@ public final class StorageProtobuf {
       if (size != -1) return size;
 
       size = 0;
-      if (!getContentHashBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contentHash_);
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
       if (!encryptAdd_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -8755,8 +8755,8 @@ public final class StorageProtobuf {
       }
       cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) obj;
 
-      if (!getContentHash()
-          .equals(other.getContentHash())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
       if (!getEncryptAdd()
           .equals(other.getEncryptAdd())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8770,8 +8770,8 @@ public final class StorageProtobuf {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTENTHASH_FIELD_NUMBER;
-      hash = (53 * hash) + getContentHash().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
       hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
       hash = (53 * hash) + getEncryptAdd().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -8911,7 +8911,7 @@ public final class StorageProtobuf {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        contentHash_ = "";
+        key_ = "";
 
         encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
 
@@ -8941,7 +8941,7 @@ public final class StorageProtobuf {
       @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd buildPartial() {
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd(this);
-        result.contentHash_ = contentHash_;
+        result.key_ = key_;
         result.encryptAdd_ = encryptAdd_;
         onBuilt();
         return result;
@@ -8991,8 +8991,8 @@ public final class StorageProtobuf {
 
       public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd other) {
         if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance()) return this;
-        if (!other.getContentHash().isEmpty()) {
-          contentHash_ = other.contentHash_;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
           onChanged();
         }
         if (other.getEncryptAdd() != com.google.protobuf.ByteString.EMPTY) {
@@ -9027,21 +9027,21 @@ public final class StorageProtobuf {
         return this;
       }
 
-      private java.lang.Object contentHash_ = "";
+      private java.lang.Object key_ = "";
       /**
        * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+       *源操作数存证索引
        * </pre>
        *
-       * <code>string contentHash = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public java.lang.String getContentHash() {
-        java.lang.Object ref = contentHash_;
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          contentHash_ = s;
+          key_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9049,19 +9049,19 @@ public final class StorageProtobuf {
       }
       /**
        * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+       *源操作数存证索引
        * </pre>
        *
-       * <code>string contentHash = 1;</code>
+       * <code>string key = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getContentHashBytes() {
-        java.lang.Object ref = contentHash_;
+          getKeyBytes() {
+        java.lang.Object ref = key_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          contentHash_ = b;
+          key_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -9069,49 +9069,49 @@ public final class StorageProtobuf {
       }
       /**
        * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+       *源操作数存证索引
        * </pre>
        *
-       * <code>string contentHash = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public Builder setContentHash(
+      public Builder setKey(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        contentHash_ = value;
+        key_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+       *源操作数存证索引
        * </pre>
        *
-       * <code>string contentHash = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public Builder clearContentHash() {
+      public Builder clearKey() {
         
-        contentHash_ = getDefaultInstance().getContentHash();
+        key_ = getDefaultInstance().getKey();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+       *源操作数存证索引
        * </pre>
        *
-       * <code>string contentHash = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public Builder setContentHashBytes(
+      public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        contentHash_ = value;
+        key_ = value;
         onChanged();
         return this;
       }
@@ -11693,13 +11693,13 @@ public final class StorageProtobuf {
       "\005value\030\005 \001(\t\"t\n\031EncryptShareNotaryStorag" +
       "e\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptContent" +
       "\030\002 \001(\014\022\016\n\006pubKey\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n\005v" +
-      "alue\030\005 \001(\t\";\n\020EncryptNotaryAdd\022\023\n\013conten" +
-      "tHash\030\001 \001(\t\022\022\n\nencryptAdd\030\002 \001(\014\"\036\n\014Query" +
-      "Storage\022\016\n\006txHash\030\001 \001(\t\"$\n\021BatchQuerySto" +
-      "rage\022\017\n\007txHashs\030\001 \003(\t\"/\n\021BatchReplyStora" +
-      "ge\022\032\n\010storages\030\001 \003(\0132\010.Storage\"\020\n\016Receip" +
-      "tStorageB4\n!cn.chain33.javasdk.model.pro" +
-      "tobufB\017StorageProtobufb\006proto3"
+      "alue\030\005 \001(\t\"3\n\020EncryptNotaryAdd\022\013\n\003key\030\001 " +
+      "\001(\t\022\022\n\nencryptAdd\030\002 \001(\014\"\036\n\014QueryStorage\022" +
+      "\016\n\006txHash\030\001 \001(\t\"$\n\021BatchQueryStorage\022\017\n\007" +
+      "txHashs\030\001 \003(\t\"/\n\021BatchReplyStorage\022\032\n\010st" +
+      "orages\030\001 \003(\0132\010.Storage\"\020\n\016ReceiptStorage" +
+      "B4\n!cn.chain33.javasdk.model.protobufB\017S" +
+      "torageProtobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11752,7 +11752,7 @@ public final class StorageProtobuf {
     internal_static_EncryptNotaryAdd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EncryptNotaryAdd_descriptor,
-        new java.lang.String[] { "ContentHash", "EncryptAdd", });
+        new java.lang.String[] { "Key", "EncryptAdd", });
     internal_static_QueryStorage_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_QueryStorage_fieldAccessorTable = new
