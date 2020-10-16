@@ -6,7 +6,8 @@ public enum StorageEnum {
     HashOnlyNotaryStorage(2),
     LinkNotaryStorage(3),
     EncryptNotaryStorage(4),
-    EncryptShareNotaryStorage (5);
+    EncryptShareNotaryStorage (5),
+    EncryptNotaryAdd(6);
     
     private int ty;
     

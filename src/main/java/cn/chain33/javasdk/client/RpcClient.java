@@ -1533,7 +1533,7 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         reqBuilder.setPubKey(userPub);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(adminKey));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(adminKey));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1572,7 +1572,7 @@ public class RpcClient {
         CertService.ReqRevokeUser.Builder reqBuilder = CertService.ReqRevokeUser.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(adminKey));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(adminKey));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1611,7 +1611,7 @@ public class RpcClient {
         CertService.ReqEnroll.Builder reqBuilder = CertService.ReqEnroll.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1655,7 +1655,7 @@ public class RpcClient {
         CertService.ReqEnroll.Builder reqBuilder = CertService.ReqEnroll.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(adminKey));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(adminKey));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1701,7 +1701,7 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         reqBuilder.setSerial(serial);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1739,7 +1739,7 @@ public class RpcClient {
         CertService.ReqGetCRL.Builder reqBuilder = CertService.ReqGetCRL.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1777,7 +1777,7 @@ public class RpcClient {
         CertService.ReqGetUserInfo.Builder reqBuilder = CertService.ReqGetUserInfo.newBuilder();
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
@@ -1819,7 +1819,7 @@ public class RpcClient {
         CertService.ReqGetCertInfo.Builder reqBuilder = CertService.ReqGetCertInfo.newBuilder();
         reqBuilder.setSn(serial);
         byte[] reqBytes = reqBuilder.build().toByteArray();
-        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.hexToByte(key));
+        SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
         try {
             byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
             requestParam.put("sign", sig);
