@@ -1294,11 +1294,12 @@ public class RpcClient {
      * @param payAddr 代扣账户的地址
      * @return 包含原有划转交易与代扣交易的交易组16进制字符串
      */
-    public final String createNoBalanceTx(String txHex, String payAddr) {
+    public final String createNoBalanceTx(String txHex, String privkey) {
         RpcRequest postData = getPostData(RpcMethod.CREATE_NO_BALANCE_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("txHex", txHex);
-        requestParam.put("payAddr", payAddr);
+//        requestParam.put("payAddr", payAddr);
+        requestParam.put("privkey", privkey);
         requestParam.put("expire", "1h");
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());

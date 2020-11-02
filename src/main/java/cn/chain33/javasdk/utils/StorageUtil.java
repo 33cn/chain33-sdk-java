@@ -45,6 +45,27 @@ public class StorageUtil {
     }
     
     /**
+     * 内容存证模型,平行链代扣模式
+     * @param content
+     * @param execer
+     * @param privateKey
+     * @param contranctAddress
+     * @return
+     */
+    public static String createOnlyNotaryStorage(byte[] content, String execer, String privateKey, String contranctAddress) {
+        Builder contentOnlyNotaryStorageBuilder = StorageProtobuf.ContentOnlyNotaryStorage.newBuilder(); 
+        contentOnlyNotaryStorageBuilder.setContent(ByteString.copyFrom(content));//内容小于512k;
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
+        storageActionBuilder.setContentStorage(contentOnlyNotaryStorageBuilder.build());
+        storageActionBuilder.setTy(StorageEnum.ContentOnlyNotaryStorage.getTy());
+        StorageAction storageAction = storageActionBuilder.build();
+
+        String createTransferTx = TransactionUtil.createTransferTx(privateKey, contranctAddress, execer, storageAction.toByteArray());
+
+        return createTransferTx;
+    }
+    
+    /**
      * 
      * @description 哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
      * @param hash  长度固定为32字节
