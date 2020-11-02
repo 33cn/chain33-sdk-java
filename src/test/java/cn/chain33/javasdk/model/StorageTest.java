@@ -1,8 +1,11 @@
 package cn.chain33.javasdk.model;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
+
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -101,30 +104,30 @@ public class StorageTest {
 	}
 	
     /**
-     * TODO: 暂不支持
-     * 分享型存证模型
+     * 代扣存证，在需要缴纳手续费的情况下，可以采用代扣的方式， 实际的存证交易不需要缴纳手续费，全部通过代扣交易来缴纳手续费
+     * 
+     * 代扣交易模型
      * @throws Exception 
      */
-//	@Test
-//	public void EncryptShareNotaryStore() throws Exception {
-//		// 存证智能合约的名称
-//		String execer = "storage";
-//		// 签名用的私钥
-//		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-//		
-//		// 生成AES加密KEY
-//		byte[] key = AesUtil.generateDesKey(128);
-//		// 生成iv
-//		byte[] iv = AesUtil.generateIv();
-//		// 对明文进行加密
-//		String encrypt = AesUtil.encrypt(content, key, iv);
-//		
-//		byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
-//		String txEncode = StorageUtil.createEncryptNotaryStorage(contentHash, encrypt.getBytes(), iv, execer, privateKey);
-//		String submitTransaction = client.submitTransaction(txEncode);
-//		System.out.println(submitTransaction);
-//		
-//	}
+	@Test
+	public void contentStoreLocalNobalance() {
+	   // 存证智能合约的名称，代扣情况下，要带上平行链前缀
+	   String execer = "user.p.parat.storage";
+	   // 实际交易签名用的私钥
+	   String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+	   String contranctAddress = client.convertExectoAddr(execer);
+	   String txEncode = StorageUtil.createOnlyNotaryStorage(content.getBytes(), execer, privateKey, contranctAddress);
+
+	   String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+	   // 解析交易
+	   List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+	   // 代扣交易签名的私钥
+	   String withHoldPrivateKey = "代扣交易私钥";
+	   String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
+	   String submitTransaction = client.submitTransaction(hexString);
+	   System.out.println("submitTransaction:" + submitTransaction);
+	}
+	
 	
 	/**
 	 * 根据hash查询存证结果
