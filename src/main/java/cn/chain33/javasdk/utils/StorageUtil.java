@@ -43,7 +43,7 @@ public class StorageUtil {
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
-    
+
     /**
      * 内容存证模型,平行链代扣模式
      * @param content
@@ -213,29 +213,30 @@ public class StorageUtil {
      *
      */
     public static String createEncryptNotaryAdd(byte[] encryptContent, String key, String privateKey) {
-        StorageProtobuf.EncryptNotaryAdd.Builder storageBuilder = StorageProtobuf.EncryptNotaryAdd.newBuilder();
-        storageBuilder.setEncryptAdd(ByteString.copyFrom(encryptContent));
-        storageBuilder.setKey(key);
-
-        StorageProtobuf.EncryptNotaryAdd encryptNotaryAdd = storageBuilder.build();
-
-        StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
-        storageActionBuilder.setEncryptAdd(encryptNotaryAdd);
-        storageActionBuilder.setTy(StorageEnum.EncryptNotaryAdd.getTy());
-        StorageAction storageAction = storageActionBuilder.build();
-
-        String createTxWithoutSign = TransactionUtil.createTxWithoutSign("storage".getBytes(), storageAction.toByteArray(),
-                TransactionUtil.DEFAULT_FEE, 0);
-        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
-        try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
-        }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
-        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
-        return hexString;
+//        StorageProtobuf.EncryptNotaryAdd.Builder storageBuilder = StorageProtobuf.EncryptNotaryAdd.newBuilder();
+//        storageBuilder.setEncryptAdd(ByteString.copyFrom(encryptContent));
+//        storageBuilder.setKey(key);
+//
+//        StorageProtobuf.EncryptNotaryAdd encryptNotaryAdd = storageBuilder.build();
+//
+//        StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
+//        storageActionBuilder.setEncryptAdd(encryptNotaryAdd);
+//        storageActionBuilder.setTy(StorageEnum.EncryptNotaryAdd.getTy());
+//        StorageAction storageAction = storageActionBuilder.build();
+//
+//        String createTxWithoutSign = TransactionUtil.createTxWithoutSign("storage".getBytes(), storageAction.toByteArray(),
+//                TransactionUtil.DEFAULT_FEE, 0);
+//        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+//        TransactionProtoBuf.Transaction parseFrom = null;
+//        try {
+//            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+//        } catch (InvalidProtocolBufferException e) {
+//            e.printStackTrace();
+//        }
+//        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+//        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+//        return hexString;
+        return ""; //TODO
     }
 }
 

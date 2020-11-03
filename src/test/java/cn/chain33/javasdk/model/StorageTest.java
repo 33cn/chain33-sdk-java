@@ -5,7 +5,7 @@ import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
-
+import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -40,7 +40,7 @@ public class StorageTest {
 		System.out.println(submitTransaction);
 		
 	}
-	
+
 	/**
 	 * 哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
 	 */
@@ -110,22 +110,36 @@ public class StorageTest {
      * @throws Exception 
      */
 	@Test
-	public void contentStoreLocalNobalance() {
-	   // 存证智能合约的名称，代扣情况下，要带上平行链前缀
-	   String execer = "user.p.parat.storage";
-	   // 实际交易签名用的私钥
-	   String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-	   String contranctAddress = client.convertExectoAddr(execer);
-	   String txEncode = StorageUtil.createOnlyNotaryStorage(content.getBytes(), execer, privateKey, contranctAddress);
+	public void contentStoreLocalNobalance() throws InterruptedException {
+	    // 存证智能合约的名称，代扣情况下，要带上平行链前缀
+	    String execer = "user.p.parat.storage";
+	    // 实际交易签名用的私钥
+	    String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+	    String contranctAddress = client.convertExectoAddr(execer);
+	    String txEncode = StorageUtil.createOnlyNotaryStorage(content.getBytes(), execer, privateKey, contranctAddress);
 
-	   String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
-	   // 解析交易
-	   List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	   // 代扣交易签名的私钥
-	   String withHoldPrivateKey = "代扣交易私钥";
-	   String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
-	   String submitTransaction = client.submitTransaction(hexString);
-	   System.out.println("submitTransaction:" + submitTransaction);
+	    String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+	    // 解析交易
+	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+	    // 代扣交易签名的私钥
+	    String withHoldPrivateKey = "代扣交易私钥";
+	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
+	    String submitTransaction = client.submitTransaction(hexString);
+	    System.out.println("submitTransaction:" + submitTransaction);
+
+		Thread.sleep(5000);
+		for (int tick = 0; tick < 5; tick++){
+			QueryTransactionResult result = client.queryTransaction(submitTransaction);
+			if(result == null) {
+				Thread.sleep(5000);
+				continue;
+			}
+
+			System.out.println("next:" + result.getTx().getNext());
+			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+			System.out.println("ty:" + nextResult.getReceipt().getTyname());
+			break;
+		}
 	}
 	
 	

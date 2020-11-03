@@ -25,6 +25,8 @@ public class TransactionResult implements Serializable {
 
 	private Signature signature;
 
+	private String next;
+
 	public String getExecer() {
 		return execer;
 	}
@@ -89,11 +91,18 @@ public class TransactionResult implements Serializable {
 		this.payload = payload;
 	}
 
+	public String getNext() {
+		return next;
+	}
+
+	public void setNext(String next) {
+		this.next = next;
+	}
+
 	@Override
 	public String toString() {
 		return "TransactionResult [payload=" + payload + ", execer=" + execer + ", rawpayload=" + rawpayload + ", fee="
 				+ fee + ", expire=" + expire + ", nonce=" + nonce + ", to=" + to + ", signature=" + signature + "]";
 	}
-	
-	
+
 }
