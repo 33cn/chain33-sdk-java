@@ -5,7 +5,9 @@ import cn.chain33.javasdk.model.cert.CertObject;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.CertService;
 import cn.chain33.javasdk.utils.CertUtils;
+import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
+import com.google.protobuf.ByteString;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -46,16 +48,25 @@ public class CertUtilTest {
         Assert.assertNotNull(cert);
         Assert.assertNotNull(cert.serial);
         Assert.assertNotNull(cert.cert);
+        System.out.println(HexUtil.toHexString(cert.cert));
 
         CertObject.CertInfo certInfo = certclient.certGetCertInfo(cert.serial, UserKey);
         Assert.assertNotNull(certInfo);
         Assert.assertEquals(Identity, certInfo.identity);
 
+        CertService.CertNormal.Builder normal = CertService.CertNormal.newBuilder();
+        normal.setValue(ByteString.copyFrom("value123".getBytes()));
+        normal.setKey("key123");
+        CertService.CertNormal normalAction = normal.build();
+
         CertService.CertAction.Builder builder = CertService.CertAction.newBuilder();
         builder.setTy(CertUtils.CertActionNormal);
+        builder.setNormal(normalAction);
+
         byte[] reqBytes = builder.build().toByteArray();
         String transactionHash = TransactionUtil.createTxWithCert(UserKey, "cert", reqBytes, SignType.SM2, cert.getCert(), "ca test".getBytes());
         String hash = chain33client.submitTransaction(transactionHash);
+        System.out.println(hash);
         Assert.assertNotNull(hash);
 
         result = certclient.certRevoke(cert.serial, "", AdminKey);

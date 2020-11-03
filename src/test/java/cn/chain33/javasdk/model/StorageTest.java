@@ -1,8 +1,11 @@
 package cn.chain33.javasdk.model;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
+import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -36,6 +39,35 @@ public class StorageTest {
 		String submitTransaction = client.submitTransaction(txEncode);
 		System.out.println(submitTransaction);
 		
+	}
+
+	/**
+	 * 代扣交易内容存证
+	 */
+	@Test
+	public void contentStoreLocalNobalance() throws InterruptedException {
+		// 存证智能合约的名称
+		String execer = "storage";
+		// 签名用的私钥
+		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+		String contranctAddress = client.convertExectoAddr(execer);
+		String txEncode = StorageUtil.createOnlyNotaryStorageLocalNobalance(content.getBytes(), execer, privateKey, contranctAddress);
+
+		String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+		// 解析交易
+		List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+		// 代扣交易签名的私钥
+		String withHoldPrivateKey = "29d062824789f319ae80583423fd8da5374ba3b1ee8d14886a181af7836f8eaa";
+		String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
+		String submitTransaction = client.submitTransaction(hexString);
+		System.out.println("submitTransaction:" + submitTransaction);
+
+		Thread.sleep(10000);
+		QueryTransactionResult result = client.queryTransaction(submitTransaction);
+		System.out.println("next:" + result.getTx().getNext());
+
+		QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+		System.out.println("ty:" + result.getReceipt().getTyname());
 	}
 	
 	/**

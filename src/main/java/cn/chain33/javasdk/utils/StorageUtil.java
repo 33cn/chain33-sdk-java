@@ -43,6 +43,26 @@ public class StorageUtil {
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
+
+    /**
+     * 
+     * @description 内容存证模型代扣交易
+     * @param content 内容
+     * @return  payload
+     *
+     */
+    public static String createOnlyNotaryStorageLocalNobalance(byte[] content, String execer, String privateKey, String contranctAddress) {
+        Builder contentOnlyNotaryStorageBuilder = StorageProtobuf.ContentOnlyNotaryStorage.newBuilder(); 
+        contentOnlyNotaryStorageBuilder.setContent(ByteString.copyFrom(content));//内容小于512k;
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
+        storageActionBuilder.setContentStorage(contentOnlyNotaryStorageBuilder.build());
+        storageActionBuilder.setTy(StorageEnum.ContentOnlyNotaryStorage.getTy());
+        StorageAction storageAction = storageActionBuilder.build();
+
+        String createTransferTx = TransactionUtil.createTransferTx(privateKey, contranctAddress, execer, storageAction.toByteArray());
+
+        return createTransferTx;
+    }
     
     /**
      * 
