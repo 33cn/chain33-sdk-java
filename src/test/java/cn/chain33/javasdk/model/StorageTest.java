@@ -62,12 +62,20 @@ public class StorageTest {
 		String submitTransaction = client.submitTransaction(hexString);
 		System.out.println("submitTransaction:" + submitTransaction);
 
-		Thread.sleep(10000);
-		QueryTransactionResult result = client.queryTransaction(submitTransaction);
-		System.out.println("next:" + result.getTx().getNext());
+		Thread.sleep(5000);
+		for (int tick = 0; tick < 5; tick++){
+			QueryTransactionResult result = client.queryTransaction(submitTransaction);
+			if(result == null) {
+				Thread.sleep(5000);
+				continue;
+			}
 
-		QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-		System.out.println("ty:" + result.getReceipt().getTyname());
+			System.out.println("next:" + result.getTx().getNext());
+			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+			System.out.println("ty:" + nextResult.getReceipt().getTyname());
+			break;
+		}
+
 	}
 	
 	/**
