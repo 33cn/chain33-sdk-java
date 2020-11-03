@@ -45,13 +45,14 @@ public class StorageUtil {
     }
 
     /**
-     * 
-     * @description 内容存证模型代扣交易
-     * @param content 内容
-     * @return  payload
-     *
+     * 内容存证模型,平行链代扣模式
+     * @param content
+     * @param execer
+     * @param privateKey
+     * @param contranctAddress
+     * @return
      */
-    public static String createOnlyNotaryStorageLocalNobalance(byte[] content, String execer, String privateKey, String contranctAddress) {
+    public static String createOnlyNotaryStorage(byte[] content, String execer, String privateKey, String contranctAddress) {
         Builder contentOnlyNotaryStorageBuilder = StorageProtobuf.ContentOnlyNotaryStorage.newBuilder(); 
         contentOnlyNotaryStorageBuilder.setContent(ByteString.copyFrom(content));//内容小于512k;
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
