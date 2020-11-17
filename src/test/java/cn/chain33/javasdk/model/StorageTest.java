@@ -16,13 +16,16 @@ import cn.chain33.javasdk.utils.StorageUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
- *	包含内容存证, 哈希存证,链接存证,隐私存证,分享隐私存证几个接口
+ *	包含内容存证, 哈希存证,链接存证,隐私存证,分享隐私存证几个接口（联盟链场景）
  * @author fkeit
  */
 public class StorageTest {
 	
-    String ip = "fd.33.cn";
-    RpcClient client = new RpcClient(ip, 1263);
+	// 联盟链节点IP
+	String ip = "联盟链节点IP";
+	// 平行链服务端口
+	int port = 8801;
+    RpcClient client = new RpcClient(ip, port);
 	    
     String content = "疫情发生后，NPO法人仁心会联合日本湖北总商会等四家机构第一时间向湖北捐赠3800套杜邦防护服，包装纸箱上用中文写有“岂曰无衣，与子同裳”。这句诗词出自《诗经·秦风·无衣》，翻译成白话的意思是“谁说我们没衣穿？与你同穿那战裙”。不料，这句诗词在社交媒体上引发热议，不少网民赞叹日本人的文学造诣。实际上，NPO法人仁心会是一家在日华人组织，由在日或有留日背景的医药保健从业者以及相关公司组成的新生公益组织。NPO法人仁心会事务局告诉环球时报-环球网记者，由于第一批捐赠物资是防护服，“岂曰无衣，与子同裳”恰好可以表达海外华人华侨与一线医护人员共同战胜病毒的同仇敌忾之情，流露出对同胞的守护之爱。";
     
@@ -103,45 +106,6 @@ public class StorageTest {
 		
 	}
 	
-    /**
-     * 代扣存证，在需要缴纳手续费的情况下，可以采用代扣的方式， 实际的存证交易不需要缴纳手续费，全部通过代扣交易来缴纳手续费
-     * 
-     * 代扣交易模型
-     * @throws Exception 
-     */
-	@Test
-	public void contentStoreLocalNobalance() throws InterruptedException {
-	    // 存证智能合约的名称，代扣情况下，要带上平行链前缀
-	    String execer = "user.p.parat.storage";
-	    // 实际交易签名用的私钥
-	    String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-	    String contranctAddress = client.convertExectoAddr(execer);
-	    String txEncode = StorageUtil.createOnlyNotaryStorage(content.getBytes(), execer, privateKey, contranctAddress);
-
-	    String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
-	    // 解析交易
-	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	    // 代扣交易签名的私钥
-	    String withHoldPrivateKey = "代扣交易私钥";
-	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
-	    String submitTransaction = client.submitTransaction(hexString);
-	    System.out.println("submitTransaction:" + submitTransaction);
-
-		Thread.sleep(5000);
-		for (int tick = 0; tick < 5; tick++){
-			QueryTransactionResult result = client.queryTransaction(submitTransaction);
-			if(result == null) {
-				Thread.sleep(5000);
-				continue;
-			}
-
-			System.out.println("next:" + result.getTx().getNext());
-			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-			System.out.println("ty:" + nextResult.getReceipt().getTyname());
-			break;
-		}
-	}
-	
 	
 	/**
 	 * 根据hash查询存证结果
@@ -150,10 +114,6 @@ public class StorageTest {
 	@Test
 	public void queryStorage() throws UnsupportedEncodingException {
 		// contentStore
-//		JSONObject resultJson = client.queryStorage("0x7f675d6f16c13e4ac157ac8b5ffe4fd5b34fa8973dd400474cabb07ed6d2d1d8");
-//		JSONObject resultJson = client.queryStorage("0x8c97bb1659c54c2c95d93d4b0c7423cf604c485b0e534b7bc1aada2c45be5c39");
-//		JSONObject resultJson = client.queryStorage("0xa69815e1fe52ba8787cb710a236127299f7d15798c59ec9ed350d1342d7d256e");
-//		JSONObject resultJson = client.queryStorage("0x95c8ba7a818e94349049e4de0f9259bc6cfd9429ed4af9ede38262ff7f974a7c");
 		JSONObject resultJson = client.queryStorage("0x401f043696500030d49a511505b5c703e943382082b1154880e753acacb3d443");
 		
 		JSONObject resultArray;
@@ -191,6 +151,5 @@ public class StorageTest {
         	System.out.println("存证内容是:" + result);
         }
 	}
-	
-	
+
 }
