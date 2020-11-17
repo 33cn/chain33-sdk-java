@@ -334,6 +334,23 @@ public class RpcClient {
         }
         return null;
     }
+    
+    /**
+     * 取平均出块时间
+     * @return
+     */
+    public int getBlockAverageTime() {
+    	
+    	// 创世块的时间从配置文件中读取， 所以过滤掉
+    	List<BlockResult> blockResultList = getHeaders(1l, 1l, false);
+    	BlockResult resultFirst = blockResultList.get(0);
+    	
+    	BlockResult resultLast = getLastHeader();
+    	
+    	long averageSecond = (resultLast.getBlockTime().getTime() - resultFirst.getBlockTime().getTime())/((resultLast.getHeight() -1) * 1000);
+    	
+    	return (int)averageSecond ;
+    }
 
     /**
      * @description 获取某高度区块的 hash 值 GetBlockHash 该接口用于获取指定高度区间的区块头部信息
@@ -1139,6 +1156,65 @@ public class RpcClient {
             JSONArray resultArray = resultJson.getJSONArray("tokenAssets");
             List<TokenBalanceResult> javaList = resultArray.toJavaList(TokenBalanceResult.class);
             return javaList;
+        }
+        return null;
+    }
+    
+    /**
+     * @description 查询合约绑定的ABI信息
+     * 
+     * @param address:  查询的地址
+     * @param execer:   执行器名称
+     * @param funcName: 方法名
+     * @return TokenBalanceResult
+     */
+    public JSONArray queryEVMABIInfo(String address, String execer) {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", execer);
+        requestParam.put("funcName", "QueryABI");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("address", address);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            JSONArray resultArray = resultJson.getJSONArray("abi");
+            return resultArray;
+        }
+        return null;
+    }
+    
+    /**
+     * @description 查询合约ABI结果
+     * 
+     * @param address:  查询的地址
+     * @param execer:   执行器名称
+     * @param funcName: 方法名
+     * @return TokenBalanceResult
+     */
+    public JSONArray queryEVMABIResult(String address, String execer, String abiFunc) {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", execer);
+        requestParam.put("funcName", "Query");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("address", address);
+        payloadJson.put("input", abiFunc);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            JSONArray resultArray = resultJson.getJSONArray("jsonData");
+            return resultArray;
         }
         return null;
     }

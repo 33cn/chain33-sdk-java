@@ -53,6 +53,10 @@ public class TransactionUtil {
 	private static final SignType DEFAULT_SIGNTYPE = SignType.SECP256K1;
 
 	public static final long DEFAULT_FEE = 1000000;
+	
+	public static final long PARA_CREATE_EVM_FEE = 30000000;
+	
+	public static final long PARA_CALL_EVM_FEE = 2000000;
 
 	private final static Long TX_HEIGHT_OFFSET = 1L << 62;
 
@@ -235,6 +239,11 @@ public class TransactionUtil {
 	public static String createTransferTx(String privateKey, String toAddress, String execer, byte[] payLoad) {
 		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
 		return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE, DEFAULT_FEE);
+	}
+	
+	public static String createTransferTx(String privateKey, String toAddress, String execer, byte[] payLoad, long fee) {
+		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+		return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE, fee);
 	}
 
 	public static String createTx(String privateKey, String execer, String payLoad) {

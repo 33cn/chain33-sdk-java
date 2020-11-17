@@ -19,8 +19,11 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "fd.33.cn";
-    RpcClient client = new RpcClient(ip, 1263);
+	// 平行链IP
+	String ip = "平行链IP";
+	// 平行链服务端口
+	int port = 8801;
+    RpcClient client = new RpcClient(ip, port);
 	
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
@@ -130,7 +133,6 @@ public class RpcClientTest {
         for (AccountResult accountResult : accountList) {
             System.out.println(accountResult);
         }
-
     }
 
     /**
@@ -195,6 +197,15 @@ public class RpcClientTest {
         System.out.println(content);
 
     }
+    
+    /**
+     * 查询平均出块时间
+     */
+    @Test
+    public void getBlockAverageTime() {
+    	int blockTime =  client.getBlockAverageTime();
+    	System.out.println("平均出块时间为： " + blockTime + " 秒");
+    }
 
 
     /**
@@ -209,7 +220,6 @@ public class RpcClientTest {
         for (TokenBalanceResult tokenBalanceResult : queryAccountBalance) {
             System.out.println(tokenBalanceResult);
         }
-
     }
 
     /**
@@ -350,46 +360,7 @@ public class RpcClientTest {
         System.out.println(signedTxHex);
     }
     
-    /**
-     * 
-     * @description 本地签名代扣交易组，调用createNoBlance之后再将返回的数据解析,签名，发送交易
-     * 代扣交易主要用在平行链的场合，主链上的交易不需要关注此实现
-     *
-     */
-    @Test
-    public void localTransfer() {
-    	// 转账说明
-        String note = "转账说明";
-        // 主代币则为"",其他为token名
-        String coinToken = "";
-        // 转账数量为1
-        Long amount = 1 * 10000000L;
-        String to = "toAddress";
-        //String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
-        // 本地构造转账交易的payload
-        byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
-        // 签名私私钥，主链上不会扣除本地址下的主链币，所以此地址下可以没有主链币
-        String fromAddressPriveteKey = "实际交易签名私钥";
-        //String fromAddressPriveteKey = "1ce5a097b01e53d423275091e383a2c3a35d042144bd3bced44194eab2ff18c9";
-        // 执行器名称，平行链主代币为平行链名称+coins(平行链对应配置文件中的title项)
-        String execer = "user.p.sec.coins";
-        // 平行链转账时，实际to的地址填在payload中，外层的to地址对应的是合约的地址
-        String contranctAddress = client.convertExectoAddr(execer);
-        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer, payload);
-        
-        //create no balance 传入地址为空
-        String createNoBalanceTx = client.createNoBalanceTx(createTransferTx, "");
-        // 解析交易
-        List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-        // 代扣交易签名的私钥
-        //String withHoldPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
-        String withHoldPrivateKey = "代扣地址私钥";
-        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, fromAddressPriveteKey, withHoldPrivateKey);
-        String submitTransaction = client.submitTransaction(hexString);
-        System.out.println("submitTransaction:" + submitTransaction);
-    }
-    
-    
+
     /**
      * @description 本地将执行器转为地址
      */
