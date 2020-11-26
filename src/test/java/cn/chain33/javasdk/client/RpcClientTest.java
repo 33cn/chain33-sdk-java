@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.AccountResult;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
@@ -19,8 +18,8 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-	// 平行链IP
-	String ip = "平行链IP";
+	// 区块链节点IP
+	String ip = "区块链节点IP";
 	// 平行链服务端口
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);
@@ -175,6 +174,20 @@ public class RpcClientTest {
     public void importPrivKey() {
         String accountResult;
         accountResult = client.importPrivatekey("privatekey", "labelname");
+        System.out.println(accountResult);
+
+    }
+    
+    
+    /**
+     * 
+     * @description 导出私钥
+     *
+     */
+    @Test
+    public void dumpPrivKey() {
+        String accountResult;
+        accountResult = client.dumpPrivkey("节点上已经import的区块链地址");
         System.out.println(accountResult);
 
     }

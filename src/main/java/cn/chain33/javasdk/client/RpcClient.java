@@ -1030,7 +1030,7 @@ public class RpcClient {
     public String dumpPrivkey(String addr) {
         RpcRequest postData = getPostData(RpcMethod.DUMP_PRIVKEY);
         JSONObject requestParam = new JSONObject();
-        requestParam.put("ReqStr", addr);
+        requestParam.put("data", addr);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
         if (StringUtil.isNotEmpty(requestResult)) {
@@ -1038,7 +1038,7 @@ public class RpcClient {
             if (messageValidate(parseObject))
                 return null;
             JSONObject resultObj = parseObject.getJSONObject("result");
-            String resultStr = resultObj.getString("replystr");
+            String resultStr = resultObj.getString("data");
             return resultStr;
         }
         return null;
