@@ -1161,6 +1161,38 @@ public class RpcClient {
     }
     
     /**
+     * @description 查询合约消耗的GAS
+     * 
+     * @param address:  查询的地址
+     * @param execer:   执行器名称
+     * @param funcName: 方法名
+     * @return TokenBalanceResult
+     */
+    public String queryEVMGas(String execer, String code, String abi, String address) {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", execer);
+        requestParam.put("funcName", "EstimateGas");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("to", address);
+        payloadJson.put("code", code);
+        payloadJson.put("abi", abi);
+        payloadJson.put("caller", "");
+        payloadJson.put("amount", 0);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            String gas = parseObject.getJSONObject("result").getString("gas");
+            return gas;
+        }
+        return null;
+    }
+    
+    /**
      * @description 查询合约绑定的ABI信息
      * 
      * @param address:  查询的地址

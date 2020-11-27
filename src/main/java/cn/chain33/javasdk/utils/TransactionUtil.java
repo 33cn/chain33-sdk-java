@@ -27,6 +27,8 @@ import cn.chain33.javasdk.model.Transaction;
 import cn.chain33.javasdk.model.TransferBalanceRequest;
 import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.SignType;
+import cn.chain33.javasdk.model.gm.SM2KeyPair;
+import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder;
@@ -39,9 +41,6 @@ import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.AssetsTransfer;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.CoinsAction;
-import cn.chain33.javasdk.model.gm.SM2Util;
-import cn.chain33.javasdk.model.gm.SM2Util.SM2Signature;
-import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import net.vrallev.java.ecc.Ecc25519Helper;
 
 /**
@@ -54,9 +53,9 @@ public class TransactionUtil {
 
 	public static final long DEFAULT_FEE = 1000000;
 	
-	public static final long PARA_CREATE_EVM_FEE = 30000000;
+	public static final long PARA_CREATE_EVM_FEE = 3000000;
 	
-	public static final long PARA_CALL_EVM_FEE = 2000000;
+	public static final long PARA_CALL_EVM_FEE = 200000;
 
 	private final static Long TX_HEIGHT_OFFSET = 1L << 62;
 

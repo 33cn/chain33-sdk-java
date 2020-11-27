@@ -1,33 +1,41 @@
 package cn.chain33.javasdk.model.paraTest;
 
+import java.util.List;
+
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONArray;
 
 import cn.chain33.javasdk.client.RpcClient;
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
+import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.EvmUtil;
 import cn.chain33.javasdk.utils.HexUtil;
+import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
- * 平行链调用EVM合约
- * 适用场景：主链是联盟链（手续费功能默认是关闭），平行链用户通过自己的地址直接发起交易，不用考虑手续费的问题
+ * 平行链使用代扣方式调用EVM合约
+ * 适用场景：主链是公链（手续费是必需项），平行链上的所有交易通过某个有主链token的地址统一支付手续费，免去平行链上用户去获取主链token这一步骤，提升用户体验。
  * @author fkeit
  *
  */
-public class ERC721ParaTest {
+public class ERC721ParaWithholdTest {
 
 	// 平行链IP
 	String ip = "平行链IP";
 	// 平行链服务端口
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);
-	    
+    
     // 平行链名称，固定格式user.p.xxxx.  其中xxxx可替换，支持大小写英文字母
 	String paraName = "user.p.evm.";
 	
 	// 部署合约对应的私钥
-    String privateKey = "部署合约对应的私钥";
+    String privateKey = "部署合约对应的私钥匙";
     
+    // 代扣交易签名的私钥(所有的交易都通过这个代扣地址缴纳手续费)
+	String withHoldPrivateKey = "代扣地址的私钥";
+        
 	 /**
      * 平行链上部署和调用ERC721合约
      * @throws InterruptedException
@@ -40,18 +48,17 @@ public class ERC721ParaTest {
 
         String txEncode = null;
         String submitTransaction = null;
+        String execer = paraName + "evm";
+        // 平行链合约地址计算(平行链title前缀+合约名称)
+        String paracontractAddress = client.convertExectoAddr(execer);
         
-        // GAS费预估算
-//      String feelog = client.queryEVMGas(paraName + "evm", code, abi, "");
         
         // 部署合约
-        txEncode = EvmUtil.createEvmContract(HexUtil.fromHexString(code), "", "evm-erc721", abi, privateKey, paraName);
-        submitTransaction = client.submitTransaction(txEncode);
-        String contractName = submitTransaction;
-        System.out.println(submitTransaction);
-        Thread.sleep(10000);
+        txEncode = EvmUtil.createEvmContractWithhold(HexUtil.fromHexString(code), "", "evm-erc721", abi, privateKey, execer, paracontractAddress);
         
-        
+        String contractName = createNobalance(txEncode, paracontractAddress);
+        System.out.println(contractName);
+         
         // 合约名称
         String paraExecName = paraName + "user.evm." + contractName;
         // 合约地址的计算
@@ -61,11 +68,11 @@ public class ERC721ParaTest {
         JSONArray abiInfo = client.queryEVMABIInfo(paraExecAddress, paraExecName);
         System.out.println("合约绑定的ABI信息：　" + abiInfo);
 
+        // 获取
         // 调用合约
-        txEncode = EvmUtil.callEvmContract("".getBytes(),"", 0, "awardItem(\"14KEKbYtKKQm4wMthSK9J4La4nAiidGozt\",\"{\"ITEM\":\"picture1\",\"price\":\"10000\",\"author\",\"Andy\"}\")", contractName, privateKey, paraName);
-        submitTransaction = client.submitTransaction(txEncode);
+        txEncode = EvmUtil.callEvmContractWithhold("".getBytes(),"", 0, "awardItem(\"14KEKbYtKKQm4wMthSK9J4La4nAiidGozt\",\"{\"ITEM\":\"picture1\",\"price\":\"10000\",\"author\",\"Andy\"}\")", paraExecName, privateKey,  paraExecAddress);
+        submitTransaction = createNobalance(txEncode, paraExecAddress);
         System.out.println(submitTransaction);
-        Thread.sleep(10000);
         
         // 查询
         JSONArray abiResult = client.queryEVMABIResult(paraExecAddress, paraExecName, "symbol()");
@@ -84,8 +91,8 @@ public class ERC721ParaTest {
         System.out.println("14KEKbYtKKQm4wMthSK9J4La4nAiidGozt 地址余额信息：" + balanceResult);
         
         // 安全转账
-        txEncode = EvmUtil.callEvmContract("".getBytes(),"", 0, "safeTransferFrom(\"14KEKbYtKKQm4wMthSK9J4La4nAiidGozt\",\"1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs\", 1)", contractName, "CC38546E9E659D15E6B4893F0AB32A06D103931A8230B0BDE71459D2B27D6944", paraName);
-        submitTransaction = client.submitTransaction(txEncode);
+        txEncode = EvmUtil.callEvmContractWithhold("".getBytes(),"", 0, "safeTransferFrom(\"14KEKbYtKKQm4wMthSK9J4La4nAiidGozt\",\"1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs\", 1)",paraExecName, privateKey, paraExecAddress);
+        submitTransaction = createNobalance(txEncode, paraExecAddress);
         System.out.println(submitTransaction);
         Thread.sleep(10000);
         
@@ -97,5 +104,41 @@ public class ERC721ParaTest {
         balanceResult = client.queryEVMABIResult(paraExecAddress, paraExecName, "balanceOf(1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs)");
         System.out.println("1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs 地址余额信息：" + balanceResult);
         
+    }
+    
+    /**
+     * 构建代扣手续费交易
+     * 
+     * @param txEncode
+     * @param contranctAddress
+     * @return
+     * @throws InterruptedException
+     */
+    private String createNobalance(String txEncode, String contranctAddress) throws InterruptedException {
+        String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+	    // 解析交易
+	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+	    
+	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
+	    String submitTransaction = client.submitTransaction(hexString);
+	    
+	    String nextString = null;
+
+		Thread.sleep(5000);
+		for (int tick = 0; tick < 5; tick++){
+			QueryTransactionResult result = client.queryTransaction(submitTransaction);
+			if(result == null) {
+				Thread.sleep(5000);
+				continue;
+			}
+
+			System.out.println("next:" + result.getTx().getNext());
+			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+			System.out.println("ty:" + nextResult.getReceipt().getTyname());
+			nextString = result.getTx().getNext();
+			break;
+		}
+		
+		return nextString;
     }
 }
