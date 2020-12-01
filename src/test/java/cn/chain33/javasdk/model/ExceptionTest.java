@@ -17,7 +17,7 @@ public class ExceptionTest {
 	 * @throws InterruptedException
 	 */
 	@Test
-	public void doubleSpent() throws InterruptedException {
+	public void doubleSpent() throws Exception {
 
 		TransferBalanceRequest transferBalanceRequest = new TransferBalanceRequest();
 
@@ -52,7 +52,7 @@ public class ExceptionTest {
 	 * @throws InterruptedException
 	 */
 	@Test
-	public void overflowSpent() throws InterruptedException {
+	public void overflowSpent() throws Exception {
 
 		TransferBalanceRequest transferBalanceRequest = new TransferBalanceRequest();
 

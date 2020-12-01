@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -19,8 +20,8 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class AccountTest {
 
-    String ip = "139.196.201.120";
-    RpcClient client = new RpcClient(ip, 8901);
+    String ip = "127.0.0.1";
+    RpcClient client = new RpcClient(ip, 8801);
 
 	Account account = new Account();
 
@@ -52,7 +53,7 @@ public class AccountTest {
 	 * @description 本地构造主链主积分转账交易
 	 */
 	@Test
-	public void createCoinTransferTxMain() throws InterruptedException {
+	public void createCoinTransferTxMain() throws Exception {
 
 		TransferBalanceRequest transferBalanceRequest = new TransferBalanceRequest();
 
@@ -73,7 +74,8 @@ public class AccountTest {
 		// 构造好，并本地签好名的交易
 		String createTransferTx = TransactionUtil.transferBalanceMain(transferBalanceRequest);
 		// 交易发往区块链
-		String txHash = client.submitTransaction(createTransferTx);
+		String txHash = null;
+		txHash = client.submitTransaction(createTransferTx);
 		System.out.println(txHash);
 
 		List<String> list = new ArrayList<>();

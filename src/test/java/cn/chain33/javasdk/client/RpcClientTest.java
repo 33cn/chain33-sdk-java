@@ -19,8 +19,8 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "fd.33.cn";
-    RpcClient client = new RpcClient(ip, 1263);
+    String ip = "127.0.0.1";
+    RpcClient client = new RpcClient(ip, 8801);
 	
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
@@ -34,7 +34,7 @@ public class RpcClientTest {
      * 平行链：不适用
      */
     @Test
-    public void checkStatus() {
+    public void checkStatus() throws Exception {
         System.out.println("is sync:" + client.isSync());
     }
 
@@ -44,7 +44,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void getWalletStatus() {
+    public void getWalletStatus() throws Exception {
         WalletStatusResult walletStatus;
         walletStatus = client.getWalletStatus();
         System.out.println(walletStatus);
@@ -56,13 +56,13 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void lock() {
+    public void lock() throws Exception {
         BooleanResult lock = client.lock();
         System.out.println(lock);
     }
 
     @Test
-    public void unlock() {
+    public void unlock() throws Exception {
         // 钱包密码，长度8位，数字+字母
         String passwd = "fzm12345";
         boolean walletorticket = false;
@@ -77,7 +77,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void seedGen() {
+    public void seedGen() throws Exception {
         String seedGen = client.seedGen(1);
         System.out.println(seedGen);
     }
@@ -88,7 +88,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void seedSave() {
+    public void seedSave() throws Exception {
         String seedCn = "常 辉 觉 李 固 参 鲜 村 见 控 罩 戈 狠 亿 圣";
         String passwd = "fzm12345";
         BooleanResult booleanResult = client.seedSave(seedCn, passwd);
@@ -101,7 +101,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void seedGet() {
+    public void seedGet() throws Exception {
         String passwd = "fzm12345";
         String seedGet = client.seedGet(passwd);
         System.out.println(seedGet);
@@ -113,7 +113,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void newAccount() {
+    public void newAccount() throws Exception {
         AccountResult newAccount = client.newAccount("secondAccount");
         System.out.println(newAccount);
     }
@@ -124,7 +124,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void getAccounts() {
+    public void getAccounts() throws Exception {
         List<AccountResult> accountList;
         accountList = client.getAccountList();
         for (AccountResult accountResult : accountList) {
@@ -139,10 +139,10 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void getCoinsBalace() {
+    public void getCoinsBalace() throws Exception {
         List<String> list = new ArrayList<>();
-        list.add("address1");
-        list.add("address2");
+        list.add("15DAJUBA65K6SHWAWXuJRnTXkT8K1DNXNL");
+        list.add("1JGEaFMXi6irAgEFXR6Hgaoe5crqBh6QYs");
         List<AccountAccResult> queryBtyBalance;
         queryBtyBalance = client.getCoinsBalance(list, "coins");
         for (AccountAccResult accountAccResult : queryBtyBalance) {
@@ -157,9 +157,9 @@ public class RpcClientTest {
      * 
      */
     @Test
-    public void setLabel() {
+    public void setLabel() throws Exception {
         AccountResult accountResult;
-        accountResult = client.setlabel("19Sq2BSqX4CKvPMjsDsdwdfFzjUmfxxxx", "first");
+        accountResult = client.setlabel("15DAJUBA65K6SHWAWXuJRnTXkT8K1DNXNL", "first");
         System.out.println(accountResult);
 
     }
@@ -170,7 +170,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void importPrivKey() {
+    public void importPrivKey() throws Exception {
         String accountResult;
         accountResult = client.importPrivatekey("privatekey", "labelname");
         System.out.println(accountResult);
@@ -182,13 +182,14 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void queryTxDetail() {
+    public void queryTxDetail() throws Exception {
     	// 交易hash
-    	// String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
-        String hash = "交易hash";
+    	String hash = "0x3fb9b1ebf10d7ab4ac36882f5031fdfb89dc503d146a098a3127df608d795034";
+        //String hash = "交易hash";
         QueryTransactionResult queryTransaction1;
         queryTransaction1 = client.queryTransaction(hash);
         System.out.println(queryTransaction1);
+
         // 如果是上链内容,读取上链内容
         String rawpayload = queryTransaction1.getTx().getRawpayload();
         String content = new String(HexUtil.fromHexString(rawpayload));
@@ -203,7 +204,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void queryUserTokens() {
+    public void queryUserTokens() throws Exception {
         List<TokenBalanceResult> queryAccountBalance;
         queryAccountBalance = client.queryAccountBalance("12qyocayNF7Lv6C9qxxxxxx", "user.p.xxchain.coins");
         for (TokenBalanceResult tokenBalanceResult : queryAccountBalance) {
@@ -218,7 +219,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void queryTokenBalace() {
+    public void queryTokenBalace() throws Exception {
         List<String> addrList = new ArrayList<>();
         addrList.add("XXXXXXXXXXXX");
         List<AccountAccResult> tokenBalance;
@@ -235,7 +236,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void getTxByAddr() {
+    public void getTxByAddr() throws Exception {
         List<TxResult> txByAddr;
         txByAddr = client.getTxByAddr("address", 0, 10, 0, -1L, 0);
         for (TxResult txResult : txByAddr) {
@@ -251,7 +252,7 @@ public class RpcClientTest {
      * @description 预创建token
      */
     @Test
-    public void preCreateToken() {
+    public void preCreateToken() throws Exception {
         long total = (long) (1000 * 1e8);
         // 调用节点接口预创建token 返回hash
         String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
@@ -267,7 +268,7 @@ public class RpcClientTest {
      * @description 完成token创建
      */
     @Test
-    public void createTokenFinish() {
+    public void createTokenFinish() throws Exception {
         String createRawTokenFinishTx = client.createRawTokenFinishTx((long) 1e8, "LGS", "address");
         String signRawTx = client.signRawTx("address", "addressPrivateKey", createRawTokenFinishTx, 300 + "", 0);
         String submitTransaction = client.submitTransaction(signRawTx);
@@ -278,7 +279,7 @@ public class RpcClientTest {
      * @description 合约转为地址
      */
     @Test
-    public void convertExecertoAddr() {
+    public void convertExecertoAddr() throws Exception {
         String address;
         address = client.convertExectoAddr("manage");
         System.out.println(address);
@@ -289,7 +290,7 @@ public class RpcClientTest {
      * @description 本地构造上链交易数据。数据大手续费越高,推荐压缩之后再上链。
      */
     @Test
-    public void uploadDateToChain() {
+    public void uploadDateToChain() throws Exception {
         String transactionHash = TransactionUtil.createTx(withHoldPrivateKey, "user.p.xxchain.coins", "content",
                 TransactionUtil.DEFAULT_FEE);
         // 创建代扣交易 创建交易上链需要消耗手续费
@@ -304,7 +305,7 @@ public class RpcClientTest {
      * @description 本地构造平行链主代币转账交易
      */
     @Test
-    public void createCoinTransferTxPara() {
+    public void createCoinTransferTxPara() throws Exception {
     	// 转账说明
         String note = "转账说明";
         // 主代币则为"",其他为token名
@@ -331,7 +332,7 @@ public class RpcClientTest {
      * @description 通过节点构造token/主代币转账
      */
     @Test
-    public void transferToken() {
+    public void transferToken() throws Exception {
         String toAddr = "to address";
         String tokenSymBol = "tokenSymbol";
         String fromAddr = "from address";
@@ -357,7 +358,7 @@ public class RpcClientTest {
      *
      */
     @Test
-    public void localTransfer() {
+    public void localTransfer() throws Exception {
     	// 转账说明
         String note = "转账说明";
         // 主代币则为"",其他为token名
@@ -404,7 +405,7 @@ public class RpcClientTest {
 	* @description 撤销预创建的token
 	*/
 	@Test
-	public void revokePrecreateToken(){
+	public void revokePrecreateToken() throws Exception {
 	   String symbol = "COINSDEVX";
 	   String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
 	   String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
@@ -418,14 +419,14 @@ public class RpcClientTest {
 	 * 接口QPS测试(单线程)
 	 */
 	@Test
-	public void qpsTest() {
+	public void qpsTest() throws Exception {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");   
     	System.out.println(df.format(System.currentTimeMillis())); 
 		
         String hash = "0x441e91ff13f28fe104d66db4308ab12652868eaf8a0011dec2059a4be98bdfb3";
         for (int i = 0; i <= 50000; i++) {
 
-            client.queryTx(hash);
+            client.queryTransaction(hash);
            // System.out.println(queryTransaction1);
             if (i%1000 == 0) {
             	System.out.println(i);

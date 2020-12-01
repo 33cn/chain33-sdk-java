@@ -30,7 +30,7 @@ public class StorageTest {
 	 * 内容存证
 	 */
 	@Test
-	public void contentStore() {
+	public void contentStore() throws Exception {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -45,7 +45,7 @@ public class StorageTest {
 	 * 哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
 	 */
 	@Test
-	public void hashStore() {
+	public void hashStore() throws Exception {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -61,7 +61,7 @@ public class StorageTest {
      * 链接存证模型
      */
 	@Test
-	public void hashAndLinkStore() {
+	public void hashAndLinkStore() throws Exception {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -110,7 +110,7 @@ public class StorageTest {
      * @throws Exception 
      */
 	@Test
-	public void contentStoreLocalNobalance() throws InterruptedException {
+	public void contentStoreLocalNobalance() throws Exception {
 	    // 存证智能合约的名称，代扣情况下，要带上平行链前缀
 	    String execer = "user.p.parat.storage";
 	    // 实际交易签名用的私钥
@@ -148,7 +148,7 @@ public class StorageTest {
 	 * @throws UnsupportedEncodingException 
 	 */
 	@Test
-	public void queryStorage() throws UnsupportedEncodingException {
+	public void queryStorage() throws Exception {
 		// contentStore
 //		JSONObject resultJson = client.queryStorage("0x7f675d6f16c13e4ac157ac8b5ffe4fd5b34fa8973dd400474cabb07ed6d2d1d8");
 //		JSONObject resultJson = client.queryStorage("0x8c97bb1659c54c2c95d93d4b0c7423cf604c485b0e534b7bc1aada2c45be5c39");

@@ -6,13 +6,12 @@ import java.util.Date;
 import java.util.List;
 
 import cn.chain33.javasdk.model.cert.CertObject;
+import cn.chain33.javasdk.model.exception.Chain33Exception;
 import cn.chain33.javasdk.model.protobuf.CertService;
 import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.pre.KeyFrag;
 import cn.chain33.javasdk.model.pre.ReKeyFrag;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.subgraph.orchid.encoders.Hex;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -81,17 +80,14 @@ public class RpcClient {
      * @param transactionJsonResult
      * @return
      */
-    public String submitTransaction(RpcRequest transactionJsonResult) {
+    public String submitTransaction(RpcRequest transactionJsonResult) throws Exception {
         transactionJsonResult.setMethod(RpcMethod.SEND_TRANSACTION);
         String jsonString = JSONObject.toJSONString(transactionJsonResult);
         String httpPostResult = HttpUtil.httpPostBody(getUrl(), jsonString);
-        if (StringUtil.isNotEmpty(httpPostResult)) {
-            JSONObject parseObject = JSONObject.parseObject(httpPostResult);
-            if (messageValidate(parseObject))
-                return null;
-            return parseObject.getString("result");
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(httpPostResult);
+        messageValidate(parseObject);
+        return parseObject.getString("result");
     }
 
     /**
@@ -100,20 +96,16 @@ public class RpcClient {
      * @param data 签名后的交易
      * @return 交易hash
      */
-    public String submitTransaction(String data) {
+    public String submitTransaction(String data) throws Exception {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("data", data);
 
         RpcRequest postData = getPostData(RpcMethod.SEND_TRANSACTION);
         postData.addJsonParams(jsonObject);
         String httpPostResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(httpPostResult)) {
-            JSONObject parseObject = JSONObject.parseObject(httpPostResult);
-            if (messageValidate(parseObject))
-                return null;
-            return parseObject.getString("result");
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(httpPostResult);
+        messageValidate(parseObject);
+        return parseObject.getString("result");
     }
 
     /**
@@ -122,19 +114,13 @@ public class RpcClient {
      * @return 同步结果
      *
      */
-    public Boolean isSync() {
+    public Boolean isSync() throws Exception {
         RpcRequest postData = getPostData(RpcMethod.BLOCKCHAIN_IS_SYNC);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            try {
-                JSONObject jsonResult = JSONObject.parseObject(result);
-                Boolean isSync = jsonResult.getBoolean("result");
-                return isSync;
-            } catch (Exception e) {
-                return false;
-            }
-        }
-        return false;
+        JSONObject jsonResult = JSONObject.parseObject(result);
+        messageValidate(jsonResult);
+        Boolean isSync = jsonResult.getBoolean("result");
+        return isSync;
     }
 
     /**
@@ -142,7 +128,7 @@ public class RpcClient {
      * @param hash 交易hash
      * @return 交易信息
      */
-    public QueryTransactionResult queryTransaction(String hash) {
+    public QueryTransactionResult queryTransaction(String hash) throws Exception  {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
             hash = HexUtil.removeHexHeader(hash);
         }
@@ -153,47 +139,21 @@ public class RpcClient {
         postData.addJsonParams(jsonObject);
 
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            QueryTransactionResult transactionResult = resultJson.toJavaObject(QueryTransactionResult.class);
-            transactionResult.setBlocktime(new Date(transactionResult.getBlocktime().getTime() * 1000));
-            return transactionResult;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        QueryTransactionResult transactionResult = resultJson.toJavaObject(QueryTransactionResult.class);
+        transactionResult.setBlocktime(new Date(transactionResult.getBlocktime().getTime() * 1000));
+        return transactionResult;
     }
     
-    /**
-     * @description 根据交易哈希查询交易信息
-     * @param hash 交易hash
-     * @return 交易信息
-     */
-    public String queryTx(String hash) {
-        if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
-            hash = HexUtil.removeHexHeader(hash);
-        }
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("hash", hash);
-        RpcRequest postData = getPostData(RpcMethod.QUERY_TRANSACTION);
-
-        postData.addJsonParams(jsonObject);
-
-        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            return "OK";
-        }
-        return null;
-    }
-
     /**
      * @description 根据哈希数组批量获取交易信息 GetTxByHashes
      * 
      * @param hashIdList 交易ID列表
      * @return 交易结果对象列表
      */
-    public List<QueryTransactionResult> GetTxByHashes(List<String> hashIdList) {
+    public List<QueryTransactionResult> GetTxByHashes(List<String> hashIdList) throws Exception {
         if (hashIdList != null && !hashIdList.isEmpty()) {
             for (int i = 0; i < hashIdList.size(); i++) {
                 String hash = hashIdList.get(i);
@@ -206,22 +166,19 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_TX_BY_HASHES);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            JSONArray jsonArray = resultJson.getJSONArray("txs");
-            List<QueryTransactionResult> resultList = new ArrayList<>();
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject txJson = jsonArray.getJSONObject(i);
-                QueryTransactionResult transactionResult = txJson.toJavaObject(QueryTransactionResult.class);
-                transactionResult.setBlocktime(new Date(transactionResult.getBlocktime().getTime() * 1000));
-                resultList.add(transactionResult);
-            }
-            return resultList;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray jsonArray = resultJson.getJSONArray("txs");
+        List<QueryTransactionResult> resultList = new ArrayList<>();
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JSONObject txJson = jsonArray.getJSONObject(i);
+            QueryTransactionResult transactionResult = txJson.toJavaObject(QueryTransactionResult.class);
+            transactionResult.setBlocktime(new Date(transactionResult.getBlocktime().getTime() * 1000));
+            resultList.add(transactionResult);
         }
-        return null;
+        return resultList;
     }
 
     /**
@@ -230,7 +187,7 @@ public class RpcClient {
      * @param hash 交易hash
      * @return 交易字符串
      */
-    public String getHexTxByHash(String hash) {
+    public String getHexTxByHash(String hash) throws Exception {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
             hash = HexUtil.removeHexHeader(hash);
         }
@@ -239,14 +196,11 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_HEX_TX_BY_HASH);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            String txString = parseObject.getString("result");
-            return txString;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        String txString = parseObject.getString("result");
+        return txString;
     }
 
     /**
@@ -257,7 +211,7 @@ public class RpcClient {
      * @param isDetail 是否获取详情
      * 
      */
-    public List<BlocksResult> getBlocks(Long start, Long end, boolean isDetail) {
+    public List<BlocksResult> getBlocks(Long start, Long end, boolean isDetail) throws Exception {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("start", start);
         jsonObject.put("end", end);
@@ -265,41 +219,35 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_BLOCKS);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONArray jsonArray = parseObject.getJSONObject("result").getJSONArray("items");
-            List<BlocksResult> blocksList = new ArrayList<>();
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject blocksJson = jsonArray.getJSONObject(i);
-                BlocksResult javaObject = JSONObject.toJavaObject(blocksJson, BlocksResult.class);
-                javaObject.getBlock().setBlockTime(new Date(javaObject.getBlock().getBlockTime().getTime() * 1000));
-                blocksList.add(javaObject);
-            }
-            return blocksList;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONArray jsonArray = parseObject.getJSONObject("result").getJSONArray("items");
+        List<BlocksResult> blocksList = new ArrayList<>();
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JSONObject blocksJson = jsonArray.getJSONObject(i);
+            BlocksResult javaObject = JSONObject.toJavaObject(blocksJson, BlocksResult.class);
+            javaObject.getBlock().setBlockTime(new Date(javaObject.getBlock().getBlockTime().getTime() * 1000));
+            blocksList.add(javaObject);
         }
-        return null;
+        return blocksList;
     }
 
     /**
      * @description 获取最新的区块头 GetLastHeader
      * @return 最新区块信息
      */
-    public BlockResult getLastHeader() {
+    public BlockResult getLastHeader() throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_LAST_HEADER);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject jsonResult = parseObject.getJSONObject("result");
-            BlockResult block = JSONObject.toJavaObject(jsonResult, BlockResult.class);
-            Long blockTimeLong = jsonResult.getLong("blockTime");
-            block.setBlockTime(new Date(blockTimeLong * 1000));
-            return block;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject jsonResult = parseObject.getJSONObject("result");
+        BlockResult block = JSONObject.toJavaObject(jsonResult, BlockResult.class);
+        Long blockTimeLong = jsonResult.getLong("blockTime");
+        block.setBlockTime(new Date(blockTimeLong * 1000));
+        return block;
     }
 
     /**
@@ -309,7 +257,7 @@ public class RpcClient {
      * @param end      结束区块高度
      * @param isDetail 是否打印区块详细信息
      */
-    public List<BlockResult> getHeaders(Long start, Long end, boolean isDetail) {
+    public List<BlockResult> getHeaders(Long start, Long end, boolean isDetail) throws Exception {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("start", start);
         jsonObject.put("end", end);
@@ -317,22 +265,19 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_HEADERS);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject jsonResult = parseObject.getJSONObject("result");
-            JSONArray jsonArray = jsonResult.getJSONArray("items");
-            List<BlockResult> blockResultList = new ArrayList<>();
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject blockJson = jsonArray.getJSONObject(i);
-                BlockResult blockResult = JSONObject.toJavaObject(blockJson, BlockResult.class);
-                blockResult.setBlockTime(new Date(blockResult.getBlockTime().getTime() * 1000));
-                blockResultList.add(blockResult);
-            }
-            return blockResultList;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject jsonResult = parseObject.getJSONObject("result");
+        JSONArray jsonArray = jsonResult.getJSONArray("items");
+        List<BlockResult> blockResultList = new ArrayList<>();
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JSONObject blockJson = jsonArray.getJSONObject(i);
+            BlockResult blockResult = JSONObject.toJavaObject(blockJson, BlockResult.class);
+            blockResult.setBlockTime(new Date(blockResult.getBlockTime().getTime() * 1000));
+            blockResultList.add(blockResult);
         }
-        return null;
+        return blockResultList;
     }
 
     /**
@@ -340,21 +285,17 @@ public class RpcClient {
      * @param height 区块高度
      * @return 区块hash
      */
-    public String getBlockHash(Long height) {
+    public String getBlockHash(Long height) throws Exception {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("height", height);
         RpcRequest postData = getPostData(RpcMethod.GET_BLOCK_HASH);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            String hexString = parseObject.getJSONObject("result").getString("hash");
-            ;
-            return HexUtil.removeHexHeader(hexString);
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        String hexString = parseObject.getJSONObject("result").getString("hash");
+        return HexUtil.removeHexHeader(hexString);
     }
 
     /**
@@ -363,7 +304,7 @@ public class RpcClient {
      * @param hash 区块hash
      * @return 区块信息
      */
-    public BlockOverViewResult getBlockOverview(String hash) {
+    public BlockOverViewResult getBlockOverview(String hash) throws Exception {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
             hash = HexUtil.removeHexHeader(hash);
         }
@@ -372,39 +313,33 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_BLOCK_DETAIL);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            BlockOverViewResult blockOverViewResult = JSONObject.toJavaObject(resultJson, BlockOverViewResult.class);
-            return blockOverViewResult;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        BlockOverViewResult blockOverViewResult = JSONObject.toJavaObject(resultJson, BlockOverViewResult.class);
+        return blockOverViewResult;
     }
 
     /**
      * @description 获取远程节点列表
      * @return 节点信息
      */
-    public List<PeerResult> getPeerInfo() {
+    public List<PeerResult> getPeerInfo() throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_PEER_INFO);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            JSONArray jsonArray = resultJson.getJSONArray("peers");
-            List<PeerResult> peerList = new ArrayList<>();
-            for (int i = 0; i < jsonArray.size(); i++) {
-                JSONObject peerJson = jsonArray.getJSONObject(i);
-                PeerResult peer = JSONObject.toJavaObject(peerJson, PeerResult.class);
-                peerList.add(peer);
-            }
-            return peerList;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray jsonArray = resultJson.getJSONArray("peers");
+        List<PeerResult> peerList = new ArrayList<>();
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JSONObject peerJson = jsonArray.getJSONObject(i);
+            PeerResult peer = JSONObject.toJavaObject(peerJson, PeerResult.class);
+            peerList.add(peer);
         }
-        return null;
+        return peerList;
     }
 
     private RpcRequest getPostData(RpcMethod method) {
@@ -413,18 +348,14 @@ public class RpcClient {
         return postJsonData;
     }
 
-    private Boolean messageValidate(JSONObject parseObject) {
+    private void messageValidate(JSONObject parseObject) throws Chain33Exception {
         if (parseObject != null && parseObject.containsKey("error")) {
             String error = parseObject.getString("error");
             if (StringUtil.isNotEmpty(error)) {
-                System.err.println("rpc error:" + parseObject);
-                logger.error("rpc error:" + parseObject);
-                return true;
-            } else {
-                return false;
+                logger.error("rpc error:" + error);
+                throw new Chain33Exception(error);
             }
         }
-        return false;
     }
     
     /**
@@ -433,7 +364,7 @@ public class RpcClient {
      * @param hashIdList    交易ID列表，用逗号“,”分割
      * @return 交易信息列表
      */
-    public List<QueryTransactionResult> getTxByHashes(String hashIdList) {
+    public List<QueryTransactionResult> getTxByHashes(String hashIdList) throws Exception {
         if (StringUtil.isEmpty(hashIdList)) {
             return null;
         }
@@ -449,27 +380,26 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_TX_BY_HASHES);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            JSONArray jsonArray = resultJson.getJSONArray("txs");
-            if (jsonArray != null && jsonArray.size() != 0) {
-                List<QueryTransactionResult> resultList = new ArrayList<>();
-                for (int i = 0; i < jsonArray.size(); i++) {
-                    JSONObject txJson = jsonArray.getJSONObject(i);
-                    if (txJson == null) {
-                        continue;
-                    }
-                    QueryTransactionResult transactionResult = txJson.toJavaObject(QueryTransactionResult.class);
-                    transactionResult.setBlocktime(new Date(transactionResult.getBlocktime().getTime() * 1000));
-                    resultList.add(transactionResult);
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray jsonArray = resultJson.getJSONArray("txs");
+        if (jsonArray != null && jsonArray.size() != 0) {
+            List<QueryTransactionResult> resultList = new ArrayList<>();
+            for (int i = 0; i < jsonArray.size(); i++) {
+                JSONObject txJson = jsonArray.getJSONObject(i);
+                if (txJson == null) {
+                    continue;
                 }
-                return resultList;
+                QueryTransactionResult transactionResult = txJson.toJavaObject(QueryTransactionResult.class);
+                transactionResult.setBlocktime(new Date(transactionResult.getBlocktime().getTime() * 1000));
+                resultList.add(transactionResult);
             }
+            return resultList;
         }
-        return null;
+
+        return new ArrayList<>();
     }
 
     /**
@@ -478,18 +408,15 @@ public class RpcClient {
      * @return 钱包状态
      *
      */
-    public WalletStatusResult getWalletStatus() {
+    public WalletStatusResult getWalletStatus() throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_WALLET_STUATUS);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            WalletStatusResult WalletStatus = resultJson.toJavaObject(WalletStatusResult.class);
-            return WalletStatus;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        WalletStatusResult WalletStatus = resultJson.toJavaObject(WalletStatusResult.class);
+        return WalletStatus;
     }
 
     /**
@@ -497,18 +424,15 @@ public class RpcClient {
      * 
      * @return 结果
      */
-    public BooleanResult lock() {
+    public BooleanResult lock() throws Exception {
         RpcRequest postData = getPostData(RpcMethod.LOCK_WALLET);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            BooleanResult lockResult = resultJson.toJavaObject(BooleanResult.class);
-            return lockResult;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        BooleanResult lockResult = resultJson.toJavaObject(BooleanResult.class);
+        return lockResult;
     }
 
     /**
@@ -519,7 +443,7 @@ public class RpcClient {
      * @param timeout        解锁时间，默认 0，表示永远解锁；非 0 值，表示超时之后继续锁住钱包，单位：秒。
      * @return 结果
      */
-    public BooleanResult unlock(String passwd, boolean walletorticket, int timeout) {
+    public BooleanResult unlock(String passwd, boolean walletorticket, int timeout) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.UNLOCK_WALLET);
         JSONObject requestParam = new JSONObject();
         requestParam.put("passwd", passwd);
@@ -527,15 +451,12 @@ public class RpcClient {
         requestParam.put("timeout", timeout);
         postData.addJsonParams(requestParam);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            BooleanResult lockResult = resultJson.toJavaObject(BooleanResult.class);
-            return lockResult;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        BooleanResult lockResult = resultJson.toJavaObject(BooleanResult.class);
+        return lockResult;
     }
 
     /**
@@ -545,22 +466,18 @@ public class RpcClient {
      * @return 账户信息
      *
      */
-    public AccountResult newAccount(String label) {
+    public AccountResult newAccount(String label) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.NEW_ACCOUNT);
         JSONObject requestParam = new JSONObject();
         requestParam.put("label", label);
         postData.addJsonParams(requestParam);
 
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            AccountResult newAccountResult = resultJson.toJavaObject(AccountResult.class);
-            return newAccountResult;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        AccountResult newAccountResult = resultJson.toJavaObject(AccountResult.class);
+        return newAccountResult;
     }
     
 
@@ -570,21 +487,18 @@ public class RpcClient {
      * @param lang lang=0:英语，lang=1:简体汉字
      * @return seed
      */
-    public String seedGen(Integer lang) {
+    public String seedGen(Integer lang) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GEN_SEED);
         JSONObject requestParam = new JSONObject();
         requestParam.put("lang", lang);
         postData.addJsonParams(requestParam);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            String seed = resultJson.getString("seed");
-            return seed;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        String seed = resultJson.getString("seed");
+        return seed;
     }
 
     /**
@@ -594,22 +508,19 @@ public class RpcClient {
      * @param passwd 加密密码，必须大于或等于8个字符的字母和数字组合
      * @return
      */
-    public BooleanResult seedSave(String seed, String passwd) {
+    public BooleanResult seedSave(String seed, String passwd) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.SAVE_SEED);
         JSONObject requestParam = new JSONObject();
         requestParam.put("seed", seed);
         requestParam.put("passwd", passwd);
         postData.addJsonParams(requestParam);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            BooleanResult booleanResult = resultJson.toJavaObject(BooleanResult.class);
-            return booleanResult;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        BooleanResult booleanResult = resultJson.toJavaObject(BooleanResult.class);
+        return booleanResult;
     }
 
     /**
@@ -618,21 +529,18 @@ public class RpcClient {
      * @param passwd 密码
      * @return  seed
      */
-    public String seedGet(String passwd) {
+    public String seedGet(String passwd) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_SEED);
         JSONObject requestParam = new JSONObject();
         requestParam.put("passwd", passwd);
         postData.addJsonParams(requestParam);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            String seed = resultJson.getString("seed");
-            return seed;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        String seed = resultJson.getString("seed");
+        return seed;
     }
 
     /**
@@ -641,20 +549,17 @@ public class RpcClient {
      * @param execername 例如user.p.xxchain.xxx
      * @return 合约地址
      */
-    public String convertExectoAddr(String execername) {
+    public String convertExectoAddr(String execername) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CONVERT_EXECER_TO_ADDRESS);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execname", execername);
         postData.addJsonParams(requestParam);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            String address = parseObject.getString("result");
-            return address;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        String address = parseObject.getString("result");
+        return address;
     }
 
     /**
@@ -664,22 +569,19 @@ public class RpcClient {
      * @param label 例如 macAddrlabel
      * @return 结果
      */
-    public AccountResult setlabel(String addr, String label) {
+    public AccountResult setlabel(String addr, String label) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.SET_LABEL);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addr", addr);
         requestParam.put("label", label);
         postData.addJsonParams(requestParam);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            AccountResult accountResult = resultJson.toJavaObject(AccountResult.class);
-            return accountResult;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        AccountResult accountResult = resultJson.toJavaObject(AccountResult.class);
+        return accountResult;
     }
 
     /**
@@ -687,19 +589,16 @@ public class RpcClient {
      * 
      * @return 账号列表
      */
-    public List<AccountResult> getAccountList() {
+    public List<AccountResult> getAccountList() throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_ACCOUNT_LIST);
         String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(result)) {
-            JSONObject parseObject = JSONObject.parseObject(result);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            JSONArray jsonArray = resultJson.getJSONArray("wallets");
-            List<AccountResult> accountList = jsonArray.toJavaList(AccountResult.class);
-            return accountList;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(result);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray jsonArray = resultJson.getJSONArray("wallets");
+        List<AccountResult> accountList = jsonArray.toJavaList(AccountResult.class);
+        return accountList;
     }
 
     /**
@@ -719,14 +618,11 @@ public class RpcClient {
         requestParam.put("payload", payload);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
     
     /**
@@ -810,7 +706,7 @@ public class RpcClient {
      * @param price        发行该token愿意承担的费用
      * @return 交易十六进制编码后的字符串
      */
-    public String createRawTokenPreCreateTx(String name,String symbol,String introduction,String ownerAddr,long total,long price,Integer category) {
+    public String createRawTokenPreCreateTx(String name,String symbol,String introduction,String ownerAddr,long total,long price,Integer category) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_PRE_CREATE_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("name", name);
@@ -822,13 +718,11 @@ public class RpcClient {
         requestParam.put("category", category);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
 
     /**
@@ -839,7 +733,7 @@ public class RpcClient {
      * @param fee:       交易的手续费
      * @return 交易十六进制编码后的字符串
      */
-    public String createRawTokenFinishTx(long fee,String symbol,String ownerAddr) {
+    public String createRawTokenFinishTx(long fee,String symbol,String ownerAddr) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_FINISH_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("fee", fee);
@@ -847,13 +741,11 @@ public class RpcClient {
         requestParam.put("owner", ownerAddr);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
 
     /**
@@ -870,7 +762,7 @@ public class RpcClient {
      * @return 备注：如果result 不为nil,则为构造后的交易16进制字符串编码。解码通过hex decode。
      */
     public String createRawTransaction(String to, long amount, long fee, String note, boolean isToken,
-            boolean isWithdraw, String tokenSymbol, String execName) {
+            boolean isWithdraw, String tokenSymbol, String execName) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("to", to);
@@ -882,15 +774,12 @@ public class RpcClient {
         requestParam.put("tokenSymbol", tokenSymbol);
         requestParam.put("execName", execName);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
 
     /**
@@ -902,7 +791,7 @@ public class RpcClient {
      * @param expire:  超时时间
      * @return hash
      */
-    public String createRawTransaction(String txHex, String payAddr, String Privkey, String expire) {
+    public String createRawTransaction(String txHex, String payAddr, String Privkey, String expire) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("txHex", txHex);
@@ -911,14 +800,10 @@ public class RpcClient {
         requestParam.put("expire", expire);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+       messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
     
     /**
@@ -931,7 +816,7 @@ public class RpcClient {
      * @param index 固定填写2(这里是一个交易组，第1笔none的交易已经用pay address签过名了，此处签index=2的交易)
      * @return txhex
      */
-    public String signRawTx(String addr, String key, String txhex, String expire, int index) {
+    public String signRawTx(String addr, String key, String txhex, String expire, int index) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.SIGN_RAW_TRANSACTION);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addr", addr);
@@ -940,15 +825,12 @@ public class RpcClient {
         requestParam.put("expire", expire);
         requestParam.put("index", index);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
 
     /**
@@ -959,7 +841,7 @@ public class RpcClient {
      * @param tokenSymbol   token符号名称
      * @return  账号余额列表
      */
-    public List<AccountAccResult> getTokenBalance(List<String> addresses, String execer, String tokenSymbol) {
+    public List<AccountAccResult> getTokenBalance(List<String> addresses, String execer, String tokenSymbol) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_TOKEN_BALANCE);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addresses", addresses);
@@ -967,15 +849,12 @@ public class RpcClient {
         requestParam.put("tokenSymbol", tokenSymbol);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONArray resultArray = parseObject.getJSONArray("result");
-            List<AccountAccResult> javaList = resultArray.toJavaList(AccountAccResult.class);
-            return javaList;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONArray resultArray = parseObject.getJSONArray("result");
+        List<AccountAccResult> javaList = resultArray.toJavaList(AccountAccResult.class);
+        return javaList;
     }
 
     /**
@@ -985,7 +864,7 @@ public class RpcClient {
      * @param execer    coins
      * @return  余额列表
      */
-    public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer) {
+    public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer) throws Exception {
         RpcRequest postJsonData = new RpcRequest();
         postJsonData.setMethod(RpcMethod.GET_BALANCE);
         JSONObject requestParam = new JSONObject();
@@ -993,15 +872,12 @@ public class RpcClient {
         requestParam.put("execer", execer);
         postJsonData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postJsonData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONArray resultArray = parseObject.getJSONArray("result");
-            List<AccountAccResult> javaList = resultArray.toJavaList(AccountAccResult.class);
-            return javaList;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONArray resultArray = parseObject.getJSONArray("result");
+        List<AccountAccResult> javaList = resultArray.toJavaList(AccountAccResult.class);
+        return javaList;
     }
 
     /**
@@ -1010,21 +886,18 @@ public class RpcClient {
      * @param addr 导出私钥的地址
      * @return 私钥
      */
-    public String dumpPrivkey(String addr) {
+    public String dumpPrivkey(String addr) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.DUMP_PRIVKEY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("ReqStr", addr);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultObj = parseObject.getJSONObject("result");
-            String resultStr = resultObj.getString("replystr");
-            return resultStr;
-        }
-        return null;
+
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultObj = parseObject.getJSONObject("result");
+        String resultStr = resultObj.getString("replystr");
+        return resultStr;
     }
 
     /**
@@ -1034,22 +907,19 @@ public class RpcClient {
      * @param label   地址label
      * @return 导入结果
      */
-    public String importPrivatekey(String privateKey, String label) {
+    public String importPrivatekey(String privateKey, String label) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.IMPORT_PRIVKEY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("privkey", privateKey);
         requestParam.put("label", label);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultObj = parseObject.getJSONObject("result");
-            String resultStr = resultObj.getString("acc");
-            return resultStr;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultObj = parseObject.getJSONObject("result");
+        String resultStr = resultObj.getString("acc");
+        return resultStr;
     }
 
     /**
@@ -1061,7 +931,7 @@ public class RpcClient {
      * @return 交易列表
      */
     public List<TxResult> getTxByAddr(String addr, Integer flag, Integer count, Integer direction, Long height,
-            Integer index) {
+            Integer index) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_TX_BY_ADDR);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addr", addr);
@@ -1071,17 +941,14 @@ public class RpcClient {
         requestParam.put("height", height);
         requestParam.put("index", index);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultObj = parseObject.getJSONObject("result");
-            JSONArray jsonArray = resultObj.getJSONArray("txInfos");
-            List<TxResult> javaList = jsonArray.toJavaList(TxResult.class);
-            return javaList;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultObj = parseObject.getJSONObject("result");
+        JSONArray jsonArray = resultObj.getJSONArray("txInfos");
+        List<TxResult> javaList = jsonArray.toJavaList(TxResult.class);
+        return javaList;
     }
 
     /**
@@ -1090,7 +957,7 @@ public class RpcClient {
      * @param status 0:预创建 1:创建成功 的token
      * @return  token信息列表
      */
-    public List<TokenResult> queryCreateTokens(Integer status,String execer) {
+    public List<TokenResult> queryCreateTokens(Integer status,String execer) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", execer);
@@ -1100,17 +967,14 @@ public class RpcClient {
         payloadJson.put("queryAll", true);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            JSONArray resultArray = resultJson.getJSONArray("tokens");
-            List<TokenResult> javaList = resultArray.toJavaList(TokenResult.class);
-            return javaList;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray resultArray = resultJson.getJSONArray("tokens");
+        List<TokenResult> javaList = resultArray.toJavaList(TokenResult.class);
+        return javaList;
     }
 
     /**
@@ -1120,7 +984,7 @@ public class RpcClient {
      * @param payloadExecer:   token 或 trade
      * @return TokenBalanceResult
      */
-    public List<TokenBalanceResult> queryAccountBalance(String address, String payloadExecer) {
+    public List<TokenBalanceResult> queryAccountBalance(String address, String payloadExecer) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", "token");
@@ -1130,17 +994,14 @@ public class RpcClient {
         payloadJson.put("execer", payloadExecer);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            JSONArray resultArray = resultJson.getJSONArray("tokenAssets");
-            List<TokenBalanceResult> javaList = resultArray.toJavaList(TokenBalanceResult.class);
-            return javaList;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray resultArray = resultJson.getJSONArray("tokenAssets");
+        List<TokenBalanceResult> javaList = resultArray.toJavaList(TokenBalanceResult.class);
+        return javaList;
     }
 
     /**
@@ -1150,22 +1011,19 @@ public class RpcClient {
      * @param execer  coins
      * @return
      */
-    public List<AccountAccResult> queryBalance(List<String> addressList, String execer) {
+    public List<AccountAccResult> queryBalance(List<String> addressList, String execer) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.GET_BALANCE);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", execer);
         requestParam.put("addresses", addressList);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONArray jsonArray = parseObject.getJSONArray("result");
-            List<AccountAccResult> javaList = jsonArray.toJavaList(AccountAccResult.class);
-            return javaList;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONArray jsonArray = parseObject.getJSONArray("result");
+        List<AccountAccResult> javaList = jsonArray.toJavaList(AccountAccResult.class);
+        return javaList;
     }
 
     public String getUrl() {
@@ -1180,7 +1038,7 @@ public class RpcClient {
      * @param signType 签名类型
      * @return hash
      */
-    public String submitRawTransaction(String unsignTx, String sign, String pubkey, SignType signType) {
+    public String submitRawTransaction(String unsignTx, String sign, String pubkey, SignType signType) throws Exception{
         RpcRequest postData = getPostData(RpcMethod.SEND_RAW_TRANSACTION);
         JSONObject requestParam = new JSONObject();
         requestParam.put("unsignTx", unsignTx);
@@ -1188,15 +1046,12 @@ public class RpcClient {
         requestParam.put("pubkey", pubkey);
         requestParam.put("ty", signType.getType());
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
 
     /**
@@ -1211,7 +1066,7 @@ public class RpcClient {
      * @param tokenSymbol: token标记符，最大长度是16个字符，且必须为大写字符。
      * @return
      */
-    public String sendToAddress(String from, String to, Long amount, String note, boolean isToken, String tokenSymbol) {
+    public String sendToAddress(String from, String to, Long amount, String note, boolean isToken, String tokenSymbol) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.SEND_TO_ADDRESS);
         JSONObject requestParam = new JSONObject();
         requestParam.put("from", from);
@@ -1221,15 +1076,12 @@ public class RpcClient {
         requestParam.put("isToken", isToken);
         requestParam.put("tokenSymbol", tokenSymbol);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            String hash = parseObject.getJSONObject("result").getString("hash");
-            return hash;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String hash = parseObject.getJSONObject("result").getString("hash");
+        return hash;
     }
 
     /**
@@ -1239,7 +1091,7 @@ public class RpcClient {
      * @param signAddr sys_sign_addr 系统签名地址？
      * @return
      */
-    public String processTxGroup(String userAddr, String reqStr, String signAddr) {
+    public String processTxGroup(String userAddr, String reqStr, String signAddr) throws Exception {
         String response = HttpUtil.httpPostBody(getUrl(), reqStr);
         RpcResponse rep = parseResponse(response, reqStr);
         if (rep == null) {
@@ -1268,22 +1120,19 @@ public class RpcClient {
     }
     
 
-    public List<DecodeRawTransaction> decodeRawTransaction(String rawTx) {
+    public List<DecodeRawTransaction> decodeRawTransaction(String rawTx) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.DECODE_RAW_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("txHex", rawTx);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultObj = parseObject.getJSONObject("result");
-            JSONArray jsonArray = resultObj.getJSONArray("txs");
-            List<DecodeRawTransaction> javaList = jsonArray.toJavaList(DecodeRawTransaction.class);
-            return javaList;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultObj = parseObject.getJSONObject("result");
+        JSONArray jsonArray = resultObj.getJSONArray("txs");
+        List<DecodeRawTransaction> javaList = jsonArray.toJavaList(DecodeRawTransaction.class);
+        return javaList;
     }
 
 
@@ -1294,7 +1143,7 @@ public class RpcClient {
      * @param payAddr 代扣账户的地址
      * @return 包含原有划转交易与代扣交易的交易组16进制字符串
      */
-    public final String createNoBalanceTx(String txHex, String payAddr) {
+    public final String createNoBalanceTx(String txHex, String payAddr) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CREATE_NO_BALANCE_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("txHex", txHex);
@@ -1342,20 +1191,18 @@ public class RpcClient {
      * @return
      *
      */
-    public String CreateRawTokenRevokeTx(String symbol,String owner) {
+    public String CreateRawTokenRevokeTx(String symbol,String owner) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TOKEN_REVOKE_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("symbol", symbol);
         requestParam.put("owner", owner);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) return null;
-            String result = parseObject.getString("result");
-            return result;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String result = parseObject.getString("result");
+        return result;
     }
     
     
@@ -1365,7 +1212,7 @@ public class RpcClient {
      * @param hash:   hash
      * @return TokenBalanceResult
      */
-    public JSONObject queryStorage(String hash) {
+    public JSONObject queryStorage(String hash) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", "storage");
@@ -1374,15 +1221,12 @@ public class RpcClient {
         payloadJson.put("txHash", hash);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            return resultJson;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        return resultJson;
     }
     
     /**
@@ -1391,7 +1235,7 @@ public class RpcClient {
      * @param accountId:   accountId
      * @return TokenBalanceResult
      */
-    public JSONObject queryAccountById(String accountId) {
+    public JSONObject queryAccountById(String accountId) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", "accountmanager");
@@ -1400,15 +1244,12 @@ public class RpcClient {
         payloadJson.put("accountID", accountId);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            return resultJson;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        return resultJson;
     }
     
     /**
@@ -1417,7 +1258,7 @@ public class RpcClient {
      * @param status:   status
      * @return TokenBalanceResult
      */
-    public JSONObject queryAccountByStatus(String status) {
+    public JSONObject queryAccountByStatus(String status) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", "accountmanager");
@@ -1426,15 +1267,12 @@ public class RpcClient {
         payloadJson.put("status", status);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
+
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject))
-                return null;
-            JSONObject resultJson = parseObject.getJSONObject("result");
-            return resultJson;
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        return resultJson;
     }
 
     /**
@@ -1451,7 +1289,7 @@ public class RpcClient {
      * @return true/false
      */
     public boolean sendKeyFragment(String pubOwner, String pubRecipient, String pubProofR, String pubProofU, int expire,
-                                   String dhProof, KeyFrag frag) {
+                                   String dhProof, KeyFrag frag) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.PRE_SEND_KEY_FRAGMENT);
 
         JSONObject requestParam = new JSONObject();
@@ -1467,15 +1305,9 @@ public class RpcClient {
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return false;
-            }
-
-            return parseObject.getJSONObject("result").getBoolean("result");
-        }
-        return false;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        return parseObject.getJSONObject("result").getBoolean("result");
     }
 
     /**
@@ -1486,7 +1318,7 @@ public class RpcClient {
      * @param pubRecipient  数据接收者公钥
      * @return 重加密片段
      */
-    public ReKeyFrag reencrypt(String pubOwner, String pubRecipient) {
+    public ReKeyFrag reencrypt(String pubOwner, String pubRecipient) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.PRE_RE_ENCRYPT);
 
         JSONObject requestParam = new JSONObject();
@@ -1495,19 +1327,10 @@ public class RpcClient {
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-
-            String rekeyObject = parseObject.getString("result");
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-            return JSONObject.parseObject(rekeyObject, ReKeyFrag.class);
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String rekeyObject = parseObject.getString("result");
+        return JSONObject.parseObject(rekeyObject, ReKeyFrag.class);
     }
 
     /**
@@ -1520,7 +1343,7 @@ public class RpcClient {
      * @param adminKey   管理员私钥
      * @return 注册结果
      */
-    public boolean certUserRegister(String userName, String identity, String userPub, String adminKey) {
+    public boolean certUserRegister(String userName, String identity, String userPub, String adminKey) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_USER_REGISTER);
 
         JSONObject requestParam = new JSONObject();
@@ -1544,15 +1367,10 @@ public class RpcClient {
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return false;
-            }
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
 
-            return parseObject.getJSONObject("result").getBoolean("result");
-        }
-        return false;
+        return parseObject.getJSONObject("result").getBoolean("result");
     }
 
     /**
@@ -1563,7 +1381,7 @@ public class RpcClient {
      * @param adminKey   管理员私钥
      * @return 注销结果
      */
-    public boolean certUserRevoke(String identity, String adminKey) {
+    public boolean certUserRevoke(String identity, String adminKey) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_USER_REVOKE);
 
         JSONObject requestParam = new JSONObject();
@@ -1573,25 +1391,15 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(adminKey));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return false;
-            }
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
 
-            return parseObject.getJSONObject("result").getBoolean("result");
-        }
-        return false;
+        return parseObject.getJSONObject("result").getBoolean("result");
     }
 
     /**
@@ -1602,7 +1410,7 @@ public class RpcClient {
      * @param key        用户私钥
      * @return 注销结果
      */
-    public CertObject.CertEnroll certEnroll(String identity, String key) {
+    public CertObject.CertEnroll certEnroll(String identity, String key) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_ENROLL);
 
         JSONObject requestParam = new JSONObject();
@@ -1612,30 +1420,15 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-
-            String certObject = parseObject.getString("result");
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-
-            return JSONObject.parseObject(certObject, CertObject.CertEnroll.class);
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String certObject = parseObject.getString("result");
+        return JSONObject.parseObject(certObject, CertObject.CertEnroll.class);
     }
 
     /**
@@ -1646,7 +1439,7 @@ public class RpcClient {
      * @param adminKey   管理员私钥
      * @return 注销结果
      */
-    public CertObject.CertEnroll certReEnroll(String identity, String adminKey) {
+    public CertObject.CertEnroll certReEnroll(String identity, String adminKey) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_REENROLL);
 
         JSONObject requestParam = new JSONObject();
@@ -1656,30 +1449,15 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(adminKey));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-
-            String certObject = parseObject.getString("result");
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-
-            return JSONObject.parseObject(certObject, CertObject.CertEnroll.class);
-        }
-        return null;
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String certObject = parseObject.getString("result");
+        return JSONObject.parseObject(certObject, CertObject.CertEnroll.class);
     }
 
     /**
@@ -1690,7 +1468,7 @@ public class RpcClient {
      * @param identity   用户id
      * @return 注销结果
      */
-    public boolean certRevoke(String serial, String identity, String key) {
+    public boolean certRevoke(String serial, String identity, String key) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_REVOKE);
 
         JSONObject requestParam = new JSONObject();
@@ -1702,25 +1480,15 @@ public class RpcClient {
         reqBuilder.setSerial(serial);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return false;
-            }
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
 
-            return parseObject.getJSONObject("result").getBoolean("result");
-        }
-        return false;
+        return parseObject.getJSONObject("result").getBoolean("result");
     }
 
     /**
@@ -1730,7 +1498,7 @@ public class RpcClient {
      * @param identity   用户id
      * @return crl
      */
-    public byte[] certGetCRL(String identity, String key) {
+    public byte[] certGetCRL(String identity, String key) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_CRL);
 
         JSONObject requestParam = new JSONObject();
@@ -1740,25 +1508,15 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return null;
-            }
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
 
-            return parseObject.getJSONObject("result").getBytes("crl");
-        }
-        return null;
+        return parseObject.getJSONObject("result").getBytes("crl");
     }
 
     /**
@@ -1768,7 +1526,7 @@ public class RpcClient {
      * @param identity   用户id
      * @return 用户信息
      */
-    public CertObject.UserInfo certGetUserInfo(String identity, String key) {
+    public CertObject.UserInfo certGetUserInfo(String identity, String key) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_USERINFO);
 
         JSONObject requestParam = new JSONObject();
@@ -1778,29 +1536,16 @@ public class RpcClient {
         reqBuilder.setIdentity(identity);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return null;
-            }
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
 
-            String rekeyObject = parseObject.getString("result");
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-            return JSONObject.parseObject(rekeyObject, CertObject.UserInfo.class);
-        }
-        return null;
+        String rekeyObject = parseObject.getString("result");
+        return JSONObject.parseObject(rekeyObject, CertObject.UserInfo.class);
     }
 
     /**
@@ -1810,7 +1555,7 @@ public class RpcClient {
      * @param serial   证书序列号
      * @return 证书信息
      */
-    public CertObject.CertInfo certGetCertInfo(String serial, String key) {
+    public CertObject.CertInfo certGetCertInfo(String serial, String key) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_CERTINFO);
 
         JSONObject requestParam = new JSONObject();
@@ -1820,29 +1565,16 @@ public class RpcClient {
         reqBuilder.setSn(serial);
         byte[] reqBytes = reqBuilder.build().toByteArray();
         SM2KeyPair sm2Key = SM2Util.fromPrivateKey(HexUtil.fromHexString(key));
-        try {
-            byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
-            requestParam.put("sign", sig);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        byte[] sig = SM2Util.sign(reqBytes, null, sm2Key);
+        requestParam.put("sign", sig);
         postData.addJsonParams(requestParam);
 
         String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
-        if (StringUtil.isNotEmpty(requestResult)) {
-            JSONObject parseObject = JSONObject.parseObject(requestResult);
-            if (messageValidate(parseObject)) {
-                return null;
-            }
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
 
-            String rekeyObject = parseObject.getString("result");
-            if (messageValidate(parseObject)) {
-                return null;
-            }
-            return JSONObject.parseObject(rekeyObject, CertObject.CertInfo.class);
-        }
-        return null;
+        String rekeyObject = parseObject.getString("result");
+        return JSONObject.parseObject(rekeyObject, CertObject.CertInfo.class);
     }
 
 }
