@@ -279,6 +279,23 @@ public class RpcClient {
         }
         return blockResultList;
     }
+    
+    /**
+     * 取平均出块时间
+     * @return
+     */
+    public int getBlockAverageTime() throws Exception {
+    	
+    	// 创世块的时间从配置文件中读取， 所以过滤掉
+    	List<BlockResult> blockResultList = getHeaders(1l, 1l, false);
+    	BlockResult resultFirst = blockResultList.get(0);
+    	
+    	BlockResult resultLast = getLastHeader();
+    	
+    	long averageSecond = (resultLast.getBlockTime().getTime() - resultFirst.getBlockTime().getTime())/((resultLast.getHeight() -1) * 1000);
+    	
+    	return (int)averageSecond ;
+    }
 
     /**
      * @description 获取某高度区块的 hash 值 GetBlockHash 该接口用于获取指定高度区间的区块头部信息
@@ -889,14 +906,14 @@ public class RpcClient {
     public String dumpPrivkey(String addr) throws Exception {
         RpcRequest postData = getPostData(RpcMethod.DUMP_PRIVKEY);
         JSONObject requestParam = new JSONObject();
-        requestParam.put("ReqStr", addr);
+        requestParam.put("data", addr);
         postData.addJsonParams(requestParam);
-        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
 
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
         JSONObject parseObject = JSONObject.parseObject(requestResult);
         messageValidate(parseObject);
         JSONObject resultObj = parseObject.getJSONObject("result");
-        String resultStr = resultObj.getString("replystr");
+        String resultStr = resultObj.getString("data");
         return resultStr;
     }
 
@@ -1002,6 +1019,85 @@ public class RpcClient {
         JSONArray resultArray = resultJson.getJSONArray("tokenAssets");
         List<TokenBalanceResult> javaList = resultArray.toJavaList(TokenBalanceResult.class);
         return javaList;
+    }
+    
+    /**
+     * @description 查询合约消耗的GAS
+     * 
+     * @param address:  查询的地址
+     * @param execer:   执行器名称
+     * @return TokenBalanceResult
+     */
+    public String queryEVMGas(String execer, String code, String abi, String address) throws Exception {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", execer);
+        requestParam.put("funcName", "EstimateGas");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("to", address);
+        payloadJson.put("code", code);
+        payloadJson.put("abi", abi);
+        payloadJson.put("caller", "");
+        payloadJson.put("amount", 0);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        String gas = parseObject.getJSONObject("result").getString("gas");
+        return gas;
+    }
+    
+    /**
+     * @description 查询合约绑定的ABI信息
+     * 
+     * @param address:  查询的地址
+     * @param execer:   执行器名称
+     * @return TokenBalanceResult
+     */
+    public JSONArray queryEVMABIInfo(String address, String execer) throws Exception {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", execer);
+        requestParam.put("funcName", "QueryABI");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("address", address);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray resultArray = resultJson.getJSONArray("abi");
+        return resultArray;
+    }
+    
+    /**
+     * @description 查询合约ABI结果
+     * 
+     * @param address:  查询的地址
+     * @param execer:   执行器名称
+     * @return TokenBalanceResult
+     */
+    public JSONArray queryEVMABIResult(String address, String execer, String abiFunc) throws Exception {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", execer);
+        requestParam.put("funcName", "Query");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("address", address);
+        payloadJson.put("input", abiFunc);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+
+        String requestResult = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        JSONObject parseObject = JSONObject.parseObject(requestResult);
+        messageValidate(parseObject);
+        JSONObject resultJson = parseObject.getJSONObject("result");
+        JSONArray resultArray = resultJson.getJSONArray("jsonData");
+        return resultArray;
     }
 
     /**

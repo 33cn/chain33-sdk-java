@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import org.junit.Test;
 
-import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.AccountResult;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
@@ -19,9 +19,12 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-    String ip = "127.0.0.1";
-    RpcClient client = new RpcClient(ip, 8801);
-	
+	// 区块链节点IP
+	String ip = "区块链节点IP";
+	// 平行链服务端口
+	int port = 8801;
+    RpcClient client = new RpcClient(ip, port);
+
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
     String withHoldAddress = "代扣地址";
@@ -130,7 +133,6 @@ public class RpcClientTest {
         for (AccountResult accountResult : accountList) {
             System.out.println(accountResult);
         }
-
     }
 
     /**
@@ -176,6 +178,20 @@ public class RpcClientTest {
         System.out.println(accountResult);
 
     }
+    
+    
+    /**
+     * 
+     * @description 导出私钥
+     *
+     */
+    @Test
+    public void dumpPrivKey() throws Exception {
+        String accountResult;
+        accountResult = client.dumpPrivkey("节点上已经import的区块链地址");
+        System.out.println(accountResult);
+
+    }
 
     /**
      * @description 查询交易hash详情
@@ -196,6 +212,15 @@ public class RpcClientTest {
         System.out.println(content);
 
     }
+    
+    /**
+     * 查询平均出块时间
+     */
+    @Test
+    public void getBlockAverageTime() throws Exception {
+    	int blockTime =  client.getBlockAverageTime();
+    	System.out.println("平均出块时间为： " + blockTime + " 秒");
+    }
 
 
     /**
@@ -210,7 +235,6 @@ public class RpcClientTest {
         for (TokenBalanceResult tokenBalanceResult : queryAccountBalance) {
             System.out.println(tokenBalanceResult);
         }
-
     }
 
     /**
@@ -389,8 +413,7 @@ public class RpcClientTest {
         String submitTransaction = client.submitTransaction(hexString);
         System.out.println("submitTransaction:" + submitTransaction);
     }
-    
-    
+
     /**
      * @description 本地将执行器转为地址
      */
