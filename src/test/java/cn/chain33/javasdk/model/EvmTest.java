@@ -10,7 +10,7 @@ import com.alibaba.fastjson.JSONArray;
 public class EvmTest {
 
 	// 区块链IP
-	String ip = "119.45.1.41";
+	String ip = "127.0.0.1";
 	// 区块链服务端口
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);

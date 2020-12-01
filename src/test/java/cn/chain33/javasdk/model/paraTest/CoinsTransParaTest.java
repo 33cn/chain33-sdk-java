@@ -35,7 +35,7 @@ public class CoinsTransParaTest {
      *
      */
     @Test
-    public void transferCoins() throws InterruptedException {
+    public void transferCoins() throws Exception {
     	// 转账说明
         String note = "转账说明";
         // 主代币则为"",其他为token名
@@ -85,7 +85,7 @@ public class CoinsTransParaTest {
      *
      */
     @Test
-    public void getTokenBalace() {
+    public void getTokenBalace() throws Exception {
         // 执行器名称
         String execer = paraName + "coins";
         

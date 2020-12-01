@@ -37,7 +37,7 @@ public class StorageParaTest {
      * @throws Exception 
      */
 	@Test
-	public void contentStoreNobalance() throws InterruptedException {
+	public void contentStoreNobalance() throws Exception {
 	    // 存证智能合约的名称，代扣情况下，要带上平行链前缀
 	    String execer = "user.p.evm.storage";
 	    // 实际交易签名用的私钥
@@ -74,7 +74,7 @@ public class StorageParaTest {
 	 * @throws InterruptedException 
 	 */
 	@Test
-	public void hashStoreNobalance() throws InterruptedException {
+	public void hashStoreNobalance() throws Exception {
 		// 存证智能合约的名称
 	    String execer = "user.p.evm.storage";
 		// 签名用的私钥
@@ -114,7 +114,7 @@ public class StorageParaTest {
 	 * @throws InterruptedException 
      */
 	@Test
-	public void hashAndLinkStoreNobalance() throws InterruptedException {
+	public void hashAndLinkStoreNobalance() throws Exception {
 		// 存证智能合约的名称
 		String execer = "user.p.evm.storage";
 		String contranctAddress = client.convertExectoAddr(execer);
@@ -206,7 +206,7 @@ public class StorageParaTest {
 	 * @throws UnsupportedEncodingException 
 	 */
 	@Test
-	public void queryStorage() throws UnsupportedEncodingException {
+	public void queryStorage() throws Exception {
 		// contentStore
 		JSONObject resultJson = client.queryStorage("0xcc4b820c86d00019e2f0c490bb6a9bcd46812321fe6d38c0b7214421d12fed29");
 		
