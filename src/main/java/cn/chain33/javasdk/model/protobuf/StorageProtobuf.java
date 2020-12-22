@@ -71,32 +71,33 @@ public final class StorageProtobuf {
     cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder();
 
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     boolean hasEncryptShareStorage();
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder();
 
     /**
-     * <code>int32 ty = 6;</code>
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    boolean hasEncryptAdd();
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder();
+
+    /**
+     * <code>int32 ty = 7;</code>
      */
     int getTy();
 
@@ -221,7 +222,21 @@ public final class StorageProtobuf {
               valueCase_ = 5;
               break;
             }
-            case 48: {
+            case 50: {
+              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder subBuilder = null;
+              if (valueCase_ == 6) {
+                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_).toBuilder();
+              }
+              value_ =
+                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+                value_ = subBuilder.buildPartial();
+              }
+              valueCase_ = 6;
+              break;
+            }
+            case 56: {
 
               ty_ = input.readInt32();
               break;
@@ -267,6 +282,7 @@ public final class StorageProtobuf {
       LINKSTORAGE(3),
       ENCRYPTSTORAGE(4),
       ENCRYPTSHARESTORAGE(5),
+      ENCRYPTADD(6),
       VALUE_NOT_SET(0);
       private final int value;
       private ValueCase(int value) {
@@ -287,6 +303,7 @@ public final class StorageProtobuf {
           case 3: return LINKSTORAGE;
           case 4: return ENCRYPTSTORAGE;
           case 5: return ENCRYPTSHARESTORAGE;
+          case 6: return ENCRYPTADD;
           case 0: return VALUE_NOT_SET;
           default: return null;
         }
@@ -408,20 +425,12 @@ public final class StorageProtobuf {
 
     public static final int ENCRYPTSHARESTORAGE_FIELD_NUMBER = 5;
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     public boolean hasEncryptShareStorage() {
       return valueCase_ == 5;
     }
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
@@ -431,10 +440,6 @@ public final class StorageProtobuf {
       return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
     }
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
@@ -444,10 +449,36 @@ public final class StorageProtobuf {
       return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
     }
 
-    public static final int TY_FIELD_NUMBER = 6;
+    public static final int ENCRYPTADD_FIELD_NUMBER = 6;
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    public boolean hasEncryptAdd() {
+      return valueCase_ == 6;
+    }
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+      if (valueCase_ == 6) {
+         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+      }
+      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+    }
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+      if (valueCase_ == 6) {
+         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+      }
+      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+    }
+
+    public static final int TY_FIELD_NUMBER = 7;
     private int ty_;
     /**
-     * <code>int32 ty = 6;</code>
+     * <code>int32 ty = 7;</code>
      */
     public int getTy() {
       return ty_;
@@ -482,8 +513,11 @@ public final class StorageProtobuf {
       if (valueCase_ == 5) {
         output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
       }
+      if (valueCase_ == 6) {
+        output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+      }
       if (ty_ != 0) {
-        output.writeInt32(6, ty_);
+        output.writeInt32(7, ty_);
       }
       unknownFields.writeTo(output);
     }
@@ -514,9 +548,13 @@ public final class StorageProtobuf {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
       }
+      if (valueCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+      }
       if (ty_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, ty_);
+          .computeInt32Size(7, ty_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -557,6 +595,10 @@ public final class StorageProtobuf {
           if (!getEncryptShareStorage()
               .equals(other.getEncryptShareStorage())) return false;
           break;
+        case 6:
+          if (!getEncryptAdd()
+              .equals(other.getEncryptAdd())) return false;
+          break;
         case 0:
         default:
       }
@@ -593,6 +635,10 @@ public final class StorageProtobuf {
         case 5:
           hash = (37 * hash) + ENCRYPTSHARESTORAGE_FIELD_NUMBER;
           hash = (53 * hash) + getEncryptShareStorage().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
+          hash = (53 * hash) + getEncryptAdd().hashCode();
           break;
         case 0:
         default:
@@ -799,6 +845,13 @@ public final class StorageProtobuf {
             result.value_ = encryptShareStorageBuilder_.build();
           }
         }
+        if (valueCase_ == 6) {
+          if (encryptAddBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = encryptAddBuilder_.build();
+          }
+        }
         result.ty_ = ty_;
         result.valueCase_ = valueCase_;
         onBuilt();
@@ -871,6 +924,10 @@ public final class StorageProtobuf {
           }
           case ENCRYPTSHARESTORAGE: {
             mergeEncryptShareStorage(other.getEncryptShareStorage());
+            break;
+          }
+          case ENCRYPTADD: {
+            mergeEncryptAdd(other.getEncryptAdd());
             break;
           }
           case VALUE_NOT_SET: {
@@ -1468,20 +1525,12 @@ public final class StorageProtobuf {
       private com.google.protobuf.SingleFieldBuilderV3<
           cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> encryptShareStorageBuilder_;
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public boolean hasEncryptShareStorage() {
         return valueCase_ == 5;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
@@ -1498,10 +1547,6 @@ public final class StorageProtobuf {
         }
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder setEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
@@ -1518,10 +1563,6 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder setEncryptShareStorage(
@@ -1536,10 +1577,6 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder mergeEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
@@ -1562,10 +1599,6 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder clearEncryptShareStorage() {
@@ -1585,20 +1618,12 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder getEncryptShareStorageBuilder() {
         return getEncryptShareStorageFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
@@ -1612,10 +1637,6 @@ public final class StorageProtobuf {
         }
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1637,15 +1658,151 @@ public final class StorageProtobuf {
         return encryptShareStorageBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> encryptAddBuilder_;
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public boolean hasEncryptAdd() {
+        return valueCase_ == 6;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+        if (encryptAddBuilder_ == null) {
+          if (valueCase_ == 6) {
+            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+          }
+          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        } else {
+          if (valueCase_ == 6) {
+            return encryptAddBuilder_.getMessage();
+          }
+          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder setEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+        if (encryptAddBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          encryptAddBuilder_.setMessage(value);
+        }
+        valueCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder setEncryptAdd(
+          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder builderForValue) {
+        if (encryptAddBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          encryptAddBuilder_.setMessage(builderForValue.build());
+        }
+        valueCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder mergeEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+        if (encryptAddBuilder_ == null) {
+          if (valueCase_ == 6 &&
+              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance()) {
+            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          if (valueCase_ == 6) {
+            encryptAddBuilder_.mergeFrom(value);
+          }
+          encryptAddBuilder_.setMessage(value);
+        }
+        valueCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder clearEncryptAdd() {
+        if (encryptAddBuilder_ == null) {
+          if (valueCase_ == 6) {
+            valueCase_ = 0;
+            value_ = null;
+            onChanged();
+          }
+        } else {
+          if (valueCase_ == 6) {
+            valueCase_ = 0;
+            value_ = null;
+          }
+          encryptAddBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder getEncryptAddBuilder() {
+        return getEncryptAddFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+        if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
+          return encryptAddBuilder_.getMessageOrBuilder();
+        } else {
+          if (valueCase_ == 6) {
+            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+          }
+          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> 
+          getEncryptAddFieldBuilder() {
+        if (encryptAddBuilder_ == null) {
+          if (!(valueCase_ == 6)) {
+            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+          }
+          encryptAddBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder>(
+                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_,
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        valueCase_ = 6;
+        onChanged();;
+        return encryptAddBuilder_;
+      }
+
       private int ty_ ;
       /**
-       * <code>int32 ty = 6;</code>
+       * <code>int32 ty = 7;</code>
        */
       public int getTy() {
         return ty_;
       }
       /**
-       * <code>int32 ty = 6;</code>
+       * <code>int32 ty = 7;</code>
        */
       public Builder setTy(int value) {
         
@@ -1654,7 +1811,7 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <code>int32 ty = 6;</code>
+       * <code>int32 ty = 7;</code>
        */
       public Builder clearTy() {
         
@@ -1772,32 +1929,33 @@ public final class StorageProtobuf {
     cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder();
 
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     boolean hasEncryptShareStorage();
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder();
 
     /**
-     * <code>int32 ty = 6;</code>
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    boolean hasEncryptAdd();
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder();
+
+    /**
+     * <code>int32 ty = 7;</code>
      */
     int getTy();
 
@@ -1918,7 +2076,21 @@ public final class StorageProtobuf {
               valueCase_ = 5;
               break;
             }
-            case 48: {
+            case 50: {
+              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder subBuilder = null;
+              if (valueCase_ == 6) {
+                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_).toBuilder();
+              }
+              value_ =
+                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+                value_ = subBuilder.buildPartial();
+              }
+              valueCase_ = 6;
+              break;
+            }
+            case 56: {
 
               ty_ = input.readInt32();
               break;
@@ -1964,6 +2136,7 @@ public final class StorageProtobuf {
       LINKSTORAGE(3),
       ENCRYPTSTORAGE(4),
       ENCRYPTSHARESTORAGE(5),
+      ENCRYPTADD(6),
       VALUE_NOT_SET(0);
       private final int value;
       private ValueCase(int value) {
@@ -1984,6 +2157,7 @@ public final class StorageProtobuf {
           case 3: return LINKSTORAGE;
           case 4: return ENCRYPTSTORAGE;
           case 5: return ENCRYPTSHARESTORAGE;
+          case 6: return ENCRYPTADD;
           case 0: return VALUE_NOT_SET;
           default: return null;
         }
@@ -2105,20 +2279,12 @@ public final class StorageProtobuf {
 
     public static final int ENCRYPTSHARESTORAGE_FIELD_NUMBER = 5;
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     public boolean hasEncryptShareStorage() {
       return valueCase_ == 5;
     }
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
@@ -2128,10 +2294,6 @@ public final class StorageProtobuf {
       return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
     }
     /**
-     * <pre>
-     * EncryptNotaryAdd          encryptAdd          = 6;
-     * </pre>
-     *
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
@@ -2141,10 +2303,36 @@ public final class StorageProtobuf {
       return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
     }
 
-    public static final int TY_FIELD_NUMBER = 6;
+    public static final int ENCRYPTADD_FIELD_NUMBER = 6;
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    public boolean hasEncryptAdd() {
+      return valueCase_ == 6;
+    }
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+      if (valueCase_ == 6) {
+         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+      }
+      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+    }
+    /**
+     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+     */
+    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+      if (valueCase_ == 6) {
+         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+      }
+      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+    }
+
+    public static final int TY_FIELD_NUMBER = 7;
     private int ty_;
     /**
-     * <code>int32 ty = 6;</code>
+     * <code>int32 ty = 7;</code>
      */
     public int getTy() {
       return ty_;
@@ -2179,8 +2367,11 @@ public final class StorageProtobuf {
       if (valueCase_ == 5) {
         output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
       }
+      if (valueCase_ == 6) {
+        output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+      }
       if (ty_ != 0) {
-        output.writeInt32(6, ty_);
+        output.writeInt32(7, ty_);
       }
       unknownFields.writeTo(output);
     }
@@ -2211,9 +2402,13 @@ public final class StorageProtobuf {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
       }
+      if (valueCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+      }
       if (ty_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, ty_);
+          .computeInt32Size(7, ty_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2254,6 +2449,10 @@ public final class StorageProtobuf {
           if (!getEncryptShareStorage()
               .equals(other.getEncryptShareStorage())) return false;
           break;
+        case 6:
+          if (!getEncryptAdd()
+              .equals(other.getEncryptAdd())) return false;
+          break;
         case 0:
         default:
       }
@@ -2290,6 +2489,10 @@ public final class StorageProtobuf {
         case 5:
           hash = (37 * hash) + ENCRYPTSHARESTORAGE_FIELD_NUMBER;
           hash = (53 * hash) + getEncryptShareStorage().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
+          hash = (53 * hash) + getEncryptAdd().hashCode();
           break;
         case 0:
         default:
@@ -2492,6 +2695,13 @@ public final class StorageProtobuf {
             result.value_ = encryptShareStorageBuilder_.build();
           }
         }
+        if (valueCase_ == 6) {
+          if (encryptAddBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = encryptAddBuilder_.build();
+          }
+        }
         result.ty_ = ty_;
         result.valueCase_ = valueCase_;
         onBuilt();
@@ -2564,6 +2774,10 @@ public final class StorageProtobuf {
           }
           case ENCRYPTSHARESTORAGE: {
             mergeEncryptShareStorage(other.getEncryptShareStorage());
+            break;
+          }
+          case ENCRYPTADD: {
+            mergeEncryptAdd(other.getEncryptAdd());
             break;
           }
           case VALUE_NOT_SET: {
@@ -3161,20 +3375,12 @@ public final class StorageProtobuf {
       private com.google.protobuf.SingleFieldBuilderV3<
           cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> encryptShareStorageBuilder_;
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public boolean hasEncryptShareStorage() {
         return valueCase_ == 5;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
@@ -3191,10 +3397,6 @@ public final class StorageProtobuf {
         }
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder setEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
@@ -3211,10 +3413,6 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder setEncryptShareStorage(
@@ -3229,10 +3427,6 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder mergeEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
@@ -3255,10 +3449,6 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public Builder clearEncryptShareStorage() {
@@ -3278,20 +3468,12 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder getEncryptShareStorageBuilder() {
         return getEncryptShareStorageFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
@@ -3305,10 +3487,6 @@ public final class StorageProtobuf {
         }
       }
       /**
-       * <pre>
-       * EncryptNotaryAdd          encryptAdd          = 6;
-       * </pre>
-       *
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3330,15 +3508,151 @@ public final class StorageProtobuf {
         return encryptShareStorageBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> encryptAddBuilder_;
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public boolean hasEncryptAdd() {
+        return valueCase_ == 6;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+        if (encryptAddBuilder_ == null) {
+          if (valueCase_ == 6) {
+            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+          }
+          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        } else {
+          if (valueCase_ == 6) {
+            return encryptAddBuilder_.getMessage();
+          }
+          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder setEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+        if (encryptAddBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          encryptAddBuilder_.setMessage(value);
+        }
+        valueCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder setEncryptAdd(
+          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder builderForValue) {
+        if (encryptAddBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          encryptAddBuilder_.setMessage(builderForValue.build());
+        }
+        valueCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder mergeEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+        if (encryptAddBuilder_ == null) {
+          if (valueCase_ == 6 &&
+              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance()) {
+            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          if (valueCase_ == 6) {
+            encryptAddBuilder_.mergeFrom(value);
+          }
+          encryptAddBuilder_.setMessage(value);
+        }
+        valueCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public Builder clearEncryptAdd() {
+        if (encryptAddBuilder_ == null) {
+          if (valueCase_ == 6) {
+            valueCase_ = 0;
+            value_ = null;
+            onChanged();
+          }
+        } else {
+          if (valueCase_ == 6) {
+            valueCase_ = 0;
+            value_ = null;
+          }
+          encryptAddBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder getEncryptAddBuilder() {
+        return getEncryptAddFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+        if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
+          return encryptAddBuilder_.getMessageOrBuilder();
+        } else {
+          if (valueCase_ == 6) {
+            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+          }
+          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> 
+          getEncryptAddFieldBuilder() {
+        if (encryptAddBuilder_ == null) {
+          if (!(valueCase_ == 6)) {
+            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+          }
+          encryptAddBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder>(
+                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_,
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        valueCase_ = 6;
+        onChanged();;
+        return encryptAddBuilder_;
+      }
+
       private int ty_ ;
       /**
-       * <code>int32 ty = 6;</code>
+       * <code>int32 ty = 7;</code>
        */
       public int getTy() {
         return ty_;
       }
       /**
-       * <code>int32 ty = 6;</code>
+       * <code>int32 ty = 7;</code>
        */
       public Builder setTy(int value) {
         
@@ -3347,7 +3661,7 @@ public final class StorageProtobuf {
         return this;
       }
       /**
-       * <code>int32 ty = 6;</code>
+       * <code>int32 ty = 7;</code>
        */
       public Builder clearTy() {
         
@@ -11351,39 +11665,41 @@ public final class StorageProtobuf {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rStorage.proto\"\231\002\n\007Storage\0223\n\016contentSt" +
+      "\n\rStorage.proto\"\302\002\n\007Storage\0223\n\016contentSt" +
       "orage\030\001 \001(\0132\031.ContentOnlyNotaryStorageH\000" +
       "\022-\n\013hashStorage\030\002 \001(\0132\026.HashOnlyNotarySt" +
       "orageH\000\022)\n\013linkStorage\030\003 \001(\0132\022.LinkNotar" +
       "yStorageH\000\022/\n\016encryptStorage\030\004 \001(\0132\025.Enc" +
       "ryptNotaryStorageH\000\0229\n\023encryptShareStora" +
-      "ge\030\005 \001(\0132\032.EncryptShareNotaryStorageH\000\022\n" +
-      "\n\002ty\030\006 \001(\005B\007\n\005value\"\237\002\n\rStorageAction\0223\n" +
-      "\016contentStorage\030\001 \001(\0132\031.ContentOnlyNotar" +
-      "yStorageH\000\022-\n\013hashStorage\030\002 \001(\0132\026.HashOn" +
-      "lyNotaryStorageH\000\022)\n\013linkStorage\030\003 \001(\0132\022" +
-      ".LinkNotaryStorageH\000\022/\n\016encryptStorage\030\004" +
-      " \001(\0132\025.EncryptNotaryStorageH\000\0229\n\023encrypt" +
-      "ShareStorage\030\005 \001(\0132\032.EncryptShareNotaryS" +
-      "torageH\000\022\n\n\002ty\030\006 \001(\005B\007\n\005value\"S\n\030Content" +
-      "OnlyNotaryStorage\022\017\n\007content\030\001 \001(\014\022\013\n\003ke" +
-      "y\030\002 \001(\t\022\n\n\002op\030\003 \001(\005\022\r\n\005value\030\004 \001(\t\"A\n\025Ha" +
-      "shOnlyNotaryStorage\022\014\n\004hash\030\001 \001(\014\022\013\n\003key" +
-      "\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"K\n\021LinkNotaryStora" +
-      "ge\022\014\n\004link\030\001 \001(\014\022\014\n\004hash\030\002 \001(\014\022\013\n\003key\030\003 " +
-      "\001(\t\022\r\n\005value\030\004 \001(\t\"n\n\024EncryptNotaryStora" +
-      "ge\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptConten" +
-      "t\030\002 \001(\014\022\r\n\005nonce\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n\005v" +
-      "alue\030\005 \001(\t\"t\n\031EncryptShareNotaryStorage\022" +
-      "\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptContent\030\002" +
-      " \001(\014\022\016\n\006pubKey\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n\005val" +
-      "ue\030\005 \001(\t\"3\n\020EncryptNotaryAdd\022\013\n\003key\030\001 \001(" +
-      "\t\022\022\n\nencryptAdd\030\002 \001(\014\"\036\n\014QueryStorage\022\016\n" +
-      "\006txHash\030\001 \001(\t\"$\n\021BatchQueryStorage\022\017\n\007tx" +
-      "Hashs\030\001 \003(\t\"/\n\021BatchReplyStorage\022\032\n\010stor" +
-      "ages\030\001 \003(\0132\010.Storage\"\020\n\016ReceiptStorageB4" +
-      "\n!cn.chain33.javasdk.model.protobufB\017Sto" +
-      "rageProtobufb\006proto3"
+      "ge\030\005 \001(\0132\032.EncryptShareNotaryStorageH\000\022\'" +
+      "\n\nencryptAdd\030\006 \001(\0132\021.EncryptNotaryAddH\000\022" +
+      "\n\n\002ty\030\007 \001(\005B\007\n\005value\"\310\002\n\rStorageAction\0223" +
+      "\n\016contentStorage\030\001 \001(\0132\031.ContentOnlyNota" +
+      "ryStorageH\000\022-\n\013hashStorage\030\002 \001(\0132\026.HashO" +
+      "nlyNotaryStorageH\000\022)\n\013linkStorage\030\003 \001(\0132" +
+      "\022.LinkNotaryStorageH\000\022/\n\016encryptStorage\030" +
+      "\004 \001(\0132\025.EncryptNotaryStorageH\000\0229\n\023encryp" +
+      "tShareStorage\030\005 \001(\0132\032.EncryptShareNotary" +
+      "StorageH\000\022\'\n\nencryptAdd\030\006 \001(\0132\021.EncryptN" +
+      "otaryAddH\000\022\n\n\002ty\030\007 \001(\005B\007\n\005value\"S\n\030Conte" +
+      "ntOnlyNotaryStorage\022\017\n\007content\030\001 \001(\014\022\013\n\003" +
+      "key\030\002 \001(\t\022\n\n\002op\030\003 \001(\005\022\r\n\005value\030\004 \001(\t\"A\n\025" +
+      "HashOnlyNotaryStorage\022\014\n\004hash\030\001 \001(\014\022\013\n\003k" +
+      "ey\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"K\n\021LinkNotarySto" +
+      "rage\022\014\n\004link\030\001 \001(\014\022\014\n\004hash\030\002 \001(\014\022\013\n\003key\030" +
+      "\003 \001(\t\022\r\n\005value\030\004 \001(\t\"n\n\024EncryptNotarySto" +
+      "rage\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptCont" +
+      "ent\030\002 \001(\014\022\r\n\005nonce\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n" +
+      "\005value\030\005 \001(\t\"t\n\031EncryptShareNotaryStorag" +
+      "e\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptContent" +
+      "\030\002 \001(\014\022\016\n\006pubKey\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n\005v" +
+      "alue\030\005 \001(\t\"3\n\020EncryptNotaryAdd\022\013\n\003key\030\001 " +
+      "\001(\t\022\022\n\nencryptAdd\030\002 \001(\014\"\036\n\014QueryStorage\022" +
+      "\016\n\006txHash\030\001 \001(\t\"$\n\021BatchQueryStorage\022\017\n\007" +
+      "txHashs\030\001 \003(\t\"/\n\021BatchReplyStorage\022\032\n\010st" +
+      "orages\030\001 \003(\0132\010.Storage\"\020\n\016ReceiptStorage" +
+      "B4\n!cn.chain33.javasdk.model.protobufB\017S" +
+      "torageProtobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11394,13 +11710,13 @@ public final class StorageProtobuf {
     internal_static_Storage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Storage_descriptor,
-        new java.lang.String[] { "ContentStorage", "HashStorage", "LinkStorage", "EncryptStorage", "EncryptShareStorage", "Ty", "Value", });
+        new java.lang.String[] { "ContentStorage", "HashStorage", "LinkStorage", "EncryptStorage", "EncryptShareStorage", "EncryptAdd", "Ty", "Value", });
     internal_static_StorageAction_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_StorageAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StorageAction_descriptor,
-        new java.lang.String[] { "ContentStorage", "HashStorage", "LinkStorage", "EncryptStorage", "EncryptShareStorage", "Ty", "Value", });
+        new java.lang.String[] { "ContentStorage", "HashStorage", "LinkStorage", "EncryptStorage", "EncryptShareStorage", "EncryptAdd", "Ty", "Value", });
     internal_static_ContentOnlyNotaryStorage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ContentOnlyNotaryStorage_fieldAccessorTable = new
