@@ -58,6 +58,8 @@ public class TransactionUtil {
 	public static final long PARA_CALL_EVM_FEE = 200000;
 
 	private final static Long TX_HEIGHT_OFFSET = 1L << 62;
+	
+	private final static Long LowAllowPackHeight = 30L;
 
 	private static byte[] addrSeed = "address seed bytes for public key".getBytes();
 
@@ -244,6 +246,11 @@ public class TransactionUtil {
 		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
 		return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE, fee);
 	}
+	
+	public static String createTransferTx(String privateKey, String toAddress, String execer, byte[] payLoad, long fee, long txheight) {
+		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+		return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE, fee, txheight);
+	}
 
 	public static String createTx(String privateKey, String execer, String payLoad) {
 		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
@@ -314,7 +321,7 @@ public class TransactionUtil {
 
 		Transaction transation = createTxRaw(toAddress, execer, payLoad, fee);
 		if (txHeight != null) {
-			transation.setExpire(txHeight + TX_HEIGHT_OFFSET);
+			transation.setExpire(txHeight + TX_HEIGHT_OFFSET + LowAllowPackHeight);
 		}
 
 		// 签名
