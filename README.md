@@ -3,7 +3,7 @@
 
 # 使用
 1.下载chain33-sdk-java 1.0.11版本  
-下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.11/chain33-sdk-java-1.0.11.zip
+下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.11/chain33-sdk-java-1.0.11.zip  
 解压后，通过mvn下载依赖jar包  
 这边也提供jar包下载：https://bty33.oss-cn-shanghai.aliyuncs.com/java-sdk-jar.zip  
 
