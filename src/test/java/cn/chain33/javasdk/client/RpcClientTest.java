@@ -303,7 +303,7 @@ public class RpcClientTest {
     @Test
     public void convertExecertoAddr() {
         String address;
-        address = client.convertExectoAddr("manage");
+        address = client.convertExectoAddr("user.p.midea.user.write");
         System.out.println(address);
     }
 
