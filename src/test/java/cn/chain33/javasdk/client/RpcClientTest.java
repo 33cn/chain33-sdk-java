@@ -305,7 +305,7 @@ public class RpcClientTest {
     @Test
     public void convertExecertoAddr() throws Exception {
         String address;
-        address = client.convertExectoAddr("manage");
+        address = client.convertExectoAddr("user.p.midea.user.write");
         System.out.println(address);
     }
 

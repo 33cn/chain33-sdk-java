@@ -1,15 +1,12 @@
 package cn.chain33.javasdk.model;
 
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
-import cn.chain33.javasdk.client.RpcClient;
-import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
-import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
 
+import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.utils.AesUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.StorageUtil;

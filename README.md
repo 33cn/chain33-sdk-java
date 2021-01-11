@@ -2,36 +2,13 @@
 调用chain33 rpc接口的java客户端。
 
 # 使用
-1.添加依赖
-``` java
-<dependency>
-	<groupId>cn.chain33</groupId>
-	<artifactId>sdk-java</artifactId>
-	<version>1.0.8</version>
-</dependency>
-```
-如果直接使用jar包,需要自己导入依赖的包
+1.下载chain33-sdk-java 1.0.11版本  
+下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.11/chain33-sdk-java-1.0.11.zip  
+解压后，通过mvn下载依赖jar包  
+这边也提供jar包下载：https://bty33.oss-cn-shanghai.aliyuncs.com/java-sdk-jar.zip  
 
-``` xml
-        <dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>3.5.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.47</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.5.3</version>
-		</dependency>
-```
-2.使用RpcClient调用接口
+2.整备好环境，使用RpcClient调用接口
 
 ``` java
 初始化,设置Ip端口
@@ -39,6 +16,7 @@ RpcClient client = new RpcClient("x.x.x.x",8801);
 调用接口
 client.接口();
 ```
+
 # 接口列表
 下面罗列的是java sdk提供的接口，具体调用可以参考测试代码里的例子
 

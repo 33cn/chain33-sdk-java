@@ -7,13 +7,12 @@
 	
 	<groupId>cn.chain33</groupId>
 	<artifactId>chain33-sdk-java</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.11</version>
 	<packaging>jar</packaging>
 	
 	<name>chain33-sdk-java</name>
 	
 	<dependencies>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
