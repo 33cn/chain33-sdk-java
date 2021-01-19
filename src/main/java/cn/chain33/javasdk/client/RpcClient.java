@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import cn.chain33.javasdk.model.cert.CertObject;
 import cn.chain33.javasdk.model.protobuf.CertService;
@@ -1953,4 +1954,40 @@ public class RpcClient {
         return null;
     }
 
+    /**
+     * @description 发送交易
+     *
+     * @param name string 注册名称 长度不能超过 128
+     * @param url string 接受推送的 URL，长度不能超过 1024；
+     * @param encode string 数据编码方式；json 或者 proto
+     * @param lastSequence int 推送开始序列号
+     * @param lastHeight int 推送开始高度
+     * @param lastBlockHash String 推送开始块哈希
+     * @param type int 推送的数据类型；0:代表区块；1:代表区块头信息；2：代表交易回执
+     * @param contract map[string]bool 订阅的合约名称，当type=2的时候起效，比如“coins=true”
+     * @return
+     */
+    public BooleanResult addPushSubscribe(String name, String url, String encode, int lastSequence, int lastHeight, String lastBlockHash, int type, Map<String, Boolean> contract) {
+        RpcRequest postData = getPostData(RpcMethod.ADD_PUSH_SUBSCRIBE);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("name", name);
+        requestParam.put("URL", url);
+        requestParam.put("encode", encode);
+        requestParam.put("lastSequence", lastSequence);
+        requestParam.put("lastHeight", lastHeight);
+        requestParam.put("lastBlockHash", lastBlockHash);
+        requestParam.put("type", type);
+        requestParam.put("contract", contract);
+        postData.addJsonParams(requestParam);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            BooleanResult booleanResult = resultJson.toJavaObject(BooleanResult.class);
+            return booleanResult;
+        }
+        return null;
+    }
 }
