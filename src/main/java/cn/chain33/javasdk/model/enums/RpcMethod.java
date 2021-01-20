@@ -96,7 +96,11 @@ public enum RpcMethod {
 
 	CERT_GET_CERTINFO("chain33-ca-server.GetCertInfo"),
 
-	ADD_PUSH_SUBSCRIBE("Chain33.AddPushSubscribe");
+	ADD_PUSH_SUBSCRIBE("Chain33.AddPushSubscribe"),
+
+	LIST_PUSHES("Chain33.ListPushes"),
+
+	GET_PUSH_SEQ_LAST_NUM("Chain33.GetPushSeqLastNum");
 
 	private String method;
 	

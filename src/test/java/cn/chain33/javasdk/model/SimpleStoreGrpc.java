@@ -102,7 +102,7 @@ public class SimpleStoreGrpc {
 	@Test
 	public void getParaData() {
 		// 交易hash
-		// String hash = "上一步上链返回的hash";  没有Ox
+		// String hash = "上一步上链返回的hash";
 		String hash = "0xd283df553f62b65306e927677b91052d0a652342acf262ee82c9f43ba519a032";
 		byte[] hashBytes = HexUtil.fromHexString(hash);
 		CommonProtobuf.ReqHash request = CommonProtobuf.ReqHash.newBuilder().setHash(ByteString.copyFrom(hashBytes)).build();

@@ -12,8 +12,7 @@ import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.pre.KeyFrag;
 import cn.chain33.javasdk.model.pre.ReKeyFrag;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.subgraph.orchid.encoders.Hex;
+import cn.chain33.javasdk.model.rpcresult.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,18 +24,6 @@ import cn.chain33.javasdk.model.RpcResponse;
 import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.RpcMethod;
 import cn.chain33.javasdk.model.enums.SignType;
-import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
-import cn.chain33.javasdk.model.rpcresult.AccountResult;
-import cn.chain33.javasdk.model.rpcresult.BlockOverViewResult;
-import cn.chain33.javasdk.model.rpcresult.BlockResult;
-import cn.chain33.javasdk.model.rpcresult.BlocksResult;
-import cn.chain33.javasdk.model.rpcresult.BooleanResult;
-import cn.chain33.javasdk.model.rpcresult.PeerResult;
-import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
-import cn.chain33.javasdk.model.rpcresult.TokenBalanceResult;
-import cn.chain33.javasdk.model.rpcresult.TokenResult;
-import cn.chain33.javasdk.model.rpcresult.TxResult;
-import cn.chain33.javasdk.model.rpcresult.WalletStatusResult;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.HttpUtil;
 import cn.chain33.javasdk.utils.StringUtil;
@@ -1987,6 +1974,45 @@ public class RpcClient {
             JSONObject resultJson = parseObject.getJSONObject("result");
             BooleanResult booleanResult = resultJson.toJavaObject(BooleanResult.class);
             return booleanResult;
+        }
+        return null;
+    }
+
+    /**
+     * @description 获取推送列表 listPushes
+     * @return 推送列表
+     */
+    public ListPushesResult listPushes() {
+        RpcRequest postData = getPostData(RpcMethod.LIST_PUSHES);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject jsonResult = parseObject.getJSONObject("result");
+            ListPushesResult list = JSONObject.toJavaObject(jsonResult, ListPushesResult.class);
+            return list;
+        }
+        return null;
+    }
+
+    /**
+     * @description 获取某推送服务最新序列号的值 getPushSeqLastNum
+     * @return 获取某推送服务最新序列号的值
+     */
+    public Int64Result getPushSeqLastNum(String name) {
+        RpcRequest postData = getPostData(RpcMethod.GET_PUSH_SEQ_LAST_NUM);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("data", name);
+        postData.addJsonParams(requestParam);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject jsonResult = parseObject.getJSONObject("result");
+            Int64Result data = JSONObject.toJavaObject(jsonResult, Int64Result.class);
+            return data;
         }
         return null;
     }
