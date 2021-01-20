@@ -7,6 +7,7 @@ import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
+import cn.chain33.javasdk.model.protobuf.*;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
 import org.bouncycastle.asn1.sec.SECNamedCurves;
@@ -29,16 +30,11 @@ import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
-import cn.chain33.javasdk.model.protobuf.ManageProtobuf;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder;
-import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
-import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
-import cn.chain33.javasdk.model.protobuf.TransferProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.AssetsTransfer;
 import cn.chain33.javasdk.model.protobuf.TransferProtoBuf.CoinsAction;
 import net.vrallev.java.ecc.Ecc25519Helper;
@@ -252,6 +248,11 @@ public class TransactionUtil {
 		return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE, fee, txheight);
 	}
 
+	public static TransactionAllProtobuf.Transaction createTransferTx2(String privateKey, String toAddress, String execer, byte[] payLoad, long fee, long txheight) {
+		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+		return createTxMain2(privateKeyBytes, toAddress, execer.getBytes(), payLoad, DEFAULT_SIGNTYPE, fee, txheight);
+	}
+
 	public static String createTx(String privateKey, String execer, String payLoad) {
 		byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
 		return createTx(privateKeyBytes, execer.getBytes(), payLoad.getBytes(), DEFAULT_SIGNTYPE, DEFAULT_FEE);
@@ -332,6 +333,49 @@ public class TransactionUtil {
 		byte[] encodeProtobufWithSign = encodeProtobufWithSign(transation);
 		String transationHash = HexUtil.toHexString(encodeProtobufWithSign);
 		return transationHash;
+	}
+
+	/**
+	 *
+	 * @description 本地构造交易
+	 * @param privateKey
+	 *            私钥
+	 * @param toAddress
+	 *            目标地址
+	 * @param execer
+	 *            例如user.p.xxchain.token
+	 * @param payLoad
+	 *            内容
+	 * @param signType
+	 *            签名方式，默认SignType.SECP256K1
+	 * @param fee
+	 *            手续费
+	 * @param txHeight
+	 *            联盟链需要，其他为null
+	 * @return
+	 *
+	 */
+	public static TransactionAllProtobuf.Transaction createTxMain2(byte[] privateKey, String toAddress, byte[] execer, byte[] payLoad,
+																SignType signType, long fee, Long txHeight) {
+		if (signType == null)
+			signType = DEFAULT_SIGNTYPE;
+
+		// 如果没有私钥，创建私钥 privateKey =
+		if (privateKey == null) {
+			TransactionUtil.generatorPrivateKey();
+		}
+
+		Transaction transation = createTxRaw(toAddress, execer, payLoad, fee);
+		if (txHeight != null) {
+			transation.setExpire(txHeight + TX_HEIGHT_OFFSET + LowAllowPackHeight);
+		}
+
+		// 签名
+		byte[] protobufData = encodeProtobuf(transation);
+
+		sign(signType, protobufData, privateKey, null, transation);
+		TransactionAllProtobuf.Transaction tx = encodeProtobufWithSign2(transation);
+		return tx;
 	}
 
 	public static String createTxWithCert(String privateKey, String execer, byte[] payLoad, SignType signType, byte[] cert, byte[] uid) {
@@ -497,6 +541,32 @@ public class TransactionUtil {
 	 * @param transaction
 	 * @return
 	 */
+	public static TransactionAllProtobuf.Transaction encodeProtobufWithSign2(Transaction transaction) {
+		TransactionAllProtobuf.Transaction.Builder builder = TransactionAllProtobuf.Transaction.newBuilder();
+
+		builder.setExecer(ByteString.copyFrom(transaction.getExecer()));
+		builder.setExpire(transaction.getExpire());
+		builder.setFee(transaction.getFee());
+		builder.setNonce(transaction.getNonce());
+		builder.setPayload(ByteString.copyFrom(transaction.getPayload()));
+		builder.setTo(transaction.getTo());
+
+		TransactionAllProtobuf.Signature.Builder signatureBuilder = builder.getSignatureBuilder();
+		signatureBuilder.setPubkey(ByteString.copyFrom(transaction.getSignature().getPubkey()));
+		signatureBuilder.setTy(transaction.getSignature().getTy());
+		signatureBuilder.setSignature(ByteString.copyFrom(transaction.getSignature().getSignature()));
+		TransactionAllProtobuf.Signature signatureBuild = signatureBuilder.build();
+		builder.setSignature(signatureBuild);
+		TransactionAllProtobuf.Transaction build = builder.build();
+		return build;
+	}
+
+	/**
+	 * 构造带签名的交易
+	 *
+	 * @param transaction
+	 * @return
+	 */
 	public static byte[] encodeProtobufWithSign(Transaction transaction) {
 		TransactionProtoBuf.Transaction.Builder builder = TransactionProtoBuf.Transaction.newBuilder();
 
@@ -517,7 +587,6 @@ public class TransactionUtil {
 		byte[] byteArray = build.toByteArray();
 		return byteArray;
 	}
-
 	/**
 	 * 签名
 	 * 

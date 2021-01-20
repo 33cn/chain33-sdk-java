@@ -24,7 +24,7 @@ public final class chain33Grpc {
 
   private chain33Grpc() {}
 
-  public static final String SERVICE_NAME = "chain33";
+  public static final String SERVICE_NAME = "types.chain33";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks,
