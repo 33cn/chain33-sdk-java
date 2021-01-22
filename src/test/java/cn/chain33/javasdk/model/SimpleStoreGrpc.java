@@ -53,7 +53,7 @@ public class SimpleStoreGrpc {
 				TransactionUtil.DEFAULT_FEE, txHeight);
 
 		CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
-		System.out.println("txhash:"+"Ox"+HexUtil.toHexString(result.getMsg().toByteArray()));
+		System.out.println("txhash:"+"0x"+HexUtil.toHexString(result.getMsg().toByteArray()));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class SimpleStoreGrpc {
 				TransactionUtil.DEFAULT_FEE, txHeight);
 
 		CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
-		System.out.println("txhash:"+"Ox"+HexUtil.toHexString(result.getMsg().toByteArray()));
+		System.out.println("txhash:"+"0x"+HexUtil.toHexString(result.getMsg().toByteArray()));
 	}
 
 	/**
