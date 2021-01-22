@@ -56,6 +56,8 @@ client.接口();
  - client.sendToAddress(参数)    交易
  - client.createTransaction(参数)    合约交易创建
  - client.addPushSubscribe(参数)    注册推送回调
+ - client.listPushes(参数)    列举推送服务
+ - client.getPushSeqLastNum(参数)    获取某推送服务最新序列号的值
  - TransactionUtil.createTransferPayLoad(参数)	本地构造转账交易payload
  - TransactionUtil.createTransferTx(参数,payload)	本地构造转账交易体
  - 创建好的交易体使用client.submitTransaction提交交易
