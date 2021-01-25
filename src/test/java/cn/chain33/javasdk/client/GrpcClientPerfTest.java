@@ -3,6 +3,8 @@ package cn.chain33.javasdk.client;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.utils.TransactionUtil;
+import io.grpc.StatusRuntimeException;
+
 import java.util.concurrent.CountDownLatch;
 
 public class GrpcClientPerfTest {
@@ -14,9 +16,9 @@ public class GrpcClientPerfTest {
     }
 
     public static void main(String[] args) {
-        int t = 20;
+        int t = 300;
         int sleep = 1;
-        String ip = "节点ip";
+        String ip = "127.0.0.1";
 //		if (args.length < 3) {
 //			System.out.println("请传开启参线程数，发送交易间隔时间，发送地址ip不带端口");
 //			return;
@@ -49,14 +51,14 @@ public class GrpcClientPerfTest {
     static class WorkJob implements Runnable {
 
         // 区块链节点IP
-        String mainIp = "节点ip";
+        String mainIp = "127.0.0.1";
         // 平行链服务端口
         int mainPort = 8801;
         int grpcMainPort = 8802;
         RpcClient clientMain = new RpcClient(mainIp, mainPort);
 
         // 平行链节点IP
-        String paraIp = "节点ip";
+        String paraIp = "127.0.0.1";
         // 平行链服务端口
         int paraPort = 8901;
         int grpcParaPort = 8902;
@@ -65,8 +67,7 @@ public class GrpcClientPerfTest {
         // 上链存证的内容(电子档案上链)
         String content = "{\"档案编号\":\"ID0000001\",\"企业代码\":\"QY0000001\",\"业务标识\":\"DA000001\",\"来源系统\":\"OA\", \"文档摘要\",\"0x93689a705ac0bb4612824883060d73d02534f8ba758f5ca21a343beab2bf7b47\"}";
 
-        GrpcClient javaGrpcClient = new GrpcClient(mainIp,grpcMainPort);
-        GrpcClient javaGrpcClientPara = new GrpcClient(paraIp,grpcParaPort);
+        GrpcClient javaGrpcClient;
 
         private final CountDownLatch countDownLatch;
 
@@ -88,7 +89,7 @@ public class GrpcClientPerfTest {
                     /**
                      *
                      */
-                    Thread.sleep(sleep*1000);
+                    Thread.sleep(sleep*10);
                     // 存证智能合约的名称（简单存证，固定就用这个名称）
                     String execer = "user.write";
                     //jsonrpc
@@ -100,13 +101,17 @@ public class GrpcClientPerfTest {
                     long txHeight = javaGrpcClient.run(o->o.getLastHeader(CommonProtobuf.ReqNil.newBuilder().build())).getHeight();
                     TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTransferTx2(privateKey, contractAddress, execer, content.getBytes(),
                             TransactionUtil.DEFAULT_FEE, txHeight);
+                    try {
+                        CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
+                    } catch (StatusRuntimeException e) {
+                        e.printStackTrace();
+                        System.out.println(Thread.currentThread().getName()+"send method err" + e.getMessage());
+                        javaGrpcClient.shutdown();
+                        countDownLatch.await();
+                    }
 
-                    CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
                     count++;
                     setSize(1);
-                    //javaGrpcClient.shutdown();
-                    //System.out.println("txhash:"+"0x"+HexUtil.toHexString(result.getMsg().toByteArray()));
-                    //countDownLatch.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                     System.out.println("send err"+e.getMessage());
