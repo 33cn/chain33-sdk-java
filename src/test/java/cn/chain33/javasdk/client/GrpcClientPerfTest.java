@@ -1,20 +1,8 @@
 package cn.chain33.javasdk.client;
 
-import cn.chain33.javasdk.client.Account;
-import cn.chain33.javasdk.client.GrpcClient;
-import cn.chain33.javasdk.client.RpcClient;
-import cn.chain33.javasdk.model.enums.StorageEnum;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
-import cn.chain33.javasdk.model.protobuf.StorageProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
-import cn.chain33.javasdk.utils.HexUtil;
-import cn.chain33.javasdk.utils.StorageUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
-import com.google.protobuf.ByteString;
-import com.google.protobuf.InvalidProtocolBufferException;
-import org.junit.Test;
-
 import java.util.concurrent.CountDownLatch;
 
 public class GrpcClientPerfTest {
@@ -26,7 +14,7 @@ public class GrpcClientPerfTest {
     }
 
     public static void main(String[] args) {
-        int t = 200;
+        int t = 20;
         int sleep = 1;
         String ip = "节点ip";
 //		if (args.length < 3) {

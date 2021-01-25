@@ -6,7 +6,6 @@ import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.protobuf.BlockchainProtobuf;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;

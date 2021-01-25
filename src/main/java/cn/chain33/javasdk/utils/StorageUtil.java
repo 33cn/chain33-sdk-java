@@ -6,7 +6,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import cn.chain33.javasdk.model.enums.StorageEnum;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage;
@@ -34,13 +34,13 @@ public class StorageUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
         		TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -85,13 +85,13 @@ public class StorageUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
         		TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -138,13 +138,13 @@ public class StorageUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
         		TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -198,13 +198,13 @@ public class StorageUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
         		TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -265,13 +265,13 @@ public class StorageUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
         		TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -300,13 +300,13 @@ public class StorageUtil {
 //        String createTxWithoutSign = TransactionUtil.createTxWithoutSign("storage".getBytes(), storageAction.toByteArray(),
 //                TransactionUtil.DEFAULT_FEE, 0);
 //        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-//        TransactionProtoBuf.Transaction parseFrom = null;
+//        TransactionAllProtobuf.Transaction parseFrom = null;
 //        try {
-//            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+//            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
 //        } catch (InvalidProtocolBufferException e) {
 //            e.printStackTrace();
 //        }
-//        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+//        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
 //        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
 //        return hexString;
         return ""; //TODO
@@ -559,13 +559,13 @@ public class StorageUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
                 TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -594,13 +594,13 @@ public class StorageUtil {
 //        String createTxWithoutSign = TransactionUtil.createTxWithoutSign("storage".getBytes(), storageAction.toByteArray(),
 //                TransactionUtil.DEFAULT_FEE, 0);
 //        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-//        TransactionProtoBuf.Transaction parseFrom = null;
+//        TransactionAllProtobuf.Transaction parseFrom = null;
 //        try {
-//            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+//            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
 //        } catch (InvalidProtocolBufferException e) {
 //            e.printStackTrace();
 //        }
-//        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+//        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
 //        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
 //        return hexString;
         return ""; //TODO
