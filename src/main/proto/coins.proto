@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "transaction.proto";
+
+option java_outer_classname = "CoinsProtobuf";
+option java_package = "cn.chain33.javasdk.model.protobuf";
+
+// message for execs.coins
+message CoinsAction {
+    oneof value {
+        AssetsTransfer       transfer       = 1;
+        AssetsWithdraw       withdraw       = 4;
+        AssetsGenesis        genesis        = 2;
+        AssetsTransferToExec transferToExec = 5;
+    }
+    int32 ty = 3;
+}

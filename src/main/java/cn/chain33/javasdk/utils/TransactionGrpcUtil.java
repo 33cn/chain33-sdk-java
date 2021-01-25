@@ -5,7 +5,6 @@ import cn.chain33.javasdk.model.Signature;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
 import com.google.protobuf.ByteString;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
