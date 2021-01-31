@@ -1,6 +1,7 @@
 package cn.chain33.javasdk.performance;
 
 import cn.chain33.javasdk.client.RpcClient;
+import org.junit.Assert;
 
 public class RpcRunner implements Runnable{
 	    
@@ -18,8 +19,13 @@ public class RpcRunner implements Runnable{
         long start = System.currentTimeMillis();
 		for (int i = 0; i < 1000; i++) {
 
-			clientTh.queryTx(hash);
-            if (i == 999) {
+			try {
+				clientTh.queryTransaction(hash);
+			} catch (Exception e) {
+				e.printStackTrace();
+				Assert.fail();
+			}
+			if (i == 999) {
         		long end = System.currentTimeMillis();
         		long total = end - start;
             	System.out.println("Thread" + numberTh + " | cost time is: " + total);

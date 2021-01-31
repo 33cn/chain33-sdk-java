@@ -91,7 +91,7 @@ public class TokenParaTest {
 	 * 本地预创建token并提交
 	 */
 	@Test
-	public void preCreateTokenLocal() {
+	public void preCreateTokenLocal() throws Exception {
 	   //token总额
 	   long total = 19900000000000000L;
 	   //token的注释名称
@@ -120,7 +120,7 @@ public class TokenParaTest {
 	 * 本地创建token完成交易并提交
 	 */
 	@Test
-	public void createTokenFinishLocal() {
+	public void createTokenFinishLocal() throws Exception {
 	   String symbol = "COINSDEVX";
 	   String execer = paraName + "token";
 	   //token-finisher地址对应的私钥（createTokenFinisher函数中配置的：value）
@@ -138,7 +138,7 @@ public class TokenParaTest {
      * @description 通过代扣的方式构造token的转账交易
      */
     @Test
-    public void createTokenTransfer() throws InterruptedException {
+    public void createTokenTransfer() throws Exception {
     	// 转账说明
         String note = "转账说明";
         // token名
@@ -185,7 +185,7 @@ public class TokenParaTest {
      *
      */
     @Test
-    public void queryCreateTokens() {
+    public void queryCreateTokens() throws Exception {
         String execer = paraName + "token";
         //状态 0预创建的 1创建成功的
         Integer status = 1;
@@ -203,7 +203,7 @@ public class TokenParaTest {
      *
      */
     @Test
-    public void getTokenBalace() {
+    public void getTokenBalace() throws Exception {
         // 执行器名称
         String execer = paraName + "token";
         

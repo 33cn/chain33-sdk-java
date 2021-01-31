@@ -22,7 +22,7 @@ public class CertUtilTest {
     public static final String UserKey = "03ffd7371d86246f9bf5682d4319c5767b051e2acf98f806fe724579d9124b53";
 
     @Test
-    public void testCertUtilUser() {
+    public void testCertUtilUser() throws Exception {
         boolean result = certclient.certUserRegister(UserName, Identity, UserPub, AdminKey);
         Assert.assertEquals(result, true);
 
@@ -40,7 +40,7 @@ public class CertUtilTest {
     }
 
     @Test
-    public void testCertUtilEnroll() {
+    public void testCertUtilEnroll() throws Exception {
         boolean result = certclient.certUserRegister(UserName, Identity, UserPub, AdminKey);
         Assert.assertEquals(result, true);
 

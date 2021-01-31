@@ -87,7 +87,7 @@ public class TokenAllianceTest {
 	 * 本地预创建token并提交
 	 */
 	@Test
-	public void preCreateTokenLocal() {
+	public void preCreateTokenLocal() throws Exception {
 	   //token总额
 	   long total = 19900000000000000L;
 	   //token的注释名称
@@ -116,7 +116,7 @@ public class TokenAllianceTest {
 	 * 本地创建token完成交易并提交
 	 */
 	@Test
-	public void createTokenFinishLocal() {
+	public void createTokenFinishLocal() throws Exception {
 	   String symbol = "SYB";
 	   String execer = "token";
 	   String managerPrivateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
@@ -130,7 +130,7 @@ public class TokenAllianceTest {
      * @description 本地构造token转账交易
      */
     @Test
-    public void createTokenTransfer() {
+    public void createTokenTransfer() throws Exception {
     	// 转账说明
         String note = "转账说明";
         // token名
@@ -152,7 +152,7 @@ public class TokenAllianceTest {
      *
      */
     @Test
-    public void queryCreateTokens() {
+    public void queryCreateTokens() throws Exception {
         String execer = "token";
         //状态 0预创建的 1创建成功的
         Integer status = 1;
@@ -170,7 +170,7 @@ public class TokenAllianceTest {
      *
      */
     @Test
-    public void getTokenBalace() {
+    public void getTokenBalace() throws Exception {
         List<String> addressList = new ArrayList<>();
         addressList.add("1P7P4v3kL39zugQgDDLRqxzGjQd7aEbfKs");
         addressList.add("1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs");

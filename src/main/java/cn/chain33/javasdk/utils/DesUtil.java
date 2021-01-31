@@ -8,7 +8,9 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 
 public class DesUtil {
-    
+
+    private final static int BLOCKSIZE = 8;
+
     /**
      * 
      * @description encrypt
@@ -34,7 +36,6 @@ public class DesUtil {
     /**
      * 
      * @description decrypt
-     * @param src
      * @param password
      * @return
      */
@@ -46,6 +47,26 @@ public class DesUtil {
         Cipher cipher = Cipher.getInstance("DES");
         cipher.init(Cipher.DECRYPT_MODE, securekey, random);
         return cipher.doFinal(contentEncrypt);
+    }
+
+    /**
+     * 8字节填充
+     */
+    public static String padding(String password) {
+        int length = password.length();
+
+        //计算需填充长度
+        if (length % BLOCKSIZE == 0) {
+            return password;
+        }
+
+        length += BLOCKSIZE - (length % BLOCKSIZE);
+        byte[] plaintext = new byte[length];
+
+        //填充
+        System.arraycopy(password.getBytes(), 0, plaintext, 0, password.length());
+
+        return new String(plaintext);
     }
 
     // 测试

@@ -1,6 +1,7 @@
 package cn.chain33.javasdk.model;
 
 import cn.chain33.javasdk.model.gm.*;
+import cn.chain33.javasdk.utils.HexUtil;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,6 +25,9 @@ public class GMTest {
             if (!flag) {
                 Assert.fail("verify failed");
             }
+
+            System.out.println(HexUtil.toHexString(keyPair.getPublicKey().getEncoded(true)));
+            System.out.println(HexUtil.toHexString(keyPair.getPublicKey().getEncoded(false)));
         } catch (Exception ex) {
             ex.printStackTrace();
             Assert.fail();

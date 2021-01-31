@@ -1,6 +1,7 @@
 package cn.chain33.javasdk.utils;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.KeyManagementException;
@@ -68,43 +69,35 @@ public class HttpUtil {
         return HttpClients.createDefault();  
     }  
     
-	private static String getContent(HttpEntity entity,String charset){
+	private static String getContent(HttpEntity entity,String charset) throws IOException {
 		String content = null;
 		if(entity != null){
-			try {
-				InputStream in = entity.getContent();
-				InputStreamReader inputStreamReader = new InputStreamReader(in,charset);
-				BufferedReader reader = new BufferedReader(inputStreamReader);
-				StringBuffer stringBuffer = new StringBuffer();
-				String line = null;
-				while((line = reader.readLine()) != null){
-					stringBuffer.append(line);
-					stringBuffer.append("\r\n");
-				}
-				content = stringBuffer.toString();
-			} catch (Exception e) {
-				e.printStackTrace();
+			InputStream in = entity.getContent();
+			InputStreamReader inputStreamReader = new InputStreamReader(in,charset);
+			BufferedReader reader = new BufferedReader(inputStreamReader);
+			StringBuffer stringBuffer = new StringBuffer();
+			String line = null;
+			while((line = reader.readLine()) != null){
+				stringBuffer.append(line);
+				stringBuffer.append("\r\n");
 			}
+			content = stringBuffer.toString();
 		}
 		return content;
 	}
 	
 	
-	public static String httpPostBody(String url, String jsonString) {
+	public static String httpPostBody(String url, String jsonString) throws IOException {
 		String content = null;
 		HttpPost post = new HttpPost(url);
-		try {
-			post.setConfig(requestConfig);
-			post.addHeader("Content-Type", "application/json");
-			post.setEntity(new StringEntity(jsonString,DEFAULT_CHARSET));
-			HttpResponse response = client.execute(post);
-			HttpEntity entity = response.getEntity();
-			content = getContent(entity,DEFAULT_CHARSET);
-			post.releaseConnection();
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
+		post.setConfig(requestConfig);
+		post.addHeader("Content-Type", "application/json");
+		post.setEntity(new StringEntity(jsonString,DEFAULT_CHARSET));
+		HttpResponse response = client.execute(post);
+		HttpEntity entity = response.getEntity();
+		content = getContent(entity,DEFAULT_CHARSET);
+		post.releaseConnection();
+
 		return content;
 	}
 	

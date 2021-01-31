@@ -17,7 +17,6 @@ public class Performance {
 	
 	/**
 	 * 
-	 * @param args
 	 */
 	public void runTest(String ip, String port, String num) {
 
@@ -64,8 +63,6 @@ public class Performance {
 	 * 获取区块高度
 	 * 
 	 * @param client
-	 * @param privateKey
-	 * @param toaddress
 	 */
 	private void startthread2(RpcClient client) {
 		Thread2 st = new Thread2(client);
@@ -162,7 +159,7 @@ public class Performance {
 				try {
 					txHeight = client.getLastHeader().getHeight();
 					Thread.sleep(1000);
-				} catch (InterruptedException e) {
+				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
