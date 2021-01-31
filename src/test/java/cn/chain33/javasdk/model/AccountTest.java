@@ -13,7 +13,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import cn.chain33.javasdk.client.Account;
 import cn.chain33.javasdk.model.enums.SignType;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.HexUtil;
@@ -117,13 +117,13 @@ public class AccountTest {
 		String createTxWithoutSign = client.registeAccount("accountmanager", "Register", accountId);
 
 		byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-		TransactionProtoBuf.Transaction parseFrom = null;
+		TransactionAllProtobuf.Transaction parseFrom = null;
 		try {
-			parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+			parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
-		TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, accountInfo.getPrivateKey());
+		TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, accountInfo.getPrivateKey());
 		String hexString = HexUtil.toHexString(signProbuf.toByteArray());
 
 		String submitTransaction = client.submitTransaction(hexString);
@@ -244,13 +244,13 @@ public class AccountTest {
 		String createTxWithoutSign = client.authAccount("accountmanager", "Supervise", accountIds, op, level);
 
 		byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-		TransactionProtoBuf.Transaction parseFrom = null;
+		TransactionAllProtobuf.Transaction parseFrom = null;
 		try {
-			parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+			parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
-		TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8");
+		TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8");
 		String hexString = HexUtil.toHexString(signProbuf.toByteArray());
 
 		String submitTransaction = client.submitTransaction(hexString);
