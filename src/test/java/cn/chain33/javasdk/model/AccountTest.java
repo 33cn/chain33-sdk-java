@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -281,7 +282,7 @@ public class AccountTest {
 
     @Test
 	public void testAccountStore() throws Exception {
-    	AccountInfo accountInfo = account.newAccountLocal("testa", "12345678s", "testa");
+    	AccountInfo accountInfo = account.newAccountLocal("testa", "12345678", "testa");
 		System.out.println("name is:" + accountInfo.getName());
 		System.out.println("privateKey is:" + accountInfo.getPrivateKey());
 		System.out.println("publicKey is:" + accountInfo.getPublicKey());
