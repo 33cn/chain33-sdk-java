@@ -1,9 +1,11 @@
 package cn.chain33.javasdk.model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -277,4 +279,19 @@ public class AccountTest {
     	// 账户地址
     	System.out.println("地址:" + resultJson.getString("addr"));
     }
+
+    @Test
+	public void testAccountStore() throws Exception {
+    	AccountInfo accountInfo = account.newAccountLocal("testa", "12345678", "testa");
+		System.out.println("name is:" + accountInfo.getName());
+		System.out.println("privateKey is:" + accountInfo.getPrivateKey());
+		System.out.println("publicKey is:" + accountInfo.getPublicKey());
+		System.out.println("Address is:" + accountInfo.getAddress());
+
+		AccountInfo accountInfo1 = account.loadAccountLocal("testa", "12345678", "testa");
+		Assert.assertEquals(accountInfo.getName(), accountInfo1.getName());
+		Assert.assertEquals(accountInfo.getPrivateKey(), accountInfo1.getPrivateKey());
+		Assert.assertEquals(accountInfo.getPublicKey(), accountInfo1.getPublicKey());
+		Assert.assertEquals(accountInfo.getAddress(), accountInfo1.getAddress());
+	}
 }
