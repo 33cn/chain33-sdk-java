@@ -27,7 +27,6 @@ public class GMTest {
             }
 
             System.out.println(HexUtil.toHexString(keyPair.getPublicKey().getEncoded(true)));
-            System.out.println(HexUtil.toHexString(keyPair.getPublicKey().getEncoded(false)));
         } catch (Exception ex) {
             ex.printStackTrace();
             Assert.fail();

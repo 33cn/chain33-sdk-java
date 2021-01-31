@@ -159,7 +159,7 @@ public class Performance {
 				try {
 					txHeight = client.getLastHeader().getHeight();
 					Thread.sleep(1000);
-				} catch (Exception e) {
+				} catch (InterruptedException  e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
