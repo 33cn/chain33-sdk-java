@@ -1,12 +1,21 @@
 package cn.chain33.javasdk.model;
 
 public class AccountInfo {
-	
+	private String name;
+
 	private String privateKey;
 	
 	private String publicKey;
 	
 	private String address;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getPrivateKey() {
 		return privateKey;
