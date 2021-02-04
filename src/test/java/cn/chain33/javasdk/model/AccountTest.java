@@ -1,9 +1,11 @@
 package cn.chain33.javasdk.model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.chain33.javasdk.client.RpcClient;
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
@@ -11,7 +13,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import cn.chain33.javasdk.client.Account;
 import cn.chain33.javasdk.model.enums.SignType;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.HexUtil;
@@ -114,13 +116,13 @@ public class AccountTest {
 		String createTxWithoutSign = client.registeAccount("accountmanager", "Register", accountId);
 
 		byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-		TransactionProtoBuf.Transaction parseFrom = null;
+		TransactionAllProtobuf.Transaction parseFrom = null;
 		try {
-			parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+			parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
-		TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, accountInfo.getPrivateKey());
+		TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, accountInfo.getPrivateKey());
 		String hexString = HexUtil.toHexString(signProbuf.toByteArray());
 
 		String submitTransaction = client.submitTransaction(hexString);
@@ -241,13 +243,13 @@ public class AccountTest {
 		String createTxWithoutSign = client.authAccount("accountmanager", "Supervise", accountIds, op, level);
 
 		byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-		TransactionProtoBuf.Transaction parseFrom = null;
+		TransactionAllProtobuf.Transaction parseFrom = null;
 		try {
-			parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+			parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
-		TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8");
+		TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8");
 		String hexString = HexUtil.toHexString(signProbuf.toByteArray());
 
 		String submitTransaction = client.submitTransaction(hexString);
@@ -277,4 +279,19 @@ public class AccountTest {
     	// 账户地址
     	System.out.println("地址:" + resultJson.getString("addr"));
     }
+
+    @Test
+	public void testAccountStore() throws Exception {
+    	AccountInfo accountInfo = account.newAccountLocal("testa", "12345678", "testa");
+		System.out.println("name is:" + accountInfo.getName());
+		System.out.println("privateKey is:" + accountInfo.getPrivateKey());
+		System.out.println("publicKey is:" + accountInfo.getPublicKey());
+		System.out.println("Address is:" + accountInfo.getAddress());
+
+		AccountInfo accountInfo1 = account.loadAccountLocal("testa", "12345678", "testa");
+		Assert.assertEquals(accountInfo.getName(), accountInfo1.getName());
+		Assert.assertEquals(accountInfo.getPrivateKey(), accountInfo1.getPrivateKey());
+		Assert.assertEquals(accountInfo.getPublicKey(), accountInfo1.getPublicKey());
+		Assert.assertEquals(accountInfo.getAddress(), accountInfo1.getAddress());
+	}
 }

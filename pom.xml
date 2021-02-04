@@ -7,7 +7,7 @@
 	
 	<groupId>cn.chain33</groupId>
 	<artifactId>chain33-sdk-java</artifactId>
-	<version>1.0.11</version>
+	<version>1.0.12</version>
 	<packaging>jar</packaging>
 	
 	<name>chain33-sdk-java</name>
@@ -75,6 +75,17 @@
 			<groupId>net.vrallev.ecc</groupId>
 			<artifactId>ecc-25519-java</artifactId>
 			<version>1.0.3</version>
+		</dependency>
+		<!-- grpc -->
+		<dependency>
+	    	<groupId>io.grpc</groupId>
+		    <artifactId>grpc-all</artifactId>
+		    <version>1.34.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>24.0-jre</version>
 		</dependency>
 	</dependencies>
 	

@@ -1,7 +1,7 @@
 package cn.chain33.javasdk.utils;
 
 import cn.chain33.javasdk.model.protobuf.EvmService;
-import cn.chain33.javasdk.model.protobuf.TransactionProtoBuf;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -32,13 +32,13 @@ public class EvmUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer, evmContractAction.toByteArray(),
                 TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -65,13 +65,13 @@ public class EvmUtil {
        String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
                TransactionUtil.PARA_CREATE_EVM_FEE, 0);
        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-       TransactionProtoBuf.Transaction parseFrom = null;
+       TransactionAllProtobuf.Transaction parseFrom = null;
        try {
-           parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+           parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
        } catch (InvalidProtocolBufferException e) {
            e.printStackTrace();
        }
-       TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+       TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
        return hexString;
    }
@@ -124,13 +124,13 @@ public class EvmUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign((prefix + contractName).getBytes(), evmContractAction.toByteArray(),
                 TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
@@ -158,13 +158,13 @@ public class EvmUtil {
        String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + prefix + contractName).getBytes(), evmContractAction.toByteArray(),
                TransactionUtil.PARA_CALL_EVM_FEE, 0);
        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-       TransactionProtoBuf.Transaction parseFrom = null;
+       TransactionAllProtobuf.Transaction parseFrom = null;
        try {
-           parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+           parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
        } catch (InvalidProtocolBufferException e) {
            e.printStackTrace();
        }
-       TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+       TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
        return hexString;
    }
@@ -211,13 +211,13 @@ public class EvmUtil {
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign((prefix + contractName).getBytes(), evmContractAction.toByteArray(),
                 TransactionUtil.DEFAULT_FEE, 0);
         byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionProtoBuf.Transaction parseFrom = null;
+        TransactionAllProtobuf.Transaction parseFrom = null;
         try {
-            parseFrom = TransactionProtoBuf.Transaction.parseFrom(fromHexString);
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
-        TransactionProtoBuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
     }
