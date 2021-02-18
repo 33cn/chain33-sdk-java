@@ -288,7 +288,7 @@ public class SM2Util {
 	 */
 	public static SM2KeyPair generateKeyPair() {
 
-		BigInteger d = random(n.subtract(new BigInteger("1")));
+		BigInteger d = random(n.subtract(new BigInteger("1")).shiftRight(1));
 
 		SM2KeyPair keyPair = new SM2KeyPair(G.multiply(d).normalize(), d);
 

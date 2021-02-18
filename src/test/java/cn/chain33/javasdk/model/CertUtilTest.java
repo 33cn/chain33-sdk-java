@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.model;
 
+import cn.chain33.javasdk.client.Account;
 import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.cert.CertObject;
 import cn.chain33.javasdk.model.enums.SignType;
@@ -89,4 +90,25 @@ public class CertUtilTest {
         Assert.assertEquals(Identity, certInfo.identity);
     }
 
+    @Test
+    public void testLoadFromFile() throws Exception {
+        Account account = new Account();
+        AccountInfo accountInfo = account.loadGMAccountLocal("test", "", "./test/keystore/5c3682a5719cf5bc1bd6280938670c3acfcb67cc15744a7b9b348066795a4e62_sk");
+
+        byte[] certBytes = CertUtils.getCertFromFile("./test/signcerts/user1@org1-cert.pem");
+        CertService.CertNormal.Builder normal = CertService.CertNormal.newBuilder();
+        normal.setValue(ByteString.copyFrom("value123".getBytes()));
+        normal.setKey("key123");
+        CertService.CertNormal normalAction = normal.build();
+
+        CertService.CertAction.Builder builder = CertService.CertAction.newBuilder();
+        builder.setTy(CertUtils.CertActionNormal);
+        builder.setNormal(normalAction);
+
+        byte[] reqBytes = builder.build().toByteArray();
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), "cert", reqBytes, SignType.SM2, certBytes, "ca test".getBytes());
+        String hash = chain33client.submitTransaction(transactionHash);
+        System.out.println(hash);
+        Assert.assertNotNull(hash);
+    }
 }
