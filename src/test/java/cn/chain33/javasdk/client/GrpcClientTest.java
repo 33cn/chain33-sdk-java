@@ -12,8 +12,9 @@ public class GrpcClientTest {
     String ip = "区块链ip";
     // 平行链服务端口
     int port = 8802;
-
-    GrpcClient javaGrpcClient = new GrpcClient(ip,port);
+    // targetURI
+    String targetURI = "47.92.105.160:8802";
+    GrpcClient javaGrpcClient = new GrpcClient(targetURI,null);
 
     /**
      * 获取最新高度
@@ -25,6 +26,9 @@ public class GrpcClientTest {
         BlockchainProtobuf.Header result = javaGrpcClient.run(o -> o.getLastHeader(request));
         System.out.println(result);
         System.out.println("txhash:"+ HexUtil.toHexString(result.getHash().toByteArray()));
+        BlockchainProtobuf.Header result2 = javaGrpcClient.run(o -> o.getLastHeader(request));
+        System.out.println(result2);
+        System.out.println("txhash2:"+ HexUtil.toHexString(result2.getHash().toByteArray()));
     }
 
     /**

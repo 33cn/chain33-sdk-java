@@ -20,8 +20,10 @@ client.接口();
 3.整备好环境，使用GrpcClient调用接口
 
 ``` java
-初始化,设置Ip端口
-GrpcClient client = new GrpcClient("x.x.x.x",8802);
+配置node.properties
+List<EquivalentAddressGroup> addresses = ConfigUtil.getNodes("node.properties");
+String targetURI = "multiple";
+GrpcClient client = new GrpcClient(targetURI,addresses);
 调用接口
 client.run(o->o.method(builder));
 ```

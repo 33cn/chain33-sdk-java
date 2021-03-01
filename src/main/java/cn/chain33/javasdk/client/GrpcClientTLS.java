@@ -4,30 +4,50 @@ import cn.chain33.javasdk.model.protobuf.*;
 import cn.chain33.javasdk.utils.HexUtil;
 import com.google.protobuf.ByteString;
 import io.grpc.*;
+import io.grpc.netty.GrpcSslContexts;
+import io.grpc.netty.NegotiationType;
+import io.grpc.netty.NettyChannelBuilder;
+import io.netty.handler.ssl.SslContext;
+import io.netty.handler.ssl.SslContextBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import javax.net.ssl.SSLException;
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class GrpcClient {
+public class GrpcClientTLS {
     private static final Logger logger = LoggerFactory.getLogger(GrpcClient.class);
     private final ManagedChannel channel;
     private final chain33Grpc.chain33BlockingStub blockingStub;
 
-    private GrpcClient(ManagedChannel channel,List<EquivalentAddressGroup> addresses) {
-        this.channel = channel;
+    private static SslContext buildSslContext(String trustCertCollectionFilePath,
+                                              String clientCertChainFilePath,
+                                              String clientPrivateKeyFilePath) throws SSLException {
+        SslContextBuilder builder = GrpcSslContexts.forClient();
+        if (trustCertCollectionFilePath != null) {
+            builder.trustManager(new File(trustCertCollectionFilePath));
+        }
+        if (clientCertChainFilePath != null && clientPrivateKeyFilePath != null) {
+            builder.keyManager(new File(clientCertChainFilePath), new File(clientPrivateKeyFilePath));
+        }
+        return builder.build();
+    }
+
+    private GrpcClientTLS(ManagedChannel channel,List<EquivalentAddressGroup> addresses) {
         NameResolverRegistry nameResolverRegistry = NameResolverRegistry.getDefaultRegistry();
         NameResolverProvider nameResolverFactory = new MultipleResolverProvider(addresses);
         nameResolverRegistry.register(nameResolverFactory);
+        this.channel = channel;
         blockingStub = chain33Grpc.newBlockingStub(channel);
     }
 
-    public GrpcClient(String targetURI,List<EquivalentAddressGroup> addresses) {
-        this(ManagedChannelBuilder.forTarget(targetURI)
-                .defaultLoadBalancingPolicy("round_robin") //pick_first,grpclb,round_robin,HealthCheckingRoundRobin
-                .usePlaintext()
-                .build(),addresses);
+    public GrpcClientTLS(String targetURI,SslContext sslContext,List<EquivalentAddressGroup> addresses) {
+        this(NettyChannelBuilder.forTarget(targetURI)
+                        .negotiationType(NegotiationType.TLS)
+                        .defaultLoadBalancingPolicy("round_robin") //pick_first,grpclb,round_robin,HealthCheckingRoundRobin
+                        .sslContext(sslContext)
+                        .build(),addresses);
     }
 
     public void shutdown() throws InterruptedException {
@@ -79,3 +99,4 @@ public class GrpcClient {
     }
 
 }
+
