@@ -13,7 +13,7 @@ public class GrpcClientTest {
     // 平行链服务端口
     int port = 8802;
     // targetURI
-    String targetURI = "47.92.105.160:8802";
+    String targetURI = "127.0.0.1:8802";
     GrpcClient javaGrpcClient = new GrpcClient(targetURI,null);
 
     /**
