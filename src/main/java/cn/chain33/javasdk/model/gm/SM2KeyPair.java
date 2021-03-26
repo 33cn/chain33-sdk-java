@@ -2,6 +2,7 @@ package cn.chain33.javasdk.model.gm;
 
 import java.math.BigInteger;
 
+import cn.chain33.javasdk.utils.HexUtil;
 import org.bouncycastle.math.ec.ECPoint;
 
 /**
@@ -27,4 +28,11 @@ public class SM2KeyPair {
 		return privateKey;
 	}
 
+	public String getPublicKeyString() {
+		return HexUtil.toHexString(publicKey.getEncoded(true));
+	}
+
+	public String getPrivateKeyString() {
+		return HexUtil.toHexString(privateKey.toByteArray());
+	}
 }
