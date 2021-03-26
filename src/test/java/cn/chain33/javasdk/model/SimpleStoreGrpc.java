@@ -7,10 +7,14 @@ import cn.chain33.javasdk.model.protobuf.BlockchainProtobuf;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
+import cn.chain33.javasdk.utils.ConfigUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 import com.google.protobuf.ByteString;
+import io.grpc.EquivalentAddressGroup;
 import org.junit.Test;
+
+import java.util.List;
 
 public class SimpleStoreGrpc {
 
@@ -27,12 +31,11 @@ public class SimpleStoreGrpc {
 	int paraPort = 8901;
 	int grpcParaPort = 8902;
 	RpcClient clientPara = new RpcClient(paraIp, paraPort);
-
 	// 上链存证的内容(电子档案上链)
 	String content = "{\"档案编号\":\"ID0000001\",\"企业代码\":\"QY0000001\",\"业务标识\":\"DA000001\",\"来源系统\":\"OA\", \"文档摘要\",\"0x93689a705ac0bb4612824883060d73d02534f8ba758f5ca21a343beab2bf7b47\"}";
 
-	GrpcClient javaGrpcClient = new GrpcClient(mainIp,grpcMainPort);
-	GrpcClient javaGrpcClientPara = new GrpcClient(paraIp,grpcParaPort);
+	GrpcClient javaGrpcClient = new GrpcClient(mainIp+mainPort);
+	GrpcClient javaGrpcClientPara = new GrpcClient(paraIp+grpcParaPort);
 
 	/**
 	 * 内容存证上链

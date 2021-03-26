@@ -3,17 +3,23 @@ package cn.chain33.javasdk.client;
 import cn.chain33.javasdk.model.protobuf.BlockchainProtobuf;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
+import cn.chain33.javasdk.utils.ConfigUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import com.google.protobuf.ByteString;
+import io.grpc.EquivalentAddressGroup;
 import org.junit.Test;
+
+import java.util.List;
 
 public class GrpcClientTest {
     // 区块链节点IP
     String ip = "区块链ip";
     // 平行链服务端口
     int port = 8802;
-
-    GrpcClient javaGrpcClient = new GrpcClient(ip,port);
+    // targetURI
+    String targetURI = "multipre";
+    List<EquivalentAddressGroup> addresses = ConfigUtil.getNodes("node.properties");
+    GrpcClient javaGrpcClient = new GrpcClient(targetURI,addresses);
 
     /**
      * 获取最新高度
@@ -25,6 +31,9 @@ public class GrpcClientTest {
         BlockchainProtobuf.Header result = javaGrpcClient.run(o -> o.getLastHeader(request));
         System.out.println(result);
         System.out.println("txhash:"+ HexUtil.toHexString(result.getHash().toByteArray()));
+        BlockchainProtobuf.Header result2 = javaGrpcClient.run(o -> o.getLastHeader(request));
+        System.out.println(result2);
+        System.out.println("txhash2:"+ HexUtil.toHexString(result2.getHash().toByteArray()));
     }
 
     /**

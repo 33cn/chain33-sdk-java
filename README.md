@@ -17,6 +17,14 @@ RpcClient client = new RpcClient("x.x.x.x",8801);
 client.接口();
 ```
 
+3.整备好环境，使用GrpcClient调用接口
+
+``` java
+GrpcClient client = new GrpcClient(host);
+调用接口
+client.run(o->o.method(builder));
+```
+
 # 接口列表
 下面罗列的是java sdk提供的接口，具体调用可以参考测试代码里的例子
 
