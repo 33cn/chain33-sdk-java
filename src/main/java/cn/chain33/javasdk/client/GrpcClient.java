@@ -30,6 +30,23 @@ public class GrpcClient {
                 .build(),addresses);
     }
 
+    private GrpcClient(ManagedChannel channel) {
+        this.channel = channel;
+        blockingStub = chain33Grpc.newBlockingStub(channel);
+    }
+
+    public GrpcClient(String host, int port) {
+        this(ManagedChannelBuilder.forAddress(host, port)
+                .usePlaintext()
+                .build());
+    }
+
+    public GrpcClient(String host) {
+        this(ManagedChannelBuilder.forTarget(host)
+                .usePlaintext()
+                .build());
+    }
+
     public void shutdown() throws InterruptedException {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }

@@ -402,7 +402,28 @@ public class TransactionUtil {
 		return transationHash;
 	}
 
+	public static TransactionAllProtobuf.Transaction createTxWithCertProto(String privateKey, String execer, byte[] payLoad, SignType signType, byte[] cert, byte[] uid) {
+		if (signType == null)
+			signType = DEFAULT_SIGNTYPE;
 
+		// 如果没有私钥，创建私钥 privateKey =
+		if (privateKey == null) {
+			TransactionUtil.generatorPrivateKey();
+		}
+
+		String toAddress = getToAddress(execer.getBytes());
+		Transaction transation = createTxRaw(toAddress, execer.getBytes(), payLoad, DEFAULT_FEE);
+		// 签名
+		byte[] protobufData = encodeProtobuf(transation);
+
+		sign(signType, protobufData, HexUtil.fromHexString(privateKey), uid, transation);
+
+		byte[] certSign = CertUtils.EncodeCertToSignature(transation.getSignature().getSignature(), cert, uid);
+		transation.getSignature().setSignature(certSign);
+
+		TransactionAllProtobuf.Transaction tx = encodeProtobufWithSign2(transation);
+		return tx;
+	}
 	public static Transaction createTxRaw(String toAddress, byte[] execer, byte[] payLoad, long fee) {
 		Transaction transation = new Transaction();
 		transation.setExecer(execer);
@@ -1168,5 +1189,27 @@ public class TransactionUtil {
         String transationStr = HexUtil.toHexString(protobufData);
         return transationStr;
     }
-   
+
+    public static WasmProtobuf.wasmAction createWasmContract(String name,byte[] codes) {
+    	WasmProtobuf.wasmAction.Builder action = WasmProtobuf.wasmAction.newBuilder();
+		WasmProtobuf.wasmCreate.Builder builder = WasmProtobuf.wasmCreate.newBuilder();
+		builder.setName(name);
+		builder.setCode(ByteString.copyFrom(codes));
+		action.setCreate(builder);
+		action.setTy(1);
+		return action.build();
+	}
+
+	public static WasmProtobuf.wasmAction createWasmCallContract(String name, String method, int[] parameters) {
+		WasmProtobuf.wasmAction.Builder action = WasmProtobuf.wasmAction.newBuilder();
+		WasmProtobuf.wasmCall.Builder builder = WasmProtobuf.wasmCall.newBuilder();
+		builder.setContract(name);
+		builder.setMethod(method);
+		for(int i = 0; i < parameters.length; i++) {
+			builder.addParameters(parameters[i]);
+		}
+		action.setCall(builder);
+		action.setTy(2);
+		return action.build();
+	}
 }

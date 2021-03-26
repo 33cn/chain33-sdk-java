@@ -20,10 +20,7 @@ client.接口();
 3.整备好环境，使用GrpcClient调用接口
 
 ``` java
-配置node.properties
-List<EquivalentAddressGroup> addresses = ConfigUtil.getNodes("node.properties");
-String targetURI = "multiple";
-GrpcClient client = new GrpcClient(targetURI,addresses);
+GrpcClient client = new GrpcClient(host);
 调用接口
 client.run(o->o.method(builder));
 ```
