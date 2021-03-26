@@ -3,9 +3,13 @@ package cn.chain33.javasdk.client;
 import cn.chain33.javasdk.model.protobuf.BlockchainProtobuf;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
+import cn.chain33.javasdk.utils.ConfigUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import com.google.protobuf.ByteString;
+import io.grpc.EquivalentAddressGroup;
 import org.junit.Test;
+
+import java.util.List;
 
 public class GrpcClientTest {
     // 区块链节点IP
@@ -13,8 +17,9 @@ public class GrpcClientTest {
     // 平行链服务端口
     int port = 8802;
     // targetURI
-    String targetURI = "127.0.0.1:8802";
-    GrpcClient javaGrpcClient = new GrpcClient(targetURI,null);
+    String targetURI = "multipre";
+    List<EquivalentAddressGroup> addresses = ConfigUtil.getNodes("node.properties");
+    GrpcClient javaGrpcClient = new GrpcClient(targetURI,addresses);
 
     /**
      * 获取最新高度

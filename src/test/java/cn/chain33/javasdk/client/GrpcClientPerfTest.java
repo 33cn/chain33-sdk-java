@@ -1,26 +1,9 @@
 package cn.chain33.javasdk.client;
 
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
-import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.utils.ConfigUtil;
-import cn.chain33.javasdk.utils.HexUtil;
-import cn.chain33.javasdk.utils.TransactionUtil;
-import com.google.protobuf.ByteString;
 import io.grpc.EquivalentAddressGroup;
-import io.grpc.NameResolverProvider;
-import io.grpc.NameResolverRegistry;
-import io.grpc.StatusRuntimeException;
-
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetSocketAddress;
-import java.net.SocketAddress;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
-import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 
 public class GrpcClientPerfTest {
