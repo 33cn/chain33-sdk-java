@@ -1699,6 +1699,31 @@ public final class WasmProtobuf {
      * @return The parameters at the given index.
      */
     long getParameters(int index);
+
+    /**
+     * <code>repeated string env = 4;</code>
+     * @return A list containing the env.
+     */
+    java.util.List<java.lang.String>
+        getEnvList();
+    /**
+     * <code>repeated string env = 4;</code>
+     * @return The count of env.
+     */
+    int getEnvCount();
+    /**
+     * <code>repeated string env = 4;</code>
+     * @param index The index of the element to return.
+     * @return The env at the given index.
+     */
+    java.lang.String getEnv(int index);
+    /**
+     * <code>repeated string env = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the env at the given index.
+     */
+    com.google.protobuf.ByteString
+        getEnvBytes(int index);
   }
   /**
    * Protobuf type {@code types.wasmCall}
@@ -1716,6 +1741,7 @@ public final class WasmProtobuf {
       contract_ = "";
       method_ = "";
       parameters_ = emptyLongList();
+      env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -1782,6 +1808,15 @@ public final class WasmProtobuf {
               input.popLimit(limit);
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                env_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              env_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1799,6 +1834,9 @@ public final class WasmProtobuf {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           parameters_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          env_ = env_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1916,6 +1954,41 @@ public final class WasmProtobuf {
     }
     private int parametersMemoizedSerializedSize = -1;
 
+    public static final int ENV_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList env_;
+    /**
+     * <code>repeated string env = 4;</code>
+     * @return A list containing the env.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEnvList() {
+      return env_;
+    }
+    /**
+     * <code>repeated string env = 4;</code>
+     * @return The count of env.
+     */
+    public int getEnvCount() {
+      return env_.size();
+    }
+    /**
+     * <code>repeated string env = 4;</code>
+     * @param index The index of the element to return.
+     * @return The env at the given index.
+     */
+    public java.lang.String getEnv(int index) {
+      return env_.get(index);
+    }
+    /**
+     * <code>repeated string env = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the env at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEnvBytes(int index) {
+      return env_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1943,6 +2016,9 @@ public final class WasmProtobuf {
       }
       for (int i = 0; i < parameters_.size(); i++) {
         output.writeInt64NoTag(parameters_.getLong(i));
+      }
+      for (int i = 0; i < env_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, env_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1973,6 +2049,14 @@ public final class WasmProtobuf {
         }
         parametersMemoizedSerializedSize = dataSize;
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < env_.size(); i++) {
+          dataSize += computeStringSizeNoTag(env_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getEnvList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1994,6 +2078,8 @@ public final class WasmProtobuf {
           .equals(other.getMethod())) return false;
       if (!getParametersList()
           .equals(other.getParametersList())) return false;
+      if (!getEnvList()
+          .equals(other.getEnvList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2012,6 +2098,10 @@ public final class WasmProtobuf {
       if (getParametersCount() > 0) {
         hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
         hash = (53 * hash) + getParametersList().hashCode();
+      }
+      if (getEnvCount() > 0) {
+        hash = (37 * hash) + ENV_FIELD_NUMBER;
+        hash = (53 * hash) + getEnvList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2152,6 +2242,8 @@ public final class WasmProtobuf {
 
         parameters_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2186,6 +2278,11 @@ public final class WasmProtobuf {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.parameters_ = parameters_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          env_ = env_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.env_ = env_;
         onBuilt();
         return result;
       }
@@ -2249,6 +2346,16 @@ public final class WasmProtobuf {
           } else {
             ensureParametersIsMutable();
             parameters_.addAll(other.parameters_);
+          }
+          onChanged();
+        }
+        if (!other.env_.isEmpty()) {
+          if (env_.isEmpty()) {
+            env_ = other.env_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureEnvIsMutable();
+            env_.addAll(other.env_);
           }
           onChanged();
         }
@@ -2509,6 +2616,116 @@ public final class WasmProtobuf {
       public Builder clearParameters() {
         parameters_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureEnvIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          env_ = new com.google.protobuf.LazyStringArrayList(env_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @return A list containing the env.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getEnvList() {
+        return env_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @return The count of env.
+       */
+      public int getEnvCount() {
+        return env_.size();
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @param index The index of the element to return.
+       * @return The env at the given index.
+       */
+      public java.lang.String getEnv(int index) {
+        return env_.get(index);
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the env at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getEnvBytes(int index) {
+        return env_.getByteString(index);
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The env to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnv(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEnvIsMutable();
+        env_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @param value The env to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEnv(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEnvIsMutable();
+        env_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @param values The env to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEnv(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEnvIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, env_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnv() {
+        env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string env = 4;</code>
+       * @param value The bytes of the env to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEnvBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureEnvIsMutable();
+        env_.add(value);
         onChanged();
         return this;
       }
@@ -5880,15 +6097,16 @@ public final class WasmProtobuf {
       "ate\030\001 \001(\0132\021.types.wasmCreateH\000\022\037\n\004call\030\002" +
       " \001(\0132\017.types.wasmCallH\000\022\n\n\002ty\030\003 \001(\005B\007\n\005v" +
       "alue\"(\n\nwasmCreate\022\014\n\004name\030\001 \001(\t\022\014\n\004code" +
-      "\030\002 \001(\014\"@\n\010wasmCall\022\020\n\010contract\030\001 \001(\t\022\016\n\006" +
-      "method\030\002 \001(\t\022\022\n\nparameters\030\003 \003(\003\"\"\n\022quer" +
-      "yCheckContract\022\014\n\004name\030\001 \001(\t\"\031\n\tcustomLo" +
-      "g\022\014\n\004info\030\001 \003(\t\"/\n\021createContractLog\022\014\n\004" +
-      "name\030\001 \001(\t\022\014\n\004code\030\002 \001(\t\"C\n\017callContract" +
-      "Log\022\020\n\010contract\030\001 \001(\t\022\016\n\006method\030\002 \001(\t\022\016\n" +
-      "\006result\030\003 \001(\005\"*\n\014localDataLog\022\013\n\003key\030\001 \001" +
-      "(\014\022\r\n\005value\030\002 \001(\014B1\n!cn.chain33.javasdk." +
-      "model.protobufB\014WasmProtobufb\006proto3"
+      "\030\002 \001(\014\"M\n\010wasmCall\022\020\n\010contract\030\001 \001(\t\022\016\n\006" +
+      "method\030\002 \001(\t\022\022\n\nparameters\030\003 \003(\003\022\013\n\003env\030" +
+      "\004 \003(\t\"\"\n\022queryCheckContract\022\014\n\004name\030\001 \001(" +
+      "\t\"\031\n\tcustomLog\022\014\n\004info\030\001 \003(\t\"/\n\021createCo" +
+      "ntractLog\022\014\n\004name\030\001 \001(\t\022\014\n\004code\030\002 \001(\t\"C\n" +
+      "\017callContractLog\022\020\n\010contract\030\001 \001(\t\022\016\n\006me" +
+      "thod\030\002 \001(\t\022\016\n\006result\030\003 \001(\005\"*\n\014localDataL" +
+      "og\022\013\n\003key\030\001 \001(\014\022\r\n\005value\030\002 \001(\014B1\n!cn.cha" +
+      "in33.javasdk.model.protobufB\014WasmProtobu" +
+      "fb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5911,7 +6129,7 @@ public final class WasmProtobuf {
     internal_static_types_wasmCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_types_wasmCall_descriptor,
-        new java.lang.String[] { "Contract", "Method", "Parameters", });
+        new java.lang.String[] { "Contract", "Method", "Parameters", "Env", });
     internal_static_types_queryCheckContract_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_types_queryCheckContract_fieldAccessorTable = new

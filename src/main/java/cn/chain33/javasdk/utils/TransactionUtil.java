@@ -1200,13 +1200,16 @@ public class TransactionUtil {
 		return action.build();
 	}
 
-	public static WasmProtobuf.wasmAction createWasmCallContract(String name, String method, int[] parameters) {
+	public static WasmProtobuf.wasmAction createWasmCallContract(String name, String method, int[] parameters,String[] envs) {
 		WasmProtobuf.wasmAction.Builder action = WasmProtobuf.wasmAction.newBuilder();
 		WasmProtobuf.wasmCall.Builder builder = WasmProtobuf.wasmCall.newBuilder();
 		builder.setContract(name);
 		builder.setMethod(method);
 		for(int i = 0; i < parameters.length; i++) {
 			builder.addParameters(parameters[i]);
+		}
+		for(int i = 0; i < envs.length; i++) {
+			builder.addEnv(envs[i]);
 		}
 		action.setCall(builder);
 		action.setTy(2);
