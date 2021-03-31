@@ -102,6 +102,7 @@ public class WasmTest {
         }
         String method = "call";
         int[] parameters = new int[]{1,2,3};
+        String[] envs = new String[]{"1","2","3"};
         // 从文件加载账户
         Account account = new Account();
         AccountInfo accountInfo = account.loadGMAccountLocal("test", "", "./test/keystore/b01568b358e336f28d86baaa27df2a07dd01b6991f82f9bc680896ce4ceeaf77_sk");
@@ -112,7 +113,7 @@ public class WasmTest {
 //        builder.setContract(contractName);
 //        builder.setMethod(method);
 //        byte[] reqBytes = builder.build().toByteArray();
-        WasmProtobuf.wasmAction call = TransactionUtil.createWasmCallContract(contractName,method,parameters);
+        WasmProtobuf.wasmAction call = TransactionUtil.createWasmCallContract(contractName,method,parameters,envs);
         String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
         // 发送交易
         String hash = chain33client.submitTransaction(transactionHash);
@@ -130,6 +131,7 @@ public class WasmTest {
             execer = title+execer;
         }
         int[] parameters = new int[]{1,2,3};
+        String[] envs = new String[]{"1","2","3"};
         // 从文件加载账户
         Account account = new Account();
         AccountInfo accountInfo = account.loadGMAccountLocal("test", "", "./test/keystore/b01568b358e336f28d86baaa27df2a07dd01b6991f82f9bc680896ce4ceeaf77_sk");
@@ -141,7 +143,7 @@ public class WasmTest {
 //        builder.setMethod(method);
 //        builder.setParameters(0,0);
 //        byte[] reqBytes = builder.build().toByteArray();
-        WasmProtobuf.wasmAction call = TransactionUtil.createWasmCallContract(contractName,method,parameters);
+        WasmProtobuf.wasmAction call = TransactionUtil.createWasmCallContract(contractName,method,parameters,envs);
 
         TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
         // 发送交易
