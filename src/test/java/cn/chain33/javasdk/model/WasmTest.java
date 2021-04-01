@@ -95,6 +95,66 @@ public class WasmTest {
      * 构造chain33 wasm结构jsonRpc
      */
     @Test
+    public void updateWasmContract() throws Exception {
+        String contractName = "test";
+        if (isPara == true) {
+            execer = title+execer;
+        }
+        ByteArrayOutputStream content = getWasmContent("test/wasm/dice.wasm");
+        byte[] codes = content.toByteArray();
+        System.out.println("codes length"+codes.length);
+        // 从文件加载账户
+        Account account = new Account();
+        AccountInfo accountInfo = account.loadGMAccountLocal("test", "", "./authdir/crypto/org1/user1/keystore/8e6675d9ab566931ca967bb0b520e431d89bde2d9567f50d8ec6a4cad46a8955_sk");
+        // 加载用户证书
+        byte[] certBytes = CertUtils.getCertFromFile("./authdir/crypto/org1/user1/cacerts/org1-cert.pem");
+        // 构造交易
+//        WasmProtobuf.wasmCreate.Builder builder = WasmProtobuf.wasmCreate.newBuilder();
+//        builder.setName(contractName);
+//        builder.setCode(ByteString.copyFrom(codes));
+//        byte[] reqBytes = builder.build().toByteArray();
+        WasmProtobuf.wasmAction update = TransactionUtil.updateWasmContract(contractName,codes);
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        // 发送交易
+        String hash = chain33client.submitTransaction(transactionHash);
+        System.out.println("hash:"+hash);
+    }
+
+    /**
+     * 构造chain33 wasm结构 GRPC
+     */
+    @Test
+    public void updateWasmContractGrpc() throws Exception {
+        javaGrpcClient = new GrpcClient(grpcHost);
+        String contractName = "test2";
+        if (isPara == true) {
+            execer = title+execer;
+        }
+        ByteArrayOutputStream content = getWasmContent("test/wasm/dice.wasm");
+        byte[] codes = content.toByteArray();
+
+        // 从文件加载账户
+        Account account = new Account();
+        AccountInfo accountInfo = account.loadGMAccountLocal("test", "", "./authdir/crypto/org1/user1/keystore/8e6675d9ab566931ca967bb0b520e431d89bde2d9567f50d8ec6a4cad46a8955_sk");
+        // 加载用户证书
+        byte[] certBytes = CertUtils.getCertFromFile("./authdir/crypto/org1/user1/cacerts/org1-cert.pem");
+        // 构造交易
+//        WasmProtobuf.wasmCreate.Builder builder = WasmProtobuf.wasmCreate.newBuilder();
+//        builder.setName(contractName);
+//        builder.setCode(ByteString.copyFrom(codes));
+//        byte[] reqBytes = builder.build().toByteArray();
+        WasmProtobuf.wasmAction update = TransactionUtil.updateWasmContract(contractName,codes);
+        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        // 发送交易
+        CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
+        System.out.println("txhash:"+"0x"+ HexUtil.toHexString(result.getMsg().toByteArray()));
+    }
+
+
+    /**
+     * 构造chain33 wasm结构jsonRpc
+     */
+    @Test
     public void callWasmContract() throws Exception {
         String contractName = "test";
         if (isPara == true) {
@@ -152,7 +212,7 @@ public class WasmTest {
     }
 
     public ByteArrayOutputStream getWasmContent(String file) throws IOException {
-        BufferedInputStream in = new BufferedInputStream(new FileInputStream("test/wasm/dice.wasm"));
+        BufferedInputStream in = new BufferedInputStream(new FileInputStream(file));
         ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
 
         System.out.println("Available bytes:" + in.available());
