@@ -7,6 +7,7 @@ import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
+import cn.chain33.javasdk.model.enums.WasmEnum;
 import cn.chain33.javasdk.model.protobuf.*;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
@@ -1196,7 +1197,17 @@ public class TransactionUtil {
 		builder.setName(name);
 		builder.setCode(ByteString.copyFrom(codes));
 		action.setCreate(builder);
-		action.setTy(1);
+		action.setTy(WasmEnum.WasmCreate.getTy());
+		return action.build();
+	}
+
+	public static WasmProtobuf.wasmAction updateWasmContract(String name,byte[] codes) {
+		WasmProtobuf.wasmAction.Builder action = WasmProtobuf.wasmAction.newBuilder();
+		WasmProtobuf.wasmUpdate.Builder builder = WasmProtobuf.wasmUpdate.newBuilder();
+		builder.setName(name);
+		builder.setCode(ByteString.copyFrom(codes));
+		action.setUpdate(builder);
+		action.setTy(WasmEnum.WasmUpdate.getTy());
 		return action.build();
 	}
 
@@ -1212,7 +1223,7 @@ public class TransactionUtil {
 			builder.addEnv(envs[i]);
 		}
 		action.setCall(builder);
-		action.setTy(2);
+		action.setTy(WasmEnum.WasmCall.getTy());
 		return action.build();
 	}
 }
