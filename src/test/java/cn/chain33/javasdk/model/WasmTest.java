@@ -4,6 +4,7 @@ import cn.chain33.javasdk.client.Account;
 import cn.chain33.javasdk.client.GrpcClient;
 import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.enums.SignType;
+import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.protobuf.WasmProtobuf;
@@ -36,7 +37,7 @@ public class WasmTest {
      */
     @Test
     public void testWasmAll() throws Exception {
-        String contractName = "test8";
+        String contractName = "test9";
         if (isPara == true) {
             execer = title+execer;
         }
@@ -49,7 +50,7 @@ public class WasmTest {
         // 加载用户证书
         byte[] certBytes = CertUtils.getCertFromFile("./authdir/crypto/org1/user1/cacerts/org1-cert.pem");
         WasmProtobuf.wasmAction create = WasmUtil.createWasmContract(contractName,codes);
-        String createTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, create.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String createTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, create.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String createHash = chain33client.submitTransaction(createTx);
         System.out.println("hash:"+createHash);
@@ -60,7 +61,7 @@ public class WasmTest {
         int[] parameters = new int[]{1,2};
         String[] envs = new String[]{"test1","test2"};
         WasmProtobuf.wasmAction call = WasmUtil.createWasmCallContract(contractName,method,parameters,null);
-        String callTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String callTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String callHash = chain33client.submitTransaction(callTx);
         System.out.println("hash:"+callHash);
@@ -69,7 +70,7 @@ public class WasmTest {
         System.out.println("===========>更新wasm合约<===========");
         byte[] newCodes  = getWasmContent("test/wasm/evidence.wasm");
         WasmProtobuf.wasmAction update = WasmUtil.updateWasmContract(contractName,newCodes);
-        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String hash = chain33client.submitTransaction(transactionHash);
         System.out.println("hash:"+hash);
@@ -78,7 +79,7 @@ public class WasmTest {
         System.out.println("===========>调用旧wasm合约<===========");
         String oldMethod = "play";
         WasmProtobuf.wasmAction oldCall = WasmUtil.createWasmCallContract(contractName,oldMethod,parameters,null);
-        String oldCallTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, oldCall.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String oldCallTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, oldCall.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String oldCallHash = chain33client.submitTransaction(oldCallTx);
         System.out.println("hash:"+oldCallHash);
@@ -87,7 +88,7 @@ public class WasmTest {
         System.out.println("===========>调用新wasm合约<===========");
         String newMethod = "AddStateTx";
         WasmProtobuf.wasmAction newCall = WasmUtil.createWasmCallContract(contractName,newMethod,null,envs);
-        String newCallTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, newCall.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String newCallTx = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, newCall.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String newCallHash = chain33client.submitTransaction(newCallTx);
         System.out.println("hash:"+newCallHash);
@@ -118,7 +119,7 @@ public class WasmTest {
 //        byte[] reqBytes = builder.build().toByteArray();
         System.out.println(accountInfo);
         WasmProtobuf.wasmAction create = WasmUtil.createWasmContract(contractName,codes);
-        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, create.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, create.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String hash = chain33client.submitTransaction(transactionHash);
         System.out.println("hash:"+hash);
@@ -147,7 +148,7 @@ public class WasmTest {
 //        builder.setCode(ByteString.copyFrom(codes));
 //        byte[] reqBytes = builder.build().toByteArray();
         WasmProtobuf.wasmAction create = WasmUtil.createWasmContract(contractName,codes);
-        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, create.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, create.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
         System.out.println("txhash:"+"0x"+ HexUtil.toHexString(result.getMsg().toByteArray()));
@@ -175,7 +176,7 @@ public class WasmTest {
 //        builder.setCode(ByteString.copyFrom(codes));
 //        byte[] reqBytes = builder.build().toByteArray();
         WasmProtobuf.wasmAction update = WasmUtil.updateWasmContract(contractName,codes);
-        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String hash = chain33client.submitTransaction(transactionHash);
         System.out.println("hash:"+hash);
@@ -204,7 +205,7 @@ public class WasmTest {
 //        builder.setCode(ByteString.copyFrom(codes));
 //        byte[] reqBytes = builder.build().toByteArray();
         WasmProtobuf.wasmAction update = WasmUtil.updateWasmContract(contractName,codes);
-        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, update.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
         System.out.println("txhash:"+"0x"+ HexUtil.toHexString(result.getMsg().toByteArray()));
@@ -234,7 +235,7 @@ public class WasmTest {
 //        builder.setMethod(method);
 //        byte[] reqBytes = builder.build().toByteArray();
         WasmProtobuf.wasmAction call = WasmUtil.createWasmCallContract(contractName,method,parameters,envs);
-        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         String hash = chain33client.submitTransaction(transactionHash);
         System.out.println("hash:"+hash);
@@ -266,7 +267,7 @@ public class WasmTest {
 //        byte[] reqBytes = builder.build().toByteArray();
         WasmProtobuf.wasmAction call = WasmUtil.createWasmCallContract(contractName,method,parameters,envs);
 
-        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, "ca test".getBytes());
+        TransactionAllProtobuf.Transaction transaction = TransactionUtil.createTxWithCertProto(accountInfo.getPrivateKey(), execer, call.toByteArray(), SignType.SM2, certBytes, SM2Util.Default_Uid);
         // 发送交易
         CommonProtobuf.Reply result = javaGrpcClient.run(o->o.sendTransaction(transaction));
         System.out.println("txhash:"+"0x"+ HexUtil.toHexString(result.getMsg().toByteArray()));
