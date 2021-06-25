@@ -14,12 +14,9 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 import cn.chain33.javasdk.utils.HexUtil;
-import org.bitcoinj.core.ECKey;
-import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.crypto.params.ECDomainParameters;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.math.ec.ECPoint;
-import org.bouncycastle.asn1.DERInteger;
 import org.spongycastle.asn1.ASN1InputStream;
 import org.spongycastle.asn1.ASN1Integer;
 import org.spongycastle.asn1.DERSequenceGenerator;
