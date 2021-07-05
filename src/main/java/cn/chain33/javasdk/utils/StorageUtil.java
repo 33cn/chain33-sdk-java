@@ -46,6 +46,37 @@ public class StorageUtil {
     }
 
     /**
+     *
+     * @description KV字符串模型
+     * @param key 键字符串，唯一索引
+     * @param value
+     * @param op 0创建，1表示追加
+     * @return  payload
+     *
+     */
+    public static String createOnlyNotaryStorage(String key, String value,Integer op, String execer, String privateKey) {
+        Builder contentOnlyNotaryStorageBuilder = StorageProtobuf.ContentOnlyNotaryStorage.newBuilder();
+        contentOnlyNotaryStorageBuilder.setKey(key).setValue(value).setOp(op);//内容小于512k;
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder storageActionBuilder = StorageProtobuf.StorageAction.newBuilder();
+        storageActionBuilder.setContentStorage(contentOnlyNotaryStorageBuilder.build());
+        storageActionBuilder.setTy(StorageEnum.ContentOnlyNotaryStorage.getTy());
+        StorageAction storageAction = storageActionBuilder.build();
+
+        String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer.getBytes(), storageAction.toByteArray(),
+                TransactionUtil.DEFAULT_FEE, 0);
+        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+        TransactionAllProtobuf.Transaction parseFrom = null;
+        try {
+            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        return hexString;
+    }
+
+    /**
      * 内容存证模型,平行链代扣模式
      * @param content
      * @param execer
