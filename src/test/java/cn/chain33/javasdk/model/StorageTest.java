@@ -23,7 +23,7 @@ import cn.chain33.javasdk.client.RpcClient;
 public class StorageTest {
 	
 	// 联盟链节点IP
-	String ip = "119.3.154.140";
+	String ip = "ip";
 	// 平行链服务端口
 	int port = 8801;
 	int gprcPort = 8802;
