@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import cn.chain33.javasdk.client.GrpcClient;
 import cn.chain33.javasdk.model.enums.StorageEnum;
 import cn.chain33.javasdk.model.protobuf.*;
+import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.*;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.grpc.StatusRuntimeException;
@@ -22,7 +23,7 @@ import cn.chain33.javasdk.client.RpcClient;
 public class StorageTest {
 	
 	// 联盟链节点IP
-	String ip = "节点IP";
+	String ip = "ip";
 	// 平行链服务端口
 	int port = 8801;
 	int gprcPort = 8802;
@@ -48,27 +49,32 @@ public class StorageTest {
 
 	/**
 	 * 内容存证,KV字符串存储
+	 * @throws UnsupportedEncodingException 
 	 */
 	@Test
-	public void kvStore() throws InterruptedException {
+	public void kvStore() throws InterruptedException, UnsupportedEncodingException {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
 		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
 		// 唯一索引
-		String key= "project20210625";
+		String key= "project20210709";
 		String value1="01工序====";
-		String value2="02工序====";
+
 		String txEncode = StorageUtil.createOnlyNotaryStorage(key,value1,0, execer, privateKey);
 		String submitTransaction = client.submitTransaction(txEncode);
 		System.out.println(submitTransaction);
-
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(5);
+        
+        getData(key);
 		//更新键值,add value2
+		String value2="02工序====";
 		txEncode = StorageUtil.createOnlyNotaryStorage(key,value2,1, execer, privateKey);
 		submitTransaction = client.submitTransaction(txEncode);
 		System.out.println(submitTransaction);
+        TimeUnit.SECONDS.sleep(5);
 
+        getData(key);
 
 	}
 
@@ -142,7 +148,7 @@ public class StorageTest {
 	@Test
 	public void queryStorage() throws UnsupportedEncodingException {
 		// contentStore
-		JSONObject resultJson = client.queryStorage("0x401f043696500030d49a511505b5c703e943382082b1154880e753acacb3d443");
+		JSONObject resultJson = client.queryStorage("project20210708");
 		
 		JSONObject resultArray;
         if (resultJson.containsKey("linkStorage")) {
@@ -332,6 +338,18 @@ public class StorageTest {
 //			String result = new String(contentByte,"UTF-8");
 //			System.out.println("存证内容是:" + result);
 //		}
+	}
+	
+	
+	private void getData(String key) throws UnsupportedEncodingException {
+
+		JSONObject resultJson = client.queryStorage(key);
+		JSONObject resultArray;
+    	resultArray = resultJson.getJSONObject("contentStorage");
+    	String key1 = resultArray.getString("key");
+    	String value = resultArray.getString("value");
+    	System.out.println("存证的key值是:" + key1 + " 存证的value值是:" + value);
+
 	}
 
 }
