@@ -387,6 +387,42 @@ public class RpcClient {
         }
         return null;
     }
+    
+    /**
+     * @description 根据哈希列表获取区块的详细信息
+     * 
+     * @param hash 区块hash
+     * @return 区块信息
+     */
+    public List<BlockResult> getBlockByHashes(String[] hashes, boolean disableDetail) {
+        if (hashes == null || hashes.length == 0) {
+            return null;
+        }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("hashes", hashes);
+        jsonObject.put("disableDetail", disableDetail);
+        RpcRequest postData = getPostData(RpcMethod.GET_BLOCK_BY_HASHS);
+        postData.addJsonParams(jsonObject);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject jsonResult = parseObject.getJSONObject("result");
+            JSONArray jsonArray = jsonResult.getJSONArray("items");
+            List<BlockResult> blockResultList = new ArrayList<BlockResult>();
+            for (int i = 0; i < jsonArray.size(); i++) {
+                JSONObject blockJson = jsonArray.getJSONObject(i);
+                BlockResult blockResult = JSONObject.toJavaObject(blockJson, BlockResult.class);
+                blockResult.setBlockTime(new Date(blockResult.getBlockTime().getTime() * 1000));
+                blockResultList.add(blockResult);
+            }
+            return blockResultList;
+        }
+        return null;
+        
+   }
 
     /**
      * @description 获取远程节点列表
@@ -411,7 +447,50 @@ public class RpcClient {
         }
         return null;
     }
-
+    
+    
+    /**
+     * @description 查询节点状态
+     * @return 节点状态
+     */
+    public NetResult getNetInfo() {
+        RpcRequest postData = getPostData(RpcMethod.GET_NET_INFO);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            NetResult netResult = JSONObject.toJavaObject(resultJson, NetResult.class);
+            return netResult;
+        }
+        return null;
+    }
+    
+    /**
+     * @description 获取系统支持签名类型
+     * @return 签名类型列表
+     */
+    public List<CryptoResult> getCryptoResult() {
+        RpcRequest postData = getPostData(RpcMethod.GET_CRYPTO_INFO);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            JSONArray jsonArray = resultJson.getJSONArray("cryptos");
+            List<CryptoResult> cryptoList = new ArrayList<>();
+            for (int i = 0; i < jsonArray.size(); i++) {
+                JSONObject cryptoJson = jsonArray.getJSONObject(i);
+                CryptoResult crypto = JSONObject.toJavaObject(cryptoJson, CryptoResult.class);
+                cryptoList.add(crypto);
+            }
+            return cryptoList;
+        }
+        return null;
+    }
+    
     private RpcRequest getPostData(RpcMethod method) {
         RpcRequest postJsonData = new RpcRequest();
         postJsonData.setMethod(method);
@@ -2016,4 +2095,30 @@ public class RpcClient {
         }
         return null;
     }
+    
+    /**
+     * 
+     * @description 获取版本号
+     * @return 版本号
+     *
+     */
+    public VersionResult getVersion() {
+        RpcRequest postData = getPostData(RpcMethod.VERSION);
+        String result = HttpUtil.httpPostBody(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            try {
+                JSONObject parseObject = JSONObject.parseObject(result);
+                if (messageValidate(parseObject))
+                    return null;
+                JSONObject resultJson = parseObject.getJSONObject("result");
+                VersionResult versionResult = resultJson.toJavaObject(VersionResult.class);
+                return versionResult;
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        return null;
+    }
+    
+    
 }

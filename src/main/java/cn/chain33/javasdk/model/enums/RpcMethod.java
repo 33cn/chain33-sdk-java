@@ -20,10 +20,16 @@ public enum RpcMethod {
 	
 	GET_BLOCK_HASH("Chain33.GetBlockHash"),
 	
+	GET_BLOCK_BY_HASHS("Chain33.GetBlockByHashes"),
+	
 	GET_BLOCK_DETAIL("Chain33.GetBlockOverview"),
 	
 	GET_PEER_INFO("Chain33.GetPeerInfo"),
 	
+	GET_NET_INFO("Chain33.GetNetInfo"),
+	
+	GET_CRYPTO_INFO("Chain33.GetCryptoList"),
+			
 	GET_WALLET_STUATUS("Chain33.GetWalletStatus"),
 	
 	LOCK_WALLET("Chain33.Lock"),
@@ -100,8 +106,10 @@ public enum RpcMethod {
 
 	LIST_PUSHES("Chain33.ListPushes"),
 
-	GET_PUSH_SEQ_LAST_NUM("Chain33.GetPushSeqLastNum");
-
+	GET_PUSH_SEQ_LAST_NUM("Chain33.GetPushSeqLastNum"),
+	
+	VERSION("Chain33.Version");
+	
 	private String method;
 	
 	private RpcMethod(String method) {
