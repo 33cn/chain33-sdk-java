@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.AccountResult;
+import cn.chain33.javasdk.model.rpcresult.BlockResult;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.model.rpcresult.TokenBalanceResult;
@@ -303,7 +304,7 @@ public class RpcClientTest {
     @Test
     public void convertExecertoAddr() {
         String address;
-        address = client.convertExectoAddr("user.p.midea.user.write");
+        address = client.convertExectoAddr("token");
         System.out.println(address);
     }
 
@@ -397,6 +398,7 @@ public class RpcClientTest {
 	   String submitTransaction = client.submitTransaction(signRawTx);
 	   System.out.println(submitTransaction);
 	}
+	
 	
 	/**
 	 * 接口QPS测试(单线程)
