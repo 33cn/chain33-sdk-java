@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.chain33.javasdk.client.RpcClient;
+import org.bitcoinj.wallet.UnreadableWalletException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,23 +12,25 @@ import com.alibaba.fastjson.JSONObject;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import cn.chain33.javasdk.client.Account;
+import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.HexUtil;
+import cn.chain33.javasdk.utils.SeedUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class AccountTest {
 
-    String ip = "139.196.201.120";
-    RpcClient client = new RpcClient(ip, 8901);
+    String ip = "172.22.19.101";
+    RpcClient client = new RpcClient(ip, 8801);
 
 	Account account = new Account();
 
 	/**
 	 * 
-	 * @description 创建账户 (私钥，公钥，地址)
+	 * @description 直接创建账户 (私钥，公钥，地址)
 	 *
 	 */
 	@Test
@@ -37,6 +39,35 @@ public class AccountTest {
 		System.out.println("privateKey is:" + accountInfo.getPrivateKey());
 		System.out.println("publicKey is:" + accountInfo.getPublicKey());
 		System.out.println("Address is:" + accountInfo.getAddress());
+	}
+	
+	/**
+	 * 根据seed创建私钥，公钥，地址
+	 * @throws UnreadableWalletException 
+	 */
+	@Test
+	public void createAccountBySeed() throws UnreadableWalletException {
+		// 生成助记词
+		String mnemonic = SeedUtil.generateMnemonic();
+		System.out.println("助记词：" + mnemonic);
+		
+		// 根据助记词生成私钥，公钥，地址
+		AccountInfo info = SeedUtil.createAccountBy33PATH(mnemonic, 0);
+		System.out.println("privateKey is:" + info.getPrivateKey());
+		System.out.println("publicKey is:" + info.getPublicKey());
+		System.out.println("Address is:" + info.getAddress());
+		
+		
+		info = SeedUtil.createAccountBy33PATH(mnemonic, 1);
+		System.out.println("privateKey is:" + info.getPrivateKey());
+		System.out.println("publicKey is:" + info.getPublicKey());
+		System.out.println("Address is:" + info.getAddress());
+		
+		info = SeedUtil.createAccountBy33PATH(mnemonic, 10000000);
+		System.out.println("privateKey is:" + info.getPrivateKey());
+		System.out.println("publicKey is:" + info.getPublicKey());
+		System.out.println("Address is:" + info.getAddress());
+		
 	}
 
 	/**
@@ -51,10 +82,11 @@ public class AccountTest {
 
 	/**
 	 * @throws InterruptedException
+	 * @throws IOException 
 	 * @description 本地构造主链主积分转账交易
 	 */
 	@Test
-	public void createCoinTransferTxMain() throws InterruptedException {
+	public void createCoinTransferTxMain() throws InterruptedException, IOException {
 
 		TransferBalanceRequest transferBalanceRequest = new TransferBalanceRequest();
 

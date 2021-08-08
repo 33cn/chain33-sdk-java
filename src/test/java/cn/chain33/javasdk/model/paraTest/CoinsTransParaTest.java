@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.model.paraTest;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,53 +13,54 @@ import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
- * å¹³è¡Œé“¾ä¸Šï¼Œé€šè¿‡ä»£æ‰£çš„æ–¹å¼è½¬coins
+ * Æ½ĞĞÁ´ÉÏ£¬Í¨¹ı´ú¿ÛµÄ·½Ê½×ªcoins
  * @author fkeit
  *
  */
 public class CoinsTransParaTest {
 	
-	// å¹³è¡Œé“¾IP
-	String ip = "å¹³è¡Œé“¾IP";
-	// å¹³è¡Œé“¾æœåŠ¡ç«¯å£
+	// Æ½ĞĞÁ´IP
+	String ip = "Æ½ĞĞÁ´IP";
+	// Æ½ĞĞÁ´·şÎñ¶Ë¿Ú
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);
     
-    // å¹³è¡Œé“¾åç§°ï¼Œå›ºå®šæ ¼å¼user.p.xxxx.  å…¶ä¸­xxxxå¯æ›¿æ¢ï¼Œæ”¯æŒå¤§å°å†™è‹±æ–‡å­—æ¯
+    // Æ½ĞĞÁ´Ãû³Æ£¬¹Ì¶¨¸ñÊ½user.p.xxxx.  ÆäÖĞxxxx¿ÉÌæ»»£¬Ö§³Ö´óĞ¡Ğ´Ó¢ÎÄ×ÖÄ¸
 	String paraName = "user.p.evm.";
 	
     /**
      * 
      * @throws InterruptedException 
-     * @description æœ¬åœ°ç­¾åä»£æ‰£äº¤æ˜“ç»„ï¼Œè°ƒç”¨createNoBlanceä¹‹åå†å°†è¿”å›çš„æ•°æ®è§£æ,ç­¾åï¼Œå‘é€äº¤æ˜“
-     * ä»£æ‰£äº¤æ˜“ä¸»è¦ç”¨åœ¨å¹³è¡Œé“¾çš„åœºåˆï¼Œä¸»é“¾ä¸Šçš„äº¤æ˜“ä¸éœ€è¦å…³æ³¨æ­¤å®ç°
+     * @throws IOException 
+     * @description ±¾µØÇ©Ãû´ú¿Û½»Ò××é£¬µ÷ÓÃcreateNoBlanceÖ®ºóÔÙ½«·µ»ØµÄÊı¾İ½âÎö,Ç©Ãû£¬·¢ËÍ½»Ò×
+     * ´ú¿Û½»Ò×Ö÷ÒªÓÃÔÚÆ½ĞĞÁ´µÄ³¡ºÏ£¬Ö÷Á´ÉÏµÄ½»Ò×²»ĞèÒª¹Ø×¢´ËÊµÏÖ
      *
      */
     @Test
-    public void transferCoins() throws InterruptedException {
-    	// è½¬è´¦è¯´æ˜
-        String note = "è½¬è´¦è¯´æ˜";
-        // ä¸»ä»£å¸åˆ™ä¸º"",å…¶ä»–ä¸ºtokenå
+    public void transferCoins() throws InterruptedException, IOException {
+    	// ×ªÕËËµÃ÷
+        String note = "×ªÕËËµÃ÷";
+        // Ö÷´ú±ÒÔòÎª"",ÆäËûÎªtokenÃû
         String coinToken = "";
-        // è½¬è´¦æ•°é‡ä¸º1
+        // ×ªÕËÊıÁ¿Îª1
         Long amount = 1 * 10000000L;
         String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
-        // æœ¬åœ°æ„é€ è½¬è´¦äº¤æ˜“çš„payload
+        // ±¾µØ¹¹Ôì×ªÕË½»Ò×µÄpayload
         byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
         
-        // ç­¾åç§ç§é’¥ï¼Œä¸»é“¾ä¸Šä¸ä¼šæ‰£é™¤æœ¬åœ°å€ä¸‹çš„ä¸»é“¾å¸ï¼Œæ‰€ä»¥æ­¤åœ°å€ä¸‹å¯ä»¥æ²¡æœ‰ä¸»é“¾å¸
+        // Ç©ÃûË½Ë½Ô¿£¬Ö÷Á´ÉÏ²»»á¿Û³ı±¾µØÖ·ÏÂµÄÖ÷Á´±Ò£¬ËùÒÔ´ËµØÖ·ÏÂ¿ÉÒÔÃ»ÓĞÖ÷Á´±Ò
         String fromAddressPriveteKey = "CC38546E9E659D15E6B4893F0AB32A06D103931A8230B0BDE71459D2B27D6944";
-        // æ‰§è¡Œå™¨åç§°ï¼Œå¹³è¡Œé“¾ä¸»ä»£å¸ä¸ºå¹³è¡Œé“¾åç§°+coins(å¹³è¡Œé“¾å¯¹åº”é…ç½®æ–‡ä»¶ä¸­çš„titleé¡¹)
+        // Ö´ĞĞÆ÷Ãû³Æ£¬Æ½ĞĞÁ´Ö÷´ú±ÒÎªÆ½ĞĞÁ´Ãû³Æ+coins(Æ½ĞĞÁ´¶ÔÓ¦ÅäÖÃÎÄ¼şÖĞµÄtitleÏî)
         String execer = paraName + "coins";
-        // å¹³è¡Œé“¾è½¬è´¦æ—¶ï¼Œå®é™…toçš„åœ°å€å¡«åœ¨payloadä¸­ï¼Œå¤–å±‚çš„toåœ°å€å¯¹åº”çš„æ˜¯åˆçº¦çš„åœ°å€
+        // Æ½ĞĞÁ´×ªÕËÊ±£¬Êµ¼ÊtoµÄµØÖ·ÌîÔÚpayloadÖĞ£¬Íâ²ãµÄtoµØÖ·¶ÔÓ¦µÄÊÇºÏÔ¼µÄµØÖ·
         String contranctAddress = client.convertExectoAddr(execer);
         String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer, payload);
         
-        //create no balance ä¼ å…¥åœ°å€ä¸ºç©º
+        //create no balance ´«ÈëµØÖ·Îª¿Õ
         String createNoBalanceTx = client.createNoBalanceTx(createTransferTx, "");
-        // è§£æäº¤æ˜“
+        // ½âÎö½»Ò×
         List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-        // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥
+        // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿
         String withHoldPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
         String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, fromAddressPriveteKey, withHoldPrivateKey);
         String submitTransaction = client.submitTransaction(hexString);
@@ -81,12 +83,13 @@ public class CoinsTransParaTest {
     
     /**
      * 
-     * @description æŸ¥è¯¢coinsä½™é¢
+     * @throws IOException 
+     * @description ²éÑ¯coinsÓà¶î
      *
      */
     @Test
-    public void getTokenBalace() {
-        // æ‰§è¡Œå™¨åç§°
+    public void getTokenBalace() throws IOException {
+        // Ö´ĞĞÆ÷Ãû³Æ
         String execer = paraName + "coins";
         
         List<String> addressList = new ArrayList<>();

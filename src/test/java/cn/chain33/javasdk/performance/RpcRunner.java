@@ -1,5 +1,7 @@
 package cn.chain33.javasdk.performance;
 
+import java.io.IOException;
+
 import cn.chain33.javasdk.client.RpcClient;
 
 public class RpcRunner implements Runnable{
@@ -18,7 +20,12 @@ public class RpcRunner implements Runnable{
         long start = System.currentTimeMillis();
 		for (int i = 0; i < 1000; i++) {
 
-			clientTh.queryTx(hash);
+			try {
+				clientTh.queryTx(hash);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             if (i == 999) {
         		long end = System.currentTimeMillis();
         		long total = end - start;

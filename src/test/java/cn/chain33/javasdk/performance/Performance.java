@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.performance;
 
+import java.io.IOException;
 import java.util.Random;
 
 import cn.chain33.javasdk.client.Account;
@@ -159,7 +160,7 @@ public class Performance {
 				try {
 					txHeight = client.getLastHeader().getHeight();
 					Thread.sleep(1000);
-				} catch (InterruptedException  e) {
+				} catch (InterruptedException | IOException  e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}

@@ -64,7 +64,7 @@ public class GrpcClientPerfTest {
 
         private  final  int sleep;
 
-        public WorkJob(CountDownLatch countDownLatch,int sleep,String ip,List socketAddress) {
+        public WorkJob(CountDownLatch countDownLatch,int sleep,String ip,List<EquivalentAddressGroup> socketAddress) {
             this.countDownLatch = countDownLatch;
             this.sleep = sleep;
             this.javaGrpcClient = new GrpcClient(ip,socketAddress);

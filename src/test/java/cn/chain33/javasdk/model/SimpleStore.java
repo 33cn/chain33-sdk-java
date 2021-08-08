@@ -1,5 +1,7 @@
 package cn.chain33.javasdk.model;
 
+import java.io.IOException;
+
 import org.junit.Test;
 
 import cn.chain33.javasdk.client.Account;
@@ -34,9 +36,10 @@ public class SimpleStore {
 	// ========================================== 联盟链的场景 start ==============================================================
 	/**
 	 * 内容存证上链
+	 * @throws IOException 
 	 */
 	@Test
-	public void writeData() {
+	public void writeData() throws IOException {
 		// 存证智能合约的名称（简单存证，固定就用这个名称）
 		String execer = "user.write";
 		// 合约地址
@@ -58,9 +61,10 @@ public class SimpleStore {
 
 	/**
 	 * 查询
+	 * @throws IOException 
 	 */
 	@Test
-	public void getData() {
+	public void getData() throws IOException {
 		// 交易hash
 		// String hash = "上一步上链返回的hash";
 		String hash = "0xd283df553f62b65306e927677b91052d0a652342acf262ee82c9f43ba519a032";
@@ -78,9 +82,10 @@ public class SimpleStore {
 	// ========================================== 平行链的场景 start  ==============================================================
 	/**
 	 * 内容存证上链
+	 * @throws IOException 
 	 */
 	@Test
-	public void writeParaData() {
+	public void writeParaData() throws IOException {
 		// 存证智能合约的名称（简单存证，固定就用这个名称）
 		String execer = "user.p.midea.user.write";
 		// 合约地址
@@ -101,9 +106,10 @@ public class SimpleStore {
 
 	/**
 	 * 查询
+	 * @throws IOException 
 	 */
 	@Test
-	public void getParaData() {
+	public void getParaData() throws IOException {
 		// 交易hash
 		// String hash = "上一步上链返回的hash";
 		String hash = "0xaa09d0cd3f231e8ae6cb3d9456db1ec035bd08143052441e50850c96de082418";

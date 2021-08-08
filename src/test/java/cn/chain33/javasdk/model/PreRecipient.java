@@ -5,6 +5,8 @@ import cn.chain33.javasdk.model.pre.ReKeyFrag;
 import cn.chain33.javasdk.utils.*;
 import com.alibaba.fastjson.JSONObject;
 
+import java.io.IOException;
+
 import javax.xml.bind.DatatypeConverter;
 
 import org.junit.Test;
@@ -39,9 +41,10 @@ public class PreRecipient {
 
     /**
      * Bob解密
+     * @throws IOException 
      */
     @Test
-    public void preDecryptBob() {
+    public void preDecryptBob() throws IOException {
         AccountInfo bob = new AccountInfo();
         bob.setPrivateKey(RecipientBobPrivateKey);
         bob.setPublicKey(TransactionUtil.getHexPubKeyFromPrivKey(RecipientBobPrivateKey));
@@ -65,9 +68,10 @@ public class PreRecipient {
     
     /**
      * Tom解密
+     * @throws IOException 
      */
     @Test
-    public void preDecryptTom() {
+    public void preDecryptTom() throws IOException {
         AccountInfo tom = new AccountInfo();
         tom.setPrivateKey(RecipientTomPrivateKey);
         tom.setPublicKey(TransactionUtil.getHexPubKeyFromPrivKey(RecipientTomPrivateKey));
@@ -87,9 +91,10 @@ public class PreRecipient {
     
     /**
      * James解密
+     * @throws IOException 
      */
     @Test
-    public void preDecryptJames() {
+    public void preDecryptJames() throws IOException {
         AccountInfo james = new AccountInfo();
         james.setPrivateKey(RecipientBobPrivateKey);
         james.setPublicKey(TransactionUtil.getHexPubKeyFromPrivKey(RecipientJamesPrivateKey));
@@ -112,8 +117,9 @@ public class PreRecipient {
      * 
      * @param accountInfo
      * @return
+     * @throws IOException 
      */
-    public  byte[] downloadKey(AccountInfo accountInfo) {
+    public  byte[] downloadKey(AccountInfo accountInfo) throws IOException {
         // 申请重加密，需要两边的公钥
         ReKeyFrag[] reKeyFrags = new ReKeyFrag[threshold];
         for(int i = 0; i < threshold; i++) {

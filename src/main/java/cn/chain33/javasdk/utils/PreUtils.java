@@ -172,7 +172,7 @@ public class PreUtils {
         } else {
             BigInteger[] coeffs = makeShamirPolyCoeff(threshold);
             List<BigInteger> coeffsList = Arrays.asList(coeffs);
-            List<BigInteger> arrList = new ArrayList(coeffsList);
+            List<BigInteger> arrList = new ArrayList<BigInteger>(coeffsList);
             arrList.add(f0);
             coeffs = arrList.toArray(new BigInteger[arrList.size()]);
 

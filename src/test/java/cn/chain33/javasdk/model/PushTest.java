@@ -6,6 +6,7 @@ import org.junit.Test;
 import cn.chain33.javasdk.client.RpcClient;
 import cn.chain33.javasdk.model.rpcresult.BooleanResult;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,10 +40,11 @@ public class PushTest {
      *  - URL相同
      *  如果推送已经停止，则重新开始推送；
      *  如果推送正常，则继续推送；
+     * @throws IOException 
      */
     @Test
-    public void push(){
-        Map<String,Boolean> m = new HashMap();
+    public void push() throws IOException{
+        Map<String,Boolean> m = new HashMap<String, Boolean>();
         m.put("coin",true);
         BooleanResult result = clientMain.addPushSubscribe("test1","http://127.0.0.1:8080","json",0,0,"",0,m);
         System.out.println(result.toString());
@@ -50,18 +52,20 @@ public class PushTest {
 
     /**
      *  获取推送列表
+     * @throws IOException 
      */
     @Test
-    public void listPushes(){
+    public void listPushes() throws IOException{
         ListPushesResult result = clientMain.listPushes();
         System.out.println(result.toString());
     }
 
     /**
      *  获取name对应推送最新seq值
+     * @throws IOException 
      */
     @Test
-    public void getPushSeqLastNum(){
+    public void getPushSeqLastNum() throws IOException{
         String name = "test";
         Int64Result result = clientMain.getPushSeqLastNum(name);
         System.out.println(result.toString());

@@ -13,8 +13,6 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 
-import org.bitcoinj.core.listeners.NewBestBlockListener;
-
 public class AesUtil {
     
     /**

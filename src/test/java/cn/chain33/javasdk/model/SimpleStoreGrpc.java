@@ -1,20 +1,18 @@
 package cn.chain33.javasdk.model;
 
+import java.io.IOException;
+
+import org.junit.Test;
+
+import com.google.protobuf.ByteString;
+
 import cn.chain33.javasdk.client.Account;
 import cn.chain33.javasdk.client.GrpcClient;
 import cn.chain33.javasdk.client.RpcClient;
-import cn.chain33.javasdk.model.protobuf.BlockchainProtobuf;
 import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
-import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
-import cn.chain33.javasdk.utils.ConfigUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
-import com.google.protobuf.ByteString;
-import io.grpc.EquivalentAddressGroup;
-import org.junit.Test;
-
-import java.util.List;
 
 public class SimpleStoreGrpc {
 
@@ -39,9 +37,10 @@ public class SimpleStoreGrpc {
 
 	/**
 	 * 内容存证上链
+	 * @throws IOException 
 	 */
 	@Test
-	public void writeData() {
+	public void writeData() throws IOException {
 		// 存证智能合约的名称（简单存证，固定就用这个名称）
 		String execer = "user.write";
 		//jsonrpc
@@ -79,9 +78,10 @@ public class SimpleStoreGrpc {
 	// ========================================== 平行链的场景 start  ==============================================================
 	/**
 	 * 内容存证上链
+	 * @throws IOException 
 	 */
 	@Test
-	public void writeParaData() {
+	public void writeParaData() throws IOException {
 		// 存证智能合约的名称（简单存证，固定就用这个名称）
 		String execer = "user.p.midea.user.write";
 		//jsonrpc

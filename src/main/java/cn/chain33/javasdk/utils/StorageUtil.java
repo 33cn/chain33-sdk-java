@@ -1,18 +1,17 @@
 package cn.chain33.javasdk.utils;
 
-import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import cn.chain33.javasdk.model.enums.StorageEnum;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf;
-import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage;
 import cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 
 public class StorageUtil {
     

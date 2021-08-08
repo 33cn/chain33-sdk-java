@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.model.paraTest;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,52 +14,52 @@ import cn.chain33.javasdk.model.rpcresult.TokenResult;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
- *	åŒ…å«ç§¯åˆ†åç§°é»‘åå•ï¼Œç§¯åˆ†çš„é¢„å‘è¡Œï¼Œç§¯åˆ†å‘è¡Œï¼Œç§¯åˆ†å¢å‘ï¼Œç§¯åˆ†æŸ¥è¯¢ç­‰æ¥å£
- *	ç§¯åˆ†å‘è¡Œæ­¥éª¤ï¼š
- *	1. é€šè¿‡å½“å‰é“¾çš„è¶…çº§ç®¡ç†å‘˜æ¥é…ç½®è‡ªå®šä¹‰ç§¯åˆ†çš„é»‘åå•(å…¨å±€é…ç½®ï¼šé€šå¸¸æƒ…å†µä¸‹åªéœ€è¦æ‰§è¡Œä¸€æ¬¡)ã€‚
- *	2. é€šè¿‡å½“å‰é“¾çš„è¶…çº§ç®¡ç†å‘˜æ¥é…ç½®è‡ªå®šä¹‰ç§¯åˆ†çš„å®¡æ ¸è€…(å…¨å±€é…ç½®ï¼šé€šå¸¸æƒ…å†µä¸‹åªéœ€è¦æ‰§è¡Œä¸€æ¬¡)ã€‚
- *	3. é€šè¿‡ç§¯åˆ†å®¡æ ¸è€…æ¥é¢„å‘è¡Œè‡ªå®šä¹‰ç§¯åˆ†ã€‚
- *	4. é€šè¿‡ç§¯åˆ†å®¡æ ¸è€…æ¥æ­£å¼å‘è¡Œè‡ªå®šä¹‰ç§¯åˆ†ã€‚
+ *	°üº¬»ı·ÖÃû³ÆºÚÃûµ¥£¬»ı·ÖµÄÔ¤·¢ĞĞ£¬»ı·Ö·¢ĞĞ£¬»ı·ÖÔö·¢£¬»ı·Ö²éÑ¯µÈ½Ó¿Ú
+ *	»ı·Ö·¢ĞĞ²½Öè£º
+ *	1. Í¨¹ıµ±Ç°Á´µÄ³¬¼¶¹ÜÀíÔ±À´ÅäÖÃ×Ô¶¨Òå»ı·ÖµÄºÚÃûµ¥(È«¾ÖÅäÖÃ£ºÍ¨³£Çé¿öÏÂÖ»ĞèÒªÖ´ĞĞÒ»´Î)¡£
+ *	2. Í¨¹ıµ±Ç°Á´µÄ³¬¼¶¹ÜÀíÔ±À´ÅäÖÃ×Ô¶¨Òå»ı·ÖµÄÉóºËÕß(È«¾ÖÅäÖÃ£ºÍ¨³£Çé¿öÏÂÖ»ĞèÒªÖ´ĞĞÒ»´Î)¡£
+ *	3. Í¨¹ı»ı·ÖÉóºËÕßÀ´Ô¤·¢ĞĞ×Ô¶¨Òå»ı·Ö¡£
+ *	4. Í¨¹ı»ı·ÖÉóºËÕßÀ´ÕıÊ½·¢ĞĞ×Ô¶¨Òå»ı·Ö¡£
  * @author fkeit
  */
 public class TokenParaTest {
 
 	
-	// å¹³è¡Œé“¾IP
-	String ip = "å¹³è¡Œé“¾IP";
-	// å¹³è¡Œé“¾æœåŠ¡ç«¯å£
+	// Æ½ĞĞÁ´IP
+	String ip = "Æ½ĞĞÁ´IP";
+	// Æ½ĞĞÁ´·şÎñ¶Ë¿Ú
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);
     
-    // å¹³è¡Œé“¾åç§°ï¼Œå›ºå®šæ ¼å¼user.p.xxxx.  å…¶ä¸­xxxxå¯æ›¿æ¢ï¼Œæ”¯æŒå¤§å°å†™è‹±æ–‡å­—æ¯
+    // Æ½ĞĞÁ´Ãû³Æ£¬¹Ì¶¨¸ñÊ½user.p.xxxx.  ÆäÖĞxxxx¿ÉÌæ»»£¬Ö§³Ö´óĞ¡Ğ´Ó¢ÎÄ×ÖÄ¸
 	String paraName = "user.p.evm.";
 	
-	// å½“å‰é“¾è¶…çº§ç®¡ç†å‘˜çš„ç§é’¥ï¼ˆsuperManagerï¼‰ï¼Œ  å¯¹åº”åœ°å€ï¼š 1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs
-	// åœ¨BTYå…¬é“¾å¹³è¡Œé“¾çš„åœºåˆä¸‹ï¼Œåœ°å€ä¸‹éœ€è¦å¸¦æœ‰ç›¸åº”çš„coinsï¼Œç”¨äºæ”¯ä»˜äº¤æ˜“æ‰‹ç»­è´¹
-	// è”ç›Ÿé“¾é»˜è®¤ä¸æ”¶å–æ‰‹ç»­è´¹ï¼Œæ‰€ä»¥è”ç›Ÿé“¾+å¹³è¡Œé“¾çš„åœºåˆä¸‹ï¼Œåœ°å€ä¸‹å¯ä»¥æ²¡æœ‰coins
+	// µ±Ç°Á´³¬¼¶¹ÜÀíÔ±µÄË½Ô¿£¨superManager£©£¬  ¶ÔÓ¦µØÖ·£º 1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs
+	// ÔÚBTY¹«Á´Æ½ĞĞÁ´µÄ³¡ºÏÏÂ£¬µØÖ·ÏÂĞèÒª´øÓĞÏàÓ¦µÄcoins£¬ÓÃÓÚÖ§¸¶½»Ò×ÊÖĞø·Ñ
+	// ÁªÃËÁ´Ä¬ÈÏ²»ÊÕÈ¡ÊÖĞø·Ñ£¬ËùÒÔÁªÃËÁ´+Æ½ĞĞÁ´µÄ³¡ºÏÏÂ£¬µØÖ·ÏÂ¿ÉÒÔÃ»ÓĞcoins
 	String superManagerPk = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
     
     /**
      * 
      * @throws Exception 
-     * @description åˆ›å»ºè‡ªå®šä¹‰ç§¯åˆ†çš„é»‘åå•
+     * @description ´´½¨×Ô¶¨Òå»ı·ÖµÄºÚÃûµ¥
      *
      */
     @Test
     public void createBlackList() throws Exception {
 
-    	// ç®¡ç†åˆçº¦åç§°
+    	// ¹ÜÀíºÏÔ¼Ãû³Æ
     	String execerName = paraName + "manage";
-    	// ç®¡ç†åˆçº¦:é…ç½®é»‘åå•KEY
+    	// ¹ÜÀíºÏÔ¼:ÅäÖÃºÚÃûµ¥KEY
     	String key = "token-blacklist";
-    	// ç®¡ç†åˆçº¦:é…ç½®é»‘åå•VALUE
+    	// ¹ÜÀíºÏÔ¼:ÅäÖÃºÚÃûµ¥VALUE
     	String value = "BTC";
-    	// ç®¡ç†åˆçº¦:é…ç½®æ“ä½œç¬¦
+    	// ¹ÜÀíºÏÔ¼:ÅäÖÃ²Ù×÷·û
     	String op = "add";
-    	// æ„é€ å¹¶ç­¾åäº¤æ˜“,ä½¿ç”¨é“¾çš„ç®¡ç†å‘˜ï¼ˆsuperManagerï¼‰è¿›è¡Œç­¾åï¼Œ 
-    	// 55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4 å¯¹åº”çš„æµ‹è¯•åœ°å€æ˜¯ï¼š1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7
+    	// ¹¹Ôì²¢Ç©Ãû½»Ò×,Ê¹ÓÃÁ´µÄ¹ÜÀíÔ±£¨superManager£©½øĞĞÇ©Ãû£¬ 
+    	// 55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4 ¶ÔÓ¦µÄ²âÊÔµØÖ·ÊÇ£º1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7
     	String txEncode = TransactionUtil.createManage(key, value, op, superManagerPk, execerName);
-    	// å‘é€äº¤æ˜“
+    	// ·¢ËÍ½»Ò×
     	String hash = client.submitTransaction(txEncode);
     	System.out.print(hash);
     }
@@ -66,49 +67,50 @@ public class TokenParaTest {
     /**
      * 
      * @throws Exception 
-     * @description åˆ›å»ºè‡ªå®šä¹‰ç§¯åˆ†çš„token-finisher
+     * @description ´´½¨×Ô¶¨Òå»ı·ÖµÄtoken-finisher
      *
      */
     @Test
     public void createTokenFinisher() throws Exception {
 
-    	// ç®¡ç†åˆçº¦åç§°
+    	// ¹ÜÀíºÏÔ¼Ãû³Æ
     	String execerName = paraName + "manage";;
-    	// ç®¡ç†åˆçº¦:é…ç½®KEY
+    	// ¹ÜÀíºÏÔ¼:ÅäÖÃKEY
     	String key = "token-finisher";
-    	// ç®¡ç†åˆçº¦:é…ç½®VALUEï¼Œç”¨äºå®¡æ ¸tokençš„åˆ›å»ºï¼Œå¯ä»¥æˆæƒè¶…çº§ç®¡ç†å‘˜åœ°å€ï¼Œä¹Ÿå¯ä»¥æˆæƒå…¶å®ƒåœ°å€
+    	// ¹ÜÀíºÏÔ¼:ÅäÖÃVALUE£¬ÓÃÓÚÉóºËtokenµÄ´´½¨£¬¿ÉÒÔÊÚÈ¨³¬¼¶¹ÜÀíÔ±µØÖ·£¬Ò²¿ÉÒÔÊÚÈ¨ÆäËüµØÖ·
     	String value = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
-    	// ç®¡ç†åˆçº¦:é…ç½®æ“ä½œç¬¦
+    	// ¹ÜÀíºÏÔ¼:ÅäÖÃ²Ù×÷·û
     	String op = "add";
     	String txEncode = TransactionUtil.createManage(key, value, op, superManagerPk, execerName);
-    	// å‘é€äº¤æ˜“
+    	// ·¢ËÍ½»Ò×
     	String hash = client.submitTransaction(txEncode);
     	System.out.print(hash);
     	
     }
     
 	/**
-	 * æœ¬åœ°é¢„åˆ›å»ºtokenå¹¶æäº¤
+	 * ±¾µØÔ¤´´½¨token²¢Ìá½»
+	 * @throws IOException 
 	 */
 	@Test
-	public void preCreateTokenLocal() {
-	   //tokenæ€»é¢
+	public void preCreateTokenLocal() throws IOException {
+	   //token×Ü¶î
 	   long total = 19900000000000000L;
-	   //tokençš„æ³¨é‡Šåç§°
+	   //tokenµÄ×¢ÊÍÃû³Æ
 	   String name = "DEVELOP COINS";
-	   //tokençš„åç§°ï¼Œåªæ”¯æŒå¤§å†™å­—æ¯ï¼ŒåŒä¸€æ¡é“¾ä¸å…è®¸ç›¸åŒsymbolå­˜åœ¨
+	   //tokenµÄÃû³Æ£¬Ö»Ö§³Ö´óĞ´×ÖÄ¸£¬Í¬Ò»ÌõÁ´²»ÔÊĞíÏàÍ¬symbol´æÔÚ
 	   String symbol = "COINSDEVX";
-	   //tokenä»‹ç»
-	   String introduction = "å¼€å‘è€…å¸";
-	   //å‘è¡Œtokenæ„¿æ„æ‰¿æ‹…çš„è´¹ç”¨ï¼Œå¡«0å°±è¡Œ
+	   //token½éÉÜ
+	   String introduction = "¿ª·¢Õß±Ò";
+	   //·¢ĞĞtokenÔ¸Òâ³Ğµ£µÄ·ÑÓÃ£¬Ìî0¾ÍĞĞ
 	   Long price = 0L;
-	   //0 ä¸ºæ™®é€štokenï¼Œ 1 å¯å¢å‘å’Œç‡ƒçƒ§
+	   //0 ÎªÆÕÍ¨token£¬ 1 ¿ÉÔö·¢ºÍÈ¼ÉÕ
 	   Integer category = 0;
-	   //åˆçº¦åç§°
+	   //ºÏÔ¼Ãû³Æ
 	   String execer = paraName + "token";
-	   //tokençš„æ‹¥æœ‰è€…åœ°å€
+	   //tokenµÄÓµÓĞÕßµØÖ·
 	   String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
-	   //token-finisheråœ°å€å¯¹åº”çš„ç§é’¥ï¼ˆcreateTokenFinisherå‡½æ•°ä¸­é…ç½®çš„ï¼švalueï¼‰
+	   //token-finisherµØÖ·¶ÔÓ¦µÄË½Ô¿£¨createTokenFinisherº¯ÊıÖĞÅäÖÃµÄ£ºvalue£©
 	   String managerPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
 	   String precreateTx = TransactionUtil.createPrecreateTokenTx(execer, name, symbol, introduction, total, price,
 	           owner, category, managerPrivateKey);
@@ -117,15 +119,16 @@ public class TokenParaTest {
 	}
 	
 	/**
-	 * æœ¬åœ°åˆ›å»ºtokenå®Œæˆäº¤æ˜“å¹¶æäº¤
+	 * ±¾µØ´´½¨tokenÍê³É½»Ò×²¢Ìá½»
+	 * @throws IOException 
 	 */
 	@Test
-	public void createTokenFinishLocal() {
+	public void createTokenFinishLocal() throws IOException {
 	   String symbol = "COINSDEVX";
 	   String execer = paraName + "token";
-	   //token-finisheråœ°å€å¯¹åº”çš„ç§é’¥ï¼ˆcreateTokenFinisherå‡½æ•°ä¸­é…ç½®çš„ï¼švalueï¼‰
+	   //token-finisherµØÖ·¶ÔÓ¦µÄË½Ô¿£¨createTokenFinisherº¯ÊıÖĞÅäÖÃµÄ£ºvalue£©
 	   String managerPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
-	   // tokençš„æ‹¥æœ‰è€…åœ°å€
+	   // tokenµÄÓµÓĞÕßµØÖ·
 	   String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
 	   String hexData = TransactionUtil.createTokenFinishTx(symbol, execer, owner, managerPrivateKey);
 	   String submitTransaction = client.submitTransaction(hexData);
@@ -133,30 +136,31 @@ public class TokenParaTest {
 	}
 	
     /**
-     * å¹³è¡Œé“¾ä¸Šçš„è½¬è´¦äº¤æ˜“ä¸€èˆ¬é€šè¿‡ä»£æ‰£çš„æ–¹å¼è¿›è¡Œ
+     * Æ½ĞĞÁ´ÉÏµÄ×ªÕË½»Ò×Ò»°ãÍ¨¹ı´ú¿ÛµÄ·½Ê½½øĞĞ
      * @throws InterruptedException 
-     * @description é€šè¿‡ä»£æ‰£çš„æ–¹å¼æ„é€ tokençš„è½¬è´¦äº¤æ˜“
+     * @throws IOException 
+     * @description Í¨¹ı´ú¿ÛµÄ·½Ê½¹¹ÔìtokenµÄ×ªÕË½»Ò×
      */
     @Test
-    public void createTokenTransfer() throws InterruptedException {
-    	// è½¬è´¦è¯´æ˜
-        String note = "è½¬è´¦è¯´æ˜";
-        // tokenå
+    public void createTokenTransfer() throws InterruptedException, IOException {
+    	// ×ªÕËËµÃ÷
+        String note = "×ªÕËËµÃ÷";
+        // tokenÃû
         String coinToken = "COINSDEVX";
         Long amount = 10000 * 100000000L;// 1 = real amount
-        // è½¬åˆ°çš„åœ°å€
+        // ×ªµ½µÄµØÖ·
         String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
-        // ç­¾åç§é’¥ï¼Œé‡Œé¢éœ€è¦æœ‰ä¸»é“¾å¸ï¼Œç”¨äºç¼´çº³æ‰‹ç»­è´¹
+        // Ç©ÃûË½Ô¿£¬ÀïÃæĞèÒªÓĞÖ÷Á´±Ò£¬ÓÃÓÚ½ÉÄÉÊÖĞø·Ñ
         String fromAddressPriveteKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-        // æ‰§è¡Œå™¨åç§°
+        // Ö´ĞĞÆ÷Ãû³Æ
         String execer = paraName + "token";
         String txEncode = TransactionUtil.createTokenTransferTx(fromAddressPriveteKey, to, execer, amount, coinToken, note);
         
         String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
         
-	    // è§£æäº¤æ˜“
+	    // ½âÎö½»Ò×
 	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	    // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥ ï¼ˆæ‰€æœ‰äº¤æ˜“çš„æ‰‹ç»­è´¹éƒ½ä»è¿™ä¸ªåœ°å€æ‰£é™¤ï¼‰
+	    // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿ £¨ËùÓĞ½»Ò×µÄÊÖĞø·Ñ¶¼´ÓÕâ¸öµØÖ·¿Û³ı£©
 	    String withHoldPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
 	    
 	    String contranctAddress = client.convertExectoAddr(execer);
@@ -181,13 +185,14 @@ public class TokenParaTest {
     
     /**
      * 
-     * @description æŸ¥è¯¢å·²ç»åˆ›å»ºçš„token
+     * @throws IOException 
+     * @description ²éÑ¯ÒÑ¾­´´½¨µÄtoken
      *
      */
     @Test
-    public void queryCreateTokens() {
+    public void queryCreateTokens() throws IOException {
         String execer = paraName + "token";
-        //çŠ¶æ€ 0é¢„åˆ›å»ºçš„ 1åˆ›å»ºæˆåŠŸçš„
+        //×´Ì¬ 0Ô¤´´½¨µÄ 1´´½¨³É¹¦µÄ
         Integer status = 1;
         List<TokenResult> queryCreateTokens;
         queryCreateTokens = client.queryCreateTokens(status,execer);
@@ -199,12 +204,13 @@ public class TokenParaTest {
 	
     /**
      * 
-     * @description æŸ¥è¯¢tokenä½™é¢
+     * @throws IOException 
+     * @description ²éÑ¯tokenÓà¶î
      *
      */
     @Test
-    public void getTokenBalace() {
-        // æ‰§è¡Œå™¨åç§°
+    public void getTokenBalace() throws IOException {
+        // Ö´ĞĞÆ÷Ãû³Æ
         String execer = paraName + "token";
         
         List<String> addressList = new ArrayList<>();
