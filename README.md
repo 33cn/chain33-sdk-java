@@ -11,7 +11,7 @@ Chain33的Java SDK提供交易构造、交易签名、数据加密、发送交�
 1.下载最新的JAVA-SDK版本  
 下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.13/chain33-sdk-java-1.0.13.zip  
 
-2. 将SDK压缩包中的JAR包安装到本地仓库。 
+2.将SDK压缩包中的JAR包安装到本地仓库。 
 在JAR包所在目录，执行以下命令：  
 ``` java 
 mvn install:install-file -Dfile=chain33-sdk-java.jar -DgroupId=cn.chain33 -DartifactId=chain33-sdk-java -Dversion=1.0.13 -Dpackaging=jar
@@ -19,7 +19,7 @@ mvn install:install-file -Dfile=chain33-sdk-java.jar -DgroupId=cn.chain33 -Darti
 执行结果中打印BUILD SUCCESS，表明添加成功。
 如果time out导致构建失败，可以再次执行以上命令，直至构建成功。
 
-3. 通过pom.xml导入依赖的jar包
+3.通过pom.xml导入依赖的jar包
 如果导入依赖缓慢，或出现Connection timed out的报错信息，则可能是因为默认中央仓库下载超时，可以切换成阿里云镜像重试。
 
 ``` xml
