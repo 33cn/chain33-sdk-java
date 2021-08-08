@@ -1,6 +1,7 @@
 # chain33-sdk-java
 Chain33的Java SDK提供交易构造、交易签名、数据加密、发送交易、查询交易、区块链查询等能力，以便于应用层更容易的接入区块链。
 
+支持离线生成助记词，私钥，公钥，地址。  
 支持查询区块链信息，如区块高度、交易、节点信息、同步状态。  
 支持部署EVM和WASM合智能合约，并调用。  
 支持JSON-RPC和gRPC调用。  
@@ -103,6 +104,7 @@ client.run(o->o.method(builder));
  - StorageUtil.createLinkNotaryStorage 创建链接存证模型(payload)
  - StorageUtil.createEncryptNotaryStorage 隐私存证模型型(payload)
  - StorageUtil.createEncryptShareNotaryStorage 创建分享隐私存证模型(payload)
-
+ - SeedUtil.generateMnemonic  离线生成助记词
+ - SeedUtil.createAccountBy33PATH  根据助记词离线生成私钥和地址
 
 
