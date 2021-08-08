@@ -1,5 +1,7 @@
 package cn.chain33.javasdk.model;
 
+import java.io.IOException;
+
 import org.junit.Test;
 
 import cn.chain33.javasdk.client.RpcClient;
@@ -15,9 +17,10 @@ public class ExceptionTest {
 	/**
 	 * 双花测试
 	 * @throws InterruptedException
+	 * @throws IOException 
 	 */
 	@Test
-	public void doubleSpent() throws InterruptedException {
+	public void doubleSpent() throws InterruptedException, IOException {
 
 		TransferBalanceRequest transferBalanceRequest = new TransferBalanceRequest();
 
@@ -50,9 +53,10 @@ public class ExceptionTest {
 	/**
 	 * 超出额度花费
 	 * @throws InterruptedException
+	 * @throws IOException 
 	 */
 	@Test
-	public void overflowSpent() throws InterruptedException {
+	public void overflowSpent() throws InterruptedException, IOException {
 
 		TransferBalanceRequest transferBalanceRequest = new TransferBalanceRequest();
 

@@ -1,20 +1,25 @@
 package cn.chain33.javasdk.model;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.concurrent.TimeUnit;
 
-import cn.chain33.javasdk.client.GrpcClient;
-import cn.chain33.javasdk.model.enums.StorageEnum;
-import cn.chain33.javasdk.model.protobuf.*;
-import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
-import cn.chain33.javasdk.utils.*;
-import com.google.protobuf.InvalidProtocolBufferException;
-import io.grpc.StatusRuntimeException;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONObject;
+import com.google.protobuf.InvalidProtocolBufferException;
 
+import cn.chain33.javasdk.client.GrpcClient;
 import cn.chain33.javasdk.client.RpcClient;
+import cn.chain33.javasdk.model.protobuf.BlockchainProtobuf;
+import cn.chain33.javasdk.model.protobuf.CommonProtobuf;
+import cn.chain33.javasdk.model.protobuf.StorageProtobuf;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
+import cn.chain33.javasdk.utils.AesUtil;
+import cn.chain33.javasdk.utils.HexUtil;
+import cn.chain33.javasdk.utils.StorageUtil;
+import cn.chain33.javasdk.utils.TransactionUtil;
+import io.grpc.StatusRuntimeException;
 
 /**
  *	包含内容存证, 哈希存证,链接存证,隐私存证,分享隐私存证几个接口（联盟链场景）
@@ -34,9 +39,10 @@ public class StorageTest {
     
 	/**
 	 * 内容存证
+	 * @throws IOException 
 	 */
 	@Test
-	public void contentStore() {
+	public void contentStore() throws IOException {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -49,10 +55,10 @@ public class StorageTest {
 
 	/**
 	 * 内容存证,KV字符串存储
-	 * @throws UnsupportedEncodingException 
+	 * @throws IOException 
 	 */
 	@Test
-	public void kvStore() throws InterruptedException, UnsupportedEncodingException {
+	public void kvStore() throws InterruptedException, IOException {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -80,9 +86,10 @@ public class StorageTest {
 
 	/**
 	 * 哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
+	 * @throws IOException 
 	 */
 	@Test
-	public void hashStore() {
+	public void hashStore() throws IOException {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -96,9 +103,10 @@ public class StorageTest {
 	
     /**
      * 链接存证模型
+     * @throws IOException 
      */
 	@Test
-	public void hashAndLinkStore() {
+	public void hashAndLinkStore() throws IOException {
 		// 存证智能合约的名称
 		String execer = "storage";
 		// 签名用的私钥
@@ -143,10 +151,10 @@ public class StorageTest {
 	
 	/**
 	 * 根据hash查询存证结果
-	 * @throws UnsupportedEncodingException 
+	 * @throws IOException 
 	 */
 	@Test
-	public void queryStorage() throws UnsupportedEncodingException {
+	public void queryStorage() throws IOException {
 		// contentStore
 		JSONObject resultJson = client.queryStorage("project20210708");
 		
@@ -341,7 +349,7 @@ public class StorageTest {
 	}
 	
 	
-	private void getData(String key) throws UnsupportedEncodingException {
+	private void getData(String key) throws IOException {
 
 		JSONObject resultJson = client.queryStorage(key);
 		JSONObject resultArray;

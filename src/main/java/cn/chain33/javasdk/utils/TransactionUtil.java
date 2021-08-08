@@ -7,8 +7,6 @@ import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
-import cn.chain33.javasdk.model.enums.WasmEnum;
-import cn.chain33.javasdk.model.protobuf.*;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
 import org.bouncycastle.asn1.sec.SECNamedCurves;
@@ -31,11 +29,16 @@ import cn.chain33.javasdk.model.decode.DecodeRawTransaction;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
+import cn.chain33.javasdk.model.protobuf.CoinsProtobuf;
+import cn.chain33.javasdk.model.protobuf.ManageProtobuf;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder;
+import cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf;
+import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate;
+import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransfer;
 import net.vrallev.java.ecc.Ecc25519Helper;
 
@@ -131,6 +134,36 @@ public class TransactionUtil {
 		return addressToString(address);
 	}
 
+	/**
+	 * 将evm地址转成base58编码地址
+	 * @param addressByte
+	 * @return
+	 * @throws Exception
+	 */
+	public static String encodeAddress(byte[] addressByte) {
+		Address address = new Address();
+		address.setHash160(addressByte);
+		return addressToString(address);
+	}
+
+	/**
+	 * 将base58编码的地址转成evm地址
+	 * @param address chain33地址
+	 * @return
+	 * @throws Exception
+	 */
+	public static byte[] decodeAddress(String address) throws Exception {
+		byte[] decodeBytes = Base58Util.decode(address);
+		if (decodeBytes.length < 25) {
+			throw new Exception("Address too short " + HexUtil.toHexString(decodeBytes));
+		}
+
+		if(!validAddress(address)) {
+			throw new Exception("Address check failed " + HexUtil.toHexString(decodeBytes));
+		}
+
+		return ByteUtils.subArray(decodeBytes, 1,decodeBytes.length - 4);
+	}
 	/**
 	 * 
 	 * @description 校验地址是否符合规则
@@ -471,7 +504,7 @@ public class TransactionUtil {
 	 * @param execer
 	 * @return
 	 */
-	private static String getToAddress(byte[] execer) {
+	public static String getToAddress(byte[] execer) {
 		byte[] mergeredByte = TransactionUtil.byteMerger(addrSeed, execer);
 		byte[] sha256_1 = TransactionUtil.Sha256(mergeredByte);
 		for (int i = 0; i < sha256_1.length; i++) {

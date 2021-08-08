@@ -1,15 +1,12 @@
 package cn.chain33.javasdk.client;
 
+import java.net.URI;
+import java.util.List;
+
 import io.grpc.Attributes;
 import io.grpc.EquivalentAddressGroup;
 import io.grpc.NameResolver;
 import io.grpc.NameResolverProvider;
-
-import java.net.SocketAddress;
-import java.net.URI;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class MultipleResolverProvider extends NameResolverProvider {
 

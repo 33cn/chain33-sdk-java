@@ -1,23 +1,49 @@
 # chain33-sdk-java
-调用chain33 rpc接口的java客户端。
+Chain33的Java SDK提供交易构造、交易签名、数据加密、发送交易、查询交易、区块链查询等能力，以便于应用层更容易的接入区块链。
+
+支持离线生成助记词，私钥，公钥，地址。  
+支持查询区块链信息，如区块高度、交易、节点信息、同步状态。  
+支持部署EVM和WASM合智能合约，并调用。  
+支持JSON-RPC和gRPC调用。  
+兼容国密标准SM2、SM3和SM4。  
+支持原生存证、积分发行和转账等能力。  
 
 # 使用
 1.下载最新的JAVA-SDK版本  
 下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.13/chain33-sdk-java-1.0.13.zip  
-解压后，通过mvn下载依赖jar包  
 
-2.整备好环境，使用RpcClient调用接口
+2.将SDK压缩包中的JAR包安装到本地仓库。 
+在JAR包所在目录，执行以下命令：  
+``` java 
+mvn install:install-file -Dfile=chain33-sdk-java.jar -DgroupId=cn.chain33 -DartifactId=chain33-sdk-java -Dversion=1.0.13 -Dpackaging=jar
+```
+执行结果中打印BUILD SUCCESS，表明添加成功。
+如果time out导致构建失败，可以再次执行以上命令，直至构建成功。
+
+3.通过pom.xml导入依赖的jar包
+如果导入依赖缓慢，或出现Connection timed out的报错信息，则可能是因为默认中央仓库下载超时，可以切换成阿里云镜像重试。
+
+``` xml
+<!—阿里云镜像 -->
+  <mirror> 
+    <id>alimaven</id> 
+	<name>aliyun maven</name>
+    <url>http://maven.aliyun.com/nexus/content/groups/public/</url> 
+    <mirrorOf>central</mirrorOf>         
+</mirror>
+```
+
+4.准备好环境，使用RpcClient调用接口
 
 ``` java
-初始化,设置Ip端口
+// JSONRPC调用方式：初始化,设置Ip端口
 RpcClient client = new RpcClient("x.x.x.x",8801);
 调用接口
 client.接口();
 ```
 
-3.整备好环境，使用GrpcClient调用接口
-
 ``` java
+// GRPC调用方式
 GrpcClient client = new GrpcClient(host);
 调用接口
 client.run(o->o.method(builder));
@@ -78,6 +104,7 @@ client.run(o->o.method(builder));
  - StorageUtil.createLinkNotaryStorage 创建链接存证模型(payload)
  - StorageUtil.createEncryptNotaryStorage 隐私存证模型型(payload)
  - StorageUtil.createEncryptShareNotaryStorage 创建分享隐私存证模型(payload)
-
+ - SeedUtil.generateMnemonic  离线生成助记词
+ - SeedUtil.createAccountBy33PATH  根据助记词离线生成私钥和地址
 
 
