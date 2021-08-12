@@ -20,24 +20,20 @@ public final class EvmService {
 
     /**
      * <code>string addr = 1;</code>
-     * @return The addr.
      */
     java.lang.String getAddr();
     /**
      * <code>string addr = 1;</code>
-     * @return The bytes for addr.
      */
     com.google.protobuf.ByteString
         getAddrBytes();
 
     /**
      * <code>.EVMContractData data = 2;</code>
-     * @return Whether the data field is set.
      */
     boolean hasData();
     /**
      * <code>.EVMContractData data = 2;</code>
-     * @return The data.
      */
     cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData getData();
     /**
@@ -47,12 +43,10 @@ public final class EvmService {
 
     /**
      * <code>.EVMContractState state = 3;</code>
-     * @return Whether the state field is set.
      */
     boolean hasState();
     /**
      * <code>.EVMContractState state = 3;</code>
-     * @return The state.
      */
     cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState getState();
     /**
@@ -178,7 +172,6 @@ public final class EvmService {
     private volatile java.lang.Object addr_;
     /**
      * <code>string addr = 1;</code>
-     * @return The addr.
      */
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
@@ -194,7 +187,6 @@ public final class EvmService {
     }
     /**
      * <code>string addr = 1;</code>
-     * @return The bytes for addr.
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
@@ -214,14 +206,12 @@ public final class EvmService {
     private cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData data_;
     /**
      * <code>.EVMContractData data = 2;</code>
-     * @return Whether the data field is set.
      */
     public boolean hasData() {
       return data_ != null;
     }
     /**
      * <code>.EVMContractData data = 2;</code>
-     * @return The data.
      */
     public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData getData() {
       return data_ == null ? cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData.getDefaultInstance() : data_;
@@ -237,14 +227,12 @@ public final class EvmService {
     private cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState state_;
     /**
      * <code>.EVMContractState state = 3;</code>
-     * @return Whether the state field is set.
      */
     public boolean hasState() {
       return state_ != null;
     }
     /**
      * <code>.EVMContractState state = 3;</code>
-     * @return The state.
      */
     public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState getState() {
       return state_ == null ? cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState.getDefaultInstance() : state_;
@@ -625,7 +613,6 @@ public final class EvmService {
       private java.lang.Object addr_ = "";
       /**
        * <code>string addr = 1;</code>
-       * @return The addr.
        */
       public java.lang.String getAddr() {
         java.lang.Object ref = addr_;
@@ -641,7 +628,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @return The bytes for addr.
        */
       public com.google.protobuf.ByteString
           getAddrBytes() {
@@ -658,8 +644,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddr(
           java.lang.String value) {
@@ -673,7 +657,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddr() {
         
@@ -683,8 +666,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -703,14 +684,12 @@ public final class EvmService {
           cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDataOrBuilder> dataBuilder_;
       /**
        * <code>.EVMContractData data = 2;</code>
-       * @return Whether the data field is set.
        */
       public boolean hasData() {
         return dataBuilder_ != null || data_ != null;
       }
       /**
        * <code>.EVMContractData data = 2;</code>
-       * @return The data.
        */
       public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractData getData() {
         if (dataBuilder_ == null) {
@@ -822,14 +801,12 @@ public final class EvmService {
           cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStateOrBuilder> stateBuilder_;
       /**
        * <code>.EVMContractState state = 3;</code>
-       * @return Whether the state field is set.
        */
       public boolean hasState() {
         return stateBuilder_ != null || state_ != null;
       }
       /**
        * <code>.EVMContractState state = 3;</code>
-       * @return The state.
        */
       public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractState getState() {
         if (stateBuilder_ == null) {
@@ -994,61 +971,51 @@ public final class EvmService {
 
     /**
      * <code>string creator = 1;</code>
-     * @return The creator.
      */
     java.lang.String getCreator();
     /**
      * <code>string creator = 1;</code>
-     * @return The bytes for creator.
      */
     com.google.protobuf.ByteString
         getCreatorBytes();
 
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string alias = 3;</code>
-     * @return The alias.
      */
     java.lang.String getAlias();
     /**
      * <code>string alias = 3;</code>
-     * @return The bytes for alias.
      */
     com.google.protobuf.ByteString
         getAliasBytes();
 
     /**
      * <code>string addr = 4;</code>
-     * @return The addr.
      */
     java.lang.String getAddr();
     /**
      * <code>string addr = 4;</code>
-     * @return The bytes for addr.
      */
     com.google.protobuf.ByteString
         getAddrBytes();
 
     /**
      * <code>bytes code = 5;</code>
-     * @return The code.
      */
     com.google.protobuf.ByteString getCode();
 
     /**
      * <code>bytes codeHash = 6;</code>
-     * @return The codeHash.
      */
     com.google.protobuf.ByteString getCodeHash();
 
@@ -1058,7 +1025,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string abi = 7;</code>
-     * @return The abi.
      */
     java.lang.String getAbi();
     /**
@@ -1067,7 +1033,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string abi = 7;</code>
-     * @return The bytes for abi.
      */
     com.google.protobuf.ByteString
         getAbiBytes();
@@ -1204,7 +1169,6 @@ public final class EvmService {
     private volatile java.lang.Object creator_;
     /**
      * <code>string creator = 1;</code>
-     * @return The creator.
      */
     public java.lang.String getCreator() {
       java.lang.Object ref = creator_;
@@ -1220,7 +1184,6 @@ public final class EvmService {
     }
     /**
      * <code>string creator = 1;</code>
-     * @return The bytes for creator.
      */
     public com.google.protobuf.ByteString
         getCreatorBytes() {
@@ -1240,7 +1203,6 @@ public final class EvmService {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1256,7 +1218,6 @@ public final class EvmService {
     }
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1276,7 +1237,6 @@ public final class EvmService {
     private volatile java.lang.Object alias_;
     /**
      * <code>string alias = 3;</code>
-     * @return The alias.
      */
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
@@ -1292,7 +1252,6 @@ public final class EvmService {
     }
     /**
      * <code>string alias = 3;</code>
-     * @return The bytes for alias.
      */
     public com.google.protobuf.ByteString
         getAliasBytes() {
@@ -1312,7 +1271,6 @@ public final class EvmService {
     private volatile java.lang.Object addr_;
     /**
      * <code>string addr = 4;</code>
-     * @return The addr.
      */
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
@@ -1328,7 +1286,6 @@ public final class EvmService {
     }
     /**
      * <code>string addr = 4;</code>
-     * @return The bytes for addr.
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
@@ -1348,7 +1305,6 @@ public final class EvmService {
     private com.google.protobuf.ByteString code_;
     /**
      * <code>bytes code = 5;</code>
-     * @return The code.
      */
     public com.google.protobuf.ByteString getCode() {
       return code_;
@@ -1358,7 +1314,6 @@ public final class EvmService {
     private com.google.protobuf.ByteString codeHash_;
     /**
      * <code>bytes codeHash = 6;</code>
-     * @return The codeHash.
      */
     public com.google.protobuf.ByteString getCodeHash() {
       return codeHash_;
@@ -1372,7 +1327,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string abi = 7;</code>
-     * @return The abi.
      */
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
@@ -1392,7 +1346,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string abi = 7;</code>
-     * @return The bytes for abi.
      */
     public com.google.protobuf.ByteString
         getAbiBytes() {
@@ -1819,7 +1772,6 @@ public final class EvmService {
       private java.lang.Object creator_ = "";
       /**
        * <code>string creator = 1;</code>
-       * @return The creator.
        */
       public java.lang.String getCreator() {
         java.lang.Object ref = creator_;
@@ -1835,7 +1787,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @return The bytes for creator.
        */
       public com.google.protobuf.ByteString
           getCreatorBytes() {
@@ -1852,8 +1803,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @param value The creator to set.
-       * @return This builder for chaining.
        */
       public Builder setCreator(
           java.lang.String value) {
@@ -1867,7 +1816,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCreator() {
         
@@ -1877,8 +1825,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @param value The bytes for creator to set.
-       * @return This builder for chaining.
        */
       public Builder setCreatorBytes(
           com.google.protobuf.ByteString value) {
@@ -1895,7 +1841,6 @@ public final class EvmService {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1911,7 +1856,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1928,8 +1872,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1943,7 +1885,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1953,8 +1894,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1971,7 +1910,6 @@ public final class EvmService {
       private java.lang.Object alias_ = "";
       /**
        * <code>string alias = 3;</code>
-       * @return The alias.
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -1987,7 +1925,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @return The bytes for alias.
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -2004,8 +1941,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @param value The alias to set.
-       * @return This builder for chaining.
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -2019,7 +1954,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAlias() {
         
@@ -2029,8 +1963,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @param value The bytes for alias to set.
-       * @return This builder for chaining.
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -2047,7 +1979,6 @@ public final class EvmService {
       private java.lang.Object addr_ = "";
       /**
        * <code>string addr = 4;</code>
-       * @return The addr.
        */
       public java.lang.String getAddr() {
         java.lang.Object ref = addr_;
@@ -2063,7 +1994,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @return The bytes for addr.
        */
       public com.google.protobuf.ByteString
           getAddrBytes() {
@@ -2080,8 +2010,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddr(
           java.lang.String value) {
@@ -2095,7 +2023,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddr() {
         
@@ -2105,8 +2032,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -2123,15 +2048,12 @@ public final class EvmService {
       private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes code = 5;</code>
-       * @return The code.
        */
       public com.google.protobuf.ByteString getCode() {
         return code_;
       }
       /**
        * <code>bytes code = 5;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
        */
       public Builder setCode(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2144,7 +2066,6 @@ public final class EvmService {
       }
       /**
        * <code>bytes code = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCode() {
         
@@ -2156,15 +2077,12 @@ public final class EvmService {
       private com.google.protobuf.ByteString codeHash_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes codeHash = 6;</code>
-       * @return The codeHash.
        */
       public com.google.protobuf.ByteString getCodeHash() {
         return codeHash_;
       }
       /**
        * <code>bytes codeHash = 6;</code>
-       * @param value The codeHash to set.
-       * @return This builder for chaining.
        */
       public Builder setCodeHash(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2177,7 +2095,6 @@ public final class EvmService {
       }
       /**
        * <code>bytes codeHash = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCodeHash() {
         
@@ -2193,7 +2110,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string abi = 7;</code>
-       * @return The abi.
        */
       public java.lang.String getAbi() {
         java.lang.Object ref = abi_;
@@ -2213,7 +2129,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string abi = 7;</code>
-       * @return The bytes for abi.
        */
       public com.google.protobuf.ByteString
           getAbiBytes() {
@@ -2234,8 +2149,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string abi = 7;</code>
-       * @param value The abi to set.
-       * @return This builder for chaining.
        */
       public Builder setAbi(
           java.lang.String value) {
@@ -2253,7 +2166,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string abi = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAbi() {
         
@@ -2267,8 +2179,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string abi = 7;</code>
-       * @param value The bytes for abi to set.
-       * @return This builder for chaining.
        */
       public Builder setAbiBytes(
           com.google.protobuf.ByteString value) {
@@ -2340,34 +2250,25 @@ public final class EvmService {
 
     /**
      * <code>uint64 nonce = 1;</code>
-     * @return The nonce.
      */
     long getNonce();
 
     /**
      * <code>bool suicided = 2;</code>
-     * @return The suicided.
      */
     boolean getSuicided();
 
     /**
-     * <code>uint64 frozen = 3;</code>
-     * @return The frozen.
-     */
-    long getFrozen();
-
-    /**
-     * <code>bytes storageHash = 4;</code>
-     * @return The storageHash.
+     * <code>bytes storageHash = 3;</code>
      */
     com.google.protobuf.ByteString getStorageHash();
 
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
     int getStorageCount();
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
     boolean containsStorage(
         java.lang.String key);
@@ -2378,19 +2279,19 @@ public final class EvmService {
     java.util.Map<java.lang.String, com.google.protobuf.ByteString>
     getStorage();
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
     java.util.Map<java.lang.String, com.google.protobuf.ByteString>
     getStorageMap();
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
     com.google.protobuf.ByteString getStorageOrDefault(
         java.lang.String key,
         com.google.protobuf.ByteString defaultValue);
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
     com.google.protobuf.ByteString getStorageOrThrow(
@@ -2457,17 +2358,12 @@ public final class EvmService {
               suicided_ = input.readBool();
               break;
             }
-            case 24: {
-
-              frozen_ = input.readUInt64();
-              break;
-            }
-            case 34: {
+            case 26: {
 
               storageHash_ = input.readBytes();
               break;
             }
-            case 42: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 storage_ = com.google.protobuf.MapField.newMapField(
                     StorageDefaultEntryHolder.defaultEntry);
@@ -2509,7 +2405,7 @@ public final class EvmService {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 5:
+        case 4:
           return internalGetStorage();
         default:
           throw new RuntimeException(
@@ -2528,7 +2424,6 @@ public final class EvmService {
     private long nonce_;
     /**
      * <code>uint64 nonce = 1;</code>
-     * @return The nonce.
      */
     public long getNonce() {
       return nonce_;
@@ -2538,33 +2433,21 @@ public final class EvmService {
     private boolean suicided_;
     /**
      * <code>bool suicided = 2;</code>
-     * @return The suicided.
      */
     public boolean getSuicided() {
       return suicided_;
     }
 
-    public static final int FROZEN_FIELD_NUMBER = 3;
-    private long frozen_;
-    /**
-     * <code>uint64 frozen = 3;</code>
-     * @return The frozen.
-     */
-    public long getFrozen() {
-      return frozen_;
-    }
-
-    public static final int STORAGEHASH_FIELD_NUMBER = 4;
+    public static final int STORAGEHASH_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString storageHash_;
     /**
-     * <code>bytes storageHash = 4;</code>
-     * @return The storageHash.
+     * <code>bytes storageHash = 3;</code>
      */
     public com.google.protobuf.ByteString getStorageHash() {
       return storageHash_;
     }
 
-    public static final int STORAGE_FIELD_NUMBER = 5;
+    public static final int STORAGE_FIELD_NUMBER = 4;
     private static final class StorageDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, com.google.protobuf.ByteString> defaultEntry =
@@ -2591,7 +2474,7 @@ public final class EvmService {
       return internalGetStorage().getMap().size();
     }
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
     public boolean containsStorage(
@@ -2607,14 +2490,14 @@ public final class EvmService {
       return getStorageMap();
     }
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
     public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getStorageMap() {
       return internalGetStorage().getMap();
     }
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
     public com.google.protobuf.ByteString getStorageOrDefault(
@@ -2626,7 +2509,7 @@ public final class EvmService {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, bytes&gt; storage = 5;</code>
+     * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
     public com.google.protobuf.ByteString getStorageOrThrow(
@@ -2660,18 +2543,15 @@ public final class EvmService {
       if (suicided_ != false) {
         output.writeBool(2, suicided_);
       }
-      if (frozen_ != 0L) {
-        output.writeUInt64(3, frozen_);
-      }
       if (!storageHash_.isEmpty()) {
-        output.writeBytes(4, storageHash_);
+        output.writeBytes(3, storageHash_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
           internalGetStorage(),
           StorageDefaultEntryHolder.defaultEntry,
-          5);
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -2689,13 +2569,9 @@ public final class EvmService {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, suicided_);
       }
-      if (frozen_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, frozen_);
-      }
       if (!storageHash_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, storageHash_);
+          .computeBytesSize(3, storageHash_);
       }
       for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
            : internalGetStorage().getMap().entrySet()) {
@@ -2705,7 +2581,7 @@ public final class EvmService {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, storage__);
+            .computeMessageSize(4, storage__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2726,8 +2602,6 @@ public final class EvmService {
           != other.getNonce()) return false;
       if (getSuicided()
           != other.getSuicided()) return false;
-      if (getFrozen()
-          != other.getFrozen()) return false;
       if (!getStorageHash()
           .equals(other.getStorageHash())) return false;
       if (!internalGetStorage().equals(
@@ -2749,9 +2623,6 @@ public final class EvmService {
       hash = (37 * hash) + SUICIDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSuicided());
-      hash = (37 * hash) + FROZEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFrozen());
       hash = (37 * hash) + STORAGEHASH_FIELD_NUMBER;
       hash = (53 * hash) + getStorageHash().hashCode();
       if (!internalGetStorage().getMap().isEmpty()) {
@@ -2873,7 +2744,7 @@ public final class EvmService {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 5:
+          case 4:
             return internalGetStorage();
           default:
             throw new RuntimeException(
@@ -2884,7 +2755,7 @@ public final class EvmService {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 5:
+          case 4:
             return internalGetMutableStorage();
           default:
             throw new RuntimeException(
@@ -2921,8 +2792,6 @@ public final class EvmService {
 
         suicided_ = false;
 
-        frozen_ = 0L;
-
         storageHash_ = com.google.protobuf.ByteString.EMPTY;
 
         internalGetMutableStorage().clear();
@@ -2955,7 +2824,6 @@ public final class EvmService {
         int from_bitField0_ = bitField0_;
         result.nonce_ = nonce_;
         result.suicided_ = suicided_;
-        result.frozen_ = frozen_;
         result.storageHash_ = storageHash_;
         result.storage_ = internalGetStorage();
         result.storage_.makeImmutable();
@@ -3013,9 +2881,6 @@ public final class EvmService {
         if (other.getSuicided() != false) {
           setSuicided(other.getSuicided());
         }
-        if (other.getFrozen() != 0L) {
-          setFrozen(other.getFrozen());
-        }
         if (other.getStorageHash() != com.google.protobuf.ByteString.EMPTY) {
           setStorageHash(other.getStorageHash());
         }
@@ -3054,15 +2919,12 @@ public final class EvmService {
       private long nonce_ ;
       /**
        * <code>uint64 nonce = 1;</code>
-       * @return The nonce.
        */
       public long getNonce() {
         return nonce_;
       }
       /**
        * <code>uint64 nonce = 1;</code>
-       * @param value The nonce to set.
-       * @return This builder for chaining.
        */
       public Builder setNonce(long value) {
         
@@ -3072,7 +2934,6 @@ public final class EvmService {
       }
       /**
        * <code>uint64 nonce = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearNonce() {
         
@@ -3084,15 +2945,12 @@ public final class EvmService {
       private boolean suicided_ ;
       /**
        * <code>bool suicided = 2;</code>
-       * @return The suicided.
        */
       public boolean getSuicided() {
         return suicided_;
       }
       /**
        * <code>bool suicided = 2;</code>
-       * @param value The suicided to set.
-       * @return This builder for chaining.
        */
       public Builder setSuicided(boolean value) {
         
@@ -3102,7 +2960,6 @@ public final class EvmService {
       }
       /**
        * <code>bool suicided = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSuicided() {
         
@@ -3111,48 +2968,15 @@ public final class EvmService {
         return this;
       }
 
-      private long frozen_ ;
-      /**
-       * <code>uint64 frozen = 3;</code>
-       * @return The frozen.
-       */
-      public long getFrozen() {
-        return frozen_;
-      }
-      /**
-       * <code>uint64 frozen = 3;</code>
-       * @param value The frozen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFrozen(long value) {
-        
-        frozen_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 frozen = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFrozen() {
-        
-        frozen_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.ByteString storageHash_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes storageHash = 4;</code>
-       * @return The storageHash.
+       * <code>bytes storageHash = 3;</code>
        */
       public com.google.protobuf.ByteString getStorageHash() {
         return storageHash_;
       }
       /**
-       * <code>bytes storageHash = 4;</code>
-       * @param value The storageHash to set.
-       * @return This builder for chaining.
+       * <code>bytes storageHash = 3;</code>
        */
       public Builder setStorageHash(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -3164,8 +2988,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>bytes storageHash = 4;</code>
-       * @return This builder for chaining.
+       * <code>bytes storageHash = 3;</code>
        */
       public Builder clearStorageHash() {
         
@@ -3201,7 +3024,7 @@ public final class EvmService {
         return internalGetStorage().getMap().size();
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
       public boolean containsStorage(
@@ -3217,14 +3040,14 @@ public final class EvmService {
         return getStorageMap();
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
       public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getStorageMap() {
         return internalGetStorage().getMap();
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
       public com.google.protobuf.ByteString getStorageOrDefault(
@@ -3236,7 +3059,7 @@ public final class EvmService {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
       public com.google.protobuf.ByteString getStorageOrThrow(
@@ -3256,7 +3079,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
       public Builder removeStorage(
@@ -3275,7 +3098,7 @@ public final class EvmService {
         return internalGetMutableStorage().getMutableMap();
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
       public Builder putStorage(
           java.lang.String key,
@@ -3287,7 +3110,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>map&lt;string, bytes&gt; storage = 5;</code>
+       * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
       public Builder putAllStorage(
@@ -3354,89 +3177,109 @@ public final class EvmService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.EVMContractExec exec = 1;</code>
-     * @return Whether the exec field is set.
+     * <pre>
+     * 转账金额
+     * </pre>
+     *
+     * <code>uint64 amount = 1;</code>
      */
-    boolean hasExec();
-    /**
-     * <code>.EVMContractExec exec = 1;</code>
-     * @return The exec.
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec getExec();
-    /**
-     * <code>.EVMContractExec exec = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder getExecOrBuilder();
+    long getAmount();
 
     /**
-     * <code>.EVMContractDestroy destroy = 2;</code>
-     * @return Whether the destroy field is set.
+     * <pre>
+     * 消耗限制，默认为Transaction.Fee
+     * </pre>
+     *
+     * <code>uint64 gasLimit = 2;</code>
      */
-    boolean hasDestroy();
-    /**
-     * <code>.EVMContractDestroy destroy = 2;</code>
-     * @return The destroy.
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy getDestroy();
-    /**
-     * <code>.EVMContractDestroy destroy = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder getDestroyOrBuilder();
+    long getGasLimit();
 
     /**
-     * <code>.EVMContractFreeze freeze = 3;</code>
-     * @return Whether the freeze field is set.
+     * <pre>
+     * gas价格，默认为1
+     * </pre>
+     *
+     * <code>uint32 gasPrice = 3;</code>
      */
-    boolean hasFreeze();
-    /**
-     * <code>.EVMContractFreeze freeze = 3;</code>
-     * @return The freeze.
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze getFreeze();
-    /**
-     * <code>.EVMContractFreeze freeze = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder getFreezeOrBuilder();
+    int getGasPrice();
 
     /**
-     * <code>.EVMContractRelease release = 4;</code>
-     * @return Whether the release field is set.
+     * <pre>
+     * 合约数据
+     * </pre>
+     *
+     * <code>bytes code = 4;</code>
      */
-    boolean hasRelease();
-    /**
-     * <code>.EVMContractRelease release = 4;</code>
-     * @return The release.
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease getRelease();
-    /**
-     * <code>.EVMContractRelease release = 4;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder getReleaseOrBuilder();
+    com.google.protobuf.ByteString getCode();
 
     /**
-     * <code>.EVMContractUpdate update = 5;</code>
-     * @return Whether the update field is set.
+     * <pre>
+     *交易参数
+     * </pre>
+     *
+     * <code>bytes para = 5;</code>
      */
-    boolean hasUpdate();
-    /**
-     * <code>.EVMContractUpdate update = 5;</code>
-     * @return The update.
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate getUpdate();
-    /**
-     * <code>.EVMContractUpdate update = 5;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder getUpdateOrBuilder();
+    com.google.protobuf.ByteString getPara();
 
     /**
-     * <code>int32 ty = 6;</code>
-     * @return The ty.
+     * <pre>
+     * 合约别名，方便识别
+     * </pre>
+     *
+     * <code>string alias = 6;</code>
      */
-    int getTy();
+    java.lang.String getAlias();
+    /**
+     * <pre>
+     * 合约别名，方便识别
+     * </pre>
+     *
+     * <code>string alias = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getAliasBytes();
 
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.ValueCase getValueCase();
+    /**
+     * <pre>
+     * 交易备注
+     * </pre>
+     *
+     * <code>string note = 7;</code>
+     */
+    java.lang.String getNote();
+    /**
+     * <pre>
+     * 交易备注
+     * </pre>
+     *
+     * <code>string note = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getNoteBytes();
+
+    /**
+     * <pre>
+     * 调用合约地址
+     * </pre>
+     *
+     * <code>string contractAddr = 8;</code>
+     */
+    java.lang.String getContractAddr();
+    /**
+     * <pre>
+     * 调用合约地址
+     * </pre>
+     *
+     * <code>string contractAddr = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getContractAddrBytes();
   }
   /**
+   * <pre>
+   * 创建/调用合约的请求结构
+   * </pre>
+   *
    * Protobuf type {@code EVMContractAction}
    */
   public  static final class EVMContractAction extends
@@ -3449,6 +3292,11 @@ public final class EvmService {
       super(builder);
     }
     private EVMContractAction() {
+      code_ = com.google.protobuf.ByteString.EMPTY;
+      para_ = com.google.protobuf.ByteString.EMPTY;
+      alias_ = "";
+      note_ = "";
+      contractAddr_ = "";
     }
 
     @java.lang.Override
@@ -3464,1714 +3312,6 @@ public final class EvmService {
       return this.unknownFields;
     }
     private EVMContractAction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder subBuilder = null;
-              if (valueCase_ == 1) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 1;
-              break;
-            }
-            case 18: {
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder subBuilder = null;
-              if (valueCase_ == 2) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 2;
-              break;
-            }
-            case 26: {
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder subBuilder = null;
-              if (valueCase_ == 3) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 3;
-              break;
-            }
-            case 34: {
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder subBuilder = null;
-              if (valueCase_ == 4) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 4;
-              break;
-            }
-            case 42: {
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder subBuilder = null;
-              if (valueCase_ == 5) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 5;
-              break;
-            }
-            case 48: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.Builder.class);
-    }
-
-    private int valueCase_ = 0;
-    private java.lang.Object value_;
-    public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      EXEC(1),
-      DESTROY(2),
-      FREEZE(3),
-      RELEASE(4),
-      UPDATE(5),
-      VALUE_NOT_SET(0);
-      private final int value;
-      private ValueCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ValueCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ValueCase forNumber(int value) {
-        switch (value) {
-          case 1: return EXEC;
-          case 2: return DESTROY;
-          case 3: return FREEZE;
-          case 4: return RELEASE;
-          case 5: return UPDATE;
-          case 0: return VALUE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ValueCase
-    getValueCase() {
-      return ValueCase.forNumber(
-          valueCase_);
-    }
-
-    public static final int EXEC_FIELD_NUMBER = 1;
-    /**
-     * <code>.EVMContractExec exec = 1;</code>
-     * @return Whether the exec field is set.
-     */
-    public boolean hasExec() {
-      return valueCase_ == 1;
-    }
-    /**
-     * <code>.EVMContractExec exec = 1;</code>
-     * @return The exec.
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec getExec() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
-    }
-    /**
-     * <code>.EVMContractExec exec = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder getExecOrBuilder() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
-    }
-
-    public static final int DESTROY_FIELD_NUMBER = 2;
-    /**
-     * <code>.EVMContractDestroy destroy = 2;</code>
-     * @return Whether the destroy field is set.
-     */
-    public boolean hasDestroy() {
-      return valueCase_ == 2;
-    }
-    /**
-     * <code>.EVMContractDestroy destroy = 2;</code>
-     * @return The destroy.
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy getDestroy() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-    }
-    /**
-     * <code>.EVMContractDestroy destroy = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder getDestroyOrBuilder() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-    }
-
-    public static final int FREEZE_FIELD_NUMBER = 3;
-    /**
-     * <code>.EVMContractFreeze freeze = 3;</code>
-     * @return Whether the freeze field is set.
-     */
-    public boolean hasFreeze() {
-      return valueCase_ == 3;
-    }
-    /**
-     * <code>.EVMContractFreeze freeze = 3;</code>
-     * @return The freeze.
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze getFreeze() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-    }
-    /**
-     * <code>.EVMContractFreeze freeze = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder getFreezeOrBuilder() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-    }
-
-    public static final int RELEASE_FIELD_NUMBER = 4;
-    /**
-     * <code>.EVMContractRelease release = 4;</code>
-     * @return Whether the release field is set.
-     */
-    public boolean hasRelease() {
-      return valueCase_ == 4;
-    }
-    /**
-     * <code>.EVMContractRelease release = 4;</code>
-     * @return The release.
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease getRelease() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-    }
-    /**
-     * <code>.EVMContractRelease release = 4;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder getReleaseOrBuilder() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-    }
-
-    public static final int UPDATE_FIELD_NUMBER = 5;
-    /**
-     * <code>.EVMContractUpdate update = 5;</code>
-     * @return Whether the update field is set.
-     */
-    public boolean hasUpdate() {
-      return valueCase_ == 5;
-    }
-    /**
-     * <code>.EVMContractUpdate update = 5;</code>
-     * @return The update.
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate getUpdate() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-    }
-    /**
-     * <code>.EVMContractUpdate update = 5;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder getUpdateOrBuilder() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-    }
-
-    public static final int TY_FIELD_NUMBER = 6;
-    private int ty_;
-    /**
-     * <code>int32 ty = 6;</code>
-     * @return The ty.
-     */
-    public int getTy() {
-      return ty_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (valueCase_ == 1) {
-        output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_);
-      }
-      if (valueCase_ == 2) {
-        output.writeMessage(2, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_);
-      }
-      if (valueCase_ == 3) {
-        output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_);
-      }
-      if (valueCase_ == 4) {
-        output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_);
-      }
-      if (valueCase_ == 5) {
-        output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_);
-      }
-      if (ty_ != 0) {
-        output.writeInt32(6, ty_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (valueCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_);
-      }
-      if (valueCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_);
-      }
-      if (valueCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_);
-      }
-      if (valueCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_);
-      }
-      if (valueCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_);
-      }
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, ty_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction) obj;
-
-      if (getTy()
-          != other.getTy()) return false;
-      if (!getValueCase().equals(other.getValueCase())) return false;
-      switch (valueCase_) {
-        case 1:
-          if (!getExec()
-              .equals(other.getExec())) return false;
-          break;
-        case 2:
-          if (!getDestroy()
-              .equals(other.getDestroy())) return false;
-          break;
-        case 3:
-          if (!getFreeze()
-              .equals(other.getFreeze())) return false;
-          break;
-        case 4:
-          if (!getRelease()
-              .equals(other.getRelease())) return false;
-          break;
-        case 5:
-          if (!getUpdate()
-              .equals(other.getUpdate())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      switch (valueCase_) {
-        case 1:
-          hash = (37 * hash) + EXEC_FIELD_NUMBER;
-          hash = (53 * hash) + getExec().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + DESTROY_FIELD_NUMBER;
-          hash = (53 * hash) + getDestroy().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + FREEZE_FIELD_NUMBER;
-          hash = (53 * hash) + getFreeze().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + RELEASE_FIELD_NUMBER;
-          hash = (53 * hash) + getRelease().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + UPDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdate().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EVMContractAction}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractAction)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractActionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
-
-        valueCase_ = 0;
-        value_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction(this);
-        if (valueCase_ == 1) {
-          if (execBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = execBuilder_.build();
-          }
-        }
-        if (valueCase_ == 2) {
-          if (destroyBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = destroyBuilder_.build();
-          }
-        }
-        if (valueCase_ == 3) {
-          if (freezeBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = freezeBuilder_.build();
-          }
-        }
-        if (valueCase_ == 4) {
-          if (releaseBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = releaseBuilder_.build();
-          }
-        }
-        if (valueCase_ == 5) {
-          if (updateBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = updateBuilder_.build();
-          }
-        }
-        result.ty_ = ty_;
-        result.valueCase_ = valueCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
-        }
-        switch (other.getValueCase()) {
-          case EXEC: {
-            mergeExec(other.getExec());
-            break;
-          }
-          case DESTROY: {
-            mergeDestroy(other.getDestroy());
-            break;
-          }
-          case FREEZE: {
-            mergeFreeze(other.getFreeze());
-            break;
-          }
-          case RELEASE: {
-            mergeRelease(other.getRelease());
-            break;
-          }
-          case UPDATE: {
-            mergeUpdate(other.getUpdate());
-            break;
-          }
-          case VALUE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public ValueCase
-          getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
-      }
-
-      public Builder clearValue() {
-        valueCase_ = 0;
-        value_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder> execBuilder_;
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       * @return Whether the exec field is set.
-       */
-      public boolean hasExec() {
-        return valueCase_ == 1;
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       * @return The exec.
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec getExec() {
-        if (execBuilder_ == null) {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
-        } else {
-          if (valueCase_ == 1) {
-            return execBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      public Builder setExec(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec value) {
-        if (execBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          execBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      public Builder setExec(
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder builderForValue) {
-        if (execBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          execBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      public Builder mergeExec(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec value) {
-        if (execBuilder_ == null) {
-          if (valueCase_ == 1 &&
-              value_ != cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.newBuilder((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 1) {
-            execBuilder_.mergeFrom(value);
-          }
-          execBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      public Builder clearExec() {
-        if (execBuilder_ == null) {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          execBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder getExecBuilder() {
-        return getExecFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder getExecOrBuilder() {
-        if ((valueCase_ == 1) && (execBuilder_ != null)) {
-          return execBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractExec exec = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder> 
-          getExecFieldBuilder() {
-        if (execBuilder_ == null) {
-          if (!(valueCase_ == 1)) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
-          }
-          execBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 1;
-        onChanged();;
-        return execBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder> destroyBuilder_;
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       * @return Whether the destroy field is set.
-       */
-      public boolean hasDestroy() {
-        return valueCase_ == 2;
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       * @return The destroy.
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy getDestroy() {
-        if (destroyBuilder_ == null) {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-        } else {
-          if (valueCase_ == 2) {
-            return destroyBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      public Builder setDestroy(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy value) {
-        if (destroyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          destroyBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      public Builder setDestroy(
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder builderForValue) {
-        if (destroyBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          destroyBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      public Builder mergeDestroy(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy value) {
-        if (destroyBuilder_ == null) {
-          if (valueCase_ == 2 &&
-              value_ != cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.newBuilder((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 2) {
-            destroyBuilder_.mergeFrom(value);
-          }
-          destroyBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      public Builder clearDestroy() {
-        if (destroyBuilder_ == null) {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          destroyBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder getDestroyBuilder() {
-        return getDestroyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder getDestroyOrBuilder() {
-        if ((valueCase_ == 2) && (destroyBuilder_ != null)) {
-          return destroyBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractDestroy destroy = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder> 
-          getDestroyFieldBuilder() {
-        if (destroyBuilder_ == null) {
-          if (!(valueCase_ == 2)) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-          }
-          destroyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 2;
-        onChanged();;
-        return destroyBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder> freezeBuilder_;
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       * @return Whether the freeze field is set.
-       */
-      public boolean hasFreeze() {
-        return valueCase_ == 3;
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       * @return The freeze.
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze getFreeze() {
-        if (freezeBuilder_ == null) {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-        } else {
-          if (valueCase_ == 3) {
-            return freezeBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      public Builder setFreeze(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze value) {
-        if (freezeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          freezeBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      public Builder setFreeze(
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder builderForValue) {
-        if (freezeBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          freezeBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      public Builder mergeFreeze(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze value) {
-        if (freezeBuilder_ == null) {
-          if (valueCase_ == 3 &&
-              value_ != cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.newBuilder((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 3) {
-            freezeBuilder_.mergeFrom(value);
-          }
-          freezeBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      public Builder clearFreeze() {
-        if (freezeBuilder_ == null) {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          freezeBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder getFreezeBuilder() {
-        return getFreezeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder getFreezeOrBuilder() {
-        if ((valueCase_ == 3) && (freezeBuilder_ != null)) {
-          return freezeBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractFreeze freeze = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder> 
-          getFreezeFieldBuilder() {
-        if (freezeBuilder_ == null) {
-          if (!(valueCase_ == 3)) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-          }
-          freezeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 3;
-        onChanged();;
-        return freezeBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder> releaseBuilder_;
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       * @return Whether the release field is set.
-       */
-      public boolean hasRelease() {
-        return valueCase_ == 4;
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       * @return The release.
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease getRelease() {
-        if (releaseBuilder_ == null) {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-        } else {
-          if (valueCase_ == 4) {
-            return releaseBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      public Builder setRelease(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease value) {
-        if (releaseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          releaseBuilder_.setMessage(value);
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      public Builder setRelease(
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder builderForValue) {
-        if (releaseBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          releaseBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      public Builder mergeRelease(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease value) {
-        if (releaseBuilder_ == null) {
-          if (valueCase_ == 4 &&
-              value_ != cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.newBuilder((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 4) {
-            releaseBuilder_.mergeFrom(value);
-          }
-          releaseBuilder_.setMessage(value);
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      public Builder clearRelease() {
-        if (releaseBuilder_ == null) {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          releaseBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder getReleaseBuilder() {
-        return getReleaseFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder getReleaseOrBuilder() {
-        if ((valueCase_ == 4) && (releaseBuilder_ != null)) {
-          return releaseBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractRelease release = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder> 
-          getReleaseFieldBuilder() {
-        if (releaseBuilder_ == null) {
-          if (!(valueCase_ == 4)) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-          }
-          releaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 4;
-        onChanged();;
-        return releaseBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder> updateBuilder_;
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       * @return Whether the update field is set.
-       */
-      public boolean hasUpdate() {
-        return valueCase_ == 5;
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       * @return The update.
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate getUpdate() {
-        if (updateBuilder_ == null) {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-        } else {
-          if (valueCase_ == 5) {
-            return updateBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      public Builder setUpdate(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate value) {
-        if (updateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(value);
-        }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      public Builder setUpdate(
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder builderForValue) {
-        if (updateBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      public Builder mergeUpdate(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate value) {
-        if (updateBuilder_ == null) {
-          if (valueCase_ == 5 &&
-              value_ != cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.newBuilder((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 5) {
-            updateBuilder_.mergeFrom(value);
-          }
-          updateBuilder_.setMessage(value);
-        }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      public Builder clearUpdate() {
-        if (updateBuilder_ == null) {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          updateBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder getUpdateBuilder() {
-        return getUpdateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder getUpdateOrBuilder() {
-        if ((valueCase_ == 5) && (updateBuilder_ != null)) {
-          return updateBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EVMContractUpdate update = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder> 
-          getUpdateFieldBuilder() {
-        if (updateBuilder_ == null) {
-          if (!(valueCase_ == 5)) {
-            value_ = cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-          }
-          updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 5;
-        onChanged();;
-        return updateBuilder_;
-      }
-
-      private int ty_ ;
-      /**
-       * <code>int32 ty = 6;</code>
-       * @return The ty.
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 ty = 6;</code>
-       * @param value The ty to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 ty = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EVMContractAction)
-    }
-
-    // @@protoc_insertion_point(class_scope:EVMContractAction)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EVMContractAction>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractAction>() {
-      @java.lang.Override
-      public EVMContractAction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractAction(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EVMContractAction> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractAction> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EVMContractExecOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EVMContractExec)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 转账金额
-     * </pre>
-     *
-     * <code>uint64 amount = 1;</code>
-     * @return The amount.
-     */
-    long getAmount();
-
-    /**
-     * <pre>
-     * 消耗限制，默认为Transaction.Fee
-     * </pre>
-     *
-     * <code>uint64 gasLimit = 2;</code>
-     * @return The gasLimit.
-     */
-    long getGasLimit();
-
-    /**
-     * <pre>
-     * gas价格，默认为1
-     * </pre>
-     *
-     * <code>uint32 gasPrice = 3;</code>
-     * @return The gasPrice.
-     */
-    int getGasPrice();
-
-    /**
-     * <pre>
-     * 合约数据
-     * </pre>
-     *
-     * <code>bytes code = 4;</code>
-     * @return The code.
-     */
-    com.google.protobuf.ByteString getCode();
-
-    /**
-     * <pre>
-     *交易参数
-     * </pre>
-     *
-     * <code>bytes para = 5;</code>
-     * @return The para.
-     */
-    com.google.protobuf.ByteString getPara();
-
-    /**
-     * <pre>
-     * 合约别名，方便识别
-     * </pre>
-     *
-     * <code>string alias = 6;</code>
-     * @return The alias.
-     */
-    java.lang.String getAlias();
-    /**
-     * <pre>
-     * 合约别名，方便识别
-     * </pre>
-     *
-     * <code>string alias = 6;</code>
-     * @return The bytes for alias.
-     */
-    com.google.protobuf.ByteString
-        getAliasBytes();
-
-    /**
-     * <pre>
-     * 交易备注
-     * </pre>
-     *
-     * <code>string note = 7;</code>
-     * @return The note.
-     */
-    java.lang.String getNote();
-    /**
-     * <pre>
-     * 交易备注
-     * </pre>
-     *
-     * <code>string note = 7;</code>
-     * @return The bytes for note.
-     */
-    com.google.protobuf.ByteString
-        getNoteBytes();
-
-    /**
-     * <pre>
-     * 调用合约地址
-     * </pre>
-     *
-     * <code>string contractAddr = 8;</code>
-     * @return The contractAddr.
-     */
-    java.lang.String getContractAddr();
-    /**
-     * <pre>
-     * 调用合约地址
-     * </pre>
-     *
-     * <code>string contractAddr = 8;</code>
-     * @return The bytes for contractAddr.
-     */
-    com.google.protobuf.ByteString
-        getContractAddrBytes();
-  }
-  /**
-   * <pre>
-   * 创建和调用合约的请求结构
-   * </pre>
-   *
-   * Protobuf type {@code EVMContractExec}
-   */
-  public  static final class EVMContractExec extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EVMContractExec)
-      EVMContractExecOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EVMContractExec.newBuilder() to construct.
-    private EVMContractExec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EVMContractExec() {
-      code_ = com.google.protobuf.ByteString.EMPTY;
-      para_ = com.google.protobuf.ByteString.EMPTY;
-      alias_ = "";
-      note_ = "";
-      contractAddr_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EVMContractExec();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EVMContractExec(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5253,15 +3393,15 @@ public final class EvmService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractExec_descriptor;
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractExec_fieldAccessorTable
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder.class);
+              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.Builder.class);
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 1;
@@ -5272,7 +3412,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>uint64 amount = 1;</code>
-     * @return The amount.
      */
     public long getAmount() {
       return amount_;
@@ -5286,7 +3425,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>uint64 gasLimit = 2;</code>
-     * @return The gasLimit.
      */
     public long getGasLimit() {
       return gasLimit_;
@@ -5300,7 +3438,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>uint32 gasPrice = 3;</code>
-     * @return The gasPrice.
      */
     public int getGasPrice() {
       return gasPrice_;
@@ -5314,7 +3451,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>bytes code = 4;</code>
-     * @return The code.
      */
     public com.google.protobuf.ByteString getCode() {
       return code_;
@@ -5328,7 +3464,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>bytes para = 5;</code>
-     * @return The para.
      */
     public com.google.protobuf.ByteString getPara() {
       return para_;
@@ -5342,7 +3477,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string alias = 6;</code>
-     * @return The alias.
      */
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
@@ -5362,7 +3496,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string alias = 6;</code>
-     * @return The bytes for alias.
      */
     public com.google.protobuf.ByteString
         getAliasBytes() {
@@ -5386,7 +3519,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string note = 7;</code>
-     * @return The note.
      */
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
@@ -5406,7 +3538,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string note = 7;</code>
-     * @return The bytes for note.
      */
     public com.google.protobuf.ByteString
         getNoteBytes() {
@@ -5430,7 +3561,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string contractAddr = 8;</code>
-     * @return The contractAddr.
      */
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
@@ -5450,7 +3580,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string contractAddr = 8;</code>
-     * @return The bytes for contractAddr.
      */
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
@@ -5552,10 +3681,10 @@ public final class EvmService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec)) {
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction)) {
         return super.equals(obj);
       }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) obj;
+      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction) obj;
 
       if (getAmount()
           != other.getAmount()) return false;
@@ -5607,69 +3736,69 @@ public final class EvmService {
       return hash;
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(byte[] data)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseDelimitedFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseDelimitedFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5682,7 +3811,7 @@ public final class EvmService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec prototype) {
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5699,29 +3828,29 @@ public final class EvmService {
     }
     /**
      * <pre>
-     * 创建和调用合约的请求结构
+     * 创建/调用合约的请求结构
      * </pre>
      *
-     * Protobuf type {@code EVMContractExec}
+     * Protobuf type {@code EVMContractAction}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractExec)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExecOrBuilder {
+        // @@protoc_insertion_point(builder_implements:EVMContractAction)
+        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractExec_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractExec_fieldAccessorTable
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.Builder.class);
+                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.Builder.class);
       }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.newBuilder()
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5761,17 +3890,17 @@ public final class EvmService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractExec_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractAction_descriptor;
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec result = buildPartial();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5779,8 +3908,8 @@ public final class EvmService {
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec(this);
+      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction(this);
         result.amount_ = amount_;
         result.gasLimit_ = gasLimit_;
         result.gasPrice_ = gasPrice_;
@@ -5827,16 +3956,16 @@ public final class EvmService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec)other);
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec.getDefaultInstance()) return this;
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction.getDefaultInstance()) return this;
         if (other.getAmount() != 0L) {
           setAmount(other.getAmount());
         }
@@ -5879,11 +4008,11 @@ public final class EvmService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec parsedMessage = null;
+        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec) e.getUnfinishedMessage();
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5900,7 +4029,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint64 amount = 1;</code>
-       * @return The amount.
        */
       public long getAmount() {
         return amount_;
@@ -5911,8 +4039,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint64 amount = 1;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
        */
       public Builder setAmount(long value) {
         
@@ -5926,7 +4052,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint64 amount = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -5942,7 +4067,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint64 gasLimit = 2;</code>
-       * @return The gasLimit.
        */
       public long getGasLimit() {
         return gasLimit_;
@@ -5953,8 +4077,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint64 gasLimit = 2;</code>
-       * @param value The gasLimit to set.
-       * @return This builder for chaining.
        */
       public Builder setGasLimit(long value) {
         
@@ -5968,7 +4090,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint64 gasLimit = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearGasLimit() {
         
@@ -5984,7 +4105,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint32 gasPrice = 3;</code>
-       * @return The gasPrice.
        */
       public int getGasPrice() {
         return gasPrice_;
@@ -5995,8 +4115,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint32 gasPrice = 3;</code>
-       * @param value The gasPrice to set.
-       * @return This builder for chaining.
        */
       public Builder setGasPrice(int value) {
         
@@ -6010,7 +4128,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>uint32 gasPrice = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearGasPrice() {
         
@@ -6026,7 +4143,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes code = 4;</code>
-       * @return The code.
        */
       public com.google.protobuf.ByteString getCode() {
         return code_;
@@ -6037,8 +4153,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes code = 4;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
        */
       public Builder setCode(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -6055,7 +4169,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes code = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCode() {
         
@@ -6071,7 +4184,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes para = 5;</code>
-       * @return The para.
        */
       public com.google.protobuf.ByteString getPara() {
         return para_;
@@ -6082,8 +4194,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes para = 5;</code>
-       * @param value The para to set.
-       * @return This builder for chaining.
        */
       public Builder setPara(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -6100,7 +4210,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes para = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPara() {
         
@@ -6116,7 +4225,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string alias = 6;</code>
-       * @return The alias.
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -6136,7 +4244,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string alias = 6;</code>
-       * @return The bytes for alias.
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -6157,8 +4264,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string alias = 6;</code>
-       * @param value The alias to set.
-       * @return This builder for chaining.
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -6176,7 +4281,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string alias = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAlias() {
         
@@ -6190,8 +4294,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string alias = 6;</code>
-       * @param value The bytes for alias to set.
-       * @return This builder for chaining.
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -6212,7 +4314,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string note = 7;</code>
-       * @return The note.
        */
       public java.lang.String getNote() {
         java.lang.Object ref = note_;
@@ -6232,7 +4333,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string note = 7;</code>
-       * @return The bytes for note.
        */
       public com.google.protobuf.ByteString
           getNoteBytes() {
@@ -6253,8 +4353,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string note = 7;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
        */
       public Builder setNote(
           java.lang.String value) {
@@ -6272,7 +4370,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string note = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearNote() {
         
@@ -6286,8 +4383,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string note = 7;</code>
-       * @param value The bytes for note to set.
-       * @return This builder for chaining.
        */
       public Builder setNoteBytes(
           com.google.protobuf.ByteString value) {
@@ -6308,7 +4403,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractAddr = 8;</code>
-       * @return The contractAddr.
        */
       public java.lang.String getContractAddr() {
         java.lang.Object ref = contractAddr_;
@@ -6328,7 +4422,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractAddr = 8;</code>
-       * @return The bytes for contractAddr.
        */
       public com.google.protobuf.ByteString
           getContractAddrBytes() {
@@ -6349,8 +4442,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractAddr = 8;</code>
-       * @param value The contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddr(
           java.lang.String value) {
@@ -6368,7 +4459,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractAddr = 8;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractAddr() {
         
@@ -6382,8 +4472,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractAddr = 8;</code>
-       * @param value The bytes for contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -6409,5026 +4497,41 @@ public final class EvmService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:EVMContractExec)
+      // @@protoc_insertion_point(builder_scope:EVMContractAction)
     }
 
-    // @@protoc_insertion_point(class_scope:EVMContractExec)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:EVMContractAction)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec();
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction();
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec getDefaultInstance() {
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EVMContractExec>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractExec>() {
+    private static final com.google.protobuf.Parser<EVMContractAction>
+        PARSER = new com.google.protobuf.AbstractParser<EVMContractAction>() {
       @java.lang.Override
-      public EVMContractExec parsePartialFrom(
+      public EVMContractAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractExec(input, extensionRegistry);
+        return new EVMContractAction(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<EVMContractExec> parser() {
+    public static com.google.protobuf.Parser<EVMContractAction> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractExec> getParserForType() {
+    public com.google.protobuf.Parser<EVMContractAction> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractExec getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EVMContractUpdateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EVMContractUpdate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 待更新的合约地址
-     * </pre>
-     *
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    java.lang.String getAddr();
-    /**
-     * <pre>
-     * 待更新的合约地址
-     * </pre>
-     *
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    com.google.protobuf.ByteString
-        getAddrBytes();
-
-    /**
-     * <pre>
-     * 转账金额
-     * </pre>
-     *
-     * <code>uint64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-
-    /**
-     * <pre>
-     * 消耗限制，默认为Transaction.Fee
-     * </pre>
-     *
-     * <code>uint64 gasLimit = 3;</code>
-     * @return The gasLimit.
-     */
-    long getGasLimit();
-
-    /**
-     * <pre>
-     * gas价格，默认为1
-     * </pre>
-     *
-     * <code>uint32 gasPrice = 4;</code>
-     * @return The gasPrice.
-     */
-    int getGasPrice();
-
-    /**
-     * <pre>
-     * 合约数据
-     * </pre>
-     *
-     * <code>bytes code = 5;</code>
-     * @return The code.
-     */
-    com.google.protobuf.ByteString getCode();
-
-    /**
-     * <pre>
-     * 合约别名，方便识别
-     * </pre>
-     *
-     * <code>string alias = 6;</code>
-     * @return The alias.
-     */
-    java.lang.String getAlias();
-    /**
-     * <pre>
-     * 合约别名，方便识别
-     * </pre>
-     *
-     * <code>string alias = 6;</code>
-     * @return The bytes for alias.
-     */
-    com.google.protobuf.ByteString
-        getAliasBytes();
-
-    /**
-     * <pre>
-     * 交易备注
-     * </pre>
-     *
-     * <code>string note = 7;</code>
-     * @return The note.
-     */
-    java.lang.String getNote();
-    /**
-     * <pre>
-     * 交易备注
-     * </pre>
-     *
-     * <code>string note = 7;</code>
-     * @return The bytes for note.
-     */
-    com.google.protobuf.ByteString
-        getNoteBytes();
-  }
-  /**
-   * <pre>
-   * 更新合约的请求结构
-   * </pre>
-   *
-   * Protobuf type {@code EVMContractUpdate}
-   */
-  public  static final class EVMContractUpdate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EVMContractUpdate)
-      EVMContractUpdateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EVMContractUpdate.newBuilder() to construct.
-    private EVMContractUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EVMContractUpdate() {
-      addr_ = "";
-      code_ = com.google.protobuf.ByteString.EMPTY;
-      alias_ = "";
-      note_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EVMContractUpdate();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EVMContractUpdate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              addr_ = s;
-              break;
-            }
-            case 16: {
-
-              amount_ = input.readUInt64();
-              break;
-            }
-            case 24: {
-
-              gasLimit_ = input.readUInt64();
-              break;
-            }
-            case 32: {
-
-              gasPrice_ = input.readUInt32();
-              break;
-            }
-            case 42: {
-
-              code_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              alias_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              note_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractUpdate_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractUpdate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder.class);
-    }
-
-    public static final int ADDR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addr_;
-    /**
-     * <pre>
-     * 待更新的合约地址
-     * </pre>
-     *
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 待更新的合约地址
-     * </pre>
-     *
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <pre>
-     * 转账金额
-     * </pre>
-     *
-     * <code>uint64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    public static final int GASLIMIT_FIELD_NUMBER = 3;
-    private long gasLimit_;
-    /**
-     * <pre>
-     * 消耗限制，默认为Transaction.Fee
-     * </pre>
-     *
-     * <code>uint64 gasLimit = 3;</code>
-     * @return The gasLimit.
-     */
-    public long getGasLimit() {
-      return gasLimit_;
-    }
-
-    public static final int GASPRICE_FIELD_NUMBER = 4;
-    private int gasPrice_;
-    /**
-     * <pre>
-     * gas价格，默认为1
-     * </pre>
-     *
-     * <code>uint32 gasPrice = 4;</code>
-     * @return The gasPrice.
-     */
-    public int getGasPrice() {
-      return gasPrice_;
-    }
-
-    public static final int CODE_FIELD_NUMBER = 5;
-    private com.google.protobuf.ByteString code_;
-    /**
-     * <pre>
-     * 合约数据
-     * </pre>
-     *
-     * <code>bytes code = 5;</code>
-     * @return The code.
-     */
-    public com.google.protobuf.ByteString getCode() {
-      return code_;
-    }
-
-    public static final int ALIAS_FIELD_NUMBER = 6;
-    private volatile java.lang.Object alias_;
-    /**
-     * <pre>
-     * 合约别名，方便识别
-     * </pre>
-     *
-     * <code>string alias = 6;</code>
-     * @return The alias.
-     */
-    public java.lang.String getAlias() {
-      java.lang.Object ref = alias_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        alias_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 合约别名，方便识别
-     * </pre>
-     *
-     * <code>string alias = 6;</code>
-     * @return The bytes for alias.
-     */
-    public com.google.protobuf.ByteString
-        getAliasBytes() {
-      java.lang.Object ref = alias_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        alias_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NOTE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object note_;
-    /**
-     * <pre>
-     * 交易备注
-     * </pre>
-     *
-     * <code>string note = 7;</code>
-     * @return The note.
-     */
-    public java.lang.String getNote() {
-      java.lang.Object ref = note_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        note_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 交易备注
-     * </pre>
-     *
-     * <code>string note = 7;</code>
-     * @return The bytes for note.
-     */
-    public com.google.protobuf.ByteString
-        getNoteBytes() {
-      java.lang.Object ref = note_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        note_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addr_);
-      }
-      if (amount_ != 0L) {
-        output.writeUInt64(2, amount_);
-      }
-      if (gasLimit_ != 0L) {
-        output.writeUInt64(3, gasLimit_);
-      }
-      if (gasPrice_ != 0) {
-        output.writeUInt32(4, gasPrice_);
-      }
-      if (!code_.isEmpty()) {
-        output.writeBytes(5, code_);
-      }
-      if (!getAliasBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, alias_);
-      }
-      if (!getNoteBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, note_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addr_);
-      }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, amount_);
-      }
-      if (gasLimit_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, gasLimit_);
-      }
-      if (gasPrice_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, gasPrice_);
-      }
-      if (!code_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, code_);
-      }
-      if (!getAliasBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, alias_);
-      }
-      if (!getNoteBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, note_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) obj;
-
-      if (!getAddr()
-          .equals(other.getAddr())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (getGasLimit()
-          != other.getGasLimit()) return false;
-      if (getGasPrice()
-          != other.getGasPrice()) return false;
-      if (!getCode()
-          .equals(other.getCode())) return false;
-      if (!getAlias()
-          .equals(other.getAlias())) return false;
-      if (!getNote()
-          .equals(other.getNote())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (37 * hash) + GASLIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getGasLimit());
-      hash = (37 * hash) + GASPRICE_FIELD_NUMBER;
-      hash = (53 * hash) + getGasPrice();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode().hashCode();
-      hash = (37 * hash) + ALIAS_FIELD_NUMBER;
-      hash = (53 * hash) + getAlias().hashCode();
-      hash = (37 * hash) + NOTE_FIELD_NUMBER;
-      hash = (53 * hash) + getNote().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 更新合约的请求结构
-     * </pre>
-     *
-     * Protobuf type {@code EVMContractUpdate}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractUpdate)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractUpdate_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractUpdate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        addr_ = "";
-
-        amount_ = 0L;
-
-        gasLimit_ = 0L;
-
-        gasPrice_ = 0;
-
-        code_ = com.google.protobuf.ByteString.EMPTY;
-
-        alias_ = "";
-
-        note_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractUpdate_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate(this);
-        result.addr_ = addr_;
-        result.amount_ = amount_;
-        result.gasLimit_ = gasLimit_;
-        result.gasPrice_ = gasPrice_;
-        result.code_ = code_;
-        result.alias_ = alias_;
-        result.note_ = note_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate.getDefaultInstance()) return this;
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
-          onChanged();
-        }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
-        }
-        if (other.getGasLimit() != 0L) {
-          setGasLimit(other.getGasLimit());
-        }
-        if (other.getGasPrice() != 0) {
-          setGasPrice(other.getGasPrice());
-        }
-        if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
-          setCode(other.getCode());
-        }
-        if (!other.getAlias().isEmpty()) {
-          alias_ = other.alias_;
-          onChanged();
-        }
-        if (!other.getNote().isEmpty()) {
-          note_ = other.note_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object addr_ = "";
-      /**
-       * <pre>
-       * 待更新的合约地址
-       * </pre>
-       *
-       * <code>string addr = 1;</code>
-       * @return The addr.
-       */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 待更新的合约地址
-       * </pre>
-       *
-       * <code>string addr = 1;</code>
-       * @return The bytes for addr.
-       */
-      public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          addr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 待更新的合约地址
-       * </pre>
-       *
-       * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 待更新的合约地址
-       * </pre>
-       *
-       * <code>string addr = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAddr() {
-        
-        addr_ = getDefaultInstance().getAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 待更新的合约地址
-       * </pre>
-       *
-       * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long amount_ ;
-      /**
-       * <pre>
-       * 转账金额
-       * </pre>
-       *
-       * <code>uint64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <pre>
-       * 转账金额
-       * </pre>
-       *
-       * <code>uint64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 转账金额
-       * </pre>
-       *
-       * <code>uint64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long gasLimit_ ;
-      /**
-       * <pre>
-       * 消耗限制，默认为Transaction.Fee
-       * </pre>
-       *
-       * <code>uint64 gasLimit = 3;</code>
-       * @return The gasLimit.
-       */
-      public long getGasLimit() {
-        return gasLimit_;
-      }
-      /**
-       * <pre>
-       * 消耗限制，默认为Transaction.Fee
-       * </pre>
-       *
-       * <code>uint64 gasLimit = 3;</code>
-       * @param value The gasLimit to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGasLimit(long value) {
-        
-        gasLimit_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 消耗限制，默认为Transaction.Fee
-       * </pre>
-       *
-       * <code>uint64 gasLimit = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGasLimit() {
-        
-        gasLimit_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private int gasPrice_ ;
-      /**
-       * <pre>
-       * gas价格，默认为1
-       * </pre>
-       *
-       * <code>uint32 gasPrice = 4;</code>
-       * @return The gasPrice.
-       */
-      public int getGasPrice() {
-        return gasPrice_;
-      }
-      /**
-       * <pre>
-       * gas价格，默认为1
-       * </pre>
-       *
-       * <code>uint32 gasPrice = 4;</code>
-       * @param value The gasPrice to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGasPrice(int value) {
-        
-        gasPrice_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * gas价格，默认为1
-       * </pre>
-       *
-       * <code>uint32 gasPrice = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGasPrice() {
-        
-        gasPrice_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       * 合约数据
-       * </pre>
-       *
-       * <code>bytes code = 5;</code>
-       * @return The code.
-       */
-      public com.google.protobuf.ByteString getCode() {
-        return code_;
-      }
-      /**
-       * <pre>
-       * 合约数据
-       * </pre>
-       *
-       * <code>bytes code = 5;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 合约数据
-       * </pre>
-       *
-       * <code>bytes code = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object alias_ = "";
-      /**
-       * <pre>
-       * 合约别名，方便识别
-       * </pre>
-       *
-       * <code>string alias = 6;</code>
-       * @return The alias.
-       */
-      public java.lang.String getAlias() {
-        java.lang.Object ref = alias_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          alias_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 合约别名，方便识别
-       * </pre>
-       *
-       * <code>string alias = 6;</code>
-       * @return The bytes for alias.
-       */
-      public com.google.protobuf.ByteString
-          getAliasBytes() {
-        java.lang.Object ref = alias_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          alias_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 合约别名，方便识别
-       * </pre>
-       *
-       * <code>string alias = 6;</code>
-       * @param value The alias to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAlias(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        alias_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 合约别名，方便识别
-       * </pre>
-       *
-       * <code>string alias = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAlias() {
-        
-        alias_ = getDefaultInstance().getAlias();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 合约别名，方便识别
-       * </pre>
-       *
-       * <code>string alias = 6;</code>
-       * @param value The bytes for alias to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAliasBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        alias_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object note_ = "";
-      /**
-       * <pre>
-       * 交易备注
-       * </pre>
-       *
-       * <code>string note = 7;</code>
-       * @return The note.
-       */
-      public java.lang.String getNote() {
-        java.lang.Object ref = note_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          note_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 交易备注
-       * </pre>
-       *
-       * <code>string note = 7;</code>
-       * @return The bytes for note.
-       */
-      public com.google.protobuf.ByteString
-          getNoteBytes() {
-        java.lang.Object ref = note_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          note_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 交易备注
-       * </pre>
-       *
-       * <code>string note = 7;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNote(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        note_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 交易备注
-       * </pre>
-       *
-       * <code>string note = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNote() {
-        
-        note_ = getDefaultInstance().getNote();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 交易备注
-       * </pre>
-       *
-       * <code>string note = 7;</code>
-       * @param value The bytes for note to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNoteBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        note_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EVMContractUpdate)
-    }
-
-    // @@protoc_insertion_point(class_scope:EVMContractUpdate)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EVMContractUpdate>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractUpdate>() {
-      @java.lang.Override
-      public EVMContractUpdate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractUpdate(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EVMContractUpdate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractUpdate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractUpdate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EVMContractDestroyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EVMContractDestroy)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    java.lang.String getAddr();
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    com.google.protobuf.ByteString
-        getAddrBytes();
-  }
-  /**
-   * Protobuf type {@code EVMContractDestroy}
-   */
-  public  static final class EVMContractDestroy extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EVMContractDestroy)
-      EVMContractDestroyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EVMContractDestroy.newBuilder() to construct.
-    private EVMContractDestroy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EVMContractDestroy() {
-      addr_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EVMContractDestroy();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EVMContractDestroy(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              addr_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractDestroy_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractDestroy_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder.class);
-    }
-
-    public static final int ADDR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addr_;
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addr_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addr_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) obj;
-
-      if (!getAddr()
-          .equals(other.getAddr())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EVMContractDestroy}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractDestroy)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractDestroy_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractDestroy_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        addr_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractDestroy_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy(this);
-        result.addr_ = addr_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy.getDefaultInstance()) return this;
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object addr_ = "";
-      /**
-       * <code>string addr = 1;</code>
-       * @return The addr.
-       */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return The bytes for addr.
-       */
-      public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          addr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAddr() {
-        
-        addr_ = getDefaultInstance().getAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EVMContractDestroy)
-    }
-
-    // @@protoc_insertion_point(class_scope:EVMContractDestroy)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EVMContractDestroy>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractDestroy>() {
-      @java.lang.Override
-      public EVMContractDestroy parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractDestroy(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EVMContractDestroy> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractDestroy> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractDestroy getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EVMContractFreezeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EVMContractFreeze)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    java.lang.String getAddr();
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    com.google.protobuf.ByteString
-        getAddrBytes();
-  }
-  /**
-   * Protobuf type {@code EVMContractFreeze}
-   */
-  public  static final class EVMContractFreeze extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EVMContractFreeze)
-      EVMContractFreezeOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EVMContractFreeze.newBuilder() to construct.
-    private EVMContractFreeze(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EVMContractFreeze() {
-      addr_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EVMContractFreeze();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EVMContractFreeze(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              addr_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractFreeze_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractFreeze_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder.class);
-    }
-
-    public static final int ADDR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addr_;
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addr_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addr_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) obj;
-
-      if (!getAddr()
-          .equals(other.getAddr())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EVMContractFreeze}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractFreeze)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreezeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractFreeze_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractFreeze_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        addr_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractFreeze_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze(this);
-        result.addr_ = addr_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze.getDefaultInstance()) return this;
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object addr_ = "";
-      /**
-       * <code>string addr = 1;</code>
-       * @return The addr.
-       */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return The bytes for addr.
-       */
-      public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          addr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAddr() {
-        
-        addr_ = getDefaultInstance().getAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EVMContractFreeze)
-    }
-
-    // @@protoc_insertion_point(class_scope:EVMContractFreeze)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EVMContractFreeze>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractFreeze>() {
-      @java.lang.Override
-      public EVMContractFreeze parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractFreeze(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EVMContractFreeze> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractFreeze> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractFreeze getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EVMContractReleaseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EVMContractRelease)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    java.lang.String getAddr();
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    com.google.protobuf.ByteString
-        getAddrBytes();
-  }
-  /**
-   * Protobuf type {@code EVMContractRelease}
-   */
-  public  static final class EVMContractRelease extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EVMContractRelease)
-      EVMContractReleaseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EVMContractRelease.newBuilder() to construct.
-    private EVMContractRelease(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EVMContractRelease() {
-      addr_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EVMContractRelease();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EVMContractRelease(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              addr_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractRelease_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractRelease_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder.class);
-    }
-
-    public static final int ADDR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addr_;
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addr_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addr_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) obj;
-
-      if (!getAddr()
-          .equals(other.getAddr())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EVMContractRelease}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractRelease)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractReleaseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractRelease_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractRelease_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        addr_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractRelease_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease(this);
-        result.addr_ = addr_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease.getDefaultInstance()) return this;
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object addr_ = "";
-      /**
-       * <code>string addr = 1;</code>
-       * @return The addr.
-       */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return The bytes for addr.
-       */
-      public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          addr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAddr() {
-        
-        addr_ = getDefaultInstance().getAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EVMContractRelease)
-    }
-
-    // @@protoc_insertion_point(class_scope:EVMContractRelease)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EVMContractRelease>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractRelease>() {
-      @java.lang.Override
-      public EVMContractRelease parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractRelease(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EVMContractRelease> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractRelease> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractRelease getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EVMContractStatisticOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EVMContractStatistic)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>uint64 callTimes = 1;</code>
-     * @return The callTimes.
-     */
-    long getCallTimes();
-
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @return A list containing the caller.
-     */
-    java.util.List<java.lang.String>
-        getCallerList();
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @return The count of caller.
-     */
-    int getCallerCount();
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @param index The index of the element to return.
-     * @return The caller at the given index.
-     */
-    java.lang.String getCaller(int index);
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the caller at the given index.
-     */
-    com.google.protobuf.ByteString
-        getCallerBytes(int index);
-
-    /**
-     * <code>uint64 succseccTimes = 3;</code>
-     * @return The succseccTimes.
-     */
-    long getSuccseccTimes();
-
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-    int getFailReasonCount();
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-    boolean containsFailReason(
-        java.lang.String key);
-    /**
-     * Use {@link #getFailReasonMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.Long>
-    getFailReason();
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.Long>
-    getFailReasonMap();
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-
-    long getFailReasonOrDefault(
-        java.lang.String key,
-        long defaultValue);
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-
-    long getFailReasonOrThrow(
-        java.lang.String key);
-  }
-  /**
-   * <pre>
-   * 存放合约统计数据
-   * </pre>
-   *
-   * Protobuf type {@code EVMContractStatistic}
-   */
-  public  static final class EVMContractStatistic extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EVMContractStatistic)
-      EVMContractStatisticOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EVMContractStatistic.newBuilder() to construct.
-    private EVMContractStatistic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EVMContractStatistic() {
-      caller_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EVMContractStatistic();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EVMContractStatistic(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              callTimes_ = input.readUInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                caller_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              caller_.add(s);
-              break;
-            }
-            case 24: {
-
-              succseccTimes_ = input.readUInt64();
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                failReason_ = com.google.protobuf.MapField.newMapField(
-                    FailReasonDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
-              failReason__ = input.readMessage(
-                  FailReasonDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              failReason_.getMutableMap().put(
-                  failReason__.getKey(), failReason__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          caller_ = caller_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractStatistic_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetFailReason();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractStatistic_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.Builder.class);
-    }
-
-    public static final int CALLTIMES_FIELD_NUMBER = 1;
-    private long callTimes_;
-    /**
-     * <code>uint64 callTimes = 1;</code>
-     * @return The callTimes.
-     */
-    public long getCallTimes() {
-      return callTimes_;
-    }
-
-    public static final int CALLER_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList caller_;
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @return A list containing the caller.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getCallerList() {
-      return caller_;
-    }
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @return The count of caller.
-     */
-    public int getCallerCount() {
-      return caller_.size();
-    }
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @param index The index of the element to return.
-     * @return The caller at the given index.
-     */
-    public java.lang.String getCaller(int index) {
-      return caller_.get(index);
-    }
-    /**
-     * <code>repeated string caller = 2;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the caller at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getCallerBytes(int index) {
-      return caller_.getByteString(index);
-    }
-
-    public static final int SUCCSECCTIMES_FIELD_NUMBER = 3;
-    private long succseccTimes_;
-    /**
-     * <code>uint64 succseccTimes = 3;</code>
-     * @return The succseccTimes.
-     */
-    public long getSuccseccTimes() {
-      return succseccTimes_;
-    }
-
-    public static final int FAILREASON_FIELD_NUMBER = 4;
-    private static final class FailReasonDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.Long> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.Long>newDefaultInstance(
-                  cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractStatistic_FailReasonEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.UINT64,
-                  0L);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.Long> failReason_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-    internalGetFailReason() {
-      if (failReason_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            FailReasonDefaultEntryHolder.defaultEntry);
-      }
-      return failReason_;
-    }
-
-    public int getFailReasonCount() {
-      return internalGetFailReason().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-
-    public boolean containsFailReason(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetFailReason().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getFailReasonMap()} instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.Long> getFailReason() {
-      return getFailReasonMap();
-    }
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-
-    public java.util.Map<java.lang.String, java.lang.Long> getFailReasonMap() {
-      return internalGetFailReason().getMap();
-    }
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-
-    public long getFailReasonOrDefault(
-        java.lang.String key,
-        long defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.Long> map =
-          internalGetFailReason().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-     */
-
-    public long getFailReasonOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.Long> map =
-          internalGetFailReason().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (callTimes_ != 0L) {
-        output.writeUInt64(1, callTimes_);
-      }
-      for (int i = 0; i < caller_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, caller_.getRaw(i));
-      }
-      if (succseccTimes_ != 0L) {
-        output.writeUInt64(3, succseccTimes_);
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetFailReason(),
-          FailReasonDefaultEntryHolder.defaultEntry,
-          4);
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (callTimes_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, callTimes_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < caller_.size(); i++) {
-          dataSize += computeStringSizeNoTag(caller_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getCallerList().size();
-      }
-      if (succseccTimes_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, succseccTimes_);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
-           : internalGetFailReason().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
-        failReason__ = FailReasonDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(4, failReason__);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic other = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic) obj;
-
-      if (getCallTimes()
-          != other.getCallTimes()) return false;
-      if (!getCallerList()
-          .equals(other.getCallerList())) return false;
-      if (getSuccseccTimes()
-          != other.getSuccseccTimes()) return false;
-      if (!internalGetFailReason().equals(
-          other.internalGetFailReason())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CALLTIMES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCallTimes());
-      if (getCallerCount() > 0) {
-        hash = (37 * hash) + CALLER_FIELD_NUMBER;
-        hash = (53 * hash) + getCallerList().hashCode();
-      }
-      hash = (37 * hash) + SUCCSECCTIMES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSuccseccTimes());
-      if (!internalGetFailReason().getMap().isEmpty()) {
-        hash = (37 * hash) + FAILREASON_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetFailReason().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 存放合约统计数据
-     * </pre>
-     *
-     * Protobuf type {@code EVMContractStatistic}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EVMContractStatistic)
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatisticOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractStatistic_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetFailReason();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetMutableFailReason();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractStatistic_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.class, cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        callTimes_ = 0L;
-
-        caller_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        succseccTimes_ = 0L;
-
-        internalGetMutableFailReason().clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EVMContractStatistic_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic result = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic(this);
-        int from_bitField0_ = bitField0_;
-        result.callTimes_ = callTimes_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          caller_ = caller_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.caller_ = caller_;
-        result.succseccTimes_ = succseccTimes_;
-        result.failReason_ = internalGetFailReason();
-        result.failReason_.makeImmutable();
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic.getDefaultInstance()) return this;
-        if (other.getCallTimes() != 0L) {
-          setCallTimes(other.getCallTimes());
-        }
-        if (!other.caller_.isEmpty()) {
-          if (caller_.isEmpty()) {
-            caller_ = other.caller_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureCallerIsMutable();
-            caller_.addAll(other.caller_);
-          }
-          onChanged();
-        }
-        if (other.getSuccseccTimes() != 0L) {
-          setSuccseccTimes(other.getSuccseccTimes());
-        }
-        internalGetMutableFailReason().mergeFrom(
-            other.internalGetFailReason());
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long callTimes_ ;
-      /**
-       * <code>uint64 callTimes = 1;</code>
-       * @return The callTimes.
-       */
-      public long getCallTimes() {
-        return callTimes_;
-      }
-      /**
-       * <code>uint64 callTimes = 1;</code>
-       * @param value The callTimes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallTimes(long value) {
-        
-        callTimes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 callTimes = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCallTimes() {
-        
-        callTimes_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList caller_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureCallerIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          caller_ = new com.google.protobuf.LazyStringArrayList(caller_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @return A list containing the caller.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getCallerList() {
-        return caller_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @return The count of caller.
-       */
-      public int getCallerCount() {
-        return caller_.size();
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @param index The index of the element to return.
-       * @return The caller at the given index.
-       */
-      public java.lang.String getCaller(int index) {
-        return caller_.get(index);
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the caller at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getCallerBytes(int index) {
-        return caller_.getByteString(index);
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @param index The index to set the value at.
-       * @param value The caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCaller(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCallerIsMutable();
-        caller_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @param value The caller to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCaller(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCallerIsMutable();
-        caller_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @param values The caller to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllCaller(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureCallerIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, caller_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCaller() {
-        caller_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string caller = 2;</code>
-       * @param value The bytes of the caller to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCallerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureCallerIsMutable();
-        caller_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private long succseccTimes_ ;
-      /**
-       * <code>uint64 succseccTimes = 3;</code>
-       * @return The succseccTimes.
-       */
-      public long getSuccseccTimes() {
-        return succseccTimes_;
-      }
-      /**
-       * <code>uint64 succseccTimes = 3;</code>
-       * @param value The succseccTimes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSuccseccTimes(long value) {
-        
-        succseccTimes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 succseccTimes = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSuccseccTimes() {
-        
-        succseccTimes_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.Long> failReason_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-      internalGetFailReason() {
-        if (failReason_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              FailReasonDefaultEntryHolder.defaultEntry);
-        }
-        return failReason_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-      internalGetMutableFailReason() {
-        onChanged();;
-        if (failReason_ == null) {
-          failReason_ = com.google.protobuf.MapField.newMapField(
-              FailReasonDefaultEntryHolder.defaultEntry);
-        }
-        if (!failReason_.isMutable()) {
-          failReason_ = failReason_.copy();
-        }
-        return failReason_;
-      }
-
-      public int getFailReasonCount() {
-        return internalGetFailReason().getMap().size();
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-
-      public boolean containsFailReason(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetFailReason().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getFailReasonMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Long> getFailReason() {
-        return getFailReasonMap();
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-
-      public java.util.Map<java.lang.String, java.lang.Long> getFailReasonMap() {
-        return internalGetFailReason().getMap();
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-
-      public long getFailReasonOrDefault(
-          java.lang.String key,
-          long defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.Long> map =
-            internalGetFailReason().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-
-      public long getFailReasonOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.Long> map =
-            internalGetFailReason().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearFailReason() {
-        internalGetMutableFailReason().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-
-      public Builder removeFailReason(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableFailReason().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Long>
-      getMutableFailReason() {
-        return internalGetMutableFailReason().getMutableMap();
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-      public Builder putFailReason(
-          java.lang.String key,
-          long value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        
-        internalGetMutableFailReason().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;string, uint64&gt; failReason = 4;</code>
-       */
-
-      public Builder putAllFailReason(
-          java.util.Map<java.lang.String, java.lang.Long> values) {
-        internalGetMutableFailReason().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EVMContractStatistic)
-    }
-
-    // @@protoc_insertion_point(class_scope:EVMContractStatistic)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EVMContractStatistic>
-        PARSER = new com.google.protobuf.AbstractParser<EVMContractStatistic>() {
-      @java.lang.Override
-      public EVMContractStatistic parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EVMContractStatistic(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EVMContractStatistic> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EVMContractStatistic> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractStatistic getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ReceiptEvmStatisticOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ReceiptEvmStatistic)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    java.lang.String getAddr();
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    com.google.protobuf.ByteString
-        getAddrBytes();
-
-    /**
-     * <code>uint64 callTimes = 2;</code>
-     * @return The callTimes.
-     */
-    long getCallTimes();
-
-    /**
-     * <code>string caller = 3;</code>
-     * @return The caller.
-     */
-    java.lang.String getCaller();
-    /**
-     * <code>string caller = 3;</code>
-     * @return The bytes for caller.
-     */
-    com.google.protobuf.ByteString
-        getCallerBytes();
-
-    /**
-     * <code>uint64 succseccTimes = 4;</code>
-     * @return The succseccTimes.
-     */
-    long getSuccseccTimes();
-  }
-  /**
-   * <pre>
-   * 合约统计数据日志
-   * </pre>
-   *
-   * Protobuf type {@code ReceiptEvmStatistic}
-   */
-  public  static final class ReceiptEvmStatistic extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ReceiptEvmStatistic)
-      ReceiptEvmStatisticOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReceiptEvmStatistic.newBuilder() to construct.
-    private ReceiptEvmStatistic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ReceiptEvmStatistic() {
-      addr_ = "";
-      caller_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReceiptEvmStatistic();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ReceiptEvmStatistic(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              addr_ = s;
-              break;
-            }
-            case 16: {
-
-              callTimes_ = input.readUInt64();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              caller_ = s;
-              break;
-            }
-            case 32: {
-
-              succseccTimes_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_ReceiptEvmStatistic_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_ReceiptEvmStatistic_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.class, cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.Builder.class);
-    }
-
-    public static final int ADDR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addr_;
-    /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
-     */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
-     */
-    public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CALLTIMES_FIELD_NUMBER = 2;
-    private long callTimes_;
-    /**
-     * <code>uint64 callTimes = 2;</code>
-     * @return The callTimes.
-     */
-    public long getCallTimes() {
-      return callTimes_;
-    }
-
-    public static final int CALLER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object caller_;
-    /**
-     * <code>string caller = 3;</code>
-     * @return The caller.
-     */
-    public java.lang.String getCaller() {
-      java.lang.Object ref = caller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        caller_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string caller = 3;</code>
-     * @return The bytes for caller.
-     */
-    public com.google.protobuf.ByteString
-        getCallerBytes() {
-      java.lang.Object ref = caller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        caller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SUCCSECCTIMES_FIELD_NUMBER = 4;
-    private long succseccTimes_;
-    /**
-     * <code>uint64 succseccTimes = 4;</code>
-     * @return The succseccTimes.
-     */
-    public long getSuccseccTimes() {
-      return succseccTimes_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addr_);
-      }
-      if (callTimes_ != 0L) {
-        output.writeUInt64(2, callTimes_);
-      }
-      if (!getCallerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, caller_);
-      }
-      if (succseccTimes_ != 0L) {
-        output.writeUInt64(4, succseccTimes_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addr_);
-      }
-      if (callTimes_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, callTimes_);
-      }
-      if (!getCallerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, caller_);
-      }
-      if (succseccTimes_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, succseccTimes_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic other = (cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic) obj;
-
-      if (!getAddr()
-          .equals(other.getAddr())) return false;
-      if (getCallTimes()
-          != other.getCallTimes()) return false;
-      if (!getCaller()
-          .equals(other.getCaller())) return false;
-      if (getSuccseccTimes()
-          != other.getSuccseccTimes()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
-      hash = (37 * hash) + CALLTIMES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCallTimes());
-      hash = (37 * hash) + CALLER_FIELD_NUMBER;
-      hash = (53 * hash) + getCaller().hashCode();
-      hash = (37 * hash) + SUCCSECCTIMES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSuccseccTimes());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 合约统计数据日志
-     * </pre>
-     *
-     * Protobuf type {@code ReceiptEvmStatistic}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ReceiptEvmStatistic)
-        cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatisticOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_ReceiptEvmStatistic_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_ReceiptEvmStatistic_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.class, cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        addr_ = "";
-
-        callTimes_ = 0L;
-
-        caller_ = "";
-
-        succseccTimes_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_ReceiptEvmStatistic_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic result = new cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic(this);
-        result.addr_ = addr_;
-        result.callTimes_ = callTimes_;
-        result.caller_ = caller_;
-        result.succseccTimes_ = succseccTimes_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic.getDefaultInstance()) return this;
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
-          onChanged();
-        }
-        if (other.getCallTimes() != 0L) {
-          setCallTimes(other.getCallTimes());
-        }
-        if (!other.getCaller().isEmpty()) {
-          caller_ = other.caller_;
-          onChanged();
-        }
-        if (other.getSuccseccTimes() != 0L) {
-          setSuccseccTimes(other.getSuccseccTimes());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object addr_ = "";
-      /**
-       * <code>string addr = 1;</code>
-       * @return The addr.
-       */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return The bytes for addr.
-       */
-      public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          addr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAddr() {
-        
-        addr_ = getDefaultInstance().getAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long callTimes_ ;
-      /**
-       * <code>uint64 callTimes = 2;</code>
-       * @return The callTimes.
-       */
-      public long getCallTimes() {
-        return callTimes_;
-      }
-      /**
-       * <code>uint64 callTimes = 2;</code>
-       * @param value The callTimes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallTimes(long value) {
-        
-        callTimes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 callTimes = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCallTimes() {
-        
-        callTimes_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object caller_ = "";
-      /**
-       * <code>string caller = 3;</code>
-       * @return The caller.
-       */
-      public java.lang.String getCaller() {
-        java.lang.Object ref = caller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          caller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string caller = 3;</code>
-       * @return The bytes for caller.
-       */
-      public com.google.protobuf.ByteString
-          getCallerBytes() {
-        java.lang.Object ref = caller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          caller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string caller = 3;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCaller(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        caller_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string caller = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCaller() {
-        
-        caller_ = getDefaultInstance().getCaller();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string caller = 3;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        caller_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long succseccTimes_ ;
-      /**
-       * <code>uint64 succseccTimes = 4;</code>
-       * @return The succseccTimes.
-       */
-      public long getSuccseccTimes() {
-        return succseccTimes_;
-      }
-      /**
-       * <code>uint64 succseccTimes = 4;</code>
-       * @param value The succseccTimes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSuccseccTimes(long value) {
-        
-        succseccTimes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 succseccTimes = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSuccseccTimes() {
-        
-        succseccTimes_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:ReceiptEvmStatistic)
-    }
-
-    // @@protoc_insertion_point(class_scope:ReceiptEvmStatistic)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ReceiptEvmStatistic>
-        PARSER = new com.google.protobuf.AbstractParser<ReceiptEvmStatistic>() {
-      @java.lang.Override
-      public ReceiptEvmStatistic parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ReceiptEvmStatistic(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ReceiptEvmStatistic> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReceiptEvmStatistic> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.ReceiptEvmStatistic getDefaultInstanceForType() {
+    public cn.chain33.javasdk.model.protobuf.EvmService.EVMContractAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11440,43 +4543,36 @@ public final class EvmService {
 
     /**
      * <code>string caller = 1;</code>
-     * @return The caller.
      */
     java.lang.String getCaller();
     /**
      * <code>string caller = 1;</code>
-     * @return The bytes for caller.
      */
     com.google.protobuf.ByteString
         getCallerBytes();
 
     /**
      * <code>string contractName = 2;</code>
-     * @return The contractName.
      */
     java.lang.String getContractName();
     /**
      * <code>string contractName = 2;</code>
-     * @return The bytes for contractName.
      */
     com.google.protobuf.ByteString
         getContractNameBytes();
 
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The contractAddr.
      */
     java.lang.String getContractAddr();
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The bytes for contractAddr.
      */
     com.google.protobuf.ByteString
         getContractAddrBytes();
 
     /**
      * <code>uint64 usedGas = 4;</code>
-     * @return The usedGas.
      */
     long getUsedGas();
 
@@ -11486,7 +4582,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>bytes ret = 5;</code>
-     * @return The ret.
      */
     com.google.protobuf.ByteString getRet();
 
@@ -11496,7 +4591,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string jsonRet = 6;</code>
-     * @return The jsonRet.
      */
     java.lang.String getJsonRet();
     /**
@@ -11505,7 +4599,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string jsonRet = 6;</code>
-     * @return The bytes for jsonRet.
      */
     com.google.protobuf.ByteString
         getJsonRetBytes();
@@ -11634,7 +4727,6 @@ public final class EvmService {
     private volatile java.lang.Object caller_;
     /**
      * <code>string caller = 1;</code>
-     * @return The caller.
      */
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
@@ -11650,7 +4742,6 @@ public final class EvmService {
     }
     /**
      * <code>string caller = 1;</code>
-     * @return The bytes for caller.
      */
     public com.google.protobuf.ByteString
         getCallerBytes() {
@@ -11670,7 +4761,6 @@ public final class EvmService {
     private volatile java.lang.Object contractName_;
     /**
      * <code>string contractName = 2;</code>
-     * @return The contractName.
      */
     public java.lang.String getContractName() {
       java.lang.Object ref = contractName_;
@@ -11686,7 +4776,6 @@ public final class EvmService {
     }
     /**
      * <code>string contractName = 2;</code>
-     * @return The bytes for contractName.
      */
     public com.google.protobuf.ByteString
         getContractNameBytes() {
@@ -11706,7 +4795,6 @@ public final class EvmService {
     private volatile java.lang.Object contractAddr_;
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The contractAddr.
      */
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
@@ -11722,7 +4810,6 @@ public final class EvmService {
     }
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The bytes for contractAddr.
      */
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
@@ -11742,7 +4829,6 @@ public final class EvmService {
     private long usedGas_;
     /**
      * <code>uint64 usedGas = 4;</code>
-     * @return The usedGas.
      */
     public long getUsedGas() {
       return usedGas_;
@@ -11756,7 +4842,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>bytes ret = 5;</code>
-     * @return The ret.
      */
     public com.google.protobuf.ByteString getRet() {
       return ret_;
@@ -11770,7 +4855,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string jsonRet = 6;</code>
-     * @return The jsonRet.
      */
     public java.lang.String getJsonRet() {
       java.lang.Object ref = jsonRet_;
@@ -11790,7 +4874,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string jsonRet = 6;</code>
-     * @return The bytes for jsonRet.
      */
     public com.google.protobuf.ByteString
         getJsonRetBytes() {
@@ -12201,7 +5284,6 @@ public final class EvmService {
       private java.lang.Object caller_ = "";
       /**
        * <code>string caller = 1;</code>
-       * @return The caller.
        */
       public java.lang.String getCaller() {
         java.lang.Object ref = caller_;
@@ -12217,7 +5299,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @return The bytes for caller.
        */
       public com.google.protobuf.ByteString
           getCallerBytes() {
@@ -12234,8 +5315,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCaller(
           java.lang.String value) {
@@ -12249,7 +5328,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCaller() {
         
@@ -12259,8 +5337,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCallerBytes(
           com.google.protobuf.ByteString value) {
@@ -12277,7 +5353,6 @@ public final class EvmService {
       private java.lang.Object contractName_ = "";
       /**
        * <code>string contractName = 2;</code>
-       * @return The contractName.
        */
       public java.lang.String getContractName() {
         java.lang.Object ref = contractName_;
@@ -12293,7 +5368,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 2;</code>
-       * @return The bytes for contractName.
        */
       public com.google.protobuf.ByteString
           getContractNameBytes() {
@@ -12310,8 +5384,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 2;</code>
-       * @param value The contractName to set.
-       * @return This builder for chaining.
        */
       public Builder setContractName(
           java.lang.String value) {
@@ -12325,7 +5397,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractName() {
         
@@ -12335,8 +5406,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 2;</code>
-       * @param value The bytes for contractName to set.
-       * @return This builder for chaining.
        */
       public Builder setContractNameBytes(
           com.google.protobuf.ByteString value) {
@@ -12353,7 +5422,6 @@ public final class EvmService {
       private java.lang.Object contractAddr_ = "";
       /**
        * <code>string contractAddr = 3;</code>
-       * @return The contractAddr.
        */
       public java.lang.String getContractAddr() {
         java.lang.Object ref = contractAddr_;
@@ -12369,7 +5437,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @return The bytes for contractAddr.
        */
       public com.google.protobuf.ByteString
           getContractAddrBytes() {
@@ -12386,8 +5453,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @param value The contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddr(
           java.lang.String value) {
@@ -12401,7 +5466,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractAddr() {
         
@@ -12411,8 +5475,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @param value The bytes for contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -12429,15 +5491,12 @@ public final class EvmService {
       private long usedGas_ ;
       /**
        * <code>uint64 usedGas = 4;</code>
-       * @return The usedGas.
        */
       public long getUsedGas() {
         return usedGas_;
       }
       /**
        * <code>uint64 usedGas = 4;</code>
-       * @param value The usedGas to set.
-       * @return This builder for chaining.
        */
       public Builder setUsedGas(long value) {
         
@@ -12447,7 +5506,6 @@ public final class EvmService {
       }
       /**
        * <code>uint64 usedGas = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearUsedGas() {
         
@@ -12463,7 +5521,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes ret = 5;</code>
-       * @return The ret.
        */
       public com.google.protobuf.ByteString getRet() {
         return ret_;
@@ -12474,8 +5531,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes ret = 5;</code>
-       * @param value The ret to set.
-       * @return This builder for chaining.
        */
       public Builder setRet(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -12492,7 +5547,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>bytes ret = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearRet() {
         
@@ -12508,7 +5562,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string jsonRet = 6;</code>
-       * @return The jsonRet.
        */
       public java.lang.String getJsonRet() {
         java.lang.Object ref = jsonRet_;
@@ -12528,7 +5581,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string jsonRet = 6;</code>
-       * @return The bytes for jsonRet.
        */
       public com.google.protobuf.ByteString
           getJsonRetBytes() {
@@ -12549,8 +5601,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string jsonRet = 6;</code>
-       * @param value The jsonRet to set.
-       * @return This builder for chaining.
        */
       public Builder setJsonRet(
           java.lang.String value) {
@@ -12568,7 +5618,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string jsonRet = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearJsonRet() {
         
@@ -12582,8 +5631,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string jsonRet = 6;</code>
-       * @param value The bytes for jsonRet to set.
-       * @return This builder for chaining.
        */
       public Builder setJsonRetBytes(
           com.google.protobuf.ByteString value) {
@@ -12655,25 +5702,21 @@ public final class EvmService {
 
     /**
      * <code>string key = 1;</code>
-     * @return The key.
      */
     java.lang.String getKey();
     /**
      * <code>string key = 1;</code>
-     * @return The bytes for key.
      */
     com.google.protobuf.ByteString
         getKeyBytes();
 
     /**
      * <code>bytes preValue = 2;</code>
-     * @return The preValue.
      */
     com.google.protobuf.ByteString getPreValue();
 
     /**
      * <code>bytes currentValue = 3;</code>
-     * @return The currentValue.
      */
     com.google.protobuf.ByteString getCurrentValue();
   }
@@ -12781,7 +5824,6 @@ public final class EvmService {
     private volatile java.lang.Object key_;
     /**
      * <code>string key = 1;</code>
-     * @return The key.
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -12797,7 +5839,6 @@ public final class EvmService {
     }
     /**
      * <code>string key = 1;</code>
-     * @return The bytes for key.
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -12817,7 +5858,6 @@ public final class EvmService {
     private com.google.protobuf.ByteString preValue_;
     /**
      * <code>bytes preValue = 2;</code>
-     * @return The preValue.
      */
     public com.google.protobuf.ByteString getPreValue() {
       return preValue_;
@@ -12827,7 +5867,6 @@ public final class EvmService {
     private com.google.protobuf.ByteString currentValue_;
     /**
      * <code>bytes currentValue = 3;</code>
-     * @return The currentValue.
      */
     public com.google.protobuf.ByteString getCurrentValue() {
       return currentValue_;
@@ -13176,7 +6215,6 @@ public final class EvmService {
       private java.lang.Object key_ = "";
       /**
        * <code>string key = 1;</code>
-       * @return The key.
        */
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
@@ -13192,7 +6230,6 @@ public final class EvmService {
       }
       /**
        * <code>string key = 1;</code>
-       * @return The bytes for key.
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
@@ -13209,8 +6246,6 @@ public final class EvmService {
       }
       /**
        * <code>string key = 1;</code>
-       * @param value The key to set.
-       * @return This builder for chaining.
        */
       public Builder setKey(
           java.lang.String value) {
@@ -13224,7 +6259,6 @@ public final class EvmService {
       }
       /**
        * <code>string key = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearKey() {
         
@@ -13234,8 +6268,6 @@ public final class EvmService {
       }
       /**
        * <code>string key = 1;</code>
-       * @param value The bytes for key to set.
-       * @return This builder for chaining.
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -13252,15 +6284,12 @@ public final class EvmService {
       private com.google.protobuf.ByteString preValue_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes preValue = 2;</code>
-       * @return The preValue.
        */
       public com.google.protobuf.ByteString getPreValue() {
         return preValue_;
       }
       /**
        * <code>bytes preValue = 2;</code>
-       * @param value The preValue to set.
-       * @return This builder for chaining.
        */
       public Builder setPreValue(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -13273,7 +6302,6 @@ public final class EvmService {
       }
       /**
        * <code>bytes preValue = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPreValue() {
         
@@ -13285,15 +6313,12 @@ public final class EvmService {
       private com.google.protobuf.ByteString currentValue_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes currentValue = 3;</code>
-       * @return The currentValue.
        */
       public com.google.protobuf.ByteString getCurrentValue() {
         return currentValue_;
       }
       /**
        * <code>bytes currentValue = 3;</code>
-       * @param value The currentValue to set.
-       * @return This builder for chaining.
        */
       public Builder setCurrentValue(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -13306,7 +6331,6 @@ public final class EvmService {
       }
       /**
        * <code>bytes currentValue = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCurrentValue() {
         
@@ -13373,72 +6397,60 @@ public final class EvmService {
 
     /**
      * <code>string creator = 1;</code>
-     * @return The creator.
      */
     java.lang.String getCreator();
     /**
      * <code>string creator = 1;</code>
-     * @return The bytes for creator.
      */
     com.google.protobuf.ByteString
         getCreatorBytes();
 
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string alias = 3;</code>
-     * @return The alias.
      */
     java.lang.String getAlias();
     /**
      * <code>string alias = 3;</code>
-     * @return The bytes for alias.
      */
     com.google.protobuf.ByteString
         getAliasBytes();
 
     /**
      * <code>string addr = 4;</code>
-     * @return The addr.
      */
     java.lang.String getAddr();
     /**
      * <code>string addr = 4;</code>
-     * @return The bytes for addr.
      */
     com.google.protobuf.ByteString
         getAddrBytes();
 
     /**
      * <code>string code = 5;</code>
-     * @return The code.
      */
     java.lang.String getCode();
     /**
      * <code>string code = 5;</code>
-     * @return The bytes for code.
      */
     com.google.protobuf.ByteString
         getCodeBytes();
 
     /**
      * <code>string codeHash = 6;</code>
-     * @return The codeHash.
      */
     java.lang.String getCodeHash();
     /**
      * <code>string codeHash = 6;</code>
-     * @return The bytes for codeHash.
      */
     com.google.protobuf.ByteString
         getCodeHashBytes();
@@ -13570,7 +6582,6 @@ public final class EvmService {
     private volatile java.lang.Object creator_;
     /**
      * <code>string creator = 1;</code>
-     * @return The creator.
      */
     public java.lang.String getCreator() {
       java.lang.Object ref = creator_;
@@ -13586,7 +6597,6 @@ public final class EvmService {
     }
     /**
      * <code>string creator = 1;</code>
-     * @return The bytes for creator.
      */
     public com.google.protobuf.ByteString
         getCreatorBytes() {
@@ -13606,7 +6616,6 @@ public final class EvmService {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -13622,7 +6631,6 @@ public final class EvmService {
     }
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -13642,7 +6650,6 @@ public final class EvmService {
     private volatile java.lang.Object alias_;
     /**
      * <code>string alias = 3;</code>
-     * @return The alias.
      */
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
@@ -13658,7 +6665,6 @@ public final class EvmService {
     }
     /**
      * <code>string alias = 3;</code>
-     * @return The bytes for alias.
      */
     public com.google.protobuf.ByteString
         getAliasBytes() {
@@ -13678,7 +6684,6 @@ public final class EvmService {
     private volatile java.lang.Object addr_;
     /**
      * <code>string addr = 4;</code>
-     * @return The addr.
      */
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
@@ -13694,7 +6699,6 @@ public final class EvmService {
     }
     /**
      * <code>string addr = 4;</code>
-     * @return The bytes for addr.
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
@@ -13714,7 +6718,6 @@ public final class EvmService {
     private volatile java.lang.Object code_;
     /**
      * <code>string code = 5;</code>
-     * @return The code.
      */
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
@@ -13730,7 +6733,6 @@ public final class EvmService {
     }
     /**
      * <code>string code = 5;</code>
-     * @return The bytes for code.
      */
     public com.google.protobuf.ByteString
         getCodeBytes() {
@@ -13750,7 +6752,6 @@ public final class EvmService {
     private volatile java.lang.Object codeHash_;
     /**
      * <code>string codeHash = 6;</code>
-     * @return The codeHash.
      */
     public java.lang.String getCodeHash() {
       java.lang.Object ref = codeHash_;
@@ -13766,7 +6767,6 @@ public final class EvmService {
     }
     /**
      * <code>string codeHash = 6;</code>
-     * @return The bytes for codeHash.
      */
     public com.google.protobuf.ByteString
         getCodeHashBytes() {
@@ -14176,7 +7176,6 @@ public final class EvmService {
       private java.lang.Object creator_ = "";
       /**
        * <code>string creator = 1;</code>
-       * @return The creator.
        */
       public java.lang.String getCreator() {
         java.lang.Object ref = creator_;
@@ -14192,7 +7191,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @return The bytes for creator.
        */
       public com.google.protobuf.ByteString
           getCreatorBytes() {
@@ -14209,8 +7207,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @param value The creator to set.
-       * @return This builder for chaining.
        */
       public Builder setCreator(
           java.lang.String value) {
@@ -14224,7 +7220,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCreator() {
         
@@ -14234,8 +7229,6 @@ public final class EvmService {
       }
       /**
        * <code>string creator = 1;</code>
-       * @param value The bytes for creator to set.
-       * @return This builder for chaining.
        */
       public Builder setCreatorBytes(
           com.google.protobuf.ByteString value) {
@@ -14252,7 +7245,6 @@ public final class EvmService {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
-       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -14268,7 +7260,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -14285,8 +7276,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -14300,7 +7289,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -14310,8 +7298,6 @@ public final class EvmService {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14328,7 +7314,6 @@ public final class EvmService {
       private java.lang.Object alias_ = "";
       /**
        * <code>string alias = 3;</code>
-       * @return The alias.
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -14344,7 +7329,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @return The bytes for alias.
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -14361,8 +7345,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @param value The alias to set.
-       * @return This builder for chaining.
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -14376,7 +7358,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAlias() {
         
@@ -14386,8 +7367,6 @@ public final class EvmService {
       }
       /**
        * <code>string alias = 3;</code>
-       * @param value The bytes for alias to set.
-       * @return This builder for chaining.
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -14404,7 +7383,6 @@ public final class EvmService {
       private java.lang.Object addr_ = "";
       /**
        * <code>string addr = 4;</code>
-       * @return The addr.
        */
       public java.lang.String getAddr() {
         java.lang.Object ref = addr_;
@@ -14420,7 +7398,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @return The bytes for addr.
        */
       public com.google.protobuf.ByteString
           getAddrBytes() {
@@ -14437,8 +7414,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddr(
           java.lang.String value) {
@@ -14452,7 +7427,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddr() {
         
@@ -14462,8 +7436,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 4;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -14480,7 +7452,6 @@ public final class EvmService {
       private java.lang.Object code_ = "";
       /**
        * <code>string code = 5;</code>
-       * @return The code.
        */
       public java.lang.String getCode() {
         java.lang.Object ref = code_;
@@ -14496,7 +7467,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 5;</code>
-       * @return The bytes for code.
        */
       public com.google.protobuf.ByteString
           getCodeBytes() {
@@ -14513,8 +7483,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 5;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
        */
       public Builder setCode(
           java.lang.String value) {
@@ -14528,7 +7496,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCode() {
         
@@ -14538,8 +7505,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 5;</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
        */
       public Builder setCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -14556,7 +7521,6 @@ public final class EvmService {
       private java.lang.Object codeHash_ = "";
       /**
        * <code>string codeHash = 6;</code>
-       * @return The codeHash.
        */
       public java.lang.String getCodeHash() {
         java.lang.Object ref = codeHash_;
@@ -14572,7 +7536,6 @@ public final class EvmService {
       }
       /**
        * <code>string codeHash = 6;</code>
-       * @return The bytes for codeHash.
        */
       public com.google.protobuf.ByteString
           getCodeHashBytes() {
@@ -14589,8 +7552,6 @@ public final class EvmService {
       }
       /**
        * <code>string codeHash = 6;</code>
-       * @param value The codeHash to set.
-       * @return This builder for chaining.
        */
       public Builder setCodeHash(
           java.lang.String value) {
@@ -14604,7 +7565,6 @@ public final class EvmService {
       }
       /**
        * <code>string codeHash = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCodeHash() {
         
@@ -14614,8 +7574,6 @@ public final class EvmService {
       }
       /**
        * <code>string codeHash = 6;</code>
-       * @param value The bytes for codeHash to set.
-       * @return This builder for chaining.
        */
       public Builder setCodeHashBytes(
           com.google.protobuf.ByteString value) {
@@ -14687,24 +7645,20 @@ public final class EvmService {
 
     /**
      * <code>uint64 nonce = 1;</code>
-     * @return The nonce.
      */
     long getNonce();
 
     /**
      * <code>bool suicided = 2;</code>
-     * @return The suicided.
      */
     boolean getSuicided();
 
     /**
      * <code>string storageHash = 3;</code>
-     * @return The storageHash.
      */
     java.lang.String getStorageHash();
     /**
      * <code>string storageHash = 3;</code>
-     * @return The bytes for storageHash.
      */
     com.google.protobuf.ByteString
         getStorageHashBytes();
@@ -14871,7 +7825,6 @@ public final class EvmService {
     private long nonce_;
     /**
      * <code>uint64 nonce = 1;</code>
-     * @return The nonce.
      */
     public long getNonce() {
       return nonce_;
@@ -14881,7 +7834,6 @@ public final class EvmService {
     private boolean suicided_;
     /**
      * <code>bool suicided = 2;</code>
-     * @return The suicided.
      */
     public boolean getSuicided() {
       return suicided_;
@@ -14891,7 +7843,6 @@ public final class EvmService {
     private volatile java.lang.Object storageHash_;
     /**
      * <code>string storageHash = 3;</code>
-     * @return The storageHash.
      */
     public java.lang.String getStorageHash() {
       java.lang.Object ref = storageHash_;
@@ -14907,7 +7858,6 @@ public final class EvmService {
     }
     /**
      * <code>string storageHash = 3;</code>
-     * @return The bytes for storageHash.
      */
     public com.google.protobuf.ByteString
         getStorageHashBytes() {
@@ -15395,15 +8345,12 @@ public final class EvmService {
       private long nonce_ ;
       /**
        * <code>uint64 nonce = 1;</code>
-       * @return The nonce.
        */
       public long getNonce() {
         return nonce_;
       }
       /**
        * <code>uint64 nonce = 1;</code>
-       * @param value The nonce to set.
-       * @return This builder for chaining.
        */
       public Builder setNonce(long value) {
         
@@ -15413,7 +8360,6 @@ public final class EvmService {
       }
       /**
        * <code>uint64 nonce = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearNonce() {
         
@@ -15425,15 +8371,12 @@ public final class EvmService {
       private boolean suicided_ ;
       /**
        * <code>bool suicided = 2;</code>
-       * @return The suicided.
        */
       public boolean getSuicided() {
         return suicided_;
       }
       /**
        * <code>bool suicided = 2;</code>
-       * @param value The suicided to set.
-       * @return This builder for chaining.
        */
       public Builder setSuicided(boolean value) {
         
@@ -15443,7 +8386,6 @@ public final class EvmService {
       }
       /**
        * <code>bool suicided = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSuicided() {
         
@@ -15455,7 +8397,6 @@ public final class EvmService {
       private java.lang.Object storageHash_ = "";
       /**
        * <code>string storageHash = 3;</code>
-       * @return The storageHash.
        */
       public java.lang.String getStorageHash() {
         java.lang.Object ref = storageHash_;
@@ -15471,7 +8412,6 @@ public final class EvmService {
       }
       /**
        * <code>string storageHash = 3;</code>
-       * @return The bytes for storageHash.
        */
       public com.google.protobuf.ByteString
           getStorageHashBytes() {
@@ -15488,8 +8428,6 @@ public final class EvmService {
       }
       /**
        * <code>string storageHash = 3;</code>
-       * @param value The storageHash to set.
-       * @return This builder for chaining.
        */
       public Builder setStorageHash(
           java.lang.String value) {
@@ -15503,7 +8441,6 @@ public final class EvmService {
       }
       /**
        * <code>string storageHash = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearStorageHash() {
         
@@ -15513,8 +8450,6 @@ public final class EvmService {
       }
       /**
        * <code>string storageHash = 3;</code>
-       * @param value The bytes for storageHash to set.
-       * @return This builder for chaining.
        */
       public Builder setStorageHashBytes(
           com.google.protobuf.ByteString value) {
@@ -15709,12 +8644,10 @@ public final class EvmService {
 
     /**
      * <code>string caller = 1;</code>
-     * @return The caller.
      */
     java.lang.String getCaller();
     /**
      * <code>string caller = 1;</code>
-     * @return The bytes for caller.
      */
     com.google.protobuf.ByteString
         getCallerBytes();
@@ -15725,7 +8658,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string contractName = 2;</code>
-     * @return The contractName.
      */
     java.lang.String getContractName();
     /**
@@ -15734,26 +8666,22 @@ public final class EvmService {
      * </pre>
      *
      * <code>string contractName = 2;</code>
-     * @return The bytes for contractName.
      */
     com.google.protobuf.ByteString
         getContractNameBytes();
 
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The contractAddr.
      */
     java.lang.String getContractAddr();
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The bytes for contractAddr.
      */
     com.google.protobuf.ByteString
         getContractAddrBytes();
 
     /**
      * <code>uint64 usedGas = 4;</code>
-     * @return The usedGas.
      */
     long getUsedGas();
 
@@ -15763,7 +8691,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string ret = 5;</code>
-     * @return The ret.
      */
     java.lang.String getRet();
     /**
@@ -15772,7 +8699,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string ret = 5;</code>
-     * @return The bytes for ret.
      */
     com.google.protobuf.ByteString
         getRetBytes();
@@ -15895,7 +8821,6 @@ public final class EvmService {
     private volatile java.lang.Object caller_;
     /**
      * <code>string caller = 1;</code>
-     * @return The caller.
      */
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
@@ -15911,7 +8836,6 @@ public final class EvmService {
     }
     /**
      * <code>string caller = 1;</code>
-     * @return The bytes for caller.
      */
     public com.google.protobuf.ByteString
         getCallerBytes() {
@@ -15935,7 +8859,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string contractName = 2;</code>
-     * @return The contractName.
      */
     public java.lang.String getContractName() {
       java.lang.Object ref = contractName_;
@@ -15955,7 +8878,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string contractName = 2;</code>
-     * @return The bytes for contractName.
      */
     public com.google.protobuf.ByteString
         getContractNameBytes() {
@@ -15975,7 +8897,6 @@ public final class EvmService {
     private volatile java.lang.Object contractAddr_;
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The contractAddr.
      */
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
@@ -15991,7 +8912,6 @@ public final class EvmService {
     }
     /**
      * <code>string contractAddr = 3;</code>
-     * @return The bytes for contractAddr.
      */
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
@@ -16011,7 +8931,6 @@ public final class EvmService {
     private long usedGas_;
     /**
      * <code>uint64 usedGas = 4;</code>
-     * @return The usedGas.
      */
     public long getUsedGas() {
       return usedGas_;
@@ -16025,7 +8944,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string ret = 5;</code>
-     * @return The ret.
      */
     public java.lang.String getRet() {
       java.lang.Object ref = ret_;
@@ -16045,7 +8963,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>string ret = 5;</code>
-     * @return The bytes for ret.
      */
     public com.google.protobuf.ByteString
         getRetBytes() {
@@ -16439,7 +9356,6 @@ public final class EvmService {
       private java.lang.Object caller_ = "";
       /**
        * <code>string caller = 1;</code>
-       * @return The caller.
        */
       public java.lang.String getCaller() {
         java.lang.Object ref = caller_;
@@ -16455,7 +9371,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @return The bytes for caller.
        */
       public com.google.protobuf.ByteString
           getCallerBytes() {
@@ -16472,8 +9387,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCaller(
           java.lang.String value) {
@@ -16487,7 +9400,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCaller() {
         
@@ -16497,8 +9409,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 1;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCallerBytes(
           com.google.protobuf.ByteString value) {
@@ -16519,7 +9429,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractName = 2;</code>
-       * @return The contractName.
        */
       public java.lang.String getContractName() {
         java.lang.Object ref = contractName_;
@@ -16539,7 +9448,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractName = 2;</code>
-       * @return The bytes for contractName.
        */
       public com.google.protobuf.ByteString
           getContractNameBytes() {
@@ -16560,8 +9468,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractName = 2;</code>
-       * @param value The contractName to set.
-       * @return This builder for chaining.
        */
       public Builder setContractName(
           java.lang.String value) {
@@ -16579,7 +9485,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractName = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractName() {
         
@@ -16593,8 +9498,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string contractName = 2;</code>
-       * @param value The bytes for contractName to set.
-       * @return This builder for chaining.
        */
       public Builder setContractNameBytes(
           com.google.protobuf.ByteString value) {
@@ -16611,7 +9514,6 @@ public final class EvmService {
       private java.lang.Object contractAddr_ = "";
       /**
        * <code>string contractAddr = 3;</code>
-       * @return The contractAddr.
        */
       public java.lang.String getContractAddr() {
         java.lang.Object ref = contractAddr_;
@@ -16627,7 +9529,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @return The bytes for contractAddr.
        */
       public com.google.protobuf.ByteString
           getContractAddrBytes() {
@@ -16644,8 +9545,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @param value The contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddr(
           java.lang.String value) {
@@ -16659,7 +9558,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractAddr() {
         
@@ -16669,8 +9567,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 3;</code>
-       * @param value The bytes for contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -16687,15 +9583,12 @@ public final class EvmService {
       private long usedGas_ ;
       /**
        * <code>uint64 usedGas = 4;</code>
-       * @return The usedGas.
        */
       public long getUsedGas() {
         return usedGas_;
       }
       /**
        * <code>uint64 usedGas = 4;</code>
-       * @param value The usedGas to set.
-       * @return This builder for chaining.
        */
       public Builder setUsedGas(long value) {
         
@@ -16705,7 +9598,6 @@ public final class EvmService {
       }
       /**
        * <code>uint64 usedGas = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearUsedGas() {
         
@@ -16721,7 +9613,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string ret = 5;</code>
-       * @return The ret.
        */
       public java.lang.String getRet() {
         java.lang.Object ref = ret_;
@@ -16741,7 +9632,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string ret = 5;</code>
-       * @return The bytes for ret.
        */
       public com.google.protobuf.ByteString
           getRetBytes() {
@@ -16762,8 +9652,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string ret = 5;</code>
-       * @param value The ret to set.
-       * @return This builder for chaining.
        */
       public Builder setRet(
           java.lang.String value) {
@@ -16781,7 +9669,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string ret = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearRet() {
         
@@ -16795,8 +9682,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>string ret = 5;</code>
-       * @param value The bytes for ret to set.
-       * @return This builder for chaining.
        */
       public Builder setRetBytes(
           com.google.protobuf.ByteString value) {
@@ -16868,12 +9753,10 @@ public final class EvmService {
 
     /**
      * <code>string addr = 1;</code>
-     * @return The addr.
      */
     java.lang.String getAddr();
     /**
      * <code>string addr = 1;</code>
-     * @return The bytes for addr.
      */
     com.google.protobuf.ByteString
         getAddrBytes();
@@ -16966,7 +9849,6 @@ public final class EvmService {
     private volatile java.lang.Object addr_;
     /**
      * <code>string addr = 1;</code>
-     * @return The addr.
      */
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
@@ -16982,7 +9864,6 @@ public final class EvmService {
     }
     /**
      * <code>string addr = 1;</code>
-     * @return The bytes for addr.
      */
     public com.google.protobuf.ByteString
         getAddrBytes() {
@@ -17303,7 +10184,6 @@ public final class EvmService {
       private java.lang.Object addr_ = "";
       /**
        * <code>string addr = 1;</code>
-       * @return The addr.
        */
       public java.lang.String getAddr() {
         java.lang.Object ref = addr_;
@@ -17319,7 +10199,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @return The bytes for addr.
        */
       public com.google.protobuf.ByteString
           getAddrBytes() {
@@ -17336,8 +10215,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddr(
           java.lang.String value) {
@@ -17351,7 +10228,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddr() {
         
@@ -17361,8 +10237,6 @@ public final class EvmService {
       }
       /**
        * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
        */
       public Builder setAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -17434,42 +10308,35 @@ public final class EvmService {
 
     /**
      * <code>bool contract = 1;</code>
-     * @return The contract.
      */
     boolean getContract();
 
     /**
      * <code>string contractAddr = 2;</code>
-     * @return The contractAddr.
      */
     java.lang.String getContractAddr();
     /**
      * <code>string contractAddr = 2;</code>
-     * @return The bytes for contractAddr.
      */
     com.google.protobuf.ByteString
         getContractAddrBytes();
 
     /**
      * <code>string contractName = 3;</code>
-     * @return The contractName.
      */
     java.lang.String getContractName();
     /**
      * <code>string contractName = 3;</code>
-     * @return The bytes for contractName.
      */
     com.google.protobuf.ByteString
         getContractNameBytes();
 
     /**
      * <code>string aliasName = 4;</code>
-     * @return The aliasName.
      */
     java.lang.String getAliasName();
     /**
      * <code>string aliasName = 4;</code>
-     * @return The bytes for aliasName.
      */
     com.google.protobuf.ByteString
         getAliasNameBytes();
@@ -17581,7 +10448,6 @@ public final class EvmService {
     private boolean contract_;
     /**
      * <code>bool contract = 1;</code>
-     * @return The contract.
      */
     public boolean getContract() {
       return contract_;
@@ -17591,7 +10457,6 @@ public final class EvmService {
     private volatile java.lang.Object contractAddr_;
     /**
      * <code>string contractAddr = 2;</code>
-     * @return The contractAddr.
      */
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
@@ -17607,7 +10472,6 @@ public final class EvmService {
     }
     /**
      * <code>string contractAddr = 2;</code>
-     * @return The bytes for contractAddr.
      */
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
@@ -17627,7 +10491,6 @@ public final class EvmService {
     private volatile java.lang.Object contractName_;
     /**
      * <code>string contractName = 3;</code>
-     * @return The contractName.
      */
     public java.lang.String getContractName() {
       java.lang.Object ref = contractName_;
@@ -17643,7 +10506,6 @@ public final class EvmService {
     }
     /**
      * <code>string contractName = 3;</code>
-     * @return The bytes for contractName.
      */
     public com.google.protobuf.ByteString
         getContractNameBytes() {
@@ -17663,7 +10525,6 @@ public final class EvmService {
     private volatile java.lang.Object aliasName_;
     /**
      * <code>string aliasName = 4;</code>
-     * @return The aliasName.
      */
     public java.lang.String getAliasName() {
       java.lang.Object ref = aliasName_;
@@ -17679,7 +10540,6 @@ public final class EvmService {
     }
     /**
      * <code>string aliasName = 4;</code>
-     * @return The bytes for aliasName.
      */
     public com.google.protobuf.ByteString
         getAliasNameBytes() {
@@ -18052,15 +10912,12 @@ public final class EvmService {
       private boolean contract_ ;
       /**
        * <code>bool contract = 1;</code>
-       * @return The contract.
        */
       public boolean getContract() {
         return contract_;
       }
       /**
        * <code>bool contract = 1;</code>
-       * @param value The contract to set.
-       * @return This builder for chaining.
        */
       public Builder setContract(boolean value) {
         
@@ -18070,7 +10927,6 @@ public final class EvmService {
       }
       /**
        * <code>bool contract = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContract() {
         
@@ -18082,7 +10938,6 @@ public final class EvmService {
       private java.lang.Object contractAddr_ = "";
       /**
        * <code>string contractAddr = 2;</code>
-       * @return The contractAddr.
        */
       public java.lang.String getContractAddr() {
         java.lang.Object ref = contractAddr_;
@@ -18098,7 +10953,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 2;</code>
-       * @return The bytes for contractAddr.
        */
       public com.google.protobuf.ByteString
           getContractAddrBytes() {
@@ -18115,8 +10969,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 2;</code>
-       * @param value The contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddr(
           java.lang.String value) {
@@ -18130,7 +10982,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractAddr() {
         
@@ -18140,8 +10991,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractAddr = 2;</code>
-       * @param value The bytes for contractAddr to set.
-       * @return This builder for chaining.
        */
       public Builder setContractAddrBytes(
           com.google.protobuf.ByteString value) {
@@ -18158,7 +11007,6 @@ public final class EvmService {
       private java.lang.Object contractName_ = "";
       /**
        * <code>string contractName = 3;</code>
-       * @return The contractName.
        */
       public java.lang.String getContractName() {
         java.lang.Object ref = contractName_;
@@ -18174,7 +11022,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 3;</code>
-       * @return The bytes for contractName.
        */
       public com.google.protobuf.ByteString
           getContractNameBytes() {
@@ -18191,8 +11038,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 3;</code>
-       * @param value The contractName to set.
-       * @return This builder for chaining.
        */
       public Builder setContractName(
           java.lang.String value) {
@@ -18206,7 +11051,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearContractName() {
         
@@ -18216,8 +11060,6 @@ public final class EvmService {
       }
       /**
        * <code>string contractName = 3;</code>
-       * @param value The bytes for contractName to set.
-       * @return This builder for chaining.
        */
       public Builder setContractNameBytes(
           com.google.protobuf.ByteString value) {
@@ -18234,7 +11076,6 @@ public final class EvmService {
       private java.lang.Object aliasName_ = "";
       /**
        * <code>string aliasName = 4;</code>
-       * @return The aliasName.
        */
       public java.lang.String getAliasName() {
         java.lang.Object ref = aliasName_;
@@ -18250,7 +11091,6 @@ public final class EvmService {
       }
       /**
        * <code>string aliasName = 4;</code>
-       * @return The bytes for aliasName.
        */
       public com.google.protobuf.ByteString
           getAliasNameBytes() {
@@ -18267,8 +11107,6 @@ public final class EvmService {
       }
       /**
        * <code>string aliasName = 4;</code>
-       * @param value The aliasName to set.
-       * @return This builder for chaining.
        */
       public Builder setAliasName(
           java.lang.String value) {
@@ -18282,7 +11120,6 @@ public final class EvmService {
       }
       /**
        * <code>string aliasName = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAliasName() {
         
@@ -18292,8 +11129,6 @@ public final class EvmService {
       }
       /**
        * <code>string aliasName = 4;</code>
-       * @param value The bytes for aliasName to set.
-       * @return This builder for chaining.
        */
       public Builder setAliasNameBytes(
           com.google.protobuf.ByteString value) {
@@ -18365,37 +11200,31 @@ public final class EvmService {
 
     /**
      * <code>string to = 1;</code>
-     * @return The to.
      */
     java.lang.String getTo();
     /**
      * <code>string to = 1;</code>
-     * @return The bytes for to.
      */
     com.google.protobuf.ByteString
         getToBytes();
 
     /**
      * <code>bytes para = 2;</code>
-     * @return The para.
      */
     com.google.protobuf.ByteString getPara();
 
     /**
      * <code>string caller = 3;</code>
-     * @return The caller.
      */
     java.lang.String getCaller();
     /**
      * <code>string caller = 3;</code>
-     * @return The bytes for caller.
      */
     com.google.protobuf.ByteString
         getCallerBytes();
 
     /**
      * <code>uint64 amount = 4;</code>
-     * @return The amount.
      */
     long getAmount();
   }
@@ -18505,7 +11334,6 @@ public final class EvmService {
     private volatile java.lang.Object to_;
     /**
      * <code>string to = 1;</code>
-     * @return The to.
      */
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
@@ -18521,7 +11349,6 @@ public final class EvmService {
     }
     /**
      * <code>string to = 1;</code>
-     * @return The bytes for to.
      */
     public com.google.protobuf.ByteString
         getToBytes() {
@@ -18541,7 +11368,6 @@ public final class EvmService {
     private com.google.protobuf.ByteString para_;
     /**
      * <code>bytes para = 2;</code>
-     * @return The para.
      */
     public com.google.protobuf.ByteString getPara() {
       return para_;
@@ -18551,7 +11377,6 @@ public final class EvmService {
     private volatile java.lang.Object caller_;
     /**
      * <code>string caller = 3;</code>
-     * @return The caller.
      */
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
@@ -18567,7 +11392,6 @@ public final class EvmService {
     }
     /**
      * <code>string caller = 3;</code>
-     * @return The bytes for caller.
      */
     public com.google.protobuf.ByteString
         getCallerBytes() {
@@ -18587,7 +11411,6 @@ public final class EvmService {
     private long amount_;
     /**
      * <code>uint64 amount = 4;</code>
-     * @return The amount.
      */
     public long getAmount() {
       return amount_;
@@ -18950,7 +11773,6 @@ public final class EvmService {
       private java.lang.Object to_ = "";
       /**
        * <code>string to = 1;</code>
-       * @return The to.
        */
       public java.lang.String getTo() {
         java.lang.Object ref = to_;
@@ -18966,7 +11788,6 @@ public final class EvmService {
       }
       /**
        * <code>string to = 1;</code>
-       * @return The bytes for to.
        */
       public com.google.protobuf.ByteString
           getToBytes() {
@@ -18983,8 +11804,6 @@ public final class EvmService {
       }
       /**
        * <code>string to = 1;</code>
-       * @param value The to to set.
-       * @return This builder for chaining.
        */
       public Builder setTo(
           java.lang.String value) {
@@ -18998,7 +11817,6 @@ public final class EvmService {
       }
       /**
        * <code>string to = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearTo() {
         
@@ -19008,8 +11826,6 @@ public final class EvmService {
       }
       /**
        * <code>string to = 1;</code>
-       * @param value The bytes for to to set.
-       * @return This builder for chaining.
        */
       public Builder setToBytes(
           com.google.protobuf.ByteString value) {
@@ -19026,15 +11842,12 @@ public final class EvmService {
       private com.google.protobuf.ByteString para_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes para = 2;</code>
-       * @return The para.
        */
       public com.google.protobuf.ByteString getPara() {
         return para_;
       }
       /**
        * <code>bytes para = 2;</code>
-       * @param value The para to set.
-       * @return This builder for chaining.
        */
       public Builder setPara(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -19047,7 +11860,6 @@ public final class EvmService {
       }
       /**
        * <code>bytes para = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPara() {
         
@@ -19059,7 +11871,6 @@ public final class EvmService {
       private java.lang.Object caller_ = "";
       /**
        * <code>string caller = 3;</code>
-       * @return The caller.
        */
       public java.lang.String getCaller() {
         java.lang.Object ref = caller_;
@@ -19075,7 +11886,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @return The bytes for caller.
        */
       public com.google.protobuf.ByteString
           getCallerBytes() {
@@ -19092,8 +11902,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCaller(
           java.lang.String value) {
@@ -19107,7 +11915,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCaller() {
         
@@ -19117,8 +11924,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCallerBytes(
           com.google.protobuf.ByteString value) {
@@ -19135,15 +11940,12 @@ public final class EvmService {
       private long amount_ ;
       /**
        * <code>uint64 amount = 4;</code>
-       * @return The amount.
        */
       public long getAmount() {
         return amount_;
       }
       /**
        * <code>uint64 amount = 4;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
        */
       public Builder setAmount(long value) {
         
@@ -19153,7 +11955,6 @@ public final class EvmService {
       }
       /**
        * <code>uint64 amount = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -19220,7 +12021,6 @@ public final class EvmService {
 
     /**
      * <code>uint64 gas = 1;</code>
-     * @return The gas.
      */
     long getGas();
   }
@@ -19310,7 +12110,6 @@ public final class EvmService {
     private long gas_;
     /**
      * <code>uint64 gas = 1;</code>
-     * @return The gas.
      */
     public long getGas() {
       return gas_;
@@ -19622,15 +12421,12 @@ public final class EvmService {
       private long gas_ ;
       /**
        * <code>uint64 gas = 1;</code>
-       * @return The gas.
        */
       public long getGas() {
         return gas_;
       }
       /**
        * <code>uint64 gas = 1;</code>
-       * @param value The gas to set.
-       * @return This builder for chaining.
        */
       public Builder setGas(long value) {
         
@@ -19640,7 +12436,6 @@ public final class EvmService {
       }
       /**
        * <code>uint64 gas = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearGas() {
         
@@ -19711,7 +12506,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>int32 optype = 1;</code>
-     * @return The optype.
      */
     int getOptype();
   }
@@ -19805,7 +12599,6 @@ public final class EvmService {
      * </pre>
      *
      * <code>int32 optype = 1;</code>
-     * @return The optype.
      */
     public int getOptype() {
       return optype_;
@@ -20120,7 +12913,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>int32 optype = 1;</code>
-       * @return The optype.
        */
       public int getOptype() {
         return optype_;
@@ -20131,8 +12923,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>int32 optype = 1;</code>
-       * @param value The optype to set.
-       * @return This builder for chaining.
        */
       public Builder setOptype(int value) {
         
@@ -20146,7 +12936,6 @@ public final class EvmService {
        * </pre>
        *
        * <code>int32 optype = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearOptype() {
         
@@ -20213,12 +13002,10 @@ public final class EvmService {
 
     /**
      * <code>string debugStatus = 1;</code>
-     * @return The debugStatus.
      */
     java.lang.String getDebugStatus();
     /**
      * <code>string debugStatus = 1;</code>
-     * @return The bytes for debugStatus.
      */
     com.google.protobuf.ByteString
         getDebugStatusBytes();
@@ -20311,7 +13098,6 @@ public final class EvmService {
     private volatile java.lang.Object debugStatus_;
     /**
      * <code>string debugStatus = 1;</code>
-     * @return The debugStatus.
      */
     public java.lang.String getDebugStatus() {
       java.lang.Object ref = debugStatus_;
@@ -20327,7 +13113,6 @@ public final class EvmService {
     }
     /**
      * <code>string debugStatus = 1;</code>
-     * @return The bytes for debugStatus.
      */
     public com.google.protobuf.ByteString
         getDebugStatusBytes() {
@@ -20648,7 +13433,6 @@ public final class EvmService {
       private java.lang.Object debugStatus_ = "";
       /**
        * <code>string debugStatus = 1;</code>
-       * @return The debugStatus.
        */
       public java.lang.String getDebugStatus() {
         java.lang.Object ref = debugStatus_;
@@ -20664,7 +13448,6 @@ public final class EvmService {
       }
       /**
        * <code>string debugStatus = 1;</code>
-       * @return The bytes for debugStatus.
        */
       public com.google.protobuf.ByteString
           getDebugStatusBytes() {
@@ -20681,8 +13464,6 @@ public final class EvmService {
       }
       /**
        * <code>string debugStatus = 1;</code>
-       * @param value The debugStatus to set.
-       * @return This builder for chaining.
        */
       public Builder setDebugStatus(
           java.lang.String value) {
@@ -20696,7 +13477,6 @@ public final class EvmService {
       }
       /**
        * <code>string debugStatus = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDebugStatus() {
         
@@ -20706,8 +13486,6 @@ public final class EvmService {
       }
       /**
        * <code>string debugStatus = 1;</code>
-       * @param value The bytes for debugStatus to set.
-       * @return This builder for chaining.
        */
       public Builder setDebugStatusBytes(
           com.google.protobuf.ByteString value) {
@@ -20779,12 +13557,10 @@ public final class EvmService {
 
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     java.lang.String getAddress();
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -20877,7 +13653,6 @@ public final class EvmService {
     private volatile java.lang.Object address_;
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
@@ -20893,7 +13668,6 @@ public final class EvmService {
     }
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -21214,7 +13988,6 @@ public final class EvmService {
       private java.lang.Object address_ = "";
       /**
        * <code>string address = 1;</code>
-       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -21230,7 +14003,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -21247,8 +14019,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -21262,7 +14032,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -21272,8 +14041,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The bytes for address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -21345,24 +14112,20 @@ public final class EvmService {
 
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     java.lang.String getAddress();
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
      * <code>string abi = 2;</code>
-     * @return The abi.
      */
     java.lang.String getAbi();
     /**
      * <code>string abi = 2;</code>
-     * @return The bytes for abi.
      */
     com.google.protobuf.ByteString
         getAbiBytes();
@@ -21462,7 +14225,6 @@ public final class EvmService {
     private volatile java.lang.Object address_;
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
@@ -21478,7 +14240,6 @@ public final class EvmService {
     }
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -21498,7 +14259,6 @@ public final class EvmService {
     private volatile java.lang.Object abi_;
     /**
      * <code>string abi = 2;</code>
-     * @return The abi.
      */
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
@@ -21514,7 +14274,6 @@ public final class EvmService {
     }
     /**
      * <code>string abi = 2;</code>
-     * @return The bytes for abi.
      */
     public com.google.protobuf.ByteString
         getAbiBytes() {
@@ -21852,7 +14611,6 @@ public final class EvmService {
       private java.lang.Object address_ = "";
       /**
        * <code>string address = 1;</code>
-       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -21868,7 +14626,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -21885,8 +14642,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -21900,7 +14655,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -21910,8 +14664,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The bytes for address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -21928,7 +14680,6 @@ public final class EvmService {
       private java.lang.Object abi_ = "";
       /**
        * <code>string abi = 2;</code>
-       * @return The abi.
        */
       public java.lang.String getAbi() {
         java.lang.Object ref = abi_;
@@ -21944,7 +14695,6 @@ public final class EvmService {
       }
       /**
        * <code>string abi = 2;</code>
-       * @return The bytes for abi.
        */
       public com.google.protobuf.ByteString
           getAbiBytes() {
@@ -21961,8 +14711,6 @@ public final class EvmService {
       }
       /**
        * <code>string abi = 2;</code>
-       * @param value The abi to set.
-       * @return This builder for chaining.
        */
       public Builder setAbi(
           java.lang.String value) {
@@ -21976,7 +14724,6 @@ public final class EvmService {
       }
       /**
        * <code>string abi = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAbi() {
         
@@ -21986,8 +14733,6 @@ public final class EvmService {
       }
       /**
        * <code>string abi = 2;</code>
-       * @param value The bytes for abi to set.
-       * @return This builder for chaining.
        */
       public Builder setAbiBytes(
           com.google.protobuf.ByteString value) {
@@ -22059,36 +14804,30 @@ public final class EvmService {
 
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     java.lang.String getAddress();
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
      * <code>string input = 2;</code>
-     * @return The input.
      */
     java.lang.String getInput();
     /**
      * <code>string input = 2;</code>
-     * @return The bytes for input.
      */
     com.google.protobuf.ByteString
         getInputBytes();
 
     /**
      * <code>string caller = 3;</code>
-     * @return The caller.
      */
     java.lang.String getCaller();
     /**
      * <code>string caller = 3;</code>
-     * @return The bytes for caller.
      */
     com.google.protobuf.ByteString
         getCallerBytes();
@@ -22195,7 +14934,6 @@ public final class EvmService {
     private volatile java.lang.Object address_;
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
@@ -22211,7 +14949,6 @@ public final class EvmService {
     }
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -22231,7 +14968,6 @@ public final class EvmService {
     private volatile java.lang.Object input_;
     /**
      * <code>string input = 2;</code>
-     * @return The input.
      */
     public java.lang.String getInput() {
       java.lang.Object ref = input_;
@@ -22247,7 +14983,6 @@ public final class EvmService {
     }
     /**
      * <code>string input = 2;</code>
-     * @return The bytes for input.
      */
     public com.google.protobuf.ByteString
         getInputBytes() {
@@ -22267,7 +15002,6 @@ public final class EvmService {
     private volatile java.lang.Object caller_;
     /**
      * <code>string caller = 3;</code>
-     * @return The caller.
      */
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
@@ -22283,7 +15017,6 @@ public final class EvmService {
     }
     /**
      * <code>string caller = 3;</code>
-     * @return The bytes for caller.
      */
     public com.google.protobuf.ByteString
         getCallerBytes() {
@@ -22638,7 +15371,6 @@ public final class EvmService {
       private java.lang.Object address_ = "";
       /**
        * <code>string address = 1;</code>
-       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -22654,7 +15386,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -22671,8 +15402,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -22686,7 +15415,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -22696,8 +15424,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The bytes for address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -22714,7 +15440,6 @@ public final class EvmService {
       private java.lang.Object input_ = "";
       /**
        * <code>string input = 2;</code>
-       * @return The input.
        */
       public java.lang.String getInput() {
         java.lang.Object ref = input_;
@@ -22730,7 +15455,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @return The bytes for input.
        */
       public com.google.protobuf.ByteString
           getInputBytes() {
@@ -22747,8 +15471,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @param value The input to set.
-       * @return This builder for chaining.
        */
       public Builder setInput(
           java.lang.String value) {
@@ -22762,7 +15484,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearInput() {
         
@@ -22772,8 +15493,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @param value The bytes for input to set.
-       * @return This builder for chaining.
        */
       public Builder setInputBytes(
           com.google.protobuf.ByteString value) {
@@ -22790,7 +15509,6 @@ public final class EvmService {
       private java.lang.Object caller_ = "";
       /**
        * <code>string caller = 3;</code>
-       * @return The caller.
        */
       public java.lang.String getCaller() {
         java.lang.Object ref = caller_;
@@ -22806,7 +15524,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @return The bytes for caller.
        */
       public com.google.protobuf.ByteString
           getCallerBytes() {
@@ -22823,8 +15540,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCaller(
           java.lang.String value) {
@@ -22838,7 +15553,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCaller() {
         
@@ -22848,8 +15562,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCallerBytes(
           com.google.protobuf.ByteString value) {
@@ -22921,60 +15633,50 @@ public final class EvmService {
 
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     java.lang.String getAddress();
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
      * <code>string input = 2;</code>
-     * @return The input.
      */
     java.lang.String getInput();
     /**
      * <code>string input = 2;</code>
-     * @return The bytes for input.
      */
     com.google.protobuf.ByteString
         getInputBytes();
 
     /**
      * <code>string caller = 3;</code>
-     * @return The caller.
      */
     java.lang.String getCaller();
     /**
      * <code>string caller = 3;</code>
-     * @return The bytes for caller.
      */
     com.google.protobuf.ByteString
         getCallerBytes();
 
     /**
      * <code>string rawData = 4;</code>
-     * @return The rawData.
      */
     java.lang.String getRawData();
     /**
      * <code>string rawData = 4;</code>
-     * @return The bytes for rawData.
      */
     com.google.protobuf.ByteString
         getRawDataBytes();
 
     /**
      * <code>string jsonData = 5;</code>
-     * @return The jsonData.
      */
     java.lang.String getJsonData();
     /**
      * <code>string jsonData = 5;</code>
-     * @return The bytes for jsonData.
      */
     com.google.protobuf.ByteString
         getJsonDataBytes();
@@ -23095,7 +15797,6 @@ public final class EvmService {
     private volatile java.lang.Object address_;
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
@@ -23111,7 +15812,6 @@ public final class EvmService {
     }
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -23131,7 +15831,6 @@ public final class EvmService {
     private volatile java.lang.Object input_;
     /**
      * <code>string input = 2;</code>
-     * @return The input.
      */
     public java.lang.String getInput() {
       java.lang.Object ref = input_;
@@ -23147,7 +15846,6 @@ public final class EvmService {
     }
     /**
      * <code>string input = 2;</code>
-     * @return The bytes for input.
      */
     public com.google.protobuf.ByteString
         getInputBytes() {
@@ -23167,7 +15865,6 @@ public final class EvmService {
     private volatile java.lang.Object caller_;
     /**
      * <code>string caller = 3;</code>
-     * @return The caller.
      */
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
@@ -23183,7 +15880,6 @@ public final class EvmService {
     }
     /**
      * <code>string caller = 3;</code>
-     * @return The bytes for caller.
      */
     public com.google.protobuf.ByteString
         getCallerBytes() {
@@ -23203,7 +15899,6 @@ public final class EvmService {
     private volatile java.lang.Object rawData_;
     /**
      * <code>string rawData = 4;</code>
-     * @return The rawData.
      */
     public java.lang.String getRawData() {
       java.lang.Object ref = rawData_;
@@ -23219,7 +15914,6 @@ public final class EvmService {
     }
     /**
      * <code>string rawData = 4;</code>
-     * @return The bytes for rawData.
      */
     public com.google.protobuf.ByteString
         getRawDataBytes() {
@@ -23239,7 +15933,6 @@ public final class EvmService {
     private volatile java.lang.Object jsonData_;
     /**
      * <code>string jsonData = 5;</code>
-     * @return The jsonData.
      */
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
@@ -23255,7 +15948,6 @@ public final class EvmService {
     }
     /**
      * <code>string jsonData = 5;</code>
-     * @return The bytes for jsonData.
      */
     public com.google.protobuf.ByteString
         getJsonDataBytes() {
@@ -23644,7 +16336,6 @@ public final class EvmService {
       private java.lang.Object address_ = "";
       /**
        * <code>string address = 1;</code>
-       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -23660,7 +16351,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -23677,8 +16367,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -23692,7 +16380,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -23702,8 +16389,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The bytes for address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -23720,7 +16405,6 @@ public final class EvmService {
       private java.lang.Object input_ = "";
       /**
        * <code>string input = 2;</code>
-       * @return The input.
        */
       public java.lang.String getInput() {
         java.lang.Object ref = input_;
@@ -23736,7 +16420,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @return The bytes for input.
        */
       public com.google.protobuf.ByteString
           getInputBytes() {
@@ -23753,8 +16436,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @param value The input to set.
-       * @return This builder for chaining.
        */
       public Builder setInput(
           java.lang.String value) {
@@ -23768,7 +16449,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearInput() {
         
@@ -23778,8 +16458,6 @@ public final class EvmService {
       }
       /**
        * <code>string input = 2;</code>
-       * @param value The bytes for input to set.
-       * @return This builder for chaining.
        */
       public Builder setInputBytes(
           com.google.protobuf.ByteString value) {
@@ -23796,7 +16474,6 @@ public final class EvmService {
       private java.lang.Object caller_ = "";
       /**
        * <code>string caller = 3;</code>
-       * @return The caller.
        */
       public java.lang.String getCaller() {
         java.lang.Object ref = caller_;
@@ -23812,7 +16489,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @return The bytes for caller.
        */
       public com.google.protobuf.ByteString
           getCallerBytes() {
@@ -23829,8 +16505,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCaller(
           java.lang.String value) {
@@ -23844,7 +16518,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCaller() {
         
@@ -23854,8 +16527,6 @@ public final class EvmService {
       }
       /**
        * <code>string caller = 3;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
        */
       public Builder setCallerBytes(
           com.google.protobuf.ByteString value) {
@@ -23872,7 +16543,6 @@ public final class EvmService {
       private java.lang.Object rawData_ = "";
       /**
        * <code>string rawData = 4;</code>
-       * @return The rawData.
        */
       public java.lang.String getRawData() {
         java.lang.Object ref = rawData_;
@@ -23888,7 +16558,6 @@ public final class EvmService {
       }
       /**
        * <code>string rawData = 4;</code>
-       * @return The bytes for rawData.
        */
       public com.google.protobuf.ByteString
           getRawDataBytes() {
@@ -23905,8 +16574,6 @@ public final class EvmService {
       }
       /**
        * <code>string rawData = 4;</code>
-       * @param value The rawData to set.
-       * @return This builder for chaining.
        */
       public Builder setRawData(
           java.lang.String value) {
@@ -23920,7 +16587,6 @@ public final class EvmService {
       }
       /**
        * <code>string rawData = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearRawData() {
         
@@ -23930,8 +16596,6 @@ public final class EvmService {
       }
       /**
        * <code>string rawData = 4;</code>
-       * @param value The bytes for rawData to set.
-       * @return This builder for chaining.
        */
       public Builder setRawDataBytes(
           com.google.protobuf.ByteString value) {
@@ -23948,7 +16612,6 @@ public final class EvmService {
       private java.lang.Object jsonData_ = "";
       /**
        * <code>string jsonData = 5;</code>
-       * @return The jsonData.
        */
       public java.lang.String getJsonData() {
         java.lang.Object ref = jsonData_;
@@ -23964,7 +16627,6 @@ public final class EvmService {
       }
       /**
        * <code>string jsonData = 5;</code>
-       * @return The bytes for jsonData.
        */
       public com.google.protobuf.ByteString
           getJsonDataBytes() {
@@ -23981,8 +16643,6 @@ public final class EvmService {
       }
       /**
        * <code>string jsonData = 5;</code>
-       * @param value The jsonData to set.
-       * @return This builder for chaining.
        */
       public Builder setJsonData(
           java.lang.String value) {
@@ -23996,7 +16656,6 @@ public final class EvmService {
       }
       /**
        * <code>string jsonData = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearJsonData() {
         
@@ -24006,8 +16665,6 @@ public final class EvmService {
       }
       /**
        * <code>string jsonData = 5;</code>
-       * @param value The bytes for jsonData to set.
-       * @return This builder for chaining.
        */
       public Builder setJsonDataBytes(
           com.google.protobuf.ByteString value) {
@@ -24079,93 +16736,83 @@ public final class EvmService {
 
     /**
      * <code>string code = 1;</code>
-     * @return The code.
      */
     java.lang.String getCode();
     /**
      * <code>string code = 1;</code>
-     * @return The bytes for code.
      */
     com.google.protobuf.ByteString
         getCodeBytes();
 
     /**
-     * <code>int64 fee = 2;</code>
-     * @return The fee.
+     * <code>string abi = 2;</code>
+     */
+    java.lang.String getAbi();
+    /**
+     * <code>string abi = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAbiBytes();
+
+    /**
+     * <code>int64 fee = 3;</code>
      */
     long getFee();
 
     /**
-     * <code>string note = 3;</code>
-     * @return The note.
+     * <code>string note = 4;</code>
      */
     java.lang.String getNote();
     /**
-     * <code>string note = 3;</code>
-     * @return The bytes for note.
+     * <code>string note = 4;</code>
      */
     com.google.protobuf.ByteString
         getNoteBytes();
 
     /**
-     * <code>string alias = 4;</code>
-     * @return The alias.
+     * <code>string alias = 5;</code>
      */
     java.lang.String getAlias();
     /**
-     * <code>string alias = 4;</code>
-     * @return The bytes for alias.
+     * <code>string alias = 5;</code>
      */
     com.google.protobuf.ByteString
         getAliasBytes();
 
     /**
-     * <code>string caller = 5;</code>
-     * @return The caller.
-     */
-    java.lang.String getCaller();
-    /**
-     * <code>string caller = 5;</code>
-     * @return The bytes for caller.
-     */
-    com.google.protobuf.ByteString
-        getCallerBytes();
-
-    /**
      * <code>string parameter = 6;</code>
-     * @return The parameter.
      */
     java.lang.String getParameter();
     /**
      * <code>string parameter = 6;</code>
-     * @return The bytes for parameter.
      */
     com.google.protobuf.ByteString
         getParameterBytes();
 
     /**
      * <code>string expire = 7;</code>
-     * @return The expire.
      */
     java.lang.String getExpire();
     /**
      * <code>string expire = 7;</code>
-     * @return The bytes for expire.
      */
     com.google.protobuf.ByteString
         getExpireBytes();
 
     /**
      * <code>string paraName = 8;</code>
-     * @return The paraName.
      */
     java.lang.String getParaName();
     /**
      * <code>string paraName = 8;</code>
-     * @return The bytes for paraName.
      */
     com.google.protobuf.ByteString
         getParaNameBytes();
+
+    /**
+     * <code>int64 amount = 9;</code>
+     */
+    long getAmount();
   }
   /**
    * Protobuf type {@code EvmContractCreateReq}
@@ -24181,9 +16828,9 @@ public final class EvmService {
     }
     private EvmContractCreateReq() {
       code_ = "";
+      abi_ = "";
       note_ = "";
       alias_ = "";
-      caller_ = "";
       parameter_ = "";
       expire_ = "";
       paraName_ = "";
@@ -24225,27 +16872,27 @@ public final class EvmService {
               code_ = s;
               break;
             }
-            case 16: {
-
-              fee_ = input.readInt64();
-              break;
-            }
-            case 26: {
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              note_ = s;
+              abi_ = s;
+              break;
+            }
+            case 24: {
+
+              fee_ = input.readInt64();
               break;
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              alias_ = s;
+              note_ = s;
               break;
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              caller_ = s;
+              alias_ = s;
               break;
             }
             case 50: {
@@ -24264,6 +16911,11 @@ public final class EvmService {
               java.lang.String s = input.readStringRequireUtf8();
 
               paraName_ = s;
+              break;
+            }
+            case 72: {
+
+              amount_ = input.readInt64();
               break;
             }
             default: {
@@ -24302,7 +16954,6 @@ public final class EvmService {
     private volatile java.lang.Object code_;
     /**
      * <code>string code = 1;</code>
-     * @return The code.
      */
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
@@ -24318,7 +16969,6 @@ public final class EvmService {
     }
     /**
      * <code>string code = 1;</code>
-     * @return The bytes for code.
      */
     public com.google.protobuf.ByteString
         getCodeBytes() {
@@ -24334,21 +16984,53 @@ public final class EvmService {
       }
     }
 
-    public static final int FEE_FIELD_NUMBER = 2;
+    public static final int ABI_FIELD_NUMBER = 2;
+    private volatile java.lang.Object abi_;
+    /**
+     * <code>string abi = 2;</code>
+     */
+    public java.lang.String getAbi() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string abi = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAbiBytes() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abi_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEE_FIELD_NUMBER = 3;
     private long fee_;
     /**
-     * <code>int64 fee = 2;</code>
-     * @return The fee.
+     * <code>int64 fee = 3;</code>
      */
     public long getFee() {
       return fee_;
     }
 
-    public static final int NOTE_FIELD_NUMBER = 3;
+    public static final int NOTE_FIELD_NUMBER = 4;
     private volatile java.lang.Object note_;
     /**
-     * <code>string note = 3;</code>
-     * @return The note.
+     * <code>string note = 4;</code>
      */
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
@@ -24363,8 +17045,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string note = 3;</code>
-     * @return The bytes for note.
+     * <code>string note = 4;</code>
      */
     public com.google.protobuf.ByteString
         getNoteBytes() {
@@ -24380,11 +17061,10 @@ public final class EvmService {
       }
     }
 
-    public static final int ALIAS_FIELD_NUMBER = 4;
+    public static final int ALIAS_FIELD_NUMBER = 5;
     private volatile java.lang.Object alias_;
     /**
-     * <code>string alias = 4;</code>
-     * @return The alias.
+     * <code>string alias = 5;</code>
      */
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
@@ -24399,8 +17079,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string alias = 4;</code>
-     * @return The bytes for alias.
+     * <code>string alias = 5;</code>
      */
     public com.google.protobuf.ByteString
         getAliasBytes() {
@@ -24416,47 +17095,10 @@ public final class EvmService {
       }
     }
 
-    public static final int CALLER_FIELD_NUMBER = 5;
-    private volatile java.lang.Object caller_;
-    /**
-     * <code>string caller = 5;</code>
-     * @return The caller.
-     */
-    public java.lang.String getCaller() {
-      java.lang.Object ref = caller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        caller_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string caller = 5;</code>
-     * @return The bytes for caller.
-     */
-    public com.google.protobuf.ByteString
-        getCallerBytes() {
-      java.lang.Object ref = caller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        caller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int PARAMETER_FIELD_NUMBER = 6;
     private volatile java.lang.Object parameter_;
     /**
      * <code>string parameter = 6;</code>
-     * @return The parameter.
      */
     public java.lang.String getParameter() {
       java.lang.Object ref = parameter_;
@@ -24472,7 +17114,6 @@ public final class EvmService {
     }
     /**
      * <code>string parameter = 6;</code>
-     * @return The bytes for parameter.
      */
     public com.google.protobuf.ByteString
         getParameterBytes() {
@@ -24492,7 +17133,6 @@ public final class EvmService {
     private volatile java.lang.Object expire_;
     /**
      * <code>string expire = 7;</code>
-     * @return The expire.
      */
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
@@ -24508,7 +17148,6 @@ public final class EvmService {
     }
     /**
      * <code>string expire = 7;</code>
-     * @return The bytes for expire.
      */
     public com.google.protobuf.ByteString
         getExpireBytes() {
@@ -24528,7 +17167,6 @@ public final class EvmService {
     private volatile java.lang.Object paraName_;
     /**
      * <code>string paraName = 8;</code>
-     * @return The paraName.
      */
     public java.lang.String getParaName() {
       java.lang.Object ref = paraName_;
@@ -24544,7 +17182,6 @@ public final class EvmService {
     }
     /**
      * <code>string paraName = 8;</code>
-     * @return The bytes for paraName.
      */
     public com.google.protobuf.ByteString
         getParaNameBytes() {
@@ -24558,6 +17195,15 @@ public final class EvmService {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 9;
+    private long amount_;
+    /**
+     * <code>int64 amount = 9;</code>
+     */
+    public long getAmount() {
+      return amount_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -24577,17 +17223,17 @@ public final class EvmService {
       if (!getCodeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
       }
+      if (!getAbiBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, abi_);
+      }
       if (fee_ != 0L) {
-        output.writeInt64(2, fee_);
+        output.writeInt64(3, fee_);
       }
       if (!getNoteBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, note_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, note_);
       }
       if (!getAliasBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, alias_);
-      }
-      if (!getCallerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, caller_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, alias_);
       }
       if (!getParameterBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, parameter_);
@@ -24597,6 +17243,9 @@ public final class EvmService {
       }
       if (!getParaNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, paraName_);
+      }
+      if (amount_ != 0L) {
+        output.writeInt64(9, amount_);
       }
       unknownFields.writeTo(output);
     }
@@ -24610,18 +17259,18 @@ public final class EvmService {
       if (!getCodeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
       }
+      if (!getAbiBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, abi_);
+      }
       if (fee_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, fee_);
+          .computeInt64Size(3, fee_);
       }
       if (!getNoteBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, note_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, note_);
       }
       if (!getAliasBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, alias_);
-      }
-      if (!getCallerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, caller_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, alias_);
       }
       if (!getParameterBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, parameter_);
@@ -24631,6 +17280,10 @@ public final class EvmService {
       }
       if (!getParaNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, paraName_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, amount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24649,20 +17302,22 @@ public final class EvmService {
 
       if (!getCode()
           .equals(other.getCode())) return false;
+      if (!getAbi()
+          .equals(other.getAbi())) return false;
       if (getFee()
           != other.getFee()) return false;
       if (!getNote()
           .equals(other.getNote())) return false;
       if (!getAlias()
           .equals(other.getAlias())) return false;
-      if (!getCaller()
-          .equals(other.getCaller())) return false;
       if (!getParameter()
           .equals(other.getParameter())) return false;
       if (!getExpire()
           .equals(other.getExpire())) return false;
       if (!getParaName()
           .equals(other.getParaName())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -24676,6 +17331,8 @@ public final class EvmService {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCode().hashCode();
+      hash = (37 * hash) + ABI_FIELD_NUMBER;
+      hash = (53 * hash) + getAbi().hashCode();
       hash = (37 * hash) + FEE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFee());
@@ -24683,14 +17340,15 @@ public final class EvmService {
       hash = (53 * hash) + getNote().hashCode();
       hash = (37 * hash) + ALIAS_FIELD_NUMBER;
       hash = (53 * hash) + getAlias().hashCode();
-      hash = (37 * hash) + CALLER_FIELD_NUMBER;
-      hash = (53 * hash) + getCaller().hashCode();
       hash = (37 * hash) + PARAMETER_FIELD_NUMBER;
       hash = (53 * hash) + getParameter().hashCode();
       hash = (37 * hash) + EXPIRE_FIELD_NUMBER;
       hash = (53 * hash) + getExpire().hashCode();
       hash = (37 * hash) + PARANAME_FIELD_NUMBER;
       hash = (53 * hash) + getParaName().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24826,19 +17484,21 @@ public final class EvmService {
         super.clear();
         code_ = "";
 
+        abi_ = "";
+
         fee_ = 0L;
 
         note_ = "";
 
         alias_ = "";
 
-        caller_ = "";
-
         parameter_ = "";
 
         expire_ = "";
 
         paraName_ = "";
+
+        amount_ = 0L;
 
         return this;
       }
@@ -24867,13 +17527,14 @@ public final class EvmService {
       public cn.chain33.javasdk.model.protobuf.EvmService.EvmContractCreateReq buildPartial() {
         cn.chain33.javasdk.model.protobuf.EvmService.EvmContractCreateReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmContractCreateReq(this);
         result.code_ = code_;
+        result.abi_ = abi_;
         result.fee_ = fee_;
         result.note_ = note_;
         result.alias_ = alias_;
-        result.caller_ = caller_;
         result.parameter_ = parameter_;
         result.expire_ = expire_;
         result.paraName_ = paraName_;
+        result.amount_ = amount_;
         onBuilt();
         return result;
       }
@@ -24926,6 +17587,10 @@ public final class EvmService {
           code_ = other.code_;
           onChanged();
         }
+        if (!other.getAbi().isEmpty()) {
+          abi_ = other.abi_;
+          onChanged();
+        }
         if (other.getFee() != 0L) {
           setFee(other.getFee());
         }
@@ -24935,10 +17600,6 @@ public final class EvmService {
         }
         if (!other.getAlias().isEmpty()) {
           alias_ = other.alias_;
-          onChanged();
-        }
-        if (!other.getCaller().isEmpty()) {
-          caller_ = other.caller_;
           onChanged();
         }
         if (!other.getParameter().isEmpty()) {
@@ -24952,6 +17613,9 @@ public final class EvmService {
         if (!other.getParaName().isEmpty()) {
           paraName_ = other.paraName_;
           onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24985,7 +17649,6 @@ public final class EvmService {
       private java.lang.Object code_ = "";
       /**
        * <code>string code = 1;</code>
-       * @return The code.
        */
       public java.lang.String getCode() {
         java.lang.Object ref = code_;
@@ -25001,7 +17664,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 1;</code>
-       * @return The bytes for code.
        */
       public com.google.protobuf.ByteString
           getCodeBytes() {
@@ -25018,8 +17680,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 1;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
        */
       public Builder setCode(
           java.lang.String value) {
@@ -25033,7 +17693,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCode() {
         
@@ -25043,8 +17702,6 @@ public final class EvmService {
       }
       /**
        * <code>string code = 1;</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
        */
       public Builder setCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -25058,18 +17715,84 @@ public final class EvmService {
         return this;
       }
 
+      private java.lang.Object abi_ = "";
+      /**
+       * <code>string abi = 2;</code>
+       */
+      public java.lang.String getAbi() {
+        java.lang.Object ref = abi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string abi = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAbiBytes() {
+        java.lang.Object ref = abi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string abi = 2;</code>
+       */
+      public Builder setAbi(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        abi_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 2;</code>
+       */
+      public Builder clearAbi() {
+        
+        abi_ = getDefaultInstance().getAbi();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 2;</code>
+       */
+      public Builder setAbiBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        abi_ = value;
+        onChanged();
+        return this;
+      }
+
       private long fee_ ;
       /**
-       * <code>int64 fee = 2;</code>
-       * @return The fee.
+       * <code>int64 fee = 3;</code>
        */
       public long getFee() {
         return fee_;
       }
       /**
-       * <code>int64 fee = 2;</code>
-       * @param value The fee to set.
-       * @return This builder for chaining.
+       * <code>int64 fee = 3;</code>
        */
       public Builder setFee(long value) {
         
@@ -25078,8 +17801,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>int64 fee = 2;</code>
-       * @return This builder for chaining.
+       * <code>int64 fee = 3;</code>
        */
       public Builder clearFee() {
         
@@ -25090,8 +17812,7 @@ public final class EvmService {
 
       private java.lang.Object note_ = "";
       /**
-       * <code>string note = 3;</code>
-       * @return The note.
+       * <code>string note = 4;</code>
        */
       public java.lang.String getNote() {
         java.lang.Object ref = note_;
@@ -25106,8 +17827,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string note = 3;</code>
-       * @return The bytes for note.
+       * <code>string note = 4;</code>
        */
       public com.google.protobuf.ByteString
           getNoteBytes() {
@@ -25123,9 +17843,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string note = 3;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
+       * <code>string note = 4;</code>
        */
       public Builder setNote(
           java.lang.String value) {
@@ -25138,8 +17856,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string note = 3;</code>
-       * @return This builder for chaining.
+       * <code>string note = 4;</code>
        */
       public Builder clearNote() {
         
@@ -25148,9 +17865,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string note = 3;</code>
-       * @param value The bytes for note to set.
-       * @return This builder for chaining.
+       * <code>string note = 4;</code>
        */
       public Builder setNoteBytes(
           com.google.protobuf.ByteString value) {
@@ -25166,8 +17881,7 @@ public final class EvmService {
 
       private java.lang.Object alias_ = "";
       /**
-       * <code>string alias = 4;</code>
-       * @return The alias.
+       * <code>string alias = 5;</code>
        */
       public java.lang.String getAlias() {
         java.lang.Object ref = alias_;
@@ -25182,8 +17896,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string alias = 4;</code>
-       * @return The bytes for alias.
+       * <code>string alias = 5;</code>
        */
       public com.google.protobuf.ByteString
           getAliasBytes() {
@@ -25199,9 +17912,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string alias = 4;</code>
-       * @param value The alias to set.
-       * @return This builder for chaining.
+       * <code>string alias = 5;</code>
        */
       public Builder setAlias(
           java.lang.String value) {
@@ -25214,8 +17925,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string alias = 4;</code>
-       * @return This builder for chaining.
+       * <code>string alias = 5;</code>
        */
       public Builder clearAlias() {
         
@@ -25224,9 +17934,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string alias = 4;</code>
-       * @param value The bytes for alias to set.
-       * @return This builder for chaining.
+       * <code>string alias = 5;</code>
        */
       public Builder setAliasBytes(
           com.google.protobuf.ByteString value) {
@@ -25240,86 +17948,9 @@ public final class EvmService {
         return this;
       }
 
-      private java.lang.Object caller_ = "";
-      /**
-       * <code>string caller = 5;</code>
-       * @return The caller.
-       */
-      public java.lang.String getCaller() {
-        java.lang.Object ref = caller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          caller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @return The bytes for caller.
-       */
-      public com.google.protobuf.ByteString
-          getCallerBytes() {
-        java.lang.Object ref = caller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          caller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCaller(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        caller_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCaller() {
-        
-        caller_ = getDefaultInstance().getCaller();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        caller_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object parameter_ = "";
       /**
        * <code>string parameter = 6;</code>
-       * @return The parameter.
        */
       public java.lang.String getParameter() {
         java.lang.Object ref = parameter_;
@@ -25335,7 +17966,6 @@ public final class EvmService {
       }
       /**
        * <code>string parameter = 6;</code>
-       * @return The bytes for parameter.
        */
       public com.google.protobuf.ByteString
           getParameterBytes() {
@@ -25352,8 +17982,6 @@ public final class EvmService {
       }
       /**
        * <code>string parameter = 6;</code>
-       * @param value The parameter to set.
-       * @return This builder for chaining.
        */
       public Builder setParameter(
           java.lang.String value) {
@@ -25367,7 +17995,6 @@ public final class EvmService {
       }
       /**
        * <code>string parameter = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearParameter() {
         
@@ -25377,8 +18004,6 @@ public final class EvmService {
       }
       /**
        * <code>string parameter = 6;</code>
-       * @param value The bytes for parameter to set.
-       * @return This builder for chaining.
        */
       public Builder setParameterBytes(
           com.google.protobuf.ByteString value) {
@@ -25395,7 +18020,6 @@ public final class EvmService {
       private java.lang.Object expire_ = "";
       /**
        * <code>string expire = 7;</code>
-       * @return The expire.
        */
       public java.lang.String getExpire() {
         java.lang.Object ref = expire_;
@@ -25411,7 +18035,6 @@ public final class EvmService {
       }
       /**
        * <code>string expire = 7;</code>
-       * @return The bytes for expire.
        */
       public com.google.protobuf.ByteString
           getExpireBytes() {
@@ -25428,8 +18051,6 @@ public final class EvmService {
       }
       /**
        * <code>string expire = 7;</code>
-       * @param value The expire to set.
-       * @return This builder for chaining.
        */
       public Builder setExpire(
           java.lang.String value) {
@@ -25443,7 +18064,6 @@ public final class EvmService {
       }
       /**
        * <code>string expire = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearExpire() {
         
@@ -25453,8 +18073,6 @@ public final class EvmService {
       }
       /**
        * <code>string expire = 7;</code>
-       * @param value The bytes for expire to set.
-       * @return This builder for chaining.
        */
       public Builder setExpireBytes(
           com.google.protobuf.ByteString value) {
@@ -25471,7 +18089,6 @@ public final class EvmService {
       private java.lang.Object paraName_ = "";
       /**
        * <code>string paraName = 8;</code>
-       * @return The paraName.
        */
       public java.lang.String getParaName() {
         java.lang.Object ref = paraName_;
@@ -25487,7 +18104,6 @@ public final class EvmService {
       }
       /**
        * <code>string paraName = 8;</code>
-       * @return The bytes for paraName.
        */
       public com.google.protobuf.ByteString
           getParaNameBytes() {
@@ -25504,8 +18120,6 @@ public final class EvmService {
       }
       /**
        * <code>string paraName = 8;</code>
-       * @param value The paraName to set.
-       * @return This builder for chaining.
        */
       public Builder setParaName(
           java.lang.String value) {
@@ -25519,7 +18133,6 @@ public final class EvmService {
       }
       /**
        * <code>string paraName = 8;</code>
-       * @return This builder for chaining.
        */
       public Builder clearParaName() {
         
@@ -25529,8 +18142,6 @@ public final class EvmService {
       }
       /**
        * <code>string paraName = 8;</code>
-       * @param value The bytes for paraName to set.
-       * @return This builder for chaining.
        */
       public Builder setParaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -25540,6 +18151,32 @@ public final class EvmService {
   checkByteStringIsUtf8(value);
         
         paraName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <code>int64 amount = 9;</code>
+       */
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>int64 amount = 9;</code>
+       */
+      public Builder setAmount(long value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 amount = 9;</code>
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0L;
         onChanged();
         return this;
       }
@@ -25601,100 +18238,74 @@ public final class EvmService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 amount = 1;</code>
-     * @return The amount.
+     * <code>int64 amount = 1;</code>
      */
     long getAmount();
 
     /**
-     * <code>string code = 2;</code>
-     * @return The code.
-     */
-    java.lang.String getCode();
-    /**
-     * <code>string code = 2;</code>
-     * @return The bytes for code.
-     */
-    com.google.protobuf.ByteString
-        getCodeBytes();
-
-    /**
-     * <code>int64 fee = 3;</code>
-     * @return The fee.
+     * <code>int64 fee = 2;</code>
      */
     long getFee();
 
     /**
-     * <code>string note = 4;</code>
-     * @return The note.
+     * <code>string note = 3;</code>
      */
     java.lang.String getNote();
     /**
-     * <code>string note = 4;</code>
-     * @return The bytes for note.
+     * <code>string note = 3;</code>
      */
     com.google.protobuf.ByteString
         getNoteBytes();
 
     /**
-     * <code>string caller = 5;</code>
-     * @return The caller.
-     */
-    java.lang.String getCaller();
-    /**
-     * <code>string caller = 5;</code>
-     * @return The bytes for caller.
-     */
-    com.google.protobuf.ByteString
-        getCallerBytes();
-
-    /**
-     * <code>string parameter = 6;</code>
-     * @return The parameter.
+     * <code>string parameter = 4;</code>
      */
     java.lang.String getParameter();
     /**
-     * <code>string parameter = 6;</code>
-     * @return The bytes for parameter.
+     * <code>string parameter = 4;</code>
      */
     com.google.protobuf.ByteString
         getParameterBytes();
 
     /**
-     * <code>string exec = 7;</code>
-     * @return The exec.
+     * <code>string contractAddr = 5;</code>
      */
-    java.lang.String getExec();
+    java.lang.String getContractAddr();
     /**
-     * <code>string exec = 7;</code>
-     * @return The bytes for exec.
+     * <code>string contractAddr = 5;</code>
      */
     com.google.protobuf.ByteString
-        getExecBytes();
+        getContractAddrBytes();
 
     /**
-     * <code>string expire = 8;</code>
-     * @return The expire.
+     * <code>string expire = 6;</code>
      */
     java.lang.String getExpire();
     /**
-     * <code>string expire = 8;</code>
-     * @return The bytes for expire.
+     * <code>string expire = 6;</code>
      */
     com.google.protobuf.ByteString
         getExpireBytes();
 
     /**
-     * <code>string paraName = 9;</code>
-     * @return The paraName.
+     * <code>string paraName = 7;</code>
      */
     java.lang.String getParaName();
     /**
-     * <code>string paraName = 9;</code>
-     * @return The bytes for paraName.
+     * <code>string paraName = 7;</code>
      */
     com.google.protobuf.ByteString
         getParaNameBytes();
+
+    /**
+     * <code>string abi = 8;</code>
+     */
+    java.lang.String getAbi();
+    /**
+     * <code>string abi = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getAbiBytes();
   }
   /**
    * Protobuf type {@code EvmContractCallReq}
@@ -25709,13 +18320,12 @@ public final class EvmService {
       super(builder);
     }
     private EvmContractCallReq() {
-      code_ = "";
       note_ = "";
-      caller_ = "";
       parameter_ = "";
-      exec_ = "";
+      contractAddr_ = "";
       expire_ = "";
       paraName_ = "";
+      abi_ = "";
     }
 
     @java.lang.Override
@@ -25750,54 +18360,48 @@ public final class EvmService {
               break;
             case 8: {
 
-              amount_ = input.readUInt64();
+              amount_ = input.readInt64();
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              code_ = s;
-              break;
-            }
-            case 24: {
+            case 16: {
 
               fee_ = input.readInt64();
               break;
             }
-            case 34: {
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               note_ = s;
               break;
             }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              caller_ = s;
-              break;
-            }
-            case 50: {
+            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
               parameter_ = s;
               break;
             }
-            case 58: {
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              exec_ = s;
+              contractAddr_ = s;
               break;
             }
-            case 66: {
+            case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
               expire_ = s;
               break;
             }
-            case 74: {
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
               paraName_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              abi_ = s;
               break;
             }
             default: {
@@ -25835,64 +18439,25 @@ public final class EvmService {
     public static final int AMOUNT_FIELD_NUMBER = 1;
     private long amount_;
     /**
-     * <code>uint64 amount = 1;</code>
-     * @return The amount.
+     * <code>int64 amount = 1;</code>
      */
     public long getAmount() {
       return amount_;
     }
 
-    public static final int CODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object code_;
-    /**
-     * <code>string code = 2;</code>
-     * @return The code.
-     */
-    public java.lang.String getCode() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        code_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string code = 2;</code>
-     * @return The bytes for code.
-     */
-    public com.google.protobuf.ByteString
-        getCodeBytes() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        code_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FEE_FIELD_NUMBER = 3;
+    public static final int FEE_FIELD_NUMBER = 2;
     private long fee_;
     /**
-     * <code>int64 fee = 3;</code>
-     * @return The fee.
+     * <code>int64 fee = 2;</code>
      */
     public long getFee() {
       return fee_;
     }
 
-    public static final int NOTE_FIELD_NUMBER = 4;
+    public static final int NOTE_FIELD_NUMBER = 3;
     private volatile java.lang.Object note_;
     /**
-     * <code>string note = 4;</code>
-     * @return The note.
+     * <code>string note = 3;</code>
      */
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
@@ -25907,8 +18472,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string note = 4;</code>
-     * @return The bytes for note.
+     * <code>string note = 3;</code>
      */
     public com.google.protobuf.ByteString
         getNoteBytes() {
@@ -25924,47 +18488,10 @@ public final class EvmService {
       }
     }
 
-    public static final int CALLER_FIELD_NUMBER = 5;
-    private volatile java.lang.Object caller_;
-    /**
-     * <code>string caller = 5;</code>
-     * @return The caller.
-     */
-    public java.lang.String getCaller() {
-      java.lang.Object ref = caller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        caller_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string caller = 5;</code>
-     * @return The bytes for caller.
-     */
-    public com.google.protobuf.ByteString
-        getCallerBytes() {
-      java.lang.Object ref = caller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        caller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PARAMETER_FIELD_NUMBER = 6;
+    public static final int PARAMETER_FIELD_NUMBER = 4;
     private volatile java.lang.Object parameter_;
     /**
-     * <code>string parameter = 6;</code>
-     * @return The parameter.
+     * <code>string parameter = 4;</code>
      */
     public java.lang.String getParameter() {
       java.lang.Object ref = parameter_;
@@ -25979,8 +18506,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string parameter = 6;</code>
-     * @return The bytes for parameter.
+     * <code>string parameter = 4;</code>
      */
     public com.google.protobuf.ByteString
         getParameterBytes() {
@@ -25996,47 +18522,44 @@ public final class EvmService {
       }
     }
 
-    public static final int EXEC_FIELD_NUMBER = 7;
-    private volatile java.lang.Object exec_;
+    public static final int CONTRACTADDR_FIELD_NUMBER = 5;
+    private volatile java.lang.Object contractAddr_;
     /**
-     * <code>string exec = 7;</code>
-     * @return The exec.
+     * <code>string contractAddr = 5;</code>
      */
-    public java.lang.String getExec() {
-      java.lang.Object ref = exec_;
+    public java.lang.String getContractAddr() {
+      java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        exec_ = s;
+        contractAddr_ = s;
         return s;
       }
     }
     /**
-     * <code>string exec = 7;</code>
-     * @return The bytes for exec.
+     * <code>string contractAddr = 5;</code>
      */
     public com.google.protobuf.ByteString
-        getExecBytes() {
-      java.lang.Object ref = exec_;
+        getContractAddrBytes() {
+      java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        exec_ = b;
+        contractAddr_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int EXPIRE_FIELD_NUMBER = 8;
+    public static final int EXPIRE_FIELD_NUMBER = 6;
     private volatile java.lang.Object expire_;
     /**
-     * <code>string expire = 8;</code>
-     * @return The expire.
+     * <code>string expire = 6;</code>
      */
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
@@ -26051,8 +18574,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string expire = 8;</code>
-     * @return The bytes for expire.
+     * <code>string expire = 6;</code>
      */
     public com.google.protobuf.ByteString
         getExpireBytes() {
@@ -26068,11 +18590,10 @@ public final class EvmService {
       }
     }
 
-    public static final int PARANAME_FIELD_NUMBER = 9;
+    public static final int PARANAME_FIELD_NUMBER = 7;
     private volatile java.lang.Object paraName_;
     /**
-     * <code>string paraName = 9;</code>
-     * @return The paraName.
+     * <code>string paraName = 7;</code>
      */
     public java.lang.String getParaName() {
       java.lang.Object ref = paraName_;
@@ -26087,8 +18608,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string paraName = 9;</code>
-     * @return The bytes for paraName.
+     * <code>string paraName = 7;</code>
      */
     public com.google.protobuf.ByteString
         getParaNameBytes() {
@@ -26098,6 +18618,40 @@ public final class EvmService {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         paraName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ABI_FIELD_NUMBER = 8;
+    private volatile java.lang.Object abi_;
+    /**
+     * <code>string abi = 8;</code>
+     */
+    public java.lang.String getAbi() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string abi = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAbiBytes() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abi_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -26119,31 +18673,28 @@ public final class EvmService {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (amount_ != 0L) {
-        output.writeUInt64(1, amount_);
-      }
-      if (!getCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, code_);
+        output.writeInt64(1, amount_);
       }
       if (fee_ != 0L) {
-        output.writeInt64(3, fee_);
+        output.writeInt64(2, fee_);
       }
       if (!getNoteBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, note_);
-      }
-      if (!getCallerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, caller_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, note_);
       }
       if (!getParameterBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, parameter_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, parameter_);
       }
-      if (!getExecBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, exec_);
+      if (!getContractAddrBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, contractAddr_);
       }
       if (!getExpireBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, expire_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, expire_);
       }
       if (!getParaNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, paraName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, paraName_);
+      }
+      if (!getAbiBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, abi_);
       }
       unknownFields.writeTo(output);
     }
@@ -26156,32 +18707,29 @@ public final class EvmService {
       size = 0;
       if (amount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, amount_);
-      }
-      if (!getCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, code_);
+          .computeInt64Size(1, amount_);
       }
       if (fee_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, fee_);
+          .computeInt64Size(2, fee_);
       }
       if (!getNoteBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, note_);
-      }
-      if (!getCallerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, caller_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, note_);
       }
       if (!getParameterBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, parameter_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, parameter_);
       }
-      if (!getExecBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, exec_);
+      if (!getContractAddrBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, contractAddr_);
       }
       if (!getExpireBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, expire_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, expire_);
       }
       if (!getParaNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, paraName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, paraName_);
+      }
+      if (!getAbiBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, abi_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -26200,22 +18748,20 @@ public final class EvmService {
 
       if (getAmount()
           != other.getAmount()) return false;
-      if (!getCode()
-          .equals(other.getCode())) return false;
       if (getFee()
           != other.getFee()) return false;
       if (!getNote()
           .equals(other.getNote())) return false;
-      if (!getCaller()
-          .equals(other.getCaller())) return false;
       if (!getParameter()
           .equals(other.getParameter())) return false;
-      if (!getExec()
-          .equals(other.getExec())) return false;
+      if (!getContractAddr()
+          .equals(other.getContractAddr())) return false;
       if (!getExpire()
           .equals(other.getExpire())) return false;
       if (!getParaName()
           .equals(other.getParaName())) return false;
+      if (!getAbi()
+          .equals(other.getAbi())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -26230,23 +18776,21 @@ public final class EvmService {
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAmount());
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode().hashCode();
       hash = (37 * hash) + FEE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFee());
       hash = (37 * hash) + NOTE_FIELD_NUMBER;
       hash = (53 * hash) + getNote().hashCode();
-      hash = (37 * hash) + CALLER_FIELD_NUMBER;
-      hash = (53 * hash) + getCaller().hashCode();
       hash = (37 * hash) + PARAMETER_FIELD_NUMBER;
       hash = (53 * hash) + getParameter().hashCode();
-      hash = (37 * hash) + EXEC_FIELD_NUMBER;
-      hash = (53 * hash) + getExec().hashCode();
+      hash = (37 * hash) + CONTRACTADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddr().hashCode();
       hash = (37 * hash) + EXPIRE_FIELD_NUMBER;
       hash = (53 * hash) + getExpire().hashCode();
       hash = (37 * hash) + PARANAME_FIELD_NUMBER;
       hash = (53 * hash) + getParaName().hashCode();
+      hash = (37 * hash) + ABI_FIELD_NUMBER;
+      hash = (53 * hash) + getAbi().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -26382,21 +18926,19 @@ public final class EvmService {
         super.clear();
         amount_ = 0L;
 
-        code_ = "";
-
         fee_ = 0L;
 
         note_ = "";
 
-        caller_ = "";
-
         parameter_ = "";
 
-        exec_ = "";
+        contractAddr_ = "";
 
         expire_ = "";
 
         paraName_ = "";
+
+        abi_ = "";
 
         return this;
       }
@@ -26425,14 +18967,13 @@ public final class EvmService {
       public cn.chain33.javasdk.model.protobuf.EvmService.EvmContractCallReq buildPartial() {
         cn.chain33.javasdk.model.protobuf.EvmService.EvmContractCallReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmContractCallReq(this);
         result.amount_ = amount_;
-        result.code_ = code_;
         result.fee_ = fee_;
         result.note_ = note_;
-        result.caller_ = caller_;
         result.parameter_ = parameter_;
-        result.exec_ = exec_;
+        result.contractAddr_ = contractAddr_;
         result.expire_ = expire_;
         result.paraName_ = paraName_;
+        result.abi_ = abi_;
         onBuilt();
         return result;
       }
@@ -26484,10 +19025,6 @@ public final class EvmService {
         if (other.getAmount() != 0L) {
           setAmount(other.getAmount());
         }
-        if (!other.getCode().isEmpty()) {
-          code_ = other.code_;
-          onChanged();
-        }
         if (other.getFee() != 0L) {
           setFee(other.getFee());
         }
@@ -26495,16 +19032,12 @@ public final class EvmService {
           note_ = other.note_;
           onChanged();
         }
-        if (!other.getCaller().isEmpty()) {
-          caller_ = other.caller_;
-          onChanged();
-        }
         if (!other.getParameter().isEmpty()) {
           parameter_ = other.parameter_;
           onChanged();
         }
-        if (!other.getExec().isEmpty()) {
-          exec_ = other.exec_;
+        if (!other.getContractAddr().isEmpty()) {
+          contractAddr_ = other.contractAddr_;
           onChanged();
         }
         if (!other.getExpire().isEmpty()) {
@@ -26513,6 +19046,10 @@ public final class EvmService {
         }
         if (!other.getParaName().isEmpty()) {
           paraName_ = other.paraName_;
+          onChanged();
+        }
+        if (!other.getAbi().isEmpty()) {
+          abi_ = other.abi_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -26546,16 +19083,13 @@ public final class EvmService {
 
       private long amount_ ;
       /**
-       * <code>uint64 amount = 1;</code>
-       * @return The amount.
+       * <code>int64 amount = 1;</code>
        */
       public long getAmount() {
         return amount_;
       }
       /**
-       * <code>uint64 amount = 1;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
+       * <code>int64 amount = 1;</code>
        */
       public Builder setAmount(long value) {
         
@@ -26564,8 +19098,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>uint64 amount = 1;</code>
-       * @return This builder for chaining.
+       * <code>int64 amount = 1;</code>
        */
       public Builder clearAmount() {
         
@@ -26574,94 +19107,15 @@ public final class EvmService {
         return this;
       }
 
-      private java.lang.Object code_ = "";
-      /**
-       * <code>string code = 2;</code>
-       * @return The code.
-       */
-      public java.lang.String getCode() {
-        java.lang.Object ref = code_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          code_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @return The bytes for code.
-       */
-      public com.google.protobuf.ByteString
-          getCodeBytes() {
-        java.lang.Object ref = code_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          code_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-
       private long fee_ ;
       /**
-       * <code>int64 fee = 3;</code>
-       * @return The fee.
+       * <code>int64 fee = 2;</code>
        */
       public long getFee() {
         return fee_;
       }
       /**
-       * <code>int64 fee = 3;</code>
-       * @param value The fee to set.
-       * @return This builder for chaining.
+       * <code>int64 fee = 2;</code>
        */
       public Builder setFee(long value) {
         
@@ -26670,8 +19124,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>int64 fee = 3;</code>
-       * @return This builder for chaining.
+       * <code>int64 fee = 2;</code>
        */
       public Builder clearFee() {
         
@@ -26682,8 +19135,7 @@ public final class EvmService {
 
       private java.lang.Object note_ = "";
       /**
-       * <code>string note = 4;</code>
-       * @return The note.
+       * <code>string note = 3;</code>
        */
       public java.lang.String getNote() {
         java.lang.Object ref = note_;
@@ -26698,8 +19150,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string note = 4;</code>
-       * @return The bytes for note.
+       * <code>string note = 3;</code>
        */
       public com.google.protobuf.ByteString
           getNoteBytes() {
@@ -26715,9 +19166,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string note = 4;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
+       * <code>string note = 3;</code>
        */
       public Builder setNote(
           java.lang.String value) {
@@ -26730,8 +19179,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string note = 4;</code>
-       * @return This builder for chaining.
+       * <code>string note = 3;</code>
        */
       public Builder clearNote() {
         
@@ -26740,9 +19188,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string note = 4;</code>
-       * @param value The bytes for note to set.
-       * @return This builder for chaining.
+       * <code>string note = 3;</code>
        */
       public Builder setNoteBytes(
           com.google.protobuf.ByteString value) {
@@ -26756,86 +19202,9 @@ public final class EvmService {
         return this;
       }
 
-      private java.lang.Object caller_ = "";
-      /**
-       * <code>string caller = 5;</code>
-       * @return The caller.
-       */
-      public java.lang.String getCaller() {
-        java.lang.Object ref = caller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          caller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @return The bytes for caller.
-       */
-      public com.google.protobuf.ByteString
-          getCallerBytes() {
-        java.lang.Object ref = caller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          caller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCaller(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        caller_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCaller() {
-        
-        caller_ = getDefaultInstance().getCaller();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string caller = 5;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        caller_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object parameter_ = "";
       /**
-       * <code>string parameter = 6;</code>
-       * @return The parameter.
+       * <code>string parameter = 4;</code>
        */
       public java.lang.String getParameter() {
         java.lang.Object ref = parameter_;
@@ -26850,8 +19219,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string parameter = 6;</code>
-       * @return The bytes for parameter.
+       * <code>string parameter = 4;</code>
        */
       public com.google.protobuf.ByteString
           getParameterBytes() {
@@ -26867,9 +19235,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string parameter = 6;</code>
-       * @param value The parameter to set.
-       * @return This builder for chaining.
+       * <code>string parameter = 4;</code>
        */
       public Builder setParameter(
           java.lang.String value) {
@@ -26882,8 +19248,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string parameter = 6;</code>
-       * @return This builder for chaining.
+       * <code>string parameter = 4;</code>
        */
       public Builder clearParameter() {
         
@@ -26892,9 +19257,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string parameter = 6;</code>
-       * @param value The bytes for parameter to set.
-       * @return This builder for chaining.
+       * <code>string parameter = 4;</code>
        */
       public Builder setParameterBytes(
           com.google.protobuf.ByteString value) {
@@ -26908,86 +19271,78 @@ public final class EvmService {
         return this;
       }
 
-      private java.lang.Object exec_ = "";
+      private java.lang.Object contractAddr_ = "";
       /**
-       * <code>string exec = 7;</code>
-       * @return The exec.
+       * <code>string contractAddr = 5;</code>
        */
-      public java.lang.String getExec() {
-        java.lang.Object ref = exec_;
+      public java.lang.String getContractAddr() {
+        java.lang.Object ref = contractAddr_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          exec_ = s;
+          contractAddr_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string exec = 7;</code>
-       * @return The bytes for exec.
+       * <code>string contractAddr = 5;</code>
        */
       public com.google.protobuf.ByteString
-          getExecBytes() {
-        java.lang.Object ref = exec_;
+          getContractAddrBytes() {
+        java.lang.Object ref = contractAddr_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          exec_ = b;
+          contractAddr_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string exec = 7;</code>
-       * @param value The exec to set.
-       * @return This builder for chaining.
+       * <code>string contractAddr = 5;</code>
        */
-      public Builder setExec(
+      public Builder setContractAddr(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        exec_ = value;
+        contractAddr_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string exec = 7;</code>
-       * @return This builder for chaining.
+       * <code>string contractAddr = 5;</code>
        */
-      public Builder clearExec() {
+      public Builder clearContractAddr() {
         
-        exec_ = getDefaultInstance().getExec();
+        contractAddr_ = getDefaultInstance().getContractAddr();
         onChanged();
         return this;
       }
       /**
-       * <code>string exec = 7;</code>
-       * @param value The bytes for exec to set.
-       * @return This builder for chaining.
+       * <code>string contractAddr = 5;</code>
        */
-      public Builder setExecBytes(
+      public Builder setContractAddrBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        exec_ = value;
+        contractAddr_ = value;
         onChanged();
         return this;
       }
 
       private java.lang.Object expire_ = "";
       /**
-       * <code>string expire = 8;</code>
-       * @return The expire.
+       * <code>string expire = 6;</code>
        */
       public java.lang.String getExpire() {
         java.lang.Object ref = expire_;
@@ -27002,8 +19357,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string expire = 8;</code>
-       * @return The bytes for expire.
+       * <code>string expire = 6;</code>
        */
       public com.google.protobuf.ByteString
           getExpireBytes() {
@@ -27019,9 +19373,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string expire = 8;</code>
-       * @param value The expire to set.
-       * @return This builder for chaining.
+       * <code>string expire = 6;</code>
        */
       public Builder setExpire(
           java.lang.String value) {
@@ -27034,8 +19386,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string expire = 8;</code>
-       * @return This builder for chaining.
+       * <code>string expire = 6;</code>
        */
       public Builder clearExpire() {
         
@@ -27044,9 +19395,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string expire = 8;</code>
-       * @param value The bytes for expire to set.
-       * @return This builder for chaining.
+       * <code>string expire = 6;</code>
        */
       public Builder setExpireBytes(
           com.google.protobuf.ByteString value) {
@@ -27062,8 +19411,7 @@ public final class EvmService {
 
       private java.lang.Object paraName_ = "";
       /**
-       * <code>string paraName = 9;</code>
-       * @return The paraName.
+       * <code>string paraName = 7;</code>
        */
       public java.lang.String getParaName() {
         java.lang.Object ref = paraName_;
@@ -27078,8 +19426,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string paraName = 9;</code>
-       * @return The bytes for paraName.
+       * <code>string paraName = 7;</code>
        */
       public com.google.protobuf.ByteString
           getParaNameBytes() {
@@ -27095,9 +19442,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string paraName = 9;</code>
-       * @param value The paraName to set.
-       * @return This builder for chaining.
+       * <code>string paraName = 7;</code>
        */
       public Builder setParaName(
           java.lang.String value) {
@@ -27110,8 +19455,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string paraName = 9;</code>
-       * @return This builder for chaining.
+       * <code>string paraName = 7;</code>
        */
       public Builder clearParaName() {
         
@@ -27120,9 +19464,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string paraName = 9;</code>
-       * @param value The bytes for paraName to set.
-       * @return This builder for chaining.
+       * <code>string paraName = 7;</code>
        */
       public Builder setParaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -27132,6 +19474,75 @@ public final class EvmService {
   checkByteStringIsUtf8(value);
         
         paraName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object abi_ = "";
+      /**
+       * <code>string abi = 8;</code>
+       */
+      public java.lang.String getAbi() {
+        java.lang.Object ref = abi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string abi = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAbiBytes() {
+        java.lang.Object ref = abi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string abi = 8;</code>
+       */
+      public Builder setAbi(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        abi_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 8;</code>
+       */
+      public Builder clearAbi() {
+        
+        abi_ = getDefaultInstance().getAbi();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 8;</code>
+       */
+      public Builder setAbiBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        abi_ = value;
         onChanged();
         return this;
       }
@@ -27188,94 +19599,68 @@ public final class EvmService {
 
   }
 
-  public interface EvmContractTransferReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EvmContractTransferReq)
+  public interface EvmTransferOnlyReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EvmTransferOnlyReq)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string caller = 1;</code>
-     * @return The caller.
+     * <code>string to = 1;</code>
      */
-    java.lang.String getCaller();
+    java.lang.String getTo();
     /**
-     * <code>string caller = 1;</code>
-     * @return The bytes for caller.
+     * <code>string to = 1;</code>
      */
     com.google.protobuf.ByteString
-        getCallerBytes();
+        getToBytes();
 
     /**
-     * <code>float amount = 2;</code>
-     * @return The amount.
+     * <code>int64 amount = 2;</code>
      */
-    float getAmount();
+    long getAmount();
 
     /**
-     * <code>string exec = 3;</code>
-     * @return The exec.
-     */
-    java.lang.String getExec();
-    /**
-     * <code>string exec = 3;</code>
-     * @return The bytes for exec.
-     */
-    com.google.protobuf.ByteString
-        getExecBytes();
-
-    /**
-     * <code>string expire = 4;</code>
-     * @return The expire.
-     */
-    java.lang.String getExpire();
-    /**
-     * <code>string expire = 4;</code>
-     * @return The bytes for expire.
-     */
-    com.google.protobuf.ByteString
-        getExpireBytes();
-
-    /**
-     * <code>bool isWithdraw = 5;</code>
-     * @return The isWithdraw.
-     */
-    boolean getIsWithdraw();
-
-    /**
-     * <code>string paraName = 6;</code>
-     * @return The paraName.
+     * <code>string paraName = 3;</code>
      */
     java.lang.String getParaName();
     /**
-     * <code>string paraName = 6;</code>
-     * @return The bytes for paraName.
+     * <code>string paraName = 3;</code>
      */
     com.google.protobuf.ByteString
         getParaNameBytes();
+
+    /**
+     * <code>string note = 4;</code>
+     */
+    java.lang.String getNote();
+    /**
+     * <code>string note = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getNoteBytes();
   }
   /**
-   * Protobuf type {@code EvmContractTransferReq}
+   * Protobuf type {@code EvmTransferOnlyReq}
    */
-  public  static final class EvmContractTransferReq extends
+  public  static final class EvmTransferOnlyReq extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EvmContractTransferReq)
-      EvmContractTransferReqOrBuilder {
+      // @@protoc_insertion_point(message_implements:EvmTransferOnlyReq)
+      EvmTransferOnlyReqOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EvmContractTransferReq.newBuilder() to construct.
-    private EvmContractTransferReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use EvmTransferOnlyReq.newBuilder() to construct.
+    private EvmTransferOnlyReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EvmContractTransferReq() {
-      caller_ = "";
-      exec_ = "";
-      expire_ = "";
+    private EvmTransferOnlyReq() {
+      to_ = "";
       paraName_ = "";
+      note_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EvmContractTransferReq();
+      return new EvmTransferOnlyReq();
     }
 
     @java.lang.Override
@@ -27283,7 +19668,7 @@ public final class EvmService {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EvmContractTransferReq(
+    private EvmTransferOnlyReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -27304,35 +19689,24 @@ public final class EvmService {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              caller_ = s;
+              to_ = s;
               break;
             }
-            case 21: {
+            case 16: {
 
-              amount_ = input.readFloat();
+              amount_ = input.readInt64();
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              exec_ = s;
+              paraName_ = s;
               break;
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              expire_ = s;
-              break;
-            }
-            case 40: {
-
-              isWithdraw_ = input.readBool();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              paraName_ = s;
+              note_ = s;
               break;
             }
             default: {
@@ -27356,47 +19730,45 @@ public final class EvmService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmContractTransferReq_descriptor;
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmTransferOnlyReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmContractTransferReq_fieldAccessorTable
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmTransferOnlyReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.Builder.class);
+              cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.Builder.class);
     }
 
-    public static final int CALLER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object caller_;
+    public static final int TO_FIELD_NUMBER = 1;
+    private volatile java.lang.Object to_;
     /**
-     * <code>string caller = 1;</code>
-     * @return The caller.
+     * <code>string to = 1;</code>
      */
-    public java.lang.String getCaller() {
-      java.lang.Object ref = caller_;
+    public java.lang.String getTo() {
+      java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        caller_ = s;
+        to_ = s;
         return s;
       }
     }
     /**
-     * <code>string caller = 1;</code>
-     * @return The bytes for caller.
+     * <code>string to = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getCallerBytes() {
-      java.lang.Object ref = caller_;
+        getToBytes() {
+      java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        caller_ = b;
+        to_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -27404,102 +19776,18 @@ public final class EvmService {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 2;
-    private float amount_;
+    private long amount_;
     /**
-     * <code>float amount = 2;</code>
-     * @return The amount.
+     * <code>int64 amount = 2;</code>
      */
-    public float getAmount() {
+    public long getAmount() {
       return amount_;
     }
 
-    public static final int EXEC_FIELD_NUMBER = 3;
-    private volatile java.lang.Object exec_;
-    /**
-     * <code>string exec = 3;</code>
-     * @return The exec.
-     */
-    public java.lang.String getExec() {
-      java.lang.Object ref = exec_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        exec_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string exec = 3;</code>
-     * @return The bytes for exec.
-     */
-    public com.google.protobuf.ByteString
-        getExecBytes() {
-      java.lang.Object ref = exec_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        exec_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXPIRE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object expire_;
-    /**
-     * <code>string expire = 4;</code>
-     * @return The expire.
-     */
-    public java.lang.String getExpire() {
-      java.lang.Object ref = expire_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        expire_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string expire = 4;</code>
-     * @return The bytes for expire.
-     */
-    public com.google.protobuf.ByteString
-        getExpireBytes() {
-      java.lang.Object ref = expire_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        expire_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ISWITHDRAW_FIELD_NUMBER = 5;
-    private boolean isWithdraw_;
-    /**
-     * <code>bool isWithdraw = 5;</code>
-     * @return The isWithdraw.
-     */
-    public boolean getIsWithdraw() {
-      return isWithdraw_;
-    }
-
-    public static final int PARANAME_FIELD_NUMBER = 6;
+    public static final int PARANAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object paraName_;
     /**
-     * <code>string paraName = 6;</code>
-     * @return The paraName.
+     * <code>string paraName = 3;</code>
      */
     public java.lang.String getParaName() {
       java.lang.Object ref = paraName_;
@@ -27514,8 +19802,7 @@ public final class EvmService {
       }
     }
     /**
-     * <code>string paraName = 6;</code>
-     * @return The bytes for paraName.
+     * <code>string paraName = 3;</code>
      */
     public com.google.protobuf.ByteString
         getParaNameBytes() {
@@ -27525,6 +19812,40 @@ public final class EvmService {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         paraName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object note_;
+    /**
+     * <code>string note = 4;</code>
+     */
+    public java.lang.String getNote() {
+      java.lang.Object ref = note_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        note_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string note = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNoteBytes() {
+      java.lang.Object ref = note_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        note_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -27545,23 +19866,17 @@ public final class EvmService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCallerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, caller_);
+      if (!getToBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, to_);
       }
-      if (amount_ != 0F) {
-        output.writeFloat(2, amount_);
-      }
-      if (!getExecBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, exec_);
-      }
-      if (!getExpireBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, expire_);
-      }
-      if (isWithdraw_ != false) {
-        output.writeBool(5, isWithdraw_);
+      if (amount_ != 0L) {
+        output.writeInt64(2, amount_);
       }
       if (!getParaNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, paraName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, paraName_);
+      }
+      if (!getNoteBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, note_);
       }
       unknownFields.writeTo(output);
     }
@@ -27572,25 +19887,18 @@ public final class EvmService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCallerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, caller_);
+      if (!getToBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, to_);
       }
-      if (amount_ != 0F) {
+      if (amount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, amount_);
-      }
-      if (!getExecBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, exec_);
-      }
-      if (!getExpireBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, expire_);
-      }
-      if (isWithdraw_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isWithdraw_);
+          .computeInt64Size(2, amount_);
       }
       if (!getParaNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, paraName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, paraName_);
+      }
+      if (!getNoteBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, note_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27602,24 +19910,19 @@ public final class EvmService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq)) {
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq)) {
         return super.equals(obj);
       }
-      cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq) obj;
+      cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq) obj;
 
-      if (!getCaller()
-          .equals(other.getCaller())) return false;
-      if (java.lang.Float.floatToIntBits(getAmount())
-          != java.lang.Float.floatToIntBits(
-              other.getAmount())) return false;
-      if (!getExec()
-          .equals(other.getExec())) return false;
-      if (!getExpire()
-          .equals(other.getExpire())) return false;
-      if (getIsWithdraw()
-          != other.getIsWithdraw()) return false;
+      if (!getTo()
+          .equals(other.getTo())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
       if (!getParaName()
           .equals(other.getParaName())) return false;
+      if (!getNote()
+          .equals(other.getNote())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -27631,88 +19934,83 @@ public final class EvmService {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CALLER_FIELD_NUMBER;
-      hash = (53 * hash) + getCaller().hashCode();
+      hash = (37 * hash) + TO_FIELD_NUMBER;
+      hash = (53 * hash) + getTo().hashCode();
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAmount());
-      hash = (37 * hash) + EXEC_FIELD_NUMBER;
-      hash = (53 * hash) + getExec().hashCode();
-      hash = (37 * hash) + EXPIRE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpire().hashCode();
-      hash = (37 * hash) + ISWITHDRAW_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsWithdraw());
       hash = (37 * hash) + PARANAME_FIELD_NUMBER;
       hash = (53 * hash) + getParaName().hashCode();
+      hash = (37 * hash) + NOTE_FIELD_NUMBER;
+      hash = (53 * hash) + getNote().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(byte[] data)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseDelimitedFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseDelimitedFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -27725,7 +20023,7 @@ public final class EvmService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq prototype) {
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -27741,26 +20039,26 @@ public final class EvmService {
       return builder;
     }
     /**
-     * Protobuf type {@code EvmContractTransferReq}
+     * Protobuf type {@code EvmTransferOnlyReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EvmContractTransferReq)
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReqOrBuilder {
+        // @@protoc_insertion_point(builder_implements:EvmTransferOnlyReq)
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmContractTransferReq_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmTransferOnlyReq_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmContractTransferReq_fieldAccessorTable
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmTransferOnlyReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.Builder.class);
+                cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.Builder.class);
       }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.newBuilder()
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -27778,17 +20076,13 @@ public final class EvmService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        caller_ = "";
+        to_ = "";
 
-        amount_ = 0F;
-
-        exec_ = "";
-
-        expire_ = "";
-
-        isWithdraw_ = false;
+        amount_ = 0L;
 
         paraName_ = "";
+
+        note_ = "";
 
         return this;
       }
@@ -27796,17 +20090,17 @@ public final class EvmService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmContractTransferReq_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmTransferOnlyReq_descriptor;
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.getDefaultInstance();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq result = buildPartial();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -27814,14 +20108,12 @@ public final class EvmService {
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq(this);
-        result.caller_ = caller_;
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq(this);
+        result.to_ = to_;
         result.amount_ = amount_;
-        result.exec_ = exec_;
-        result.expire_ = expire_;
-        result.isWithdraw_ = isWithdraw_;
         result.paraName_ = paraName_;
+        result.note_ = note_;
         onBuilt();
         return result;
       }
@@ -27860,36 +20152,29 @@ public final class EvmService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq)other);
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq.getDefaultInstance()) return this;
-        if (!other.getCaller().isEmpty()) {
-          caller_ = other.caller_;
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq.getDefaultInstance()) return this;
+        if (!other.getTo().isEmpty()) {
+          to_ = other.to_;
           onChanged();
         }
-        if (other.getAmount() != 0F) {
+        if (other.getAmount() != 0L) {
           setAmount(other.getAmount());
-        }
-        if (!other.getExec().isEmpty()) {
-          exec_ = other.exec_;
-          onChanged();
-        }
-        if (!other.getExpire().isEmpty()) {
-          expire_ = other.expire_;
-          onChanged();
-        }
-        if (other.getIsWithdraw() != false) {
-          setIsWithdraw(other.getIsWithdraw());
         }
         if (!other.getParaName().isEmpty()) {
           paraName_ = other.paraName_;
+          onChanged();
+        }
+        if (!other.getNote().isEmpty()) {
+          note_ = other.note_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -27907,11 +20192,11 @@ public final class EvmService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq parsedMessage = null;
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq) e.getUnfinishedMessage();
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -27921,298 +20206,104 @@ public final class EvmService {
         return this;
       }
 
-      private java.lang.Object caller_ = "";
+      private java.lang.Object to_ = "";
       /**
-       * <code>string caller = 1;</code>
-       * @return The caller.
+       * <code>string to = 1;</code>
        */
-      public java.lang.String getCaller() {
-        java.lang.Object ref = caller_;
+      public java.lang.String getTo() {
+        java.lang.Object ref = to_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          caller_ = s;
+          to_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string caller = 1;</code>
-       * @return The bytes for caller.
+       * <code>string to = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getCallerBytes() {
-        java.lang.Object ref = caller_;
+          getToBytes() {
+        java.lang.Object ref = to_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          caller_ = b;
+          to_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string caller = 1;</code>
-       * @param value The caller to set.
-       * @return This builder for chaining.
+       * <code>string to = 1;</code>
        */
-      public Builder setCaller(
+      public Builder setTo(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        caller_ = value;
+        to_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string caller = 1;</code>
-       * @return This builder for chaining.
+       * <code>string to = 1;</code>
        */
-      public Builder clearCaller() {
+      public Builder clearTo() {
         
-        caller_ = getDefaultInstance().getCaller();
+        to_ = getDefaultInstance().getTo();
         onChanged();
         return this;
       }
       /**
-       * <code>string caller = 1;</code>
-       * @param value The bytes for caller to set.
-       * @return This builder for chaining.
+       * <code>string to = 1;</code>
        */
-      public Builder setCallerBytes(
+      public Builder setToBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        caller_ = value;
+        to_ = value;
         onChanged();
         return this;
       }
 
-      private float amount_ ;
+      private long amount_ ;
       /**
-       * <code>float amount = 2;</code>
-       * @return The amount.
+       * <code>int64 amount = 2;</code>
        */
-      public float getAmount() {
+      public long getAmount() {
         return amount_;
       }
       /**
-       * <code>float amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
+       * <code>int64 amount = 2;</code>
        */
-      public Builder setAmount(float value) {
+      public Builder setAmount(long value) {
         
         amount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>float amount = 2;</code>
-       * @return This builder for chaining.
+       * <code>int64 amount = 2;</code>
        */
       public Builder clearAmount() {
         
-        amount_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object exec_ = "";
-      /**
-       * <code>string exec = 3;</code>
-       * @return The exec.
-       */
-      public java.lang.String getExec() {
-        java.lang.Object ref = exec_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          exec_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string exec = 3;</code>
-       * @return The bytes for exec.
-       */
-      public com.google.protobuf.ByteString
-          getExecBytes() {
-        java.lang.Object ref = exec_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          exec_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string exec = 3;</code>
-       * @param value The exec to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExec(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        exec_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string exec = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExec() {
-        
-        exec_ = getDefaultInstance().getExec();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string exec = 3;</code>
-       * @param value The bytes for exec to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExecBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        exec_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object expire_ = "";
-      /**
-       * <code>string expire = 4;</code>
-       * @return The expire.
-       */
-      public java.lang.String getExpire() {
-        java.lang.Object ref = expire_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          expire_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string expire = 4;</code>
-       * @return The bytes for expire.
-       */
-      public com.google.protobuf.ByteString
-          getExpireBytes() {
-        java.lang.Object ref = expire_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          expire_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string expire = 4;</code>
-       * @param value The expire to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExpire(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        expire_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string expire = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExpire() {
-        
-        expire_ = getDefaultInstance().getExpire();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string expire = 4;</code>
-       * @param value The bytes for expire to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExpireBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        expire_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean isWithdraw_ ;
-      /**
-       * <code>bool isWithdraw = 5;</code>
-       * @return The isWithdraw.
-       */
-      public boolean getIsWithdraw() {
-        return isWithdraw_;
-      }
-      /**
-       * <code>bool isWithdraw = 5;</code>
-       * @param value The isWithdraw to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsWithdraw(boolean value) {
-        
-        isWithdraw_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool isWithdraw = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsWithdraw() {
-        
-        isWithdraw_ = false;
+        amount_ = 0L;
         onChanged();
         return this;
       }
 
       private java.lang.Object paraName_ = "";
       /**
-       * <code>string paraName = 6;</code>
-       * @return The paraName.
+       * <code>string paraName = 3;</code>
        */
       public java.lang.String getParaName() {
         java.lang.Object ref = paraName_;
@@ -28227,8 +20318,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string paraName = 6;</code>
-       * @return The bytes for paraName.
+       * <code>string paraName = 3;</code>
        */
       public com.google.protobuf.ByteString
           getParaNameBytes() {
@@ -28244,9 +20334,7 @@ public final class EvmService {
         }
       }
       /**
-       * <code>string paraName = 6;</code>
-       * @param value The paraName to set.
-       * @return This builder for chaining.
+       * <code>string paraName = 3;</code>
        */
       public Builder setParaName(
           java.lang.String value) {
@@ -28259,8 +20347,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string paraName = 6;</code>
-       * @return This builder for chaining.
+       * <code>string paraName = 3;</code>
        */
       public Builder clearParaName() {
         
@@ -28269,9 +20356,7 @@ public final class EvmService {
         return this;
       }
       /**
-       * <code>string paraName = 6;</code>
-       * @param value The bytes for paraName to set.
-       * @return This builder for chaining.
+       * <code>string paraName = 3;</code>
        */
       public Builder setParaNameBytes(
           com.google.protobuf.ByteString value) {
@@ -28281,6 +20366,75 @@ public final class EvmService {
   checkByteStringIsUtf8(value);
         
         paraName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object note_ = "";
+      /**
+       * <code>string note = 4;</code>
+       */
+      public java.lang.String getNote() {
+        java.lang.Object ref = note_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          note_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string note = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNoteBytes() {
+        java.lang.Object ref = note_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          note_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string note = 4;</code>
+       */
+      public Builder setNote(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        note_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string note = 4;</code>
+       */
+      public Builder clearNote() {
+        
+        note_ = getDefaultInstance().getNote();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string note = 4;</code>
+       */
+      public Builder setNoteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        note_ = value;
         onChanged();
         return this;
       }
@@ -28297,41 +20451,41 @@ public final class EvmService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:EvmContractTransferReq)
+      // @@protoc_insertion_point(builder_scope:EvmTransferOnlyReq)
     }
 
-    // @@protoc_insertion_point(class_scope:EvmContractTransferReq)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:EvmTransferOnlyReq)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq();
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq();
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq getDefaultInstance() {
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EvmContractTransferReq>
-        PARSER = new com.google.protobuf.AbstractParser<EvmContractTransferReq>() {
+    private static final com.google.protobuf.Parser<EvmTransferOnlyReq>
+        PARSER = new com.google.protobuf.AbstractParser<EvmTransferOnlyReq>() {
       @java.lang.Override
-      public EvmContractTransferReq parsePartialFrom(
+      public EvmTransferOnlyReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EvmContractTransferReq(input, extensionRegistry);
+        return new EvmTransferOnlyReq(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<EvmContractTransferReq> parser() {
+    public static com.google.protobuf.Parser<EvmTransferOnlyReq> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EvmContractTransferReq> getParserForType() {
+    public com.google.protobuf.Parser<EvmTransferOnlyReq> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EvmContractTransferReq getDefaultInstanceForType() {
+    public cn.chain33.javasdk.model.protobuf.EvmService.EvmTransferOnlyReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -28343,12 +20497,10 @@ public final class EvmService {
 
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     java.lang.String getAddress();
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     com.google.protobuf.ByteString
         getAddressBytes();
@@ -28441,7 +20593,6 @@ public final class EvmService {
     private volatile java.lang.Object address_;
     /**
      * <code>string address = 1;</code>
-     * @return The address.
      */
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
@@ -28457,7 +20608,6 @@ public final class EvmService {
     }
     /**
      * <code>string address = 1;</code>
-     * @return The bytes for address.
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -28778,7 +20928,6 @@ public final class EvmService {
       private java.lang.Object address_ = "";
       /**
        * <code>string address = 1;</code>
-       * @return The address.
        */
       public java.lang.String getAddress() {
         java.lang.Object ref = address_;
@@ -28794,7 +20943,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return The bytes for address.
        */
       public com.google.protobuf.ByteString
           getAddressBytes() {
@@ -28811,8 +20959,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddress(
           java.lang.String value) {
@@ -28826,7 +20972,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAddress() {
         
@@ -28836,8 +20981,6 @@ public final class EvmService {
       }
       /**
        * <code>string address = 1;</code>
-       * @param value The bytes for address to set.
-       * @return This builder for chaining.
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -28909,7 +21052,6 @@ public final class EvmService {
 
     /**
      * <code>int64 nonce = 1;</code>
-     * @return The nonce.
      */
     long getNonce();
   }
@@ -28999,7 +21141,6 @@ public final class EvmService {
     private long nonce_;
     /**
      * <code>int64 nonce = 1;</code>
-     * @return The nonce.
      */
     public long getNonce() {
       return nonce_;
@@ -29311,15 +21452,12 @@ public final class EvmService {
       private long nonce_ ;
       /**
        * <code>int64 nonce = 1;</code>
-       * @return The nonce.
        */
       public long getNonce() {
         return nonce_;
       }
       /**
        * <code>int64 nonce = 1;</code>
-       * @param value The nonce to set.
-       * @return This builder for chaining.
        */
       public Builder setNonce(long value) {
         
@@ -29329,7 +21467,6 @@ public final class EvmService {
       }
       /**
        * <code>int64 nonce = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearNonce() {
         
@@ -29390,43 +21527,52 @@ public final class EvmService {
 
   }
 
-  public interface EvmQueryStatisticReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EvmQueryStatisticReq)
+  public interface EvmCalcNewContractAddrReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EvmCalcNewContractAddrReq)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
+     * <code>string caller = 1;</code>
      */
-    java.lang.String getAddr();
+    java.lang.String getCaller();
     /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
+     * <code>string caller = 1;</code>
      */
     com.google.protobuf.ByteString
-        getAddrBytes();
+        getCallerBytes();
+
+    /**
+     * <code>string txhash = 2;</code>
+     */
+    java.lang.String getTxhash();
+    /**
+     * <code>string txhash = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTxhashBytes();
   }
   /**
-   * Protobuf type {@code EvmQueryStatisticReq}
+   * Protobuf type {@code EvmCalcNewContractAddrReq}
    */
-  public  static final class EvmQueryStatisticReq extends
+  public  static final class EvmCalcNewContractAddrReq extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EvmQueryStatisticReq)
-      EvmQueryStatisticReqOrBuilder {
+      // @@protoc_insertion_point(message_implements:EvmCalcNewContractAddrReq)
+      EvmCalcNewContractAddrReqOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EvmQueryStatisticReq.newBuilder() to construct.
-    private EvmQueryStatisticReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use EvmCalcNewContractAddrReq.newBuilder() to construct.
+    private EvmCalcNewContractAddrReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EvmQueryStatisticReq() {
-      addr_ = "";
+    private EvmCalcNewContractAddrReq() {
+      caller_ = "";
+      txhash_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EvmQueryStatisticReq();
+      return new EvmCalcNewContractAddrReq();
     }
 
     @java.lang.Override
@@ -29434,7 +21580,7 @@ public final class EvmService {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EvmQueryStatisticReq(
+    private EvmCalcNewContractAddrReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -29455,7 +21601,13 @@ public final class EvmService {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              addr_ = s;
+              caller_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              txhash_ = s;
               break;
             }
             default: {
@@ -29479,47 +21631,79 @@ public final class EvmService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticReq_descriptor;
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmCalcNewContractAddrReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticReq_fieldAccessorTable
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmCalcNewContractAddrReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.Builder.class);
+              cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.Builder.class);
     }
 
-    public static final int ADDR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addr_;
+    public static final int CALLER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object caller_;
     /**
-     * <code>string addr = 1;</code>
-     * @return The addr.
+     * <code>string caller = 1;</code>
      */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
+    public java.lang.String getCaller() {
+      java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
+        caller_ = s;
         return s;
       }
     }
     /**
-     * <code>string addr = 1;</code>
-     * @return The bytes for addr.
+     * <code>string caller = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
+        getCallerBytes() {
+      java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        addr_ = b;
+        caller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TXHASH_FIELD_NUMBER = 2;
+    private volatile java.lang.Object txhash_;
+    /**
+     * <code>string txhash = 2;</code>
+     */
+    public java.lang.String getTxhash() {
+      java.lang.Object ref = txhash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        txhash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string txhash = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTxhashBytes() {
+      java.lang.Object ref = txhash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        txhash_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -29540,8 +21724,11 @@ public final class EvmService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addr_);
+      if (!getCallerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, caller_);
+      }
+      if (!getTxhashBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, txhash_);
       }
       unknownFields.writeTo(output);
     }
@@ -29552,8 +21739,11 @@ public final class EvmService {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addr_);
+      if (!getCallerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, caller_);
+      }
+      if (!getTxhashBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, txhash_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -29565,13 +21755,15 @@ public final class EvmService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq)) {
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq)) {
         return super.equals(obj);
       }
-      cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq) obj;
+      cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq) obj;
 
-      if (!getAddr()
-          .equals(other.getAddr())) return false;
+      if (!getCaller()
+          .equals(other.getCaller())) return false;
+      if (!getTxhash()
+          .equals(other.getTxhash())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -29583,76 +21775,78 @@ public final class EvmService {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
+      hash = (37 * hash) + CALLER_FIELD_NUMBER;
+      hash = (53 * hash) + getCaller().hashCode();
+      hash = (37 * hash) + TXHASH_FIELD_NUMBER;
+      hash = (53 * hash) + getTxhash().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(byte[] data)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseDelimitedFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseDelimitedFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -29665,7 +21859,7 @@ public final class EvmService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq prototype) {
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -29681,26 +21875,26 @@ public final class EvmService {
       return builder;
     }
     /**
-     * Protobuf type {@code EvmQueryStatisticReq}
+     * Protobuf type {@code EvmCalcNewContractAddrReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EvmQueryStatisticReq)
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReqOrBuilder {
+        // @@protoc_insertion_point(builder_implements:EvmCalcNewContractAddrReq)
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticReq_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmCalcNewContractAddrReq_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticReq_fieldAccessorTable
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmCalcNewContractAddrReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.Builder.class);
+                cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.Builder.class);
       }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.newBuilder()
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -29718,7 +21912,9 @@ public final class EvmService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        addr_ = "";
+        caller_ = "";
+
+        txhash_ = "";
 
         return this;
       }
@@ -29726,17 +21922,17 @@ public final class EvmService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticReq_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmCalcNewContractAddrReq_descriptor;
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.getDefaultInstance();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq result = buildPartial();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -29744,9 +21940,10 @@ public final class EvmService {
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq(this);
-        result.addr_ = addr_;
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq(this);
+        result.caller_ = caller_;
+        result.txhash_ = txhash_;
         onBuilt();
         return result;
       }
@@ -29785,18 +21982,22 @@ public final class EvmService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq)other);
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq.getDefaultInstance()) return this;
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq.getDefaultInstance()) return this;
+        if (!other.getCaller().isEmpty()) {
+          caller_ = other.caller_;
+          onChanged();
+        }
+        if (!other.getTxhash().isEmpty()) {
+          txhash_ = other.txhash_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -29814,11 +22015,11 @@ public final class EvmService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq parsedMessage = null;
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq) e.getUnfinishedMessage();
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -29828,78 +22029,140 @@ public final class EvmService {
         return this;
       }
 
-      private java.lang.Object addr_ = "";
+      private java.lang.Object caller_ = "";
       /**
-       * <code>string addr = 1;</code>
-       * @return The addr.
+       * <code>string caller = 1;</code>
        */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
+      public java.lang.String getCaller() {
+        java.lang.Object ref = caller_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
+          caller_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string addr = 1;</code>
-       * @return The bytes for addr.
+       * <code>string caller = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
+          getCallerBytes() {
+        java.lang.Object ref = caller_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          addr_ = b;
+          caller_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string addr = 1;</code>
-       * @param value The addr to set.
-       * @return This builder for chaining.
+       * <code>string caller = 1;</code>
        */
-      public Builder setAddr(
+      public Builder setCaller(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        addr_ = value;
+        caller_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string addr = 1;</code>
-       * @return This builder for chaining.
+       * <code>string caller = 1;</code>
        */
-      public Builder clearAddr() {
+      public Builder clearCaller() {
         
-        addr_ = getDefaultInstance().getAddr();
+        caller_ = getDefaultInstance().getCaller();
         onChanged();
         return this;
       }
       /**
-       * <code>string addr = 1;</code>
-       * @param value The bytes for addr to set.
-       * @return This builder for chaining.
+       * <code>string caller = 1;</code>
        */
-      public Builder setAddrBytes(
+      public Builder setCallerBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        addr_ = value;
+        caller_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object txhash_ = "";
+      /**
+       * <code>string txhash = 2;</code>
+       */
+      public java.lang.String getTxhash() {
+        java.lang.Object ref = txhash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          txhash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string txhash = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTxhashBytes() {
+        java.lang.Object ref = txhash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          txhash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string txhash = 2;</code>
+       */
+      public Builder setTxhash(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        txhash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string txhash = 2;</code>
+       */
+      public Builder clearTxhash() {
+        
+        txhash_ = getDefaultInstance().getTxhash();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string txhash = 2;</code>
+       */
+      public Builder setTxhashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        txhash_ = value;
         onChanged();
         return this;
       }
@@ -29916,118 +22179,92 @@ public final class EvmService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:EvmQueryStatisticReq)
+      // @@protoc_insertion_point(builder_scope:EvmCalcNewContractAddrReq)
     }
 
-    // @@protoc_insertion_point(class_scope:EvmQueryStatisticReq)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:EvmCalcNewContractAddrReq)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq();
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq();
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq getDefaultInstance() {
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EvmQueryStatisticReq>
-        PARSER = new com.google.protobuf.AbstractParser<EvmQueryStatisticReq>() {
+    private static final com.google.protobuf.Parser<EvmCalcNewContractAddrReq>
+        PARSER = new com.google.protobuf.AbstractParser<EvmCalcNewContractAddrReq>() {
       @java.lang.Override
-      public EvmQueryStatisticReq parsePartialFrom(
+      public EvmCalcNewContractAddrReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EvmQueryStatisticReq(input, extensionRegistry);
+        return new EvmCalcNewContractAddrReq(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<EvmQueryStatisticReq> parser() {
+    public static com.google.protobuf.Parser<EvmCalcNewContractAddrReq> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EvmQueryStatisticReq> getParserForType() {
+    public com.google.protobuf.Parser<EvmCalcNewContractAddrReq> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticReq getDefaultInstanceForType() {
+    public cn.chain33.javasdk.model.protobuf.EvmService.EvmCalcNewContractAddrReq getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface EvmQueryStatisticRepOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EvmQueryStatisticRep)
+  public interface EvmGetPackDataReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EvmGetPackDataReq)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 amount = 1;</code>
-     * @return The amount.
+     * <code>string abi = 1;</code>
      */
-    long getAmount();
+    java.lang.String getAbi();
+    /**
+     * <code>string abi = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAbiBytes();
 
     /**
-     * <code>uint64 callers = 2;</code>
-     * @return The callers.
+     * <code>string parameter = 2;</code>
      */
-    long getCallers();
-
+    java.lang.String getParameter();
     /**
-     * <code>uint64 successTimes = 3;</code>
-     * @return The successTimes.
+     * <code>string parameter = 2;</code>
      */
-    long getSuccessTimes();
-
-    /**
-     * <code>float ratio = 4;</code>
-     * @return The ratio.
-     */
-    float getRatio();
-
-    /**
-     * <code>uint64 failedTimes = 5;</code>
-     * @return The failedTimes.
-     */
-    long getFailedTimes();
-
-    /**
-     * <code>uint64 gasErrNum = 6;</code>
-     * @return The gasErrNum.
-     */
-    long getGasErrNum();
-
-    /**
-     * <code>uint64 execErrNum = 7;</code>
-     * @return The execErrNum.
-     */
-    long getExecErrNum();
-
-    /**
-     * <code>uint64 evmErrNum = 8;</code>
-     * @return The evmErrNum.
-     */
-    long getEvmErrNum();
+    com.google.protobuf.ByteString
+        getParameterBytes();
   }
   /**
-   * Protobuf type {@code EvmQueryStatisticRep}
+   * Protobuf type {@code EvmGetPackDataReq}
    */
-  public  static final class EvmQueryStatisticRep extends
+  public  static final class EvmGetPackDataReq extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EvmQueryStatisticRep)
-      EvmQueryStatisticRepOrBuilder {
+      // @@protoc_insertion_point(message_implements:EvmGetPackDataReq)
+      EvmGetPackDataReqOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use EvmQueryStatisticRep.newBuilder() to construct.
-    private EvmQueryStatisticRep(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use EvmGetPackDataReq.newBuilder() to construct.
+    private EvmGetPackDataReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private EvmQueryStatisticRep() {
+    private EvmGetPackDataReq() {
+      abi_ = "";
+      parameter_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new EvmQueryStatisticRep();
+      return new EvmGetPackDataReq();
     }
 
     @java.lang.Override
@@ -30035,7 +22272,7 @@ public final class EvmService {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EvmQueryStatisticRep(
+    private EvmGetPackDataReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -30053,44 +22290,16 @@ public final class EvmService {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readUInt64();
+              abi_ = s;
               break;
             }
-            case 16: {
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              callers_ = input.readUInt64();
-              break;
-            }
-            case 24: {
-
-              successTimes_ = input.readUInt64();
-              break;
-            }
-            case 37: {
-
-              ratio_ = input.readFloat();
-              break;
-            }
-            case 40: {
-
-              failedTimes_ = input.readUInt64();
-              break;
-            }
-            case 48: {
-
-              gasErrNum_ = input.readUInt64();
-              break;
-            }
-            case 56: {
-
-              execErrNum_ = input.readUInt64();
-              break;
-            }
-            case 64: {
-
-              evmErrNum_ = input.readUInt64();
+              parameter_ = s;
               break;
             }
             default: {
@@ -30114,95 +22323,83 @@ public final class EvmService {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticRep_descriptor;
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticRep_fieldAccessorTable
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.Builder.class);
+              cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.Builder.class);
     }
 
-    public static final int AMOUNT_FIELD_NUMBER = 1;
-    private long amount_;
+    public static final int ABI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object abi_;
     /**
-     * <code>uint64 amount = 1;</code>
-     * @return The amount.
+     * <code>string abi = 1;</code>
      */
-    public long getAmount() {
-      return amount_;
+    public java.lang.String getAbi() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string abi = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAbiBytes() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abi_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int CALLERS_FIELD_NUMBER = 2;
-    private long callers_;
+    public static final int PARAMETER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object parameter_;
     /**
-     * <code>uint64 callers = 2;</code>
-     * @return The callers.
+     * <code>string parameter = 2;</code>
      */
-    public long getCallers() {
-      return callers_;
+    public java.lang.String getParameter() {
+      java.lang.Object ref = parameter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parameter_ = s;
+        return s;
+      }
     }
-
-    public static final int SUCCESSTIMES_FIELD_NUMBER = 3;
-    private long successTimes_;
     /**
-     * <code>uint64 successTimes = 3;</code>
-     * @return The successTimes.
+     * <code>string parameter = 2;</code>
      */
-    public long getSuccessTimes() {
-      return successTimes_;
-    }
-
-    public static final int RATIO_FIELD_NUMBER = 4;
-    private float ratio_;
-    /**
-     * <code>float ratio = 4;</code>
-     * @return The ratio.
-     */
-    public float getRatio() {
-      return ratio_;
-    }
-
-    public static final int FAILEDTIMES_FIELD_NUMBER = 5;
-    private long failedTimes_;
-    /**
-     * <code>uint64 failedTimes = 5;</code>
-     * @return The failedTimes.
-     */
-    public long getFailedTimes() {
-      return failedTimes_;
-    }
-
-    public static final int GASERRNUM_FIELD_NUMBER = 6;
-    private long gasErrNum_;
-    /**
-     * <code>uint64 gasErrNum = 6;</code>
-     * @return The gasErrNum.
-     */
-    public long getGasErrNum() {
-      return gasErrNum_;
-    }
-
-    public static final int EXECERRNUM_FIELD_NUMBER = 7;
-    private long execErrNum_;
-    /**
-     * <code>uint64 execErrNum = 7;</code>
-     * @return The execErrNum.
-     */
-    public long getExecErrNum() {
-      return execErrNum_;
-    }
-
-    public static final int EVMERRNUM_FIELD_NUMBER = 8;
-    private long evmErrNum_;
-    /**
-     * <code>uint64 evmErrNum = 8;</code>
-     * @return The evmErrNum.
-     */
-    public long getEvmErrNum() {
-      return evmErrNum_;
+    public com.google.protobuf.ByteString
+        getParameterBytes() {
+      java.lang.Object ref = parameter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parameter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -30219,29 +22416,11 @@ public final class EvmService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != 0L) {
-        output.writeUInt64(1, amount_);
+      if (!getAbiBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, abi_);
       }
-      if (callers_ != 0L) {
-        output.writeUInt64(2, callers_);
-      }
-      if (successTimes_ != 0L) {
-        output.writeUInt64(3, successTimes_);
-      }
-      if (ratio_ != 0F) {
-        output.writeFloat(4, ratio_);
-      }
-      if (failedTimes_ != 0L) {
-        output.writeUInt64(5, failedTimes_);
-      }
-      if (gasErrNum_ != 0L) {
-        output.writeUInt64(6, gasErrNum_);
-      }
-      if (execErrNum_ != 0L) {
-        output.writeUInt64(7, execErrNum_);
-      }
-      if (evmErrNum_ != 0L) {
-        output.writeUInt64(8, evmErrNum_);
+      if (!getParameterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, parameter_);
       }
       unknownFields.writeTo(output);
     }
@@ -30252,37 +22431,11 @@ public final class EvmService {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, amount_);
+      if (!getAbiBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, abi_);
       }
-      if (callers_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, callers_);
-      }
-      if (successTimes_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, successTimes_);
-      }
-      if (ratio_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, ratio_);
-      }
-      if (failedTimes_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, failedTimes_);
-      }
-      if (gasErrNum_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, gasErrNum_);
-      }
-      if (execErrNum_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, execErrNum_);
-      }
-      if (evmErrNum_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, evmErrNum_);
+      if (!getParameterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, parameter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -30294,28 +22447,15 @@ public final class EvmService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep)) {
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq)) {
         return super.equals(obj);
       }
-      cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep) obj;
+      cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq) obj;
 
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (getCallers()
-          != other.getCallers()) return false;
-      if (getSuccessTimes()
-          != other.getSuccessTimes()) return false;
-      if (java.lang.Float.floatToIntBits(getRatio())
-          != java.lang.Float.floatToIntBits(
-              other.getRatio())) return false;
-      if (getFailedTimes()
-          != other.getFailedTimes()) return false;
-      if (getGasErrNum()
-          != other.getGasErrNum()) return false;
-      if (getExecErrNum()
-          != other.getExecErrNum()) return false;
-      if (getEvmErrNum()
-          != other.getEvmErrNum()) return false;
+      if (!getAbi()
+          .equals(other.getAbi())) return false;
+      if (!getParameter()
+          .equals(other.getParameter())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -30327,98 +22467,78 @@ public final class EvmService {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (37 * hash) + CALLERS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCallers());
-      hash = (37 * hash) + SUCCESSTIMES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSuccessTimes());
-      hash = (37 * hash) + RATIO_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getRatio());
-      hash = (37 * hash) + FAILEDTIMES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFailedTimes());
-      hash = (37 * hash) + GASERRNUM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getGasErrNum());
-      hash = (37 * hash) + EXECERRNUM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getExecErrNum());
-      hash = (37 * hash) + EVMERRNUM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getEvmErrNum());
+      hash = (37 * hash) + ABI_FIELD_NUMBER;
+      hash = (53 * hash) + getAbi().hashCode();
+      hash = (37 * hash) + PARAMETER_FIELD_NUMBER;
+      hash = (53 * hash) + getParameter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(byte[] data)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseDelimitedFrom(java.io.InputStream input)
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseDelimitedFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parseFrom(
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -30431,7 +22551,7 @@ public final class EvmService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep prototype) {
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -30447,26 +22567,26 @@ public final class EvmService {
       return builder;
     }
     /**
-     * Protobuf type {@code EvmQueryStatisticRep}
+     * Protobuf type {@code EvmGetPackDataReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EvmQueryStatisticRep)
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRepOrBuilder {
+        // @@protoc_insertion_point(builder_implements:EvmGetPackDataReq)
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticRep_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataReq_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticRep_fieldAccessorTable
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.Builder.class);
+                cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.Builder.class);
       }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.newBuilder()
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -30484,21 +22604,9 @@ public final class EvmService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        amount_ = 0L;
+        abi_ = "";
 
-        callers_ = 0L;
-
-        successTimes_ = 0L;
-
-        ratio_ = 0F;
-
-        failedTimes_ = 0L;
-
-        gasErrNum_ = 0L;
-
-        execErrNum_ = 0L;
-
-        evmErrNum_ = 0L;
+        parameter_ = "";
 
         return this;
       }
@@ -30506,17 +22614,17 @@ public final class EvmService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmQueryStatisticRep_descriptor;
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataReq_descriptor;
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.getDefaultInstance();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep build() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep result = buildPartial();
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -30524,16 +22632,10 @@ public final class EvmService {
       }
 
       @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep buildPartial() {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep(this);
-        result.amount_ = amount_;
-        result.callers_ = callers_;
-        result.successTimes_ = successTimes_;
-        result.ratio_ = ratio_;
-        result.failedTimes_ = failedTimes_;
-        result.gasErrNum_ = gasErrNum_;
-        result.execErrNum_ = execErrNum_;
-        result.evmErrNum_ = evmErrNum_;
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq(this);
+        result.abi_ = abi_;
+        result.parameter_ = parameter_;
         onBuilt();
         return result;
       }
@@ -30572,39 +22674,23 @@ public final class EvmService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep)other);
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep other) {
-        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep.getDefaultInstance()) return this;
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq.getDefaultInstance()) return this;
+        if (!other.getAbi().isEmpty()) {
+          abi_ = other.abi_;
+          onChanged();
         }
-        if (other.getCallers() != 0L) {
-          setCallers(other.getCallers());
-        }
-        if (other.getSuccessTimes() != 0L) {
-          setSuccessTimes(other.getSuccessTimes());
-        }
-        if (other.getRatio() != 0F) {
-          setRatio(other.getRatio());
-        }
-        if (other.getFailedTimes() != 0L) {
-          setFailedTimes(other.getFailedTimes());
-        }
-        if (other.getGasErrNum() != 0L) {
-          setGasErrNum(other.getGasErrNum());
-        }
-        if (other.getExecErrNum() != 0L) {
-          setExecErrNum(other.getExecErrNum());
-        }
-        if (other.getEvmErrNum() != 0L) {
-          setEvmErrNum(other.getEvmErrNum());
+        if (!other.getParameter().isEmpty()) {
+          parameter_ = other.parameter_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -30621,11 +22707,11 @@ public final class EvmService {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep parsedMessage = null;
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep) e.getUnfinishedMessage();
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -30635,242 +22721,140 @@ public final class EvmService {
         return this;
       }
 
-      private long amount_ ;
+      private java.lang.Object abi_ = "";
       /**
-       * <code>uint64 amount = 1;</code>
-       * @return The amount.
+       * <code>string abi = 1;</code>
        */
-      public long getAmount() {
-        return amount_;
+      public java.lang.String getAbi() {
+        java.lang.Object ref = abi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>uint64 amount = 1;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
+       * <code>string abi = 1;</code>
        */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
+      public com.google.protobuf.ByteString
+          getAbiBytes() {
+        java.lang.Object ref = abi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string abi = 1;</code>
+       */
+      public Builder setAbi(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        abi_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 amount = 1;</code>
-       * @return This builder for chaining.
+       * <code>string abi = 1;</code>
        */
-      public Builder clearAmount() {
+      public Builder clearAbi() {
         
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long callers_ ;
-      /**
-       * <code>uint64 callers = 2;</code>
-       * @return The callers.
-       */
-      public long getCallers() {
-        return callers_;
-      }
-      /**
-       * <code>uint64 callers = 2;</code>
-       * @param value The callers to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallers(long value) {
-        
-        callers_ = value;
+        abi_ = getDefaultInstance().getAbi();
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 callers = 2;</code>
-       * @return This builder for chaining.
+       * <code>string abi = 1;</code>
        */
-      public Builder clearCallers() {
+      public Builder setAbiBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
-        callers_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long successTimes_ ;
-      /**
-       * <code>uint64 successTimes = 3;</code>
-       * @return The successTimes.
-       */
-      public long getSuccessTimes() {
-        return successTimes_;
-      }
-      /**
-       * <code>uint64 successTimes = 3;</code>
-       * @param value The successTimes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSuccessTimes(long value) {
-        
-        successTimes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 successTimes = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSuccessTimes() {
-        
-        successTimes_ = 0L;
+        abi_ = value;
         onChanged();
         return this;
       }
 
-      private float ratio_ ;
+      private java.lang.Object parameter_ = "";
       /**
-       * <code>float ratio = 4;</code>
-       * @return The ratio.
+       * <code>string parameter = 2;</code>
        */
-      public float getRatio() {
-        return ratio_;
+      public java.lang.String getParameter() {
+        java.lang.Object ref = parameter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parameter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>float ratio = 4;</code>
-       * @param value The ratio to set.
-       * @return This builder for chaining.
+       * <code>string parameter = 2;</code>
        */
-      public Builder setRatio(float value) {
-        
-        ratio_ = value;
+      public com.google.protobuf.ByteString
+          getParameterBytes() {
+        java.lang.Object ref = parameter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parameter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parameter = 2;</code>
+       */
+      public Builder setParameter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        parameter_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>float ratio = 4;</code>
-       * @return This builder for chaining.
+       * <code>string parameter = 2;</code>
        */
-      public Builder clearRatio() {
+      public Builder clearParameter() {
         
-        ratio_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private long failedTimes_ ;
-      /**
-       * <code>uint64 failedTimes = 5;</code>
-       * @return The failedTimes.
-       */
-      public long getFailedTimes() {
-        return failedTimes_;
-      }
-      /**
-       * <code>uint64 failedTimes = 5;</code>
-       * @param value The failedTimes to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFailedTimes(long value) {
-        
-        failedTimes_ = value;
+        parameter_ = getDefaultInstance().getParameter();
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 failedTimes = 5;</code>
-       * @return This builder for chaining.
+       * <code>string parameter = 2;</code>
        */
-      public Builder clearFailedTimes() {
+      public Builder setParameterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
-        failedTimes_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long gasErrNum_ ;
-      /**
-       * <code>uint64 gasErrNum = 6;</code>
-       * @return The gasErrNum.
-       */
-      public long getGasErrNum() {
-        return gasErrNum_;
-      }
-      /**
-       * <code>uint64 gasErrNum = 6;</code>
-       * @param value The gasErrNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGasErrNum(long value) {
-        
-        gasErrNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 gasErrNum = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGasErrNum() {
-        
-        gasErrNum_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long execErrNum_ ;
-      /**
-       * <code>uint64 execErrNum = 7;</code>
-       * @return The execErrNum.
-       */
-      public long getExecErrNum() {
-        return execErrNum_;
-      }
-      /**
-       * <code>uint64 execErrNum = 7;</code>
-       * @param value The execErrNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExecErrNum(long value) {
-        
-        execErrNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 execErrNum = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExecErrNum() {
-        
-        execErrNum_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long evmErrNum_ ;
-      /**
-       * <code>uint64 evmErrNum = 8;</code>
-       * @return The evmErrNum.
-       */
-      public long getEvmErrNum() {
-        return evmErrNum_;
-      }
-      /**
-       * <code>uint64 evmErrNum = 8;</code>
-       * @param value The evmErrNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEvmErrNum(long value) {
-        
-        evmErrNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 evmErrNum = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEvmErrNum() {
-        
-        evmErrNum_ = 0L;
+        parameter_ = value;
         onChanged();
         return this;
       }
@@ -30887,41 +22871,2035 @@ public final class EvmService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:EvmQueryStatisticRep)
+      // @@protoc_insertion_point(builder_scope:EvmGetPackDataReq)
     }
 
-    // @@protoc_insertion_point(class_scope:EvmQueryStatisticRep)
-    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:EvmGetPackDataReq)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep();
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq();
     }
 
-    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep getDefaultInstance() {
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<EvmQueryStatisticRep>
-        PARSER = new com.google.protobuf.AbstractParser<EvmQueryStatisticRep>() {
+    private static final com.google.protobuf.Parser<EvmGetPackDataReq>
+        PARSER = new com.google.protobuf.AbstractParser<EvmGetPackDataReq>() {
       @java.lang.Override
-      public EvmQueryStatisticRep parsePartialFrom(
+      public EvmGetPackDataReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EvmQueryStatisticRep(input, extensionRegistry);
+        return new EvmGetPackDataReq(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<EvmQueryStatisticRep> parser() {
+    public static com.google.protobuf.Parser<EvmGetPackDataReq> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<EvmQueryStatisticRep> getParserForType() {
+    public com.google.protobuf.Parser<EvmGetPackDataReq> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.EvmService.EvmQueryStatisticRep getDefaultInstanceForType() {
+    public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataReq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EvmGetPackDataResposeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EvmGetPackDataRespose)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string packData = 1;</code>
+     */
+    java.lang.String getPackData();
+    /**
+     * <code>string packData = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPackDataBytes();
+  }
+  /**
+   * Protobuf type {@code EvmGetPackDataRespose}
+   */
+  public  static final class EvmGetPackDataRespose extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:EvmGetPackDataRespose)
+      EvmGetPackDataResposeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EvmGetPackDataRespose.newBuilder() to construct.
+    private EvmGetPackDataRespose(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EvmGetPackDataRespose() {
+      packData_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EvmGetPackDataRespose();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EvmGetPackDataRespose(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              packData_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataRespose_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataRespose_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.Builder.class);
+    }
+
+    public static final int PACKDATA_FIELD_NUMBER = 1;
+    private volatile java.lang.Object packData_;
+    /**
+     * <code>string packData = 1;</code>
+     */
+    public java.lang.String getPackData() {
+      java.lang.Object ref = packData_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        packData_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string packData = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPackDataBytes() {
+      java.lang.Object ref = packData_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        packData_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getPackDataBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, packData_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getPackDataBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, packData_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose)) {
+        return super.equals(obj);
+      }
+      cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose) obj;
+
+      if (!getPackData()
+          .equals(other.getPackData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PACKDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getPackData().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code EvmGetPackDataRespose}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:EvmGetPackDataRespose)
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataResposeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataRespose_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataRespose_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.Builder.class);
+      }
+
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        packData_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetPackDataRespose_descriptor;
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose(this);
+        result.packData_ = packData_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose.getDefaultInstance()) return this;
+        if (!other.getPackData().isEmpty()) {
+          packData_ = other.packData_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object packData_ = "";
+      /**
+       * <code>string packData = 1;</code>
+       */
+      public java.lang.String getPackData() {
+        java.lang.Object ref = packData_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          packData_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string packData = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPackDataBytes() {
+        java.lang.Object ref = packData_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          packData_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string packData = 1;</code>
+       */
+      public Builder setPackData(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        packData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string packData = 1;</code>
+       */
+      public Builder clearPackData() {
+        
+        packData_ = getDefaultInstance().getPackData();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string packData = 1;</code>
+       */
+      public Builder setPackDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        packData_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:EvmGetPackDataRespose)
+    }
+
+    // @@protoc_insertion_point(class_scope:EvmGetPackDataRespose)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose();
+    }
+
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EvmGetPackDataRespose>
+        PARSER = new com.google.protobuf.AbstractParser<EvmGetPackDataRespose>() {
+      @java.lang.Override
+      public EvmGetPackDataRespose parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EvmGetPackDataRespose(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EvmGetPackDataRespose> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EvmGetPackDataRespose> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetPackDataRespose getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EvmGetUnpackDataReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EvmGetUnpackDataReq)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string abi = 1;</code>
+     */
+    java.lang.String getAbi();
+    /**
+     * <code>string abi = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAbiBytes();
+
+    /**
+     * <code>string parameter = 2;</code>
+     */
+    java.lang.String getParameter();
+    /**
+     * <code>string parameter = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getParameterBytes();
+
+    /**
+     * <code>string data = 3;</code>
+     */
+    java.lang.String getData();
+    /**
+     * <code>string data = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDataBytes();
+  }
+  /**
+   * Protobuf type {@code EvmGetUnpackDataReq}
+   */
+  public  static final class EvmGetUnpackDataReq extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:EvmGetUnpackDataReq)
+      EvmGetUnpackDataReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EvmGetUnpackDataReq.newBuilder() to construct.
+    private EvmGetUnpackDataReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EvmGetUnpackDataReq() {
+      abi_ = "";
+      parameter_ = "";
+      data_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EvmGetUnpackDataReq();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EvmGetUnpackDataReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              abi_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              parameter_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              data_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataReq_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.Builder.class);
+    }
+
+    public static final int ABI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object abi_;
+    /**
+     * <code>string abi = 1;</code>
+     */
+    public java.lang.String getAbi() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        abi_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string abi = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAbiBytes() {
+      java.lang.Object ref = abi_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        abi_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMETER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object parameter_;
+    /**
+     * <code>string parameter = 2;</code>
+     */
+    public java.lang.String getParameter() {
+      java.lang.Object ref = parameter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parameter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string parameter = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getParameterBytes() {
+      java.lang.Object ref = parameter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parameter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 3;
+    private volatile java.lang.Object data_;
+    /**
+     * <code>string data = 3;</code>
+     */
+    public java.lang.String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        data_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAbiBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, abi_);
+      }
+      if (!getParameterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, parameter_);
+      }
+      if (!getDataBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, data_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAbiBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, abi_);
+      }
+      if (!getParameterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, parameter_);
+      }
+      if (!getDataBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, data_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq)) {
+        return super.equals(obj);
+      }
+      cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq) obj;
+
+      if (!getAbi()
+          .equals(other.getAbi())) return false;
+      if (!getParameter()
+          .equals(other.getParameter())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ABI_FIELD_NUMBER;
+      hash = (53 * hash) + getAbi().hashCode();
+      hash = (37 * hash) + PARAMETER_FIELD_NUMBER;
+      hash = (53 * hash) + getParameter().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code EvmGetUnpackDataReq}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:EvmGetUnpackDataReq)
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataReq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.Builder.class);
+      }
+
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        abi_ = "";
+
+        parameter_ = "";
+
+        data_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataReq_descriptor;
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq(this);
+        result.abi_ = abi_;
+        result.parameter_ = parameter_;
+        result.data_ = data_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq.getDefaultInstance()) return this;
+        if (!other.getAbi().isEmpty()) {
+          abi_ = other.abi_;
+          onChanged();
+        }
+        if (!other.getParameter().isEmpty()) {
+          parameter_ = other.parameter_;
+          onChanged();
+        }
+        if (!other.getData().isEmpty()) {
+          data_ = other.data_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object abi_ = "";
+      /**
+       * <code>string abi = 1;</code>
+       */
+      public java.lang.String getAbi() {
+        java.lang.Object ref = abi_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          abi_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string abi = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAbiBytes() {
+        java.lang.Object ref = abi_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          abi_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string abi = 1;</code>
+       */
+      public Builder setAbi(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        abi_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 1;</code>
+       */
+      public Builder clearAbi() {
+        
+        abi_ = getDefaultInstance().getAbi();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string abi = 1;</code>
+       */
+      public Builder setAbiBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        abi_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object parameter_ = "";
+      /**
+       * <code>string parameter = 2;</code>
+       */
+      public java.lang.String getParameter() {
+        java.lang.Object ref = parameter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parameter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string parameter = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getParameterBytes() {
+        java.lang.Object ref = parameter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parameter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parameter = 2;</code>
+       */
+      public Builder setParameter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        parameter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parameter = 2;</code>
+       */
+      public Builder clearParameter() {
+        
+        parameter_ = getDefaultInstance().getParameter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parameter = 2;</code>
+       */
+      public Builder setParameterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        parameter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object data_ = "";
+      /**
+       * <code>string data = 3;</code>
+       */
+      public java.lang.String getData() {
+        java.lang.Object ref = data_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          data_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDataBytes() {
+        java.lang.Object ref = data_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          data_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data = 3;</code>
+       */
+      public Builder setData(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 3;</code>
+       */
+      public Builder clearData() {
+        
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 3;</code>
+       */
+      public Builder setDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:EvmGetUnpackDataReq)
+    }
+
+    // @@protoc_insertion_point(class_scope:EvmGetUnpackDataReq)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq();
+    }
+
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EvmGetUnpackDataReq>
+        PARSER = new com.google.protobuf.AbstractParser<EvmGetUnpackDataReq>() {
+      @java.lang.Override
+      public EvmGetUnpackDataReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EvmGetUnpackDataReq(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EvmGetUnpackDataReq> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EvmGetUnpackDataReq> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataReq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EvmGetUnpackDataResposeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EvmGetUnpackDataRespose)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getUnpackDataList();
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    int getUnpackDataCount();
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    java.lang.String getUnpackData(int index);
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUnpackDataBytes(int index);
+  }
+  /**
+   * Protobuf type {@code EvmGetUnpackDataRespose}
+   */
+  public  static final class EvmGetUnpackDataRespose extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:EvmGetUnpackDataRespose)
+      EvmGetUnpackDataResposeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EvmGetUnpackDataRespose.newBuilder() to construct.
+    private EvmGetUnpackDataRespose(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EvmGetUnpackDataRespose() {
+      unpackData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EvmGetUnpackDataRespose();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EvmGetUnpackDataRespose(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                unpackData_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              unpackData_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          unpackData_ = unpackData_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataRespose_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataRespose_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.Builder.class);
+    }
+
+    public static final int UNPACKDATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList unpackData_;
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getUnpackDataList() {
+      return unpackData_;
+    }
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    public int getUnpackDataCount() {
+      return unpackData_.size();
+    }
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    public java.lang.String getUnpackData(int index) {
+      return unpackData_.get(index);
+    }
+    /**
+     * <code>repeated string unpackData = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUnpackDataBytes(int index) {
+      return unpackData_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < unpackData_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, unpackData_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < unpackData_.size(); i++) {
+          dataSize += computeStringSizeNoTag(unpackData_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getUnpackDataList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose)) {
+        return super.equals(obj);
+      }
+      cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose other = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose) obj;
+
+      if (!getUnpackDataList()
+          .equals(other.getUnpackDataList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getUnpackDataCount() > 0) {
+        hash = (37 * hash) + UNPACKDATA_FIELD_NUMBER;
+        hash = (53 * hash) + getUnpackDataList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code EvmGetUnpackDataRespose}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:EvmGetUnpackDataRespose)
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataResposeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataRespose_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataRespose_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.class, cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.Builder.class);
+      }
+
+      // Construct using cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        unpackData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.internal_static_EvmGetUnpackDataRespose_descriptor;
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose getDefaultInstanceForType() {
+        return cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose build() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose buildPartial() {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose result = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          unpackData_ = unpackData_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.unpackData_ = unpackData_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose) {
+          return mergeFrom((cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose other) {
+        if (other == cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose.getDefaultInstance()) return this;
+        if (!other.unpackData_.isEmpty()) {
+          if (unpackData_.isEmpty()) {
+            unpackData_ = other.unpackData_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureUnpackDataIsMutable();
+            unpackData_.addAll(other.unpackData_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList unpackData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureUnpackDataIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          unpackData_ = new com.google.protobuf.LazyStringArrayList(unpackData_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getUnpackDataList() {
+        return unpackData_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public int getUnpackDataCount() {
+        return unpackData_.size();
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public java.lang.String getUnpackData(int index) {
+        return unpackData_.get(index);
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUnpackDataBytes(int index) {
+        return unpackData_.getByteString(index);
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public Builder setUnpackData(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUnpackDataIsMutable();
+        unpackData_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public Builder addUnpackData(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureUnpackDataIsMutable();
+        unpackData_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public Builder addAllUnpackData(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureUnpackDataIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, unpackData_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public Builder clearUnpackData() {
+        unpackData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string unpackData = 1;</code>
+       */
+      public Builder addUnpackDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureUnpackDataIsMutable();
+        unpackData_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:EvmGetUnpackDataRespose)
+    }
+
+    // @@protoc_insertion_point(class_scope:EvmGetUnpackDataRespose)
+    private static final cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose();
+    }
+
+    public static cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EvmGetUnpackDataRespose>
+        PARSER = new com.google.protobuf.AbstractParser<EvmGetUnpackDataRespose>() {
+      @java.lang.Override
+      public EvmGetUnpackDataRespose parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EvmGetUnpackDataRespose(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EvmGetUnpackDataRespose> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EvmGetUnpackDataRespose> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cn.chain33.javasdk.model.protobuf.EvmService.EvmGetUnpackDataRespose getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30952,46 +24930,6 @@ public final class EvmService {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EVMContractAction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractExec_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractExec_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractUpdate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractUpdate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractDestroy_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractDestroy_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractFreeze_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractFreeze_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractRelease_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractRelease_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractStatistic_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractStatistic_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EVMContractStatistic_FailReasonEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EVMContractStatistic_FailReasonEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ReceiptEvmStatistic_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ReceiptEvmStatistic_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ReceiptEVMContract_descriptor;
   private static final 
@@ -31083,10 +25021,10 @@ public final class EvmService {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EvmContractCallReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EvmContractTransferReq_descriptor;
+    internal_static_EvmTransferOnlyReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EvmContractTransferReq_fieldAccessorTable;
+      internal_static_EvmTransferOnlyReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_EvmGetNonceReq_descriptor;
   private static final 
@@ -31098,15 +25036,30 @@ public final class EvmService {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EvmGetNonceRespose_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EvmQueryStatisticReq_descriptor;
+    internal_static_EvmCalcNewContractAddrReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EvmQueryStatisticReq_fieldAccessorTable;
+      internal_static_EvmCalcNewContractAddrReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EvmQueryStatisticRep_descriptor;
+    internal_static_EvmGetPackDataReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EvmQueryStatisticRep_fieldAccessorTable;
+      internal_static_EvmGetPackDataReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_EvmGetPackDataRespose_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_EvmGetPackDataRespose_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_EvmGetUnpackDataReq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_EvmGetUnpackDataReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_EvmGetUnpackDataRespose_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_EvmGetUnpackDataRespose_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -31122,83 +25075,64 @@ public final class EvmService {
       "z\n\017EVMContractData\022\017\n\007creator\030\001 \001(\t\022\014\n\004n" +
       "ame\030\002 \001(\t\022\r\n\005alias\030\003 \001(\t\022\014\n\004addr\030\004 \001(\t\022\014" +
       "\n\004code\030\005 \001(\014\022\020\n\010codeHash\030\006 \001(\014\022\013\n\003abi\030\007 " +
-      "\001(\t\"\271\001\n\020EVMContractState\022\r\n\005nonce\030\001 \001(\004\022" +
-      "\020\n\010suicided\030\002 \001(\010\022\016\n\006frozen\030\003 \001(\004\022\023\n\013sto" +
-      "rageHash\030\004 \001(\014\022/\n\007storage\030\005 \003(\0132\036.EVMCon" +
-      "tractState.StorageEntry\032.\n\014StorageEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\"\346\001\n\021EVMC" +
-      "ontractAction\022 \n\004exec\030\001 \001(\0132\020.EVMContrac" +
-      "tExecH\000\022&\n\007destroy\030\002 \001(\0132\023.EVMContractDe" +
-      "stroyH\000\022$\n\006freeze\030\003 \001(\0132\022.EVMContractFre" +
-      "ezeH\000\022&\n\007release\030\004 \001(\0132\023.EVMContractRele" +
-      "aseH\000\022$\n\006update\030\005 \001(\0132\022.EVMContractUpdat" +
-      "eH\000\022\n\n\002ty\030\006 \001(\005B\007\n\005value\"\224\001\n\017EVMContract" +
-      "Exec\022\016\n\006amount\030\001 \001(\004\022\020\n\010gasLimit\030\002 \001(\004\022\020" +
-      "\n\010gasPrice\030\003 \001(\r\022\014\n\004code\030\004 \001(\014\022\014\n\004para\030\005" +
-      " \001(\014\022\r\n\005alias\030\006 \001(\t\022\014\n\004note\030\007 \001(\t\022\024\n\014con" +
-      "tractAddr\030\010 \001(\t\"\200\001\n\021EVMContractUpdate\022\014\n" +
-      "\004addr\030\001 \001(\t\022\016\n\006amount\030\002 \001(\004\022\020\n\010gasLimit\030" +
-      "\003 \001(\004\022\020\n\010gasPrice\030\004 \001(\r\022\014\n\004code\030\005 \001(\014\022\r\n" +
-      "\005alias\030\006 \001(\t\022\014\n\004note\030\007 \001(\t\"\"\n\022EVMContrac" +
-      "tDestroy\022\014\n\004addr\030\001 \001(\t\"!\n\021EVMContractFre" +
-      "eze\022\014\n\004addr\030\001 \001(\t\"\"\n\022EVMContractRelease\022" +
-      "\014\n\004addr\030\001 \001(\t\"\276\001\n\024EVMContractStatistic\022\021" +
-      "\n\tcallTimes\030\001 \001(\004\022\016\n\006caller\030\002 \003(\t\022\025\n\rsuc" +
-      "cseccTimes\030\003 \001(\004\0229\n\nfailReason\030\004 \003(\0132%.E" +
-      "VMContractStatistic.FailReasonEntry\0321\n\017F" +
-      "ailReasonEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\004:\0028\001\"]\n\023ReceiptEvmStatistic\022\014\n\004addr\030\001 " +
-      "\001(\t\022\021\n\tcallTimes\030\002 \001(\004\022\016\n\006caller\030\003 \001(\t\022\025" +
-      "\n\rsuccseccTimes\030\004 \001(\004\"\177\n\022ReceiptEVMContr" +
-      "act\022\016\n\006caller\030\001 \001(\t\022\024\n\014contractName\030\002 \001(" +
-      "\t\022\024\n\014contractAddr\030\003 \001(\t\022\017\n\007usedGas\030\004 \001(\004" +
-      "\022\013\n\003ret\030\005 \001(\014\022\017\n\007jsonRet\030\006 \001(\t\"I\n\022EVMSta" +
-      "teChangeItem\022\013\n\003key\030\001 \001(\t\022\020\n\010preValue\030\002 " +
-      "\001(\014\022\024\n\014currentValue\030\003 \001(\014\"p\n\022EVMContract" +
-      "DataCmd\022\017\n\007creator\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r" +
-      "\n\005alias\030\003 \001(\t\022\014\n\004addr\030\004 \001(\t\022\014\n\004code\030\005 \001(" +
-      "\t\022\020\n\010codeHash\030\006 \001(\t\"\257\001\n\023EVMContractState" +
-      "Cmd\022\r\n\005nonce\030\001 \001(\004\022\020\n\010suicided\030\002 \001(\010\022\023\n\013" +
-      "storageHash\030\003 \001(\t\0222\n\007storage\030\004 \003(\0132!.EVM" +
-      "ContractStateCmd.StorageEntry\032.\n\014Storage" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"q\n" +
-      "\025ReceiptEVMContractCmd\022\016\n\006caller\030\001 \001(\t\022\024" +
-      "\n\014contractName\030\002 \001(\t\022\024\n\014contractAddr\030\003 \001" +
-      "(\t\022\017\n\007usedGas\030\004 \001(\004\022\013\n\003ret\030\005 \001(\t\"\037\n\017Chec" +
-      "kEVMAddrReq\022\014\n\004addr\030\001 \001(\t\"c\n\020CheckEVMAdd" +
-      "rResp\022\020\n\010contract\030\001 \001(\010\022\024\n\014contractAddr\030" +
-      "\002 \001(\t\022\024\n\014contractName\030\003 \001(\t\022\021\n\taliasName" +
-      "\030\004 \001(\t\"M\n\021EstimateEVMGasReq\022\n\n\002to\030\001 \001(\t\022" +
-      "\014\n\004para\030\002 \001(\014\022\016\n\006caller\030\003 \001(\t\022\016\n\006amount\030" +
-      "\004 \001(\004\"!\n\022EstimateEVMGasResp\022\013\n\003gas\030\001 \001(\004" +
-      "\"\035\n\013EvmDebugReq\022\016\n\006optype\030\001 \001(\005\"#\n\014EvmDe" +
-      "bugResp\022\023\n\013debugStatus\030\001 \001(\t\"!\n\016EvmQuery" +
-      "AbiReq\022\017\n\007address\030\001 \001(\t\"/\n\017EvmQueryAbiRe" +
-      "sp\022\017\n\007address\030\001 \001(\t\022\013\n\003abi\030\002 \001(\t\"=\n\013EvmQ" +
-      "ueryReq\022\017\n\007address\030\001 \001(\t\022\r\n\005input\030\002 \001(\t\022" +
-      "\016\n\006caller\030\003 \001(\t\"a\n\014EvmQueryResp\022\017\n\007addre" +
-      "ss\030\001 \001(\t\022\r\n\005input\030\002 \001(\t\022\016\n\006caller\030\003 \001(\t\022" +
-      "\017\n\007rawData\030\004 \001(\t\022\020\n\010jsonData\030\005 \001(\t\"\223\001\n\024E" +
-      "vmContractCreateReq\022\014\n\004code\030\001 \001(\t\022\013\n\003fee" +
-      "\030\002 \001(\003\022\014\n\004note\030\003 \001(\t\022\r\n\005alias\030\004 \001(\t\022\016\n\006c" +
-      "aller\030\005 \001(\t\022\021\n\tparameter\030\006 \001(\t\022\016\n\006expire" +
-      "\030\007 \001(\t\022\020\n\010paraName\030\010 \001(\t\"\240\001\n\022EvmContract" +
-      "CallReq\022\016\n\006amount\030\001 \001(\004\022\014\n\004code\030\002 \001(\t\022\013\n" +
-      "\003fee\030\003 \001(\003\022\014\n\004note\030\004 \001(\t\022\016\n\006caller\030\005 \001(\t" +
-      "\022\021\n\tparameter\030\006 \001(\t\022\014\n\004exec\030\007 \001(\t\022\016\n\006exp" +
-      "ire\030\010 \001(\t\022\020\n\010paraName\030\t \001(\t\"|\n\026EvmContra" +
-      "ctTransferReq\022\016\n\006caller\030\001 \001(\t\022\016\n\006amount\030" +
-      "\002 \001(\002\022\014\n\004exec\030\003 \001(\t\022\016\n\006expire\030\004 \001(\t\022\022\n\ni" +
-      "sWithdraw\030\005 \001(\010\022\020\n\010paraName\030\006 \001(\t\"!\n\016Evm" +
-      "GetNonceReq\022\017\n\007address\030\001 \001(\t\"#\n\022EvmGetNo" +
-      "nceRespose\022\r\n\005nonce\030\001 \001(\003\"$\n\024EvmQuerySta" +
-      "tisticReq\022\014\n\004addr\030\001 \001(\t\"\253\001\n\024EvmQueryStat" +
-      "isticRep\022\016\n\006amount\030\001 \001(\004\022\017\n\007callers\030\002 \001(" +
-      "\004\022\024\n\014successTimes\030\003 \001(\004\022\r\n\005ratio\030\004 \001(\002\022\023" +
-      "\n\013failedTimes\030\005 \001(\004\022\021\n\tgasErrNum\030\006 \001(\004\022\022" +
-      "\n\nexecErrNum\030\007 \001(\004\022\021\n\tevmErrNum\030\010 \001(\004B/\n" +
-      "!cn.chain33.javasdk.model.protobufB\nEvmS" +
-      "erviceb\006proto3"
+      "\001(\t\"\251\001\n\020EVMContractState\022\r\n\005nonce\030\001 \001(\004\022" +
+      "\020\n\010suicided\030\002 \001(\010\022\023\n\013storageHash\030\003 \001(\014\022/" +
+      "\n\007storage\030\004 \003(\0132\036.EVMContractState.Stora" +
+      "geEntry\032.\n\014StorageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\014:\0028\001\"\226\001\n\021EVMContractAction\022\016\n" +
+      "\006amount\030\001 \001(\004\022\020\n\010gasLimit\030\002 \001(\004\022\020\n\010gasPr" +
+      "ice\030\003 \001(\r\022\014\n\004code\030\004 \001(\014\022\014\n\004para\030\005 \001(\014\022\r\n" +
+      "\005alias\030\006 \001(\t\022\014\n\004note\030\007 \001(\t\022\024\n\014contractAd" +
+      "dr\030\010 \001(\t\"\177\n\022ReceiptEVMContract\022\016\n\006caller" +
+      "\030\001 \001(\t\022\024\n\014contractName\030\002 \001(\t\022\024\n\014contract" +
+      "Addr\030\003 \001(\t\022\017\n\007usedGas\030\004 \001(\004\022\013\n\003ret\030\005 \001(\014" +
+      "\022\017\n\007jsonRet\030\006 \001(\t\"I\n\022EVMStateChangeItem\022" +
+      "\013\n\003key\030\001 \001(\t\022\020\n\010preValue\030\002 \001(\014\022\024\n\014curren" +
+      "tValue\030\003 \001(\014\"p\n\022EVMContractDataCmd\022\017\n\007cr" +
+      "eator\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005alias\030\003 \001(\t" +
+      "\022\014\n\004addr\030\004 \001(\t\022\014\n\004code\030\005 \001(\t\022\020\n\010codeHash" +
+      "\030\006 \001(\t\"\257\001\n\023EVMContractStateCmd\022\r\n\005nonce\030" +
+      "\001 \001(\004\022\020\n\010suicided\030\002 \001(\010\022\023\n\013storageHash\030\003" +
+      " \001(\t\0222\n\007storage\030\004 \003(\0132!.EVMContractState" +
+      "Cmd.StorageEntry\032.\n\014StorageEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"q\n\025ReceiptEVMCo" +
+      "ntractCmd\022\016\n\006caller\030\001 \001(\t\022\024\n\014contractNam" +
+      "e\030\002 \001(\t\022\024\n\014contractAddr\030\003 \001(\t\022\017\n\007usedGas" +
+      "\030\004 \001(\004\022\013\n\003ret\030\005 \001(\t\"\037\n\017CheckEVMAddrReq\022\014" +
+      "\n\004addr\030\001 \001(\t\"c\n\020CheckEVMAddrResp\022\020\n\010cont" +
+      "ract\030\001 \001(\010\022\024\n\014contractAddr\030\002 \001(\t\022\024\n\014cont" +
+      "ractName\030\003 \001(\t\022\021\n\taliasName\030\004 \001(\t\"M\n\021Est" +
+      "imateEVMGasReq\022\n\n\002to\030\001 \001(\t\022\014\n\004para\030\002 \001(\014" +
+      "\022\016\n\006caller\030\003 \001(\t\022\016\n\006amount\030\004 \001(\004\"!\n\022Esti" +
+      "mateEVMGasResp\022\013\n\003gas\030\001 \001(\004\"\035\n\013EvmDebugR" +
+      "eq\022\016\n\006optype\030\001 \001(\005\"#\n\014EvmDebugResp\022\023\n\013de" +
+      "bugStatus\030\001 \001(\t\"!\n\016EvmQueryAbiReq\022\017\n\007add" +
+      "ress\030\001 \001(\t\"/\n\017EvmQueryAbiResp\022\017\n\007address" +
+      "\030\001 \001(\t\022\013\n\003abi\030\002 \001(\t\"=\n\013EvmQueryReq\022\017\n\007ad" +
+      "dress\030\001 \001(\t\022\r\n\005input\030\002 \001(\t\022\016\n\006caller\030\003 \001" +
+      "(\t\"a\n\014EvmQueryResp\022\017\n\007address\030\001 \001(\t\022\r\n\005i" +
+      "nput\030\002 \001(\t\022\016\n\006caller\030\003 \001(\t\022\017\n\007rawData\030\004 " +
+      "\001(\t\022\020\n\010jsonData\030\005 \001(\t\"\240\001\n\024EvmContractCre" +
+      "ateReq\022\014\n\004code\030\001 \001(\t\022\013\n\003abi\030\002 \001(\t\022\013\n\003fee" +
+      "\030\003 \001(\003\022\014\n\004note\030\004 \001(\t\022\r\n\005alias\030\005 \001(\t\022\021\n\tp" +
+      "arameter\030\006 \001(\t\022\016\n\006expire\030\007 \001(\t\022\020\n\010paraNa" +
+      "me\030\010 \001(\t\022\016\n\006amount\030\t \001(\003\"\227\001\n\022EvmContract" +
+      "CallReq\022\016\n\006amount\030\001 \001(\003\022\013\n\003fee\030\002 \001(\003\022\014\n\004" +
+      "note\030\003 \001(\t\022\021\n\tparameter\030\004 \001(\t\022\024\n\014contrac" +
+      "tAddr\030\005 \001(\t\022\016\n\006expire\030\006 \001(\t\022\020\n\010paraName\030" +
+      "\007 \001(\t\022\013\n\003abi\030\010 \001(\t\"P\n\022EvmTransferOnlyReq" +
+      "\022\n\n\002to\030\001 \001(\t\022\016\n\006amount\030\002 \001(\003\022\020\n\010paraName" +
+      "\030\003 \001(\t\022\014\n\004note\030\004 \001(\t\"!\n\016EvmGetNonceReq\022\017" +
+      "\n\007address\030\001 \001(\t\"#\n\022EvmGetNonceRespose\022\r\n" +
+      "\005nonce\030\001 \001(\003\";\n\031EvmCalcNewContractAddrRe" +
+      "q\022\016\n\006caller\030\001 \001(\t\022\016\n\006txhash\030\002 \001(\t\"3\n\021Evm" +
+      "GetPackDataReq\022\013\n\003abi\030\001 \001(\t\022\021\n\tparameter" +
+      "\030\002 \001(\t\")\n\025EvmGetPackDataRespose\022\020\n\010packD" +
+      "ata\030\001 \001(\t\"C\n\023EvmGetUnpackDataReq\022\013\n\003abi\030" +
+      "\001 \001(\t\022\021\n\tparameter\030\002 \001(\t\022\014\n\004data\030\003 \001(\t\"-" +
+      "\n\027EvmGetUnpackDataRespose\022\022\n\nunpackData\030" +
+      "\001 \003(\tB/\n!cn.chain33.javasdk.model.protob" +
+      "ufB\nEvmServiceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -31221,7 +25155,7 @@ public final class EvmService {
     internal_static_EVMContractState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EVMContractState_descriptor,
-        new java.lang.String[] { "Nonce", "Suicided", "Frozen", "StorageHash", "Storage", });
+        new java.lang.String[] { "Nonce", "Suicided", "StorageHash", "Storage", });
     internal_static_EVMContractState_StorageEntry_descriptor =
       internal_static_EVMContractState_descriptor.getNestedTypes().get(0);
     internal_static_EVMContractState_StorageEntry_fieldAccessorTable = new
@@ -31233,75 +25167,27 @@ public final class EvmService {
     internal_static_EVMContractAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EVMContractAction_descriptor,
-        new java.lang.String[] { "Exec", "Destroy", "Freeze", "Release", "Update", "Ty", "Value", });
-    internal_static_EVMContractExec_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_EVMContractExec_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractExec_descriptor,
         new java.lang.String[] { "Amount", "GasLimit", "GasPrice", "Code", "Para", "Alias", "Note", "ContractAddr", });
-    internal_static_EVMContractUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_EVMContractUpdate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractUpdate_descriptor,
-        new java.lang.String[] { "Addr", "Amount", "GasLimit", "GasPrice", "Code", "Alias", "Note", });
-    internal_static_EVMContractDestroy_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_EVMContractDestroy_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractDestroy_descriptor,
-        new java.lang.String[] { "Addr", });
-    internal_static_EVMContractFreeze_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_EVMContractFreeze_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractFreeze_descriptor,
-        new java.lang.String[] { "Addr", });
-    internal_static_EVMContractRelease_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_EVMContractRelease_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractRelease_descriptor,
-        new java.lang.String[] { "Addr", });
-    internal_static_EVMContractStatistic_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_EVMContractStatistic_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractStatistic_descriptor,
-        new java.lang.String[] { "CallTimes", "Caller", "SuccseccTimes", "FailReason", });
-    internal_static_EVMContractStatistic_FailReasonEntry_descriptor =
-      internal_static_EVMContractStatistic_descriptor.getNestedTypes().get(0);
-    internal_static_EVMContractStatistic_FailReasonEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EVMContractStatistic_FailReasonEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_ReceiptEvmStatistic_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_ReceiptEvmStatistic_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ReceiptEvmStatistic_descriptor,
-        new java.lang.String[] { "Addr", "CallTimes", "Caller", "SuccseccTimes", });
     internal_static_ReceiptEVMContract_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ReceiptEVMContract_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ReceiptEVMContract_descriptor,
         new java.lang.String[] { "Caller", "ContractName", "ContractAddr", "UsedGas", "Ret", "JsonRet", });
     internal_static_EVMStateChangeItem_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_EVMStateChangeItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EVMStateChangeItem_descriptor,
         new java.lang.String[] { "Key", "PreValue", "CurrentValue", });
     internal_static_EVMContractDataCmd_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_EVMContractDataCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EVMContractDataCmd_descriptor,
         new java.lang.String[] { "Creator", "Name", "Alias", "Addr", "Code", "CodeHash", });
     internal_static_EVMContractStateCmd_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_EVMContractStateCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EVMContractStateCmd_descriptor,
@@ -31313,113 +25199,131 @@ public final class EvmService {
         internal_static_EVMContractStateCmd_StorageEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_ReceiptEVMContractCmd_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_ReceiptEVMContractCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ReceiptEVMContractCmd_descriptor,
         new java.lang.String[] { "Caller", "ContractName", "ContractAddr", "UsedGas", "Ret", });
     internal_static_CheckEVMAddrReq_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CheckEVMAddrReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CheckEVMAddrReq_descriptor,
         new java.lang.String[] { "Addr", });
     internal_static_CheckEVMAddrResp_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CheckEVMAddrResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CheckEVMAddrResp_descriptor,
         new java.lang.String[] { "Contract", "ContractAddr", "ContractName", "AliasName", });
     internal_static_EstimateEVMGasReq_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_EstimateEVMGasReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EstimateEVMGasReq_descriptor,
         new java.lang.String[] { "To", "Para", "Caller", "Amount", });
     internal_static_EstimateEVMGasResp_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_EstimateEVMGasResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EstimateEVMGasResp_descriptor,
         new java.lang.String[] { "Gas", });
     internal_static_EvmDebugReq_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_EvmDebugReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmDebugReq_descriptor,
         new java.lang.String[] { "Optype", });
     internal_static_EvmDebugResp_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_EvmDebugResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmDebugResp_descriptor,
         new java.lang.String[] { "DebugStatus", });
     internal_static_EvmQueryAbiReq_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_EvmQueryAbiReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmQueryAbiReq_descriptor,
         new java.lang.String[] { "Address", });
     internal_static_EvmQueryAbiResp_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_EvmQueryAbiResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmQueryAbiResp_descriptor,
         new java.lang.String[] { "Address", "Abi", });
     internal_static_EvmQueryReq_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_EvmQueryReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmQueryReq_descriptor,
         new java.lang.String[] { "Address", "Input", "Caller", });
     internal_static_EvmQueryResp_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_EvmQueryResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmQueryResp_descriptor,
         new java.lang.String[] { "Address", "Input", "Caller", "RawData", "JsonData", });
     internal_static_EvmContractCreateReq_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_EvmContractCreateReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmContractCreateReq_descriptor,
-        new java.lang.String[] { "Code", "Fee", "Note", "Alias", "Caller", "Parameter", "Expire", "ParaName", });
+        new java.lang.String[] { "Code", "Abi", "Fee", "Note", "Alias", "Parameter", "Expire", "ParaName", "Amount", });
     internal_static_EvmContractCallReq_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_EvmContractCallReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmContractCallReq_descriptor,
-        new java.lang.String[] { "Amount", "Code", "Fee", "Note", "Caller", "Parameter", "Exec", "Expire", "ParaName", });
-    internal_static_EvmContractTransferReq_descriptor =
-      getDescriptor().getMessageTypes().get(28);
-    internal_static_EvmContractTransferReq_fieldAccessorTable = new
+        new java.lang.String[] { "Amount", "Fee", "Note", "Parameter", "ContractAddr", "Expire", "ParaName", "Abi", });
+    internal_static_EvmTransferOnlyReq_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_EvmTransferOnlyReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EvmContractTransferReq_descriptor,
-        new java.lang.String[] { "Caller", "Amount", "Exec", "Expire", "IsWithdraw", "ParaName", });
+        internal_static_EvmTransferOnlyReq_descriptor,
+        new java.lang.String[] { "To", "Amount", "ParaName", "Note", });
     internal_static_EvmGetNonceReq_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_EvmGetNonceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmGetNonceReq_descriptor,
         new java.lang.String[] { "Address", });
     internal_static_EvmGetNonceRespose_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_EvmGetNonceRespose_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EvmGetNonceRespose_descriptor,
         new java.lang.String[] { "Nonce", });
-    internal_static_EvmQueryStatisticReq_descriptor =
-      getDescriptor().getMessageTypes().get(31);
-    internal_static_EvmQueryStatisticReq_fieldAccessorTable = new
+    internal_static_EvmCalcNewContractAddrReq_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_EvmCalcNewContractAddrReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EvmQueryStatisticReq_descriptor,
-        new java.lang.String[] { "Addr", });
-    internal_static_EvmQueryStatisticRep_descriptor =
-      getDescriptor().getMessageTypes().get(32);
-    internal_static_EvmQueryStatisticRep_fieldAccessorTable = new
+        internal_static_EvmCalcNewContractAddrReq_descriptor,
+        new java.lang.String[] { "Caller", "Txhash", });
+    internal_static_EvmGetPackDataReq_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_EvmGetPackDataReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EvmQueryStatisticRep_descriptor,
-        new java.lang.String[] { "Amount", "Callers", "SuccessTimes", "Ratio", "FailedTimes", "GasErrNum", "ExecErrNum", "EvmErrNum", });
+        internal_static_EvmGetPackDataReq_descriptor,
+        new java.lang.String[] { "Abi", "Parameter", });
+    internal_static_EvmGetPackDataRespose_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_EvmGetPackDataRespose_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_EvmGetPackDataRespose_descriptor,
+        new java.lang.String[] { "PackData", });
+    internal_static_EvmGetUnpackDataReq_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_EvmGetUnpackDataReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_EvmGetUnpackDataReq_descriptor,
+        new java.lang.String[] { "Abi", "Parameter", "Data", });
+    internal_static_EvmGetUnpackDataRespose_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_EvmGetUnpackDataRespose_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_EvmGetUnpackDataRespose_descriptor,
+        new java.lang.String[] { "UnpackData", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -25,24 +25,12 @@ message EVMContractData {
 message EVMContractState {
     uint64             nonce       = 1;
     bool               suicided    = 2;
-    uint64             frozen      = 3;
-    bytes              storageHash = 4;
-    map<string, bytes> storage     = 5;
+    bytes              storageHash = 3;
+    map<string, bytes> storage     = 4;
 }
 
+// 创建/调用合约的请求结构
 message EVMContractAction {
-    oneof value {
-        EVMContractExec exec = 1;
-        EVMContractDestroy destroy = 2;
-        EVMContractFreeze freeze = 3;
-        EVMContractRelease release = 4;
-        EVMContractUpdate update = 5;
-    }
-    int32 ty = 6;
-}
-
-// 创建和调用合约的请求结构
-message EVMContractExec {
     // 转账金额
     uint64 amount = 1;
     // 消耗限制，默认为Transaction.Fee
@@ -59,52 +47,6 @@ message EVMContractExec {
     string note = 7;
     // 调用合约地址
     string contractAddr = 8;
-}
-
-// 更新合约的请求结构
-message EVMContractUpdate {
-    // 待更新的合约地址
-    string addr = 1;
-    // 转账金额
-    uint64 amount = 2;
-    // 消耗限制，默认为Transaction.Fee
-    uint64 gasLimit = 3;
-    // gas价格，默认为1
-    uint32 gasPrice = 4;
-    // 合约数据
-    bytes code = 5;
-    // 合约别名，方便识别
-    string alias = 6;
-    // 交易备注
-    string note = 7;
-}
-
-message EVMContractDestroy {
-    string addr = 1;
-}
-
-message EVMContractFreeze {
-    string addr = 1;
-}
-
-message EVMContractRelease {
-    string addr = 1;
-}
-
-// 存放合约统计数据
-message EVMContractStatistic {
-    uint64               callTimes     = 1;
-    repeated  string     caller        = 2;
-    uint64               succseccTimes = 3;
-    map<string, uint64>  failReason    = 4;
-}
-
-// 合约统计数据日志
-message ReceiptEvmStatistic {
-    string               addr          = 1;
-    uint64               callTimes     = 2;
-    string               caller        = 3;
-    uint64               succseccTimes = 4;
 }
 
 // 合约创建/调用日志
@@ -209,34 +151,32 @@ message EvmQueryResp {
 
 message EvmContractCreateReq {
     string code     = 1;
-    int64  fee      = 2;
-    string note     = 3;
-    string alias    = 4;
-    string caller   = 5;
+    string abi      = 2;
+    int64  fee      = 3;
+    string note     = 4;
+    string alias    = 5;
     string parameter= 6;
     string expire   = 7;
     string paraName = 8;
+    int64 amount    = 9;
 }
 
 message EvmContractCallReq {
-    uint64 amount   = 1;
-    string code     = 2;
-    int64  fee      = 3;
-    string note     = 4;
-    string caller   = 5;
-    string parameter= 6;
-    string exec     = 7;
-    string expire   = 8;
-    string paraName = 9;
+    int64 amount        = 1;
+    int64  fee          = 2;
+    string note          = 3;
+    string parameter     = 4;
+    string contractAddr  = 5;
+    string expire        = 6;
+    string paraName      = 7;
+    string abi           = 8;
 }
 
-message EvmContractTransferReq {
-    string caller     = 1;
-    float  amount     = 2;
-    string exec       = 3;
-    string expire     = 4;
-    bool   isWithdraw = 5;
-    string paraName   = 6;
+message EvmTransferOnlyReq {
+    string to         = 1;
+    int64  amount     = 2;
+    string paraName   = 3;
+    string note       = 4;
 }
 
 message EvmGetNonceReq {
@@ -247,17 +187,27 @@ message EvmGetNonceRespose {
     int64 nonce     = 1;
 }
 
-message EvmQueryStatisticReq {
-    string addr = 1;
+message EvmCalcNewContractAddrReq {
+    string caller     = 1;
+    string txhash     = 2;
 }
 
-message EvmQueryStatisticRep {
-    uint64   amount       = 1;
-    uint64   callers      = 2;
-    uint64   successTimes = 3;
-    float    ratio        = 4;
-    uint64   failedTimes  = 5;
-    uint64   gasErrNum    = 6;
-    uint64   execErrNum   = 7;
-    uint64   evmErrNum    = 8;
+message EvmGetPackDataReq {
+    string abi          = 1;
+    string parameter    = 2;
 }
+
+message EvmGetPackDataRespose {
+    string packData     = 1;
+}
+
+message EvmGetUnpackDataReq {
+    string abi          = 1;
+    string parameter    = 2;
+    string data         = 3;
+}
+
+message EvmGetUnpackDataRespose {
+    repeated string unpackData     = 1;
+}
+

@@ -16,9 +16,9 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 public class EvmTest {
 
 	// 区块链IP
-	String ip = "124.70.195.38";
+	String ip = "54.223.215.4";
 	// 区块链服务端口
-	int port = 8901;
+	int port = 8801;
 	RpcClient client = new RpcClient(ip, port);
 
 	// 合约部署人对应的区块链地址和私钥
