@@ -18,7 +18,7 @@ public class EvmTest {
 	// 区块链IP
 	String ip = "区块链IP地址";
 	// 区块链服务端口
-	int port = 8901;
+	int port = 8801;
 	RpcClient client = new RpcClient(ip, port);
 
 	// 合约部署人对应的区块链地址和私钥

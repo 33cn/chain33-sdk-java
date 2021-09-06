@@ -44,15 +44,16 @@ public class SimpleStore {
 		String execer = "user.write";
 		// 合约地址
 		String contractAddress = clientMain.convertExectoAddr(execer);
-
-		// 取当前最大区块高度，用于设置查重范围，如果这个值不设置，默认就会从第0个高度开始查
-		long txHeight = clientMain.getLastHeader().getHeight();
-		// 获取签名用的私钥
+		
+		// 
 		Account account = new Account();
 		String privateKey = account.newAccountLocal().getPrivateKey();
 
+		
 		String txEncode = TransactionUtil.createTransferTx(privateKey, contractAddress, execer, content.getBytes(),
-				TransactionUtil.DEFAULT_FEE, txHeight);
+				TransactionUtil.DEFAULT_FEE);
+		
+		
 		String hash = clientMain.submitTransaction(txEncode);
 
 		System.out.println(hash);
