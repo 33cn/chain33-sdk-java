@@ -26,13 +26,11 @@ public class EvmUtil {
 
     public static byte[] execer = "evm".getBytes();
 
-    public static final long PARA_CREATE_EVM_FEE = 3000000;
-
-    public static final long PARA_CALL_EVM_FEE = 10000000;
+    private static final long EVM_FEE = 1000000;
 
     /**
      *
-     * @description 部署合约（联盟主链的情况下调用）
+     * @description 部署合约（联盟主链的情况下调用）,此方法后续不再维护，统一用下面带GAS参数的方法）
      * @param code  合约代码内容
      * @param note  注释
      * @param alias 合约别名
@@ -40,6 +38,7 @@ public class EvmUtil {
      * @return  hash，即合约名
      *
      */
+    @Deprecated
     public static String createEvmContract(byte[] code, String note, String alias, String privateKey) {
         EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
@@ -65,14 +64,16 @@ public class EvmUtil {
     
     /**
     *
-    * @description 部署合约（平行链的情况下调用，要传paraName（平行链名称））
+    * @description 部署合约（平行链的情况下调用，要传paraName（平行链名称）） 此方法后续不再维护，统一用下面带GAS参数的方法）
     * @param code  合约代码内容
     * @param note  注释
     * @param alias 合约别名
     * @param privateKey 签名私钥
+    * @param paraName 平行链名称（如果是主链的情况，此参数填空）
     * @return  hash，即合约名
     *
     */
+   @Deprecated
    public static String createEvmContract(byte[] code, String note, String alias, String privateKey, String paraName) {
        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
        evmActionBuilder.setCode(ByteString.copyFrom(code));
@@ -83,7 +84,7 @@ public class EvmUtil {
        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
 
        String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
-               PARA_CREATE_EVM_FEE, 0);
+    		   EVM_FEE, 0);
        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
        TransactionAllProtobuf.Transaction parseFrom = null;
        try {
@@ -95,6 +96,166 @@ public class EvmUtil {
        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
        return hexString;
    }
+   
+   /**
+   *
+   * @description 部署合约（平行链的情况下调用，要传paraName（平行链名称））
+   * @param code  合约代码内容
+   * @param note  注释
+   * @param alias 合约别名
+   * @param privateKey 签名私钥
+   * @param paraName 平行链名称（如果是主链的情况，此参数填空）
+   * @param gas gas费
+   * @return  hash，即合约名
+   *
+   */
+  public static String createEvmContract(byte[] code, String note, String alias, String privateKey, String paraName, long gas) {
+      EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+      evmActionBuilder.setCode(ByteString.copyFrom(code));
+      evmActionBuilder.setNote(note);
+      evmActionBuilder.setAlias(alias);
+      evmActionBuilder.setContractAddr(TransactionUtil.getToAddress((paraName + "evm").getBytes()));
+
+      EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+      long fee = 0L;
+      // 以防用户乱填GAS，导致交易执行不过，设置一个最小的GAS费
+      if (gas < EVM_FEE) {
+    	  fee = EVM_FEE;
+      } else {
+    	  fee = gas + 100000L;
+      }
+
+      String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
+    		  fee, 0);
+      byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+      TransactionAllProtobuf.Transaction parseFrom = null;
+      try {
+          parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
+      } catch (InvalidProtocolBufferException e) {
+          e.printStackTrace();
+      }
+      TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+      String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+      return hexString;
+  }
+   
+   /**
+    * 构造创建EVM合约交易 
+    * @param code 合约代码内容
+    * @param note 注释
+    * @param alias 合约别名
+    * @param paraName 平行链名称（如果是主链的情况，此参数填空）
+    * @return
+    */
+   public static String getCreateEvmEncode(byte[] code, String note, String alias, String paraName) {
+       EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+       evmActionBuilder.setCode(ByteString.copyFrom(code));
+       evmActionBuilder.setNote(note);
+       evmActionBuilder.setAlias(alias);
+       evmActionBuilder.setContractAddr(TransactionUtil.getToAddress((paraName + "evm").getBytes()));
+
+       EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+
+       String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
+    		   EVM_FEE, 0);
+       return createTxWithoutSign;
+   }
+   
+   /**
+    * 
+    * @description  调用合约（平行链的情况下调用，要传paraName（平行链名称））
+    * @param parameter   合约代码内容
+    * @param note   注释
+    * @param amount 转账金额
+    * @param privateKey 签名私钥
+    * @return  hash
+    *
+    */
+   @Deprecated
+   public static String callEvmContract(byte[] parameter, String note, long amount, String contractAddr, String privateKey, String paraName) {
+       EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+       evmActionBuilder.setPara(ByteString.copyFrom(parameter));
+       evmActionBuilder.setNote(note);
+       evmActionBuilder.setAmount(amount);
+       evmActionBuilder.setContractAddr(contractAddr);
+       EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+
+       String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
+    		   EVM_FEE, 0);
+       byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+       TransactionAllProtobuf.Transaction parseFrom = null;
+       try {
+           parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
+       } catch (InvalidProtocolBufferException e) {
+           e.printStackTrace();
+       }
+       TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+       return HexUtil.toHexString(signProbuf.toByteArray());
+   }
+   
+   
+   /**
+    * 
+    * @description  调用合约（平行链的情况下调用，要传paraName（平行链名称））
+    * @param parameter   合约代码内容
+    * @param note   注释
+    * @param amount 转账金额
+    * @param privateKey 签名私钥
+    * @return  hash
+    *
+    */
+   public static String callEvmContract(byte[] parameter, String note, long amount, String contractAddr, String privateKey, String paraName, long gas) {
+       EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+       evmActionBuilder.setPara(ByteString.copyFrom(parameter));
+       evmActionBuilder.setNote(note);
+       evmActionBuilder.setAmount(amount);
+       evmActionBuilder.setContractAddr(contractAddr);
+       EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+       long fee = 0L;
+       if (gas < EVM_FEE) {
+     	  fee = EVM_FEE;
+       } else {
+     	  fee = gas + 100000L;
+       }
+
+       String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
+    		   fee, 0);
+       byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
+       TransactionAllProtobuf.Transaction parseFrom = null;
+       try {
+           parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
+       } catch (InvalidProtocolBufferException e) {
+           e.printStackTrace();
+       }
+       TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
+       return HexUtil.toHexString(signProbuf.toByteArray());
+   }
+   
+   
+   
+   /**
+    * 
+    * @description  调用合约（平行链的情况下调用，要传paraName（平行链名称））
+    * @param parameter   合约代码内容
+    * @param note   注释
+    * @param amount 转账金额
+    * @return  hash
+    *
+    */
+   public static String getCallEvmEncode(byte[] parameter, String note, long amount, String contractAddr, String paraName) {
+       EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+       evmActionBuilder.setPara(ByteString.copyFrom(parameter));
+       evmActionBuilder.setNote(note);
+       evmActionBuilder.setAmount(amount);
+       evmActionBuilder.setContractAddr(contractAddr);
+       EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+
+       String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
+    		   EVM_FEE, 0);
+       return createTxWithoutSign;
+   }
+   
+   
     
     /**
     *
@@ -114,42 +275,13 @@ public class EvmUtil {
 
        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
        
-       String createTransferTx = TransactionUtil.createTransferTx(privateKey, contranctAddress, execer, evmContractAction.toByteArray(), PARA_CREATE_EVM_FEE);
+       String createTransferTx = TransactionUtil.createTransferTx(privateKey, contranctAddress, execer, evmContractAction.toByteArray(), EVM_FEE);
 
        return createTransferTx;
    }
     
 
-    /**
-    * 
-    * @description  调用合约（平行链的情况下调用，要传paraName（平行链名称））
-    * @param parameter   合约代码内容
-    * @param note   注释
-    * @param amount 转账金额
-    * @param privateKey 签名私钥
-    * @return  hash
-    *
-    */
-   public static String callEvmContract(byte[] parameter, String note, long amount, String contractAddr, String privateKey, String paraName) {
-       EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
-       evmActionBuilder.setPara(ByteString.copyFrom(parameter));
-       evmActionBuilder.setNote(note);
-       evmActionBuilder.setAmount(amount);
-       evmActionBuilder.setContractAddr(contractAddr);
-       EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
-
-       String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
-               PARA_CALL_EVM_FEE, 0);
-       byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-       TransactionAllProtobuf.Transaction parseFrom = null;
-       try {
-           parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
-       } catch (InvalidProtocolBufferException e) {
-           e.printStackTrace();
-       }
-       TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProbuf(parseFrom, privateKey);
-       return HexUtil.toHexString(signProbuf.toByteArray());
-   }
+ 
     
 
    /**
@@ -169,7 +301,7 @@ public class EvmUtil {
        evmActionBuilder.setContractAddr(contractAddress);
        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
 
-       String createTransferTx = TransactionUtil.createTransferTx(privateKey, TransactionUtil.getToAddress(exec.getBytes()), exec, evmContractAction.toByteArray(), PARA_CALL_EVM_FEE);
+       String createTransferTx = TransactionUtil.createTransferTx(privateKey, TransactionUtil.getToAddress(exec.getBytes()), exec, evmContractAction.toByteArray(), EVM_FEE);
 
        return createTransferTx;
    }

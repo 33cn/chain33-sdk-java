@@ -1352,23 +1352,21 @@ public class RpcClient {
     
     /**
      * @description 查询合约消耗的GAS
-     * 
-     * @param address:  查询的地址
      * @param execer:   执行器名称
+     * @param tx 未签名的交易hex
+     * @param address:  查询的地址
      * @param funcName: 方法名
      * @return TokenBalanceResult
      * @throws IOException 
      */
-    public long queryEVMGas(String execer, String abiPack, String address) throws IOException {
+    public long queryEVMGas(String execer, String tx, String address) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
         JSONObject requestParam = new JSONObject();
         requestParam.put("execer", execer);
         requestParam.put("funcName", "EstimateGas");
         JSONObject payloadJson = new JSONObject();
-        payloadJson.put("to", address);
-        payloadJson.put("para", abiPack);
-        payloadJson.put("caller", "");
-        payloadJson.put("amount", 0);
+        payloadJson.put("tx", tx);
+        payloadJson.put("from", address);
         requestParam.put("payload", payloadJson);
         postData.addJsonParams(requestParam);
         String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
