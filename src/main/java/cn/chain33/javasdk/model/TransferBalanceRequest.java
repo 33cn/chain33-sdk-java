@@ -3,109 +3,109 @@ package cn.chain33.javasdk.model;
 import cn.chain33.javasdk.model.enums.SignType;
 
 public class TransferBalanceRequest {
-	
-	/**
-	 * 转账说明
-	 */
-	private String note;
-	
-	/**
-	 * 积分名称
-	 */
-	private String coinToken;
-	
-	/**
-	 * 转账金额
-	 */
-	private Long amount;
-	
-	/**
-	 * 转向的地址
-	 */
-	private String to;
-	
-	/**
-	 * 转账地址私钥
-	 */
-	private String fromPrivateKey;
-	
-	/**
-	 * 签名类型
-	 */
-	private SignType signType;
-	
-	/**
-	 * 手续费
-	 */
-	private long fee;
-	
-	/**
-	 * 执行器名称
-	 */
-	private String execer;
 
-	public String getNote() {
-		return note;
-	}
+    /**
+     * 转账说明
+     */
+    private String note;
 
-	public void setNote(String note) {
-		this.note = note;
-	}
+    /**
+     * 积分名称
+     */
+    private String coinToken;
 
-	public String getCoinToken() {
-		return coinToken;
-	}
+    /**
+     * 转账金额
+     */
+    private Long amount;
 
-	public void setCoinToken(String coinToken) {
-		this.coinToken = coinToken;
-	}
+    /**
+     * 转向的地址
+     */
+    private String to;
 
-	public Long getAmount() {
-		return amount;
-	}
+    /**
+     * 转账地址私钥
+     */
+    private String fromPrivateKey;
 
-	public void setAmount(Long amount) {
-		this.amount = amount;
-	}
+    /**
+     * 签名类型
+     */
+    private SignType signType;
 
-	public String getTo() {
-		return to;
-	}
+    /**
+     * 手续费
+     */
+    private long fee;
 
-	public void setTo(String to) {
-		this.to = to;
-	}
+    /**
+     * 执行器名称
+     */
+    private String execer;
 
-	public String getFromPrivateKey() {
-		return fromPrivateKey;
-	}
+    public String getNote() {
+        return note;
+    }
 
-	public void setFromPrivateKey(String fromPrivateKey) {
-		this.fromPrivateKey = fromPrivateKey;
-	}
+    public void setNote(String note) {
+        this.note = note;
+    }
 
-	public String getExecer() {
-		return execer;
-	}
+    public String getCoinToken() {
+        return coinToken;
+    }
 
-	public void setExecer(String execer) {
-		this.execer = execer;
-	}
+    public void setCoinToken(String coinToken) {
+        this.coinToken = coinToken;
+    }
 
-	public SignType getSignType() {
-		return signType;
-	}
+    public Long getAmount() {
+        return amount;
+    }
 
-	public void setSignType(SignType signType) {
-		this.signType = signType;
-	}
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
 
-	public long getFee() {
-		return fee;
-	}
+    public String getTo() {
+        return to;
+    }
 
-	public void setFee(long fee) {
-		this.fee = fee;
-	}
-		
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public String getFromPrivateKey() {
+        return fromPrivateKey;
+    }
+
+    public void setFromPrivateKey(String fromPrivateKey) {
+        this.fromPrivateKey = fromPrivateKey;
+    }
+
+    public String getExecer() {
+        return execer;
+    }
+
+    public void setExecer(String execer) {
+        this.execer = execer;
+    }
+
+    public SignType getSignType() {
+        return signType;
+    }
+
+    public void setSignType(SignType signType) {
+        this.signType = signType;
+    }
+
+    public long getFee() {
+        return fee;
+    }
+
+    public void setFee(long fee) {
+        this.fee = fee;
+    }
+
 }

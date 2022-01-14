@@ -7,20 +7,20 @@ import java.util.Arrays;
 
 /**
  * SM3杂凑算法实现
+ * 
  * @author Potato
  *
  */
 public class SM3Util {
 
-    private static char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
-            '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    private static char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E',
+            'F' };
     private static final String ivHexStr = "7380166f 4914b2b9 172442d7 da8a0600 a96f30bc 163138aa e38dee4d b0fb0e4e";
-    private static final BigInteger IV = new BigInteger(ivHexStr.replaceAll(" ",
-            ""), 16);
+    private static final BigInteger IV = new BigInteger(ivHexStr.replaceAll(" ", ""), 16);
     private static final Integer Tj15 = Integer.valueOf("79cc4519", 16);
     private static final Integer Tj63 = Integer.valueOf("7a879d8a", 16);
-    private static final byte[] FirstPadding = {(byte) 0x80};
-    private static final byte[] ZeroPadding = {(byte) 0x00};
+    private static final byte[] FirstPadding = { (byte) 0x80 };
+    private static final byte[] ZeroPadding = { (byte) 0x00 };
 
     private static int T(int j) {
         if (j >= 0 && j <= 15) {
@@ -36,9 +36,8 @@ public class SM3Util {
         if (j >= 0 && j <= 15) {
             return Integer.valueOf(x.intValue() ^ y.intValue() ^ z.intValue());
         } else if (j >= 16 && j <= 63) {
-            return Integer.valueOf((x.intValue() & y.intValue())
-                    | (x.intValue() & z.intValue())
-                    | (y.intValue() & z.intValue()));
+            return Integer.valueOf(
+                    (x.intValue() & y.intValue()) | (x.intValue() & z.intValue()) | (y.intValue() & z.intValue()));
         } else {
             throw new RuntimeException("data invalid");
         }
@@ -48,23 +47,20 @@ public class SM3Util {
         if (j >= 0 && j <= 15) {
             return Integer.valueOf(x.intValue() ^ y.intValue() ^ z.intValue());
         } else if (j >= 16 && j <= 63) {
-            return Integer.valueOf((x.intValue() & y.intValue())
-                    | (~x.intValue() & z.intValue()));
+            return Integer.valueOf((x.intValue() & y.intValue()) | (~x.intValue() & z.intValue()));
         } else {
             throw new RuntimeException("data invalid");
         }
     }
 
     private static Integer P0(Integer x) {
-        return Integer.valueOf(x.intValue()
-                ^ Integer.rotateLeft(x.intValue(), 9)
-                ^ Integer.rotateLeft(x.intValue(), 17));
+        return Integer
+                .valueOf(x.intValue() ^ Integer.rotateLeft(x.intValue(), 9) ^ Integer.rotateLeft(x.intValue(), 17));
     }
 
     private static Integer P1(Integer x) {
-        return Integer.valueOf(x.intValue()
-                ^ Integer.rotateLeft(x.intValue(), 15)
-                ^ Integer.rotateLeft(x.intValue(), 23));
+        return Integer
+                .valueOf(x.intValue() ^ Integer.rotateLeft(x.intValue(), 15) ^ Integer.rotateLeft(x.intValue(), 23));
     }
 
     private static byte[] padding(byte[] source) throws IOException {
@@ -127,8 +123,8 @@ public class SM3Util {
             w[i] = toInteger(bi, i);
         }
         for (int j = 16; j < 68; j++) {
-            w[j] = P1(w[j - 16] ^ w[j - 9] ^ Integer.rotateLeft(w[j - 3], 15))
-                    ^ Integer.rotateLeft(w[j - 13], 7) ^ w[j - 6];
+            w[j] = P1(w[j - 16] ^ w[j - 9] ^ Integer.rotateLeft(w[j - 3], 15)) ^ Integer.rotateLeft(w[j - 13], 7)
+                    ^ w[j - 6];
         }
         for (int j = 0; j < 64; j++) {
             w1[j] = w[j] ^ w[j + 4];
@@ -165,8 +161,7 @@ public class SM3Util {
 
     }
 
-    private static byte[] toByteArray(int a, int b, int c, int d, int e, int f,
-                                      int g, int h) throws IOException {
+    private static byte[] toByteArray(int a, int b, int c, int d, int e, int f, int g, int h) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream(32);
         baos.write(toByteArray(a));
         baos.write(toByteArray(b));
@@ -187,16 +182,17 @@ public class SM3Util {
         byteArray[3] = (byte) (i & 0xFF);
         return byteArray;
     }
+
     private static String byteToHexString(byte b) {
         int n = b;
         if (n < 0)
             n = 256 + n;
         int d1 = n / 16;
         int d2 = n % 16;
-        return ""+hexDigits[d1] + hexDigits[d2];
+        return "" + hexDigits[d1] + hexDigits[d2];
     }
 
-	public static String byteArrayToHexString(byte[] b) {
+    public static String byteArrayToHexString(byte[] b) {
         StringBuffer resultSb = new StringBuffer();
         for (int i = 0; i < b.length; i++) {
             resultSb.append(byteToHexString(b[i]));

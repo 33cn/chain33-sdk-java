@@ -14,18 +14,15 @@ import java.io.UnsupportedEncodingException;
 
 /**
  * 数据拥有者将数据加密上链，并且将
+ * 
  * @author fkeit
  *
  */
 public class PreOwner {
 
     // 代理重加密节点
-    static RpcClient[]  preClient = new RpcClient[]{
-            new RpcClient("http://ip1:11801"),
-            new RpcClient("http://ip2:11801"),
-            new RpcClient("http://ip3:11801"),
-            new RpcClient("http://ip4:11801"),
-    };
+    static RpcClient[] preClient = new RpcClient[] { new RpcClient("http://ip1:11801"),
+            new RpcClient("http://ip2:11801"), new RpcClient("http://ip3:11801"), new RpcClient("http://ip4:11801"), };
 
     // 区块链节点
     static RpcClient chain33Client = new RpcClient("http://ip:8901");
@@ -33,13 +30,12 @@ public class PreOwner {
     // 数据所有者私钥
     static String OwnerPrivateKey = "30a13eb5f155404e5973203293b4700a5759ec9b74af01c6512ff0450f51ed88";
 
-
     // 代理节点公钥，用于身份验证，不参与重加密和加解密算法
     static String ServerPub = "0x02005d3a38feaff00f1b83014b2602d7b5b39506ddee7919dd66539b5428358f08";
-    
+
     // 分4片
     static int numSplit = 4;
-    
+
     // 门限是3， 也就是通过3个分片就可以恢复私钥
     static int threshold = 2;
 
@@ -48,17 +44,18 @@ public class PreOwner {
 
     /**
      * 代理重加密秘钥分片存储到代理重加密服务器，同时数据加密上链存储
+     * 
      * @param numSplit
      * @param threshold
-     * @throws IOException 
+     * 
+     * @throws IOException
      */
     @Test
     public void preEncrypt() throws IOException {
         AccountInfo alice = new AccountInfo();
         alice.setPrivateKey(OwnerPrivateKey);
         alice.setPublicKey(TransactionUtil.getHexPubKeyFromPrivKey(OwnerPrivateKey));
-        
-        
+
         // 生成对称秘钥
         EncryptKey encryptKey = PreUtils.GenerateEncryptKey(HexUtil.fromHexString(alice.getPublicKey()));
         System.out.println("对称加密秘钥：" + DatatypeConverter.printHexBinary(encryptKey.getShareKey()));
@@ -91,13 +88,13 @@ public class PreOwner {
         System.out.println("交易hash值：" + submitTransaction);
     }
 
-
     /**
      * 分片并上传加密私钥
      * 
      * @param encryptKey
      * @param alice
-     * @throws IOException 
+     * 
+     * @throws IOException
      */
     private void uploadKey(EncryptKey encryptKey, AccountInfo alice, String pubkey) throws IOException {
         // 生成重加密密钥分片
@@ -111,7 +108,7 @@ public class PreOwner {
 
         // 密钥分片发送到代理节点
         String dhProof = PreUtils.ECDH(ServerPub, alice.getPrivateKey());
-        for(int i = 0; i < preClient.length; i++) {
+        for (int i = 0; i < preClient.length; i++) {
             boolean result = preClient[i].sendKeyFragment(alice.getPublicKey(), pubkey, encryptKey.getPubProofR(),
                     encryptKey.getPubProofU(), 100, dhProof, kFrags[i]);
             if (!result) {
@@ -119,5 +116,5 @@ public class PreOwner {
                 return;
             }
         }
-}
+    }
 }

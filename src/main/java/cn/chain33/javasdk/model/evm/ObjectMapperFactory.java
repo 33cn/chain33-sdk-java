@@ -7,6 +7,6 @@ public class ObjectMapperFactory {
     private static final ObjectMapper DEFAULT_OBJECT_MAPPER = new ObjectMapper();
 
     public static ObjectMapper getObjectMapper() {
-            return DEFAULT_OBJECT_MAPPER;
+        return DEFAULT_OBJECT_MAPPER;
     }
 }

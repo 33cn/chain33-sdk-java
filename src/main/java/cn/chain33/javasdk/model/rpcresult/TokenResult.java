@@ -1,103 +1,102 @@
 package cn.chain33.javasdk.model.rpcresult;
 
 public class TokenResult {
-	
-	private String name;
-	
-	private String symbol;
-	
-	private String introduction;
-	
-	private String ownerAddr;
-	
-	private Long total;
-	
-	private Long price;
-	
-	private String owner;
-	
-	private String creator;
-	
-	private Integer status;
 
-	public String getName() {
-		return name;
-	}
+    private String name;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String symbol;
 
-	public String getSymbol() {
-		return symbol;
-	}
+    private String introduction;
 
-	public void setSymbol(String symbol) {
-		this.symbol = symbol;
-	}
+    private String ownerAddr;
 
-	public String getIntroduction() {
-		return introduction;
-	}
+    private Long total;
 
-	public void setIntroduction(String introduction) {
-		this.introduction = introduction;
-	}
+    private Long price;
 
-	public String getOwnerAddr() {
-		return ownerAddr;
-	}
+    private String owner;
 
-	public void setOwnerAddr(String ownerAddr) {
-		this.ownerAddr = ownerAddr;
-	}
+    private String creator;
 
-	public Long getTotal() {
-		return total;
-	}
+    private Integer status;
 
-	public void setTotal(Long total) {
-		this.total = total;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public Long getPrice() {
-		return price;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setPrice(Long price) {
-		this.price = price;
-	}
+    public String getSymbol() {
+        return symbol;
+    }
 
-	public String getOwner() {
-		return owner;
-	}
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
 
-	public void setOwner(String owner) {
-		this.owner = owner;
-	}
+    public String getIntroduction() {
+        return introduction;
+    }
 
-	public String getCreator() {
-		return creator;
-	}
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
 
-	public void setCreator(String creator) {
-		this.creator = creator;
-	}
+    public String getOwnerAddr() {
+        return ownerAddr;
+    }
 
-	public Integer getStatus() {
-		return status;
-	}
+    public void setOwnerAddr(String ownerAddr) {
+        this.ownerAddr = ownerAddr;
+    }
 
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
+    public Long getTotal() {
+        return total;
+    }
 
-	@Override
-	public String toString() {
-		return "TokenResult [name=" + name + ", symbol=" + symbol + ", introduction=" + introduction + ", ownerAddr="
-				+ ownerAddr + ", total=" + total + ", price=" + price + ", owner=" + owner + ", creator=" + creator
-				+ ", status=" + status + "]";
-	}
-	
-	
+    public void setTotal(Long total) {
+        this.total = total;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "TokenResult [name=" + name + ", symbol=" + symbol + ", introduction=" + introduction + ", ownerAddr="
+                + ownerAddr + ", total=" + total + ", price=" + price + ", owner=" + owner + ", creator=" + creator
+                + ", status=" + status + "]";
+    }
+
 }

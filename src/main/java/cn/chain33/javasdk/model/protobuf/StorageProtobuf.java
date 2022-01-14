@@ -4,4184 +4,4017 @@
 package cn.chain33.javasdk.model.protobuf;
 
 public final class StorageProtobuf {
-  private StorageProtobuf() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface StorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Storage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    boolean hasContentStorage();
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage();
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder();
-
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    boolean hasHashStorage();
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage();
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder();
-
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    boolean hasLinkStorage();
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage();
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder();
-
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    boolean hasEncryptStorage();
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage();
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder();
-
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    boolean hasEncryptShareStorage();
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder();
-
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    boolean hasEncryptAdd();
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder();
-
-    /**
-     * <code>int32 ty = 7;</code>
-     */
-    int getTy();
-
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.ValueCase getValueCase();
-  }
-  /**
-   * <pre>
-   *后面如果有其他数据模型可继续往上面添加
-   * </pre>
-   *
-   * Protobuf type {@code Storage}
-   */
-  public  static final class Storage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Storage)
-      StorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Storage.newBuilder() to construct.
-    private Storage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Storage() {
+    private StorageProtobuf() {
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Storage();
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Storage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 1) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 1;
-              break;
-            }
-            case 18: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 2) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 2;
-              break;
-            }
-            case 26: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 3) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 3;
-              break;
-            }
-            case 34: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 4) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 4;
-              break;
-            }
-            case 42: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 5) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 5;
-              break;
-            }
-            case 50: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder subBuilder = null;
-              if (valueCase_ == 6) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 6;
-              break;
-            }
-            case 56: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_descriptor;
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder.class);
+    public interface StorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:Storage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        boolean hasContentStorage();
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage();
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        boolean hasHashStorage();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder();
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        boolean hasLinkStorage();
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage();
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        boolean hasEncryptStorage();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        boolean hasEncryptShareStorage();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder();
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        boolean hasEncryptAdd();
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder();
+
+        /**
+         * <code>int32 ty = 7;</code>
+         */
+        int getTy();
+
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.ValueCase getValueCase();
     }
 
-    private int valueCase_ = 0;
-    private java.lang.Object value_;
-    public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite {
-      CONTENTSTORAGE(1),
-      HASHSTORAGE(2),
-      LINKSTORAGE(3),
-      ENCRYPTSTORAGE(4),
-      ENCRYPTSHARESTORAGE(5),
-      ENCRYPTADD(6),
-      VALUE_NOT_SET(0);
-      private final int value;
-      private ValueCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ValueCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ValueCase forNumber(int value) {
-        switch (value) {
-          case 1: return CONTENTSTORAGE;
-          case 2: return HASHSTORAGE;
-          case 3: return LINKSTORAGE;
-          case 4: return ENCRYPTSTORAGE;
-          case 5: return ENCRYPTSHARESTORAGE;
-          case 6: return ENCRYPTADD;
-          case 0: return VALUE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ValueCase
-    getValueCase() {
-      return ValueCase.forNumber(
-          valueCase_);
-    }
-
-    public static final int CONTENTSTORAGE_FIELD_NUMBER = 1;
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    public boolean hasContentStorage() {
-      return valueCase_ == 1;
-    }
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int HASHSTORAGE_FIELD_NUMBER = 2;
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    public boolean hasHashStorage() {
-      return valueCase_ == 2;
-    }
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int LINKSTORAGE_FIELD_NUMBER = 3;
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    public boolean hasLinkStorage() {
-      return valueCase_ == 3;
-    }
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int ENCRYPTSTORAGE_FIELD_NUMBER = 4;
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    public boolean hasEncryptStorage() {
-      return valueCase_ == 4;
-    }
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int ENCRYPTSHARESTORAGE_FIELD_NUMBER = 5;
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    public boolean hasEncryptShareStorage() {
-      return valueCase_ == 5;
-    }
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int ENCRYPTADD_FIELD_NUMBER = 6;
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    public boolean hasEncryptAdd() {
-      return valueCase_ == 6;
-    }
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
-      if (valueCase_ == 6) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-    }
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
-      if (valueCase_ == 6) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-    }
-
-    public static final int TY_FIELD_NUMBER = 7;
-    private int ty_;
-    /**
-     * <code>int32 ty = 7;</code>
-     */
-    public int getTy() {
-      return ty_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (valueCase_ == 1) {
-        output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 2) {
-        output.writeMessage(2, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 3) {
-        output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
-      }
-      if (valueCase_ == 4) {
-        output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
-      }
-      if (valueCase_ == 5) {
-        output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
-      }
-      if (valueCase_ == 6) {
-        output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
-      }
-      if (ty_ != 0) {
-        output.writeInt32(7, ty_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (valueCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
-      }
-      if (valueCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
-      }
-      if (valueCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
-      }
-      if (valueCase_ == 6) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
-      }
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, ty_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) obj;
-
-      if (getTy()
-          != other.getTy()) return false;
-      if (!getValueCase().equals(other.getValueCase())) return false;
-      switch (valueCase_) {
-        case 1:
-          if (!getContentStorage()
-              .equals(other.getContentStorage())) return false;
-          break;
-        case 2:
-          if (!getHashStorage()
-              .equals(other.getHashStorage())) return false;
-          break;
-        case 3:
-          if (!getLinkStorage()
-              .equals(other.getLinkStorage())) return false;
-          break;
-        case 4:
-          if (!getEncryptStorage()
-              .equals(other.getEncryptStorage())) return false;
-          break;
-        case 5:
-          if (!getEncryptShareStorage()
-              .equals(other.getEncryptShareStorage())) return false;
-          break;
-        case 6:
-          if (!getEncryptAdd()
-              .equals(other.getEncryptAdd())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      switch (valueCase_) {
-        case 1:
-          hash = (37 * hash) + CONTENTSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getContentStorage().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + HASHSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getHashStorage().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + LINKSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getLinkStorage().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + ENCRYPTSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getEncryptStorage().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + ENCRYPTSHARESTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getEncryptShareStorage().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
-          hash = (53 * hash) + getEncryptAdd().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *后面如果有其他数据模型可继续往上面添加
+     * 后面如果有其他数据模型可继续往上面添加
      * </pre>
      *
      * Protobuf type {@code Storage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Storage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_descriptor;
-      }
+    public static final class Storage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:Storage)
+            StorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder.class);
-      }
+        // Use Storage.newBuilder() to construct.
+        private Storage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+        private Storage() {
+        }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new Storage();
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
 
-        valueCase_ = 0;
-        value_ = null;
-        return this;
-      }
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
+        }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_descriptor;
-      }
+        private Storage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 1) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 1;
+                        break;
+                    }
+                    case 18: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 2) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 2;
+                        break;
+                    }
+                    case 26: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 3) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 3;
+                        break;
+                    }
+                    case 34: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 4) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 4;
+                        break;
+                    }
+                    case 42: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 5) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 5;
+                        break;
+                    }
+                    case 50: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder subBuilder = null;
+                        if (valueCase_ == 6) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 6;
+                        break;
+                    }
+                    case 56: {
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance();
-      }
+                        ty_ = input.readInt32();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_descriptor;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage(this);
-        if (valueCase_ == 1) {
-          if (contentStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = contentStorageBuilder_.build();
-          }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder.class);
         }
-        if (valueCase_ == 2) {
-          if (hashStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = hashStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 3) {
-          if (linkStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = linkStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 4) {
-          if (encryptStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = encryptStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 5) {
-          if (encryptShareStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = encryptShareStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 6) {
-          if (encryptAddBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = encryptAddBuilder_.build();
-          }
-        }
-        result.ty_ = ty_;
-        result.valueCase_ = valueCase_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
+        private int valueCase_ = 0;
+        private java.lang.Object value_;
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
-        }
-        switch (other.getValueCase()) {
-          case CONTENTSTORAGE: {
-            mergeContentStorage(other.getContentStorage());
-            break;
-          }
-          case HASHSTORAGE: {
-            mergeHashStorage(other.getHashStorage());
-            break;
-          }
-          case LINKSTORAGE: {
-            mergeLinkStorage(other.getLinkStorage());
-            break;
-          }
-          case ENCRYPTSTORAGE: {
-            mergeEncryptStorage(other.getEncryptStorage());
-            break;
-          }
-          case ENCRYPTSHARESTORAGE: {
-            mergeEncryptShareStorage(other.getEncryptShareStorage());
-            break;
-          }
-          case ENCRYPTADD: {
-            mergeEncryptAdd(other.getEncryptAdd());
-            break;
-          }
-          case VALUE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+            CONTENTSTORAGE(1), HASHSTORAGE(2), LINKSTORAGE(3), ENCRYPTSTORAGE(4), ENCRYPTSHARESTORAGE(5), ENCRYPTADD(6),
+            VALUE_NOT_SET(0);
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+            private final int value;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public ValueCase
-          getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
-      }
+            private ValueCase(int value) {
+                this.value = value;
+            }
 
-      public Builder clearValue() {
-        valueCase_ = 0;
-        value_ = null;
-        onChanged();
-        return this;
-      }
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static ValueCase valueOf(int value) {
+                return forNumber(value);
+            }
 
+            public static ValueCase forNumber(int value) {
+                switch (value) {
+                case 1:
+                    return CONTENTSTORAGE;
+                case 2:
+                    return HASHSTORAGE;
+                case 3:
+                    return LINKSTORAGE;
+                case 4:
+                    return ENCRYPTSTORAGE;
+                case 5:
+                    return ENCRYPTSHARESTORAGE;
+                case 6:
+                    return ENCRYPTADD;
+                case 0:
+                    return VALUE_NOT_SET;
+                default:
+                    return null;
+                }
+            }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> contentStorageBuilder_;
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public boolean hasContentStorage() {
-        return valueCase_ == 1;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
-        if (contentStorageBuilder_ == null) {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 1) {
-            return contentStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder setContentStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
-        if (contentStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          contentStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder setContentStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder builderForValue) {
-        if (contentStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          contentStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder mergeContentStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
-        if (contentStorageBuilder_ == null) {
-          if (valueCase_ == 1 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 1) {
-            contentStorageBuilder_.mergeFrom(value);
-          }
-          contentStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder clearContentStorage() {
-        if (contentStorageBuilder_ == null) {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          contentStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder getContentStorageBuilder() {
-        return getContentStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
-        if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
-          return contentStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> 
-          getContentStorageFieldBuilder() {
-        if (contentStorageBuilder_ == null) {
-          if (!(valueCase_ == 1)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-          }
-          contentStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 1;
-        onChanged();;
-        return contentStorageBuilder_;
-      }
+            public int getNumber() {
+                return this.value;
+            }
+        };
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> hashStorageBuilder_;
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public boolean hasHashStorage() {
-        return valueCase_ == 2;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
-        if (hashStorageBuilder_ == null) {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 2) {
-            return hashStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+        public ValueCase getValueCase() {
+            return ValueCase.forNumber(valueCase_);
         }
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder setHashStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
-        if (hashStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          hashStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder setHashStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder builderForValue) {
-        if (hashStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          hashStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder mergeHashStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
-        if (hashStorageBuilder_ == null) {
-          if (valueCase_ == 2 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 2) {
-            hashStorageBuilder_.mergeFrom(value);
-          }
-          hashStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder clearHashStorage() {
-        if (hashStorageBuilder_ == null) {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          hashStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder getHashStorageBuilder() {
-        return getHashStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
-        if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
-          return hashStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> 
-          getHashStorageFieldBuilder() {
-        if (hashStorageBuilder_ == null) {
-          if (!(valueCase_ == 2)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-          }
-          hashStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 2;
-        onChanged();;
-        return hashStorageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> linkStorageBuilder_;
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public boolean hasLinkStorage() {
-        return valueCase_ == 3;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
-        if (linkStorageBuilder_ == null) {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 3) {
-            return linkStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder setLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
-        if (linkStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          linkStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder setLinkStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder builderForValue) {
-        if (linkStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          linkStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder mergeLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
-        if (linkStorageBuilder_ == null) {
-          if (valueCase_ == 3 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 3) {
-            linkStorageBuilder_.mergeFrom(value);
-          }
-          linkStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder clearLinkStorage() {
-        if (linkStorageBuilder_ == null) {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          linkStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder getLinkStorageBuilder() {
-        return getLinkStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
-        if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
-          return linkStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> 
-          getLinkStorageFieldBuilder() {
-        if (linkStorageBuilder_ == null) {
-          if (!(valueCase_ == 3)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-          }
-          linkStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 3;
-        onChanged();;
-        return linkStorageBuilder_;
-      }
+        public static final int CONTENTSTORAGE_FIELD_NUMBER = 1;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> encryptStorageBuilder_;
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public boolean hasEncryptStorage() {
-        return valueCase_ == 4;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
-        if (encryptStorageBuilder_ == null) {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 4) {
-            return encryptStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        public boolean hasContentStorage() {
+            return valueCase_ == 1;
         }
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder setEncryptStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
-        if (encryptStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          encryptStorageBuilder_.setMessage(value);
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder setEncryptStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder builderForValue) {
-        if (encryptStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          encryptStorageBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder mergeEncryptStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
-        if (encryptStorageBuilder_ == null) {
-          if (valueCase_ == 4 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 4) {
-            encryptStorageBuilder_.mergeFrom(value);
-          }
-          encryptStorageBuilder_.setMessage(value);
+
+        public static final int HASHSTORAGE_FIELD_NUMBER = 2;
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        public boolean hasHashStorage() {
+            return valueCase_ == 2;
         }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder clearEncryptStorage() {
-        if (encryptStorageBuilder_ == null) {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          encryptStorageBuilder_.clear();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
         }
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder getEncryptStorageBuilder() {
-        return getEncryptStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
-        if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
-          return encryptStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> 
-          getEncryptStorageFieldBuilder() {
-        if (encryptStorageBuilder_ == null) {
-          if (!(valueCase_ == 4)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-          }
-          encryptStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        public static final int LINKSTORAGE_FIELD_NUMBER = 3;
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        public boolean hasLinkStorage() {
+            return valueCase_ == 3;
         }
-        valueCase_ = 4;
-        onChanged();;
-        return encryptStorageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> encryptShareStorageBuilder_;
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public boolean hasEncryptShareStorage() {
-        return valueCase_ == 5;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
-        if (encryptShareStorageBuilder_ == null) {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 5) {
-            return encryptShareStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder setEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
-        if (encryptShareStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          encryptShareStorageBuilder_.setMessage(value);
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder setEncryptShareStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder builderForValue) {
-        if (encryptShareStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          encryptShareStorageBuilder_.setMessage(builderForValue.build());
+
+        public static final int ENCRYPTSTORAGE_FIELD_NUMBER = 4;
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        public boolean hasEncryptStorage() {
+            return valueCase_ == 4;
         }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder mergeEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
-        if (encryptShareStorageBuilder_ == null) {
-          if (valueCase_ == 5 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 5) {
-            encryptShareStorageBuilder_.mergeFrom(value);
-          }
-          encryptShareStorageBuilder_.setMessage(value);
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
+            if (valueCase_ == 4) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder clearEncryptShareStorage() {
-        if (encryptShareStorageBuilder_ == null) {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          encryptShareStorageBuilder_.clear();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
+            if (valueCase_ == 4) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
         }
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder getEncryptShareStorageBuilder() {
-        return getEncryptShareStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
-        if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
-          return encryptShareStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
+
+        public static final int ENCRYPTSHARESTORAGE_FIELD_NUMBER = 5;
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        public boolean hasEncryptShareStorage() {
+            return valueCase_ == 5;
         }
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> 
-          getEncryptShareStorageFieldBuilder() {
-        if (encryptShareStorageBuilder_ == null) {
-          if (!(valueCase_ == 5)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-          }
-          encryptShareStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
+            if (valueCase_ == 5) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 5;
-        onChanged();;
-        return encryptShareStorageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> encryptAddBuilder_;
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public boolean hasEncryptAdd() {
-        return valueCase_ == 6;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
-        if (encryptAddBuilder_ == null) {
-          if (valueCase_ == 6) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-        } else {
-          if (valueCase_ == 6) {
-            return encryptAddBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
+            if (valueCase_ == 5) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder setEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
-        if (encryptAddBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          encryptAddBuilder_.setMessage(value);
+
+        public static final int ENCRYPTADD_FIELD_NUMBER = 6;
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        public boolean hasEncryptAdd() {
+            return valueCase_ == 6;
         }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder setEncryptAdd(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder builderForValue) {
-        if (encryptAddBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          encryptAddBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+            if (valueCase_ == 6) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
         }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder mergeEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
-        if (encryptAddBuilder_ == null) {
-          if (valueCase_ == 6 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 6) {
-            encryptAddBuilder_.mergeFrom(value);
-          }
-          encryptAddBuilder_.setMessage(value);
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+            if (valueCase_ == 6) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
         }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder clearEncryptAdd() {
-        if (encryptAddBuilder_ == null) {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          encryptAddBuilder_.clear();
+
+        public static final int TY_FIELD_NUMBER = 7;
+        private int ty_;
+
+        /**
+         * <code>int32 ty = 7;</code>
+         */
+        public int getTy() {
+            return ty_;
         }
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder getEncryptAddBuilder() {
-        return getEncryptAddFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
-        if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
-          return encryptAddBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 6) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
         }
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> 
-          getEncryptAddFieldBuilder() {
-        if (encryptAddBuilder_ == null) {
-          if (!(valueCase_ == 6)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-          }
-          encryptAddBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (valueCase_ == 1) {
+                output.writeMessage(1,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 2) {
+                output.writeMessage(2,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 3) {
+                output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
+            }
+            if (valueCase_ == 4) {
+                output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
+            }
+            if (valueCase_ == 5) {
+                output.writeMessage(5,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
+            }
+            if (valueCase_ == 6) {
+                output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+            }
+            if (ty_ != 0) {
+                output.writeInt32(7, ty_);
+            }
+            unknownFields.writeTo(output);
         }
-        valueCase_ = 6;
-        onChanged();;
-        return encryptAddBuilder_;
-      }
 
-      private int ty_ ;
-      /**
-       * <code>int32 ty = 7;</code>
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 ty = 7;</code>
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 ty = 7;</code>
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+            size = 0;
+            if (valueCase_ == 1) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 2) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(2,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 3) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(3,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
+            }
+            if (valueCase_ == 4) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(4,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
+            }
+            if (valueCase_ == 5) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(5,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
+            }
+            if (valueCase_ == 6) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(6,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+            }
+            if (ty_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(7, ty_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
 
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) obj;
 
-      // @@protoc_insertion_point(builder_scope:Storage)
-    }
-
-    // @@protoc_insertion_point(class_scope:Storage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Storage>
-        PARSER = new com.google.protobuf.AbstractParser<Storage>() {
-      @java.lang.Override
-      public Storage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Storage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Storage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Storage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface StorageActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:StorageAction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    boolean hasContentStorage();
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage();
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder();
-
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    boolean hasHashStorage();
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage();
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder();
-
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    boolean hasLinkStorage();
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage();
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder();
-
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    boolean hasEncryptStorage();
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage();
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder();
-
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    boolean hasEncryptShareStorage();
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder();
-
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    boolean hasEncryptAdd();
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder();
-
-    /**
-     * <code>int32 ty = 7;</code>
-     */
-    int getTy();
-
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.ValueCase getValueCase();
-  }
-  /**
-   * Protobuf type {@code StorageAction}
-   */
-  public  static final class StorageAction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:StorageAction)
-      StorageActionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StorageAction.newBuilder() to construct.
-    private StorageAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private StorageAction() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StorageAction();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private StorageAction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
+            if (getTy() != other.getTy())
+                return false;
+            if (!getValueCase().equals(other.getValueCase()))
+                return false;
+            switch (valueCase_) {
+            case 1:
+                if (!getContentStorage().equals(other.getContentStorage()))
+                    return false;
+                break;
+            case 2:
+                if (!getHashStorage().equals(other.getHashStorage()))
+                    return false;
+                break;
+            case 3:
+                if (!getLinkStorage().equals(other.getLinkStorage()))
+                    return false;
+                break;
+            case 4:
+                if (!getEncryptStorage().equals(other.getEncryptStorage()))
+                    return false;
+                break;
+            case 5:
+                if (!getEncryptShareStorage().equals(other.getEncryptShareStorage()))
+                    return false;
+                break;
+            case 6:
+                if (!getEncryptAdd().equals(other.getEncryptAdd()))
+                    return false;
+                break;
             case 0:
-              done = true;
-              break;
-            case 10: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 1) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 1;
-              break;
+            default:
             }
-            case 18: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 2) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 2;
-              break;
-            }
-            case 26: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 3) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 3;
-              break;
-            }
-            case 34: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 4) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 4;
-              break;
-            }
-            case 42: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder subBuilder = null;
-              if (valueCase_ == 5) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 5;
-              break;
-            }
-            case 50: {
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder subBuilder = null;
-              if (valueCase_ == 6) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 6;
-              break;
-            }
-            case 56: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder.class);
-    }
-
-    private int valueCase_ = 0;
-    private java.lang.Object value_;
-    public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite {
-      CONTENTSTORAGE(1),
-      HASHSTORAGE(2),
-      LINKSTORAGE(3),
-      ENCRYPTSTORAGE(4),
-      ENCRYPTSHARESTORAGE(5),
-      ENCRYPTADD(6),
-      VALUE_NOT_SET(0);
-      private final int value;
-      private ValueCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ValueCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ValueCase forNumber(int value) {
-        switch (value) {
-          case 1: return CONTENTSTORAGE;
-          case 2: return HASHSTORAGE;
-          case 3: return LINKSTORAGE;
-          case 4: return ENCRYPTSTORAGE;
-          case 5: return ENCRYPTSHARESTORAGE;
-          case 6: return ENCRYPTADD;
-          case 0: return VALUE_NOT_SET;
-          default: return null;
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TY_FIELD_NUMBER;
+            hash = (53 * hash) + getTy();
+            switch (valueCase_) {
+            case 1:
+                hash = (37 * hash) + CONTENTSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getContentStorage().hashCode();
+                break;
+            case 2:
+                hash = (37 * hash) + HASHSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getHashStorage().hashCode();
+                break;
+            case 3:
+                hash = (37 * hash) + LINKSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getLinkStorage().hashCode();
+                break;
+            case 4:
+                hash = (37 * hash) + ENCRYPTSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getEncryptStorage().hashCode();
+                break;
+            case 5:
+                hash = (37 * hash) + ENCRYPTSHARESTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getEncryptShareStorage().hashCode();
+                break;
+            case 6:
+                hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
+                hash = (53 * hash) + getEncryptAdd().hashCode();
+                break;
+            case 0:
+            default:
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
         }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
 
-    public ValueCase
-    getValueCase() {
-      return ValueCase.forNumber(
-          valueCase_);
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 后面如果有其他数据模型可继续往上面添加
+         * </pre>
+         *
+         * Protobuf type {@code Storage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:Storage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                ty_ = 0;
+
+                valueCase_ = 0;
+                value_ = null;
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_Storage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage(
+                        this);
+                if (valueCase_ == 1) {
+                    if (contentStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = contentStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 2) {
+                    if (hashStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = hashStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 3) {
+                    if (linkStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = linkStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 4) {
+                    if (encryptStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = encryptStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 5) {
+                    if (encryptShareStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = encryptShareStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 6) {
+                    if (encryptAddBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = encryptAddBuilder_.build();
+                    }
+                }
+                result.ty_ = ty_;
+                result.valueCase_ = valueCase_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance())
+                    return this;
+                if (other.getTy() != 0) {
+                    setTy(other.getTy());
+                }
+                switch (other.getValueCase()) {
+                case CONTENTSTORAGE: {
+                    mergeContentStorage(other.getContentStorage());
+                    break;
+                }
+                case HASHSTORAGE: {
+                    mergeHashStorage(other.getHashStorage());
+                    break;
+                }
+                case LINKSTORAGE: {
+                    mergeLinkStorage(other.getLinkStorage());
+                    break;
+                }
+                case ENCRYPTSTORAGE: {
+                    mergeEncryptStorage(other.getEncryptStorage());
+                    break;
+                }
+                case ENCRYPTSHARESTORAGE: {
+                    mergeEncryptShareStorage(other.getEncryptShareStorage());
+                    break;
+                }
+                case ENCRYPTADD: {
+                    mergeEncryptAdd(other.getEncryptAdd());
+                    break;
+                }
+                case VALUE_NOT_SET: {
+                    break;
+                }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int valueCase_ = 0;
+            private java.lang.Object value_;
+
+            public ValueCase getValueCase() {
+                return ValueCase.forNumber(valueCase_);
+            }
+
+            public Builder clearValue() {
+                valueCase_ = 0;
+                value_ = null;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> contentStorageBuilder_;
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public boolean hasContentStorage() {
+                return valueCase_ == 1;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
+                if (contentStorageBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                            .getDefaultInstance();
+                } else {
+                    if (valueCase_ == 1) {
+                        return contentStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder setContentStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
+                if (contentStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    contentStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder setContentStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder builderForValue) {
+                if (contentStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    contentStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder mergeContentStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
+                if (contentStorageBuilder_ == null) {
+                    if (valueCase_ == 1
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 1) {
+                        contentStorageBuilder_.mergeFrom(value);
+                    }
+                    contentStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder clearContentStorage() {
+                if (contentStorageBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    contentStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder getContentStorageBuilder() {
+                return getContentStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
+                if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
+                    return contentStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> getContentStorageFieldBuilder() {
+                if (contentStorageBuilder_ == null) {
+                    if (!(valueCase_ == 1)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    contentStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 1;
+                onChanged();
+                ;
+                return contentStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> hashStorageBuilder_;
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public boolean hasHashStorage() {
+                return valueCase_ == 2;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
+                if (hashStorageBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 2) {
+                        return hashStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder setHashStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
+                if (hashStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    hashStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder setHashStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder builderForValue) {
+                if (hashStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    hashStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder mergeHashStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
+                if (hashStorageBuilder_ == null) {
+                    if (valueCase_ == 2
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 2) {
+                        hashStorageBuilder_.mergeFrom(value);
+                    }
+                    hashStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder clearHashStorage() {
+                if (hashStorageBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    hashStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder getHashStorageBuilder() {
+                return getHashStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
+                if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
+                    return hashStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> getHashStorageFieldBuilder() {
+                if (hashStorageBuilder_ == null) {
+                    if (!(valueCase_ == 2)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    hashStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 2;
+                onChanged();
+                ;
+                return hashStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> linkStorageBuilder_;
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public boolean hasLinkStorage() {
+                return valueCase_ == 3;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
+                if (linkStorageBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 3) {
+                        return linkStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder setLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
+                if (linkStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    linkStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder setLinkStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder builderForValue) {
+                if (linkStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    linkStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder mergeLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
+                if (linkStorageBuilder_ == null) {
+                    if (valueCase_ == 3 && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 3) {
+                        linkStorageBuilder_.mergeFrom(value);
+                    }
+                    linkStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder clearLinkStorage() {
+                if (linkStorageBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    linkStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder getLinkStorageBuilder() {
+                return getLinkStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
+                if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
+                    return linkStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> getLinkStorageFieldBuilder() {
+                if (linkStorageBuilder_ == null) {
+                    if (!(valueCase_ == 3)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    linkStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 3;
+                onChanged();
+                ;
+                return linkStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> encryptStorageBuilder_;
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public boolean hasEncryptStorage() {
+                return valueCase_ == 4;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
+                if (encryptStorageBuilder_ == null) {
+                    if (valueCase_ == 4) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 4) {
+                        return encryptStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder setEncryptStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
+                if (encryptStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    encryptStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder setEncryptStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder builderForValue) {
+                if (encryptStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder mergeEncryptStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
+                if (encryptStorageBuilder_ == null) {
+                    if (valueCase_ == 4
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 4) {
+                        encryptStorageBuilder_.mergeFrom(value);
+                    }
+                    encryptStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder clearEncryptStorage() {
+                if (encryptStorageBuilder_ == null) {
+                    if (valueCase_ == 4) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 4) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    encryptStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder getEncryptStorageBuilder() {
+                return getEncryptStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
+                if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
+                    return encryptStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 4) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> getEncryptStorageFieldBuilder() {
+                if (encryptStorageBuilder_ == null) {
+                    if (!(valueCase_ == 4)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    encryptStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 4;
+                onChanged();
+                ;
+                return encryptStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> encryptShareStorageBuilder_;
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public boolean hasEncryptShareStorage() {
+                return valueCase_ == 5;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (valueCase_ == 5) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                            .getDefaultInstance();
+                } else {
+                    if (valueCase_ == 5) {
+                        return encryptShareStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder setEncryptShareStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    encryptShareStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder setEncryptShareStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder builderForValue) {
+                if (encryptShareStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptShareStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder mergeEncryptShareStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (valueCase_ == 5
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 5) {
+                        encryptShareStorageBuilder_.mergeFrom(value);
+                    }
+                    encryptShareStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder clearEncryptShareStorage() {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (valueCase_ == 5) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 5) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    encryptShareStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder getEncryptShareStorageBuilder() {
+                return getEncryptShareStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
+                if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
+                    return encryptShareStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 5) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> getEncryptShareStorageFieldBuilder() {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (!(valueCase_ == 5)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    encryptShareStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 5;
+                onChanged();
+                ;
+                return encryptShareStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> encryptAddBuilder_;
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public boolean hasEncryptAdd() {
+                return valueCase_ == 6;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+                if (encryptAddBuilder_ == null) {
+                    if (valueCase_ == 6) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 6) {
+                        return encryptAddBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder setEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+                if (encryptAddBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    encryptAddBuilder_.setMessage(value);
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder setEncryptAdd(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder builderForValue) {
+                if (encryptAddBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptAddBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder mergeEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+                if (encryptAddBuilder_ == null) {
+                    if (valueCase_ == 6 && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 6) {
+                        encryptAddBuilder_.mergeFrom(value);
+                    }
+                    encryptAddBuilder_.setMessage(value);
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder clearEncryptAdd() {
+                if (encryptAddBuilder_ == null) {
+                    if (valueCase_ == 6) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 6) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    encryptAddBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder getEncryptAddBuilder() {
+                return getEncryptAddFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+                if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
+                    return encryptAddBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 6) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> getEncryptAddFieldBuilder() {
+                if (encryptAddBuilder_ == null) {
+                    if (!(valueCase_ == 6)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd
+                                .getDefaultInstance();
+                    }
+                    encryptAddBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 6;
+                onChanged();
+                ;
+                return encryptAddBuilder_;
+            }
+
+            private int ty_;
+
+            /**
+             * <code>int32 ty = 7;</code>
+             */
+            public int getTy() {
+                return ty_;
+            }
+
+            /**
+             * <code>int32 ty = 7;</code>
+             */
+            public Builder setTy(int value) {
+
+                ty_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 ty = 7;</code>
+             */
+            public Builder clearTy() {
+
+                ty_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:Storage)
+        }
+
+        // @@protoc_insertion_point(class_scope:Storage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Storage> PARSER = new com.google.protobuf.AbstractParser<Storage>() {
+            @java.lang.Override
+            public Storage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Storage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<Storage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Storage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    public static final int CONTENTSTORAGE_FIELD_NUMBER = 1;
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    public boolean hasContentStorage() {
-      return valueCase_ == 1;
-    }
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
+    public interface StorageActionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:StorageAction)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        boolean hasContentStorage();
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage();
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        boolean hasHashStorage();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder();
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        boolean hasLinkStorage();
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage();
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        boolean hasEncryptStorage();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage();
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        boolean hasEncryptShareStorage();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder();
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        boolean hasEncryptAdd();
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
+
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder();
+
+        /**
+         * <code>int32 ty = 7;</code>
+         */
+        int getTy();
+
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.ValueCase getValueCase();
     }
 
-    public static final int HASHSTORAGE_FIELD_NUMBER = 2;
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    public boolean hasHashStorage() {
-      return valueCase_ == 2;
-    }
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int LINKSTORAGE_FIELD_NUMBER = 3;
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    public boolean hasLinkStorage() {
-      return valueCase_ == 3;
-    }
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.LinkNotaryStorage linkStorage = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int ENCRYPTSTORAGE_FIELD_NUMBER = 4;
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    public boolean hasEncryptStorage() {
-      return valueCase_ == 4;
-    }
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int ENCRYPTSHARESTORAGE_FIELD_NUMBER = 5;
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    public boolean hasEncryptShareStorage() {
-      return valueCase_ == 5;
-    }
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-    }
-    /**
-     * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-    }
-
-    public static final int ENCRYPTADD_FIELD_NUMBER = 6;
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    public boolean hasEncryptAdd() {
-      return valueCase_ == 6;
-    }
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
-      if (valueCase_ == 6) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-    }
-    /**
-     * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
-      if (valueCase_ == 6) {
-         return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-    }
-
-    public static final int TY_FIELD_NUMBER = 7;
-    private int ty_;
-    /**
-     * <code>int32 ty = 7;</code>
-     */
-    public int getTy() {
-      return ty_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (valueCase_ == 1) {
-        output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 2) {
-        output.writeMessage(2, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 3) {
-        output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
-      }
-      if (valueCase_ == 4) {
-        output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
-      }
-      if (valueCase_ == 5) {
-        output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
-      }
-      if (valueCase_ == 6) {
-        output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
-      }
-      if (ty_ != 0) {
-        output.writeInt32(7, ty_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (valueCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
-      }
-      if (valueCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
-      }
-      if (valueCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
-      }
-      if (valueCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
-      }
-      if (valueCase_ == 6) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
-      }
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, ty_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) obj;
-
-      if (getTy()
-          != other.getTy()) return false;
-      if (!getValueCase().equals(other.getValueCase())) return false;
-      switch (valueCase_) {
-        case 1:
-          if (!getContentStorage()
-              .equals(other.getContentStorage())) return false;
-          break;
-        case 2:
-          if (!getHashStorage()
-              .equals(other.getHashStorage())) return false;
-          break;
-        case 3:
-          if (!getLinkStorage()
-              .equals(other.getLinkStorage())) return false;
-          break;
-        case 4:
-          if (!getEncryptStorage()
-              .equals(other.getEncryptStorage())) return false;
-          break;
-        case 5:
-          if (!getEncryptShareStorage()
-              .equals(other.getEncryptShareStorage())) return false;
-          break;
-        case 6:
-          if (!getEncryptAdd()
-              .equals(other.getEncryptAdd())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      switch (valueCase_) {
-        case 1:
-          hash = (37 * hash) + CONTENTSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getContentStorage().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + HASHSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getHashStorage().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + LINKSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getLinkStorage().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + ENCRYPTSTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getEncryptStorage().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + ENCRYPTSHARESTORAGE_FIELD_NUMBER;
-          hash = (53 * hash) + getEncryptShareStorage().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
-          hash = (53 * hash) + getEncryptAdd().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code StorageAction}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:StorageAction)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageActionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_descriptor;
-      }
+    public static final class StorageAction extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:StorageAction)
+            StorageActionOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder.class);
-      }
+        // Use StorageAction.newBuilder() to construct.
+        private StorageAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+        private StorageAction() {
+        }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new StorageAction();
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
 
-        valueCase_ = 0;
-        value_ = null;
-        return this;
-      }
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
+        }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_descriptor;
-      }
+        private StorageAction(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 1) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 1;
+                        break;
+                    }
+                    case 18: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 2) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 2;
+                        break;
+                    }
+                    case 26: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 3) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 3;
+                        break;
+                    }
+                    case 34: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 4) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 4;
+                        break;
+                    }
+                    case 42: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder subBuilder = null;
+                        if (valueCase_ == 5) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 5;
+                        break;
+                    }
+                    case 50: {
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder subBuilder = null;
+                        if (valueCase_ == 6) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 6;
+                        break;
+                    }
+                    case 56: {
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.getDefaultInstance();
-      }
+                        ty_ = input.readInt32();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_descriptor;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction(this);
-        if (valueCase_ == 1) {
-          if (contentStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = contentStorageBuilder_.build();
-          }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder.class);
         }
-        if (valueCase_ == 2) {
-          if (hashStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = hashStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 3) {
-          if (linkStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = linkStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 4) {
-          if (encryptStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = encryptStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 5) {
-          if (encryptShareStorageBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = encryptShareStorageBuilder_.build();
-          }
-        }
-        if (valueCase_ == 6) {
-          if (encryptAddBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = encryptAddBuilder_.build();
-          }
-        }
-        result.ty_ = ty_;
-        result.valueCase_ = valueCase_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
+        private int valueCase_ = 0;
+        private java.lang.Object value_;
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
-        }
-        switch (other.getValueCase()) {
-          case CONTENTSTORAGE: {
-            mergeContentStorage(other.getContentStorage());
-            break;
-          }
-          case HASHSTORAGE: {
-            mergeHashStorage(other.getHashStorage());
-            break;
-          }
-          case LINKSTORAGE: {
-            mergeLinkStorage(other.getLinkStorage());
-            break;
-          }
-          case ENCRYPTSTORAGE: {
-            mergeEncryptStorage(other.getEncryptStorage());
-            break;
-          }
-          case ENCRYPTSHARESTORAGE: {
-            mergeEncryptShareStorage(other.getEncryptShareStorage());
-            break;
-          }
-          case ENCRYPTADD: {
-            mergeEncryptAdd(other.getEncryptAdd());
-            break;
-          }
-          case VALUE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+            CONTENTSTORAGE(1), HASHSTORAGE(2), LINKSTORAGE(3), ENCRYPTSTORAGE(4), ENCRYPTSHARESTORAGE(5), ENCRYPTADD(6),
+            VALUE_NOT_SET(0);
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+            private final int value;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public ValueCase
-          getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
-      }
+            private ValueCase(int value) {
+                this.value = value;
+            }
 
-      public Builder clearValue() {
-        valueCase_ = 0;
-        value_ = null;
-        onChanged();
-        return this;
-      }
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static ValueCase valueOf(int value) {
+                return forNumber(value);
+            }
 
+            public static ValueCase forNumber(int value) {
+                switch (value) {
+                case 1:
+                    return CONTENTSTORAGE;
+                case 2:
+                    return HASHSTORAGE;
+                case 3:
+                    return LINKSTORAGE;
+                case 4:
+                    return ENCRYPTSTORAGE;
+                case 5:
+                    return ENCRYPTSHARESTORAGE;
+                case 6:
+                    return ENCRYPTADD;
+                case 0:
+                    return VALUE_NOT_SET;
+                default:
+                    return null;
+                }
+            }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> contentStorageBuilder_;
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public boolean hasContentStorage() {
-        return valueCase_ == 1;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
-        if (contentStorageBuilder_ == null) {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 1) {
-            return contentStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder setContentStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
-        if (contentStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          contentStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder setContentStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder builderForValue) {
-        if (contentStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          contentStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder mergeContentStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
-        if (contentStorageBuilder_ == null) {
-          if (valueCase_ == 1 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 1) {
-            contentStorageBuilder_.mergeFrom(value);
-          }
-          contentStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public Builder clearContentStorage() {
-        if (contentStorageBuilder_ == null) {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          contentStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder getContentStorageBuilder() {
-        return getContentStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
-        if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
-          return contentStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> 
-          getContentStorageFieldBuilder() {
-        if (contentStorageBuilder_ == null) {
-          if (!(valueCase_ == 1)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-          }
-          contentStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 1;
-        onChanged();;
-        return contentStorageBuilder_;
-      }
+            public int getNumber() {
+                return this.value;
+            }
+        };
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> hashStorageBuilder_;
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public boolean hasHashStorage() {
-        return valueCase_ == 2;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
-        if (hashStorageBuilder_ == null) {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 2) {
-            return hashStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+        public ValueCase getValueCase() {
+            return ValueCase.forNumber(valueCase_);
         }
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder setHashStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
-        if (hashStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          hashStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder setHashStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder builderForValue) {
-        if (hashStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          hashStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder mergeHashStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
-        if (hashStorageBuilder_ == null) {
-          if (valueCase_ == 2 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 2) {
-            hashStorageBuilder_.mergeFrom(value);
-          }
-          hashStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public Builder clearHashStorage() {
-        if (hashStorageBuilder_ == null) {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          hashStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder getHashStorageBuilder() {
-        return getHashStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
-        if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
-          return hashStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> 
-          getHashStorageFieldBuilder() {
-        if (hashStorageBuilder_ == null) {
-          if (!(valueCase_ == 2)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-          }
-          hashStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 2;
-        onChanged();;
-        return hashStorageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> linkStorageBuilder_;
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public boolean hasLinkStorage() {
-        return valueCase_ == 3;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
-        if (linkStorageBuilder_ == null) {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 3) {
-            return linkStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder setLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
-        if (linkStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          linkStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder setLinkStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder builderForValue) {
-        if (linkStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          linkStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder mergeLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
-        if (linkStorageBuilder_ == null) {
-          if (valueCase_ == 3 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 3) {
-            linkStorageBuilder_.mergeFrom(value);
-          }
-          linkStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public Builder clearLinkStorage() {
-        if (linkStorageBuilder_ == null) {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          linkStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder getLinkStorageBuilder() {
-        return getLinkStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
-        if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
-          return linkStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.LinkNotaryStorage linkStorage = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> 
-          getLinkStorageFieldBuilder() {
-        if (linkStorageBuilder_ == null) {
-          if (!(valueCase_ == 3)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-          }
-          linkStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 3;
-        onChanged();;
-        return linkStorageBuilder_;
-      }
+        public static final int CONTENTSTORAGE_FIELD_NUMBER = 1;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> encryptStorageBuilder_;
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public boolean hasEncryptStorage() {
-        return valueCase_ == 4;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
-        if (encryptStorageBuilder_ == null) {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 4) {
-            return encryptStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        public boolean hasContentStorage() {
+            return valueCase_ == 1;
         }
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder setEncryptStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
-        if (encryptStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          encryptStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder setEncryptStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder builderForValue) {
-        if (encryptStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          encryptStorageBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder mergeEncryptStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
-        if (encryptStorageBuilder_ == null) {
-          if (valueCase_ == 4 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 4) {
-            encryptStorageBuilder_.mergeFrom(value);
-          }
-          encryptStorageBuilder_.setMessage(value);
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public Builder clearEncryptStorage() {
-        if (encryptStorageBuilder_ == null) {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          encryptStorageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder getEncryptStorageBuilder() {
-        return getEncryptStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
-        if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
-          return encryptStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> 
-          getEncryptStorageFieldBuilder() {
-        if (encryptStorageBuilder_ == null) {
-          if (!(valueCase_ == 4)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-          }
-          encryptStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 4;
-        onChanged();;
-        return encryptStorageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> encryptShareStorageBuilder_;
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public boolean hasEncryptShareStorage() {
-        return valueCase_ == 5;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
-        if (encryptShareStorageBuilder_ == null) {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-        } else {
-          if (valueCase_ == 5) {
-            return encryptShareStorageBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder setEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
-        if (encryptShareStorageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          encryptShareStorageBuilder_.setMessage(value);
+
+        /**
+         * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder setEncryptShareStorage(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder builderForValue) {
-        if (encryptShareStorageBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          encryptShareStorageBuilder_.setMessage(builderForValue.build());
+
+        public static final int HASHSTORAGE_FIELD_NUMBER = 2;
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        public boolean hasHashStorage() {
+            return valueCase_ == 2;
         }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder mergeEncryptShareStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
-        if (encryptShareStorageBuilder_ == null) {
-          if (valueCase_ == 5 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 5) {
-            encryptShareStorageBuilder_.mergeFrom(value);
-          }
-          encryptShareStorageBuilder_.setMessage(value);
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public Builder clearEncryptShareStorage() {
-        if (encryptShareStorageBuilder_ == null) {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          encryptShareStorageBuilder_.clear();
+
+        /**
+         * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
         }
-        return this;
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder getEncryptShareStorageBuilder() {
-        return getEncryptShareStorageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
-        if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
-          return encryptShareStorageBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
+
+        public static final int LINKSTORAGE_FIELD_NUMBER = 3;
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        public boolean hasLinkStorage() {
+            return valueCase_ == 3;
         }
-      }
-      /**
-       * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> 
-          getEncryptShareStorageFieldBuilder() {
-        if (encryptShareStorageBuilder_ == null) {
-          if (!(valueCase_ == 5)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-          }
-          encryptShareStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 5;
-        onChanged();;
-        return encryptShareStorageBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> encryptAddBuilder_;
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public boolean hasEncryptAdd() {
-        return valueCase_ == 6;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
-        if (encryptAddBuilder_ == null) {
-          if (valueCase_ == 6) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-        } else {
-          if (valueCase_ == 6) {
-            return encryptAddBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        /**
+         * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder setEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
-        if (encryptAddBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          encryptAddBuilder_.setMessage(value);
+
+        public static final int ENCRYPTSTORAGE_FIELD_NUMBER = 4;
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        public boolean hasEncryptStorage() {
+            return valueCase_ == 4;
         }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder setEncryptAdd(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder builderForValue) {
-        if (encryptAddBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          encryptAddBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
+            if (valueCase_ == 4) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder mergeEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
-        if (encryptAddBuilder_ == null) {
-          if (valueCase_ == 6 &&
-              value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 6) {
-            encryptAddBuilder_.mergeFrom(value);
-          }
-          encryptAddBuilder_.setMessage(value);
+
+        /**
+         * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
+            if (valueCase_ == 4) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public Builder clearEncryptAdd() {
-        if (encryptAddBuilder_ == null) {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          encryptAddBuilder_.clear();
+
+        public static final int ENCRYPTSHARESTORAGE_FIELD_NUMBER = 5;
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        public boolean hasEncryptShareStorage() {
+            return valueCase_ == 5;
         }
-        return this;
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder getEncryptAddBuilder() {
-        return getEncryptAddFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
-        if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
-          return encryptAddBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 6) {
-            return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
+            if (valueCase_ == 5) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> 
-          getEncryptAddFieldBuilder() {
-        if (encryptAddBuilder_ == null) {
-          if (!(valueCase_ == 6)) {
-            value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-          }
-          encryptAddBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        /**
+         * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
+            if (valueCase_ == 5) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
         }
-        valueCase_ = 6;
-        onChanged();;
-        return encryptAddBuilder_;
-      }
 
-      private int ty_ ;
-      /**
-       * <code>int32 ty = 7;</code>
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 ty = 7;</code>
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 ty = 7;</code>
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        public static final int ENCRYPTADD_FIELD_NUMBER = 6;
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        public boolean hasEncryptAdd() {
+            return valueCase_ == 6;
+        }
 
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+            if (valueCase_ == 6) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        }
 
-      // @@protoc_insertion_point(builder_scope:StorageAction)
-    }
+        /**
+         * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+            if (valueCase_ == 6) {
+                return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+        }
 
-    // @@protoc_insertion_point(class_scope:StorageAction)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction();
-    }
+        public static final int TY_FIELD_NUMBER = 7;
+        private int ty_;
 
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>int32 ty = 7;</code>
+         */
+        public int getTy() {
+            return ty_;
+        }
 
-    private static final com.google.protobuf.Parser<StorageAction>
-        PARSER = new com.google.protobuf.AbstractParser<StorageAction>() {
-      @java.lang.Override
-      public StorageAction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StorageAction(input, extensionRegistry);
-      }
-    };
+        private byte memoizedIsInitialized = -1;
 
-    public static com.google.protobuf.Parser<StorageAction> parser() {
-      return PARSER;
-    }
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<StorageAction> getParserForType() {
-      return PARSER;
-    }
+            memoizedIsInitialized = 1;
+            return true;
+        }
 
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (valueCase_ == 1) {
+                output.writeMessage(1,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 2) {
+                output.writeMessage(2,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 3) {
+                output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
+            }
+            if (valueCase_ == 4) {
+                output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
+            }
+            if (valueCase_ == 5) {
+                output.writeMessage(5,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
+            }
+            if (valueCase_ == 6) {
+                output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+            }
+            if (ty_ != 0) {
+                output.writeInt32(7, ty_);
+            }
+            unknownFields.writeTo(output);
+        }
 
-  }
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
 
-  public interface ContentOnlyNotaryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ContentOnlyNotaryStorage)
-      com.google.protobuf.MessageOrBuilder {
+            size = 0;
+            if (valueCase_ == 1) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 2) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(2,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_);
+            }
+            if (valueCase_ == 3) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(3,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_);
+            }
+            if (valueCase_ == 4) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(4,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_);
+            }
+            if (valueCase_ == 5) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(5,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_);
+            }
+            if (valueCase_ == 6) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(6,
+                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_);
+            }
+            if (ty_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(7, ty_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
 
-    /**
-     * <pre>
-     *长度需要小于512k
-     * </pre>
-     *
-     * <code>bytes content = 1;</code>
-     */
-    com.google.protobuf.ByteString getContent();
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) obj;
 
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <pre>
-     * Op 0表示创建 1表示追加add
-     * </pre>
-     *
-     * <code>int32 op = 3;</code>
-     */
-    int getOp();
-
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   * 内容存证模型
-   * </pre>
-   *
-   * Protobuf type {@code ContentOnlyNotaryStorage}
-   */
-  public  static final class ContentOnlyNotaryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ContentOnlyNotaryStorage)
-      ContentOnlyNotaryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ContentOnlyNotaryStorage.newBuilder() to construct.
-    private ContentOnlyNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ContentOnlyNotaryStorage() {
-      content_ = com.google.protobuf.ByteString.EMPTY;
-      key_ = "";
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ContentOnlyNotaryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ContentOnlyNotaryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
+            if (getTy() != other.getTy())
+                return false;
+            if (!getValueCase().equals(other.getValueCase()))
+                return false;
+            switch (valueCase_) {
+            case 1:
+                if (!getContentStorage().equals(other.getContentStorage()))
+                    return false;
+                break;
+            case 2:
+                if (!getHashStorage().equals(other.getHashStorage()))
+                    return false;
+                break;
+            case 3:
+                if (!getLinkStorage().equals(other.getLinkStorage()))
+                    return false;
+                break;
+            case 4:
+                if (!getEncryptStorage().equals(other.getEncryptStorage()))
+                    return false;
+                break;
+            case 5:
+                if (!getEncryptShareStorage().equals(other.getEncryptShareStorage()))
+                    return false;
+                break;
+            case 6:
+                if (!getEncryptAdd().equals(other.getEncryptAdd()))
+                    return false;
+                break;
             case 0:
-              done = true;
-              break;
-            case 10: {
-
-              content_ = input.readBytes();
-              break;
+            default:
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
-              break;
-            }
-            case 24: {
-
-              op_ = input.readInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              value_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_descriptor;
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TY_FIELD_NUMBER;
+            hash = (53 * hash) + getTy();
+            switch (valueCase_) {
+            case 1:
+                hash = (37 * hash) + CONTENTSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getContentStorage().hashCode();
+                break;
+            case 2:
+                hash = (37 * hash) + HASHSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getHashStorage().hashCode();
+                break;
+            case 3:
+                hash = (37 * hash) + LINKSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getLinkStorage().hashCode();
+                break;
+            case 4:
+                hash = (37 * hash) + ENCRYPTSTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getEncryptStorage().hashCode();
+                break;
+            case 5:
+                hash = (37 * hash) + ENCRYPTSHARESTORAGE_FIELD_NUMBER;
+                hash = (53 * hash) + getEncryptShareStorage().hashCode();
+                break;
+            case 6:
+                hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
+                hash = (53 * hash) + getEncryptAdd().hashCode();
+                break;
+            case 0:
+            default:
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code StorageAction}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:StorageAction)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageActionOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                ty_ = 0;
+
+                valueCase_ = 0;
+                value_ = null;
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_StorageAction_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction(
+                        this);
+                if (valueCase_ == 1) {
+                    if (contentStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = contentStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 2) {
+                    if (hashStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = hashStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 3) {
+                    if (linkStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = linkStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 4) {
+                    if (encryptStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = encryptStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 5) {
+                    if (encryptShareStorageBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = encryptShareStorageBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 6) {
+                    if (encryptAddBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = encryptAddBuilder_.build();
+                    }
+                }
+                result.ty_ = ty_;
+                result.valueCase_ = valueCase_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction.getDefaultInstance())
+                    return this;
+                if (other.getTy() != 0) {
+                    setTy(other.getTy());
+                }
+                switch (other.getValueCase()) {
+                case CONTENTSTORAGE: {
+                    mergeContentStorage(other.getContentStorage());
+                    break;
+                }
+                case HASHSTORAGE: {
+                    mergeHashStorage(other.getHashStorage());
+                    break;
+                }
+                case LINKSTORAGE: {
+                    mergeLinkStorage(other.getLinkStorage());
+                    break;
+                }
+                case ENCRYPTSTORAGE: {
+                    mergeEncryptStorage(other.getEncryptStorage());
+                    break;
+                }
+                case ENCRYPTSHARESTORAGE: {
+                    mergeEncryptShareStorage(other.getEncryptShareStorage());
+                    break;
+                }
+                case ENCRYPTADD: {
+                    mergeEncryptAdd(other.getEncryptAdd());
+                    break;
+                }
+                case VALUE_NOT_SET: {
+                    break;
+                }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int valueCase_ = 0;
+            private java.lang.Object value_;
+
+            public ValueCase getValueCase() {
+                return ValueCase.forNumber(valueCase_);
+            }
+
+            public Builder clearValue() {
+                valueCase_ = 0;
+                value_ = null;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> contentStorageBuilder_;
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public boolean hasContentStorage() {
+                return valueCase_ == 1;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
+                if (contentStorageBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                            .getDefaultInstance();
+                } else {
+                    if (valueCase_ == 1) {
+                        return contentStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder setContentStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
+                if (contentStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    contentStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder setContentStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder builderForValue) {
+                if (contentStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    contentStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder mergeContentStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage value) {
+                if (contentStorageBuilder_ == null) {
+                    if (valueCase_ == 1
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 1) {
+                        contentStorageBuilder_.mergeFrom(value);
+                    }
+                    contentStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public Builder clearContentStorage() {
+                if (contentStorageBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    contentStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder getContentStorageBuilder() {
+                return getContentStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
+                if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
+                    return contentStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder> getContentStorageFieldBuilder() {
+                if (contentStorageBuilder_ == null) {
+                    if (!(valueCase_ == 1)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    contentStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 1;
+                onChanged();
+                ;
+                return contentStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> hashStorageBuilder_;
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public boolean hasHashStorage() {
+                return valueCase_ == 2;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
+                if (hashStorageBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 2) {
+                        return hashStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder setHashStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
+                if (hashStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    hashStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder setHashStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder builderForValue) {
+                if (hashStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    hashStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder mergeHashStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage value) {
+                if (hashStorageBuilder_ == null) {
+                    if (valueCase_ == 2
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 2) {
+                        hashStorageBuilder_.mergeFrom(value);
+                    }
+                    hashStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public Builder clearHashStorage() {
+                if (hashStorageBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    hashStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder getHashStorageBuilder() {
+                return getHashStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
+                if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
+                    return hashStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder> getHashStorageFieldBuilder() {
+                if (hashStorageBuilder_ == null) {
+                    if (!(valueCase_ == 2)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    hashStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 2;
+                onChanged();
+                ;
+                return hashStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> linkStorageBuilder_;
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public boolean hasLinkStorage() {
+                return valueCase_ == 3;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
+                if (linkStorageBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 3) {
+                        return linkStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder setLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
+                if (linkStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    linkStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder setLinkStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder builderForValue) {
+                if (linkStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    linkStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder mergeLinkStorage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage value) {
+                if (linkStorageBuilder_ == null) {
+                    if (valueCase_ == 3 && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 3) {
+                        linkStorageBuilder_.mergeFrom(value);
+                    }
+                    linkStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public Builder clearLinkStorage() {
+                if (linkStorageBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    linkStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder getLinkStorageBuilder() {
+                return getLinkStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
+                if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
+                    return linkStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder> getLinkStorageFieldBuilder() {
+                if (linkStorageBuilder_ == null) {
+                    if (!(valueCase_ == 3)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    linkStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 3;
+                onChanged();
+                ;
+                return linkStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> encryptStorageBuilder_;
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public boolean hasEncryptStorage() {
+                return valueCase_ == 4;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
+                if (encryptStorageBuilder_ == null) {
+                    if (valueCase_ == 4) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 4) {
+                        return encryptStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder setEncryptStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
+                if (encryptStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    encryptStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder setEncryptStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder builderForValue) {
+                if (encryptStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder mergeEncryptStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage value) {
+                if (encryptStorageBuilder_ == null) {
+                    if (valueCase_ == 4
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 4) {
+                        encryptStorageBuilder_.mergeFrom(value);
+                    }
+                    encryptStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public Builder clearEncryptStorage() {
+                if (encryptStorageBuilder_ == null) {
+                    if (valueCase_ == 4) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 4) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    encryptStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder getEncryptStorageBuilder() {
+                return getEncryptStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
+                if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
+                    return encryptStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 4) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder> getEncryptStorageFieldBuilder() {
+                if (encryptStorageBuilder_ == null) {
+                    if (!(valueCase_ == 4)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    encryptStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 4;
+                onChanged();
+                ;
+                return encryptStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> encryptShareStorageBuilder_;
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public boolean hasEncryptShareStorage() {
+                return valueCase_ == 5;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (valueCase_ == 5) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                            .getDefaultInstance();
+                } else {
+                    if (valueCase_ == 5) {
+                        return encryptShareStorageBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder setEncryptShareStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    encryptShareStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder setEncryptShareStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder builderForValue) {
+                if (encryptShareStorageBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptShareStorageBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder mergeEncryptShareStorage(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage value) {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (valueCase_ == 5
+                            && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 5) {
+                        encryptShareStorageBuilder_.mergeFrom(value);
+                    }
+                    encryptShareStorageBuilder_.setMessage(value);
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public Builder clearEncryptShareStorage() {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (valueCase_ == 5) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 5) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    encryptShareStorageBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder getEncryptShareStorageBuilder() {
+                return getEncryptShareStorageFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
+                if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
+                    return encryptShareStorageBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 5) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder> getEncryptShareStorageFieldBuilder() {
+                if (encryptShareStorageBuilder_ == null) {
+                    if (!(valueCase_ == 5)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                                .getDefaultInstance();
+                    }
+                    encryptShareStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 5;
+                onChanged();
+                ;
+                return encryptShareStorageBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> encryptAddBuilder_;
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public boolean hasEncryptAdd() {
+                return valueCase_ == 6;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
+                if (encryptAddBuilder_ == null) {
+                    if (valueCase_ == 6) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 6) {
+                        return encryptAddBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder setEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+                if (encryptAddBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    encryptAddBuilder_.setMessage(value);
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder setEncryptAdd(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder builderForValue) {
+                if (encryptAddBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptAddBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder mergeEncryptAdd(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd value) {
+                if (encryptAddBuilder_ == null) {
+                    if (valueCase_ == 6 && value_ != cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 6) {
+                        encryptAddBuilder_.mergeFrom(value);
+                    }
+                    encryptAddBuilder_.setMessage(value);
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public Builder clearEncryptAdd() {
+                if (encryptAddBuilder_ == null) {
+                    if (valueCase_ == 6) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 6) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    encryptAddBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder getEncryptAddBuilder() {
+                return getEncryptAddFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
+                if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
+                    return encryptAddBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 6) {
+                        return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder> getEncryptAddFieldBuilder() {
+                if (encryptAddBuilder_ == null) {
+                    if (!(valueCase_ == 6)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd
+                                .getDefaultInstance();
+                    }
+                    encryptAddBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 6;
+                onChanged();
+                ;
+                return encryptAddBuilder_;
+            }
+
+            private int ty_;
+
+            /**
+             * <code>int32 ty = 7;</code>
+             */
+            public int getTy() {
+                return ty_;
+            }
+
+            /**
+             * <code>int32 ty = 7;</code>
+             */
+            public Builder setTy(int value) {
+
+                ty_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 ty = 7;</code>
+             */
+            public Builder clearTy() {
+
+                ty_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:StorageAction)
+        }
+
+        // @@protoc_insertion_point(class_scope:StorageAction)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<StorageAction> PARSER = new com.google.protobuf.AbstractParser<StorageAction>() {
+            @java.lang.Override
+            public StorageAction parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new StorageAction(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<StorageAction> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<StorageAction> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageAction getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder.class);
+    public interface ContentOnlyNotaryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:ContentOnlyNotaryStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 长度需要小于512k
+         * </pre>
+         *
+         * <code>bytes content = 1;</code>
+         */
+        com.google.protobuf.ByteString getContent();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <pre>
+         * Op 0表示创建 1表示追加add
+         * </pre>
+         *
+         * <code>int32 op = 3;</code>
+         */
+        int getOp();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        java.lang.String getValue();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        com.google.protobuf.ByteString getValueBytes();
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString content_;
-    /**
-     * <pre>
-     *长度需要小于512k
-     * </pre>
-     *
-     * <code>bytes content = 1;</code>
-     */
-    public com.google.protobuf.ByteString getContent() {
-      return content_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object key_;
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OP_FIELD_NUMBER = 3;
-    private int op_;
-    /**
-     * <pre>
-     * Op 0表示创建 1表示追加add
-     * </pre>
-     *
-     * <code>int32 op = 3;</code>
-     */
-    public int getOp() {
-      return op_;
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!content_.isEmpty()) {
-        output.writeBytes(1, content_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-      }
-      if (op_ != 0) {
-        output.writeInt32(3, op_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!content_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, content_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-      }
-      if (op_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, op_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) obj;
-
-      if (!getContent()
-          .equals(other.getContent())) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (getOp()
-          != other.getOp()) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + OP_FIELD_NUMBER;
-      hash = (53 * hash) + getOp();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 内容存证模型
@@ -4189,901 +4022,932 @@ public final class StorageProtobuf {
      *
      * Protobuf type {@code ContentOnlyNotaryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ContentOnlyNotaryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_descriptor;
-      }
+    public static final class ContentOnlyNotaryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:ContentOnlyNotaryStorage)
+            ContentOnlyNotaryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use ContentOnlyNotaryStorage.newBuilder() to construct.
+        private ContentOnlyNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        content_ = com.google.protobuf.ByteString.EMPTY;
 
-        key_ = "";
-
-        op_ = 0;
-
-        value_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private ContentOnlyNotaryStorage() {
+            content_ = com.google.protobuf.ByteString.EMPTY;
+            key_ = "";
+            value_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage(this);
-        result.content_ = content_;
-        result.key_ = key_;
-        result.op_ = op_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new ContentOnlyNotaryStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance()) return this;
-        if (other.getContent() != com.google.protobuf.ByteString.EMPTY) {
-          setContent(other.getContent());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        if (other.getOp() != 0) {
-          setOp(other.getOp());
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *长度需要小于512k
-       * </pre>
-       *
-       * <code>bytes content = 1;</code>
-       */
-      public com.google.protobuf.ByteString getContent() {
-        return content_;
-      }
-      /**
-       * <pre>
-       *长度需要小于512k
-       * </pre>
-       *
-       * <code>bytes content = 1;</code>
-       */
-      public Builder setContent(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        content_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *长度需要小于512k
-       * </pre>
-       *
-       * <code>bytes content = 1;</code>
-       */
-      public Builder clearContent() {
-        
-        content_ = getDefaultInstance().getContent();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int op_ ;
-      /**
-       * <pre>
-       * Op 0表示创建 1表示追加add
-       * </pre>
-       *
-       * <code>int32 op = 3;</code>
-       */
-      public int getOp() {
-        return op_;
-      }
-      /**
-       * <pre>
-       * Op 0表示创建 1表示追加add
-       * </pre>
-       *
-       * <code>int32 op = 3;</code>
-       */
-      public Builder setOp(int value) {
-        
-        op_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Op 0表示创建 1表示追加add
-       * </pre>
-       *
-       * <code>int32 op = 3;</code>
-       */
-      public Builder clearOp() {
-        
-        op_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:ContentOnlyNotaryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:ContentOnlyNotaryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ContentOnlyNotaryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<ContentOnlyNotaryStorage>() {
-      @java.lang.Override
-      public ContentOnlyNotaryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ContentOnlyNotaryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ContentOnlyNotaryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ContentOnlyNotaryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface HashOnlyNotaryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:HashOnlyNotaryStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *长度固定为32字节
-     * </pre>
-     *
-     * <code>bytes hash = 1;</code>
-     */
-    com.google.protobuf.ByteString getHash();
-
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 3;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   *哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
-   * </pre>
-   *
-   * Protobuf type {@code HashOnlyNotaryStorage}
-   */
-  public  static final class HashOnlyNotaryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:HashOnlyNotaryStorage)
-      HashOnlyNotaryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use HashOnlyNotaryStorage.newBuilder() to construct.
-    private HashOnlyNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private HashOnlyNotaryStorage() {
-      hash_ = com.google.protobuf.ByteString.EMPTY;
-      key_ = "";
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HashOnlyNotaryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private HashOnlyNotaryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              hash_ = input.readBytes();
-              break;
+        private ContentOnlyNotaryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
 
-              key_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        content_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              value_ = s;
-              break;
+                        key_ = s;
+                        break;
+                    }
+                    case 24: {
+
+                        op_ = input.readInt32();
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        value_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder.class);
+        }
+
+        public static final int CONTENT_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString content_;
+
+        /**
+         * <pre>
+         * 长度需要小于512k
+         * </pre>
+         *
+         * <code>bytes content = 1;</code>
+         */
+        public com.google.protobuf.ByteString getContent() {
+            return content_;
+        }
+
+        public static final int KEY_FIELD_NUMBER = 2;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int OP_FIELD_NUMBER = 3;
+        private int op_;
+
+        /**
+         * <pre>
+         * Op 0表示创建 1表示追加add
+         * </pre>
+         *
+         * <code>int32 op = 3;</code>
+         */
+        public int getOp() {
+            return op_;
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 4;
+        private volatile java.lang.Object value_;
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                value_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                value_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!content_.isEmpty()) {
+                output.writeBytes(1, content_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+            }
+            if (op_ != 0) {
+                output.writeInt32(3, op_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!content_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, content_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+            }
+            if (op_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, op_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) obj;
+
+            if (!getContent().equals(other.getContent()))
+                return false;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (getOp() != other.getOp())
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+            hash = (53 * hash) + getContent().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + OP_FIELD_NUMBER;
+            hash = (53 * hash) + getOp();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 内容存证模型
+         * </pre>
+         *
+         * Protobuf type {@code ContentOnlyNotaryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:ContentOnlyNotaryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                content_ = com.google.protobuf.ByteString.EMPTY;
+
+                key_ = "";
+
+                op_ = 0;
+
+                value_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ContentOnlyNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage(
+                        this);
+                result.content_ = content_;
+                result.key_ = key_;
+                result.op_ = op_;
+                result.value_ = value_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) {
+                    return mergeFrom(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage
+                        .getDefaultInstance())
+                    return this;
+                if (other.getContent() != com.google.protobuf.ByteString.EMPTY) {
+                    setContent(other.getContent());
+                }
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (other.getOp() != 0) {
+                    setOp(other.getOp());
+                }
+                if (!other.getValue().isEmpty()) {
+                    value_ = other.value_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             * 长度需要小于512k
+             * </pre>
+             *
+             * <code>bytes content = 1;</code>
+             */
+            public com.google.protobuf.ByteString getContent() {
+                return content_;
+            }
+
+            /**
+             * <pre>
+             * 长度需要小于512k
+             * </pre>
+             *
+             * <code>bytes content = 1;</code>
+             */
+            public Builder setContent(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                content_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 长度需要小于512k
+             * </pre>
+             *
+             * <code>bytes content = 1;</code>
+             */
+            public Builder clearContent() {
+
+                content_ = getDefaultInstance().getContent();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int op_;
+
+            /**
+             * <pre>
+             * Op 0表示创建 1表示追加add
+             * </pre>
+             *
+             * <code>int32 op = 3;</code>
+             */
+            public int getOp() {
+                return op_;
+            }
+
+            /**
+             * <pre>
+             * Op 0表示创建 1表示追加add
+             * </pre>
+             *
+             * <code>int32 op = 3;</code>
+             */
+            public Builder setOp(int value) {
+
+                op_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * Op 0表示创建 1表示追加add
+             * </pre>
+             *
+             * <code>int32 op = 3;</code>
+             */
+            public Builder clearOp() {
+
+                op_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object value_ = "";
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public java.lang.String getValue() {
+                java.lang.Object ref = value_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    value_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public com.google.protobuf.ByteString getValueBytes() {
+                java.lang.Object ref = value_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    value_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public Builder setValue(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public Builder setValueBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:ContentOnlyNotaryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:ContentOnlyNotaryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<ContentOnlyNotaryStorage> PARSER = new com.google.protobuf.AbstractParser<ContentOnlyNotaryStorage>() {
+            @java.lang.Override
+            public ContentOnlyNotaryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new ContentOnlyNotaryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<ContentOnlyNotaryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ContentOnlyNotaryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder.class);
+    public interface HashOnlyNotaryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:HashOnlyNotaryStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 长度固定为32字节
+         * </pre>
+         *
+         * <code>bytes hash = 1;</code>
+         */
+        com.google.protobuf.ByteString getHash();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         */
+        java.lang.String getValue();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         */
+        com.google.protobuf.ByteString getValueBytes();
     }
 
-    public static final int HASH_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString hash_;
-    /**
-     * <pre>
-     *长度固定为32字节
-     * </pre>
-     *
-     * <code>bytes hash = 1;</code>
-     */
-    public com.google.protobuf.ByteString getHash() {
-      return hash_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object key_;
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 3;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!hash_.isEmpty()) {
-        output.writeBytes(1, hash_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!hash_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, hash_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) obj;
-
-      if (!getHash()
-          .equals(other.getHash())) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HASH_FIELD_NUMBER;
-      hash = (53 * hash) + getHash().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      *哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
@@ -5091,896 +4955,864 @@ public final class StorageProtobuf {
      *
      * Protobuf type {@code HashOnlyNotaryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:HashOnlyNotaryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_descriptor;
-      }
+    public static final class HashOnlyNotaryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:HashOnlyNotaryStorage)
+            HashOnlyNotaryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use HashOnlyNotaryStorage.newBuilder() to construct.
+        private HashOnlyNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        hash_ = com.google.protobuf.ByteString.EMPTY;
 
-        key_ = "";
-
-        value_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private HashOnlyNotaryStorage() {
+            hash_ = com.google.protobuf.ByteString.EMPTY;
+            key_ = "";
+            value_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage(this);
-        result.hash_ = hash_;
-        result.key_ = key_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new HashOnlyNotaryStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance()) return this;
-        if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
-          setHash(other.getHash());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *长度固定为32字节
-       * </pre>
-       *
-       * <code>bytes hash = 1;</code>
-       */
-      public com.google.protobuf.ByteString getHash() {
-        return hash_;
-      }
-      /**
-       * <pre>
-       *长度固定为32字节
-       * </pre>
-       *
-       * <code>bytes hash = 1;</code>
-       */
-      public Builder setHash(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        hash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *长度固定为32字节
-       * </pre>
-       *
-       * <code>bytes hash = 1;</code>
-       */
-      public Builder clearHash() {
-        
-        hash_ = getDefaultInstance().getHash();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 2;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 3;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 3;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 3;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 3;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:HashOnlyNotaryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:HashOnlyNotaryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<HashOnlyNotaryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<HashOnlyNotaryStorage>() {
-      @java.lang.Override
-      public HashOnlyNotaryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HashOnlyNotaryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<HashOnlyNotaryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<HashOnlyNotaryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface LinkNotaryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:LinkNotaryStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
-     * </pre>
-     *
-     * <code>bytes link = 1;</code>
-     */
-    com.google.protobuf.ByteString getLink();
-
-    /**
-     * <pre>
-     *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
-     * </pre>
-     *
-     * <code>bytes hash = 2;</code>
-     */
-    com.google.protobuf.ByteString getHash();
-
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 3;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   * 链接存证模型
-   * </pre>
-   *
-   * Protobuf type {@code LinkNotaryStorage}
-   */
-  public  static final class LinkNotaryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:LinkNotaryStorage)
-      LinkNotaryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LinkNotaryStorage.newBuilder() to construct.
-    private LinkNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LinkNotaryStorage() {
-      link_ = com.google.protobuf.ByteString.EMPTY;
-      hash_ = com.google.protobuf.ByteString.EMPTY;
-      key_ = "";
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LinkNotaryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LinkNotaryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              link_ = input.readBytes();
-              break;
+        private HashOnlyNotaryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
 
-              hash_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        hash_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              key_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        key_ = s;
+                        break;
+                    }
+                    case 26: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              value_ = s;
-              break;
+                        value_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder.class);
+        }
+
+        public static final int HASH_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString hash_;
+
+        /**
+         * <pre>
+         * 长度固定为32字节
+         * </pre>
+         *
+         * <code>bytes hash = 1;</code>
+         */
+        public com.google.protobuf.ByteString getHash() {
+            return hash_;
+        }
+
+        public static final int KEY_FIELD_NUMBER = 2;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 3;
+        private volatile java.lang.Object value_;
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         */
+        public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                value_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 3;</code>
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                value_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!hash_.isEmpty()) {
+                output.writeBytes(1, hash_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!hash_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, hash_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) obj;
+
+            if (!getHash().equals(other.getHash()))
+                return false;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + HASH_FIELD_NUMBER;
+            hash = (53 * hash) + getHash().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         *哈希存证模型，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * Protobuf type {@code HashOnlyNotaryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:HashOnlyNotaryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                hash_ = com.google.protobuf.ByteString.EMPTY;
+
+                key_ = "";
+
+                value_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_HashOnlyNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage(
+                        this);
+                result.hash_ = hash_;
+                result.key_ = key_;
+                result.value_ = value_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage
+                        .getDefaultInstance())
+                    return this;
+                if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
+                    setHash(other.getHash());
+                }
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (!other.getValue().isEmpty()) {
+                    value_ = other.value_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             * 长度固定为32字节
+             * </pre>
+             *
+             * <code>bytes hash = 1;</code>
+             */
+            public com.google.protobuf.ByteString getHash() {
+                return hash_;
+            }
+
+            /**
+             * <pre>
+             * 长度固定为32字节
+             * </pre>
+             *
+             * <code>bytes hash = 1;</code>
+             */
+            public Builder setHash(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                hash_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 长度固定为32字节
+             * </pre>
+             *
+             * <code>bytes hash = 1;</code>
+             */
+            public Builder clearHash() {
+
+                hash_ = getDefaultInstance().getHash();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 2;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object value_ = "";
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 3;</code>
+             */
+            public java.lang.String getValue() {
+                java.lang.Object ref = value_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    value_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 3;</code>
+             */
+            public com.google.protobuf.ByteString getValueBytes() {
+                java.lang.Object ref = value_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    value_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 3;</code>
+             */
+            public Builder setValue(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 3;</code>
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 3;</code>
+             */
+            public Builder setValueBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:HashOnlyNotaryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:HashOnlyNotaryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<HashOnlyNotaryStorage> PARSER = new com.google.protobuf.AbstractParser<HashOnlyNotaryStorage>() {
+            @java.lang.Override
+            public HashOnlyNotaryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new HashOnlyNotaryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<HashOnlyNotaryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<HashOnlyNotaryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder.class);
+    public interface LinkNotaryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:LinkNotaryStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
+         * </pre>
+         *
+         * <code>bytes link = 1;</code>
+         */
+        com.google.protobuf.ByteString getLink();
+
+        /**
+         * <pre>
+         *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * <code>bytes hash = 2;</code>
+         */
+        com.google.protobuf.ByteString getHash();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 3;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 3;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        java.lang.String getValue();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        com.google.protobuf.ByteString getValueBytes();
     }
 
-    public static final int LINK_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString link_;
-    /**
-     * <pre>
-     *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
-     * </pre>
-     *
-     * <code>bytes link = 1;</code>
-     */
-    public com.google.protobuf.ByteString getLink() {
-      return link_;
-    }
-
-    public static final int HASH_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString hash_;
-    /**
-     * <pre>
-     *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
-     * </pre>
-     *
-     * <code>bytes hash = 2;</code>
-     */
-    public com.google.protobuf.ByteString getHash() {
-      return hash_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 3;
-    private volatile java.lang.Object key_;
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 3;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!link_.isEmpty()) {
-        output.writeBytes(1, link_);
-      }
-      if (!hash_.isEmpty()) {
-        output.writeBytes(2, hash_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!link_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, link_);
-      }
-      if (!hash_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, hash_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) obj;
-
-      if (!getLink()
-          .equals(other.getLink())) return false;
-      if (!getHash()
-          .equals(other.getHash())) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LINK_FIELD_NUMBER;
-      hash = (53 * hash) + getLink().hashCode();
-      hash = (37 * hash) + HASH_FIELD_NUMBER;
-      hash = (53 * hash) + getHash().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 链接存证模型
@@ -5988,982 +5820,952 @@ public final class StorageProtobuf {
      *
      * Protobuf type {@code LinkNotaryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:LinkNotaryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_descriptor;
-      }
+    public static final class LinkNotaryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:LinkNotaryStorage)
+            LinkNotaryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use LinkNotaryStorage.newBuilder() to construct.
+        private LinkNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        link_ = com.google.protobuf.ByteString.EMPTY;
 
-        hash_ = com.google.protobuf.ByteString.EMPTY;
-
-        key_ = "";
-
-        value_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private LinkNotaryStorage() {
+            link_ = com.google.protobuf.ByteString.EMPTY;
+            hash_ = com.google.protobuf.ByteString.EMPTY;
+            key_ = "";
+            value_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage(this);
-        result.link_ = link_;
-        result.hash_ = hash_;
-        result.key_ = key_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new LinkNotaryStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance()) return this;
-        if (other.getLink() != com.google.protobuf.ByteString.EMPTY) {
-          setLink(other.getLink());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
-          setHash(other.getHash());
-        }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString link_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
-       * </pre>
-       *
-       * <code>bytes link = 1;</code>
-       */
-      public com.google.protobuf.ByteString getLink() {
-        return link_;
-      }
-      /**
-       * <pre>
-       *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
-       * </pre>
-       *
-       * <code>bytes link = 1;</code>
-       */
-      public Builder setLink(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        link_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
-       * </pre>
-       *
-       * <code>bytes link = 1;</code>
-       */
-      public Builder clearLink() {
-        
-        link_ = getDefaultInstance().getLink();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes hash = 2;</code>
-       */
-      public com.google.protobuf.ByteString getHash() {
-        return hash_;
-      }
-      /**
-       * <pre>
-       *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes hash = 2;</code>
-       */
-      public Builder setHash(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        hash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes hash = 2;</code>
-       */
-      public Builder clearHash() {
-        
-        hash_ = getDefaultInstance().getHash();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 3;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 3;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 3;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 3;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 4;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:LinkNotaryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:LinkNotaryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<LinkNotaryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<LinkNotaryStorage>() {
-      @java.lang.Override
-      public LinkNotaryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LinkNotaryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<LinkNotaryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LinkNotaryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EncryptNotaryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EncryptNotaryStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-     * </pre>
-     *
-     * <code>bytes contentHash = 1;</code>
-     */
-    com.google.protobuf.ByteString getContentHash();
-
-    /**
-     * <pre>
-     *源文件得密文，由加密key及nonce对明文加密得到该值。
-     * </pre>
-     *
-     * <code>bytes encryptContent = 2;</code>
-     */
-    com.google.protobuf.ByteString getEncryptContent();
-
-    /**
-     * <pre>
-     *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
-     * </pre>
-     *
-     * <code>bytes nonce = 3;</code>
-     */
-    com.google.protobuf.ByteString getNonce();
-
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   * 隐私存证模型，如果一个文件需要存证，且不公开内容，可以选择将源文件通过对称加密算法加密后上链
-   * </pre>
-   *
-   * Protobuf type {@code EncryptNotaryStorage}
-   */
-  public  static final class EncryptNotaryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EncryptNotaryStorage)
-      EncryptNotaryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EncryptNotaryStorage.newBuilder() to construct.
-    private EncryptNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EncryptNotaryStorage() {
-      contentHash_ = com.google.protobuf.ByteString.EMPTY;
-      encryptContent_ = com.google.protobuf.ByteString.EMPTY;
-      nonce_ = com.google.protobuf.ByteString.EMPTY;
-      key_ = "";
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EncryptNotaryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EncryptNotaryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              contentHash_ = input.readBytes();
-              break;
+        private LinkNotaryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
 
-              encryptContent_ = input.readBytes();
-              break;
-            }
-            case 26: {
+                        link_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
 
-              nonce_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        hash_ = input.readBytes();
+                        break;
+                    }
+                    case 26: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              key_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        key_ = s;
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              value_ = s;
-              break;
+                        value_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder.class);
+        }
+
+        public static final int LINK_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString link_;
+
+        /**
+         * <pre>
+         *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
+         * </pre>
+         *
+         * <code>bytes link = 1;</code>
+         */
+        public com.google.protobuf.ByteString getLink() {
+            return link_;
+        }
+
+        public static final int HASH_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString hash_;
+
+        /**
+         * <pre>
+         *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * <code>bytes hash = 2;</code>
+         */
+        public com.google.protobuf.ByteString getHash() {
+            return hash_;
+        }
+
+        public static final int KEY_FIELD_NUMBER = 3;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 3;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 3;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 4;
+        private volatile java.lang.Object value_;
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                value_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 4;</code>
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                value_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!link_.isEmpty()) {
+                output.writeBytes(1, link_);
+            }
+            if (!hash_.isEmpty()) {
+                output.writeBytes(2, hash_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!link_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, link_);
+            }
+            if (!hash_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, hash_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) obj;
+
+            if (!getLink().equals(other.getLink()))
+                return false;
+            if (!getHash().equals(other.getHash()))
+                return false;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + LINK_FIELD_NUMBER;
+            hash = (53 * hash) + getLink().hashCode();
+            hash = (37 * hash) + HASH_FIELD_NUMBER;
+            hash = (53 * hash) + getHash().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 链接存证模型
+         * </pre>
+         *
+         * Protobuf type {@code LinkNotaryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:LinkNotaryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                link_ = com.google.protobuf.ByteString.EMPTY;
+
+                hash_ = com.google.protobuf.ByteString.EMPTY;
+
+                key_ = "";
+
+                value_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_LinkNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage(
+                        this);
+                result.link_ = link_;
+                result.hash_ = hash_;
+                result.key_ = key_;
+                result.value_ = value_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage.getDefaultInstance())
+                    return this;
+                if (other.getLink() != com.google.protobuf.ByteString.EMPTY) {
+                    setLink(other.getLink());
+                }
+                if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
+                    setHash(other.getHash());
+                }
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (!other.getValue().isEmpty()) {
+                    value_ = other.value_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString link_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
+             * </pre>
+             *
+             * <code>bytes link = 1;</code>
+             */
+            public com.google.protobuf.ByteString getLink() {
+                return link_;
+            }
+
+            /**
+             * <pre>
+             *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
+             * </pre>
+             *
+             * <code>bytes link = 1;</code>
+             */
+            public Builder setLink(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                link_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *存证内容的链接，可以写入URL,或者其他可用于定位源文件得线索.
+             * </pre>
+             *
+             * <code>bytes link = 1;</code>
+             */
+            public Builder clearLink() {
+
+                link_ = getDefaultInstance().getLink();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes hash = 2;</code>
+             */
+            public com.google.protobuf.ByteString getHash() {
+                return hash_;
+            }
+
+            /**
+             * <pre>
+             *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes hash = 2;</code>
+             */
+            public Builder setHash(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                hash_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *源文件得hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes hash = 2;</code>
+             */
+            public Builder clearHash() {
+
+                hash_ = getDefaultInstance().getHash();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 3;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 3;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 3;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 3;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 3;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object value_ = "";
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public java.lang.String getValue() {
+                java.lang.Object ref = value_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    value_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public com.google.protobuf.ByteString getValueBytes() {
+                java.lang.Object ref = value_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    value_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public Builder setValue(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 4;</code>
+             */
+            public Builder setValueBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:LinkNotaryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:LinkNotaryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<LinkNotaryStorage> PARSER = new com.google.protobuf.AbstractParser<LinkNotaryStorage>() {
+            @java.lang.Override
+            public LinkNotaryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new LinkNotaryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<LinkNotaryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<LinkNotaryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder.class);
+    public interface EncryptNotaryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:EncryptNotaryStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * <code>bytes contentHash = 1;</code>
+         */
+        com.google.protobuf.ByteString getContentHash();
+
+        /**
+         * <pre>
+         *源文件得密文，由加密key及nonce对明文加密得到该值。
+         * </pre>
+         *
+         * <code>bytes encryptContent = 2;</code>
+         */
+        com.google.protobuf.ByteString getEncryptContent();
+
+        /**
+         * <pre>
+         *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
+         * </pre>
+         *
+         * <code>bytes nonce = 3;</code>
+         */
+        com.google.protobuf.ByteString getNonce();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        java.lang.String getValue();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        com.google.protobuf.ByteString getValueBytes();
     }
 
-    public static final int CONTENTHASH_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString contentHash_;
-    /**
-     * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-     * </pre>
-     *
-     * <code>bytes contentHash = 1;</code>
-     */
-    public com.google.protobuf.ByteString getContentHash() {
-      return contentHash_;
-    }
-
-    public static final int ENCRYPTCONTENT_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString encryptContent_;
-    /**
-     * <pre>
-     *源文件得密文，由加密key及nonce对明文加密得到该值。
-     * </pre>
-     *
-     * <code>bytes encryptContent = 2;</code>
-     */
-    public com.google.protobuf.ByteString getEncryptContent() {
-      return encryptContent_;
-    }
-
-    public static final int NONCE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString nonce_;
-    /**
-     * <pre>
-     *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
-     * </pre>
-     *
-     * <code>bytes nonce = 3;</code>
-     */
-    public com.google.protobuf.ByteString getNonce() {
-      return nonce_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object key_;
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!contentHash_.isEmpty()) {
-        output.writeBytes(1, contentHash_);
-      }
-      if (!encryptContent_.isEmpty()) {
-        output.writeBytes(2, encryptContent_);
-      }
-      if (!nonce_.isEmpty()) {
-        output.writeBytes(3, nonce_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!contentHash_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, contentHash_);
-      }
-      if (!encryptContent_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, encryptContent_);
-      }
-      if (!nonce_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, nonce_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) obj;
-
-      if (!getContentHash()
-          .equals(other.getContentHash())) return false;
-      if (!getEncryptContent()
-          .equals(other.getEncryptContent())) return false;
-      if (!getNonce()
-          .equals(other.getNonce())) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTENTHASH_FIELD_NUMBER;
-      hash = (53 * hash) + getContentHash().hashCode();
-      hash = (37 * hash) + ENCRYPTCONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getEncryptContent().hashCode();
-      hash = (37 * hash) + NONCE_FIELD_NUMBER;
-      hash = (53 * hash) + getNonce().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 隐私存证模型，如果一个文件需要存证，且不公开内容，可以选择将源文件通过对称加密算法加密后上链
@@ -6971,1029 +6773,1033 @@ public final class StorageProtobuf {
      *
      * Protobuf type {@code EncryptNotaryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EncryptNotaryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_descriptor;
-      }
+    public static final class EncryptNotaryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:EncryptNotaryStorage)
+            EncryptNotaryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use EncryptNotaryStorage.newBuilder() to construct.
+        private EncryptNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        contentHash_ = com.google.protobuf.ByteString.EMPTY;
 
-        encryptContent_ = com.google.protobuf.ByteString.EMPTY;
-
-        nonce_ = com.google.protobuf.ByteString.EMPTY;
-
-        key_ = "";
-
-        value_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private EncryptNotaryStorage() {
+            contentHash_ = com.google.protobuf.ByteString.EMPTY;
+            encryptContent_ = com.google.protobuf.ByteString.EMPTY;
+            nonce_ = com.google.protobuf.ByteString.EMPTY;
+            key_ = "";
+            value_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage(this);
-        result.contentHash_ = contentHash_;
-        result.encryptContent_ = encryptContent_;
-        result.nonce_ = nonce_;
-        result.key_ = key_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new EncryptNotaryStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance()) return this;
-        if (other.getContentHash() != com.google.protobuf.ByteString.EMPTY) {
-          setContentHash(other.getContentHash());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getEncryptContent() != com.google.protobuf.ByteString.EMPTY) {
-          setEncryptContent(other.getEncryptContent());
-        }
-        if (other.getNonce() != com.google.protobuf.ByteString.EMPTY) {
-          setNonce(other.getNonce());
-        }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString contentHash_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes contentHash = 1;</code>
-       */
-      public com.google.protobuf.ByteString getContentHash() {
-        return contentHash_;
-      }
-      /**
-       * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes contentHash = 1;</code>
-       */
-      public Builder setContentHash(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        contentHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes contentHash = 1;</code>
-       */
-      public Builder clearContentHash() {
-        
-        contentHash_ = getDefaultInstance().getContentHash();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString encryptContent_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *源文件得密文，由加密key及nonce对明文加密得到该值。
-       * </pre>
-       *
-       * <code>bytes encryptContent = 2;</code>
-       */
-      public com.google.protobuf.ByteString getEncryptContent() {
-        return encryptContent_;
-      }
-      /**
-       * <pre>
-       *源文件得密文，由加密key及nonce对明文加密得到该值。
-       * </pre>
-       *
-       * <code>bytes encryptContent = 2;</code>
-       */
-      public Builder setEncryptContent(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        encryptContent_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *源文件得密文，由加密key及nonce对明文加密得到该值。
-       * </pre>
-       *
-       * <code>bytes encryptContent = 2;</code>
-       */
-      public Builder clearEncryptContent() {
-        
-        encryptContent_ = getDefaultInstance().getEncryptContent();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString nonce_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
-       * </pre>
-       *
-       * <code>bytes nonce = 3;</code>
-       */
-      public com.google.protobuf.ByteString getNonce() {
-        return nonce_;
-      }
-      /**
-       * <pre>
-       *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
-       * </pre>
-       *
-       * <code>bytes nonce = 3;</code>
-       */
-      public Builder setNonce(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        nonce_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
-       * </pre>
-       *
-       * <code>bytes nonce = 3;</code>
-       */
-      public Builder clearNonce() {
-        
-        nonce_ = getDefaultInstance().getNonce();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EncryptNotaryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:EncryptNotaryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EncryptNotaryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<EncryptNotaryStorage>() {
-      @java.lang.Override
-      public EncryptNotaryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EncryptNotaryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EncryptNotaryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EncryptNotaryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EncryptShareNotaryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EncryptShareNotaryStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-     * </pre>
-     *
-     * <code>bytes contentHash = 1;</code>
-     */
-    com.google.protobuf.ByteString getContentHash();
-
-    /**
-     * <pre>
-     *源文件得密文。,用公钥地址加密
-     * </pre>
-     *
-     * <code>bytes encryptContent = 2;</code>
-     */
-    com.google.protobuf.ByteString getEncryptContent();
-
-    /**
-     * <pre>
-     *公钥
-     * </pre>
-     *
-     * <code>bytes pubKey = 3;</code>
-     */
-    com.google.protobuf.ByteString getPubKey();
-
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   * 分享隐私存证模型,需要完备的sdk或者相应的密钥库支持
-   * </pre>
-   *
-   * Protobuf type {@code EncryptShareNotaryStorage}
-   */
-  public  static final class EncryptShareNotaryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EncryptShareNotaryStorage)
-      EncryptShareNotaryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EncryptShareNotaryStorage.newBuilder() to construct.
-    private EncryptShareNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EncryptShareNotaryStorage() {
-      contentHash_ = com.google.protobuf.ByteString.EMPTY;
-      encryptContent_ = com.google.protobuf.ByteString.EMPTY;
-      pubKey_ = com.google.protobuf.ByteString.EMPTY;
-      key_ = "";
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EncryptShareNotaryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EncryptShareNotaryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              contentHash_ = input.readBytes();
-              break;
+        private EncryptNotaryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
 
-              encryptContent_ = input.readBytes();
-              break;
-            }
-            case 26: {
+                        contentHash_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
 
-              pubKey_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        encryptContent_ = input.readBytes();
+                        break;
+                    }
+                    case 26: {
 
-              key_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        nonce_ = input.readBytes();
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              value_ = s;
-              break;
+                        key_ = s;
+                        break;
+                    }
+                    case 42: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        value_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder.class);
+        }
+
+        public static final int CONTENTHASH_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString contentHash_;
+
+        /**
+         * <pre>
+         *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * <code>bytes contentHash = 1;</code>
+         */
+        public com.google.protobuf.ByteString getContentHash() {
+            return contentHash_;
+        }
+
+        public static final int ENCRYPTCONTENT_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString encryptContent_;
+
+        /**
+         * <pre>
+         *源文件得密文，由加密key及nonce对明文加密得到该值。
+         * </pre>
+         *
+         * <code>bytes encryptContent = 2;</code>
+         */
+        public com.google.protobuf.ByteString getEncryptContent() {
+            return encryptContent_;
+        }
+
+        public static final int NONCE_FIELD_NUMBER = 3;
+        private com.google.protobuf.ByteString nonce_;
+
+        /**
+         * <pre>
+         *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
+         * </pre>
+         *
+         * <code>bytes nonce = 3;</code>
+         */
+        public com.google.protobuf.ByteString getNonce() {
+            return nonce_;
+        }
+
+        public static final int KEY_FIELD_NUMBER = 4;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 5;
+        private volatile java.lang.Object value_;
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                value_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                value_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!contentHash_.isEmpty()) {
+                output.writeBytes(1, contentHash_);
+            }
+            if (!encryptContent_.isEmpty()) {
+                output.writeBytes(2, encryptContent_);
+            }
+            if (!nonce_.isEmpty()) {
+                output.writeBytes(3, nonce_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 5, value_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!contentHash_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, contentHash_);
+            }
+            if (!encryptContent_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, encryptContent_);
+            }
+            if (!nonce_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(3, nonce_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) obj;
+
+            if (!getContentHash().equals(other.getContentHash()))
+                return false;
+            if (!getEncryptContent().equals(other.getEncryptContent()))
+                return false;
+            if (!getNonce().equals(other.getNonce()))
+                return false;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + CONTENTHASH_FIELD_NUMBER;
+            hash = (53 * hash) + getContentHash().hashCode();
+            hash = (37 * hash) + ENCRYPTCONTENT_FIELD_NUMBER;
+            hash = (53 * hash) + getEncryptContent().hashCode();
+            hash = (37 * hash) + NONCE_FIELD_NUMBER;
+            hash = (53 * hash) + getNonce().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 隐私存证模型，如果一个文件需要存证，且不公开内容，可以选择将源文件通过对称加密算法加密后上链
+         * </pre>
+         *
+         * Protobuf type {@code EncryptNotaryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:EncryptNotaryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                contentHash_ = com.google.protobuf.ByteString.EMPTY;
+
+                encryptContent_ = com.google.protobuf.ByteString.EMPTY;
+
+                nonce_ = com.google.protobuf.ByteString.EMPTY;
+
+                key_ = "";
+
+                value_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage(
+                        this);
+                result.contentHash_ = contentHash_;
+                result.encryptContent_ = encryptContent_;
+                result.nonce_ = nonce_;
+                result.key_ = key_;
+                result.value_ = value_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage
+                        .getDefaultInstance())
+                    return this;
+                if (other.getContentHash() != com.google.protobuf.ByteString.EMPTY) {
+                    setContentHash(other.getContentHash());
+                }
+                if (other.getEncryptContent() != com.google.protobuf.ByteString.EMPTY) {
+                    setEncryptContent(other.getEncryptContent());
+                }
+                if (other.getNonce() != com.google.protobuf.ByteString.EMPTY) {
+                    setNonce(other.getNonce());
+                }
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (!other.getValue().isEmpty()) {
+                    value_ = other.value_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString contentHash_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes contentHash = 1;</code>
+             */
+            public com.google.protobuf.ByteString getContentHash() {
+                return contentHash_;
+            }
+
+            /**
+             * <pre>
+             *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes contentHash = 1;</code>
+             */
+            public Builder setContentHash(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                contentHash_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes contentHash = 1;</code>
+             */
+            public Builder clearContentHash() {
+
+                contentHash_ = getDefaultInstance().getContentHash();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString encryptContent_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *源文件得密文，由加密key及nonce对明文加密得到该值。
+             * </pre>
+             *
+             * <code>bytes encryptContent = 2;</code>
+             */
+            public com.google.protobuf.ByteString getEncryptContent() {
+                return encryptContent_;
+            }
+
+            /**
+             * <pre>
+             *源文件得密文，由加密key及nonce对明文加密得到该值。
+             * </pre>
+             *
+             * <code>bytes encryptContent = 2;</code>
+             */
+            public Builder setEncryptContent(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                encryptContent_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *源文件得密文，由加密key及nonce对明文加密得到该值。
+             * </pre>
+             *
+             * <code>bytes encryptContent = 2;</code>
+             */
+            public Builder clearEncryptContent() {
+
+                encryptContent_ = getDefaultInstance().getEncryptContent();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString nonce_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
+             * </pre>
+             *
+             * <code>bytes nonce = 3;</code>
+             */
+            public com.google.protobuf.ByteString getNonce() {
+                return nonce_;
+            }
+
+            /**
+             * <pre>
+             *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
+             * </pre>
+             *
+             * <code>bytes nonce = 3;</code>
+             */
+            public Builder setNonce(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                nonce_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *加密iv，通过AES进行加密时制定随机生成的iv,解密时需要使用该值
+             * </pre>
+             *
+             * <code>bytes nonce = 3;</code>
+             */
+            public Builder clearNonce() {
+
+                nonce_ = getDefaultInstance().getNonce();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object value_ = "";
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public java.lang.String getValue() {
+                java.lang.Object ref = value_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    value_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public com.google.protobuf.ByteString getValueBytes() {
+                java.lang.Object ref = value_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    value_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public Builder setValue(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public Builder setValueBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:EncryptNotaryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:EncryptNotaryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<EncryptNotaryStorage> PARSER = new com.google.protobuf.AbstractParser<EncryptNotaryStorage>() {
+            @java.lang.Override
+            public EncryptNotaryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new EncryptNotaryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<EncryptNotaryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<EncryptNotaryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder.class);
+    public interface EncryptShareNotaryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:EncryptShareNotaryStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * <code>bytes contentHash = 1;</code>
+         */
+        com.google.protobuf.ByteString getContentHash();
+
+        /**
+         * <pre>
+         *源文件得密文。,用公钥地址加密
+         * </pre>
+         *
+         * <code>bytes encryptContent = 2;</code>
+         */
+        com.google.protobuf.ByteString getEncryptContent();
+
+        /**
+         * <pre>
+         * 公钥
+         * </pre>
+         *
+         * <code>bytes pubKey = 3;</code>
+         */
+        com.google.protobuf.ByteString getPubKey();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        java.lang.String getValue();
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        com.google.protobuf.ByteString getValueBytes();
     }
 
-    public static final int CONTENTHASH_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString contentHash_;
-    /**
-     * <pre>
-     *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-     * </pre>
-     *
-     * <code>bytes contentHash = 1;</code>
-     */
-    public com.google.protobuf.ByteString getContentHash() {
-      return contentHash_;
-    }
-
-    public static final int ENCRYPTCONTENT_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString encryptContent_;
-    /**
-     * <pre>
-     *源文件得密文。,用公钥地址加密
-     * </pre>
-     *
-     * <code>bytes encryptContent = 2;</code>
-     */
-    public com.google.protobuf.ByteString getEncryptContent() {
-      return encryptContent_;
-    }
-
-    public static final int PUBKEY_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString pubKey_;
-    /**
-     * <pre>
-     *公钥
-     * </pre>
-     *
-     * <code>bytes pubKey = 3;</code>
-     */
-    public com.google.protobuf.ByteString getPubKey() {
-      return pubKey_;
-    }
-
-    public static final int KEY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object key_;
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *自定义的主键，可以为空，如果没传，则用txhash为key
-     * </pre>
-     *
-     * <code>string key = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *字符串值
-     * </pre>
-     *
-     * <code>string value = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!contentHash_.isEmpty()) {
-        output.writeBytes(1, contentHash_);
-      }
-      if (!encryptContent_.isEmpty()) {
-        output.writeBytes(2, encryptContent_);
-      }
-      if (!pubKey_.isEmpty()) {
-        output.writeBytes(3, pubKey_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!contentHash_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, contentHash_);
-      }
-      if (!encryptContent_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, encryptContent_);
-      }
-      if (!pubKey_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, pubKey_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) obj;
-
-      if (!getContentHash()
-          .equals(other.getContentHash())) return false;
-      if (!getEncryptContent()
-          .equals(other.getEncryptContent())) return false;
-      if (!getPubKey()
-          .equals(other.getPubKey())) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTENTHASH_FIELD_NUMBER;
-      hash = (53 * hash) + getContentHash().hashCode();
-      hash = (37 * hash) + ENCRYPTCONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getEncryptContent().hashCode();
-      hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
-      hash = (53 * hash) + getPubKey().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 分享隐私存证模型,需要完备的sdk或者相应的密钥库支持
@@ -8001,874 +7807,999 @@ public final class StorageProtobuf {
      *
      * Protobuf type {@code EncryptShareNotaryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EncryptShareNotaryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_descriptor;
-      }
+    public static final class EncryptShareNotaryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:EncryptShareNotaryStorage)
+            EncryptShareNotaryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use EncryptShareNotaryStorage.newBuilder() to construct.
+        private EncryptShareNotaryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        contentHash_ = com.google.protobuf.ByteString.EMPTY;
 
-        encryptContent_ = com.google.protobuf.ByteString.EMPTY;
-
-        pubKey_ = com.google.protobuf.ByteString.EMPTY;
-
-        key_ = "";
-
-        value_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private EncryptShareNotaryStorage() {
+            contentHash_ = com.google.protobuf.ByteString.EMPTY;
+            encryptContent_ = com.google.protobuf.ByteString.EMPTY;
+            pubKey_ = com.google.protobuf.ByteString.EMPTY;
+            key_ = "";
+            value_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage(this);
-        result.contentHash_ = contentHash_;
-        result.encryptContent_ = encryptContent_;
-        result.pubKey_ = pubKey_;
-        result.key_ = key_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new EncryptShareNotaryStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance()) return this;
-        if (other.getContentHash() != com.google.protobuf.ByteString.EMPTY) {
-          setContentHash(other.getContentHash());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getEncryptContent() != com.google.protobuf.ByteString.EMPTY) {
-          setEncryptContent(other.getEncryptContent());
-        }
-        if (other.getPubKey() != com.google.protobuf.ByteString.EMPTY) {
-          setPubKey(other.getPubKey());
-        }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString contentHash_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes contentHash = 1;</code>
-       */
-      public com.google.protobuf.ByteString getContentHash() {
-        return contentHash_;
-      }
-      /**
-       * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes contentHash = 1;</code>
-       */
-      public Builder setContentHash(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        contentHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
-       * </pre>
-       *
-       * <code>bytes contentHash = 1;</code>
-       */
-      public Builder clearContentHash() {
-        
-        contentHash_ = getDefaultInstance().getContentHash();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString encryptContent_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *源文件得密文。,用公钥地址加密
-       * </pre>
-       *
-       * <code>bytes encryptContent = 2;</code>
-       */
-      public com.google.protobuf.ByteString getEncryptContent() {
-        return encryptContent_;
-      }
-      /**
-       * <pre>
-       *源文件得密文。,用公钥地址加密
-       * </pre>
-       *
-       * <code>bytes encryptContent = 2;</code>
-       */
-      public Builder setEncryptContent(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        encryptContent_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *源文件得密文。,用公钥地址加密
-       * </pre>
-       *
-       * <code>bytes encryptContent = 2;</code>
-       */
-      public Builder clearEncryptContent() {
-        
-        encryptContent_ = getDefaultInstance().getEncryptContent();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *公钥
-       * </pre>
-       *
-       * <code>bytes pubKey = 3;</code>
-       */
-      public com.google.protobuf.ByteString getPubKey() {
-        return pubKey_;
-      }
-      /**
-       * <pre>
-       *公钥
-       * </pre>
-       *
-       * <code>bytes pubKey = 3;</code>
-       */
-      public Builder setPubKey(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pubKey_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *公钥
-       * </pre>
-       *
-       * <code>bytes pubKey = 3;</code>
-       */
-      public Builder clearPubKey() {
-        
-        pubKey_ = getDefaultInstance().getPubKey();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *自定义的主键，可以为空，如果没传，则用txhash为key
-       * </pre>
-       *
-       * <code>string key = 4;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *字符串值
-       * </pre>
-       *
-       * <code>string value = 5;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EncryptShareNotaryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:EncryptShareNotaryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EncryptShareNotaryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<EncryptShareNotaryStorage>() {
-      @java.lang.Override
-      public EncryptShareNotaryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EncryptShareNotaryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EncryptShareNotaryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EncryptShareNotaryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EncryptNotaryAddOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EncryptNotaryAdd)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *源操作数存证索引
-     * </pre>
-     *
-     * <code>string key = 1;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <pre>
-     *源操作数存证索引
-     * </pre>
-     *
-     * <code>string key = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <pre>
-     *待操作数据
-     * </pre>
-     *
-     * <code>bytes encryptAdd = 2;</code>
-     */
-    com.google.protobuf.ByteString getEncryptAdd();
-  }
-  /**
-   * <pre>
-   * 加密存证数据运算
-   * </pre>
-   *
-   * Protobuf type {@code EncryptNotaryAdd}
-   */
-  public  static final class EncryptNotaryAdd extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:EncryptNotaryAdd)
-      EncryptNotaryAddOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EncryptNotaryAdd.newBuilder() to construct.
-    private EncryptNotaryAdd(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EncryptNotaryAdd() {
-      key_ = "";
-      encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new EncryptNotaryAdd();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EncryptNotaryAdd(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
-              break;
+        private EncryptShareNotaryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
 
-              encryptAdd_ = input.readBytes();
-              break;
+                        contentHash_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
+
+                        encryptContent_ = input.readBytes();
+                        break;
+                    }
+                    case 26: {
+
+                        pubKey_ = input.readBytes();
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        key_ = s;
+                        break;
+                    }
+                    case 42: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        value_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder.class);
+        }
+
+        public static final int CONTENTHASH_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString contentHash_;
+
+        /**
+         * <pre>
+         *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+         * </pre>
+         *
+         * <code>bytes contentHash = 1;</code>
+         */
+        public com.google.protobuf.ByteString getContentHash() {
+            return contentHash_;
+        }
+
+        public static final int ENCRYPTCONTENT_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString encryptContent_;
+
+        /**
+         * <pre>
+         *源文件得密文。,用公钥地址加密
+         * </pre>
+         *
+         * <code>bytes encryptContent = 2;</code>
+         */
+        public com.google.protobuf.ByteString getEncryptContent() {
+            return encryptContent_;
+        }
+
+        public static final int PUBKEY_FIELD_NUMBER = 3;
+        private com.google.protobuf.ByteString pubKey_;
+
+        /**
+         * <pre>
+         * 公钥
+         * </pre>
+         *
+         * <code>bytes pubKey = 3;</code>
+         */
+        public com.google.protobuf.ByteString getPubKey() {
+            return pubKey_;
+        }
+
+        public static final int KEY_FIELD_NUMBER = 4;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         *自定义的主键，可以为空，如果没传，则用txhash为key
+         * </pre>
+         *
+         * <code>string key = 4;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 5;
+        private volatile java.lang.Object value_;
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                value_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 字符串值
+         * </pre>
+         *
+         * <code>string value = 5;</code>
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                value_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!contentHash_.isEmpty()) {
+                output.writeBytes(1, contentHash_);
+            }
+            if (!encryptContent_.isEmpty()) {
+                output.writeBytes(2, encryptContent_);
+            }
+            if (!pubKey_.isEmpty()) {
+                output.writeBytes(3, pubKey_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 5, value_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!contentHash_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, contentHash_);
+            }
+            if (!encryptContent_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, encryptContent_);
+            }
+            if (!pubKey_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(3, pubKey_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) obj;
+
+            if (!getContentHash().equals(other.getContentHash()))
+                return false;
+            if (!getEncryptContent().equals(other.getEncryptContent()))
+                return false;
+            if (!getPubKey().equals(other.getPubKey()))
+                return false;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + CONTENTHASH_FIELD_NUMBER;
+            hash = (53 * hash) + getContentHash().hashCode();
+            hash = (37 * hash) + ENCRYPTCONTENT_FIELD_NUMBER;
+            hash = (53 * hash) + getEncryptContent().hashCode();
+            hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
+            hash = (53 * hash) + getPubKey().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 分享隐私存证模型,需要完备的sdk或者相应的密钥库支持
+         * </pre>
+         *
+         * Protobuf type {@code EncryptShareNotaryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:EncryptShareNotaryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                contentHash_ = com.google.protobuf.ByteString.EMPTY;
+
+                encryptContent_ = com.google.protobuf.ByteString.EMPTY;
+
+                pubKey_ = com.google.protobuf.ByteString.EMPTY;
+
+                key_ = "";
+
+                value_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptShareNotaryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage(
+                        this);
+                result.contentHash_ = contentHash_;
+                result.encryptContent_ = encryptContent_;
+                result.pubKey_ = pubKey_;
+                result.key_ = key_;
+                result.value_ = value_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) {
+                    return mergeFrom(
+                            (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage
+                        .getDefaultInstance())
+                    return this;
+                if (other.getContentHash() != com.google.protobuf.ByteString.EMPTY) {
+                    setContentHash(other.getContentHash());
+                }
+                if (other.getEncryptContent() != com.google.protobuf.ByteString.EMPTY) {
+                    setEncryptContent(other.getEncryptContent());
+                }
+                if (other.getPubKey() != com.google.protobuf.ByteString.EMPTY) {
+                    setPubKey(other.getPubKey());
+                }
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (!other.getValue().isEmpty()) {
+                    value_ = other.value_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString contentHash_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes contentHash = 1;</code>
+             */
+            public com.google.protobuf.ByteString getContentHash() {
+                return contentHash_;
+            }
+
+            /**
+             * <pre>
+             *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes contentHash = 1;</code>
+             */
+            public Builder setContentHash(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                contentHash_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *存证明文内容的hash值，推荐使用sha256哈希，限制256位得摘要值
+             * </pre>
+             *
+             * <code>bytes contentHash = 1;</code>
+             */
+            public Builder clearContentHash() {
+
+                contentHash_ = getDefaultInstance().getContentHash();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString encryptContent_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             *源文件得密文。,用公钥地址加密
+             * </pre>
+             *
+             * <code>bytes encryptContent = 2;</code>
+             */
+            public com.google.protobuf.ByteString getEncryptContent() {
+                return encryptContent_;
+            }
+
+            /**
+             * <pre>
+             *源文件得密文。,用公钥地址加密
+             * </pre>
+             *
+             * <code>bytes encryptContent = 2;</code>
+             */
+            public Builder setEncryptContent(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                encryptContent_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *源文件得密文。,用公钥地址加密
+             * </pre>
+             *
+             * <code>bytes encryptContent = 2;</code>
+             */
+            public Builder clearEncryptContent() {
+
+                encryptContent_ = getDefaultInstance().getEncryptContent();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             * 公钥
+             * </pre>
+             *
+             * <code>bytes pubKey = 3;</code>
+             */
+            public com.google.protobuf.ByteString getPubKey() {
+                return pubKey_;
+            }
+
+            /**
+             * <pre>
+             * 公钥
+             * </pre>
+             *
+             * <code>bytes pubKey = 3;</code>
+             */
+            public Builder setPubKey(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                pubKey_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 公钥
+             * </pre>
+             *
+             * <code>bytes pubKey = 3;</code>
+             */
+            public Builder clearPubKey() {
+
+                pubKey_ = getDefaultInstance().getPubKey();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *自定义的主键，可以为空，如果没传，则用txhash为key
+             * </pre>
+             *
+             * <code>string key = 4;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object value_ = "";
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public java.lang.String getValue() {
+                java.lang.Object ref = value_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    value_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public com.google.protobuf.ByteString getValueBytes() {
+                java.lang.Object ref = value_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    value_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public Builder setValue(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 字符串值
+             * </pre>
+             *
+             * <code>string value = 5;</code>
+             */
+            public Builder setValueBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:EncryptShareNotaryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:EncryptShareNotaryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<EncryptShareNotaryStorage> PARSER = new com.google.protobuf.AbstractParser<EncryptShareNotaryStorage>() {
+            @java.lang.Override
+            public EncryptShareNotaryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new EncryptShareNotaryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<EncryptShareNotaryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<EncryptShareNotaryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder.class);
+    public interface EncryptNotaryAddOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:EncryptNotaryAdd)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 源操作数存证索引
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <pre>
+         * 源操作数存证索引
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <pre>
+         * 待操作数据
+         * </pre>
+         *
+         * <code>bytes encryptAdd = 2;</code>
+         */
+        com.google.protobuf.ByteString getEncryptAdd();
     }
 
-    public static final int KEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object key_;
-    /**
-     * <pre>
-     *源操作数存证索引
-     * </pre>
-     *
-     * <code>string key = 1;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *源操作数存证索引
-     * </pre>
-     *
-     * <code>string key = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ENCRYPTADD_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString encryptAdd_;
-    /**
-     * <pre>
-     *待操作数据
-     * </pre>
-     *
-     * <code>bytes encryptAdd = 2;</code>
-     */
-    public com.google.protobuf.ByteString getEncryptAdd() {
-      return encryptAdd_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
-      }
-      if (!encryptAdd_.isEmpty()) {
-        output.writeBytes(2, encryptAdd_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
-      }
-      if (!encryptAdd_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, encryptAdd_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) obj;
-
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getEncryptAdd()
-          .equals(other.getEncryptAdd())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
-      hash = (53 * hash) + getEncryptAdd().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 加密存证数据运算
@@ -8876,2908 +8807,3151 @@ public final class StorageProtobuf {
      *
      * Protobuf type {@code EncryptNotaryAdd}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EncryptNotaryAdd)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_descriptor;
-      }
+    public static final class EncryptNotaryAdd extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:EncryptNotaryAdd)
+            EncryptNotaryAddOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use EncryptNotaryAdd.newBuilder() to construct.
+        private EncryptNotaryAdd(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        key_ = "";
 
-        encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private EncryptNotaryAdd() {
+            key_ = "";
+            encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd(this);
-        result.key_ = key_;
-        result.encryptAdd_ = encryptAdd_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new EncryptNotaryAdd();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance()) return this;
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getEncryptAdd() != com.google.protobuf.ByteString.EMPTY) {
-          setEncryptAdd(other.getEncryptAdd());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <pre>
-       *源操作数存证索引
-       * </pre>
-       *
-       * <code>string key = 1;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *源操作数存证索引
-       * </pre>
-       *
-       * <code>string key = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *源操作数存证索引
-       * </pre>
-       *
-       * <code>string key = 1;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *源操作数存证索引
-       * </pre>
-       *
-       * <code>string key = 1;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *源操作数存证索引
-       * </pre>
-       *
-       * <code>string key = 1;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       *待操作数据
-       * </pre>
-       *
-       * <code>bytes encryptAdd = 2;</code>
-       */
-      public com.google.protobuf.ByteString getEncryptAdd() {
-        return encryptAdd_;
-      }
-      /**
-       * <pre>
-       *待操作数据
-       * </pre>
-       *
-       * <code>bytes encryptAdd = 2;</code>
-       */
-      public Builder setEncryptAdd(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        encryptAdd_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *待操作数据
-       * </pre>
-       *
-       * <code>bytes encryptAdd = 2;</code>
-       */
-      public Builder clearEncryptAdd() {
-        
-        encryptAdd_ = getDefaultInstance().getEncryptAdd();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:EncryptNotaryAdd)
-    }
-
-    // @@protoc_insertion_point(class_scope:EncryptNotaryAdd)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EncryptNotaryAdd>
-        PARSER = new com.google.protobuf.AbstractParser<EncryptNotaryAdd>() {
-      @java.lang.Override
-      public EncryptNotaryAdd parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EncryptNotaryAdd(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EncryptNotaryAdd> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EncryptNotaryAdd> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface QueryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:QueryStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string txHash = 1;</code>
-     */
-    java.lang.String getTxHash();
-    /**
-     * <code>string txHash = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getTxHashBytes();
-  }
-  /**
-   * <pre>
-   *根据txhash去状态数据库中查询存储内容
-   * </pre>
-   *
-   * Protobuf type {@code QueryStorage}
-   */
-  public  static final class QueryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:QueryStorage)
-      QueryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use QueryStorage.newBuilder() to construct.
-    private QueryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private QueryStorage() {
-      txHash_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new QueryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private QueryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              txHash_ = s;
-              break;
+        private EncryptNotaryAdd(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        key_ = s;
+                        break;
+                    }
+                    case 18: {
+
+                        encryptAdd_ = input.readBytes();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder.class);
+        }
+
+        public static final int KEY_FIELD_NUMBER = 1;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <pre>
+         * 源操作数存证索引
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 源操作数存证索引
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int ENCRYPTADD_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString encryptAdd_;
+
+        /**
+         * <pre>
+         * 待操作数据
+         * </pre>
+         *
+         * <code>bytes encryptAdd = 2;</code>
+         */
+        public com.google.protobuf.ByteString getEncryptAdd() {
+            return encryptAdd_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+            }
+            if (!encryptAdd_.isEmpty()) {
+                output.writeBytes(2, encryptAdd_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+            }
+            if (!encryptAdd_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, encryptAdd_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) obj;
+
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getEncryptAdd().equals(other.getEncryptAdd()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + ENCRYPTADD_FIELD_NUMBER;
+            hash = (53 * hash) + getEncryptAdd().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 加密存证数据运算
+         * </pre>
+         *
+         * Protobuf type {@code EncryptNotaryAdd}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:EncryptNotaryAdd)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                key_ = "";
+
+                encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_EncryptNotaryAdd_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd(
+                        this);
+                result.key_ = key_;
+                result.encryptAdd_ = encryptAdd_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd.getDefaultInstance())
+                    return this;
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (other.getEncryptAdd() != com.google.protobuf.ByteString.EMPTY) {
+                    setEncryptAdd(other.getEncryptAdd());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <pre>
+             * 源操作数存证索引
+             * </pre>
+             *
+             * <code>string key = 1;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 源操作数存证索引
+             * </pre>
+             *
+             * <code>string key = 1;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 源操作数存证索引
+             * </pre>
+             *
+             * <code>string key = 1;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 源操作数存证索引
+             * </pre>
+             *
+             * <code>string key = 1;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 源操作数存证索引
+             * </pre>
+             *
+             * <code>string key = 1;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString encryptAdd_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <pre>
+             * 待操作数据
+             * </pre>
+             *
+             * <code>bytes encryptAdd = 2;</code>
+             */
+            public com.google.protobuf.ByteString getEncryptAdd() {
+                return encryptAdd_;
+            }
+
+            /**
+             * <pre>
+             * 待操作数据
+             * </pre>
+             *
+             * <code>bytes encryptAdd = 2;</code>
+             */
+            public Builder setEncryptAdd(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                encryptAdd_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 待操作数据
+             * </pre>
+             *
+             * <code>bytes encryptAdd = 2;</code>
+             */
+            public Builder clearEncryptAdd() {
+
+                encryptAdd_ = getDefaultInstance().getEncryptAdd();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:EncryptNotaryAdd)
+        }
+
+        // @@protoc_insertion_point(class_scope:EncryptNotaryAdd)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<EncryptNotaryAdd> PARSER = new com.google.protobuf.AbstractParser<EncryptNotaryAdd>() {
+            @java.lang.Override
+            public EncryptNotaryAdd parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new EncryptNotaryAdd(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<EncryptNotaryAdd> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<EncryptNotaryAdd> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.Builder.class);
+    public interface QueryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:QueryStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string txHash = 1;</code>
+         */
+        java.lang.String getTxHash();
+
+        /**
+         * <code>string txHash = 1;</code>
+         */
+        com.google.protobuf.ByteString getTxHashBytes();
     }
 
-    public static final int TXHASH_FIELD_NUMBER = 1;
-    private volatile java.lang.Object txHash_;
-    /**
-     * <code>string txHash = 1;</code>
-     */
-    public java.lang.String getTxHash() {
-      java.lang.Object ref = txHash_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        txHash_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string txHash = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTxHashBytes() {
-      java.lang.Object ref = txHash_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        txHash_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getTxHashBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txHash_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getTxHashBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, txHash_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) obj;
-
-      if (!getTxHash()
-          .equals(other.getTxHash())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TXHASH_FIELD_NUMBER;
-      hash = (53 * hash) + getTxHash().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *根据txhash去状态数据库中查询存储内容
+     * 根据txhash去状态数据库中查询存储内容
      * </pre>
      *
      * Protobuf type {@code QueryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:QueryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_descriptor;
-      }
+    public static final class QueryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:QueryStorage)
+            QueryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use QueryStorage.newBuilder() to construct.
+        private QueryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        txHash_ = "";
 
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private QueryStorage() {
+            txHash_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage(this);
-        result.txHash_ = txHash_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new QueryStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.getDefaultInstance()) return this;
-        if (!other.getTxHash().isEmpty()) {
-          txHash_ = other.txHash_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object txHash_ = "";
-      /**
-       * <code>string txHash = 1;</code>
-       */
-      public java.lang.String getTxHash() {
-        java.lang.Object ref = txHash_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          txHash_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string txHash = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTxHashBytes() {
-        java.lang.Object ref = txHash_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          txHash_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string txHash = 1;</code>
-       */
-      public Builder setTxHash(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        txHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string txHash = 1;</code>
-       */
-      public Builder clearTxHash() {
-        
-        txHash_ = getDefaultInstance().getTxHash();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string txHash = 1;</code>
-       */
-      public Builder setTxHashBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        txHash_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:QueryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:QueryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<QueryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<QueryStorage>() {
-      @java.lang.Override
-      public QueryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new QueryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<QueryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<QueryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface BatchQueryStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:BatchQueryStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    java.util.List<java.lang.String>
-        getTxHashsList();
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    int getTxHashsCount();
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    java.lang.String getTxHashs(int index);
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getTxHashsBytes(int index);
-  }
-  /**
-   * <pre>
-   *批量查询有可能导致数据库崩溃
-   * </pre>
-   *
-   * Protobuf type {@code BatchQueryStorage}
-   */
-  public  static final class BatchQueryStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:BatchQueryStorage)
-      BatchQueryStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BatchQueryStorage.newBuilder() to construct.
-    private BatchQueryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private BatchQueryStorage() {
-      txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BatchQueryStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BatchQueryStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                txHashs_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              txHashs_.add(s);
-              break;
+        private QueryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        txHash_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          txHashs_ = txHashs_.getUnmodifiableView();
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_descriptor;
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.Builder.class);
-    }
-
-    public static final int TXHASHS_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList txHashs_;
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTxHashsList() {
-      return txHashs_;
-    }
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    public int getTxHashsCount() {
-      return txHashs_.size();
-    }
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    public java.lang.String getTxHashs(int index) {
-      return txHashs_.get(index);
-    }
-    /**
-     * <code>repeated string txHashs = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTxHashsBytes(int index) {
-      return txHashs_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < txHashs_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txHashs_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < txHashs_.size(); i++) {
-          dataSize += computeStringSizeNoTag(txHashs_.getRaw(i));
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.Builder.class);
         }
-        size += dataSize;
-        size += 1 * getTxHashsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
+
+        public static final int TXHASH_FIELD_NUMBER = 1;
+        private volatile java.lang.Object txHash_;
+
+        /**
+         * <code>string txHash = 1;</code>
+         */
+        public java.lang.String getTxHash() {
+            java.lang.Object ref = txHash_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                txHash_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string txHash = 1;</code>
+         */
+        public com.google.protobuf.ByteString getTxHashBytes() {
+            java.lang.Object ref = txHash_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                txHash_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getTxHashBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txHash_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getTxHashBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, txHash_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) obj;
+
+            if (!getTxHash().equals(other.getTxHash()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TXHASH_FIELD_NUMBER;
+            hash = (53 * hash) + getTxHash().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 根据txhash去状态数据库中查询存储内容
+         * </pre>
+         *
+         * Protobuf type {@code QueryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:QueryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                txHash_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_QueryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage(
+                        this);
+                result.txHash_ = txHash_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage.getDefaultInstance())
+                    return this;
+                if (!other.getTxHash().isEmpty()) {
+                    txHash_ = other.txHash_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object txHash_ = "";
+
+            /**
+             * <code>string txHash = 1;</code>
+             */
+            public java.lang.String getTxHash() {
+                java.lang.Object ref = txHash_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    txHash_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string txHash = 1;</code>
+             */
+            public com.google.protobuf.ByteString getTxHashBytes() {
+                java.lang.Object ref = txHash_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    txHash_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string txHash = 1;</code>
+             */
+            public Builder setTxHash(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                txHash_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string txHash = 1;</code>
+             */
+            public Builder clearTxHash() {
+
+                txHash_ = getDefaultInstance().getTxHash();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string txHash = 1;</code>
+             */
+            public Builder setTxHashBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                txHash_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:QueryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:QueryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<QueryStorage> PARSER = new com.google.protobuf.AbstractParser<QueryStorage>() {
+            @java.lang.Override
+            public QueryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new QueryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<QueryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<QueryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.QueryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) obj;
+    public interface BatchQueryStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:BatchQueryStorage)
+            com.google.protobuf.MessageOrBuilder {
 
-      if (!getTxHashsList()
-          .equals(other.getTxHashsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        java.util.List<java.lang.String> getTxHashsList();
 
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTxHashsCount() > 0) {
-        hash = (37 * hash) + TXHASHS_FIELD_NUMBER;
-        hash = (53 * hash) + getTxHashsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        int getTxHashsCount();
+
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        java.lang.String getTxHashs(int index);
+
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        com.google.protobuf.ByteString getTxHashsBytes(int index);
     }
 
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
-     *批量查询有可能导致数据库崩溃
+     * 批量查询有可能导致数据库崩溃
      * </pre>
      *
      * Protobuf type {@code BatchQueryStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:BatchQueryStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_descriptor;
-      }
+    public static final class BatchQueryStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:BatchQueryStorage)
+            BatchQueryStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use BatchQueryStorage.newBuilder() to construct.
+        private BatchQueryStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private BatchQueryStorage() {
+            txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          txHashs_ = txHashs_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new BatchQueryStorage();
         }
-        result.txHashs_ = txHashs_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.getDefaultInstance()) return this;
-        if (!other.txHashs_.isEmpty()) {
-          if (txHashs_.isEmpty()) {
-            txHashs_ = other.txHashs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTxHashsIsMutable();
-            txHashs_.addAll(other.txHashs_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringList txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTxHashsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          txHashs_ = new com.google.protobuf.LazyStringArrayList(txHashs_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTxHashsList() {
-        return txHashs_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public int getTxHashsCount() {
-        return txHashs_.size();
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public java.lang.String getTxHashs(int index) {
-        return txHashs_.get(index);
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTxHashsBytes(int index) {
-        return txHashs_.getByteString(index);
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public Builder setTxHashs(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTxHashsIsMutable();
-        txHashs_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public Builder addTxHashs(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTxHashsIsMutable();
-        txHashs_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public Builder addAllTxHashs(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTxHashsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, txHashs_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public Builder clearTxHashs() {
-        txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string txHashs = 1;</code>
-       */
-      public Builder addTxHashsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTxHashsIsMutable();
-        txHashs_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:BatchQueryStorage)
-    }
-
-    // @@protoc_insertion_point(class_scope:BatchQueryStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<BatchQueryStorage>
-        PARSER = new com.google.protobuf.AbstractParser<BatchQueryStorage>() {
-      @java.lang.Override
-      public BatchQueryStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchQueryStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<BatchQueryStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BatchQueryStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface BatchReplyStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:BatchReplyStorage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> 
-        getStoragesList();
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index);
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    int getStoragesCount();
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> 
-        getStoragesOrBuilderList();
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code BatchReplyStorage}
-   */
-  public  static final class BatchReplyStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:BatchReplyStorage)
-      BatchReplyStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BatchReplyStorage.newBuilder() to construct.
-    private BatchReplyStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private BatchReplyStorage() {
-      storages_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BatchReplyStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BatchReplyStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                storages_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              storages_.add(
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.parser(), extensionRegistry));
-              break;
+        private BatchQueryStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+                        if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                            txHashs_ = new com.google.protobuf.LazyStringArrayList();
+                            mutable_bitField0_ |= 0x00000001;
+                        }
+                        txHashs_.add(s);
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) != 0)) {
+                    txHashs_ = txHashs_.getUnmodifiableView();
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          storages_ = java.util.Collections.unmodifiableList(storages_);
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_descriptor;
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_descriptor;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.Builder.class);
+        }
+
+        public static final int TXHASHS_FIELD_NUMBER = 1;
+        private com.google.protobuf.LazyStringList txHashs_;
+
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        public com.google.protobuf.ProtocolStringList getTxHashsList() {
+            return txHashs_;
+        }
+
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        public int getTxHashsCount() {
+            return txHashs_.size();
+        }
+
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        public java.lang.String getTxHashs(int index) {
+            return txHashs_.get(index);
+        }
+
+        /**
+         * <code>repeated string txHashs = 1;</code>
+         */
+        public com.google.protobuf.ByteString getTxHashsBytes(int index) {
+            return txHashs_.getByteString(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            for (int i = 0; i < txHashs_.size(); i++) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txHashs_.getRaw(i));
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            {
+                int dataSize = 0;
+                for (int i = 0; i < txHashs_.size(); i++) {
+                    dataSize += computeStringSizeNoTag(txHashs_.getRaw(i));
+                }
+                size += dataSize;
+                size += 1 * getTxHashsList().size();
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) obj;
+
+            if (!getTxHashsList().equals(other.getTxHashsList()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (getTxHashsCount() > 0) {
+                hash = (37 * hash) + TXHASHS_FIELD_NUMBER;
+                hash = (53 * hash) + getTxHashsList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * 批量查询有可能导致数据库崩溃
+         * </pre>
+         *
+         * Protobuf type {@code BatchQueryStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:BatchQueryStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchQueryStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage(
+                        this);
+                int from_bitField0_ = bitField0_;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                    txHashs_ = txHashs_.getUnmodifiableView();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                }
+                result.txHashs_ = txHashs_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage.getDefaultInstance())
+                    return this;
+                if (!other.txHashs_.isEmpty()) {
+                    if (txHashs_.isEmpty()) {
+                        txHashs_ = other.txHashs_;
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    } else {
+                        ensureTxHashsIsMutable();
+                        txHashs_.addAll(other.txHashs_);
+                    }
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int bitField0_;
+
+            private com.google.protobuf.LazyStringList txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+
+            private void ensureTxHashsIsMutable() {
+                if (!((bitField0_ & 0x00000001) != 0)) {
+                    txHashs_ = new com.google.protobuf.LazyStringArrayList(txHashs_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public com.google.protobuf.ProtocolStringList getTxHashsList() {
+                return txHashs_.getUnmodifiableView();
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public int getTxHashsCount() {
+                return txHashs_.size();
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public java.lang.String getTxHashs(int index) {
+                return txHashs_.get(index);
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public com.google.protobuf.ByteString getTxHashsBytes(int index) {
+                return txHashs_.getByteString(index);
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public Builder setTxHashs(int index, java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                ensureTxHashsIsMutable();
+                txHashs_.set(index, value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public Builder addTxHashs(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                ensureTxHashsIsMutable();
+                txHashs_.add(value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public Builder addAllTxHashs(java.lang.Iterable<java.lang.String> values) {
+                ensureTxHashsIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(values, txHashs_);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public Builder clearTxHashs() {
+                txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string txHashs = 1;</code>
+             */
+            public Builder addTxHashsBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+                ensureTxHashsIsMutable();
+                txHashs_.add(value);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:BatchQueryStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:BatchQueryStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<BatchQueryStorage> PARSER = new com.google.protobuf.AbstractParser<BatchQueryStorage>() {
+            @java.lang.Override
+            public BatchQueryStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new BatchQueryStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<BatchQueryStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<BatchQueryStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchQueryStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.Builder.class);
+    public interface BatchReplyStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:BatchReplyStorage)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList();
+
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index);
+
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        int getStoragesCount();
+
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> getStoragesOrBuilderList();
+
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(int index);
     }
 
-    public static final int STORAGES_FIELD_NUMBER = 1;
-    private java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> storages_;
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList() {
-      return storages_;
-    }
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    public java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> 
-        getStoragesOrBuilderList() {
-      return storages_;
-    }
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    public int getStoragesCount() {
-      return storages_.size();
-    }
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index) {
-      return storages_.get(index);
-    }
-    /**
-     * <code>repeated .Storage storages = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(
-        int index) {
-      return storages_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < storages_.size(); i++) {
-        output.writeMessage(1, storages_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < storages_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, storages_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) obj;
-
-      if (!getStoragesList()
-          .equals(other.getStoragesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getStoragesCount() > 0) {
-        hash = (37 * hash) + STORAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getStoragesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code BatchReplyStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:BatchReplyStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_descriptor;
-      }
+    public static final class BatchReplyStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:BatchReplyStorage)
+            BatchReplyStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStoragesFieldBuilder();
+        // Use BatchReplyStorage.newBuilder() to construct.
+        private BatchReplyStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (storagesBuilder_ == null) {
-          storages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          storagesBuilder_.clear();
+
+        private BatchReplyStorage() {
+            storages_ = java.util.Collections.emptyList();
         }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new BatchReplyStorage();
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage(this);
-        int from_bitField0_ = bitField0_;
-        if (storagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            storages_ = java.util.Collections.unmodifiableList(storages_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.storages_ = storages_;
-        } else {
-          result.storages_ = storagesBuilder_.build();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.getDefaultInstance()) return this;
-        if (storagesBuilder_ == null) {
-          if (!other.storages_.isEmpty()) {
-            if (storages_.isEmpty()) {
-              storages_ = other.storages_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureStoragesIsMutable();
-              storages_.addAll(other.storages_);
+        private BatchReplyStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            onChanged();
-          }
-        } else {
-          if (!other.storages_.isEmpty()) {
-            if (storagesBuilder_.isEmpty()) {
-              storagesBuilder_.dispose();
-              storagesBuilder_ = null;
-              storages_ = other.storages_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              storagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getStoragesFieldBuilder() : null;
-            } else {
-              storagesBuilder_.addAllMessages(other.storages_);
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                            storages_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage>();
+                            mutable_bitField0_ |= 0x00000001;
+                        }
+                        storages_.add(input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.parser(), extensionRegistry));
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) != 0)) {
+                    storages_ = java.util.Collections.unmodifiableList(storages_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_descriptor;
         }
-        return this;
-      }
-      private int bitField0_;
 
-      private java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> storages_ =
-        java.util.Collections.emptyList();
-      private void ensureStoragesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          storages_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage>(storages_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> storagesBuilder_;
-
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList() {
-        if (storagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(storages_);
-        } else {
-          return storagesBuilder_.getMessageList();
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.Builder.class);
         }
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public int getStoragesCount() {
-        if (storagesBuilder_ == null) {
-          return storages_.size();
-        } else {
-          return storagesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index) {
-        if (storagesBuilder_ == null) {
-          return storages_.get(index);
-        } else {
-          return storagesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder setStorages(
-          int index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage value) {
-        if (storagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStoragesIsMutable();
-          storages_.set(index, value);
-          onChanged();
-        } else {
-          storagesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder setStorages(
-          int index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder builderForValue) {
-        if (storagesBuilder_ == null) {
-          ensureStoragesIsMutable();
-          storages_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          storagesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder addStorages(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage value) {
-        if (storagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStoragesIsMutable();
-          storages_.add(value);
-          onChanged();
-        } else {
-          storagesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder addStorages(
-          int index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage value) {
-        if (storagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStoragesIsMutable();
-          storages_.add(index, value);
-          onChanged();
-        } else {
-          storagesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder addStorages(
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder builderForValue) {
-        if (storagesBuilder_ == null) {
-          ensureStoragesIsMutable();
-          storages_.add(builderForValue.build());
-          onChanged();
-        } else {
-          storagesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder addStorages(
-          int index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder builderForValue) {
-        if (storagesBuilder_ == null) {
-          ensureStoragesIsMutable();
-          storages_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          storagesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder addAllStorages(
-          java.lang.Iterable<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> values) {
-        if (storagesBuilder_ == null) {
-          ensureStoragesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, storages_);
-          onChanged();
-        } else {
-          storagesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder clearStorages() {
-        if (storagesBuilder_ == null) {
-          storages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          storagesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public Builder removeStorages(int index) {
-        if (storagesBuilder_ == null) {
-          ensureStoragesIsMutable();
-          storages_.remove(index);
-          onChanged();
-        } else {
-          storagesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder getStoragesBuilder(
-          int index) {
-        return getStoragesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(
-          int index) {
-        if (storagesBuilder_ == null) {
-          return storages_.get(index);  } else {
-          return storagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> 
-           getStoragesOrBuilderList() {
-        if (storagesBuilder_ != null) {
-          return storagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(storages_);
-        }
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder addStoragesBuilder() {
-        return getStoragesFieldBuilder().addBuilder(
-            cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder addStoragesBuilder(
-          int index) {
-        return getStoragesFieldBuilder().addBuilder(
-            index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Storage storages = 1;</code>
-       */
-      public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder> 
-           getStoragesBuilderList() {
-        return getStoragesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> 
-          getStoragesFieldBuilder() {
-        if (storagesBuilder_ == null) {
-          storagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder>(
-                  storages_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          storages_ = null;
-        }
-        return storagesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        public static final int STORAGES_FIELD_NUMBER = 1;
+        private java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> storages_;
 
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList() {
+            return storages_;
+        }
 
-      // @@protoc_insertion_point(builder_scope:BatchReplyStorage)
-    }
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        public java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> getStoragesOrBuilderList() {
+            return storages_;
+        }
 
-    // @@protoc_insertion_point(class_scope:BatchReplyStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage();
-    }
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        public int getStoragesCount() {
+            return storages_.size();
+        }
 
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index) {
+            return storages_.get(index);
+        }
 
-    private static final com.google.protobuf.Parser<BatchReplyStorage>
-        PARSER = new com.google.protobuf.AbstractParser<BatchReplyStorage>() {
-      @java.lang.Override
-      public BatchReplyStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchReplyStorage(input, extensionRegistry);
-      }
-    };
+        /**
+         * <code>repeated .Storage storages = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(int index) {
+            return storages_.get(index);
+        }
 
-    public static com.google.protobuf.Parser<BatchReplyStorage> parser() {
-      return PARSER;
-    }
+        private byte memoizedIsInitialized = -1;
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<BatchReplyStorage> getParserForType() {
-      return PARSER;
-    }
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
 
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
+            memoizedIsInitialized = 1;
+            return true;
+        }
 
-  }
-
-  public interface ReceiptStorageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ReceiptStorage)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code ReceiptStorage}
-   */
-  public  static final class ReceiptStorage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ReceiptStorage)
-      ReceiptStorageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReceiptStorage.newBuilder() to construct.
-    private ReceiptStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ReceiptStorage() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReceiptStorage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ReceiptStorage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            for (int i = 0; i < storages_.size(); i++) {
+                output.writeMessage(1, storages_.get(i));
             }
-          }
+            unknownFields.writeTo(output);
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_descriptor;
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            for (int i = 0; i < storages_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, storages_.get(i));
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) obj;
+
+            if (!getStoragesList().equals(other.getStoragesList()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (getStoragesCount() > 0) {
+                hash = (37 * hash) + STORAGES_FIELD_NUMBER;
+                hash = (53 * hash) + getStoragesList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code BatchReplyStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:BatchReplyStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                    getStoragesFieldBuilder();
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                if (storagesBuilder_ == null) {
+                    storages_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                    storagesBuilder_.clear();
+                }
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_BatchReplyStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage(
+                        this);
+                int from_bitField0_ = bitField0_;
+                if (storagesBuilder_ == null) {
+                    if (((bitField0_ & 0x00000001) != 0)) {
+                        storages_ = java.util.Collections.unmodifiableList(storages_);
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    }
+                    result.storages_ = storages_;
+                } else {
+                    result.storages_ = storagesBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage.getDefaultInstance())
+                    return this;
+                if (storagesBuilder_ == null) {
+                    if (!other.storages_.isEmpty()) {
+                        if (storages_.isEmpty()) {
+                            storages_ = other.storages_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                        } else {
+                            ensureStoragesIsMutable();
+                            storages_.addAll(other.storages_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.storages_.isEmpty()) {
+                        if (storagesBuilder_.isEmpty()) {
+                            storagesBuilder_.dispose();
+                            storagesBuilder_ = null;
+                            storages_ = other.storages_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                            storagesBuilder_ = com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                                    ? getStoragesFieldBuilder() : null;
+                        } else {
+                            storagesBuilder_.addAllMessages(other.storages_);
+                        }
+                    }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int bitField0_;
+
+            private java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> storages_ = java.util.Collections
+                    .emptyList();
+
+            private void ensureStoragesIsMutable() {
+                if (!((bitField0_ & 0x00000001) != 0)) {
+                    storages_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage>(
+                            storages_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> storagesBuilder_;
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList() {
+                if (storagesBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(storages_);
+                } else {
+                    return storagesBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public int getStoragesCount() {
+                if (storagesBuilder_ == null) {
+                    return storages_.size();
+                } else {
+                    return storagesBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index) {
+                if (storagesBuilder_ == null) {
+                    return storages_.get(index);
+                } else {
+                    return storagesBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder setStorages(int index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage value) {
+                if (storagesBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureStoragesIsMutable();
+                    storages_.set(index, value);
+                    onChanged();
+                } else {
+                    storagesBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder setStorages(int index,
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder builderForValue) {
+                if (storagesBuilder_ == null) {
+                    ensureStoragesIsMutable();
+                    storages_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    storagesBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder addStorages(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage value) {
+                if (storagesBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureStoragesIsMutable();
+                    storages_.add(value);
+                    onChanged();
+                } else {
+                    storagesBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder addStorages(int index, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage value) {
+                if (storagesBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureStoragesIsMutable();
+                    storages_.add(index, value);
+                    onChanged();
+                } else {
+                    storagesBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder addStorages(
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder builderForValue) {
+                if (storagesBuilder_ == null) {
+                    ensureStoragesIsMutable();
+                    storages_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    storagesBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder addStorages(int index,
+                    cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder builderForValue) {
+                if (storagesBuilder_ == null) {
+                    ensureStoragesIsMutable();
+                    storages_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    storagesBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder addAllStorages(
+                    java.lang.Iterable<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> values) {
+                if (storagesBuilder_ == null) {
+                    ensureStoragesIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(values, storages_);
+                    onChanged();
+                } else {
+                    storagesBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder clearStorages() {
+                if (storagesBuilder_ == null) {
+                    storages_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                    onChanged();
+                } else {
+                    storagesBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public Builder removeStorages(int index) {
+                if (storagesBuilder_ == null) {
+                    ensureStoragesIsMutable();
+                    storages_.remove(index);
+                    onChanged();
+                } else {
+                    storagesBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder getStoragesBuilder(int index) {
+                return getStoragesFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(int index) {
+                if (storagesBuilder_ == null) {
+                    return storages_.get(index);
+                } else {
+                    return storagesBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> getStoragesOrBuilderList() {
+                if (storagesBuilder_ != null) {
+                    return storagesBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(storages_);
+                }
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder addStoragesBuilder() {
+                return getStoragesFieldBuilder()
+                        .addBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder addStoragesBuilder(int index) {
+                return getStoragesFieldBuilder().addBuilder(index,
+                        cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .Storage storages = 1;</code>
+             */
+            public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder> getStoragesBuilderList() {
+                return getStoragesFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> getStoragesFieldBuilder() {
+                if (storagesBuilder_ == null) {
+                    storagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage, cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage.Builder, cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder>(
+                            storages_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+                    storages_ = null;
+                }
+                return storagesBuilder_;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:BatchReplyStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:BatchReplyStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<BatchReplyStorage> PARSER = new com.google.protobuf.AbstractParser<BatchReplyStorage>() {
+            @java.lang.Override
+            public BatchReplyStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new BatchReplyStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<BatchReplyStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<BatchReplyStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.BatchReplyStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.Builder.class);
+    public interface ReceiptStorageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:ReceiptStorage)
+            com.google.protobuf.MessageOrBuilder {
     }
 
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code ReceiptStorage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ReceiptStorage)
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_descriptor;
-      }
+    public static final class ReceiptStorage extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:ReceiptStorage)
+            ReceiptStorageOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.class, cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use ReceiptStorage.newBuilder() to construct.
+        private ReceiptStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage build() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private ReceiptStorage() {
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage buildPartial() {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new ReceiptStorage();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage other) {
-        if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        private ReceiptStorage(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
 
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_descriptor;
+        }
 
-      // @@protoc_insertion_point(builder_scope:ReceiptStorage)
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.class,
+                            cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.Builder.class);
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage other = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) obj;
+
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code ReceiptStorage}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:ReceiptStorage)
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorageOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.class,
+                                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.internal_static_ReceiptStorage_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage build() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage buildPartial() {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage result = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage(
+                        this);
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage other) {
+                if (other == cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage.getDefaultInstance())
+                    return this;
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:ReceiptStorage)
+        }
+
+        // @@protoc_insertion_point(class_scope:ReceiptStorage)
+        private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<ReceiptStorage> PARSER = new com.google.protobuf.AbstractParser<ReceiptStorage>() {
+            @java.lang.Override
+            public ReceiptStorage parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new ReceiptStorage(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<ReceiptStorage> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ReceiptStorage> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:ReceiptStorage)
-    private static final cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_Storage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_Storage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_StorageAction_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_StorageAction_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_ContentOnlyNotaryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_ContentOnlyNotaryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_HashOnlyNotaryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_HashOnlyNotaryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_LinkNotaryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_LinkNotaryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_EncryptNotaryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_EncryptNotaryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_EncryptShareNotaryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_EncryptShareNotaryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_EncryptNotaryAdd_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_EncryptNotaryAdd_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_QueryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_QueryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_BatchQueryStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_BatchQueryStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_BatchReplyStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_BatchReplyStorage_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_ReceiptStorage_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_ReceiptStorage_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage();
+        java.lang.String[] descriptorData = { "\n\rStorage.proto\"\302\002\n\007Storage\0223\n\016contentSt"
+                + "orage\030\001 \001(\0132\031.ContentOnlyNotaryStorageH\000"
+                + "\022-\n\013hashStorage\030\002 \001(\0132\026.HashOnlyNotarySt"
+                + "orageH\000\022)\n\013linkStorage\030\003 \001(\0132\022.LinkNotar"
+                + "yStorageH\000\022/\n\016encryptStorage\030\004 \001(\0132\025.Enc"
+                + "ryptNotaryStorageH\000\0229\n\023encryptShareStora"
+                + "ge\030\005 \001(\0132\032.EncryptShareNotaryStorageH\000\022\'"
+                + "\n\nencryptAdd\030\006 \001(\0132\021.EncryptNotaryAddH\000\022"
+                + "\n\n\002ty\030\007 \001(\005B\007\n\005value\"\310\002\n\rStorageAction\0223"
+                + "\n\016contentStorage\030\001 \001(\0132\031.ContentOnlyNota"
+                + "ryStorageH\000\022-\n\013hashStorage\030\002 \001(\0132\026.HashO"
+                + "nlyNotaryStorageH\000\022)\n\013linkStorage\030\003 \001(\0132"
+                + "\022.LinkNotaryStorageH\000\022/\n\016encryptStorage\030"
+                + "\004 \001(\0132\025.EncryptNotaryStorageH\000\0229\n\023encryp"
+                + "tShareStorage\030\005 \001(\0132\032.EncryptShareNotary"
+                + "StorageH\000\022\'\n\nencryptAdd\030\006 \001(\0132\021.EncryptN"
+                + "otaryAddH\000\022\n\n\002ty\030\007 \001(\005B\007\n\005value\"S\n\030Conte"
+                + "ntOnlyNotaryStorage\022\017\n\007content\030\001 \001(\014\022\013\n\003"
+                + "key\030\002 \001(\t\022\n\n\002op\030\003 \001(\005\022\r\n\005value\030\004 \001(\t\"A\n\025"
+                + "HashOnlyNotaryStorage\022\014\n\004hash\030\001 \001(\014\022\013\n\003k"
+                + "ey\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"K\n\021LinkNotarySto"
+                + "rage\022\014\n\004link\030\001 \001(\014\022\014\n\004hash\030\002 \001(\014\022\013\n\003key\030"
+                + "\003 \001(\t\022\r\n\005value\030\004 \001(\t\"n\n\024EncryptNotarySto"
+                + "rage\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptCont"
+                + "ent\030\002 \001(\014\022\r\n\005nonce\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n"
+                + "\005value\030\005 \001(\t\"t\n\031EncryptShareNotaryStorag"
+                + "e\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptContent"
+                + "\030\002 \001(\014\022\016\n\006pubKey\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n\005v"
+                + "alue\030\005 \001(\t\"3\n\020EncryptNotaryAdd\022\013\n\003key\030\001 "
+                + "\001(\t\022\022\n\nencryptAdd\030\002 \001(\014\"\036\n\014QueryStorage\022"
+                + "\016\n\006txHash\030\001 \001(\t\"$\n\021BatchQueryStorage\022\017\n\007"
+                + "txHashs\030\001 \003(\t\"/\n\021BatchReplyStorage\022\032\n\010st"
+                + "orages\030\001 \003(\0132\010.Storage\"\020\n\016ReceiptStorage"
+                + "B4\n!cn.chain33.javasdk.model.protobufB\017S" + "torageProtobufb\006proto3" };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {});
+        internal_static_Storage_descriptor = getDescriptor().getMessageTypes().get(0);
+        internal_static_Storage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_Storage_descriptor, new java.lang.String[] { "ContentStorage", "HashStorage",
+                        "LinkStorage", "EncryptStorage", "EncryptShareStorage", "EncryptAdd", "Ty", "Value", });
+        internal_static_StorageAction_descriptor = getDescriptor().getMessageTypes().get(1);
+        internal_static_StorageAction_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_StorageAction_descriptor, new java.lang.String[] { "ContentStorage", "HashStorage",
+                        "LinkStorage", "EncryptStorage", "EncryptShareStorage", "EncryptAdd", "Ty", "Value", });
+        internal_static_ContentOnlyNotaryStorage_descriptor = getDescriptor().getMessageTypes().get(2);
+        internal_static_ContentOnlyNotaryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_ContentOnlyNotaryStorage_descriptor,
+                new java.lang.String[] { "Content", "Key", "Op", "Value", });
+        internal_static_HashOnlyNotaryStorage_descriptor = getDescriptor().getMessageTypes().get(3);
+        internal_static_HashOnlyNotaryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_HashOnlyNotaryStorage_descriptor, new java.lang.String[] { "Hash", "Key", "Value", });
+        internal_static_LinkNotaryStorage_descriptor = getDescriptor().getMessageTypes().get(4);
+        internal_static_LinkNotaryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_LinkNotaryStorage_descriptor,
+                new java.lang.String[] { "Link", "Hash", "Key", "Value", });
+        internal_static_EncryptNotaryStorage_descriptor = getDescriptor().getMessageTypes().get(5);
+        internal_static_EncryptNotaryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_EncryptNotaryStorage_descriptor,
+                new java.lang.String[] { "ContentHash", "EncryptContent", "Nonce", "Key", "Value", });
+        internal_static_EncryptShareNotaryStorage_descriptor = getDescriptor().getMessageTypes().get(6);
+        internal_static_EncryptShareNotaryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_EncryptShareNotaryStorage_descriptor,
+                new java.lang.String[] { "ContentHash", "EncryptContent", "PubKey", "Key", "Value", });
+        internal_static_EncryptNotaryAdd_descriptor = getDescriptor().getMessageTypes().get(7);
+        internal_static_EncryptNotaryAdd_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_EncryptNotaryAdd_descriptor, new java.lang.String[] { "Key", "EncryptAdd", });
+        internal_static_QueryStorage_descriptor = getDescriptor().getMessageTypes().get(8);
+        internal_static_QueryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_QueryStorage_descriptor, new java.lang.String[] { "TxHash", });
+        internal_static_BatchQueryStorage_descriptor = getDescriptor().getMessageTypes().get(9);
+        internal_static_BatchQueryStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_BatchQueryStorage_descriptor, new java.lang.String[] { "TxHashs", });
+        internal_static_BatchReplyStorage_descriptor = getDescriptor().getMessageTypes().get(10);
+        internal_static_BatchReplyStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_BatchReplyStorage_descriptor, new java.lang.String[] { "Storages", });
+        internal_static_ReceiptStorage_descriptor = getDescriptor().getMessageTypes().get(11);
+        internal_static_ReceiptStorage_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_ReceiptStorage_descriptor, new java.lang.String[] {});
     }
 
-    public static cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ReceiptStorage>
-        PARSER = new com.google.protobuf.AbstractParser<ReceiptStorage>() {
-      @java.lang.Override
-      public ReceiptStorage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ReceiptStorage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ReceiptStorage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReceiptStorage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ReceiptStorage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Storage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Storage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_StorageAction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_StorageAction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ContentOnlyNotaryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ContentOnlyNotaryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_HashOnlyNotaryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_HashOnlyNotaryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_LinkNotaryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_LinkNotaryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EncryptNotaryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EncryptNotaryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EncryptShareNotaryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EncryptShareNotaryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EncryptNotaryAdd_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_EncryptNotaryAdd_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_QueryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_QueryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_BatchQueryStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_BatchQueryStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_BatchReplyStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_BatchReplyStorage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ReceiptStorage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ReceiptStorage_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\rStorage.proto\"\302\002\n\007Storage\0223\n\016contentSt" +
-      "orage\030\001 \001(\0132\031.ContentOnlyNotaryStorageH\000" +
-      "\022-\n\013hashStorage\030\002 \001(\0132\026.HashOnlyNotarySt" +
-      "orageH\000\022)\n\013linkStorage\030\003 \001(\0132\022.LinkNotar" +
-      "yStorageH\000\022/\n\016encryptStorage\030\004 \001(\0132\025.Enc" +
-      "ryptNotaryStorageH\000\0229\n\023encryptShareStora" +
-      "ge\030\005 \001(\0132\032.EncryptShareNotaryStorageH\000\022\'" +
-      "\n\nencryptAdd\030\006 \001(\0132\021.EncryptNotaryAddH\000\022" +
-      "\n\n\002ty\030\007 \001(\005B\007\n\005value\"\310\002\n\rStorageAction\0223" +
-      "\n\016contentStorage\030\001 \001(\0132\031.ContentOnlyNota" +
-      "ryStorageH\000\022-\n\013hashStorage\030\002 \001(\0132\026.HashO" +
-      "nlyNotaryStorageH\000\022)\n\013linkStorage\030\003 \001(\0132" +
-      "\022.LinkNotaryStorageH\000\022/\n\016encryptStorage\030" +
-      "\004 \001(\0132\025.EncryptNotaryStorageH\000\0229\n\023encryp" +
-      "tShareStorage\030\005 \001(\0132\032.EncryptShareNotary" +
-      "StorageH\000\022\'\n\nencryptAdd\030\006 \001(\0132\021.EncryptN" +
-      "otaryAddH\000\022\n\n\002ty\030\007 \001(\005B\007\n\005value\"S\n\030Conte" +
-      "ntOnlyNotaryStorage\022\017\n\007content\030\001 \001(\014\022\013\n\003" +
-      "key\030\002 \001(\t\022\n\n\002op\030\003 \001(\005\022\r\n\005value\030\004 \001(\t\"A\n\025" +
-      "HashOnlyNotaryStorage\022\014\n\004hash\030\001 \001(\014\022\013\n\003k" +
-      "ey\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"K\n\021LinkNotarySto" +
-      "rage\022\014\n\004link\030\001 \001(\014\022\014\n\004hash\030\002 \001(\014\022\013\n\003key\030" +
-      "\003 \001(\t\022\r\n\005value\030\004 \001(\t\"n\n\024EncryptNotarySto" +
-      "rage\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptCont" +
-      "ent\030\002 \001(\014\022\r\n\005nonce\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n" +
-      "\005value\030\005 \001(\t\"t\n\031EncryptShareNotaryStorag" +
-      "e\022\023\n\013contentHash\030\001 \001(\014\022\026\n\016encryptContent" +
-      "\030\002 \001(\014\022\016\n\006pubKey\030\003 \001(\014\022\013\n\003key\030\004 \001(\t\022\r\n\005v" +
-      "alue\030\005 \001(\t\"3\n\020EncryptNotaryAdd\022\013\n\003key\030\001 " +
-      "\001(\t\022\022\n\nencryptAdd\030\002 \001(\014\"\036\n\014QueryStorage\022" +
-      "\016\n\006txHash\030\001 \001(\t\"$\n\021BatchQueryStorage\022\017\n\007" +
-      "txHashs\030\001 \003(\t\"/\n\021BatchReplyStorage\022\032\n\010st" +
-      "orages\030\001 \003(\0132\010.Storage\"\020\n\016ReceiptStorage" +
-      "B4\n!cn.chain33.javasdk.model.protobufB\017S" +
-      "torageProtobufb\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_Storage_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Storage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Storage_descriptor,
-        new java.lang.String[] { "ContentStorage", "HashStorage", "LinkStorage", "EncryptStorage", "EncryptShareStorage", "EncryptAdd", "Ty", "Value", });
-    internal_static_StorageAction_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_StorageAction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_StorageAction_descriptor,
-        new java.lang.String[] { "ContentStorage", "HashStorage", "LinkStorage", "EncryptStorage", "EncryptShareStorage", "EncryptAdd", "Ty", "Value", });
-    internal_static_ContentOnlyNotaryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_ContentOnlyNotaryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ContentOnlyNotaryStorage_descriptor,
-        new java.lang.String[] { "Content", "Key", "Op", "Value", });
-    internal_static_HashOnlyNotaryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_HashOnlyNotaryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_HashOnlyNotaryStorage_descriptor,
-        new java.lang.String[] { "Hash", "Key", "Value", });
-    internal_static_LinkNotaryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_LinkNotaryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_LinkNotaryStorage_descriptor,
-        new java.lang.String[] { "Link", "Hash", "Key", "Value", });
-    internal_static_EncryptNotaryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_EncryptNotaryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EncryptNotaryStorage_descriptor,
-        new java.lang.String[] { "ContentHash", "EncryptContent", "Nonce", "Key", "Value", });
-    internal_static_EncryptShareNotaryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_EncryptShareNotaryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EncryptShareNotaryStorage_descriptor,
-        new java.lang.String[] { "ContentHash", "EncryptContent", "PubKey", "Key", "Value", });
-    internal_static_EncryptNotaryAdd_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_EncryptNotaryAdd_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_EncryptNotaryAdd_descriptor,
-        new java.lang.String[] { "Key", "EncryptAdd", });
-    internal_static_QueryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_QueryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_QueryStorage_descriptor,
-        new java.lang.String[] { "TxHash", });
-    internal_static_BatchQueryStorage_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_BatchQueryStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_BatchQueryStorage_descriptor,
-        new java.lang.String[] { "TxHashs", });
-    internal_static_BatchReplyStorage_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_BatchReplyStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_BatchReplyStorage_descriptor,
-        new java.lang.String[] { "Storages", });
-    internal_static_ReceiptStorage_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_ReceiptStorage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ReceiptStorage_descriptor,
-        new java.lang.String[] { });
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }

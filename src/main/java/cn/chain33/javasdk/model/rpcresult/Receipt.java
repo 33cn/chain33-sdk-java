@@ -2,28 +2,28 @@ package cn.chain33.javasdk.model.rpcresult;
 
 import java.io.Serializable;
 
-public class Receipt implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+public class Receipt implements Serializable {
 
-	private Integer ty;
-	
-	private String tyname;
+    private static final long serialVersionUID = 1L;
 
-	public Integer getTy() {
-		return ty;
-	}
+    private Integer ty;
 
-	public void setTy(Integer ty) {
-		this.ty = ty;
-	}
+    private String tyname;
 
-	public String getTyname() {
-		return tyname;
-	}
+    public Integer getTy() {
+        return ty;
+    }
 
-	public void setTyname(String tyname) {
-		this.tyname = tyname;
-	}
-	
+    public void setTy(Integer ty) {
+        this.ty = ty;
+    }
+
+    public String getTyname() {
+        return tyname;
+    }
+
+    public void setTyname(String tyname) {
+        this.tyname = tyname;
+    }
+
 }

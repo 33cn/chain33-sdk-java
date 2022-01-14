@@ -4,8489 +4,8756 @@
 package cn.chain33.javasdk.model.protobuf;
 
 public final class WasmProtobuf {
-  private WasmProtobuf() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface wasmActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.wasmAction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.types.wasmCreate create = 1;</code>
-     * @return Whether the create field is set.
-     */
-    boolean hasCreate();
-    /**
-     * <code>.types.wasmCreate create = 1;</code>
-     * @return The create.
-     */
-    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate();
-    /**
-     * <code>.types.wasmCreate create = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder();
-
-    /**
-     * <code>.types.wasmUpdate update = 2;</code>
-     * @return Whether the update field is set.
-     */
-    boolean hasUpdate();
-    /**
-     * <code>.types.wasmUpdate update = 2;</code>
-     * @return The update.
-     */
-    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate();
-    /**
-     * <code>.types.wasmUpdate update = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder();
-
-    /**
-     * <code>.types.wasmCall call = 3;</code>
-     * @return Whether the call field is set.
-     */
-    boolean hasCall();
-    /**
-     * <code>.types.wasmCall call = 3;</code>
-     * @return The call.
-     */
-    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall();
-    /**
-     * <code>.types.wasmCall call = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder();
-
-    /**
-     * <code>int32 ty = 4;</code>
-     * @return The ty.
-     */
-    int getTy();
-
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.ValueCase getValueCase();
-  }
-  /**
-   * Protobuf type {@code types.wasmAction}
-   */
-  public  static final class wasmAction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.wasmAction)
-      wasmActionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use wasmAction.newBuilder() to construct.
-    private wasmAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private wasmAction() {
+    private WasmProtobuf() {
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new wasmAction();
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private wasmAction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder subBuilder = null;
-              if (valueCase_ == 1) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 1;
-              break;
-            }
-            case 18: {
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder subBuilder = null;
-              if (valueCase_ == 2) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 2;
-              break;
-            }
-            case 26: {
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder subBuilder = null;
-              if (valueCase_ == 3) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 3;
-              break;
-            }
-            case 32: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_descriptor;
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.Builder.class);
+    public interface wasmActionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.wasmAction)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>.types.wasmCreate create = 1;</code>
+         * 
+         * @return Whether the create field is set.
+         */
+        boolean hasCreate();
+
+        /**
+         * <code>.types.wasmCreate create = 1;</code>
+         * 
+         * @return The create.
+         */
+        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate();
+
+        /**
+         * <code>.types.wasmCreate create = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder();
+
+        /**
+         * <code>.types.wasmUpdate update = 2;</code>
+         * 
+         * @return Whether the update field is set.
+         */
+        boolean hasUpdate();
+
+        /**
+         * <code>.types.wasmUpdate update = 2;</code>
+         * 
+         * @return The update.
+         */
+        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate();
+
+        /**
+         * <code>.types.wasmUpdate update = 2;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder();
+
+        /**
+         * <code>.types.wasmCall call = 3;</code>
+         * 
+         * @return Whether the call field is set.
+         */
+        boolean hasCall();
+
+        /**
+         * <code>.types.wasmCall call = 3;</code>
+         * 
+         * @return The call.
+         */
+        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall();
+
+        /**
+         * <code>.types.wasmCall call = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder();
+
+        /**
+         * <code>int32 ty = 4;</code>
+         * 
+         * @return The ty.
+         */
+        int getTy();
+
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.ValueCase getValueCase();
     }
 
-    private int valueCase_ = 0;
-    private java.lang.Object value_;
-    public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      CREATE(1),
-      UPDATE(2),
-      CALL(3),
-      VALUE_NOT_SET(0);
-      private final int value;
-      private ValueCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ValueCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ValueCase forNumber(int value) {
-        switch (value) {
-          case 1: return CREATE;
-          case 2: return UPDATE;
-          case 3: return CALL;
-          case 0: return VALUE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ValueCase
-    getValueCase() {
-      return ValueCase.forNumber(
-          valueCase_);
-    }
-
-    public static final int CREATE_FIELD_NUMBER = 1;
-    /**
-     * <code>.types.wasmCreate create = 1;</code>
-     * @return Whether the create field is set.
-     */
-    public boolean hasCreate() {
-      return valueCase_ == 1;
-    }
-    /**
-     * <code>.types.wasmCreate create = 1;</code>
-     * @return The create.
-     */
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-    }
-    /**
-     * <code>.types.wasmCreate create = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-    }
-
-    public static final int UPDATE_FIELD_NUMBER = 2;
-    /**
-     * <code>.types.wasmUpdate update = 2;</code>
-     * @return Whether the update field is set.
-     */
-    public boolean hasUpdate() {
-      return valueCase_ == 2;
-    }
-    /**
-     * <code>.types.wasmUpdate update = 2;</code>
-     * @return The update.
-     */
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
-    }
-    /**
-     * <code>.types.wasmUpdate update = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
-    }
-
-    public static final int CALL_FIELD_NUMBER = 3;
-    /**
-     * <code>.types.wasmCall call = 3;</code>
-     * @return Whether the call field is set.
-     */
-    public boolean hasCall() {
-      return valueCase_ == 3;
-    }
-    /**
-     * <code>.types.wasmCall call = 3;</code>
-     * @return The call.
-     */
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
-    }
-    /**
-     * <code>.types.wasmCall call = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
-    }
-
-    public static final int TY_FIELD_NUMBER = 4;
-    private int ty_;
-    /**
-     * <code>int32 ty = 4;</code>
-     * @return The ty.
-     */
-    public int getTy() {
-      return ty_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (valueCase_ == 1) {
-        output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_);
-      }
-      if (valueCase_ == 2) {
-        output.writeMessage(2, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_);
-      }
-      if (valueCase_ == 3) {
-        output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_);
-      }
-      if (ty_ != 0) {
-        output.writeInt32(4, ty_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (valueCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_);
-      }
-      if (valueCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_);
-      }
-      if (valueCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_);
-      }
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, ty_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) obj;
-
-      if (getTy()
-          != other.getTy()) return false;
-      if (!getValueCase().equals(other.getValueCase())) return false;
-      switch (valueCase_) {
-        case 1:
-          if (!getCreate()
-              .equals(other.getCreate())) return false;
-          break;
-        case 2:
-          if (!getUpdate()
-              .equals(other.getUpdate())) return false;
-          break;
-        case 3:
-          if (!getCall()
-              .equals(other.getCall())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      switch (valueCase_) {
-        case 1:
-          hash = (37 * hash) + CREATE_FIELD_NUMBER;
-          hash = (53 * hash) + getCreate().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + UPDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdate().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + CALL_FIELD_NUMBER;
-          hash = (53 * hash) + getCall().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.wasmAction}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.wasmAction)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmActionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_descriptor;
-      }
+    public static final class wasmAction extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.wasmAction)
+            wasmActionOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use wasmAction.newBuilder() to construct.
+        private wasmAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
 
-        valueCase_ = 0;
-        value_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private wasmAction() {
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction(this);
-        if (valueCase_ == 1) {
-          if (createBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = createBuilder_.build();
-          }
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new wasmAction();
         }
-        if (valueCase_ == 2) {
-          if (updateBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = updateBuilder_.build();
-          }
-        }
-        if (valueCase_ == 3) {
-          if (callBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = callBuilder_.build();
-          }
-        }
-        result.ty_ = ty_;
-        result.valueCase_ = valueCase_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
-        }
-        switch (other.getValueCase()) {
-          case CREATE: {
-            mergeCreate(other.getCreate());
-            break;
-          }
-          case UPDATE: {
-            mergeUpdate(other.getUpdate());
-            break;
-          }
-          case CALL: {
-            mergeCall(other.getCall());
-            break;
-          }
-          case VALUE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+        private wasmAction(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder subBuilder = null;
+                        if (valueCase_ == 1) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 1;
+                        break;
+                    }
+                    case 18: {
+                        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder subBuilder = null;
+                        if (valueCase_ == 2) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 2;
+                        break;
+                    }
+                    case 26: {
+                        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder subBuilder = null;
+                        if (valueCase_ == 3) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_).toBuilder();
+                        }
+                        value_ = input.readMessage(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 3;
+                        break;
+                    }
+                    case 32: {
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+                        ty_ = input.readInt32();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        return this;
-      }
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public ValueCase
-          getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
-      }
 
-      public Builder clearValue() {
-        valueCase_ = 0;
-        value_ = null;
-        onChanged();
-        return this;
-      }
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_descriptor;
+        }
 
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.Builder.class);
+        }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder> createBuilder_;
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       * @return Whether the create field is set.
-       */
-      public boolean hasCreate() {
-        return valueCase_ == 1;
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       * @return The create.
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate() {
-        if (createBuilder_ == null) {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-        } else {
-          if (valueCase_ == 1) {
-            return createBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      public Builder setCreate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate value) {
-        if (createBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          createBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      public Builder setCreate(
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder builderForValue) {
-        if (createBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          createBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      public Builder mergeCreate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate value) {
-        if (createBuilder_ == null) {
-          if (valueCase_ == 1 &&
-              value_ != cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.newBuilder((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 1) {
-            createBuilder_.mergeFrom(value);
-          }
-          createBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      public Builder clearCreate() {
-        if (createBuilder_ == null) {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          createBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder getCreateBuilder() {
-        return getCreateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder() {
-        if ((valueCase_ == 1) && (createBuilder_ != null)) {
-          return createBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.types.wasmCreate create = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder> 
-          getCreateFieldBuilder() {
-        if (createBuilder_ == null) {
-          if (!(valueCase_ == 1)) {
-            value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-          }
-          createBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 1;
-        onChanged();;
-        return createBuilder_;
-      }
+        private int valueCase_ = 0;
+        private java.lang.Object value_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder> updateBuilder_;
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       * @return Whether the update field is set.
-       */
-      public boolean hasUpdate() {
-        return valueCase_ == 2;
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       * @return The update.
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate() {
-        if (updateBuilder_ == null) {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
-        } else {
-          if (valueCase_ == 2) {
-            return updateBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+            CREATE(1), UPDATE(2), CALL(3), VALUE_NOT_SET(0);
+
+            private final int value;
+
+            private ValueCase(int value) {
+                this.value = value;
+            }
+
+            /**
+             * @param value
+             *            The number of the enum to look for.
+             * 
+             * @return The enum associated with the given number.
+             * 
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static ValueCase valueOf(int value) {
+                return forNumber(value);
+            }
+
+            public static ValueCase forNumber(int value) {
+                switch (value) {
+                case 1:
+                    return CREATE;
+                case 2:
+                    return UPDATE;
+                case 3:
+                    return CALL;
+                case 0:
+                    return VALUE_NOT_SET;
+                default:
+                    return null;
+                }
+            }
+
+            public int getNumber() {
+                return this.value;
+            }
+        };
+
+        public ValueCase getValueCase() {
+            return ValueCase.forNumber(valueCase_);
         }
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      public Builder setUpdate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate value) {
-        if (updateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(value);
+
+        public static final int CREATE_FIELD_NUMBER = 1;
+
+        /**
+         * <code>.types.wasmCreate create = 1;</code>
+         * 
+         * @return Whether the create field is set.
+         */
+        public boolean hasCreate() {
+            return valueCase_ == 1;
         }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      public Builder setUpdate(
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder builderForValue) {
-        if (updateBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.types.wasmCreate create = 1;</code>
+         * 
+         * @return The create.
+         */
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
         }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      public Builder mergeUpdate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate value) {
-        if (updateBuilder_ == null) {
-          if (valueCase_ == 2 &&
-              value_ != cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.newBuilder((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 2) {
-            updateBuilder_.mergeFrom(value);
-          }
-          updateBuilder_.setMessage(value);
+
+        /**
+         * <code>.types.wasmCreate create = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
         }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      public Builder clearUpdate() {
-        if (updateBuilder_ == null) {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          updateBuilder_.clear();
+
+        public static final int UPDATE_FIELD_NUMBER = 2;
+
+        /**
+         * <code>.types.wasmUpdate update = 2;</code>
+         * 
+         * @return Whether the update field is set.
+         */
+        public boolean hasUpdate() {
+            return valueCase_ == 2;
         }
-        return this;
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder getUpdateBuilder() {
-        return getUpdateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder() {
-        if ((valueCase_ == 2) && (updateBuilder_ != null)) {
-          return updateBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+
+        /**
+         * <code>.types.wasmUpdate update = 2;</code>
+         * 
+         * @return The update.
+         */
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.types.wasmUpdate update = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder> 
-          getUpdateFieldBuilder() {
-        if (updateBuilder_ == null) {
-          if (!(valueCase_ == 2)) {
-            value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
-          }
-          updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        /**
+         * <code>.types.wasmUpdate update = 2;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
         }
-        valueCase_ = 2;
-        onChanged();;
-        return updateBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder> callBuilder_;
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       * @return Whether the call field is set.
-       */
-      public boolean hasCall() {
-        return valueCase_ == 3;
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       * @return The call.
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall() {
-        if (callBuilder_ == null) {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
-        } else {
-          if (valueCase_ == 3) {
-            return callBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+        public static final int CALL_FIELD_NUMBER = 3;
+
+        /**
+         * <code>.types.wasmCall call = 3;</code>
+         * 
+         * @return Whether the call field is set.
+         */
+        public boolean hasCall() {
+            return valueCase_ == 3;
         }
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      public Builder setCall(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall value) {
-        if (callBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          callBuilder_.setMessage(value);
+
+        /**
+         * <code>.types.wasmCall call = 3;</code>
+         * 
+         * @return The call.
+         */
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
         }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      public Builder setCall(
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder builderForValue) {
-        if (callBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          callBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.types.wasmCall call = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
         }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      public Builder mergeCall(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall value) {
-        if (callBuilder_ == null) {
-          if (valueCase_ == 3 &&
-              value_ != cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.newBuilder((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 3) {
-            callBuilder_.mergeFrom(value);
-          }
-          callBuilder_.setMessage(value);
+
+        public static final int TY_FIELD_NUMBER = 4;
+        private int ty_;
+
+        /**
+         * <code>int32 ty = 4;</code>
+         * 
+         * @return The ty.
+         */
+        public int getTy() {
+            return ty_;
         }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      public Builder clearCall() {
-        if (callBuilder_ == null) {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          callBuilder_.clear();
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
         }
-        return this;
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder getCallBuilder() {
-        return getCallFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder() {
-        if ((valueCase_ == 3) && (callBuilder_ != null)) {
-          return callBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (valueCase_ == 1) {
+                output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_);
+            }
+            if (valueCase_ == 2) {
+                output.writeMessage(2, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_);
+            }
+            if (valueCase_ == 3) {
+                output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_);
+            }
+            if (ty_ != 0) {
+                output.writeInt32(4, ty_);
+            }
+            unknownFields.writeTo(output);
         }
-      }
-      /**
-       * <code>.types.wasmCall call = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder> 
-          getCallFieldBuilder() {
-        if (callBuilder_ == null) {
-          if (!(valueCase_ == 3)) {
-            value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
-          }
-          callBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (valueCase_ == 1) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1,
+                        (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_);
+            }
+            if (valueCase_ == 2) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(2,
+                        (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_);
+            }
+            if (valueCase_ == 3) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(3,
+                        (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_);
+            }
+            if (ty_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, ty_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
         }
-        valueCase_ = 3;
-        onChanged();;
-        return callBuilder_;
-      }
 
-      private int ty_ ;
-      /**
-       * <code>int32 ty = 4;</code>
-       * @return The ty.
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 ty = 4;</code>
-       * @param value The ty to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 ty = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) obj;
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.wasmAction)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.wasmAction)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<wasmAction>
-        PARSER = new com.google.protobuf.AbstractParser<wasmAction>() {
-      @java.lang.Override
-      public wasmAction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new wasmAction(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<wasmAction> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<wasmAction> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface wasmCreateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.wasmCreate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>bytes code = 2;</code>
-     * @return The code.
-     */
-    com.google.protobuf.ByteString getCode();
-  }
-  /**
-   * Protobuf type {@code types.wasmCreate}
-   */
-  public  static final class wasmCreate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.wasmCreate)
-      wasmCreateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use wasmCreate.newBuilder() to construct.
-    private wasmCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private wasmCreate() {
-      name_ = "";
-      code_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new wasmCreate();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private wasmCreate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
+            if (getTy() != other.getTy())
+                return false;
+            if (!getValueCase().equals(other.getValueCase()))
+                return false;
+            switch (valueCase_) {
+            case 1:
+                if (!getCreate().equals(other.getCreate()))
+                    return false;
+                break;
+            case 2:
+                if (!getUpdate().equals(other.getUpdate()))
+                    return false;
+                break;
+            case 3:
+                if (!getCall().equals(other.getCall()))
+                    return false;
+                break;
             case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
+            default:
             }
-            case 18: {
-
-              code_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_descriptor;
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TY_FIELD_NUMBER;
+            hash = (53 * hash) + getTy();
+            switch (valueCase_) {
+            case 1:
+                hash = (37 * hash) + CREATE_FIELD_NUMBER;
+                hash = (53 * hash) + getCreate().hashCode();
+                break;
+            case 2:
+                hash = (37 * hash) + UPDATE_FIELD_NUMBER;
+                hash = (53 * hash) + getUpdate().hashCode();
+                break;
+            case 3:
+                hash = (37 * hash) + CALL_FIELD_NUMBER;
+                hash = (53 * hash) + getCall().hashCode();
+                break;
+            case 0:
+            default:
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.wasmAction}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.wasmAction)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmActionOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                ty_ = 0;
+
+                valueCase_ = 0;
+                value_ = null;
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmAction_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction(
+                        this);
+                if (valueCase_ == 1) {
+                    if (createBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = createBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 2) {
+                    if (updateBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = updateBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 3) {
+                    if (callBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = callBuilder_.build();
+                    }
+                }
+                result.ty_ = ty_;
+                result.valueCase_ = valueCase_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction.getDefaultInstance())
+                    return this;
+                if (other.getTy() != 0) {
+                    setTy(other.getTy());
+                }
+                switch (other.getValueCase()) {
+                case CREATE: {
+                    mergeCreate(other.getCreate());
+                    break;
+                }
+                case UPDATE: {
+                    mergeUpdate(other.getUpdate());
+                    break;
+                }
+                case CALL: {
+                    mergeCall(other.getCall());
+                    break;
+                }
+                case VALUE_NOT_SET: {
+                    break;
+                }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int valueCase_ = 0;
+            private java.lang.Object value_;
+
+            public ValueCase getValueCase() {
+                return ValueCase.forNumber(valueCase_);
+            }
+
+            public Builder clearValue() {
+                valueCase_ = 0;
+                value_ = null;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder> createBuilder_;
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             * 
+             * @return Whether the create field is set.
+             */
+            public boolean hasCreate() {
+                return valueCase_ == 1;
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             * 
+             * @return The create.
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate() {
+                if (createBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 1) {
+                        return createBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            public Builder setCreate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate value) {
+                if (createBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    createBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            public Builder setCreate(
+                    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder builderForValue) {
+                if (createBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    createBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            public Builder mergeCreate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate value) {
+                if (createBuilder_ == null) {
+                    if (valueCase_ == 1 && value_ != cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 1) {
+                        createBuilder_.mergeFrom(value);
+                    }
+                    createBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            public Builder clearCreate() {
+                if (createBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    createBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder getCreateBuilder() {
+                return getCreateFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder() {
+                if ((valueCase_ == 1) && (createBuilder_ != null)) {
+                    return createBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.types.wasmCreate create = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder> getCreateFieldBuilder() {
+                if (createBuilder_ == null) {
+                    if (!(valueCase_ == 1)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
+                    }
+                    createBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_, getParentForChildren(),
+                            isClean());
+                    value_ = null;
+                }
+                valueCase_ = 1;
+                onChanged();
+                ;
+                return createBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder> updateBuilder_;
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             * 
+             * @return Whether the update field is set.
+             */
+            public boolean hasUpdate() {
+                return valueCase_ == 2;
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             * 
+             * @return The update.
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate() {
+                if (updateBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 2) {
+                        return updateBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            public Builder setUpdate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate value) {
+                if (updateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    updateBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            public Builder setUpdate(
+                    cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder builderForValue) {
+                if (updateBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    updateBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            public Builder mergeUpdate(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate value) {
+                if (updateBuilder_ == null) {
+                    if (valueCase_ == 2 && value_ != cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 2) {
+                        updateBuilder_.mergeFrom(value);
+                    }
+                    updateBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            public Builder clearUpdate() {
+                if (updateBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    updateBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder getUpdateBuilder() {
+                return getUpdateFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder() {
+                if ((valueCase_ == 2) && (updateBuilder_ != null)) {
+                    return updateBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.types.wasmUpdate update = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder> getUpdateFieldBuilder() {
+                if (updateBuilder_ == null) {
+                    if (!(valueCase_ == 2)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+                    }
+                    updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_, getParentForChildren(),
+                            isClean());
+                    value_ = null;
+                }
+                valueCase_ = 2;
+                onChanged();
+                ;
+                return updateBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder> callBuilder_;
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             * 
+             * @return Whether the call field is set.
+             */
+            public boolean hasCall() {
+                return valueCase_ == 3;
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             * 
+             * @return The call.
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall() {
+                if (callBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 3) {
+                        return callBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            public Builder setCall(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall value) {
+                if (callBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    callBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            public Builder setCall(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder builderForValue) {
+                if (callBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    callBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            public Builder mergeCall(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall value) {
+                if (callBuilder_ == null) {
+                    if (valueCase_ == 3
+                            && value_ != cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 3) {
+                        callBuilder_.mergeFrom(value);
+                    }
+                    callBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            public Builder clearCall() {
+                if (callBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    callBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder getCallBuilder() {
+                return getCallFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder() {
+                if ((valueCase_ == 3) && (callBuilder_ != null)) {
+                    return callBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.types.wasmCall call = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder> getCallFieldBuilder() {
+                if (callBuilder_ == null) {
+                    if (!(valueCase_ == 3)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+                    }
+                    callBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_, getParentForChildren(),
+                            isClean());
+                    value_ = null;
+                }
+                valueCase_ = 3;
+                onChanged();
+                ;
+                return callBuilder_;
+            }
+
+            private int ty_;
+
+            /**
+             * <code>int32 ty = 4;</code>
+             * 
+             * @return The ty.
+             */
+            public int getTy() {
+                return ty_;
+            }
+
+            /**
+             * <code>int32 ty = 4;</code>
+             * 
+             * @param value
+             *            The ty to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setTy(int value) {
+
+                ty_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 ty = 4;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearTy() {
+
+                ty_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.wasmAction)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.wasmAction)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<wasmAction> PARSER = new com.google.protobuf.AbstractParser<wasmAction>() {
+            @java.lang.Override
+            public wasmAction parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new wasmAction(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<wasmAction> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<wasmAction> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmAction getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder.class);
+    public interface wasmCreateOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.wasmCreate)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        java.lang.String getName();
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString getNameBytes();
+
+        /**
+         * <code>bytes code = 2;</code>
+         * 
+         * @return The code.
+         */
+        com.google.protobuf.ByteString getCode();
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CODE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString code_;
-    /**
-     * <code>bytes code = 2;</code>
-     * @return The code.
-     */
-    public com.google.protobuf.ByteString getCode() {
-      return code_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!code_.isEmpty()) {
-        output.writeBytes(2, code_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!code_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, code_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCode()
-          .equals(other.getCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.wasmCreate}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.wasmCreate)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_descriptor;
-      }
+    public static final class wasmCreate extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.wasmCreate)
+            wasmCreateOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use wasmCreate.newBuilder() to construct.
+        private wasmCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        name_ = "";
 
-        code_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private wasmCreate() {
+            name_ = "";
+            code_ = com.google.protobuf.ByteString.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate(this);
-        result.name_ = name_;
-        result.code_ = code_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new wasmCreate();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
-          setCode(other.getCode());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes code = 2;</code>
-       * @return The code.
-       */
-      public com.google.protobuf.ByteString getCode() {
-        return code_;
-      }
-      /**
-       * <code>bytes code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.wasmCreate)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.wasmCreate)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<wasmCreate>
-        PARSER = new com.google.protobuf.AbstractParser<wasmCreate>() {
-      @java.lang.Override
-      public wasmCreate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new wasmCreate(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<wasmCreate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<wasmCreate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface wasmUpdateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.wasmUpdate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>bytes code = 2;</code>
-     * @return The code.
-     */
-    com.google.protobuf.ByteString getCode();
-  }
-  /**
-   * Protobuf type {@code types.wasmUpdate}
-   */
-  public  static final class wasmUpdate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.wasmUpdate)
-      wasmUpdateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use wasmUpdate.newBuilder() to construct.
-    private wasmUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private wasmUpdate() {
-      name_ = "";
-      code_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new wasmUpdate();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private wasmUpdate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
+        private wasmCreate(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              code_ = input.readBytes();
-              break;
+                        name_ = s;
+                        break;
+                    }
+                    case 18: {
+
+                        code_ = input.readBytes();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder.class);
+        }
+
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int CODE_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString code_;
+
+        /**
+         * <code>bytes code = 2;</code>
+         * 
+         * @return The code.
+         */
+        public com.google.protobuf.ByteString getCode() {
+            return code_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+            }
+            if (!code_.isEmpty()) {
+                output.writeBytes(2, code_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+            }
+            if (!code_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, code_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) obj;
+
+            if (!getName().equals(other.getName()))
+                return false;
+            if (!getCode().equals(other.getCode()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + CODE_FIELD_NUMBER;
+            hash = (53 * hash) + getCode().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.wasmCreate}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.wasmCreate)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                name_ = "";
+
+                code_ = com.google.protobuf.ByteString.EMPTY;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCreate_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate(
+                        this);
+                result.name_ = name_;
+                result.code_ = code_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate.getDefaultInstance())
+                    return this;
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
+                    setCode(other.getCode());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object name_ = "";
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes code = 2;</code>
+             * 
+             * @return The code.
+             */
+            public com.google.protobuf.ByteString getCode() {
+                return code_;
+            }
+
+            /**
+             * <code>bytes code = 2;</code>
+             * 
+             * @param value
+             *            The code to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCode(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes code = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCode() {
+
+                code_ = getDefaultInstance().getCode();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.wasmCreate)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.wasmCreate)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<wasmCreate> PARSER = new com.google.protobuf.AbstractParser<wasmCreate>() {
+            @java.lang.Override
+            public wasmCreate parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new wasmCreate(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<wasmCreate> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<wasmCreate> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder.class);
+    public interface wasmUpdateOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.wasmUpdate)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        java.lang.String getName();
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString getNameBytes();
+
+        /**
+         * <code>bytes code = 2;</code>
+         * 
+         * @return The code.
+         */
+        com.google.protobuf.ByteString getCode();
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CODE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString code_;
-    /**
-     * <code>bytes code = 2;</code>
-     * @return The code.
-     */
-    public com.google.protobuf.ByteString getCode() {
-      return code_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!code_.isEmpty()) {
-        output.writeBytes(2, code_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!code_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, code_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCode()
-          .equals(other.getCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.wasmUpdate}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.wasmUpdate)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_descriptor;
-      }
+    public static final class wasmUpdate extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.wasmUpdate)
+            wasmUpdateOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use wasmUpdate.newBuilder() to construct.
+        private wasmUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        name_ = "";
 
-        code_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private wasmUpdate() {
+            name_ = "";
+            code_ = com.google.protobuf.ByteString.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate(this);
-        result.name_ = name_;
-        result.code_ = code_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new wasmUpdate();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
-          setCode(other.getCode());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes code = 2;</code>
-       * @return The code.
-       */
-      public com.google.protobuf.ByteString getCode() {
-        return code_;
-      }
-      /**
-       * <code>bytes code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.wasmUpdate)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.wasmUpdate)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<wasmUpdate>
-        PARSER = new com.google.protobuf.AbstractParser<wasmUpdate>() {
-      @java.lang.Override
-      public wasmUpdate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new wasmUpdate(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<wasmUpdate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<wasmUpdate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface wasmCallOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.wasmCall)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string contract = 1;</code>
-     * @return The contract.
-     */
-    java.lang.String getContract();
-    /**
-     * <code>string contract = 1;</code>
-     * @return The bytes for contract.
-     */
-    com.google.protobuf.ByteString
-        getContractBytes();
-
-    /**
-     * <code>string method = 2;</code>
-     * @return The method.
-     */
-    java.lang.String getMethod();
-    /**
-     * <code>string method = 2;</code>
-     * @return The bytes for method.
-     */
-    com.google.protobuf.ByteString
-        getMethodBytes();
-
-    /**
-     * <code>repeated int64 parameters = 3;</code>
-     * @return A list containing the parameters.
-     */
-    java.util.List<java.lang.Long> getParametersList();
-    /**
-     * <code>repeated int64 parameters = 3;</code>
-     * @return The count of parameters.
-     */
-    int getParametersCount();
-    /**
-     * <code>repeated int64 parameters = 3;</code>
-     * @param index The index of the element to return.
-     * @return The parameters at the given index.
-     */
-    long getParameters(int index);
-
-    /**
-     * <code>repeated string env = 4;</code>
-     * @return A list containing the env.
-     */
-    java.util.List<java.lang.String>
-        getEnvList();
-    /**
-     * <code>repeated string env = 4;</code>
-     * @return The count of env.
-     */
-    int getEnvCount();
-    /**
-     * <code>repeated string env = 4;</code>
-     * @param index The index of the element to return.
-     * @return The env at the given index.
-     */
-    java.lang.String getEnv(int index);
-    /**
-     * <code>repeated string env = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the env at the given index.
-     */
-    com.google.protobuf.ByteString
-        getEnvBytes(int index);
-  }
-  /**
-   * Protobuf type {@code types.wasmCall}
-   */
-  public  static final class wasmCall extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.wasmCall)
-      wasmCallOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use wasmCall.newBuilder() to construct.
-    private wasmCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private wasmCall() {
-      contract_ = "";
-      method_ = "";
-      parameters_ = emptyLongList();
-      env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new wasmCall();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private wasmCall(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              contract_ = s;
-              break;
+        private wasmUpdate(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              method_ = s;
-              break;
+                        name_ = s;
+                        break;
+                    }
+                    case 18: {
+
+                        code_ = input.readBytes();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                parameters_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              parameters_.addLong(input.readInt64());
-              break;
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder.class);
+        }
+
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
             }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                parameters_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                parameters_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
+        }
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                env_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              env_.add(s);
-              break;
+        }
+
+        public static final int CODE_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString code_;
+
+        /**
+         * <code>bytes code = 2;</code>
+         * 
+         * @return The code.
+         */
+        public com.google.protobuf.ByteString getCode() {
+            return code_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            if (!code_.isEmpty()) {
+                output.writeBytes(2, code_);
             }
-          }
+            unknownFields.writeTo(output);
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          parameters_.makeImmutable(); // C
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+            }
+            if (!code_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, code_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          env_ = env_.getUnmodifiableView();
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) obj;
+
+            if (!getName().equals(other.getName()))
+                return false;
+            if (!getCode().equals(other.getCode()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder.class);
-    }
-
-    public static final int CONTRACT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object contract_;
-    /**
-     * <code>string contract = 1;</code>
-     * @return The contract.
-     */
-    public java.lang.String getContract() {
-      java.lang.Object ref = contract_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        contract_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string contract = 1;</code>
-     * @return The bytes for contract.
-     */
-    public com.google.protobuf.ByteString
-        getContractBytes() {
-      java.lang.Object ref = contract_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        contract_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int METHOD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object method_;
-    /**
-     * <code>string method = 2;</code>
-     * @return The method.
-     */
-    public java.lang.String getMethod() {
-      java.lang.Object ref = method_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        method_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string method = 2;</code>
-     * @return The bytes for method.
-     */
-    public com.google.protobuf.ByteString
-        getMethodBytes() {
-      java.lang.Object ref = method_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        method_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PARAMETERS_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.LongList parameters_;
-    /**
-     * <code>repeated int64 parameters = 3;</code>
-     * @return A list containing the parameters.
-     */
-    public java.util.List<java.lang.Long>
-        getParametersList() {
-      return parameters_;
-    }
-    /**
-     * <code>repeated int64 parameters = 3;</code>
-     * @return The count of parameters.
-     */
-    public int getParametersCount() {
-      return parameters_.size();
-    }
-    /**
-     * <code>repeated int64 parameters = 3;</code>
-     * @param index The index of the element to return.
-     * @return The parameters at the given index.
-     */
-    public long getParameters(int index) {
-      return parameters_.getLong(index);
-    }
-    private int parametersMemoizedSerializedSize = -1;
-
-    public static final int ENV_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList env_;
-    /**
-     * <code>repeated string env = 4;</code>
-     * @return A list containing the env.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getEnvList() {
-      return env_;
-    }
-    /**
-     * <code>repeated string env = 4;</code>
-     * @return The count of env.
-     */
-    public int getEnvCount() {
-      return env_.size();
-    }
-    /**
-     * <code>repeated string env = 4;</code>
-     * @param index The index of the element to return.
-     * @return The env at the given index.
-     */
-    public java.lang.String getEnv(int index) {
-      return env_.get(index);
-    }
-    /**
-     * <code>repeated string env = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the env at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getEnvBytes(int index) {
-      return env_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (!getContractBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
-      }
-      if (!getMethodBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, method_);
-      }
-      if (getParametersList().size() > 0) {
-        output.writeUInt32NoTag(26);
-        output.writeUInt32NoTag(parametersMemoizedSerializedSize);
-      }
-      for (int i = 0; i < parameters_.size(); i++) {
-        output.writeInt64NoTag(parameters_.getLong(i));
-      }
-      for (int i = 0; i < env_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, env_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getContractBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
-      }
-      if (!getMethodBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, method_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < parameters_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(parameters_.getLong(i));
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + CODE_FIELD_NUMBER;
+            hash = (53 * hash) + getCode().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
         }
-        size += dataSize;
-        if (!getParametersList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
         }
-        parametersMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < env_.size(); i++) {
-          dataSize += computeStringSizeNoTag(env_.getRaw(i));
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
         }
-        size += dataSize;
-        size += 1 * getEnvList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.wasmUpdate}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.wasmUpdate)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                name_ = "";
+
+                code_ = com.google.protobuf.ByteString.EMPTY;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmUpdate_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate(
+                        this);
+                result.name_ = name_;
+                result.code_ = code_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate.getDefaultInstance())
+                    return this;
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
+                    setCode(other.getCode());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object name_ = "";
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes code = 2;</code>
+             * 
+             * @return The code.
+             */
+            public com.google.protobuf.ByteString getCode() {
+                return code_;
+            }
+
+            /**
+             * <code>bytes code = 2;</code>
+             * 
+             * @param value
+             *            The code to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCode(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes code = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCode() {
+
+                code_ = getDefaultInstance().getCode();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.wasmUpdate)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.wasmUpdate)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<wasmUpdate> PARSER = new com.google.protobuf.AbstractParser<wasmUpdate>() {
+            @java.lang.Override
+            public wasmUpdate parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new wasmUpdate(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<wasmUpdate> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<wasmUpdate> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) obj;
+    public interface wasmCallOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.wasmCall)
+            com.google.protobuf.MessageOrBuilder {
 
-      if (!getContract()
-          .equals(other.getContract())) return false;
-      if (!getMethod()
-          .equals(other.getMethod())) return false;
-      if (!getParametersList()
-          .equals(other.getParametersList())) return false;
-      if (!getEnvList()
-          .equals(other.getEnvList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The contract.
+         */
+        java.lang.String getContract();
 
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
-      hash = (53 * hash) + getContract().hashCode();
-      hash = (37 * hash) + METHOD_FIELD_NUMBER;
-      hash = (53 * hash) + getMethod().hashCode();
-      if (getParametersCount() > 0) {
-        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + getParametersList().hashCode();
-      }
-      if (getEnvCount() > 0) {
-        hash = (37 * hash) + ENV_FIELD_NUMBER;
-        hash = (53 * hash) + getEnvList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The bytes for contract.
+         */
+        com.google.protobuf.ByteString getContractBytes();
 
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The method.
+         */
+        java.lang.String getMethod();
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The bytes for method.
+         */
+        com.google.protobuf.ByteString getMethodBytes();
+
+        /**
+         * <code>repeated int64 parameters = 3;</code>
+         * 
+         * @return A list containing the parameters.
+         */
+        java.util.List<java.lang.Long> getParametersList();
+
+        /**
+         * <code>repeated int64 parameters = 3;</code>
+         * 
+         * @return The count of parameters.
+         */
+        int getParametersCount();
+
+        /**
+         * <code>repeated int64 parameters = 3;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The parameters at the given index.
+         */
+        long getParameters(int index);
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @return A list containing the env.
+         */
+        java.util.List<java.lang.String> getEnvList();
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @return The count of env.
+         */
+        int getEnvCount();
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The env at the given index.
+         */
+        java.lang.String getEnv(int index);
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @param index
+         *            The index of the value to return.
+         * 
+         * @return The bytes of the env at the given index.
+         */
+        com.google.protobuf.ByteString getEnvBytes(int index);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.wasmCall}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.wasmCall)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_descriptor;
-      }
+    public static final class wasmCall extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.wasmCall)
+            wasmCallOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use wasmCall.newBuilder() to construct.
+        private wasmCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        contract_ = "";
 
-        method_ = "";
-
-        parameters_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private wasmCall() {
+            contract_ = "";
+            method_ = "";
+            parameters_ = emptyLongList();
+            env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall(this);
-        int from_bitField0_ = bitField0_;
-        result.contract_ = contract_;
-        result.method_ = method_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          parameters_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new wasmCall();
         }
-        result.parameters_ = parameters_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          env_ = env_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        result.env_ = env_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance()) return this;
-        if (!other.getContract().isEmpty()) {
-          contract_ = other.contract_;
-          onChanged();
-        }
-        if (!other.getMethod().isEmpty()) {
-          method_ = other.method_;
-          onChanged();
-        }
-        if (!other.parameters_.isEmpty()) {
-          if (parameters_.isEmpty()) {
-            parameters_ = other.parameters_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureParametersIsMutable();
-            parameters_.addAll(other.parameters_);
-          }
-          onChanged();
-        }
-        if (!other.env_.isEmpty()) {
-          if (env_.isEmpty()) {
-            env_ = other.env_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureEnvIsMutable();
-            env_.addAll(other.env_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object contract_ = "";
-      /**
-       * <code>string contract = 1;</code>
-       * @return The contract.
-       */
-      public java.lang.String getContract() {
-        java.lang.Object ref = contract_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          contract_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @return The bytes for contract.
-       */
-      public com.google.protobuf.ByteString
-          getContractBytes() {
-        java.lang.Object ref = contract_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          contract_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @param value The contract to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContract(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        contract_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContract() {
-        
-        contract_ = getDefaultInstance().getContract();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @param value The bytes for contract to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContractBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        contract_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object method_ = "";
-      /**
-       * <code>string method = 2;</code>
-       * @return The method.
-       */
-      public java.lang.String getMethod() {
-        java.lang.Object ref = method_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          method_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @return The bytes for method.
-       */
-      public com.google.protobuf.ByteString
-          getMethodBytes() {
-        java.lang.Object ref = method_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          method_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @param value The method to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMethod(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        method_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMethod() {
-        
-        method_ = getDefaultInstance().getMethod();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @param value The bytes for method to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMethodBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        method_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.LongList parameters_ = emptyLongList();
-      private void ensureParametersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          parameters_ = mutableCopy(parameters_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @return A list containing the parameters.
-       */
-      public java.util.List<java.lang.Long>
-          getParametersList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(parameters_) : parameters_;
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @return The count of parameters.
-       */
-      public int getParametersCount() {
-        return parameters_.size();
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @param index The index of the element to return.
-       * @return The parameters at the given index.
-       */
-      public long getParameters(int index) {
-        return parameters_.getLong(index);
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The parameters to set.
-       * @return This builder for chaining.
-       */
-      public Builder setParameters(
-          int index, long value) {
-        ensureParametersIsMutable();
-        parameters_.setLong(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @param value The parameters to add.
-       * @return This builder for chaining.
-       */
-      public Builder addParameters(long value) {
-        ensureParametersIsMutable();
-        parameters_.addLong(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @param values The parameters to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllParameters(
-          java.lang.Iterable<? extends java.lang.Long> values) {
-        ensureParametersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, parameters_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 parameters = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearParameters() {
-        parameters_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureEnvIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          env_ = new com.google.protobuf.LazyStringArrayList(env_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @return A list containing the env.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getEnvList() {
-        return env_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @return The count of env.
-       */
-      public int getEnvCount() {
-        return env_.size();
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @param index The index of the element to return.
-       * @return The env at the given index.
-       */
-      public java.lang.String getEnv(int index) {
-        return env_.get(index);
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the env at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getEnvBytes(int index) {
-        return env_.getByteString(index);
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The env to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnv(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEnvIsMutable();
-        env_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @param value The env to add.
-       * @return This builder for chaining.
-       */
-      public Builder addEnv(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEnvIsMutable();
-        env_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @param values The env to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllEnv(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureEnvIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, env_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnv() {
-        env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string env = 4;</code>
-       * @param value The bytes of the env to add.
-       * @return This builder for chaining.
-       */
-      public Builder addEnvBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureEnvIsMutable();
-        env_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.wasmCall)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.wasmCall)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<wasmCall>
-        PARSER = new com.google.protobuf.AbstractParser<wasmCall>() {
-      @java.lang.Override
-      public wasmCall parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new wasmCall(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<wasmCall> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<wasmCall> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface queryCheckContractOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.queryCheckContract)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-  }
-  /**
-   * Protobuf type {@code types.queryCheckContract}
-   */
-  public  static final class queryCheckContract extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.queryCheckContract)
-      queryCheckContractOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use queryCheckContract.newBuilder() to construct.
-    private queryCheckContract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private queryCheckContract() {
-      name_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new queryCheckContract();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private queryCheckContract(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
+        private wasmCall(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        contract_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        method_ = s;
+                        break;
+                    }
+                    case 24: {
+                        if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                            parameters_ = newLongList();
+                            mutable_bitField0_ |= 0x00000001;
+                        }
+                        parameters_.addLong(input.readInt64());
+                        break;
+                    }
+                    case 26: {
+                        int length = input.readRawVarint32();
+                        int limit = input.pushLimit(length);
+                        if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                            parameters_ = newLongList();
+                            mutable_bitField0_ |= 0x00000001;
+                        }
+                        while (input.getBytesUntilLimit() > 0) {
+                            parameters_.addLong(input.readInt64());
+                        }
+                        input.popLimit(limit);
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
+                        if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                            env_ = new com.google.protobuf.LazyStringArrayList();
+                            mutable_bitField0_ |= 0x00000002;
+                        }
+                        env_.add(s);
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) != 0)) {
+                    parameters_.makeImmutable(); // C
+                }
+                if (((mutable_bitField0_ & 0x00000002) != 0)) {
+                    env_ = env_.getUnmodifiableView();
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder.class);
+        }
+
+        public static final int CONTRACT_FIELD_NUMBER = 1;
+        private volatile java.lang.Object contract_;
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The contract.
+         */
+        public java.lang.String getContract() {
+            java.lang.Object ref = contract_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                contract_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The bytes for contract.
+         */
+        public com.google.protobuf.ByteString getContractBytes() {
+            java.lang.Object ref = contract_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                contract_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int METHOD_FIELD_NUMBER = 2;
+        private volatile java.lang.Object method_;
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The method.
+         */
+        public java.lang.String getMethod() {
+            java.lang.Object ref = method_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                method_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The bytes for method.
+         */
+        public com.google.protobuf.ByteString getMethodBytes() {
+            java.lang.Object ref = method_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                method_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int PARAMETERS_FIELD_NUMBER = 3;
+        private com.google.protobuf.Internal.LongList parameters_;
+
+        /**
+         * <code>repeated int64 parameters = 3;</code>
+         * 
+         * @return A list containing the parameters.
+         */
+        public java.util.List<java.lang.Long> getParametersList() {
+            return parameters_;
+        }
+
+        /**
+         * <code>repeated int64 parameters = 3;</code>
+         * 
+         * @return The count of parameters.
+         */
+        public int getParametersCount() {
+            return parameters_.size();
+        }
+
+        /**
+         * <code>repeated int64 parameters = 3;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The parameters at the given index.
+         */
+        public long getParameters(int index) {
+            return parameters_.getLong(index);
+        }
+
+        private int parametersMemoizedSerializedSize = -1;
+
+        public static final int ENV_FIELD_NUMBER = 4;
+        private com.google.protobuf.LazyStringList env_;
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @return A list containing the env.
+         */
+        public com.google.protobuf.ProtocolStringList getEnvList() {
+            return env_;
+        }
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @return The count of env.
+         */
+        public int getEnvCount() {
+            return env_.size();
+        }
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The env at the given index.
+         */
+        public java.lang.String getEnv(int index) {
+            return env_.get(index);
+        }
+
+        /**
+         * <code>repeated string env = 4;</code>
+         * 
+         * @param index
+         *            The index of the value to return.
+         * 
+         * @return The bytes of the env at the given index.
+         */
+        public com.google.protobuf.ByteString getEnvBytes(int index) {
+            return env_.getByteString(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            getSerializedSize();
+            if (!getContractBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+            }
+            if (!getMethodBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, method_);
+            }
+            if (getParametersList().size() > 0) {
+                output.writeUInt32NoTag(26);
+                output.writeUInt32NoTag(parametersMemoizedSerializedSize);
+            }
+            for (int i = 0; i < parameters_.size(); i++) {
+                output.writeInt64NoTag(parameters_.getLong(i));
+            }
+            for (int i = 0; i < env_.size(); i++) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, env_.getRaw(i));
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getContractBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+            }
+            if (!getMethodBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, method_);
+            }
+            {
+                int dataSize = 0;
+                for (int i = 0; i < parameters_.size(); i++) {
+                    dataSize += com.google.protobuf.CodedOutputStream.computeInt64SizeNoTag(parameters_.getLong(i));
+                }
+                size += dataSize;
+                if (!getParametersList().isEmpty()) {
+                    size += 1;
+                    size += com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(dataSize);
+                }
+                parametersMemoizedSerializedSize = dataSize;
+            }
+            {
+                int dataSize = 0;
+                for (int i = 0; i < env_.size(); i++) {
+                    dataSize += computeStringSizeNoTag(env_.getRaw(i));
+                }
+                size += dataSize;
+                size += 1 * getEnvList().size();
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) obj;
+
+            if (!getContract().equals(other.getContract()))
+                return false;
+            if (!getMethod().equals(other.getMethod()))
+                return false;
+            if (!getParametersList().equals(other.getParametersList()))
+                return false;
+            if (!getEnvList().equals(other.getEnvList()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+            hash = (53 * hash) + getContract().hashCode();
+            hash = (37 * hash) + METHOD_FIELD_NUMBER;
+            hash = (53 * hash) + getMethod().hashCode();
+            if (getParametersCount() > 0) {
+                hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+                hash = (53 * hash) + getParametersList().hashCode();
+            }
+            if (getEnvCount() > 0) {
+                hash = (37 * hash) + ENV_FIELD_NUMBER;
+                hash = (53 * hash) + getEnvList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.wasmCall}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.wasmCall)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                contract_ = "";
+
+                method_ = "";
+
+                parameters_ = emptyLongList();
+                bitField0_ = (bitField0_ & ~0x00000001);
+                env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_wasmCall_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall(
+                        this);
+                int from_bitField0_ = bitField0_;
+                result.contract_ = contract_;
+                result.method_ = method_;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                    parameters_.makeImmutable();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                }
+                result.parameters_ = parameters_;
+                if (((bitField0_ & 0x00000002) != 0)) {
+                    env_ = env_.getUnmodifiableView();
+                    bitField0_ = (bitField0_ & ~0x00000002);
+                }
+                result.env_ = env_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall.getDefaultInstance())
+                    return this;
+                if (!other.getContract().isEmpty()) {
+                    contract_ = other.contract_;
+                    onChanged();
+                }
+                if (!other.getMethod().isEmpty()) {
+                    method_ = other.method_;
+                    onChanged();
+                }
+                if (!other.parameters_.isEmpty()) {
+                    if (parameters_.isEmpty()) {
+                        parameters_ = other.parameters_;
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    } else {
+                        ensureParametersIsMutable();
+                        parameters_.addAll(other.parameters_);
+                    }
+                    onChanged();
+                }
+                if (!other.env_.isEmpty()) {
+                    if (env_.isEmpty()) {
+                        env_ = other.env_;
+                        bitField0_ = (bitField0_ & ~0x00000002);
+                    } else {
+                        ensureEnvIsMutable();
+                        env_.addAll(other.env_);
+                    }
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int bitField0_;
+
+            private java.lang.Object contract_ = "";
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return The contract.
+             */
+            public java.lang.String getContract() {
+                java.lang.Object ref = contract_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    contract_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return The bytes for contract.
+             */
+            public com.google.protobuf.ByteString getContractBytes() {
+                java.lang.Object ref = contract_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    contract_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @param value
+             *            The contract to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setContract(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                contract_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearContract() {
+
+                contract_ = getDefaultInstance().getContract();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @param value
+             *            The bytes for contract to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setContractBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                contract_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object method_ = "";
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @return The method.
+             */
+            public java.lang.String getMethod() {
+                java.lang.Object ref = method_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    method_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @return The bytes for method.
+             */
+            public com.google.protobuf.ByteString getMethodBytes() {
+                java.lang.Object ref = method_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    method_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @param value
+             *            The method to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setMethod(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                method_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearMethod() {
+
+                method_ = getDefaultInstance().getMethod();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @param value
+             *            The bytes for method to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setMethodBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                method_ = value;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.Internal.LongList parameters_ = emptyLongList();
+
+            private void ensureParametersIsMutable() {
+                if (!((bitField0_ & 0x00000001) != 0)) {
+                    parameters_ = mutableCopy(parameters_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @return A list containing the parameters.
+             */
+            public java.util.List<java.lang.Long> getParametersList() {
+                return ((bitField0_ & 0x00000001) != 0) ? java.util.Collections.unmodifiableList(parameters_)
+                        : parameters_;
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @return The count of parameters.
+             */
+            public int getParametersCount() {
+                return parameters_.size();
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @param index
+             *            The index of the element to return.
+             * 
+             * @return The parameters at the given index.
+             */
+            public long getParameters(int index) {
+                return parameters_.getLong(index);
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @param index
+             *            The index to set the value at.
+             * @param value
+             *            The parameters to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setParameters(int index, long value) {
+                ensureParametersIsMutable();
+                parameters_.setLong(index, value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @param value
+             *            The parameters to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addParameters(long value) {
+                ensureParametersIsMutable();
+                parameters_.addLong(value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @param values
+             *            The parameters to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addAllParameters(java.lang.Iterable<? extends java.lang.Long> values) {
+                ensureParametersIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(values, parameters_);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated int64 parameters = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearParameters() {
+                parameters_ = emptyLongList();
+                bitField0_ = (bitField0_ & ~0x00000001);
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.LazyStringList env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+
+            private void ensureEnvIsMutable() {
+                if (!((bitField0_ & 0x00000002) != 0)) {
+                    env_ = new com.google.protobuf.LazyStringArrayList(env_);
+                    bitField0_ |= 0x00000002;
+                }
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @return A list containing the env.
+             */
+            public com.google.protobuf.ProtocolStringList getEnvList() {
+                return env_.getUnmodifiableView();
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @return The count of env.
+             */
+            public int getEnvCount() {
+                return env_.size();
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @param index
+             *            The index of the element to return.
+             * 
+             * @return The env at the given index.
+             */
+            public java.lang.String getEnv(int index) {
+                return env_.get(index);
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @param index
+             *            The index of the value to return.
+             * 
+             * @return The bytes of the env at the given index.
+             */
+            public com.google.protobuf.ByteString getEnvBytes(int index) {
+                return env_.getByteString(index);
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @param index
+             *            The index to set the value at.
+             * @param value
+             *            The env to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setEnv(int index, java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                ensureEnvIsMutable();
+                env_.set(index, value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @param value
+             *            The env to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addEnv(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                ensureEnvIsMutable();
+                env_.add(value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @param values
+             *            The env to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addAllEnv(java.lang.Iterable<java.lang.String> values) {
+                ensureEnvIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(values, env_);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearEnv() {
+                env_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string env = 4;</code>
+             * 
+             * @param value
+             *            The bytes of the env to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addEnvBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+                ensureEnvIsMutable();
+                env_.add(value);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.wasmCall)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.wasmCall)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<wasmCall> PARSER = new com.google.protobuf.AbstractParser<wasmCall>() {
+            @java.lang.Override
+            public wasmCall parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new wasmCall(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<wasmCall> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<wasmCall> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.Builder.class);
+    public interface queryCheckContractOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.queryCheckContract)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        java.lang.String getName();
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString getNameBytes();
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.queryCheckContract}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.queryCheckContract)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContractOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_descriptor;
-      }
+    public static final class queryCheckContract extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.queryCheckContract)
+            queryCheckContractOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use queryCheckContract.newBuilder() to construct.
+        private queryCheckContract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        name_ = "";
 
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private queryCheckContract() {
+            name_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract(this);
-        result.name_ = name_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new queryCheckContract();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.queryCheckContract)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.queryCheckContract)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<queryCheckContract>
-        PARSER = new com.google.protobuf.AbstractParser<queryCheckContract>() {
-      @java.lang.Override
-      public queryCheckContract parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new queryCheckContract(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<queryCheckContract> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<queryCheckContract> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface queryContractDBOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.queryContractDB)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string contract = 1;</code>
-     * @return The contract.
-     */
-    java.lang.String getContract();
-    /**
-     * <code>string contract = 1;</code>
-     * @return The bytes for contract.
-     */
-    com.google.protobuf.ByteString
-        getContractBytes();
-
-    /**
-     * <code>string key = 2;</code>
-     * @return The key.
-     */
-    java.lang.String getKey();
-    /**
-     * <code>string key = 2;</code>
-     * @return The bytes for key.
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-  }
-  /**
-   * Protobuf type {@code types.queryContractDB}
-   */
-  public  static final class queryContractDB extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.queryContractDB)
-      queryContractDBOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use queryContractDB.newBuilder() to construct.
-    private queryContractDB(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private queryContractDB() {
-      contract_ = "";
-      key_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new queryContractDB();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private queryContractDB(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              contract_ = s;
-              break;
+        private queryCheckContract(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              key_ = s;
-              break;
+                        name_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.Builder.class);
+        }
+
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) obj;
+
+            if (!getName().equals(other.getName()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.queryCheckContract}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.queryCheckContract)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContractOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                name_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryCheckContract_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract(
+                        this);
+                result.name_ = name_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract.getDefaultInstance())
+                    return this;
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object name_ = "";
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.queryCheckContract)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.queryCheckContract)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<queryCheckContract> PARSER = new com.google.protobuf.AbstractParser<queryCheckContract>() {
+            @java.lang.Override
+            public queryCheckContract parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new queryCheckContract(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<queryCheckContract> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<queryCheckContract> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryCheckContract getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.Builder.class);
+    public interface queryContractDBOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.queryContractDB)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The contract.
+         */
+        java.lang.String getContract();
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The bytes for contract.
+         */
+        com.google.protobuf.ByteString getContractBytes();
+
+        /**
+         * <code>string key = 2;</code>
+         * 
+         * @return The key.
+         */
+        java.lang.String getKey();
+
+        /**
+         * <code>string key = 2;</code>
+         * 
+         * @return The bytes for key.
+         */
+        com.google.protobuf.ByteString getKeyBytes();
     }
 
-    public static final int CONTRACT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object contract_;
-    /**
-     * <code>string contract = 1;</code>
-     * @return The contract.
-     */
-    public java.lang.String getContract() {
-      java.lang.Object ref = contract_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        contract_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string contract = 1;</code>
-     * @return The bytes for contract.
-     */
-    public com.google.protobuf.ByteString
-        getContractBytes() {
-      java.lang.Object ref = contract_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        contract_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object key_;
-    /**
-     * <code>string key = 2;</code>
-     * @return The key.
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string key = 2;</code>
-     * @return The bytes for key.
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getContractBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getContractBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
-      }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) obj;
-
-      if (!getContract()
-          .equals(other.getContract())) return false;
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
-      hash = (53 * hash) + getContract().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.queryContractDB}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.queryContractDB)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDBOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_descriptor;
-      }
+    public static final class queryContractDB extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.queryContractDB)
+            queryContractDBOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use queryContractDB.newBuilder() to construct.
+        private queryContractDB(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        contract_ = "";
 
-        key_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private queryContractDB() {
+            contract_ = "";
+            key_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB(this);
-        result.contract_ = contract_;
-        result.key_ = key_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new queryContractDB();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.getDefaultInstance()) return this;
-        if (!other.getContract().isEmpty()) {
-          contract_ = other.contract_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object contract_ = "";
-      /**
-       * <code>string contract = 1;</code>
-       * @return The contract.
-       */
-      public java.lang.String getContract() {
-        java.lang.Object ref = contract_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          contract_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @return The bytes for contract.
-       */
-      public com.google.protobuf.ByteString
-          getContractBytes() {
-        java.lang.Object ref = contract_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          contract_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @param value The contract to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContract(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        contract_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContract() {
-        
-        contract_ = getDefaultInstance().getContract();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @param value The bytes for contract to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContractBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        contract_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <code>string key = 2;</code>
-       * @return The key.
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string key = 2;</code>
-       * @return The bytes for key.
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string key = 2;</code>
-       * @param value The key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 2;</code>
-       * @param value The bytes for key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.queryContractDB)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.queryContractDB)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<queryContractDB>
-        PARSER = new com.google.protobuf.AbstractParser<queryContractDB>() {
-      @java.lang.Override
-      public queryContractDB parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new queryContractDB(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<queryContractDB> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<queryContractDB> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface customLogOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.customLog)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated string info = 1;</code>
-     * @return A list containing the info.
-     */
-    java.util.List<java.lang.String>
-        getInfoList();
-    /**
-     * <code>repeated string info = 1;</code>
-     * @return The count of info.
-     */
-    int getInfoCount();
-    /**
-     * <code>repeated string info = 1;</code>
-     * @param index The index of the element to return.
-     * @return The info at the given index.
-     */
-    java.lang.String getInfo(int index);
-    /**
-     * <code>repeated string info = 1;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the info at the given index.
-     */
-    com.google.protobuf.ByteString
-        getInfoBytes(int index);
-  }
-  /**
-   * Protobuf type {@code types.customLog}
-   */
-  public  static final class customLog extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.customLog)
-      customLogOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use customLog.newBuilder() to construct.
-    private customLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private customLog() {
-      info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new customLog();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private customLog(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                info_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              info_.add(s);
-              break;
+        private queryContractDB(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        contract_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        key_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          info_ = info_.getUnmodifiableView();
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_descriptor;
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.Builder.class);
-    }
-
-    public static final int INFO_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList info_;
-    /**
-     * <code>repeated string info = 1;</code>
-     * @return A list containing the info.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getInfoList() {
-      return info_;
-    }
-    /**
-     * <code>repeated string info = 1;</code>
-     * @return The count of info.
-     */
-    public int getInfoCount() {
-      return info_.size();
-    }
-    /**
-     * <code>repeated string info = 1;</code>
-     * @param index The index of the element to return.
-     * @return The info at the given index.
-     */
-    public java.lang.String getInfo(int index) {
-      return info_.get(index);
-    }
-    /**
-     * <code>repeated string info = 1;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the info at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getInfoBytes(int index) {
-      return info_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < info_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, info_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < info_.size(); i++) {
-          dataSize += computeStringSizeNoTag(info_.getRaw(i));
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.Builder.class);
         }
-        size += dataSize;
-        size += 1 * getInfoList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
+
+        public static final int CONTRACT_FIELD_NUMBER = 1;
+        private volatile java.lang.Object contract_;
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The contract.
+         */
+        public java.lang.String getContract() {
+            java.lang.Object ref = contract_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                contract_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The bytes for contract.
+         */
+        public com.google.protobuf.ByteString getContractBytes() {
+            java.lang.Object ref = contract_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                contract_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int KEY_FIELD_NUMBER = 2;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <code>string key = 2;</code>
+         * 
+         * @return The key.
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string key = 2;</code>
+         * 
+         * @return The bytes for key.
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getContractBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getContractBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+            }
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) obj;
+
+            if (!getContract().equals(other.getContract()))
+                return false;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+            hash = (53 * hash) + getContract().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.queryContractDB}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.queryContractDB)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDBOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                contract_ = "";
+
+                key_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_queryContractDB_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB(
+                        this);
+                result.contract_ = contract_;
+                result.key_ = key_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB.getDefaultInstance())
+                    return this;
+                if (!other.getContract().isEmpty()) {
+                    contract_ = other.contract_;
+                    onChanged();
+                }
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object contract_ = "";
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return The contract.
+             */
+            public java.lang.String getContract() {
+                java.lang.Object ref = contract_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    contract_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return The bytes for contract.
+             */
+            public com.google.protobuf.ByteString getContractBytes() {
+                java.lang.Object ref = contract_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    contract_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @param value
+             *            The contract to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setContract(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                contract_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearContract() {
+
+                contract_ = getDefaultInstance().getContract();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @param value
+             *            The bytes for contract to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setContractBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                contract_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <code>string key = 2;</code>
+             * 
+             * @return The key.
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string key = 2;</code>
+             * 
+             * @return The bytes for key.
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string key = 2;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string key = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string key = 2;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.queryContractDB)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.queryContractDB)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<queryContractDB> PARSER = new com.google.protobuf.AbstractParser<queryContractDB>() {
+            @java.lang.Override
+            public queryContractDB parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new queryContractDB(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<queryContractDB> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<queryContractDB> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.queryContractDB getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) obj;
+    public interface customLogOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.customLog)
+            com.google.protobuf.MessageOrBuilder {
 
-      if (!getInfoList()
-          .equals(other.getInfoList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @return A list containing the info.
+         */
+        java.util.List<java.lang.String> getInfoList();
 
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getInfoCount() > 0) {
-        hash = (37 * hash) + INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getInfoList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @return The count of info.
+         */
+        int getInfoCount();
 
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The info at the given index.
+         */
+        java.lang.String getInfo(int index);
+
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @param index
+         *            The index of the value to return.
+         * 
+         * @return The bytes of the info at the given index.
+         */
+        com.google.protobuf.ByteString getInfoBytes(int index);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.customLog}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.customLog)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLogOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_descriptor;
-      }
+    public static final class customLog extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.customLog)
+            customLogOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use customLog.newBuilder() to construct.
+        private customLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private customLog() {
+            info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          info_ = info_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new customLog();
         }
-        result.info_ = info_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.getDefaultInstance()) return this;
-        if (!other.info_.isEmpty()) {
-          if (info_.isEmpty()) {
-            info_ = other.info_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureInfoIsMutable();
-            info_.addAll(other.info_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringList info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureInfoIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          info_ = new com.google.protobuf.LazyStringArrayList(info_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @return A list containing the info.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getInfoList() {
-        return info_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @return The count of info.
-       */
-      public int getInfoCount() {
-        return info_.size();
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @param index The index of the element to return.
-       * @return The info at the given index.
-       */
-      public java.lang.String getInfo(int index) {
-        return info_.get(index);
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the info at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getInfoBytes(int index) {
-        return info_.getByteString(index);
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @param index The index to set the value at.
-       * @param value The info to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInfo(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureInfoIsMutable();
-        info_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @param value The info to add.
-       * @return This builder for chaining.
-       */
-      public Builder addInfo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureInfoIsMutable();
-        info_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @param values The info to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllInfo(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureInfoIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, info_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInfo() {
-        info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string info = 1;</code>
-       * @param value The bytes of the info to add.
-       * @return This builder for chaining.
-       */
-      public Builder addInfoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureInfoIsMutable();
-        info_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.customLog)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.customLog)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<customLog>
-        PARSER = new com.google.protobuf.AbstractParser<customLog>() {
-      @java.lang.Override
-      public customLog parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new customLog(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<customLog> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<customLog> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface createContractLogOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.createContractLog)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string code = 2;</code>
-     * @return The code.
-     */
-    java.lang.String getCode();
-    /**
-     * <code>string code = 2;</code>
-     * @return The bytes for code.
-     */
-    com.google.protobuf.ByteString
-        getCodeBytes();
-  }
-  /**
-   * Protobuf type {@code types.createContractLog}
-   */
-  public  static final class createContractLog extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.createContractLog)
-      createContractLogOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use createContractLog.newBuilder() to construct.
-    private createContractLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private createContractLog() {
-      name_ = "";
-      code_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new createContractLog();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private createContractLog(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
+        private customLog(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              code_ = s;
-              break;
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+                        if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                            info_ = new com.google.protobuf.LazyStringArrayList();
+                            mutable_bitField0_ |= 0x00000001;
+                        }
+                        info_.add(s);
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) != 0)) {
+                    info_ = info_.getUnmodifiableView();
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.Builder.class);
+        }
+
+        public static final int INFO_FIELD_NUMBER = 1;
+        private com.google.protobuf.LazyStringList info_;
+
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @return A list containing the info.
+         */
+        public com.google.protobuf.ProtocolStringList getInfoList() {
+            return info_;
+        }
+
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @return The count of info.
+         */
+        public int getInfoCount() {
+            return info_.size();
+        }
+
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The info at the given index.
+         */
+        public java.lang.String getInfo(int index) {
+            return info_.get(index);
+        }
+
+        /**
+         * <code>repeated string info = 1;</code>
+         * 
+         * @param index
+         *            The index of the value to return.
+         * 
+         * @return The bytes of the info at the given index.
+         */
+        public com.google.protobuf.ByteString getInfoBytes(int index) {
+            return info_.getByteString(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            for (int i = 0; i < info_.size(); i++) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, info_.getRaw(i));
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            {
+                int dataSize = 0;
+                for (int i = 0; i < info_.size(); i++) {
+                    dataSize += computeStringSizeNoTag(info_.getRaw(i));
+                }
+                size += dataSize;
+                size += 1 * getInfoList().size();
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) obj;
+
+            if (!getInfoList().equals(other.getInfoList()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (getInfoCount() > 0) {
+                hash = (37 * hash) + INFO_FIELD_NUMBER;
+                hash = (53 * hash) + getInfoList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.customLog}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.customLog)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLogOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_customLog_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog(
+                        this);
+                int from_bitField0_ = bitField0_;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                    info_ = info_.getUnmodifiableView();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                }
+                result.info_ = info_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog.getDefaultInstance())
+                    return this;
+                if (!other.info_.isEmpty()) {
+                    if (info_.isEmpty()) {
+                        info_ = other.info_;
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    } else {
+                        ensureInfoIsMutable();
+                        info_.addAll(other.info_);
+                    }
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int bitField0_;
+
+            private com.google.protobuf.LazyStringList info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+
+            private void ensureInfoIsMutable() {
+                if (!((bitField0_ & 0x00000001) != 0)) {
+                    info_ = new com.google.protobuf.LazyStringArrayList(info_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @return A list containing the info.
+             */
+            public com.google.protobuf.ProtocolStringList getInfoList() {
+                return info_.getUnmodifiableView();
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @return The count of info.
+             */
+            public int getInfoCount() {
+                return info_.size();
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @param index
+             *            The index of the element to return.
+             * 
+             * @return The info at the given index.
+             */
+            public java.lang.String getInfo(int index) {
+                return info_.get(index);
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @param index
+             *            The index of the value to return.
+             * 
+             * @return The bytes of the info at the given index.
+             */
+            public com.google.protobuf.ByteString getInfoBytes(int index) {
+                return info_.getByteString(index);
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @param index
+             *            The index to set the value at.
+             * @param value
+             *            The info to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setInfo(int index, java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                ensureInfoIsMutable();
+                info_.set(index, value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @param value
+             *            The info to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addInfo(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                ensureInfoIsMutable();
+                info_.add(value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @param values
+             *            The info to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addAllInfo(java.lang.Iterable<java.lang.String> values) {
+                ensureInfoIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(values, info_);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearInfo() {
+                info_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated string info = 1;</code>
+             * 
+             * @param value
+             *            The bytes of the info to add.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder addInfoBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+                ensureInfoIsMutable();
+                info_.add(value);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.customLog)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.customLog)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<customLog> PARSER = new com.google.protobuf.AbstractParser<customLog>() {
+            @java.lang.Override
+            public customLog parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new customLog(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<customLog> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<customLog> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.customLog getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.Builder.class);
+    public interface createContractLogOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.createContractLog)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        java.lang.String getName();
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString getNameBytes();
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The code.
+         */
+        java.lang.String getCode();
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The bytes for code.
+         */
+        com.google.protobuf.ByteString getCodeBytes();
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object code_;
-    /**
-     * <code>string code = 2;</code>
-     * @return The code.
-     */
-    public java.lang.String getCode() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        code_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string code = 2;</code>
-     * @return The bytes for code.
-     */
-    public com.google.protobuf.ByteString
-        getCodeBytes() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        code_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!getCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, code_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!getCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, code_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCode()
-          .equals(other.getCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.createContractLog}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.createContractLog)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLogOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_descriptor;
-      }
+    public static final class createContractLog extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.createContractLog)
+            createContractLogOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use createContractLog.newBuilder() to construct.
+        private createContractLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        name_ = "";
 
-        code_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private createContractLog() {
+            name_ = "";
+            code_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog(this);
-        result.name_ = name_;
-        result.code_ = code_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new createContractLog();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getCode().isEmpty()) {
-          code_ = other.code_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object code_ = "";
-      /**
-       * <code>string code = 2;</code>
-       * @return The code.
-       */
-      public java.lang.String getCode() {
-        java.lang.Object ref = code_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          code_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @return The bytes for code.
-       */
-      public com.google.protobuf.ByteString
-          getCodeBytes() {
-        java.lang.Object ref = code_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          code_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.createContractLog)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.createContractLog)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<createContractLog>
-        PARSER = new com.google.protobuf.AbstractParser<createContractLog>() {
-      @java.lang.Override
-      public createContractLog parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new createContractLog(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<createContractLog> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<createContractLog> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface updateContractLogOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.updateContractLog)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string code = 2;</code>
-     * @return The code.
-     */
-    java.lang.String getCode();
-    /**
-     * <code>string code = 2;</code>
-     * @return The bytes for code.
-     */
-    com.google.protobuf.ByteString
-        getCodeBytes();
-  }
-  /**
-   * Protobuf type {@code types.updateContractLog}
-   */
-  public  static final class updateContractLog extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.updateContractLog)
-      updateContractLogOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use updateContractLog.newBuilder() to construct.
-    private updateContractLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private updateContractLog() {
-      name_ = "";
-      code_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new updateContractLog();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private updateContractLog(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
+        private createContractLog(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              code_ = s;
-              break;
+                        name_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        code_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.Builder.class);
+        }
+
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int CODE_FIELD_NUMBER = 2;
+        private volatile java.lang.Object code_;
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The code.
+         */
+        public java.lang.String getCode() {
+            java.lang.Object ref = code_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                code_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The bytes for code.
+         */
+        public com.google.protobuf.ByteString getCodeBytes() {
+            java.lang.Object ref = code_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                code_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+            }
+            if (!getCodeBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, code_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+            }
+            if (!getCodeBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, code_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) obj;
+
+            if (!getName().equals(other.getName()))
+                return false;
+            if (!getCode().equals(other.getCode()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + CODE_FIELD_NUMBER;
+            hash = (53 * hash) + getCode().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.createContractLog}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.createContractLog)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLogOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                name_ = "";
+
+                code_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_createContractLog_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog(
+                        this);
+                result.name_ = name_;
+                result.code_ = code_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog.getDefaultInstance())
+                    return this;
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (!other.getCode().isEmpty()) {
+                    code_ = other.code_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object name_ = "";
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object code_ = "";
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @return The code.
+             */
+            public java.lang.String getCode() {
+                java.lang.Object ref = code_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    code_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @return The bytes for code.
+             */
+            public com.google.protobuf.ByteString getCodeBytes() {
+                java.lang.Object ref = code_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    code_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @param value
+             *            The code to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCode(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCode() {
+
+                code_ = getDefaultInstance().getCode();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @param value
+             *            The bytes for code to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCodeBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.createContractLog)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.createContractLog)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<createContractLog> PARSER = new com.google.protobuf.AbstractParser<createContractLog>() {
+            @java.lang.Override
+            public createContractLog parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new createContractLog(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<createContractLog> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<createContractLog> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.createContractLog getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.Builder.class);
+    public interface updateContractLogOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.updateContractLog)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        java.lang.String getName();
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString getNameBytes();
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The code.
+         */
+        java.lang.String getCode();
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The bytes for code.
+         */
+        com.google.protobuf.ByteString getCodeBytes();
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object code_;
-    /**
-     * <code>string code = 2;</code>
-     * @return The code.
-     */
-    public java.lang.String getCode() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        code_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string code = 2;</code>
-     * @return The bytes for code.
-     */
-    public com.google.protobuf.ByteString
-        getCodeBytes() {
-      java.lang.Object ref = code_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        code_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!getCodeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, code_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!getCodeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, code_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getCode()
-          .equals(other.getCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + CODE_FIELD_NUMBER;
-      hash = (53 * hash) + getCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.updateContractLog}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.updateContractLog)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLogOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_descriptor;
-      }
+    public static final class updateContractLog extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.updateContractLog)
+            updateContractLogOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use updateContractLog.newBuilder() to construct.
+        private updateContractLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        name_ = "";
 
-        code_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private updateContractLog() {
+            name_ = "";
+            code_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog(this);
-        result.name_ = name_;
-        result.code_ = code_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new updateContractLog();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getCode().isEmpty()) {
-          code_ = other.code_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object code_ = "";
-      /**
-       * <code>string code = 2;</code>
-       * @return The code.
-       */
-      public java.lang.String getCode() {
-        java.lang.Object ref = code_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          code_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @return The bytes for code.
-       */
-      public com.google.protobuf.ByteString
-          getCodeBytes() {
-        java.lang.Object ref = code_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          code_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        
-        code_ = getDefaultInstance().getCode();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string code = 2;</code>
-       * @param value The bytes for code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.updateContractLog)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.updateContractLog)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<updateContractLog>
-        PARSER = new com.google.protobuf.AbstractParser<updateContractLog>() {
-      @java.lang.Override
-      public updateContractLog parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new updateContractLog(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<updateContractLog> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<updateContractLog> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface callContractLogOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.callContractLog)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string contract = 1;</code>
-     * @return The contract.
-     */
-    java.lang.String getContract();
-    /**
-     * <code>string contract = 1;</code>
-     * @return The bytes for contract.
-     */
-    com.google.protobuf.ByteString
-        getContractBytes();
-
-    /**
-     * <code>string method = 2;</code>
-     * @return The method.
-     */
-    java.lang.String getMethod();
-    /**
-     * <code>string method = 2;</code>
-     * @return The bytes for method.
-     */
-    com.google.protobuf.ByteString
-        getMethodBytes();
-
-    /**
-     * <code>int32 result = 3;</code>
-     * @return The result.
-     */
-    int getResult();
-  }
-  /**
-   * Protobuf type {@code types.callContractLog}
-   */
-  public  static final class callContractLog extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.callContractLog)
-      callContractLogOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use callContractLog.newBuilder() to construct.
-    private callContractLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private callContractLog() {
-      contract_ = "";
-      method_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new callContractLog();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private callContractLog(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              contract_ = s;
-              break;
+        private updateContractLog(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              method_ = s;
-              break;
-            }
-            case 24: {
+                        name_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              result_ = input.readInt32();
-              break;
+                        code_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.Builder.class);
+        }
+
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int CODE_FIELD_NUMBER = 2;
+        private volatile java.lang.Object code_;
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The code.
+         */
+        public java.lang.String getCode() {
+            java.lang.Object ref = code_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                code_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string code = 2;</code>
+         * 
+         * @return The bytes for code.
+         */
+        public com.google.protobuf.ByteString getCodeBytes() {
+            java.lang.Object ref = code_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                code_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+            }
+            if (!getCodeBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, code_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+            }
+            if (!getCodeBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, code_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) obj;
+
+            if (!getName().equals(other.getName()))
+                return false;
+            if (!getCode().equals(other.getCode()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + CODE_FIELD_NUMBER;
+            hash = (53 * hash) + getCode().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.updateContractLog}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.updateContractLog)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLogOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                name_ = "";
+
+                code_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_updateContractLog_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog(
+                        this);
+                result.name_ = name_;
+                result.code_ = code_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog.getDefaultInstance())
+                    return this;
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (!other.getCode().isEmpty()) {
+                    code_ = other.code_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object name_ = "";
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object code_ = "";
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @return The code.
+             */
+            public java.lang.String getCode() {
+                java.lang.Object ref = code_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    code_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @return The bytes for code.
+             */
+            public com.google.protobuf.ByteString getCodeBytes() {
+                java.lang.Object ref = code_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    code_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @param value
+             *            The code to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCode(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCode() {
+
+                code_ = getDefaultInstance().getCode();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string code = 2;</code>
+             * 
+             * @param value
+             *            The bytes for code to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCodeBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                code_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.updateContractLog)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.updateContractLog)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<updateContractLog> PARSER = new com.google.protobuf.AbstractParser<updateContractLog>() {
+            @java.lang.Override
+            public updateContractLog parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new updateContractLog(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<updateContractLog> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<updateContractLog> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.updateContractLog getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.Builder.class);
+    public interface callContractLogOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.callContractLog)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The contract.
+         */
+        java.lang.String getContract();
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The bytes for contract.
+         */
+        com.google.protobuf.ByteString getContractBytes();
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The method.
+         */
+        java.lang.String getMethod();
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The bytes for method.
+         */
+        com.google.protobuf.ByteString getMethodBytes();
+
+        /**
+         * <code>int32 result = 3;</code>
+         * 
+         * @return The result.
+         */
+        int getResult();
     }
 
-    public static final int CONTRACT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object contract_;
-    /**
-     * <code>string contract = 1;</code>
-     * @return The contract.
-     */
-    public java.lang.String getContract() {
-      java.lang.Object ref = contract_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        contract_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string contract = 1;</code>
-     * @return The bytes for contract.
-     */
-    public com.google.protobuf.ByteString
-        getContractBytes() {
-      java.lang.Object ref = contract_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        contract_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int METHOD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object method_;
-    /**
-     * <code>string method = 2;</code>
-     * @return The method.
-     */
-    public java.lang.String getMethod() {
-      java.lang.Object ref = method_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        method_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string method = 2;</code>
-     * @return The bytes for method.
-     */
-    public com.google.protobuf.ByteString
-        getMethodBytes() {
-      java.lang.Object ref = method_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        method_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 3;
-    private int result_;
-    /**
-     * <code>int32 result = 3;</code>
-     * @return The result.
-     */
-    public int getResult() {
-      return result_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getContractBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
-      }
-      if (!getMethodBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, method_);
-      }
-      if (result_ != 0) {
-        output.writeInt32(3, result_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getContractBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
-      }
-      if (!getMethodBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, method_);
-      }
-      if (result_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, result_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) obj;
-
-      if (!getContract()
-          .equals(other.getContract())) return false;
-      if (!getMethod()
-          .equals(other.getMethod())) return false;
-      if (getResult()
-          != other.getResult()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
-      hash = (53 * hash) + getContract().hashCode();
-      hash = (37 * hash) + METHOD_FIELD_NUMBER;
-      hash = (53 * hash) + getMethod().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + getResult();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.callContractLog}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.callContractLog)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLogOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_descriptor;
-      }
+    public static final class callContractLog extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.callContractLog)
+            callContractLogOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use callContractLog.newBuilder() to construct.
+        private callContractLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        contract_ = "";
 
-        method_ = "";
-
-        result_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private callContractLog() {
+            contract_ = "";
+            method_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog(this);
-        result.contract_ = contract_;
-        result.method_ = method_;
-        result.result_ = result_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new callContractLog();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.getDefaultInstance()) return this;
-        if (!other.getContract().isEmpty()) {
-          contract_ = other.contract_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getMethod().isEmpty()) {
-          method_ = other.method_;
-          onChanged();
-        }
-        if (other.getResult() != 0) {
-          setResult(other.getResult());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object contract_ = "";
-      /**
-       * <code>string contract = 1;</code>
-       * @return The contract.
-       */
-      public java.lang.String getContract() {
-        java.lang.Object ref = contract_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          contract_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @return The bytes for contract.
-       */
-      public com.google.protobuf.ByteString
-          getContractBytes() {
-        java.lang.Object ref = contract_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          contract_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @param value The contract to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContract(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        contract_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearContract() {
-        
-        contract_ = getDefaultInstance().getContract();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string contract = 1;</code>
-       * @param value The bytes for contract to set.
-       * @return This builder for chaining.
-       */
-      public Builder setContractBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        contract_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object method_ = "";
-      /**
-       * <code>string method = 2;</code>
-       * @return The method.
-       */
-      public java.lang.String getMethod() {
-        java.lang.Object ref = method_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          method_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @return The bytes for method.
-       */
-      public com.google.protobuf.ByteString
-          getMethodBytes() {
-        java.lang.Object ref = method_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          method_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @param value The method to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMethod(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        method_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMethod() {
-        
-        method_ = getDefaultInstance().getMethod();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string method = 2;</code>
-       * @param value The bytes for method to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMethodBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        method_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int result_ ;
-      /**
-       * <code>int32 result = 3;</code>
-       * @return The result.
-       */
-      public int getResult() {
-        return result_;
-      }
-      /**
-       * <code>int32 result = 3;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(int value) {
-        
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 result = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        
-        result_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:types.callContractLog)
-    }
-
-    // @@protoc_insertion_point(class_scope:types.callContractLog)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<callContractLog>
-        PARSER = new com.google.protobuf.AbstractParser<callContractLog>() {
-      @java.lang.Override
-      public callContractLog parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new callContractLog(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<callContractLog> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<callContractLog> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface localDataLogOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:types.localDataLog)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bytes key = 1;</code>
-     * @return The key.
-     */
-    com.google.protobuf.ByteString getKey();
-
-    /**
-     * <code>bytes value = 2;</code>
-     * @return The value.
-     */
-    com.google.protobuf.ByteString getValue();
-  }
-  /**
-   * Protobuf type {@code types.localDataLog}
-   */
-  public  static final class localDataLog extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:types.localDataLog)
-      localDataLogOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use localDataLog.newBuilder() to construct.
-    private localDataLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private localDataLog() {
-      key_ = com.google.protobuf.ByteString.EMPTY;
-      value_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new localDataLog();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private localDataLog(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              key_ = input.readBytes();
-              break;
+        private callContractLog(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              value_ = input.readBytes();
-              break;
+                        contract_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        method_ = s;
+                        break;
+                    }
+                    case 24: {
+
+                        result_ = input.readInt32();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.Builder.class);
+        }
+
+        public static final int CONTRACT_FIELD_NUMBER = 1;
+        private volatile java.lang.Object contract_;
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The contract.
+         */
+        public java.lang.String getContract() {
+            java.lang.Object ref = contract_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                contract_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string contract = 1;</code>
+         * 
+         * @return The bytes for contract.
+         */
+        public com.google.protobuf.ByteString getContractBytes() {
+            java.lang.Object ref = contract_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                contract_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int METHOD_FIELD_NUMBER = 2;
+        private volatile java.lang.Object method_;
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The method.
+         */
+        public java.lang.String getMethod() {
+            java.lang.Object ref = method_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                method_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string method = 2;</code>
+         * 
+         * @return The bytes for method.
+         */
+        public com.google.protobuf.ByteString getMethodBytes() {
+            java.lang.Object ref = method_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                method_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int RESULT_FIELD_NUMBER = 3;
+        private int result_;
+
+        /**
+         * <code>int32 result = 3;</code>
+         * 
+         * @return The result.
+         */
+        public int getResult() {
+            return result_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getContractBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+            }
+            if (!getMethodBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, method_);
+            }
+            if (result_ != 0) {
+                output.writeInt32(3, result_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getContractBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+            }
+            if (!getMethodBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, method_);
+            }
+            if (result_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, result_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) obj;
+
+            if (!getContract().equals(other.getContract()))
+                return false;
+            if (!getMethod().equals(other.getMethod()))
+                return false;
+            if (getResult() != other.getResult())
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+            hash = (53 * hash) + getContract().hashCode();
+            hash = (37 * hash) + METHOD_FIELD_NUMBER;
+            hash = (53 * hash) + getMethod().hashCode();
+            hash = (37 * hash) + RESULT_FIELD_NUMBER;
+            hash = (53 * hash) + getResult();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.callContractLog}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.callContractLog)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLogOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                contract_ = "";
+
+                method_ = "";
+
+                result_ = 0;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_callContractLog_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog(
+                        this);
+                result.contract_ = contract_;
+                result.method_ = method_;
+                result.result_ = result_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog.getDefaultInstance())
+                    return this;
+                if (!other.getContract().isEmpty()) {
+                    contract_ = other.contract_;
+                    onChanged();
+                }
+                if (!other.getMethod().isEmpty()) {
+                    method_ = other.method_;
+                    onChanged();
+                }
+                if (other.getResult() != 0) {
+                    setResult(other.getResult());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object contract_ = "";
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return The contract.
+             */
+            public java.lang.String getContract() {
+                java.lang.Object ref = contract_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    contract_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return The bytes for contract.
+             */
+            public com.google.protobuf.ByteString getContractBytes() {
+                java.lang.Object ref = contract_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    contract_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @param value
+             *            The contract to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setContract(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                contract_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearContract() {
+
+                contract_ = getDefaultInstance().getContract();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string contract = 1;</code>
+             * 
+             * @param value
+             *            The bytes for contract to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setContractBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                contract_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object method_ = "";
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @return The method.
+             */
+            public java.lang.String getMethod() {
+                java.lang.Object ref = method_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    method_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @return The bytes for method.
+             */
+            public com.google.protobuf.ByteString getMethodBytes() {
+                java.lang.Object ref = method_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    method_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @param value
+             *            The method to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setMethod(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                method_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearMethod() {
+
+                method_ = getDefaultInstance().getMethod();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string method = 2;</code>
+             * 
+             * @param value
+             *            The bytes for method to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setMethodBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                method_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int result_;
+
+            /**
+             * <code>int32 result = 3;</code>
+             * 
+             * @return The result.
+             */
+            public int getResult() {
+                return result_;
+            }
+
+            /**
+             * <code>int32 result = 3;</code>
+             * 
+             * @param value
+             *            The result to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setResult(int value) {
+
+                result_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 result = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearResult() {
+
+                result_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.callContractLog)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.callContractLog)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<callContractLog> PARSER = new com.google.protobuf.AbstractParser<callContractLog>() {
+            @java.lang.Override
+            public callContractLog parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new callContractLog(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<callContractLog> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<callContractLog> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.callContractLog getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.Builder.class);
+    public interface localDataLogOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:types.localDataLog)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>bytes key = 1;</code>
+         * 
+         * @return The key.
+         */
+        com.google.protobuf.ByteString getKey();
+
+        /**
+         * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
+         */
+        com.google.protobuf.ByteString getValue();
     }
 
-    public static final int KEY_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString key_;
-    /**
-     * <code>bytes key = 1;</code>
-     * @return The key.
-     */
-    public com.google.protobuf.ByteString getKey() {
-      return key_;
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString value_;
-    /**
-     * <code>bytes value = 2;</code>
-     * @return The value.
-     */
-    public com.google.protobuf.ByteString getValue() {
-      return value_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!key_.isEmpty()) {
-        output.writeBytes(1, key_);
-      }
-      if (!value_.isEmpty()) {
-        output.writeBytes(2, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!key_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, key_);
-      }
-      if (!value_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) obj;
-
-      if (!getKey()
-          .equals(other.getKey())) return false;
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code types.localDataLog}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:types.localDataLog)
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLogOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_descriptor;
-      }
+    public static final class localDataLog extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:types.localDataLog)
+            localDataLogOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.class, cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use localDataLog.newBuilder() to construct.
+        private localDataLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        key_ = com.google.protobuf.ByteString.EMPTY;
 
-        value_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog build() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private localDataLog() {
+            key_ = com.google.protobuf.ByteString.EMPTY;
+            value_ = com.google.protobuf.ByteString.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog buildPartial() {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog(this);
-        result.key_ = key_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new localDataLog();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog other) {
-        if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.getDefaultInstance()) return this;
-        if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
-          setKey(other.getKey());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
-          setValue(other.getValue());
+
+        private localDataLog(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+
+                        key_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
+
+                        value_ = input.readBytes();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_descriptor;
         }
-        return this;
-      }
 
-      private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes key = 1;</code>
-       * @return The key.
-       */
-      public com.google.protobuf.ByteString getKey() {
-        return key_;
-      }
-      /**
-       * <code>bytes key = 1;</code>
-       * @param value The key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKey(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes key = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.class,
+                            cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.Builder.class);
+        }
 
-      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes value = 2;</code>
-       * @return The value.
-       */
-      public com.google.protobuf.ByteString getValue() {
-        return value_;
-      }
-      /**
-       * <code>bytes value = 2;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes value = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        public static final int KEY_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString key_;
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>bytes key = 1;</code>
+         * 
+         * @return The key.
+         */
+        public com.google.protobuf.ByteString getKey() {
+            return key_;
+        }
 
+        public static final int VALUE_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString value_;
 
-      // @@protoc_insertion_point(builder_scope:types.localDataLog)
+        /**
+         * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
+         */
+        public com.google.protobuf.ByteString getValue() {
+            return value_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!key_.isEmpty()) {
+                output.writeBytes(1, key_);
+            }
+            if (!value_.isEmpty()) {
+                output.writeBytes(2, value_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!key_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, key_);
+            }
+            if (!value_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog other = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) obj;
+
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code types.localDataLog}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:types.localDataLog)
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLogOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.class,
+                                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                key_ = com.google.protobuf.ByteString.EMPTY;
+
+                value_ = com.google.protobuf.ByteString.EMPTY;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.internal_static_types_localDataLog_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog build() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog buildPartial() {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog result = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog(
+                        this);
+                result.key_ = key_;
+                result.value_ = value_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog other) {
+                if (other == cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog.getDefaultInstance())
+                    return this;
+                if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
+                    setKey(other.getKey());
+                }
+                if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+                    setValue(other.getValue());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes key = 1;</code>
+             * 
+             * @return The key.
+             */
+            public com.google.protobuf.ByteString getKey() {
+                return key_;
+            }
+
+            /**
+             * <code>bytes key = 1;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setKey(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes key = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes value = 2;</code>
+             * 
+             * @return The value.
+             */
+            public com.google.protobuf.ByteString getValue() {
+                return value_;
+            }
+
+            /**
+             * <code>bytes value = 2;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setValue(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes value = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:types.localDataLog)
+        }
+
+        // @@protoc_insertion_point(class_scope:types.localDataLog)
+        private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<localDataLog> PARSER = new com.google.protobuf.AbstractParser<localDataLog>() {
+            @java.lang.Override
+            public localDataLog parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new localDataLog(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<localDataLog> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<localDataLog> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:types.localDataLog)
-    private static final cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_wasmAction_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_wasmAction_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_wasmCreate_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_wasmCreate_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_wasmUpdate_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_wasmUpdate_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_wasmCall_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_wasmCall_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_queryCheckContract_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_queryCheckContract_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_queryContractDB_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_queryContractDB_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_customLog_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_customLog_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_createContractLog_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_createContractLog_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_updateContractLog_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_updateContractLog_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_callContractLog_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_callContractLog_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_types_localDataLog_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_types_localDataLog_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog();
+        java.lang.String[] descriptorData = { "\n\nwasm.proto\022\005types\"\214\001\n\nwasmAction\022#\n\006cr"
+                + "eate\030\001 \001(\0132\021.types.wasmCreateH\000\022#\n\006updat"
+                + "e\030\002 \001(\0132\021.types.wasmUpdateH\000\022\037\n\004call\030\003 \001"
+                + "(\0132\017.types.wasmCallH\000\022\n\n\002ty\030\004 \001(\005B\007\n\005val"
+                + "ue\"(\n\nwasmCreate\022\014\n\004name\030\001 \001(\t\022\014\n\004code\030\002"
+                + " \001(\014\"(\n\nwasmUpdate\022\014\n\004name\030\001 \001(\t\022\014\n\004code"
+                + "\030\002 \001(\014\"M\n\010wasmCall\022\020\n\010contract\030\001 \001(\t\022\016\n\006"
+                + "method\030\002 \001(\t\022\022\n\nparameters\030\003 \003(\003\022\013\n\003env\030"
+                + "\004 \003(\t\"\"\n\022queryCheckContract\022\014\n\004name\030\001 \001("
+                + "\t\"0\n\017queryContractDB\022\020\n\010contract\030\001 \001(\t\022\013"
+                + "\n\003key\030\002 \001(\t\"\031\n\tcustomLog\022\014\n\004info\030\001 \003(\t\"/"
+                + "\n\021createContractLog\022\014\n\004name\030\001 \001(\t\022\014\n\004cod"
+                + "e\030\002 \001(\t\"/\n\021updateContractLog\022\014\n\004name\030\001 \001"
+                + "(\t\022\014\n\004code\030\002 \001(\t\"C\n\017callContractLog\022\020\n\010c"
+                + "ontract\030\001 \001(\t\022\016\n\006method\030\002 \001(\t\022\016\n\006result\030"
+                + "\003 \001(\005\"*\n\014localDataLog\022\013\n\003key\030\001 \001(\014\022\r\n\005va"
+                + "lue\030\002 \001(\014B1\n!cn.chain33.javasdk.model.pr" + "otobufB\014WasmProtobufb\006proto3" };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {});
+        internal_static_types_wasmAction_descriptor = getDescriptor().getMessageTypes().get(0);
+        internal_static_types_wasmAction_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_wasmAction_descriptor,
+                new java.lang.String[] { "Create", "Update", "Call", "Ty", "Value", });
+        internal_static_types_wasmCreate_descriptor = getDescriptor().getMessageTypes().get(1);
+        internal_static_types_wasmCreate_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_wasmCreate_descriptor, new java.lang.String[] { "Name", "Code", });
+        internal_static_types_wasmUpdate_descriptor = getDescriptor().getMessageTypes().get(2);
+        internal_static_types_wasmUpdate_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_wasmUpdate_descriptor, new java.lang.String[] { "Name", "Code", });
+        internal_static_types_wasmCall_descriptor = getDescriptor().getMessageTypes().get(3);
+        internal_static_types_wasmCall_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_wasmCall_descriptor,
+                new java.lang.String[] { "Contract", "Method", "Parameters", "Env", });
+        internal_static_types_queryCheckContract_descriptor = getDescriptor().getMessageTypes().get(4);
+        internal_static_types_queryCheckContract_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_queryCheckContract_descriptor, new java.lang.String[] { "Name", });
+        internal_static_types_queryContractDB_descriptor = getDescriptor().getMessageTypes().get(5);
+        internal_static_types_queryContractDB_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_queryContractDB_descriptor, new java.lang.String[] { "Contract", "Key", });
+        internal_static_types_customLog_descriptor = getDescriptor().getMessageTypes().get(6);
+        internal_static_types_customLog_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_customLog_descriptor, new java.lang.String[] { "Info", });
+        internal_static_types_createContractLog_descriptor = getDescriptor().getMessageTypes().get(7);
+        internal_static_types_createContractLog_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_createContractLog_descriptor, new java.lang.String[] { "Name", "Code", });
+        internal_static_types_updateContractLog_descriptor = getDescriptor().getMessageTypes().get(8);
+        internal_static_types_updateContractLog_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_updateContractLog_descriptor, new java.lang.String[] { "Name", "Code", });
+        internal_static_types_callContractLog_descriptor = getDescriptor().getMessageTypes().get(9);
+        internal_static_types_callContractLog_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_callContractLog_descriptor,
+                new java.lang.String[] { "Contract", "Method", "Result", });
+        internal_static_types_localDataLog_descriptor = getDescriptor().getMessageTypes().get(10);
+        internal_static_types_localDataLog_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_types_localDataLog_descriptor, new java.lang.String[] { "Key", "Value", });
     }
 
-    public static cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<localDataLog>
-        PARSER = new com.google.protobuf.AbstractParser<localDataLog>() {
-      @java.lang.Override
-      public localDataLog parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new localDataLog(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<localDataLog> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<localDataLog> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.WasmProtobuf.localDataLog getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_wasmAction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_wasmAction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_wasmCreate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_wasmCreate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_wasmUpdate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_wasmUpdate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_wasmCall_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_wasmCall_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_queryCheckContract_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_queryCheckContract_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_queryContractDB_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_queryContractDB_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_customLog_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_customLog_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_createContractLog_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_createContractLog_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_updateContractLog_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_updateContractLog_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_callContractLog_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_callContractLog_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_types_localDataLog_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_types_localDataLog_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\nwasm.proto\022\005types\"\214\001\n\nwasmAction\022#\n\006cr" +
-      "eate\030\001 \001(\0132\021.types.wasmCreateH\000\022#\n\006updat" +
-      "e\030\002 \001(\0132\021.types.wasmUpdateH\000\022\037\n\004call\030\003 \001" +
-      "(\0132\017.types.wasmCallH\000\022\n\n\002ty\030\004 \001(\005B\007\n\005val" +
-      "ue\"(\n\nwasmCreate\022\014\n\004name\030\001 \001(\t\022\014\n\004code\030\002" +
-      " \001(\014\"(\n\nwasmUpdate\022\014\n\004name\030\001 \001(\t\022\014\n\004code" +
-      "\030\002 \001(\014\"M\n\010wasmCall\022\020\n\010contract\030\001 \001(\t\022\016\n\006" +
-      "method\030\002 \001(\t\022\022\n\nparameters\030\003 \003(\003\022\013\n\003env\030" +
-      "\004 \003(\t\"\"\n\022queryCheckContract\022\014\n\004name\030\001 \001(" +
-      "\t\"0\n\017queryContractDB\022\020\n\010contract\030\001 \001(\t\022\013" +
-      "\n\003key\030\002 \001(\t\"\031\n\tcustomLog\022\014\n\004info\030\001 \003(\t\"/" +
-      "\n\021createContractLog\022\014\n\004name\030\001 \001(\t\022\014\n\004cod" +
-      "e\030\002 \001(\t\"/\n\021updateContractLog\022\014\n\004name\030\001 \001" +
-      "(\t\022\014\n\004code\030\002 \001(\t\"C\n\017callContractLog\022\020\n\010c" +
-      "ontract\030\001 \001(\t\022\016\n\006method\030\002 \001(\t\022\016\n\006result\030" +
-      "\003 \001(\005\"*\n\014localDataLog\022\013\n\003key\030\001 \001(\014\022\r\n\005va" +
-      "lue\030\002 \001(\014B1\n!cn.chain33.javasdk.model.pr" +
-      "otobufB\014WasmProtobufb\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_types_wasmAction_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_types_wasmAction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_wasmAction_descriptor,
-        new java.lang.String[] { "Create", "Update", "Call", "Ty", "Value", });
-    internal_static_types_wasmCreate_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_types_wasmCreate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_wasmCreate_descriptor,
-        new java.lang.String[] { "Name", "Code", });
-    internal_static_types_wasmUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_types_wasmUpdate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_wasmUpdate_descriptor,
-        new java.lang.String[] { "Name", "Code", });
-    internal_static_types_wasmCall_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_types_wasmCall_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_wasmCall_descriptor,
-        new java.lang.String[] { "Contract", "Method", "Parameters", "Env", });
-    internal_static_types_queryCheckContract_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_types_queryCheckContract_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_queryCheckContract_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_types_queryContractDB_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_types_queryContractDB_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_queryContractDB_descriptor,
-        new java.lang.String[] { "Contract", "Key", });
-    internal_static_types_customLog_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_types_customLog_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_customLog_descriptor,
-        new java.lang.String[] { "Info", });
-    internal_static_types_createContractLog_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_types_createContractLog_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_createContractLog_descriptor,
-        new java.lang.String[] { "Name", "Code", });
-    internal_static_types_updateContractLog_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_types_updateContractLog_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_updateContractLog_descriptor,
-        new java.lang.String[] { "Name", "Code", });
-    internal_static_types_callContractLog_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_types_callContractLog_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_callContractLog_descriptor,
-        new java.lang.String[] { "Contract", "Method", "Result", });
-    internal_static_types_localDataLog_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_types_localDataLog_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_types_localDataLog_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }

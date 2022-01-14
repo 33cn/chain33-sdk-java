@@ -4,119 +4,112 @@
 package cn.chain33.javasdk.model.protobuf;
 
 public final class GrpcService {
-  private GrpcService() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
+    private GrpcService() {
+    }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
+    }
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\ngrpc.proto\032\014common.proto\032\021transaction." +
-      "proto\032\020blockchain.proto\032\014wallet.proto\032\tp" +
-      "2p.proto\032\raccount.proto\032\016executor.proto2" +
-      "\271\025\n\007chain33\022!\n\tGetBlocks\022\n.ReqBlocks\032\006.R" +
-      "eply\"\000\022#\n\rGetLastHeader\022\007.ReqNil\032\007.Heade" +
-      "r\"\000\022.\n\024CreateRawTransaction\022\t.CreateTx\032\t" +
-      ".UnsignTx\"\000\0228\n\020CreateRawTxGroup\022\027.Create" +
-      "TransactionGroup\032\t.UnsignTx\"\000\0222\n\020QueryTr" +
-      "ansaction\022\010.ReqHash\032\022.TransactionDetail\"" +
-      "\000\022)\n\017SendTransaction\022\014.Transaction\032\006.Rep" +
-      "ly\"\000\0221\n\024GetTransactionByAddr\022\010.ReqAddr\032\r" +
-      ".ReplyTxInfos\"\000\022;\n\026GetTransactionByHashe" +
-      "s\022\n.ReqHashes\032\023.TransactionDetails\"\000\022,\n\n" +
-      "GetMemPool\022\016.ReqGetMempool\032\014.ReplyTxList" +
-      "\"\000\022)\n\013GetAccounts\022\007.ReqNil\032\017.WalletAccou" +
-      "nts\"\000\022.\n\nGetAccount\022\016.ReqGetAccount\032\016.Wa" +
-      "lletAccount\"\000\022.\n\nNewAccount\022\016.ReqNewAcco" +
-      "unt\032\016.WalletAccount\"\000\022F\n\025WalletTransacti" +
-      "onList\022\031.ReqWalletTransactionList\032\020.Wall" +
-      "etTxDetails\"\000\022:\n\rImportPrivkey\022\027.ReqWall" +
-      "etImportPrivkey\032\016.WalletAccount\"\000\0226\n\rSen" +
-      "dToAddress\022\027.ReqWalletSendToAddress\032\n.Re" +
-      "plyHash\"\000\022&\n\010SetTxFee\022\020.ReqWalletSetFee\032" +
-      "\006.Reply\"\000\022/\n\007SetLabl\022\022.ReqWalletSetLabel" +
-      "\032\016.WalletAccount\"\000\0226\n\014MergeBalance\022\026.Req" +
-      "WalletMergeBalance\032\014.ReplyHashes\"\000\022*\n\tSe" +
-      "tPasswd\022\023.ReqWalletSetPasswd\032\006.Reply\"\000\022\031" +
-      "\n\004Lock\022\007.ReqNil\032\006.Reply\"\000\022!\n\006UnLock\022\r.Wa" +
-      "lletUnLock\032\006.Reply\"\000\022)\n\016GetLastMemPool\022\007" +
-      ".ReqNil\032\014.ReplyTxList\"\000\0220\n\014GetProperFee\022" +
-      "\r.ReqProperFee\032\017.ReplyProperFee\"\000\022+\n\017Get" +
-      "WalletStatus\022\007.ReqNil\032\r.WalletStatus\"\000\022." +
-      "\n\020GetBlockOverview\022\010.ReqHash\032\016.BlockOver" +
-      "view\"\000\022,\n\017GetAddrOverview\022\010.ReqAddr\032\r.Ad" +
-      "drOverview\"\000\022%\n\014GetBlockHash\022\007.ReqInt\032\n." +
-      "ReplyHash\"\000\022%\n\007GenSeed\022\014.GenSeedLang\032\n.R" +
-      "eplySeed\"\000\022%\n\007GetSeed\022\014.GetSeedByPw\032\n.Re" +
-      "plySeed\"\000\022#\n\010SaveSeed\022\r.SaveSeedByPw\032\006.R" +
-      "eply\"\000\022&\n\nGetBalance\022\013.ReqBalance\032\t.Acco" +
-      "unts\"\000\022&\n\nQueryChain\022\016.ChainExecutor\032\006.R" +
-      "eply\"\000\022&\n\nExecWallet\022\016.ChainExecutor\032\006.R" +
-      "eply\"\000\022*\n\016QueryConsensus\022\016.ChainExecutor" +
-      "\032\006.Reply\"\000\022-\n\021CreateTransaction\022\013.Create" +
-      "TxIn\032\t.UnsignTx\"\000\022$\n\016GetHexTxByHash\022\010.Re" +
-      "qHash\032\006.HexTx\"\000\022)\n\013DumpPrivkey\022\n.ReqStri" +
-      "ng\032\014.ReplyString\"\000\022.\n\020DumpPrivkeysFile\022\020" +
-      ".ReqPrivkeysFile\032\006.Reply\"\000\0220\n\022ImportPriv" +
-      "keysFile\022\020.ReqPrivkeysFile\032\006.Reply\"\000\022\"\n\007" +
-      "Version\022\007.ReqNil\032\014.VersionInfo\"\000\022\033\n\006IsSy" +
-      "nc\022\007.ReqNil\032\006.Reply\"\000\022*\n\013GetPeerInfo\022\016.P" +
-      "2PGetPeerReq\032\t.PeerList\"\000\022,\n\007NetInfo\022\021.P" +
-      "2PGetNetInfoReq\032\014.NodeNetInfo\"\000\022#\n\016IsNtp" +
-      "ClockSync\022\007.ReqNil\032\006.Reply\"\000\022$\n\017GetFatal" +
-      "Failure\022\007.ReqNil\032\006.Int32\"\000\022)\n\024GetLastBlo" +
-      "ckSequence\022\007.ReqNil\032\006.Int64\"\000\022\'\n\021GetSequ" +
-      "enceByHash\022\010.ReqHash\032\006.Int64\"\000\022/\n\020GetBlo" +
-      "ckByHashes\022\n.ReqHashes\032\r.BlockDetails\"\000\022" +
-      "$\n\rGetBlockBySeq\022\006.Int64\032\t.BlockSeq\"\000\022\037\n" +
-      "\nCloseQueue\022\007.ReqNil\032\006.Reply\"\000\022:\n\021GetAll" +
-      "ExecBalance\022\022.ReqAllExecBalance\032\017.AllExe" +
-      "cBalance\"\000\022-\n\tSignRawTx\022\r.ReqSignRawTx\032\017" +
-      ".ReplySignRawTx\"\000\022=\n\032CreateNoBalanceTran" +
-      "saction\022\014.NoBalanceTx\032\017.ReplySignRawTx\"\000" +
-      "\022*\n\014QueryRandNum\022\014.ReqRandHash\032\n.ReplyHa" +
-      "sh\"\000\022\034\n\007GetFork\022\007.ReqKey\032\006.Int64\"\000\0226\n\022Cr" +
-      "eateNoBalanceTxs\022\r.NoBalanceTxs\032\017.ReplyS" +
-      "ignRawTx\"\000\0227\n\020GetParaTxByTitle\022\021.ReqPara" +
-      "TxByTitle\032\016.ParaTxDetails\"\000\022=\n\021LoadParaT" +
-      "xByTitle\022\021.ReqHeightByTitle\032\023.ReplyHeigh" +
-      "tByTitle\"\000\0229\n\021GetParaTxByHeight\022\022.ReqPar" +
-      "aTxByHeight\032\016.ParaTxDetails\"\000\022$\n\nGetHead" +
-      "ers\022\n.ReqBlocks\032\010.Headers\"\000B0\n!cn.chain3" +
-      "3.javasdk.model.protobufB\013GrpcServiceb\006p" +
-      "roto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          cn.chain33.javasdk.model.protobuf.CommonProtobuf.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.WalletProtobuf.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.P2pService.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.AccountProtobuf.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.getDescriptor(),
-        });
-    cn.chain33.javasdk.model.protobuf.CommonProtobuf.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.WalletProtobuf.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.P2pService.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.AccountProtobuf.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.getDescriptor();
-  }
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+    }
 
-  // @@protoc_insertion_point(outer_class_scope)
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+    static {
+        java.lang.String[] descriptorData = { "\n\ngrpc.proto\032\014common.proto\032\021transaction."
+                + "proto\032\020blockchain.proto\032\014wallet.proto\032\tp"
+                + "2p.proto\032\raccount.proto\032\016executor.proto2"
+                + "\271\025\n\007chain33\022!\n\tGetBlocks\022\n.ReqBlocks\032\006.R"
+                + "eply\"\000\022#\n\rGetLastHeader\022\007.ReqNil\032\007.Heade"
+                + "r\"\000\022.\n\024CreateRawTransaction\022\t.CreateTx\032\t"
+                + ".UnsignTx\"\000\0228\n\020CreateRawTxGroup\022\027.Create"
+                + "TransactionGroup\032\t.UnsignTx\"\000\0222\n\020QueryTr"
+                + "ansaction\022\010.ReqHash\032\022.TransactionDetail\""
+                + "\000\022)\n\017SendTransaction\022\014.Transaction\032\006.Rep"
+                + "ly\"\000\0221\n\024GetTransactionByAddr\022\010.ReqAddr\032\r"
+                + ".ReplyTxInfos\"\000\022;\n\026GetTransactionByHashe"
+                + "s\022\n.ReqHashes\032\023.TransactionDetails\"\000\022,\n\n"
+                + "GetMemPool\022\016.ReqGetMempool\032\014.ReplyTxList"
+                + "\"\000\022)\n\013GetAccounts\022\007.ReqNil\032\017.WalletAccou"
+                + "nts\"\000\022.\n\nGetAccount\022\016.ReqGetAccount\032\016.Wa"
+                + "lletAccount\"\000\022.\n\nNewAccount\022\016.ReqNewAcco"
+                + "unt\032\016.WalletAccount\"\000\022F\n\025WalletTransacti"
+                + "onList\022\031.ReqWalletTransactionList\032\020.Wall"
+                + "etTxDetails\"\000\022:\n\rImportPrivkey\022\027.ReqWall"
+                + "etImportPrivkey\032\016.WalletAccount\"\000\0226\n\rSen"
+                + "dToAddress\022\027.ReqWalletSendToAddress\032\n.Re"
+                + "plyHash\"\000\022&\n\010SetTxFee\022\020.ReqWalletSetFee\032"
+                + "\006.Reply\"\000\022/\n\007SetLabl\022\022.ReqWalletSetLabel"
+                + "\032\016.WalletAccount\"\000\0226\n\014MergeBalance\022\026.Req"
+                + "WalletMergeBalance\032\014.ReplyHashes\"\000\022*\n\tSe"
+                + "tPasswd\022\023.ReqWalletSetPasswd\032\006.Reply\"\000\022\031"
+                + "\n\004Lock\022\007.ReqNil\032\006.Reply\"\000\022!\n\006UnLock\022\r.Wa"
+                + "lletUnLock\032\006.Reply\"\000\022)\n\016GetLastMemPool\022\007"
+                + ".ReqNil\032\014.ReplyTxList\"\000\0220\n\014GetProperFee\022"
+                + "\r.ReqProperFee\032\017.ReplyProperFee\"\000\022+\n\017Get"
+                + "WalletStatus\022\007.ReqNil\032\r.WalletStatus\"\000\022."
+                + "\n\020GetBlockOverview\022\010.ReqHash\032\016.BlockOver"
+                + "view\"\000\022,\n\017GetAddrOverview\022\010.ReqAddr\032\r.Ad"
+                + "drOverview\"\000\022%\n\014GetBlockHash\022\007.ReqInt\032\n."
+                + "ReplyHash\"\000\022%\n\007GenSeed\022\014.GenSeedLang\032\n.R"
+                + "eplySeed\"\000\022%\n\007GetSeed\022\014.GetSeedByPw\032\n.Re"
+                + "plySeed\"\000\022#\n\010SaveSeed\022\r.SaveSeedByPw\032\006.R"
+                + "eply\"\000\022&\n\nGetBalance\022\013.ReqBalance\032\t.Acco"
+                + "unts\"\000\022&\n\nQueryChain\022\016.ChainExecutor\032\006.R"
+                + "eply\"\000\022&\n\nExecWallet\022\016.ChainExecutor\032\006.R"
+                + "eply\"\000\022*\n\016QueryConsensus\022\016.ChainExecutor"
+                + "\032\006.Reply\"\000\022-\n\021CreateTransaction\022\013.Create"
+                + "TxIn\032\t.UnsignTx\"\000\022$\n\016GetHexTxByHash\022\010.Re"
+                + "qHash\032\006.HexTx\"\000\022)\n\013DumpPrivkey\022\n.ReqStri"
+                + "ng\032\014.ReplyString\"\000\022.\n\020DumpPrivkeysFile\022\020"
+                + ".ReqPrivkeysFile\032\006.Reply\"\000\0220\n\022ImportPriv"
+                + "keysFile\022\020.ReqPrivkeysFile\032\006.Reply\"\000\022\"\n\007"
+                + "Version\022\007.ReqNil\032\014.VersionInfo\"\000\022\033\n\006IsSy"
+                + "nc\022\007.ReqNil\032\006.Reply\"\000\022*\n\013GetPeerInfo\022\016.P"
+                + "2PGetPeerReq\032\t.PeerList\"\000\022,\n\007NetInfo\022\021.P"
+                + "2PGetNetInfoReq\032\014.NodeNetInfo\"\000\022#\n\016IsNtp"
+                + "ClockSync\022\007.ReqNil\032\006.Reply\"\000\022$\n\017GetFatal"
+                + "Failure\022\007.ReqNil\032\006.Int32\"\000\022)\n\024GetLastBlo"
+                + "ckSequence\022\007.ReqNil\032\006.Int64\"\000\022\'\n\021GetSequ"
+                + "enceByHash\022\010.ReqHash\032\006.Int64\"\000\022/\n\020GetBlo"
+                + "ckByHashes\022\n.ReqHashes\032\r.BlockDetails\"\000\022"
+                + "$\n\rGetBlockBySeq\022\006.Int64\032\t.BlockSeq\"\000\022\037\n"
+                + "\nCloseQueue\022\007.ReqNil\032\006.Reply\"\000\022:\n\021GetAll"
+                + "ExecBalance\022\022.ReqAllExecBalance\032\017.AllExe"
+                + "cBalance\"\000\022-\n\tSignRawTx\022\r.ReqSignRawTx\032\017"
+                + ".ReplySignRawTx\"\000\022=\n\032CreateNoBalanceTran"
+                + "saction\022\014.NoBalanceTx\032\017.ReplySignRawTx\"\000"
+                + "\022*\n\014QueryRandNum\022\014.ReqRandHash\032\n.ReplyHa"
+                + "sh\"\000\022\034\n\007GetFork\022\007.ReqKey\032\006.Int64\"\000\0226\n\022Cr"
+                + "eateNoBalanceTxs\022\r.NoBalanceTxs\032\017.ReplyS"
+                + "ignRawTx\"\000\0227\n\020GetParaTxByTitle\022\021.ReqPara"
+                + "TxByTitle\032\016.ParaTxDetails\"\000\022=\n\021LoadParaT"
+                + "xByTitle\022\021.ReqHeightByTitle\032\023.ReplyHeigh"
+                + "tByTitle\"\000\0229\n\021GetParaTxByHeight\022\022.ReqPar"
+                + "aTxByHeight\032\016.ParaTxDetails\"\000\022$\n\nGetHead"
+                + "ers\022\n.ReqBlocks\032\010.Headers\"\000B0\n!cn.chain3"
+                + "3.javasdk.model.protobufB\013GrpcServiceb\006p" + "roto3" };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {
+                        cn.chain33.javasdk.model.protobuf.CommonProtobuf.getDescriptor(),
+                        cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.getDescriptor(),
+                        cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.getDescriptor(),
+                        cn.chain33.javasdk.model.protobuf.WalletProtobuf.getDescriptor(),
+                        cn.chain33.javasdk.model.protobuf.P2pService.getDescriptor(),
+                        cn.chain33.javasdk.model.protobuf.AccountProtobuf.getDescriptor(),
+                        cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.getDescriptor(), });
+        cn.chain33.javasdk.model.protobuf.CommonProtobuf.getDescriptor();
+        cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.getDescriptor();
+        cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.getDescriptor();
+        cn.chain33.javasdk.model.protobuf.WalletProtobuf.getDescriptor();
+        cn.chain33.javasdk.model.protobuf.P2pService.getDescriptor();
+        cn.chain33.javasdk.model.protobuf.AccountProtobuf.getDescriptor();
+        cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.getDescriptor();
+    }
+
+    // @@protoc_insertion_point(outer_class_scope)
 }

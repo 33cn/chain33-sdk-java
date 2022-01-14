@@ -18,8 +18,6 @@ public class ListPushesResult implements Serializable {
 
     @Override
     public String toString() {
-        return "ListPushesResult{" +
-                "pushes=" + pushes +
-                '}';
+        return "ListPushesResult{" + "pushes=" + pushes + '}';
     }
 }

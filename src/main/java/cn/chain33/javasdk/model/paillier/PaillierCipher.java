@@ -23,8 +23,7 @@ public class PaillierCipher {
         }
 
         BigInteger nsquare = publicKey.getnSquared();
-        BigInteger ciphertext =
-                publicKey.getG().modPow(m, nsquare).multiply(random.modPow(n, nsquare)).mod(nsquare);
+        BigInteger ciphertext = publicKey.getG().modPow(m, nsquare).multiply(random.modPow(n, nsquare)).mod(nsquare);
 
         byte[] nBytes = BytesUtils.asUnsignedByteArray(n);
         byte[] nLenBytes = BytesUtils.unsignedShortToByte2(nBytes.length);
@@ -32,8 +31,7 @@ public class PaillierCipher {
         byte[] data = new byte[nLenBytes.length + nBytes.length + cipherBytes.length];
         System.arraycopy(nLenBytes, 0, data, 0, nLenBytes.length);
         System.arraycopy(nBytes, 0, data, nLenBytes.length, nBytes.length);
-        System.arraycopy(
-                cipherBytes, 0, data, nLenBytes.length + nBytes.length, cipherBytes.length);
+        System.arraycopy(cipherBytes, 0, data, nLenBytes.length + nBytes.length, cipherBytes.length);
         return data;
     }
 
@@ -58,13 +56,8 @@ public class PaillierCipher {
         System.arraycopy(ciphertext, 2 + nLen, data, 0, ciphertext.length - nLen - 2);
         BigInteger intCiphertext = BytesUtils.fromUnsignedByteArray(data);
 
-        BigInteger message =
-                intCiphertext
-                        .modPow(lambda, privateKey.getnSquared())
-                        .subtract(BigInteger.ONE)
-                        .divide(n)
-                        .multiply(privateKey.getMu())
-                        .mod(n);
+        BigInteger message = intCiphertext.modPow(lambda, privateKey.getnSquared()).subtract(BigInteger.ONE).divide(n)
+                .multiply(privateKey.getMu()).mod(n);
         BigInteger maxValue = BigInteger.ONE.shiftLeft(n.bitLength() / 2);
         if (message.compareTo(maxValue) > 0) {
             return message.subtract(n);
@@ -76,8 +69,8 @@ public class PaillierCipher {
     public static String ciphertextAdd(String ciphertext1, String ciphertext2) {
         byte[] data = ciphertextAdd(HexUtil.fromHexString(ciphertext1), HexUtil.fromHexString(ciphertext2));
         if (data == null) {
-           System.err.println("Ciphertext add error");
-           return null;
+            System.err.println("Ciphertext add error");
+            return null;
         }
         return HexUtil.toHexString(data);
     }
@@ -112,8 +105,7 @@ public class PaillierCipher {
         byte[] data = new byte[nLenBytes.length + nBytes1.length + cipherBytes.length];
         System.arraycopy(nLenBytes, 0, data, 0, nLenBytes.length);
         System.arraycopy(nBytes1, 0, data, nLenBytes.length, nBytes1.length);
-        System.arraycopy(
-                cipherBytes, 0, data, nLenBytes.length + nBytes1.length, cipherBytes.length);
+        System.arraycopy(cipherBytes, 0, data, nLenBytes.length + nBytes1.length, cipherBytes.length);
         return data;
     }
 }

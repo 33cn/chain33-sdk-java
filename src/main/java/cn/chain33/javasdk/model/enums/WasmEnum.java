@@ -2,7 +2,7 @@ package cn.chain33.javasdk.model.enums;
 
 public enum WasmEnum {
 
-    WasmCreate(1),WasmUpdate(2),WasmCall(3);
+    WasmCreate(1), WasmUpdate(2), WasmCall(3);
 
     private int ty;
 

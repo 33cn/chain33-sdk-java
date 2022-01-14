@@ -4,1790 +4,1770 @@
 package cn.chain33.javasdk.model.protobuf;
 
 public final class ManageProtobuf {
-  private ManageProtobuf() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface ManageActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ManageAction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.ModifyConfig modify = 1;</code>
-     */
-    boolean hasModify();
-    /**
-     * <code>.ModifyConfig modify = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify();
-    /**
-     * <code>.ModifyConfig modify = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder();
-
-    /**
-     * <code>int32 Ty = 2;</code>
-     */
-    int getTy();
-
-    public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.ValueCase getValueCase();
-  }
-  /**
-   * Protobuf type {@code ManageAction}
-   */
-  public  static final class ManageAction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ManageAction)
-      ManageActionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ManageAction.newBuilder() to construct.
-    private ManageAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ManageAction() {
-      ty_ = 0;
+    private ManageProtobuf() {
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ManageAction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder subBuilder = null;
-              if (valueCase_ == 1) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 1;
-              break;
-            }
-            case 16: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_descriptor;
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.class, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.Builder.class);
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
-    private int valueCase_ = 0;
-    private java.lang.Object value_;
-    public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite {
-      MODIFY(1),
-      VALUE_NOT_SET(0);
-      private final int value;
-      private ValueCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ValueCase valueOf(int value) {
-        return forNumber(value);
-      }
+    public interface ManageActionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:ManageAction)
+            com.google.protobuf.MessageOrBuilder {
 
-      public static ValueCase forNumber(int value) {
-        switch (value) {
-          case 1: return MODIFY;
-          case 0: return VALUE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
+        /**
+         * <code>.ModifyConfig modify = 1;</code>
+         */
+        boolean hasModify();
 
-    public ValueCase
-    getValueCase() {
-      return ValueCase.forNumber(
-          valueCase_);
+        /**
+         * <code>.ModifyConfig modify = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify();
+
+        /**
+         * <code>.ModifyConfig modify = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder();
+
+        /**
+         * <code>int32 Ty = 2;</code>
+         */
+        int getTy();
+
+        public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.ValueCase getValueCase();
     }
 
-    public static final int MODIFY_FIELD_NUMBER = 1;
-    /**
-     * <code>.ModifyConfig modify = 1;</code>
-     */
-    public boolean hasModify() {
-      return valueCase_ == 1;
-    }
-    /**
-     * <code>.ModifyConfig modify = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
-    }
-    /**
-     * <code>.ModifyConfig modify = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
-    }
-
-    public static final int TY_FIELD_NUMBER = 2;
-    private int ty_;
-    /**
-     * <code>int32 Ty = 2;</code>
-     */
-    public int getTy() {
-      return ty_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (valueCase_ == 1) {
-        output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_);
-      }
-      if (ty_ != 0) {
-        output.writeInt32(2, ty_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (valueCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_);
-      }
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, ty_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction other = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) obj;
-
-      boolean result = true;
-      result = result && (getTy()
-          == other.getTy());
-      result = result && getValueCase().equals(
-          other.getValueCase());
-      if (!result) return false;
-      switch (valueCase_) {
-        case 1:
-          result = result && getModify()
-              .equals(other.getModify());
-          break;
-        case 0:
-        default:
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      switch (valueCase_) {
-        case 1:
-          hash = (37 * hash) + MODIFY_FIELD_NUMBER;
-          hash = (53 * hash) + getModify().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code ManageAction}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ManageAction)
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageActionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_descriptor;
-      }
+    public static final class ManageAction extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:ManageAction)
+            ManageActionOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.class, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use ManageAction.newBuilder() to construct.
+        private ManageAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
 
-        valueCase_ = 0;
-        value_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction build() {
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private ManageAction() {
+            ty_ = 0;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction buildPartial() {
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction result = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction(this);
-        if (valueCase_ == 1) {
-          if (modifyBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = modifyBuilder_.build();
-          }
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        result.ty_ = ty_;
-        result.valueCase_ = valueCase_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        private ManageAction(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder subBuilder = null;
+                        if (valueCase_ == 1) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder
+                                    .mergeFrom((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 1;
+                        break;
+                    }
+                    case 16: {
+
+                        ty_ = input.readInt32();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction other) {
-        if (other == cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_descriptor;
         }
-        switch (other.getValueCase()) {
-          case MODIFY: {
-            mergeModify(other.getModify());
-            break;
-          }
-          case VALUE_NOT_SET: {
-            break;
-          }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.class,
+                            cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.Builder.class);
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+        private int valueCase_ = 0;
+        private java.lang.Object value_;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+            MODIFY(1), VALUE_NOT_SET(0);
+
+            private final int value;
+
+            private ValueCase(int value) {
+                this.value = value;
+            }
+
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static ValueCase valueOf(int value) {
+                return forNumber(value);
+            }
+
+            public static ValueCase forNumber(int value) {
+                switch (value) {
+                case 1:
+                    return MODIFY;
+                case 0:
+                    return VALUE_NOT_SET;
+                default:
+                    return null;
+                }
+            }
+
+            public int getNumber() {
+                return this.value;
+            }
+        };
+
+        public ValueCase getValueCase() {
+            return ValueCase.forNumber(valueCase_);
         }
-        return this;
-      }
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public ValueCase
-          getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
-      }
 
-      public Builder clearValue() {
-        valueCase_ = 0;
-        value_ = null;
-        onChanged();
-        return this;
-      }
+        public static final int MODIFY_FIELD_NUMBER = 1;
 
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder> modifyBuilder_;
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public boolean hasModify() {
-        return valueCase_ == 1;
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify() {
-        if (modifyBuilder_ == null) {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
-        } else {
-          if (valueCase_ == 1) {
-            return modifyBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+        /**
+         * <code>.ModifyConfig modify = 1;</code>
+         */
+        public boolean hasModify() {
+            return valueCase_ == 1;
         }
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public Builder setModify(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig value) {
-        if (modifyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          modifyBuilder_.setMessage(value);
+
+        /**
+         * <code>.ModifyConfig modify = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
         }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public Builder setModify(
-          cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder builderForValue) {
-        if (modifyBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          modifyBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.ModifyConfig modify = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
         }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public Builder mergeModify(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig value) {
-        if (modifyBuilder_ == null) {
-          if (valueCase_ == 1 &&
-              value_ != cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.newBuilder((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 1) {
-            modifyBuilder_.mergeFrom(value);
-          }
-          modifyBuilder_.setMessage(value);
+
+        public static final int TY_FIELD_NUMBER = 2;
+        private int ty_;
+
+        /**
+         * <code>int32 Ty = 2;</code>
+         */
+        public int getTy() {
+            return ty_;
         }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public Builder clearModify() {
-        if (modifyBuilder_ == null) {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          modifyBuilder_.clear();
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
         }
-        return this;
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder getModifyBuilder() {
-        return getModifyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
-        if ((valueCase_ == 1) && (modifyBuilder_ != null)) {
-          return modifyBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (valueCase_ == 1) {
+                output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_);
+            }
+            if (ty_ != 0) {
+                output.writeInt32(2, ty_);
+            }
+            unknownFields.writeTo(output);
         }
-      }
-      /**
-       * <code>.ModifyConfig modify = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder> 
-          getModifyFieldBuilder() {
-        if (modifyBuilder_ == null) {
-          if (!(valueCase_ == 1)) {
-            value_ = cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
-          }
-          modifyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (valueCase_ == 1) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1,
+                        (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_);
+            }
+            if (ty_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, ty_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
         }
-        valueCase_ = 1;
-        onChanged();;
-        return modifyBuilder_;
-      }
 
-      private int ty_ ;
-      /**
-       * <code>int32 Ty = 2;</code>
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 Ty = 2;</code>
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 Ty = 2;</code>
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction other = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) obj;
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:ManageAction)
-    }
-
-    // @@protoc_insertion_point(class_scope:ManageAction)
-    private static final cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ManageAction>
-        PARSER = new com.google.protobuf.AbstractParser<ManageAction>() {
-      @java.lang.Override
-      public ManageAction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ManageAction(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ManageAction> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ManageAction> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ModifyConfigOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ModifyConfig)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string key = 1;</code>
-     */
-    java.lang.String getKey();
-    /**
-     * <code>string key = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
-    /**
-     * <code>string value = 2;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <code>string value = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-
-    /**
-     * <code>string op = 3;</code>
-     */
-    java.lang.String getOp();
-    /**
-     * <code>string op = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getOpBytes();
-
-    /**
-     * <code>string addr = 4;</code>
-     */
-    java.lang.String getAddr();
-    /**
-     * <code>string addr = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getAddrBytes();
-  }
-  /**
-   * Protobuf type {@code ModifyConfig}
-   */
-  public  static final class ModifyConfig extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ModifyConfig)
-      ModifyConfigOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ModifyConfig.newBuilder() to construct.
-    private ModifyConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ModifyConfig() {
-      key_ = "";
-      value_ = "";
-      op_ = "";
-      addr_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ModifyConfig(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
+            boolean result = true;
+            result = result && (getTy() == other.getTy());
+            result = result && getValueCase().equals(other.getValueCase());
+            if (!result)
+                return false;
+            switch (valueCase_) {
+            case 1:
+                result = result && getModify().equals(other.getModify());
+                break;
             case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
-              break;
+            default:
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              value_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              op_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              addr_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_descriptor;
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TY_FIELD_NUMBER;
+            hash = (53 * hash) + getTy();
+            switch (valueCase_) {
+            case 1:
+                hash = (37 * hash) + MODIFY_FIELD_NUMBER;
+                hash = (53 * hash) + getModify().hashCode();
+                break;
+            case 0:
+            default:
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code ManageAction}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:ManageAction)
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageActionOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.class,
+                                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                ty_ = 0;
+
+                valueCase_ = 0;
+                value_ = null;
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ManageAction_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction build() {
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction buildPartial() {
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction result = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction(
+                        this);
+                if (valueCase_ == 1) {
+                    if (modifyBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = modifyBuilder_.build();
+                    }
+                }
+                result.ty_ = ty_;
+                result.valueCase_ = valueCase_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction other) {
+                if (other == cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction.getDefaultInstance())
+                    return this;
+                if (other.getTy() != 0) {
+                    setTy(other.getTy());
+                }
+                switch (other.getValueCase()) {
+                case MODIFY: {
+                    mergeModify(other.getModify());
+                    break;
+                }
+                case VALUE_NOT_SET: {
+                    break;
+                }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int valueCase_ = 0;
+            private java.lang.Object value_;
+
+            public ValueCase getValueCase() {
+                return ValueCase.forNumber(valueCase_);
+            }
+
+            public Builder clearValue() {
+                valueCase_ = 0;
+                value_ = null;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder> modifyBuilder_;
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public boolean hasModify() {
+                return valueCase_ == 1;
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify() {
+                if (modifyBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 1) {
+                        return modifyBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public Builder setModify(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig value) {
+                if (modifyBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    modifyBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public Builder setModify(
+                    cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder builderForValue) {
+                if (modifyBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    modifyBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public Builder mergeModify(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig value) {
+                if (modifyBuilder_ == null) {
+                    if (valueCase_ == 1 && value_ != cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 1) {
+                        modifyBuilder_.mergeFrom(value);
+                    }
+                    modifyBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public Builder clearModify() {
+                if (modifyBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    modifyBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder getModifyBuilder() {
+                return getModifyFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
+                if ((valueCase_ == 1) && (modifyBuilder_ != null)) {
+                    return modifyBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.ModifyConfig modify = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder> getModifyFieldBuilder() {
+                if (modifyBuilder_ == null) {
+                    if (!(valueCase_ == 1)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+                    }
+                    modifyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 1;
+                onChanged();
+                ;
+                return modifyBuilder_;
+            }
+
+            private int ty_;
+
+            /**
+             * <code>int32 Ty = 2;</code>
+             */
+            public int getTy() {
+                return ty_;
+            }
+
+            /**
+             * <code>int32 Ty = 2;</code>
+             */
+            public Builder setTy(int value) {
+
+                ty_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 Ty = 2;</code>
+             */
+            public Builder clearTy() {
+
+                ty_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:ManageAction)
+        }
+
+        // @@protoc_insertion_point(class_scope:ManageAction)
+        private static final cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<ManageAction> PARSER = new com.google.protobuf.AbstractParser<ManageAction>() {
+            @java.lang.Override
+            public ManageAction parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new ManageAction(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<ManageAction> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ManageAction> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.class, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder.class);
+    public interface ModifyConfigOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:ModifyConfig)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string key = 1;</code>
+         */
+        java.lang.String getKey();
+
+        /**
+         * <code>string key = 1;</code>
+         */
+        com.google.protobuf.ByteString getKeyBytes();
+
+        /**
+         * <code>string value = 2;</code>
+         */
+        java.lang.String getValue();
+
+        /**
+         * <code>string value = 2;</code>
+         */
+        com.google.protobuf.ByteString getValueBytes();
+
+        /**
+         * <code>string op = 3;</code>
+         */
+        java.lang.String getOp();
+
+        /**
+         * <code>string op = 3;</code>
+         */
+        com.google.protobuf.ByteString getOpBytes();
+
+        /**
+         * <code>string addr = 4;</code>
+         */
+        java.lang.String getAddr();
+
+        /**
+         * <code>string addr = 4;</code>
+         */
+        com.google.protobuf.ByteString getAddrBytes();
     }
 
-    public static final int KEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object key_;
-    /**
-     * <code>string key = 1;</code>
-     */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string key = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object value_;
-    /**
-     * <code>string value = 2;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string value = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OP_FIELD_NUMBER = 3;
-    private volatile java.lang.Object op_;
-    /**
-     * <code>string op = 3;</code>
-     */
-    public java.lang.String getOp() {
-      java.lang.Object ref = op_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        op_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string op = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getOpBytes() {
-      java.lang.Object ref = op_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        op_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ADDR_FIELD_NUMBER = 4;
-    private volatile java.lang.Object addr_;
-    /**
-     * <code>string addr = 4;</code>
-     */
-    public java.lang.String getAddr() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string addr = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getAddrBytes() {
-      java.lang.Object ref = addr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
-      }
-      if (!getOpBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, op_);
-      }
-      if (!getAddrBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, addr_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
-      }
-      if (!getOpBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, op_);
-      }
-      if (!getAddrBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, addr_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig other = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) obj;
-
-      boolean result = true;
-      result = result && getKey()
-          .equals(other.getKey());
-      result = result && getValue()
-          .equals(other.getValue());
-      result = result && getOp()
-          .equals(other.getOp());
-      result = result && getAddr()
-          .equals(other.getAddr());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (37 * hash) + OP_FIELD_NUMBER;
-      hash = (53 * hash) + getOp().hashCode();
-      hash = (37 * hash) + ADDR_FIELD_NUMBER;
-      hash = (53 * hash) + getAddr().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code ModifyConfig}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ModifyConfig)
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_descriptor;
-      }
+    public static final class ModifyConfig extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:ModifyConfig)
+            ModifyConfigOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.class, cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use ModifyConfig.newBuilder() to construct.
+        private ModifyConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        key_ = "";
 
-        value_ = "";
-
-        op_ = "";
-
-        addr_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig build() {
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private ModifyConfig() {
+            key_ = "";
+            value_ = "";
+            op_ = "";
+            addr_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig buildPartial() {
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig result = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig(this);
-        result.key_ = key_;
-        result.value_ = value_;
-        result.op_ = op_;
-        result.addr_ = addr_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig other) {
-        if (other == cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance()) return this;
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
+        private ModifyConfig(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        key_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        value_ = s;
+                        break;
+                    }
+                    case 26: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        op_ = s;
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        addr_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_descriptor;
         }
-        if (!other.getOp().isEmpty()) {
-          op_ = other.op_;
-          onChanged();
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.class,
+                            cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder.class);
         }
-        if (!other.getAddr().isEmpty()) {
-          addr_ = other.addr_;
-          onChanged();
+
+        public static final int KEY_FIELD_NUMBER = 1;
+        private volatile java.lang.Object key_;
+
+        /**
+         * <code>string key = 1;</code>
+         */
+        public java.lang.String getKey() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                key_ = s;
+                return s;
+            }
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        /**
+         * <code>string key = 1;</code>
+         */
+        public com.google.protobuf.ByteString getKeyBytes() {
+            java.lang.Object ref = key_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                key_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-        return this;
-      }
 
-      private java.lang.Object key_ = "";
-      /**
-       * <code>string key = 1;</code>
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        public static final int VALUE_FIELD_NUMBER = 2;
+        private volatile java.lang.Object value_;
+
+        /**
+         * <code>string value = 2;</code>
+         */
+        public java.lang.String getValue() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                value_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string key = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        /**
+         * <code>string value = 2;</code>
+         */
+        public com.google.protobuf.ByteString getValueBytes() {
+            java.lang.Object ref = value_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                value_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-      }
-      /**
-       * <code>string key = 1;</code>
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 1;</code>
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 1;</code>
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object value_ = "";
-      /**
-       * <code>string value = 2;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        public static final int OP_FIELD_NUMBER = 3;
+        private volatile java.lang.Object op_;
+
+        /**
+         * <code>string op = 3;</code>
+         */
+        public java.lang.String getOp() {
+            java.lang.Object ref = op_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                op_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string value = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        /**
+         * <code>string op = 3;</code>
+         */
+        public com.google.protobuf.ByteString getOpBytes() {
+            java.lang.Object ref = op_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                op_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-      }
-      /**
-       * <code>string value = 2;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string value = 2;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string value = 2;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object op_ = "";
-      /**
-       * <code>string op = 3;</code>
-       */
-      public java.lang.String getOp() {
-        java.lang.Object ref = op_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          op_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        public static final int ADDR_FIELD_NUMBER = 4;
+        private volatile java.lang.Object addr_;
+
+        /**
+         * <code>string addr = 4;</code>
+         */
+        public java.lang.String getAddr() {
+            java.lang.Object ref = addr_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                addr_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string op = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getOpBytes() {
-        java.lang.Object ref = op_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          op_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        /**
+         * <code>string addr = 4;</code>
+         */
+        public com.google.protobuf.ByteString getAddrBytes() {
+            java.lang.Object ref = addr_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                addr_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-      }
-      /**
-       * <code>string op = 3;</code>
-       */
-      public Builder setOp(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        op_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string op = 3;</code>
-       */
-      public Builder clearOp() {
-        
-        op_ = getDefaultInstance().getOp();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string op = 3;</code>
-       */
-      public Builder setOpBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        op_ = value;
-        onChanged();
-        return this;
-      }
 
-      private java.lang.Object addr_ = "";
-      /**
-       * <code>string addr = 4;</code>
-       */
-      public java.lang.String getAddr() {
-        java.lang.Object ref = addr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          addr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
         }
-      }
-      /**
-       * <code>string addr = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAddrBytes() {
-        java.lang.Object ref = addr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          addr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getKeyBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+            }
+            if (!getOpBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, op_);
+            }
+            if (!getAddrBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, addr_);
+            }
+            unknownFields.writeTo(output);
         }
-      }
-      /**
-       * <code>string addr = 4;</code>
-       */
-      public Builder setAddr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 4;</code>
-       */
-      public Builder clearAddr() {
-        
-        addr_ = getDefaultInstance().getAddr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string addr = 4;</code>
-       */
-      public Builder setAddrBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        addr_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
 
+            size = 0;
+            if (!getKeyBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+            }
+            if (!getValueBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+            }
+            if (!getOpBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, op_);
+            }
+            if (!getAddrBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, addr_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
 
-      // @@protoc_insertion_point(builder_scope:ModifyConfig)
-    }
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig other = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) obj;
 
-    // @@protoc_insertion_point(class_scope:ModifyConfig)
-    private static final cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig();
-    }
+            boolean result = true;
+            result = result && getKey().equals(other.getKey());
+            result = result && getValue().equals(other.getValue());
+            result = result && getOp().equals(other.getOp());
+            result = result && getAddr().equals(other.getAddr());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
 
-    public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + KEY_FIELD_NUMBER;
+            hash = (53 * hash) + getKey().hashCode();
+            hash = (37 * hash) + VALUE_FIELD_NUMBER;
+            hash = (53 * hash) + getValue().hashCode();
+            hash = (37 * hash) + OP_FIELD_NUMBER;
+            hash = (53 * hash) + getOp().hashCode();
+            hash = (37 * hash) + ADDR_FIELD_NUMBER;
+            hash = (53 * hash) + getAddr().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
 
-    private static final com.google.protobuf.Parser<ModifyConfig>
-        PARSER = new com.google.protobuf.AbstractParser<ModifyConfig>() {
-      @java.lang.Override
-      public ModifyConfig parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ModifyConfig(input, extensionRegistry);
-      }
-    };
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
 
-    public static com.google.protobuf.Parser<ModifyConfig> parser() {
-      return PARSER;
-    }
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<ModifyConfig> getParserForType() {
-      return PARSER;
-    }
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
 
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
 
-  }
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ManageAction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ManageAction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ModifyConfig_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ModifyConfig_fieldAccessorTable;
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\014Manage.proto\"D\n\014ManageAction\022\037\n\006modify" +
-      "\030\001 \001(\0132\r.ModifyConfigH\000\022\n\n\002Ty\030\002 \001(\005B\007\n\005v" +
-      "alue\"D\n\014ModifyConfig\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t\022\n\n\002op\030\003 \001(\t\022\014\n\004addr\030\004 \001(\tB\"\n\030cn" +
-      ".chain33.javasdk.modelB\006Manageb\006proto3"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code ModifyConfig}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:ModifyConfig)
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.class,
+                                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                key_ = "";
+
+                value_ = "";
+
+                op_ = "";
+
+                addr_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.internal_static_ModifyConfig_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig build() {
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig buildPartial() {
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig result = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig(
+                        this);
+                result.key_ = key_;
+                result.value_ = value_;
+                result.op_ = op_;
+                result.addr_ = addr_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig other) {
+                if (other == cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.getDefaultInstance())
+                    return this;
+                if (!other.getKey().isEmpty()) {
+                    key_ = other.key_;
+                    onChanged();
+                }
+                if (!other.getValue().isEmpty()) {
+                    value_ = other.value_;
+                    onChanged();
+                }
+                if (!other.getOp().isEmpty()) {
+                    op_ = other.op_;
+                    onChanged();
+                }
+                if (!other.getAddr().isEmpty()) {
+                    addr_ = other.addr_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object key_ = "";
+
+            /**
+             * <code>string key = 1;</code>
+             */
+            public java.lang.String getKey() {
+                java.lang.Object ref = key_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    key_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string key = 1;</code>
+             */
+            public com.google.protobuf.ByteString getKeyBytes() {
+                java.lang.Object ref = key_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    key_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string key = 1;</code>
+             */
+            public Builder setKey(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string key = 1;</code>
+             */
+            public Builder clearKey() {
+
+                key_ = getDefaultInstance().getKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string key = 1;</code>
+             */
+            public Builder setKeyBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                key_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object value_ = "";
+
+            /**
+             * <code>string value = 2;</code>
+             */
+            public java.lang.String getValue() {
+                java.lang.Object ref = value_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    value_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string value = 2;</code>
+             */
+            public com.google.protobuf.ByteString getValueBytes() {
+                java.lang.Object ref = value_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    value_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string value = 2;</code>
+             */
+            public Builder setValue(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string value = 2;</code>
+             */
+            public Builder clearValue() {
+
+                value_ = getDefaultInstance().getValue();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string value = 2;</code>
+             */
+            public Builder setValueBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                value_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object op_ = "";
+
+            /**
+             * <code>string op = 3;</code>
+             */
+            public java.lang.String getOp() {
+                java.lang.Object ref = op_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    op_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string op = 3;</code>
+             */
+            public com.google.protobuf.ByteString getOpBytes() {
+                java.lang.Object ref = op_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    op_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string op = 3;</code>
+             */
+            public Builder setOp(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                op_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string op = 3;</code>
+             */
+            public Builder clearOp() {
+
+                op_ = getDefaultInstance().getOp();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string op = 3;</code>
+             */
+            public Builder setOpBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                op_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object addr_ = "";
+
+            /**
+             * <code>string addr = 4;</code>
+             */
+            public java.lang.String getAddr() {
+                java.lang.Object ref = addr_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    addr_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string addr = 4;</code>
+             */
+            public com.google.protobuf.ByteString getAddrBytes() {
+                java.lang.Object ref = addr_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    addr_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string addr = 4;</code>
+             */
+            public Builder setAddr(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                addr_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string addr = 4;</code>
+             */
+            public Builder clearAddr() {
+
+                addr_ = getDefaultInstance().getAddr();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string addr = 4;</code>
+             */
+            public Builder setAddrBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                addr_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:ModifyConfig)
+        }
+
+        // @@protoc_insertion_point(class_scope:ModifyConfig)
+        private static final cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<ModifyConfig> PARSER = new com.google.protobuf.AbstractParser<ModifyConfig>() {
+            @java.lang.Override
+            public ModifyConfig parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new ModifyConfig(input, extensionRegistry);
+            }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-    internal_static_ManageAction_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_ManageAction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ManageAction_descriptor,
-        new java.lang.String[] { "Modify", "Ty", "Value", });
-    internal_static_ModifyConfig_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_ModifyConfig_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ModifyConfig_descriptor,
-        new java.lang.String[] { "Key", "Value", "Op", "Addr", });
-  }
 
-  // @@protoc_insertion_point(outer_class_scope)
+        public static com.google.protobuf.Parser<ModifyConfig> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ModifyConfig> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+    }
+
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_ManageAction_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_ManageAction_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_ModifyConfig_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_ModifyConfig_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+    static {
+        java.lang.String[] descriptorData = { "\n\014Manage.proto\"D\n\014ManageAction\022\037\n\006modify"
+                + "\030\001 \001(\0132\r.ModifyConfigH\000\022\n\n\002Ty\030\002 \001(\005B\007\n\005v"
+                + "alue\"D\n\014ModifyConfig\022\013\n\003key\030\001 \001(\t\022\r\n\005val"
+                + "ue\030\002 \001(\t\022\n\n\002op\030\003 \001(\t\022\014\n\004addr\030\004 \001(\tB\"\n\030cn"
+                + ".chain33.javasdk.modelB\006Manageb\006proto3" };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+            public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                    com.google.protobuf.Descriptors.FileDescriptor root) {
+                descriptor = root;
+                return null;
+            }
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {}, assigner);
+        internal_static_ManageAction_descriptor = getDescriptor().getMessageTypes().get(0);
+        internal_static_ManageAction_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_ManageAction_descriptor, new java.lang.String[] { "Modify", "Ty", "Value", });
+        internal_static_ModifyConfig_descriptor = getDescriptor().getMessageTypes().get(1);
+        internal_static_ModifyConfig_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_ModifyConfig_descriptor, new java.lang.String[] { "Key", "Value", "Op", "Addr", });
+    }
+
+    // @@protoc_insertion_point(outer_class_scope)
 }

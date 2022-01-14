@@ -2,39 +2,38 @@ package cn.chain33.javasdk.model;
 
 import java.io.Serializable;
 
-public class Signature implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+public class Signature implements Serializable {
 
-	private int Ty;
-	
-	private byte[] Pubkey;
-	
-	private byte[] Signature;
+    private static final long serialVersionUID = 1L;
 
-	public int getTy() {
-		return Ty;
-	}
+    private int Ty;
 
-	public void setTy(int ty) {
-		Ty = ty;
-	}
+    private byte[] Pubkey;
 
-	public byte[] getPubkey() {
-		return Pubkey;
-	}
+    private byte[] Signature;
 
-	public void setPubkey(byte[] pubkey) {
-		Pubkey = pubkey;
-	}
+    public int getTy() {
+        return Ty;
+    }
 
-	public byte[] getSignature() {
-		return Signature;
-	}
+    public void setTy(int ty) {
+        Ty = ty;
+    }
 
-	public void setSignature(byte[] signature) {
-		Signature = signature;
-	}
-	
-	
+    public byte[] getPubkey() {
+        return Pubkey;
+    }
+
+    public void setPubkey(byte[] pubkey) {
+        Pubkey = pubkey;
+    }
+
+    public byte[] getSignature() {
+        return Signature;
+    }
+
+    public void setSignature(byte[] signature) {
+        Signature = signature;
+    }
+
 }

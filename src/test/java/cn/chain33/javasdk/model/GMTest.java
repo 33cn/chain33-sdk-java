@@ -10,7 +10,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class GMTest {
-    public static final byte[] SRC_DATA = new byte[]{0x1, 0x23, 0x45, 0x67, (byte)0x89, (byte)0xab, (byte)0xcd, (byte)0xef, (byte)0xfe, (byte)0xdc, (byte)0xba, (byte)0x98, 0x76, 0x54, 0x32, 0x10};
+    public static final byte[] SRC_DATA = new byte[] { 0x1, 0x23, 0x45, 0x67, (byte) 0x89, (byte) 0xab, (byte) 0xcd,
+            (byte) 0xef, (byte) 0xfe, (byte) 0xdc, (byte) 0xba, (byte) 0x98, 0x76, 0x54, 0x32, 0x10 };
     public static final String SRC_DATA_24B = "123456781234567812345678";
     public static final String WITH_ID = "1234";
 
@@ -94,7 +95,8 @@ public class GMTest {
             byte[] cipherText;
             byte[] decryptedData;
 
-            key = new byte[]{0x1, 0x23, 0x45, 0x67, (byte)0x89, (byte)0xab, (byte)0xcd, (byte)0xef, (byte)0xfe, (byte)0xdc, (byte)0xba, (byte)0x98, 0x76, 0x54, 0x32, 0x10};
+            key = new byte[] { 0x1, 0x23, 0x45, 0x67, (byte) 0x89, (byte) 0xab, (byte) 0xcd, (byte) 0xef, (byte) 0xfe,
+                    (byte) 0xdc, (byte) 0xba, (byte) 0x98, 0x76, 0x54, 0x32, 0x10 };
             cipherText = SM4Util.encryptECB(key, SRC_DATA);
             System.out.println("SM4 ECB Padding encrypt result:\n" + Arrays.toString(cipherText));
             decryptedData = SM4Util.decryptECB(key, cipherText);

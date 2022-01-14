@@ -11,17 +11,19 @@ import org.bitcoinj.core.Sha256Hash;
 
 public class TransactionGrpcUtil {
 
-
     /**
      *
      * @description 签名
+     * 
      * @param tx
      * @param privateKey
+     * 
      * @return
      *
      * @create 2020年1月9日 下午6:35:16
      */
-    public static TransactionAllProtobuf.Transaction signProbuf(TransactionAllProtobuf.Transaction tx, String privateKey) {
+    public static TransactionAllProtobuf.Transaction signProbuf(TransactionAllProtobuf.Transaction tx,
+            String privateKey) {
         TransactionAllProtobuf.Transaction encodeTx = getSignProbuf(tx);
         byte[] protobufData = encodeTx.toByteArray();
         byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
@@ -38,10 +40,13 @@ public class TransactionGrpcUtil {
     /**
      *
      * @description 获取签名需要的protobuf
+     * 
      * @param tx
+     * 
      * @return
      *
      * @author lgang
+     * 
      * @create 2020年1月9日 下午6:35:30
      */
     public static TransactionAllProtobuf.Transaction getSignProbuf(TransactionAllProtobuf.Transaction tx) {
@@ -65,9 +70,8 @@ public class TransactionGrpcUtil {
         return build;
     }
 
-
     private static RawTransactionProtobuf.Signature signRawTx(byte[] data, byte[] privateKey,
-                                                              RawTransactionProtobuf.Transaction.Builder txBuilder) {
+            RawTransactionProtobuf.Transaction.Builder txBuilder) {
         Signature btcCoinSign = btcCoinSign(data, privateKey);
         RawTransactionProtobuf.Signature.Builder signatureBuilder = RawTransactionProtobuf.Signature.newBuilder();
         signatureBuilder.setPubkey(ByteString.copyFrom(btcCoinSign.getPubkey()));

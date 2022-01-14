@@ -1,7 +1,13 @@
 /target/
 /bin/
-
-.git
 .settings
 .classpath
 .project
+.DS_Store
+target/
+log
+.idea
+*.iml
+.metals
+.bloop
+.bsp

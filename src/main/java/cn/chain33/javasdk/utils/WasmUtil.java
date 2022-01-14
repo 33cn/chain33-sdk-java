@@ -15,7 +15,7 @@ public class WasmUtil {
         return action.build();
     }
 
-    public static WasmProtobuf.wasmAction updateWasmContract(String name,byte[] codes) {
+    public static WasmProtobuf.wasmAction updateWasmContract(String name, byte[] codes) {
         WasmProtobuf.wasmAction.Builder action = WasmProtobuf.wasmAction.newBuilder();
         WasmProtobuf.wasmUpdate.Builder builder = WasmProtobuf.wasmUpdate.newBuilder();
         builder.setName(name);
@@ -25,18 +25,19 @@ public class WasmUtil {
         return action.build();
     }
 
-    public static WasmProtobuf.wasmAction createWasmCallContract(String name, String method, int[] parameters,String[] envs) {
+    public static WasmProtobuf.wasmAction createWasmCallContract(String name, String method, int[] parameters,
+            String[] envs) {
         WasmProtobuf.wasmAction.Builder action = WasmProtobuf.wasmAction.newBuilder();
         WasmProtobuf.wasmCall.Builder builder = WasmProtobuf.wasmCall.newBuilder();
         builder.setContract(name);
         builder.setMethod(method);
-        if (parameters!= null && parameters.length > 0) {
-            for(int i = 0; i < parameters.length; i++) {
+        if (parameters != null && parameters.length > 0) {
+            for (int i = 0; i < parameters.length; i++) {
                 builder.addParameters(parameters[i]);
             }
         }
         if (envs != null && envs.length > 0) {
-            for(int i = 0; i < envs.length; i++) {
+            for (int i = 0; i < envs.length; i++) {
                 builder.addEnv(envs[i]);
             }
         }

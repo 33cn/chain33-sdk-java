@@ -17,8 +17,6 @@ public class Int64Result implements Serializable {
 
     @Override
     public String toString() {
-        return "Int64Result{" +
-                "data=" + data +
-                '}';
+        return "Int64Result{" + "data=" + data + '}';
     }
 }

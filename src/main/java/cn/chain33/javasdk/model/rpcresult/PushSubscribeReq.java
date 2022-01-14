@@ -20,7 +20,7 @@ public class PushSubscribeReq implements Serializable {
 
     private long type;
 
-    private Map<String,Boolean> contract;
+    private Map<String, Boolean> contract;
 
     public String getName() {
         return name;
@@ -88,15 +88,8 @@ public class PushSubscribeReq implements Serializable {
 
     @Override
     public String toString() {
-        return "PushSubscribeReq{" +
-                "name='" + name + '\'' +
-                ", URL='" + URL + '\'' +
-                ", encode='" + encode + '\'' +
-                ", lastSequence=" + lastSequence +
-                ", lastHeight=" + lastHeight +
-                ", lastBlockHash='" + lastBlockHash + '\'' +
-                ", type=" + type +
-                ", contract=" + contract +
-                '}';
+        return "PushSubscribeReq{" + "name='" + name + '\'' + ", URL='" + URL + '\'' + ", encode='" + encode + '\''
+                + ", lastSequence=" + lastSequence + ", lastHeight=" + lastHeight + ", lastBlockHash='" + lastBlockHash
+                + '\'' + ", type=" + type + ", contract=" + contract + '}';
     }
 }

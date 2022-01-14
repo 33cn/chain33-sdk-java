@@ -1,33 +1,33 @@
 package cn.chain33.javasdk.model.decode;
 
 public class DecodeRawTransaction {
-    
+
     private String rawPayload;
-    
+
     private Long fee;
-    
+
     private DecodeSignature signature;
-    
+
     private String feefmt;
-    
+
     private Long nonce;
-    
+
     private Integer groupCount;
-    
+
     private DecodePayLoad payload;
-    
+
     private Long expire;
-    
+
     private String header;
-    
+
     private String from;
-    
+
     private String to;
-    
+
     private String execer;
-    
+
     private String hash;
-    
+
     private String next;
 
     public String getRawPayload() {
@@ -141,6 +141,5 @@ public class DecodeRawTransaction {
     public void setNext(String next) {
         this.next = next;
     }
-    
-    
+
 }

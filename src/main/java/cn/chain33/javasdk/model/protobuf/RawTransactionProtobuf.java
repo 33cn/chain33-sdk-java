@@ -4,2791 +4,2804 @@
 package cn.chain33.javasdk.model.protobuf;
 
 public final class RawTransactionProtobuf {
-  private RawTransactionProtobuf() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface SignatureOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Signature)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 ty = 1;</code>
-     */
-    int getTy();
-
-    /**
-     * <code>bytes pubkey = 2;</code>
-     */
-    com.google.protobuf.ByteString getPubkey();
-
-    /**
-     * <code>bytes signature = 3;</code>
-     */
-    com.google.protobuf.ByteString getSignature();
-  }
-  /**
-   * Protobuf type {@code Signature}
-   */
-  public  static final class Signature extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Signature)
-      SignatureOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Signature.newBuilder() to construct.
-    private Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Signature() {
-      ty_ = 0;
-      pubkey_ = com.google.protobuf.ByteString.EMPTY;
-      signature_ = com.google.protobuf.ByteString.EMPTY;
+    private RawTransactionProtobuf() {
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Signature(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            case 18: {
-
-              pubkey_ = input.readBytes();
-              break;
-            }
-            case 26: {
-
-              signature_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_descriptor;
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.class, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder.class);
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
-    public static final int TY_FIELD_NUMBER = 1;
-    private int ty_;
-    /**
-     * <code>int32 ty = 1;</code>
-     */
-    public int getTy() {
-      return ty_;
+    public interface SignatureOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:Signature)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>int32 ty = 1;</code>
+         */
+        int getTy();
+
+        /**
+         * <code>bytes pubkey = 2;</code>
+         */
+        com.google.protobuf.ByteString getPubkey();
+
+        /**
+         * <code>bytes signature = 3;</code>
+         */
+        com.google.protobuf.ByteString getSignature();
     }
 
-    public static final int PUBKEY_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString pubkey_;
-    /**
-     * <code>bytes pubkey = 2;</code>
-     */
-    public com.google.protobuf.ByteString getPubkey() {
-      return pubkey_;
-    }
-
-    public static final int SIGNATURE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString signature_;
-    /**
-     * <code>bytes signature = 3;</code>
-     */
-    public com.google.protobuf.ByteString getSignature() {
-      return signature_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (ty_ != 0) {
-        output.writeInt32(1, ty_);
-      }
-      if (!pubkey_.isEmpty()) {
-        output.writeBytes(2, pubkey_);
-      }
-      if (!signature_.isEmpty()) {
-        output.writeBytes(3, signature_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, ty_);
-      }
-      if (!pubkey_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, pubkey_);
-      }
-      if (!signature_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, signature_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature other = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) obj;
-
-      boolean result = true;
-      result = result && (getTy()
-          == other.getTy());
-      result = result && getPubkey()
-          .equals(other.getPubkey());
-      result = result && getSignature()
-          .equals(other.getSignature());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
-      hash = (53 * hash) + getPubkey().hashCode();
-      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
-      hash = (53 * hash) + getSignature().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code Signature}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Signature)
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_descriptor;
-      }
+    public static final class Signature extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:Signature)
+            SignatureOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.class, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use Signature.newBuilder() to construct.
+        private Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
 
-        pubkey_ = com.google.protobuf.ByteString.EMPTY;
-
-        signature_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature build() {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private Signature() {
+            ty_ = 0;
+            pubkey_ = com.google.protobuf.ByteString.EMPTY;
+            signature_ = com.google.protobuf.ByteString.EMPTY;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature buildPartial() {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature result = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature(this);
-        result.ty_ = ty_;
-        result.pubkey_ = pubkey_;
-        result.signature_ = signature_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature other) {
-        if (other == cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
+        private Signature(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 8: {
+
+                        ty_ = input.readInt32();
+                        break;
+                    }
+                    case 18: {
+
+                        pubkey_ = input.readBytes();
+                        break;
+                    }
+                    case 26: {
+
+                        signature_ = input.readBytes();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (other.getPubkey() != com.google.protobuf.ByteString.EMPTY) {
-          setPubkey(other.getPubkey());
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_descriptor;
         }
-        if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
-          setSignature(other.getSignature());
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.class,
+                            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder.class);
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+        public static final int TY_FIELD_NUMBER = 1;
+        private int ty_;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        /**
+         * <code>int32 ty = 1;</code>
+         */
+        public int getTy() {
+            return ty_;
         }
-        return this;
-      }
 
-      private int ty_ ;
-      /**
-       * <code>int32 ty = 1;</code>
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 ty = 1;</code>
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 ty = 1;</code>
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
+        public static final int PUBKEY_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString pubkey_;
 
-      private com.google.protobuf.ByteString pubkey_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes pubkey = 2;</code>
-       */
-      public com.google.protobuf.ByteString getPubkey() {
-        return pubkey_;
-      }
-      /**
-       * <code>bytes pubkey = 2;</code>
-       */
-      public Builder setPubkey(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pubkey_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes pubkey = 2;</code>
-       */
-      public Builder clearPubkey() {
-        
-        pubkey_ = getDefaultInstance().getPubkey();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes signature = 3;</code>
-       */
-      public com.google.protobuf.ByteString getSignature() {
-        return signature_;
-      }
-      /**
-       * <code>bytes signature = 3;</code>
-       */
-      public Builder setSignature(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        signature_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes signature = 3;</code>
-       */
-      public Builder clearSignature() {
-        
-        signature_ = getDefaultInstance().getSignature();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Signature)
-    }
-
-    // @@protoc_insertion_point(class_scope:Signature)
-    private static final cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Signature>
-        PARSER = new com.google.protobuf.AbstractParser<Signature>() {
-      @java.lang.Override
-      public Signature parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Signature(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Signature> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Signature> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TransactionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Transaction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bytes execer = 1;</code>
-     */
-    com.google.protobuf.ByteString getExecer();
-
-    /**
-     * <code>bytes payload = 2;</code>
-     */
-    com.google.protobuf.ByteString getPayload();
-
-    /**
-     * <code>.Signature signature = 3;</code>
-     */
-    boolean hasSignature();
-    /**
-     * <code>.Signature signature = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getSignature();
-    /**
-     * <code>.Signature signature = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder getSignatureOrBuilder();
-
-    /**
-     * <code>int64 fee = 4;</code>
-     */
-    long getFee();
-
-    /**
-     * <code>int64 expire = 5;</code>
-     */
-    long getExpire();
-
-    /**
-     * <pre>
-     *随机ID，可以防止payload 相同的时候，交易重复
-     * </pre>
-     *
-     * <code>int64 nonce = 6;</code>
-     */
-    long getNonce();
-
-    /**
-     * <pre>
-     *对方地址，如果没有对方地址，可以为空
-     * </pre>
-     *
-     * <code>string to = 7;</code>
-     */
-    java.lang.String getTo();
-    /**
-     * <pre>
-     *对方地址，如果没有对方地址，可以为空
-     * </pre>
-     *
-     * <code>string to = 7;</code>
-     */
-    com.google.protobuf.ByteString
-        getToBytes();
-
-    /**
-     * <code>int32 groupCount = 8;</code>
-     */
-    int getGroupCount();
-
-    /**
-     * <code>bytes header = 9;</code>
-     */
-    com.google.protobuf.ByteString getHeader();
-
-    /**
-     * <code>bytes next = 10;</code>
-     */
-    com.google.protobuf.ByteString getNext();
-  }
-  /**
-   * Protobuf type {@code Transaction}
-   */
-  public  static final class Transaction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Transaction)
-      TransactionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Transaction.newBuilder() to construct.
-    private Transaction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Transaction() {
-      execer_ = com.google.protobuf.ByteString.EMPTY;
-      payload_ = com.google.protobuf.ByteString.EMPTY;
-      fee_ = 0L;
-      expire_ = 0L;
-      nonce_ = 0L;
-      to_ = "";
-      groupCount_ = 0;
-      header_ = com.google.protobuf.ByteString.EMPTY;
-      next_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Transaction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              execer_ = input.readBytes();
-              break;
-            }
-            case 18: {
-
-              payload_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder subBuilder = null;
-              if (signature_ != null) {
-                subBuilder = signature_.toBuilder();
-              }
-              signature_ = input.readMessage(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(signature_);
-                signature_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 32: {
-
-              fee_ = input.readInt64();
-              break;
-            }
-            case 40: {
-
-              expire_ = input.readInt64();
-              break;
-            }
-            case 48: {
-
-              nonce_ = input.readInt64();
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              to_ = s;
-              break;
-            }
-            case 64: {
-
-              groupCount_ = input.readInt32();
-              break;
-            }
-            case 74: {
-
-              header_ = input.readBytes();
-              break;
-            }
-            case 82: {
-
-              next_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+        /**
+         * <code>bytes pubkey = 2;</code>
+         */
+        public com.google.protobuf.ByteString getPubkey() {
+            return pubkey_;
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_descriptor;
+
+        public static final int SIGNATURE_FIELD_NUMBER = 3;
+        private com.google.protobuf.ByteString signature_;
+
+        /**
+         * <code>bytes signature = 3;</code>
+         */
+        public com.google.protobuf.ByteString getSignature() {
+            return signature_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (ty_ != 0) {
+                output.writeInt32(1, ty_);
+            }
+            if (!pubkey_.isEmpty()) {
+                output.writeBytes(2, pubkey_);
+            }
+            if (!signature_.isEmpty()) {
+                output.writeBytes(3, signature_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (ty_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, ty_);
+            }
+            if (!pubkey_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, pubkey_);
+            }
+            if (!signature_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(3, signature_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature other = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) obj;
+
+            boolean result = true;
+            result = result && (getTy() == other.getTy());
+            result = result && getPubkey().equals(other.getPubkey());
+            result = result && getSignature().equals(other.getSignature());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TY_FIELD_NUMBER;
+            hash = (53 * hash) + getTy();
+            hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
+            hash = (53 * hash) + getPubkey().hashCode();
+            hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+            hash = (53 * hash) + getSignature().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code Signature}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:Signature)
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.class,
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                ty_ = 0;
+
+                pubkey_ = com.google.protobuf.ByteString.EMPTY;
+
+                signature_ = com.google.protobuf.ByteString.EMPTY;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Signature_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature build() {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature buildPartial() {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature result = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature(
+                        this);
+                result.ty_ = ty_;
+                result.pubkey_ = pubkey_;
+                result.signature_ = signature_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature other) {
+                if (other == cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance())
+                    return this;
+                if (other.getTy() != 0) {
+                    setTy(other.getTy());
+                }
+                if (other.getPubkey() != com.google.protobuf.ByteString.EMPTY) {
+                    setPubkey(other.getPubkey());
+                }
+                if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
+                    setSignature(other.getSignature());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int ty_;
+
+            /**
+             * <code>int32 ty = 1;</code>
+             */
+            public int getTy() {
+                return ty_;
+            }
+
+            /**
+             * <code>int32 ty = 1;</code>
+             */
+            public Builder setTy(int value) {
+
+                ty_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 ty = 1;</code>
+             */
+            public Builder clearTy() {
+
+                ty_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString pubkey_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes pubkey = 2;</code>
+             */
+            public com.google.protobuf.ByteString getPubkey() {
+                return pubkey_;
+            }
+
+            /**
+             * <code>bytes pubkey = 2;</code>
+             */
+            public Builder setPubkey(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                pubkey_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes pubkey = 2;</code>
+             */
+            public Builder clearPubkey() {
+
+                pubkey_ = getDefaultInstance().getPubkey();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes signature = 3;</code>
+             */
+            public com.google.protobuf.ByteString getSignature() {
+                return signature_;
+            }
+
+            /**
+             * <code>bytes signature = 3;</code>
+             */
+            public Builder setSignature(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                signature_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes signature = 3;</code>
+             */
+            public Builder clearSignature() {
+
+                signature_ = getDefaultInstance().getSignature();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:Signature)
+        }
+
+        // @@protoc_insertion_point(class_scope:Signature)
+        private static final cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Signature> PARSER = new com.google.protobuf.AbstractParser<Signature>() {
+            @java.lang.Override
+            public Signature parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Signature(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<Signature> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Signature> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.class, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder.class);
+    public interface TransactionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:Transaction)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>bytes execer = 1;</code>
+         */
+        com.google.protobuf.ByteString getExecer();
+
+        /**
+         * <code>bytes payload = 2;</code>
+         */
+        com.google.protobuf.ByteString getPayload();
+
+        /**
+         * <code>.Signature signature = 3;</code>
+         */
+        boolean hasSignature();
+
+        /**
+         * <code>.Signature signature = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getSignature();
+
+        /**
+         * <code>.Signature signature = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder getSignatureOrBuilder();
+
+        /**
+         * <code>int64 fee = 4;</code>
+         */
+        long getFee();
+
+        /**
+         * <code>int64 expire = 5;</code>
+         */
+        long getExpire();
+
+        /**
+         * <pre>
+         *随机ID，可以防止payload 相同的时候，交易重复
+         * </pre>
+         *
+         * <code>int64 nonce = 6;</code>
+         */
+        long getNonce();
+
+        /**
+         * <pre>
+         *对方地址，如果没有对方地址，可以为空
+         * </pre>
+         *
+         * <code>string to = 7;</code>
+         */
+        java.lang.String getTo();
+
+        /**
+         * <pre>
+         *对方地址，如果没有对方地址，可以为空
+         * </pre>
+         *
+         * <code>string to = 7;</code>
+         */
+        com.google.protobuf.ByteString getToBytes();
+
+        /**
+         * <code>int32 groupCount = 8;</code>
+         */
+        int getGroupCount();
+
+        /**
+         * <code>bytes header = 9;</code>
+         */
+        com.google.protobuf.ByteString getHeader();
+
+        /**
+         * <code>bytes next = 10;</code>
+         */
+        com.google.protobuf.ByteString getNext();
     }
 
-    public static final int EXECER_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString execer_;
-    /**
-     * <code>bytes execer = 1;</code>
-     */
-    public com.google.protobuf.ByteString getExecer() {
-      return execer_;
-    }
-
-    public static final int PAYLOAD_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString payload_;
-    /**
-     * <code>bytes payload = 2;</code>
-     */
-    public com.google.protobuf.ByteString getPayload() {
-      return payload_;
-    }
-
-    public static final int SIGNATURE_FIELD_NUMBER = 3;
-    private cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature signature_;
-    /**
-     * <code>.Signature signature = 3;</code>
-     */
-    public boolean hasSignature() {
-      return signature_ != null;
-    }
-    /**
-     * <code>.Signature signature = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getSignature() {
-      return signature_ == null ? cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance() : signature_;
-    }
-    /**
-     * <code>.Signature signature = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
-      return getSignature();
-    }
-
-    public static final int FEE_FIELD_NUMBER = 4;
-    private long fee_;
-    /**
-     * <code>int64 fee = 4;</code>
-     */
-    public long getFee() {
-      return fee_;
-    }
-
-    public static final int EXPIRE_FIELD_NUMBER = 5;
-    private long expire_;
-    /**
-     * <code>int64 expire = 5;</code>
-     */
-    public long getExpire() {
-      return expire_;
-    }
-
-    public static final int NONCE_FIELD_NUMBER = 6;
-    private long nonce_;
-    /**
-     * <pre>
-     *随机ID，可以防止payload 相同的时候，交易重复
-     * </pre>
-     *
-     * <code>int64 nonce = 6;</code>
-     */
-    public long getNonce() {
-      return nonce_;
-    }
-
-    public static final int TO_FIELD_NUMBER = 7;
-    private volatile java.lang.Object to_;
-    /**
-     * <pre>
-     *对方地址，如果没有对方地址，可以为空
-     * </pre>
-     *
-     * <code>string to = 7;</code>
-     */
-    public java.lang.String getTo() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        to_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *对方地址，如果没有对方地址，可以为空
-     * </pre>
-     *
-     * <code>string to = 7;</code>
-     */
-    public com.google.protobuf.ByteString
-        getToBytes() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        to_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int GROUPCOUNT_FIELD_NUMBER = 8;
-    private int groupCount_;
-    /**
-     * <code>int32 groupCount = 8;</code>
-     */
-    public int getGroupCount() {
-      return groupCount_;
-    }
-
-    public static final int HEADER_FIELD_NUMBER = 9;
-    private com.google.protobuf.ByteString header_;
-    /**
-     * <code>bytes header = 9;</code>
-     */
-    public com.google.protobuf.ByteString getHeader() {
-      return header_;
-    }
-
-    public static final int NEXT_FIELD_NUMBER = 10;
-    private com.google.protobuf.ByteString next_;
-    /**
-     * <code>bytes next = 10;</code>
-     */
-    public com.google.protobuf.ByteString getNext() {
-      return next_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!execer_.isEmpty()) {
-        output.writeBytes(1, execer_);
-      }
-      if (!payload_.isEmpty()) {
-        output.writeBytes(2, payload_);
-      }
-      if (signature_ != null) {
-        output.writeMessage(3, getSignature());
-      }
-      if (fee_ != 0L) {
-        output.writeInt64(4, fee_);
-      }
-      if (expire_ != 0L) {
-        output.writeInt64(5, expire_);
-      }
-      if (nonce_ != 0L) {
-        output.writeInt64(6, nonce_);
-      }
-      if (!getToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, to_);
-      }
-      if (groupCount_ != 0) {
-        output.writeInt32(8, groupCount_);
-      }
-      if (!header_.isEmpty()) {
-        output.writeBytes(9, header_);
-      }
-      if (!next_.isEmpty()) {
-        output.writeBytes(10, next_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!execer_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, execer_);
-      }
-      if (!payload_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, payload_);
-      }
-      if (signature_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getSignature());
-      }
-      if (fee_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, fee_);
-      }
-      if (expire_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, expire_);
-      }
-      if (nonce_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, nonce_);
-      }
-      if (!getToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, to_);
-      }
-      if (groupCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, groupCount_);
-      }
-      if (!header_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(9, header_);
-      }
-      if (!next_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(10, next_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction other = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) obj;
-
-      boolean result = true;
-      result = result && getExecer()
-          .equals(other.getExecer());
-      result = result && getPayload()
-          .equals(other.getPayload());
-      result = result && (hasSignature() == other.hasSignature());
-      if (hasSignature()) {
-        result = result && getSignature()
-            .equals(other.getSignature());
-      }
-      result = result && (getFee()
-          == other.getFee());
-      result = result && (getExpire()
-          == other.getExpire());
-      result = result && (getNonce()
-          == other.getNonce());
-      result = result && getTo()
-          .equals(other.getTo());
-      result = result && (getGroupCount()
-          == other.getGroupCount());
-      result = result && getHeader()
-          .equals(other.getHeader());
-      result = result && getNext()
-          .equals(other.getNext());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EXECER_FIELD_NUMBER;
-      hash = (53 * hash) + getExecer().hashCode();
-      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
-      hash = (53 * hash) + getPayload().hashCode();
-      if (hasSignature()) {
-        hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
-        hash = (53 * hash) + getSignature().hashCode();
-      }
-      hash = (37 * hash) + FEE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFee());
-      hash = (37 * hash) + EXPIRE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getExpire());
-      hash = (37 * hash) + NONCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getNonce());
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (37 * hash) + GROUPCOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getGroupCount();
-      hash = (37 * hash) + HEADER_FIELD_NUMBER;
-      hash = (53 * hash) + getHeader().hashCode();
-      hash = (37 * hash) + NEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getNext().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code Transaction}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Transaction)
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_descriptor;
-      }
+    public static final class Transaction extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:Transaction)
+            TransactionOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.class, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        execer_ = com.google.protobuf.ByteString.EMPTY;
-
-        payload_ = com.google.protobuf.ByteString.EMPTY;
-
-        if (signatureBuilder_ == null) {
-          signature_ = null;
-        } else {
-          signature_ = null;
-          signatureBuilder_ = null;
-        }
-        fee_ = 0L;
-
-        expire_ = 0L;
-
-        nonce_ = 0L;
-
-        to_ = "";
-
-        groupCount_ = 0;
-
-        header_ = com.google.protobuf.ByteString.EMPTY;
-
-        next_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction build() {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction buildPartial() {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction result = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction(this);
-        result.execer_ = execer_;
-        result.payload_ = payload_;
-        if (signatureBuilder_ == null) {
-          result.signature_ = signature_;
-        } else {
-          result.signature_ = signatureBuilder_.build();
-        }
-        result.fee_ = fee_;
-        result.expire_ = expire_;
-        result.nonce_ = nonce_;
-        result.to_ = to_;
-        result.groupCount_ = groupCount_;
-        result.header_ = header_;
-        result.next_ = next_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction other) {
-        if (other == cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance()) return this;
-        if (other.getExecer() != com.google.protobuf.ByteString.EMPTY) {
-          setExecer(other.getExecer());
-        }
-        if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
-          setPayload(other.getPayload());
-        }
-        if (other.hasSignature()) {
-          mergeSignature(other.getSignature());
-        }
-        if (other.getFee() != 0L) {
-          setFee(other.getFee());
-        }
-        if (other.getExpire() != 0L) {
-          setExpire(other.getExpire());
-        }
-        if (other.getNonce() != 0L) {
-          setNonce(other.getNonce());
-        }
-        if (!other.getTo().isEmpty()) {
-          to_ = other.to_;
-          onChanged();
-        }
-        if (other.getGroupCount() != 0) {
-          setGroupCount(other.getGroupCount());
-        }
-        if (other.getHeader() != com.google.protobuf.ByteString.EMPTY) {
-          setHeader(other.getHeader());
-        }
-        if (other.getNext() != com.google.protobuf.ByteString.EMPTY) {
-          setNext(other.getNext());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.ByteString execer_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes execer = 1;</code>
-       */
-      public com.google.protobuf.ByteString getExecer() {
-        return execer_;
-      }
-      /**
-       * <code>bytes execer = 1;</code>
-       */
-      public Builder setExecer(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        execer_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes execer = 1;</code>
-       */
-      public Builder clearExecer() {
-        
-        execer_ = getDefaultInstance().getExecer();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes payload = 2;</code>
-       */
-      public com.google.protobuf.ByteString getPayload() {
-        return payload_;
-      }
-      /**
-       * <code>bytes payload = 2;</code>
-       */
-      public Builder setPayload(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        payload_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes payload = 2;</code>
-       */
-      public Builder clearPayload() {
-        
-        payload_ = getDefaultInstance().getPayload();
-        onChanged();
-        return this;
-      }
-
-      private cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature signature_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder> signatureBuilder_;
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public boolean hasSignature() {
-        return signatureBuilder_ != null || signature_ != null;
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getSignature() {
-        if (signatureBuilder_ == null) {
-          return signature_ == null ? cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance() : signature_;
-        } else {
-          return signatureBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public Builder setSignature(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature value) {
-        if (signatureBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          signature_ = value;
-          onChanged();
-        } else {
-          signatureBuilder_.setMessage(value);
+        // Use Transaction.newBuilder() to construct.
+        private Transaction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
 
-        return this;
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public Builder setSignature(
-          cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder builderForValue) {
-        if (signatureBuilder_ == null) {
-          signature_ = builderForValue.build();
-          onChanged();
-        } else {
-          signatureBuilder_.setMessage(builderForValue.build());
+        private Transaction() {
+            execer_ = com.google.protobuf.ByteString.EMPTY;
+            payload_ = com.google.protobuf.ByteString.EMPTY;
+            fee_ = 0L;
+            expire_ = 0L;
+            nonce_ = 0L;
+            to_ = "";
+            groupCount_ = 0;
+            header_ = com.google.protobuf.ByteString.EMPTY;
+            next_ = com.google.protobuf.ByteString.EMPTY;
         }
 
-        return this;
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public Builder mergeSignature(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature value) {
-        if (signatureBuilder_ == null) {
-          if (signature_ != null) {
-            signature_ =
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.newBuilder(signature_).mergeFrom(value).buildPartial();
-          } else {
-            signature_ = value;
-          }
-          onChanged();
-        } else {
-          signatureBuilder_.mergeFrom(value);
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
 
-        return this;
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public Builder clearSignature() {
-        if (signatureBuilder_ == null) {
-          signature_ = null;
-          onChanged();
-        } else {
-          signature_ = null;
-          signatureBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder getSignatureBuilder() {
-        
-        onChanged();
-        return getSignatureFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
-        if (signatureBuilder_ != null) {
-          return signatureBuilder_.getMessageOrBuilder();
-        } else {
-          return signature_ == null ?
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance() : signature_;
-        }
-      }
-      /**
-       * <code>.Signature signature = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder> 
-          getSignatureFieldBuilder() {
-        if (signatureBuilder_ == null) {
-          signatureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder>(
-                  getSignature(),
-                  getParentForChildren(),
-                  isClean());
-          signature_ = null;
-        }
-        return signatureBuilder_;
-      }
-
-      private long fee_ ;
-      /**
-       * <code>int64 fee = 4;</code>
-       */
-      public long getFee() {
-        return fee_;
-      }
-      /**
-       * <code>int64 fee = 4;</code>
-       */
-      public Builder setFee(long value) {
-        
-        fee_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 fee = 4;</code>
-       */
-      public Builder clearFee() {
-        
-        fee_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long expire_ ;
-      /**
-       * <code>int64 expire = 5;</code>
-       */
-      public long getExpire() {
-        return expire_;
-      }
-      /**
-       * <code>int64 expire = 5;</code>
-       */
-      public Builder setExpire(long value) {
-        
-        expire_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 expire = 5;</code>
-       */
-      public Builder clearExpire() {
-        
-        expire_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long nonce_ ;
-      /**
-       * <pre>
-       *随机ID，可以防止payload 相同的时候，交易重复
-       * </pre>
-       *
-       * <code>int64 nonce = 6;</code>
-       */
-      public long getNonce() {
-        return nonce_;
-      }
-      /**
-       * <pre>
-       *随机ID，可以防止payload 相同的时候，交易重复
-       * </pre>
-       *
-       * <code>int64 nonce = 6;</code>
-       */
-      public Builder setNonce(long value) {
-        
-        nonce_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *随机ID，可以防止payload 相同的时候，交易重复
-       * </pre>
-       *
-       * <code>int64 nonce = 6;</code>
-       */
-      public Builder clearNonce() {
-        
-        nonce_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object to_ = "";
-      /**
-       * <pre>
-       *对方地址，如果没有对方地址，可以为空
-       * </pre>
-       *
-       * <code>string to = 7;</code>
-       */
-      public java.lang.String getTo() {
-        java.lang.Object ref = to_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          to_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *对方地址，如果没有对方地址，可以为空
-       * </pre>
-       *
-       * <code>string to = 7;</code>
-       */
-      public com.google.protobuf.ByteString
-          getToBytes() {
-        java.lang.Object ref = to_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          to_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *对方地址，如果没有对方地址，可以为空
-       * </pre>
-       *
-       * <code>string to = 7;</code>
-       */
-      public Builder setTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *对方地址，如果没有对方地址，可以为空
-       * </pre>
-       *
-       * <code>string to = 7;</code>
-       */
-      public Builder clearTo() {
-        
-        to_ = getDefaultInstance().getTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *对方地址，如果没有对方地址，可以为空
-       * </pre>
-       *
-       * <code>string to = 7;</code>
-       */
-      public Builder setToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        to_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int groupCount_ ;
-      /**
-       * <code>int32 groupCount = 8;</code>
-       */
-      public int getGroupCount() {
-        return groupCount_;
-      }
-      /**
-       * <code>int32 groupCount = 8;</code>
-       */
-      public Builder setGroupCount(int value) {
-        
-        groupCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 groupCount = 8;</code>
-       */
-      public Builder clearGroupCount() {
-        
-        groupCount_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString header_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes header = 9;</code>
-       */
-      public com.google.protobuf.ByteString getHeader() {
-        return header_;
-      }
-      /**
-       * <code>bytes header = 9;</code>
-       */
-      public Builder setHeader(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        header_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes header = 9;</code>
-       */
-      public Builder clearHeader() {
-        
-        header_ = getDefaultInstance().getHeader();
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString next_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes next = 10;</code>
-       */
-      public com.google.protobuf.ByteString getNext() {
-        return next_;
-      }
-      /**
-       * <code>bytes next = 10;</code>
-       */
-      public Builder setNext(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        next_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes next = 10;</code>
-       */
-      public Builder clearNext() {
-        
-        next_ = getDefaultInstance().getNext();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Transaction)
-    }
-
-    // @@protoc_insertion_point(class_scope:Transaction)
-    private static final cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Transaction>
-        PARSER = new com.google.protobuf.AbstractParser<Transaction>() {
-      @java.lang.Override
-      public Transaction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Transaction(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Transaction> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Transaction> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TransactionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Transactions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> 
-        getTxsList();
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getTxs(int index);
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    int getTxsCount();
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    java.util.List<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> 
-        getTxsOrBuilderList();
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder getTxsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code Transactions}
-   */
-  public  static final class Transactions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Transactions)
-      TransactionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Transactions.newBuilder() to construct.
-    private Transactions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Transactions() {
-      txs_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Transactions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                txs_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              txs_.add(
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.parser(), extensionRegistry));
-              break;
+        private Transaction(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+
+                        execer_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
+
+                        payload_ = input.readBytes();
+                        break;
+                    }
+                    case 26: {
+                        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder subBuilder = null;
+                        if (signature_ != null) {
+                            subBuilder = signature_.toBuilder();
+                        }
+                        signature_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(signature_);
+                            signature_ = subBuilder.buildPartial();
+                        }
+
+                        break;
+                    }
+                    case 32: {
+
+                        fee_ = input.readInt64();
+                        break;
+                    }
+                    case 40: {
+
+                        expire_ = input.readInt64();
+                        break;
+                    }
+                    case 48: {
+
+                        nonce_ = input.readInt64();
+                        break;
+                    }
+                    case 58: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        to_ = s;
+                        break;
+                    }
+                    case 64: {
+
+                        groupCount_ = input.readInt32();
+                        break;
+                    }
+                    case 74: {
+
+                        header_ = input.readBytes();
+                        break;
+                    }
+                    case 82: {
+
+                        next_ = input.readBytes();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          txs_ = java.util.Collections.unmodifiableList(txs_);
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_descriptor;
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_descriptor;
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.class,
+                            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder.class);
+        }
+
+        public static final int EXECER_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString execer_;
+
+        /**
+         * <code>bytes execer = 1;</code>
+         */
+        public com.google.protobuf.ByteString getExecer() {
+            return execer_;
+        }
+
+        public static final int PAYLOAD_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString payload_;
+
+        /**
+         * <code>bytes payload = 2;</code>
+         */
+        public com.google.protobuf.ByteString getPayload() {
+            return payload_;
+        }
+
+        public static final int SIGNATURE_FIELD_NUMBER = 3;
+        private cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature signature_;
+
+        /**
+         * <code>.Signature signature = 3;</code>
+         */
+        public boolean hasSignature() {
+            return signature_ != null;
+        }
+
+        /**
+         * <code>.Signature signature = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getSignature() {
+            return signature_ == null
+                    ? cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance()
+                    : signature_;
+        }
+
+        /**
+         * <code>.Signature signature = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
+            return getSignature();
+        }
+
+        public static final int FEE_FIELD_NUMBER = 4;
+        private long fee_;
+
+        /**
+         * <code>int64 fee = 4;</code>
+         */
+        public long getFee() {
+            return fee_;
+        }
+
+        public static final int EXPIRE_FIELD_NUMBER = 5;
+        private long expire_;
+
+        /**
+         * <code>int64 expire = 5;</code>
+         */
+        public long getExpire() {
+            return expire_;
+        }
+
+        public static final int NONCE_FIELD_NUMBER = 6;
+        private long nonce_;
+
+        /**
+         * <pre>
+         *随机ID，可以防止payload 相同的时候，交易重复
+         * </pre>
+         *
+         * <code>int64 nonce = 6;</code>
+         */
+        public long getNonce() {
+            return nonce_;
+        }
+
+        public static final int TO_FIELD_NUMBER = 7;
+        private volatile java.lang.Object to_;
+
+        /**
+         * <pre>
+         *对方地址，如果没有对方地址，可以为空
+         * </pre>
+         *
+         * <code>string to = 7;</code>
+         */
+        public java.lang.String getTo() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                to_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         *对方地址，如果没有对方地址，可以为空
+         * </pre>
+         *
+         * <code>string to = 7;</code>
+         */
+        public com.google.protobuf.ByteString getToBytes() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                to_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int GROUPCOUNT_FIELD_NUMBER = 8;
+        private int groupCount_;
+
+        /**
+         * <code>int32 groupCount = 8;</code>
+         */
+        public int getGroupCount() {
+            return groupCount_;
+        }
+
+        public static final int HEADER_FIELD_NUMBER = 9;
+        private com.google.protobuf.ByteString header_;
+
+        /**
+         * <code>bytes header = 9;</code>
+         */
+        public com.google.protobuf.ByteString getHeader() {
+            return header_;
+        }
+
+        public static final int NEXT_FIELD_NUMBER = 10;
+        private com.google.protobuf.ByteString next_;
+
+        /**
+         * <code>bytes next = 10;</code>
+         */
+        public com.google.protobuf.ByteString getNext() {
+            return next_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!execer_.isEmpty()) {
+                output.writeBytes(1, execer_);
+            }
+            if (!payload_.isEmpty()) {
+                output.writeBytes(2, payload_);
+            }
+            if (signature_ != null) {
+                output.writeMessage(3, getSignature());
+            }
+            if (fee_ != 0L) {
+                output.writeInt64(4, fee_);
+            }
+            if (expire_ != 0L) {
+                output.writeInt64(5, expire_);
+            }
+            if (nonce_ != 0L) {
+                output.writeInt64(6, nonce_);
+            }
+            if (!getToBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 7, to_);
+            }
+            if (groupCount_ != 0) {
+                output.writeInt32(8, groupCount_);
+            }
+            if (!header_.isEmpty()) {
+                output.writeBytes(9, header_);
+            }
+            if (!next_.isEmpty()) {
+                output.writeBytes(10, next_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!execer_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, execer_);
+            }
+            if (!payload_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, payload_);
+            }
+            if (signature_ != null) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getSignature());
+            }
+            if (fee_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, fee_);
+            }
+            if (expire_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(5, expire_);
+            }
+            if (nonce_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(6, nonce_);
+            }
+            if (!getToBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, to_);
+            }
+            if (groupCount_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(8, groupCount_);
+            }
+            if (!header_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(9, header_);
+            }
+            if (!next_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(10, next_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction other = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) obj;
+
+            boolean result = true;
+            result = result && getExecer().equals(other.getExecer());
+            result = result && getPayload().equals(other.getPayload());
+            result = result && (hasSignature() == other.hasSignature());
+            if (hasSignature()) {
+                result = result && getSignature().equals(other.getSignature());
+            }
+            result = result && (getFee() == other.getFee());
+            result = result && (getExpire() == other.getExpire());
+            result = result && (getNonce() == other.getNonce());
+            result = result && getTo().equals(other.getTo());
+            result = result && (getGroupCount() == other.getGroupCount());
+            result = result && getHeader().equals(other.getHeader());
+            result = result && getNext().equals(other.getNext());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + EXECER_FIELD_NUMBER;
+            hash = (53 * hash) + getExecer().hashCode();
+            hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+            hash = (53 * hash) + getPayload().hashCode();
+            if (hasSignature()) {
+                hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+                hash = (53 * hash) + getSignature().hashCode();
+            }
+            hash = (37 * hash) + FEE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getFee());
+            hash = (37 * hash) + EXPIRE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getExpire());
+            hash = (37 * hash) + NONCE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getNonce());
+            hash = (37 * hash) + TO_FIELD_NUMBER;
+            hash = (53 * hash) + getTo().hashCode();
+            hash = (37 * hash) + GROUPCOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + getGroupCount();
+            hash = (37 * hash) + HEADER_FIELD_NUMBER;
+            hash = (53 * hash) + getHeader().hashCode();
+            hash = (37 * hash) + NEXT_FIELD_NUMBER;
+            hash = (53 * hash) + getNext().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code Transaction}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:Transaction)
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.class,
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                execer_ = com.google.protobuf.ByteString.EMPTY;
+
+                payload_ = com.google.protobuf.ByteString.EMPTY;
+
+                if (signatureBuilder_ == null) {
+                    signature_ = null;
+                } else {
+                    signature_ = null;
+                    signatureBuilder_ = null;
+                }
+                fee_ = 0L;
+
+                expire_ = 0L;
+
+                nonce_ = 0L;
+
+                to_ = "";
+
+                groupCount_ = 0;
+
+                header_ = com.google.protobuf.ByteString.EMPTY;
+
+                next_ = com.google.protobuf.ByteString.EMPTY;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transaction_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction build() {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction buildPartial() {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction result = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction(
+                        this);
+                result.execer_ = execer_;
+                result.payload_ = payload_;
+                if (signatureBuilder_ == null) {
+                    result.signature_ = signature_;
+                } else {
+                    result.signature_ = signatureBuilder_.build();
+                }
+                result.fee_ = fee_;
+                result.expire_ = expire_;
+                result.nonce_ = nonce_;
+                result.to_ = to_;
+                result.groupCount_ = groupCount_;
+                result.header_ = header_;
+                result.next_ = next_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction other) {
+                if (other == cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance())
+                    return this;
+                if (other.getExecer() != com.google.protobuf.ByteString.EMPTY) {
+                    setExecer(other.getExecer());
+                }
+                if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
+                    setPayload(other.getPayload());
+                }
+                if (other.hasSignature()) {
+                    mergeSignature(other.getSignature());
+                }
+                if (other.getFee() != 0L) {
+                    setFee(other.getFee());
+                }
+                if (other.getExpire() != 0L) {
+                    setExpire(other.getExpire());
+                }
+                if (other.getNonce() != 0L) {
+                    setNonce(other.getNonce());
+                }
+                if (!other.getTo().isEmpty()) {
+                    to_ = other.to_;
+                    onChanged();
+                }
+                if (other.getGroupCount() != 0) {
+                    setGroupCount(other.getGroupCount());
+                }
+                if (other.getHeader() != com.google.protobuf.ByteString.EMPTY) {
+                    setHeader(other.getHeader());
+                }
+                if (other.getNext() != com.google.protobuf.ByteString.EMPTY) {
+                    setNext(other.getNext());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private com.google.protobuf.ByteString execer_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes execer = 1;</code>
+             */
+            public com.google.protobuf.ByteString getExecer() {
+                return execer_;
+            }
+
+            /**
+             * <code>bytes execer = 1;</code>
+             */
+            public Builder setExecer(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                execer_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes execer = 1;</code>
+             */
+            public Builder clearExecer() {
+
+                execer_ = getDefaultInstance().getExecer();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes payload = 2;</code>
+             */
+            public com.google.protobuf.ByteString getPayload() {
+                return payload_;
+            }
+
+            /**
+             * <code>bytes payload = 2;</code>
+             */
+            public Builder setPayload(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                payload_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes payload = 2;</code>
+             */
+            public Builder clearPayload() {
+
+                payload_ = getDefaultInstance().getPayload();
+                onChanged();
+                return this;
+            }
+
+            private cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature signature_ = null;
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder> signatureBuilder_;
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public boolean hasSignature() {
+                return signatureBuilder_ != null || signature_ != null;
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature getSignature() {
+                if (signatureBuilder_ == null) {
+                    return signature_ == null
+                            ? cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance()
+                            : signature_;
+                } else {
+                    return signatureBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public Builder setSignature(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature value) {
+                if (signatureBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    signature_ = value;
+                    onChanged();
+                } else {
+                    signatureBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public Builder setSignature(
+                    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder builderForValue) {
+                if (signatureBuilder_ == null) {
+                    signature_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    signatureBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public Builder mergeSignature(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature value) {
+                if (signatureBuilder_ == null) {
+                    if (signature_ != null) {
+                        signature_ = cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature
+                                .newBuilder(signature_).mergeFrom(value).buildPartial();
+                    } else {
+                        signature_ = value;
+                    }
+                    onChanged();
+                } else {
+                    signatureBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public Builder clearSignature() {
+                if (signatureBuilder_ == null) {
+                    signature_ = null;
+                    onChanged();
+                } else {
+                    signature_ = null;
+                    signatureBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder getSignatureBuilder() {
+
+                onChanged();
+                return getSignatureFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
+                if (signatureBuilder_ != null) {
+                    return signatureBuilder_.getMessageOrBuilder();
+                } else {
+                    return signature_ == null
+                            ? cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.getDefaultInstance()
+                            : signature_;
+                }
+            }
+
+            /**
+             * <code>.Signature signature = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder> getSignatureFieldBuilder() {
+                if (signatureBuilder_ == null) {
+                    signatureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Signature.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.SignatureOrBuilder>(
+                            getSignature(), getParentForChildren(), isClean());
+                    signature_ = null;
+                }
+                return signatureBuilder_;
+            }
+
+            private long fee_;
+
+            /**
+             * <code>int64 fee = 4;</code>
+             */
+            public long getFee() {
+                return fee_;
+            }
+
+            /**
+             * <code>int64 fee = 4;</code>
+             */
+            public Builder setFee(long value) {
+
+                fee_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 fee = 4;</code>
+             */
+            public Builder clearFee() {
+
+                fee_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private long expire_;
+
+            /**
+             * <code>int64 expire = 5;</code>
+             */
+            public long getExpire() {
+                return expire_;
+            }
+
+            /**
+             * <code>int64 expire = 5;</code>
+             */
+            public Builder setExpire(long value) {
+
+                expire_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 expire = 5;</code>
+             */
+            public Builder clearExpire() {
+
+                expire_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private long nonce_;
+
+            /**
+             * <pre>
+             *随机ID，可以防止payload 相同的时候，交易重复
+             * </pre>
+             *
+             * <code>int64 nonce = 6;</code>
+             */
+            public long getNonce() {
+                return nonce_;
+            }
+
+            /**
+             * <pre>
+             *随机ID，可以防止payload 相同的时候，交易重复
+             * </pre>
+             *
+             * <code>int64 nonce = 6;</code>
+             */
+            public Builder setNonce(long value) {
+
+                nonce_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *随机ID，可以防止payload 相同的时候，交易重复
+             * </pre>
+             *
+             * <code>int64 nonce = 6;</code>
+             */
+            public Builder clearNonce() {
+
+                nonce_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object to_ = "";
+
+            /**
+             * <pre>
+             *对方地址，如果没有对方地址，可以为空
+             * </pre>
+             *
+             * <code>string to = 7;</code>
+             */
+            public java.lang.String getTo() {
+                java.lang.Object ref = to_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    to_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *对方地址，如果没有对方地址，可以为空
+             * </pre>
+             *
+             * <code>string to = 7;</code>
+             */
+            public com.google.protobuf.ByteString getToBytes() {
+                java.lang.Object ref = to_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    to_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             *对方地址，如果没有对方地址，可以为空
+             * </pre>
+             *
+             * <code>string to = 7;</code>
+             */
+            public Builder setTo(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *对方地址，如果没有对方地址，可以为空
+             * </pre>
+             *
+             * <code>string to = 7;</code>
+             */
+            public Builder clearTo() {
+
+                to_ = getDefaultInstance().getTo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             *对方地址，如果没有对方地址，可以为空
+             * </pre>
+             *
+             * <code>string to = 7;</code>
+             */
+            public Builder setToBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int groupCount_;
+
+            /**
+             * <code>int32 groupCount = 8;</code>
+             */
+            public int getGroupCount() {
+                return groupCount_;
+            }
+
+            /**
+             * <code>int32 groupCount = 8;</code>
+             */
+            public Builder setGroupCount(int value) {
+
+                groupCount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 groupCount = 8;</code>
+             */
+            public Builder clearGroupCount() {
+
+                groupCount_ = 0;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString header_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes header = 9;</code>
+             */
+            public com.google.protobuf.ByteString getHeader() {
+                return header_;
+            }
+
+            /**
+             * <code>bytes header = 9;</code>
+             */
+            public Builder setHeader(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                header_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes header = 9;</code>
+             */
+            public Builder clearHeader() {
+
+                header_ = getDefaultInstance().getHeader();
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString next_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes next = 10;</code>
+             */
+            public com.google.protobuf.ByteString getNext() {
+                return next_;
+            }
+
+            /**
+             * <code>bytes next = 10;</code>
+             */
+            public Builder setNext(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                next_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes next = 10;</code>
+             */
+            public Builder clearNext() {
+
+                next_ = getDefaultInstance().getNext();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:Transaction)
+        }
+
+        // @@protoc_insertion_point(class_scope:Transaction)
+        private static final cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Transaction> PARSER = new com.google.protobuf.AbstractParser<Transaction>() {
+            @java.lang.Override
+            public Transaction parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Transaction(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<Transaction> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Transaction> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.class, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.Builder.class);
+    public interface TransactionsOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:Transactions)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> getTxsList();
+
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getTxs(int index);
+
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        int getTxsCount();
+
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        java.util.List<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> getTxsOrBuilderList();
+
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder getTxsOrBuilder(int index);
     }
 
-    public static final int TXS_FIELD_NUMBER = 1;
-    private java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> txs_;
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    public java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> getTxsList() {
-      return txs_;
-    }
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    public java.util.List<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> 
-        getTxsOrBuilderList() {
-      return txs_;
-    }
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    public int getTxsCount() {
-      return txs_.size();
-    }
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getTxs(int index) {
-      return txs_.get(index);
-    }
-    /**
-     * <code>repeated .Transaction txs = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder getTxsOrBuilder(
-        int index) {
-      return txs_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < txs_.size(); i++) {
-        output.writeMessage(1, txs_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < txs_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, txs_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions other = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) obj;
-
-      boolean result = true;
-      result = result && getTxsList()
-          .equals(other.getTxsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTxsCount() > 0) {
-        hash = (37 * hash) + TXS_FIELD_NUMBER;
-        hash = (53 * hash) + getTxsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code Transactions}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Transactions)
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_descriptor;
-      }
+    public static final class Transactions extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:Transactions)
+            TransactionsOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.class, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTxsFieldBuilder();
+        // Use Transactions.newBuilder() to construct.
+        private Transactions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (txsBuilder_ == null) {
-          txs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          txsBuilder_.clear();
+
+        private Transactions() {
+            txs_ = java.util.Collections.emptyList();
         }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions build() {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions buildPartial() {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions result = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions(this);
-        int from_bitField0_ = bitField0_;
-        if (txsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            txs_ = java.util.Collections.unmodifiableList(txs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.txs_ = txs_;
-        } else {
-          result.txs_ = txsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions other) {
-        if (other == cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.getDefaultInstance()) return this;
-        if (txsBuilder_ == null) {
-          if (!other.txs_.isEmpty()) {
-            if (txs_.isEmpty()) {
-              txs_ = other.txs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureTxsIsMutable();
-              txs_.addAll(other.txs_);
+        private Transactions(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            onChanged();
-          }
-        } else {
-          if (!other.txs_.isEmpty()) {
-            if (txsBuilder_.isEmpty()) {
-              txsBuilder_.dispose();
-              txsBuilder_ = null;
-              txs_ = other.txs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              txsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTxsFieldBuilder() : null;
-            } else {
-              txsBuilder_.addAllMessages(other.txs_);
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                            txs_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction>();
+                            mutable_bitField0_ |= 0x00000001;
+                        }
+                        txs_.add(input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.parser(),
+                                extensionRegistry));
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                    txs_ = java.util.Collections.unmodifiableList(txs_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-          }
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_descriptor;
         }
-        return this;
-      }
-      private int bitField0_;
 
-      private java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> txs_ =
-        java.util.Collections.emptyList();
-      private void ensureTxsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          txs_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction>(txs_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.class,
+                            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.Builder.class);
+        }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> txsBuilder_;
+        public static final int TXS_FIELD_NUMBER = 1;
+        private java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> txs_;
 
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> getTxsList() {
-        if (txsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(txs_);
-        } else {
-          return txsBuilder_.getMessageList();
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        public java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> getTxsList() {
+            return txs_;
         }
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public int getTxsCount() {
-        if (txsBuilder_ == null) {
-          return txs_.size();
-        } else {
-          return txsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getTxs(int index) {
-        if (txsBuilder_ == null) {
-          return txs_.get(index);
-        } else {
-          return txsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder setTxs(
-          int index, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction value) {
-        if (txsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTxsIsMutable();
-          txs_.set(index, value);
-          onChanged();
-        } else {
-          txsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder setTxs(
-          int index, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder builderForValue) {
-        if (txsBuilder_ == null) {
-          ensureTxsIsMutable();
-          txs_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          txsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder addTxs(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction value) {
-        if (txsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTxsIsMutable();
-          txs_.add(value);
-          onChanged();
-        } else {
-          txsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder addTxs(
-          int index, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction value) {
-        if (txsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTxsIsMutable();
-          txs_.add(index, value);
-          onChanged();
-        } else {
-          txsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder addTxs(
-          cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder builderForValue) {
-        if (txsBuilder_ == null) {
-          ensureTxsIsMutable();
-          txs_.add(builderForValue.build());
-          onChanged();
-        } else {
-          txsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder addTxs(
-          int index, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder builderForValue) {
-        if (txsBuilder_ == null) {
-          ensureTxsIsMutable();
-          txs_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          txsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder addAllTxs(
-          java.lang.Iterable<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> values) {
-        if (txsBuilder_ == null) {
-          ensureTxsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, txs_);
-          onChanged();
-        } else {
-          txsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder clearTxs() {
-        if (txsBuilder_ == null) {
-          txs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          txsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public Builder removeTxs(int index) {
-        if (txsBuilder_ == null) {
-          ensureTxsIsMutable();
-          txs_.remove(index);
-          onChanged();
-        } else {
-          txsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder getTxsBuilder(
-          int index) {
-        return getTxsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder getTxsOrBuilder(
-          int index) {
-        if (txsBuilder_ == null) {
-          return txs_.get(index);  } else {
-          return txsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public java.util.List<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> 
-           getTxsOrBuilderList() {
-        if (txsBuilder_ != null) {
-          return txsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(txs_);
-        }
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder addTxsBuilder() {
-        return getTxsFieldBuilder().addBuilder(
-            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder addTxsBuilder(
-          int index) {
-        return getTxsFieldBuilder().addBuilder(
-            index, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Transaction txs = 1;</code>
-       */
-      public java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder> 
-           getTxsBuilderList() {
-        return getTxsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> 
-          getTxsFieldBuilder() {
-        if (txsBuilder_ == null) {
-          txsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder>(
-                  txs_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          txs_ = null;
-        }
-        return txsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        public java.util.List<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> getTxsOrBuilderList() {
+            return txs_;
+        }
 
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        public int getTxsCount() {
+            return txs_.size();
+        }
 
-      // @@protoc_insertion_point(builder_scope:Transactions)
-    }
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getTxs(int index) {
+            return txs_.get(index);
+        }
 
-    // @@protoc_insertion_point(class_scope:Transactions)
-    private static final cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions();
-    }
+        /**
+         * <code>repeated .Transaction txs = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder getTxsOrBuilder(
+                int index) {
+            return txs_.get(index);
+        }
 
-    public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        private byte memoizedIsInitialized = -1;
 
-    private static final com.google.protobuf.Parser<Transactions>
-        PARSER = new com.google.protobuf.AbstractParser<Transactions>() {
-      @java.lang.Override
-      public Transactions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Transactions(input, extensionRegistry);
-      }
-    };
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
 
-    public static com.google.protobuf.Parser<Transactions> parser() {
-      return PARSER;
-    }
+            memoizedIsInitialized = 1;
+            return true;
+        }
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<Transactions> getParserForType() {
-      return PARSER;
-    }
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            for (int i = 0; i < txs_.size(); i++) {
+                output.writeMessage(1, txs_.get(i));
+            }
+            unknownFields.writeTo(output);
+        }
 
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
 
-  }
+            size = 0;
+            for (int i = 0; i < txs_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, txs_.get(i));
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Signature_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Signature_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Transaction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Transaction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Transactions_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Transactions_fieldAccessorTable;
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions other = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) obj;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\024RawTransaction.proto\":\n\tSignature\022\n\n\002t" +
-      "y\030\001 \001(\005\022\016\n\006pubkey\030\002 \001(\014\022\021\n\tsignature\030\003 \001" +
-      "(\014\"\267\001\n\013Transaction\022\016\n\006execer\030\001 \001(\014\022\017\n\007pa" +
-      "yload\030\002 \001(\014\022\035\n\tsignature\030\003 \001(\0132\n.Signatu" +
-      "re\022\013\n\003fee\030\004 \001(\003\022\016\n\006expire\030\005 \001(\003\022\r\n\005nonce" +
-      "\030\006 \001(\003\022\n\n\002to\030\007 \001(\t\022\022\n\ngroupCount\030\010 \001(\005\022\016" +
-      "\n\006header\030\t \001(\014\022\014\n\004next\030\n \001(\014\")\n\014Transact" +
-      "ions\022\031\n\003txs\030\001 \003(\0132\014.TransactionB>\n$cn.ch" +
-      "ain33.javafw.rpc.model.protobufB\026RawTran" +
-      "sactionProtobufb\006proto3"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
+            boolean result = true;
+            result = result && getTxsList().equals(other.getTxsList());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            if (getTxsCount() > 0) {
+                hash = (37 * hash) + TXS_FIELD_NUMBER;
+                hash = (53 * hash) + getTxsList().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code Transactions}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:Transactions)
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionsOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.class,
+                                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                    getTxsFieldBuilder();
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                if (txsBuilder_ == null) {
+                    txs_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                    txsBuilder_.clear();
+                }
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.internal_static_Transactions_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions build() {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions buildPartial() {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions result = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions(
+                        this);
+                int from_bitField0_ = bitField0_;
+                if (txsBuilder_ == null) {
+                    if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                        txs_ = java.util.Collections.unmodifiableList(txs_);
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    }
+                    result.txs_ = txs_;
+                } else {
+                    result.txs_ = txsBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions other) {
+                if (other == cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions.getDefaultInstance())
+                    return this;
+                if (txsBuilder_ == null) {
+                    if (!other.txs_.isEmpty()) {
+                        if (txs_.isEmpty()) {
+                            txs_ = other.txs_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                        } else {
+                            ensureTxsIsMutable();
+                            txs_.addAll(other.txs_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.txs_.isEmpty()) {
+                        if (txsBuilder_.isEmpty()) {
+                            txsBuilder_.dispose();
+                            txsBuilder_ = null;
+                            txs_ = other.txs_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                            txsBuilder_ = com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                                    ? getTxsFieldBuilder() : null;
+                        } else {
+                            txsBuilder_.addAllMessages(other.txs_);
+                        }
+                    }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int bitField0_;
+
+            private java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> txs_ = java.util.Collections
+                    .emptyList();
+
+            private void ensureTxsIsMutable() {
+                if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+                    txs_ = new java.util.ArrayList<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction>(
+                            txs_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilderV3<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> txsBuilder_;
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> getTxsList() {
+                if (txsBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(txs_);
+                } else {
+                    return txsBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public int getTxsCount() {
+                if (txsBuilder_ == null) {
+                    return txs_.size();
+                } else {
+                    return txsBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction getTxs(int index) {
+                if (txsBuilder_ == null) {
+                    return txs_.get(index);
+                } else {
+                    return txsBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder setTxs(int index,
+                    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction value) {
+                if (txsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureTxsIsMutable();
+                    txs_.set(index, value);
+                    onChanged();
+                } else {
+                    txsBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder setTxs(int index,
+                    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder builderForValue) {
+                if (txsBuilder_ == null) {
+                    ensureTxsIsMutable();
+                    txs_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    txsBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder addTxs(cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction value) {
+                if (txsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureTxsIsMutable();
+                    txs_.add(value);
+                    onChanged();
+                } else {
+                    txsBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder addTxs(int index,
+                    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction value) {
+                if (txsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureTxsIsMutable();
+                    txs_.add(index, value);
+                    onChanged();
+                } else {
+                    txsBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder addTxs(
+                    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder builderForValue) {
+                if (txsBuilder_ == null) {
+                    ensureTxsIsMutable();
+                    txs_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    txsBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder addTxs(int index,
+                    cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder builderForValue) {
+                if (txsBuilder_ == null) {
+                    ensureTxsIsMutable();
+                    txs_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    txsBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder addAllTxs(
+                    java.lang.Iterable<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction> values) {
+                if (txsBuilder_ == null) {
+                    ensureTxsIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(values, txs_);
+                    onChanged();
+                } else {
+                    txsBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder clearTxs() {
+                if (txsBuilder_ == null) {
+                    txs_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                    onChanged();
+                } else {
+                    txsBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public Builder removeTxs(int index) {
+                if (txsBuilder_ == null) {
+                    ensureTxsIsMutable();
+                    txs_.remove(index);
+                    onChanged();
+                } else {
+                    txsBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder getTxsBuilder(
+                    int index) {
+                return getTxsFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder getTxsOrBuilder(
+                    int index) {
+                if (txsBuilder_ == null) {
+                    return txs_.get(index);
+                } else {
+                    return txsBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public java.util.List<? extends cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> getTxsOrBuilderList() {
+                if (txsBuilder_ != null) {
+                    return txsBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(txs_);
+                }
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder addTxsBuilder() {
+                return getTxsFieldBuilder().addBuilder(
+                        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder addTxsBuilder(
+                    int index) {
+                return getTxsFieldBuilder().addBuilder(index,
+                        cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .Transaction txs = 1;</code>
+             */
+            public java.util.List<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder> getTxsBuilderList() {
+                return getTxsFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilderV3<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder> getTxsFieldBuilder() {
+                if (txsBuilder_ == null) {
+                    txsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transaction.Builder, cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.TransactionOrBuilder>(
+                            txs_, ((bitField0_ & 0x00000001) == 0x00000001), getParentForChildren(), isClean());
+                    txs_ = null;
+                }
+                return txsBuilder_;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:Transactions)
+        }
+
+        // @@protoc_insertion_point(class_scope:Transactions)
+        private static final cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Transactions> PARSER = new com.google.protobuf.AbstractParser<Transactions>() {
+            @java.lang.Override
+            public Transactions parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Transactions(input, extensionRegistry);
+            }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-    internal_static_Signature_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Signature_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Signature_descriptor,
-        new java.lang.String[] { "Ty", "Pubkey", "Signature", });
-    internal_static_Transaction_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_Transaction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Transaction_descriptor,
-        new java.lang.String[] { "Execer", "Payload", "Signature", "Fee", "Expire", "Nonce", "To", "GroupCount", "Header", "Next", });
-    internal_static_Transactions_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_Transactions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Transactions_descriptor,
-        new java.lang.String[] { "Txs", });
-  }
 
-  // @@protoc_insertion_point(outer_class_scope)
+        public static com.google.protobuf.Parser<Transactions> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Transactions> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.RawTransactionProtobuf.Transactions getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+    }
+
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_Signature_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_Signature_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_Transaction_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_Transaction_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_Transactions_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_Transactions_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+    static {
+        java.lang.String[] descriptorData = { "\n\024RawTransaction.proto\":\n\tSignature\022\n\n\002t"
+                + "y\030\001 \001(\005\022\016\n\006pubkey\030\002 \001(\014\022\021\n\tsignature\030\003 \001"
+                + "(\014\"\267\001\n\013Transaction\022\016\n\006execer\030\001 \001(\014\022\017\n\007pa"
+                + "yload\030\002 \001(\014\022\035\n\tsignature\030\003 \001(\0132\n.Signatu"
+                + "re\022\013\n\003fee\030\004 \001(\003\022\016\n\006expire\030\005 \001(\003\022\r\n\005nonce"
+                + "\030\006 \001(\003\022\n\n\002to\030\007 \001(\t\022\022\n\ngroupCount\030\010 \001(\005\022\016"
+                + "\n\006header\030\t \001(\014\022\014\n\004next\030\n \001(\014\")\n\014Transact"
+                + "ions\022\031\n\003txs\030\001 \003(\0132\014.TransactionB>\n$cn.ch"
+                + "ain33.javafw.rpc.model.protobufB\026RawTran" + "sactionProtobufb\006proto3" };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+            public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                    com.google.protobuf.Descriptors.FileDescriptor root) {
+                descriptor = root;
+                return null;
+            }
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {}, assigner);
+        internal_static_Signature_descriptor = getDescriptor().getMessageTypes().get(0);
+        internal_static_Signature_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_Signature_descriptor, new java.lang.String[] { "Ty", "Pubkey", "Signature", });
+        internal_static_Transaction_descriptor = getDescriptor().getMessageTypes().get(1);
+        internal_static_Transaction_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_Transaction_descriptor, new java.lang.String[] { "Execer", "Payload", "Signature",
+                        "Fee", "Expire", "Nonce", "To", "GroupCount", "Header", "Next", });
+        internal_static_Transactions_descriptor = getDescriptor().getMessageTypes().get(2);
+        internal_static_Transactions_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_Transactions_descriptor, new java.lang.String[] { "Txs", });
+    }
+
+    // @@protoc_insertion_point(outer_class_scope)
 }

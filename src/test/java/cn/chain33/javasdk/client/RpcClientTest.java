@@ -19,23 +19,20 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 
 public class RpcClientTest {
 
-	// 区块链节点IP
-	String ip = "区块链节点IP";
-	// 平行链服务端口
-	int port = 8801;
+    // 区块链节点IP
+    String ip = "区块链节点IP";
+    // 平行链服务端口
+    int port = 8801;
     RpcClient client = new RpcClient(ip, port);
-	
 
     String withHoldPrivateKey = "代扣地址私钥，需要有主链代币";
     String withHoldAddress = "代扣地址";
 
     /**
      * 
-     * @throws IOException 
-     * @description 查询节点是否同步
-     * 联盟链：适用
-     * 主链：适用
-     * 平行链：不适用
+     * @throws IOException
+     * 
+     * @description 查询节点是否同步 联盟链：适用 主链：适用 平行链：不适用
      */
     @Test
     public void checkStatus() throws IOException {
@@ -44,7 +41,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询钱包状态
      *
      */
@@ -57,7 +55,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 锁定
      *
      */
@@ -79,7 +78,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 生成seed
      *
      */
@@ -91,7 +91,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 保存seed
      *
      */
@@ -105,7 +106,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 使用密码查询seed
      *
      */
@@ -118,7 +120,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 调用节点创建账户地址
      *
      */
@@ -130,7 +133,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询节点钱包 地址列表
      *
      */
@@ -145,7 +149,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询主代币余额
      *
      */
@@ -161,10 +166,10 @@ public class RpcClientTest {
         }
     }
 
-
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 设置地址label
      * 
      */
@@ -178,7 +183,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 导入私钥
      *
      */
@@ -189,11 +195,11 @@ public class RpcClientTest {
         System.out.println(accountResult);
 
     }
-    
-    
+
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 导出私钥
      *
      */
@@ -206,14 +212,15 @@ public class RpcClientTest {
     }
 
     /**
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询交易hash详情
      *
      */
     @Test
     public void queryTxDetail() throws IOException {
-    	// 交易hash
-    	// String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
+        // 交易hash
+        // String hash = "0xe5ae58fab899781c72beaa92beb2661b4e70f8c8cbb8bbad61b0a191bc5ef6b7";
         String hash = "交易hash";
         QueryTransactionResult queryTransaction1;
         queryTransaction1 = client.queryTransaction(hash);
@@ -224,21 +231,22 @@ public class RpcClientTest {
         System.out.println(content);
 
     }
-    
+
     /**
      * 查询平均出块时间
-     * @throws IOException 
+     * 
+     * @throws IOException
      */
     @Test
     public void getBlockAverageTime() throws IOException {
-    	int blockTime =  client.getBlockAverageTime();
-    	System.out.println("平均出块时间为： " + blockTime + " 秒");
+        int blockTime = client.getBlockAverageTime();
+        System.out.println("平均出块时间为： " + blockTime + " 秒");
     }
-
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询某地址下得token/合约资产列表
      *
      */
@@ -253,7 +261,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询地址列表token余额
      *
      */
@@ -271,7 +280,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 查询某地址的交易hash
      *
      */
@@ -289,7 +299,8 @@ public class RpcClientTest {
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 预创建token
      */
     @Test
@@ -297,16 +308,19 @@ public class RpcClientTest {
         long total = (long) (1000 * 1e8);
         // 调用节点接口预创建token 返回hash
         String createRawTokenPreCreateTx = client.createRawTokenPreCreateTx("logan coin1", "LGS",
-                "logan create the coin", "1Af1JWXYVJwMrSkC7QpG4KVckNKgXmnhm4", total, 0,0);
+                "logan create the coin", "1Af1JWXYVJwMrSkC7QpG4KVckNKgXmnhm4", total, 0, 0);
         // 签名
-        String signRawTx = client.signRawTx("1Af1JWXYVJwMrSkC7QpG4KVckNKgXmnhm4", "0x65622cbb675a62ec6de652811dc649286652b75c80850ccd7bb30ffb053c5af9", createRawTokenPreCreateTx, "300", 0);
-        String submitTransaction =  client.submitTransaction(signRawTx);
+        String signRawTx = client.signRawTx("1Af1JWXYVJwMrSkC7QpG4KVckNKgXmnhm4",
+                "0x65622cbb675a62ec6de652811dc649286652b75c80850ccd7bb30ffb053c5af9", createRawTokenPreCreateTx, "300",
+                0);
+        String submitTransaction = client.submitTransaction(signRawTx);
         System.out.println(submitTransaction);
     }
 
     /**
      * 
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 完成token创建
      */
     @Test
@@ -318,7 +332,8 @@ public class RpcClientTest {
     }
 
     /**
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 合约转为地址
      */
     @Test
@@ -328,9 +343,9 @@ public class RpcClientTest {
         System.out.println(address);
     }
 
-
     /**
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 本地构造上链交易数据。数据大手续费越高,推荐压缩之后再上链。
      */
     @Test
@@ -343,38 +358,40 @@ public class RpcClientTest {
         String withHoldTx = client.submitTransaction(signedTxHash);
         System.out.println(withHoldTx);
     }
-    
-    
+
     /**
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 本地构造平行链主代币转账交易
      */
     @Test
     public void createCoinTransferTxPara() throws IOException {
-    	// 转账说明
+        // 转账说明
         String note = "转账说明";
         // 主代币则为"",其他为token名
         String coinToken = "";
         Long amount = 1 * 100000000L;// 1 = real amount
         // 转到的地址
         String to = "toAddress";
-        //String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
+        // String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
         // 本地构造转账交易的payload
         byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
         // 签名私私钥，里面需要有主链币，用于缴纳手续费
         String fromAddressPriveteKey = "from addrss privateKey";
-        //String fromAddressPriveteKey = "0x1ce5a097b01e53d423275091e383a2c3a35d042144bd3bced44194eabxxxxxxx";
+        // String fromAddressPriveteKey = "0x1ce5a097b01e53d423275091e383a2c3a35d042144bd3bced44194eabxxxxxxx";
         // 执行器名称，平行链主代币为平行链名称+coins(平行链对应配置文件中的title项)
         String execer = "user.p.xxchain.coins";
         // 平行链转账时，实际to的地址填在payload中，外层的to地址对应的是合约的地址
         String contranctAddress = client.convertExectoAddr(execer);
-        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer, payload);
+        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer,
+                payload);
         String txHash = client.submitTransaction(createTransferTx);
         System.out.println(txHash);
     }
 
     /**
-     * @throws IOException 
+     * @throws IOException
+     * 
      * @description 通过节点构造token/主代币转账
      */
     @Test
@@ -396,7 +413,6 @@ public class RpcClientTest {
         String signedTxHex = client.submitTransaction(signRawTx);
         System.out.println(signedTxHex);
     }
-    
 
     /**
      * @description 本地将执行器转为地址
@@ -407,42 +423,43 @@ public class RpcClientTest {
         String addr = TransactionUtil.convertExectoAddr(exece);
         System.out.println(addr);
     }
-        
-	/**
-	* @throws IOException 
-	 * @description 撤销预创建的token
-	*/
-	@Test
-	public void revokePrecreateToken() throws IOException{
-	   String symbol = "COINSDEVX";
-	   String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
-	   String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-	   String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
-	   String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
-	   String submitTransaction = client.submitTransaction(signRawTx);
-	   System.out.println(submitTransaction);
-	}
-	
-	
-	/**
-	 * 接口QPS测试(单线程)
-	 * @throws IOException 
-	 */
-	@Test
-	public void qpsTest() throws IOException {
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");   
-    	System.out.println(df.format(System.currentTimeMillis())); 
-		
+
+    /**
+     * @throws IOException
+     * 
+     * @description 撤销预创建的token
+     */
+    @Test
+    public void revokePrecreateToken() throws IOException {
+        String symbol = "COINSDEVX";
+        String owner = "1EHWKLEixvfanTHWmnF7mYMuDDXTCorZd7";
+        String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+        String createRawTokenRevokeTx = client.CreateRawTokenRevokeTx(symbol, owner);
+        String signRawTx = client.signRawTx(privateKey, null, createRawTokenRevokeTx, "1h", 0);
+        String submitTransaction = client.submitTransaction(signRawTx);
+        System.out.println(submitTransaction);
+    }
+
+    /**
+     * 接口QPS测试(单线程)
+     * 
+     * @throws IOException
+     */
+    @Test
+    public void qpsTest() throws IOException {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(df.format(System.currentTimeMillis()));
+
         String hash = "0x441e91ff13f28fe104d66db4308ab12652868eaf8a0011dec2059a4be98bdfb3";
         for (int i = 0; i <= 50000; i++) {
 
             client.queryTx(hash);
-           // System.out.println(queryTransaction1);
-            if (i%1000 == 0) {
-            	System.out.println(i);
-            	System.out.println(df.format(System.currentTimeMillis())); 
+            // System.out.println(queryTransaction1);
+            if (i % 1000 == 0) {
+                System.out.println(i);
+                System.out.println(df.format(System.currentTimeMillis()));
             }
         }
-        
-	}
+
+    }
 }

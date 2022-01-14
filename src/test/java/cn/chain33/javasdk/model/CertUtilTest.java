@@ -68,7 +68,8 @@ public class CertUtilTest {
         builder.setNormal(normalAction);
 
         byte[] reqBytes = builder.build().toByteArray();
-        String transactionHash = TransactionUtil.createTxWithCert(UserKey, "cert", reqBytes, SignType.SM2, cert.getCert(), "ca test".getBytes());
+        String transactionHash = TransactionUtil.createTxWithCert(UserKey, "cert", reqBytes, SignType.SM2,
+                cert.getCert(), "ca test".getBytes());
         String hash = chain33client.submitTransaction(transactionHash);
         System.out.println(hash);
         Assert.assertNotNull(hash);
@@ -96,7 +97,8 @@ public class CertUtilTest {
     @Test
     public void testLoadFromFile() throws Exception {
         Account account = new Account();
-        AccountInfo accountInfo = account.loadGMAccountLocal("test", "", "./test/keystore/5c3682a5719cf5bc1bd6280938670c3acfcb67cc15744a7b9b348066795a4e62_sk");
+        AccountInfo accountInfo = account.loadGMAccountLocal("test", "",
+                "./test/keystore/5c3682a5719cf5bc1bd6280938670c3acfcb67cc15744a7b9b348066795a4e62_sk");
 
         byte[] certBytes = CertUtils.getCertFromFile("./test/signcerts/user1@org1-cert.pem");
         CertService.CertNormal.Builder normal = CertService.CertNormal.newBuilder();
@@ -109,7 +111,8 @@ public class CertUtilTest {
         builder.setNormal(normalAction);
 
         byte[] reqBytes = builder.build().toByteArray();
-        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), "cert", reqBytes, SignType.SM2, certBytes, "ca test".getBytes());
+        String transactionHash = TransactionUtil.createTxWithCert(accountInfo.getPrivateKey(), "cert", reqBytes,
+                SignType.SM2, certBytes, "ca test".getBytes());
         String hash = chain33client.submitTransaction(transactionHash);
         System.out.println(hash);
         Assert.assertNotNull(hash);

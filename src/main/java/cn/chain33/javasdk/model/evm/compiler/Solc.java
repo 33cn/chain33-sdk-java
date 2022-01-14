@@ -31,10 +31,7 @@ public class Solc {
         String propertyName = "solc.path";
         String propertyValue = System.getProperty(propertyName, "");
         if (!"".equals(propertyValue)) {
-            logger.info(
-                    "initBundled from property, propertyName: {}, propertyValue: {}",
-                    propertyName,
-                    propertyValue);
+            logger.info("initBundled from property, propertyName: {}, propertyValue: {}", propertyName, propertyValue);
             solc = new File(propertyValue);
             solc.setExecutable(true);
         }
@@ -50,13 +47,13 @@ public class Solc {
         tmpDir.mkdirs();
         String solcDir = getSolcDir(version);
 
-        try (InputStream is = getClass().getResourceAsStream(solcDir + "file.list"); ) {
+        try (InputStream is = getClass().getResourceAsStream(solcDir + "file.list");) {
             try (Scanner scanner = new Scanner(is)) {
                 while (scanner.hasNext()) {
                     String s = scanner.next();
                     File targetFile = new File(tmpDir, s);
 
-                    try (InputStream fis = getClass().getResourceAsStream(solcDir + s); ) {
+                    try (InputStream fis = getClass().getResourceAsStream(solcDir + s);) {
                         Files.copy(fis, targetFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
                         if (solc == null) {
                             if (logger.isTraceEnabled()) {

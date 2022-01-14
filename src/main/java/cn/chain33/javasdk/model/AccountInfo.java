@@ -1,44 +1,44 @@
 package cn.chain33.javasdk.model;
 
 public class AccountInfo {
-	private String name;
+    private String name;
 
-	private String privateKey;
-	
-	private String publicKey;
-	
-	private String address;
+    private String privateKey;
 
-	public String getName() {
-		return name;
-	}
+    private String publicKey;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String address;
 
-	public String getPrivateKey() {
-		return privateKey;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setPrivateKey(String privateKey) {
-		this.privateKey = privateKey;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getPublicKey() {
-		return publicKey;
-	}
+    public String getPrivateKey() {
+        return privateKey;
+    }
 
-	public void setPublicKey(String publicKey) {
-		this.publicKey = publicKey;
-	}
+    public void setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public String getPublicKey() {
+        return publicKey;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public void setPublicKey(String publicKey) {
+        this.publicKey = publicKey;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
 }

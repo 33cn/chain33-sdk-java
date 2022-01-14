@@ -8,9 +8,9 @@ public class EncryptKey {
     private String PubProofU;
 
     public EncryptKey(byte[] shareKey, String pubProofR, String pubProofU) {
-           this.PubProofR = pubProofR;
-           this.PubProofU = pubProofU;
-           this.shareKey = shareKey;
+        this.PubProofR = pubProofR;
+        this.PubProofU = pubProofU;
+        this.shareKey = shareKey;
     }
 
     public byte[] getShareKey() {

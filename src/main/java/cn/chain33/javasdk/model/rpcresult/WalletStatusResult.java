@@ -1,51 +1,51 @@
 package cn.chain33.javasdk.model.rpcresult;
 
 public class WalletStatusResult {
-	
-	private boolean isWalletLock;
-	
-	private boolean isAutoMining;
-	
-	private boolean isHasSeed;
-	
-	private boolean isTicketLock;
 
-	public boolean isWalletLock() {
-		return isWalletLock;
-	}
+    private boolean isWalletLock;
 
-	public void setWalletLock(boolean isWalletLock) {
-		this.isWalletLock = isWalletLock;
-	}
+    private boolean isAutoMining;
 
-	public boolean isAutoMining() {
-		return isAutoMining;
-	}
+    private boolean isHasSeed;
 
-	public void setAutoMining(boolean isAutoMining) {
-		this.isAutoMining = isAutoMining;
-	}
+    private boolean isTicketLock;
 
-	public boolean isHasSeed() {
-		return isHasSeed;
-	}
+    public boolean isWalletLock() {
+        return isWalletLock;
+    }
 
-	public void setHasSeed(boolean isHasSeed) {
-		this.isHasSeed = isHasSeed;
-	}
+    public void setWalletLock(boolean isWalletLock) {
+        this.isWalletLock = isWalletLock;
+    }
 
-	public boolean isTicketLock() {
-		return isTicketLock;
-	}
+    public boolean isAutoMining() {
+        return isAutoMining;
+    }
 
-	public void setTicketLock(boolean isTicketLock) {
-		this.isTicketLock = isTicketLock;
-	}
+    public void setAutoMining(boolean isAutoMining) {
+        this.isAutoMining = isAutoMining;
+    }
 
-	@Override
-	public String toString() {
-		return "WalletStatus [isWalletLock=" + isWalletLock + ", isAutoMining=" + isAutoMining + ", isHasSeed="
-				+ isHasSeed + ", isTicketLock=" + isTicketLock + "]";
-	}
-	
+    public boolean isHasSeed() {
+        return isHasSeed;
+    }
+
+    public void setHasSeed(boolean isHasSeed) {
+        this.isHasSeed = isHasSeed;
+    }
+
+    public boolean isTicketLock() {
+        return isTicketLock;
+    }
+
+    public void setTicketLock(boolean isTicketLock) {
+        this.isTicketLock = isTicketLock;
+    }
+
+    @Override
+    public String toString() {
+        return "WalletStatus [isWalletLock=" + isWalletLock + ", isAutoMining=" + isAutoMining + ", isHasSeed="
+                + isHasSeed + ", isTicketLock=" + isTicketLock + "]";
+    }
+
 }

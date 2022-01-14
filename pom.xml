@@ -107,6 +107,24 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.12.4</version>
 		</dependency>
+
+<!--		java9 java10 java11 -->
+<!--		<dependency>-->
+<!--			<groupId>javax.xml.bind</groupId>-->
+<!--			<artifactId>jaxb-api</artifactId>-->
+<!--			<version>2.3.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.sun.xml.bind</groupId>-->
+<!--			<artifactId>jaxb-core</artifactId>-->
+<!--			<version>2.3.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.sun.xml.bind</groupId>-->
+<!--			<artifactId>jaxb-impl</artifactId>-->
+<!--			<version>2.3.0</version>-->
+<!--		</dependency>-->
+
 	</dependencies>
 	
 	<build>
@@ -120,6 +138,56 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-assembly-plugin</artifactId>-->
+<!--				<version>3.3.0</version>-->
+<!--				<configuration>-->
+<!--					<descriptors>-->
+<!--						<descriptor>src/resources/assembly.xml</descriptor>-->
+<!--					</descriptors>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptors>
+						<descriptor>src/resources/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>net.revelc.code.formatter</groupId>
+				<artifactId>formatter-maven-plugin</artifactId>
+				<version>2.16.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>format</goal>
+<!--							<goal>validate</goal>-->
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 </project>

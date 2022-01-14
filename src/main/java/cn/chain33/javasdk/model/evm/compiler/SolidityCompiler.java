@@ -36,7 +36,9 @@ public class SolidityCompiler {
      * @param version
      * @param combinedJson
      * @param options
+     * 
      * @return
+     * 
      * @throws IOException
      */
     public static Result compile(byte[] source, String version, boolean combinedJson, Option... options)
@@ -45,8 +47,8 @@ public class SolidityCompiler {
     }
 
     /**
-     * This class is mainly here for backwards compatibility; however we are now reusing it making
-     * it the solely public interface listing all the supported options.
+     * This class is mainly here for backwards compatibility; however we are now reusing it making it the solely public
+     * interface listing all the supported options.
      */
     public static final class Options {
         public static final OutputOption AST = OutputOption.AST;
@@ -92,20 +94,14 @@ public class SolidityCompiler {
             StringBuilder result = new StringBuilder();
             for (Object value : values) {
                 if (OutputOption.class.isAssignableFrom(value.getClass())) {
-                    result.append(
-                            (result.length() == 0)
-                                    ? ((OutputOption) value).getName()
-                                    : ',' + ((OutputOption) value).getName());
+                    result.append((result.length() == 0) ? ((OutputOption) value).getName()
+                            : ',' + ((OutputOption) value).getName());
                 } else if (Path.class.isAssignableFrom(value.getClass())) {
-                    result.append(
-                            (result.length() == 0)
-                                    ? ((Path) value).toAbsolutePath().toString()
-                                    : ',' + ((Path) value).toAbsolutePath().toString());
+                    result.append((result.length() == 0) ? ((Path) value).toAbsolutePath().toString()
+                            : ',' + ((Path) value).toAbsolutePath().toString());
                 } else if (File.class.isAssignableFrom(value.getClass())) {
-                    result.append(
-                            (result.length() == 0)
-                                    ? ((File) value).getAbsolutePath()
-                                    : ',' + ((File) value).getAbsolutePath());
+                    result.append((result.length() == 0) ? ((File) value).getAbsolutePath()
+                            : ',' + ((File) value).getAbsolutePath());
                 } else if (String.class.isAssignableFrom(value.getClass())) {
                     result.append((result.length() == 0) ? value : "," + value);
                 } else {
@@ -128,8 +124,7 @@ public class SolidityCompiler {
     }
 
     private enum NameOnlyOption implements Option {
-        OPTIMIZE("optimize"),
-        VERSION("version");
+        OPTIMIZE("optimize"), VERSION("version");
 
         private String name;
 
@@ -154,12 +149,7 @@ public class SolidityCompiler {
     }
 
     private enum OutputOption implements Option {
-        AST("ast"),
-        BIN("bin"),
-        INTERFACE("interface"),
-        ABI("abi"),
-        METADATA("metadata"),
-        ASTJSON("ast-json");
+        AST("ast"), BIN("bin"), INTERFACE("interface"), ABI("abi"), METADATA("metadata"), ASTJSON("ast-json");
 
         private String name;
 
@@ -288,9 +278,7 @@ public class SolidityCompiler {
         }
     }
 
-
-    private List<String> prepareCommandOptions(
-            Solc solc, boolean optimize, boolean combinedJson, Option... options)
+    private List<String> prepareCommandOptions(Solc solc, boolean optimize, boolean combinedJson, Option... options)
             throws IOException {
         List<String> commandParts = new ArrayList<>();
         commandParts.add(solc.getExecutable().getCanonicalPath());
@@ -298,8 +286,7 @@ public class SolidityCompiler {
             commandParts.add("--" + Options.OPTIMIZE.getName());
         }
         if (combinedJson) {
-            Option combinedJsonOption =
-                    new Options.CombinedJson(getElementsOf(OutputOption.class, options));
+            Option combinedJsonOption = new Options.CombinedJson(getElementsOf(OutputOption.class, options));
             commandParts.add("--" + combinedJsonOption.getName());
             commandParts.add(combinedJsonOption.getValue());
         } else {
@@ -334,17 +321,14 @@ public class SolidityCompiler {
         return Arrays.stream(options).filter(clazz::isInstance).map(clazz::cast).collect(toList());
     }
 
-    private Result compileSrc(
-            byte[] source, String version, boolean optimize, boolean combinedJson, Option... options)
+    private Result compileSrc(byte[] source, String version, boolean optimize, boolean combinedJson, Option... options)
             throws IOException {
         Solc tmpSolc = getInstance().getSolc(version);
         List<String> commandParts = prepareCommandOptions(tmpSolc, optimize, combinedJson, options);
 
-        ProcessBuilder processBuilder =
-                new ProcessBuilder(commandParts).directory(tmpSolc.getExecutable().getParentFile());
-        processBuilder
-                .environment()
-                .put("LD_LIBRARY_PATH", tmpSolc.getExecutable().getParentFile().getCanonicalPath());
+        ProcessBuilder processBuilder = new ProcessBuilder(commandParts)
+                .directory(tmpSolc.getExecutable().getParentFile());
+        processBuilder.environment().put("LD_LIBRARY_PATH", tmpSolc.getExecutable().getParentFile().getCanonicalPath());
 
         Process process = processBuilder.start();
 
@@ -375,11 +359,9 @@ public class SolidityCompiler {
         commandParts.add(tmpSolc.getExecutable().getCanonicalPath());
         commandParts.add("--" + Options.VERSION.getName());
 
-        ProcessBuilder processBuilder =
-                new ProcessBuilder(commandParts).directory(tmpSolc.getExecutable().getParentFile());
-        processBuilder
-                .environment()
-                .put("LD_LIBRARY_PATH", tmpSolc.getExecutable().getParentFile().getCanonicalPath());
+        ProcessBuilder processBuilder = new ProcessBuilder(commandParts)
+                .directory(tmpSolc.getExecutable().getParentFile());
+        processBuilder.environment().put("LD_LIBRARY_PATH", tmpSolc.getExecutable().getParentFile().getCanonicalPath());
 
         Process process = processBuilder.start();
 
@@ -402,21 +384,21 @@ public class SolidityCompiler {
     }
 
     public Solc getSolc(String version) {
-        if(VERSION06.equals(version)) {
+        if (VERSION06.equals(version)) {
             if (solc06 == null) {
                 solc06 = new Solc(version);
             }
             return solc06;
         }
 
-        if(VERSION07.equals(version)) {
+        if (VERSION07.equals(version)) {
             if (solc07 == null) {
                 solc07 = new Solc(version);
             }
             return solc07;
         }
 
-        if(VERSION08.equals(version)) {
+        if (VERSION08.equals(version)) {
             if (solc08 == null) {
                 solc08 = new Solc(version);
             }

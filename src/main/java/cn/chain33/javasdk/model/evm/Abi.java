@@ -41,10 +41,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Abi extends ArrayList<Abi.Entry> {
-    private static final ObjectMapper DEFAULT_MAPPER =
-            new ObjectMapper()
-                    .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
-                    .enable(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL);
+    private static final ObjectMapper DEFAULT_MAPPER = new ObjectMapper()
+            .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
+            .enable(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL);
 
     public static Abi fromJson(String json) {
         try {
@@ -62,11 +61,8 @@ public class Abi extends ArrayList<Abi.Entry> {
         }
     }
 
-    private <T extends Entry> T find(
-            Class<T> resultClass, final Entry.Type type, final Predicate<T> searchPredicate) {
-        return (T)
-                CollectionUtils.find(
-                        this, entry -> entry.type == type && searchPredicate.evaluate((T) entry));
+    private <T extends Entry> T find(Class<T> resultClass, final Entry.Type type, final Predicate<T> searchPredicate) {
+        return (T) CollectionUtils.find(this, entry -> entry.type == type && searchPredicate.evaluate((T) entry));
     }
 
     public Function findFunction(Predicate<Function> searchPredicate) {
@@ -90,10 +86,7 @@ public class Abi extends ArrayList<Abi.Entry> {
     public abstract static class Entry {
 
         public enum Type {
-            constructor,
-            function,
-            event,
-            fallback
+            constructor, function, event, fallback
         }
 
         @JsonInclude(Include.NON_NULL)
@@ -107,11 +100,9 @@ public class Abi extends ArrayList<Abi.Entry> {
 
                 int offset = 0;
                 for (Param param : params) {
-                    Object decoded =
-                            param.type.isDynamicType()
-                                    ? param.type.decode(
-                                            encoded, decodeInt(encoded, offset).intValue())
-                                    : param.type.decode(encoded, offset);
+                    Object decoded = param.type.isDynamicType()
+                            ? param.type.decode(encoded, decodeInt(encoded, offset).intValue())
+                            : param.type.decode(encoded, offset);
                     result.add(decoded);
 
                     offset += param.type.getFixedSize();
@@ -122,10 +113,7 @@ public class Abi extends ArrayList<Abi.Entry> {
 
             @Override
             public String toString() {
-                return format(
-                        "%s%s%s",
-                        type.getCanonicalName(),
-                        (indexed != null && indexed) ? " indexed " : " ",
+                return format("%s%s%s", type.getCanonicalName(), (indexed != null && indexed) ? " indexed " : " ",
                         name);
             }
         }
@@ -138,14 +126,8 @@ public class Abi extends ArrayList<Abi.Entry> {
         public final Type type;
         public final Boolean payable;
 
-        public Entry(
-                Boolean anonymous,
-                Boolean constant,
-                String name,
-                List<Param> inputs,
-                List<Param> outputs,
-                Type type,
-                Boolean payable) {
+        public Entry(Boolean anonymous, Boolean constant, String name, List<Param> inputs, List<Param> outputs,
+                Type type, Boolean payable) {
             this.anonymous = anonymous;
             this.constant = constant;
             this.name = name;
@@ -173,27 +155,23 @@ public class Abi extends ArrayList<Abi.Entry> {
         }
 
         @JsonCreator
-        public static Entry create(
-                @JsonProperty("anonymous") boolean anonymous,
-                @JsonProperty("constant") boolean constant,
-                @JsonProperty("name") String name,
-                @JsonProperty("inputs") List<Param> inputs,
-                @JsonProperty("outputs") List<Param> outputs,
+        public static Entry create(@JsonProperty("anonymous") boolean anonymous,
+                @JsonProperty("constant") boolean constant, @JsonProperty("name") String name,
+                @JsonProperty("inputs") List<Param> inputs, @JsonProperty("outputs") List<Param> outputs,
                 @JsonProperty("type") Type type,
-                @JsonProperty(value = "payable", required = false, defaultValue = "false")
-                        Boolean payable) {
+                @JsonProperty(value = "payable", required = false, defaultValue = "false") Boolean payable) {
             Entry result = null;
             switch (type) {
-                case constructor:
-                    result = new Constructor(inputs, outputs);
-                    break;
-                case function:
-                case fallback:
-                    result = new Function(constant, name, inputs, outputs, payable);
-                    break;
-                case event:
-                    result = new Event(anonymous, name, inputs, outputs);
-                    break;
+            case constructor:
+                result = new Constructor(inputs, outputs);
+                break;
+            case function:
+            case fallback:
+                result = new Function(constant, name, inputs, outputs, payable);
+                break;
+            case event:
+                result = new Event(anonymous, name, inputs, outputs);
+                break;
             }
 
             return result;
@@ -216,8 +194,7 @@ public class Abi extends ArrayList<Abi.Entry> {
 
         public byte[] encode(Object... args) {
             if (args.length > inputs.size())
-                throw new RuntimeException(
-                        "Too many arguments: " + args.length + " > " + inputs.size());
+                throw new RuntimeException("Too many arguments: " + args.length + " > " + inputs.size());
 
             int staticSize = 0;
             int dynamicCnt = 0;
@@ -253,12 +230,7 @@ public class Abi extends ArrayList<Abi.Entry> {
 
         private static final int ENCODED_SIGN_LENGTH = 4;
 
-        public Function(
-                boolean constant,
-                String name,
-                List<Param> inputs,
-                List<Param> outputs,
-                Boolean payable) {
+        public Function(boolean constant, String name, List<Param> inputs, List<Param> outputs, Boolean payable) {
             super(null, constant, name, inputs, outputs, Type.function, payable);
         }
 
@@ -268,8 +240,7 @@ public class Abi extends ArrayList<Abi.Entry> {
 
         private byte[] encodeArguments(Object... args) {
             if (args.length > inputs.size())
-                throw new RuntimeException(
-                        "Too many arguments: " + args.length + " > " + inputs.size());
+                throw new RuntimeException("Too many arguments: " + args.length + " > " + inputs.size());
 
             int staticSize = 0;
             int dynamicCnt = 0;
