@@ -17,6 +17,11 @@ clean:
 fmt:
 	mvn formatter:format
 
+fmt_proto: ## go fmt protobuf file
+	find . -name '*.proto' -not -path "./vendor/*" | xargs clang-format -i
+
+proto:build
+
 check:
 	mvn formatter:validate
 #	mvn verify

@@ -299,6 +299,7 @@ public final class WalletProtobuf {
          * 
          * @return Whether the tx field is set.
          */
+        @java.lang.Override
         public boolean hasTx() {
             return tx_ != null;
         }
@@ -308,6 +309,7 @@ public final class WalletProtobuf {
          * 
          * @return The tx.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTx() {
             return tx_ == null
                     ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction.getDefaultInstance() : tx_;
@@ -316,6 +318,7 @@ public final class WalletProtobuf {
         /**
          * <code>.Transaction tx = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxOrBuilder() {
             return getTx();
         }
@@ -328,6 +331,7 @@ public final class WalletProtobuf {
          * 
          * @return Whether the receipt field is set.
          */
+        @java.lang.Override
         public boolean hasReceipt() {
             return receipt_ != null;
         }
@@ -337,6 +341,7 @@ public final class WalletProtobuf {
          * 
          * @return The receipt.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceipt() {
             return receipt_ == null
                     ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData.getDefaultInstance()
@@ -346,6 +351,7 @@ public final class WalletProtobuf {
         /**
          * <code>.ReceiptData receipt = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptOrBuilder() {
             return getReceipt();
         }
@@ -358,6 +364,7 @@ public final class WalletProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -370,6 +377,7 @@ public final class WalletProtobuf {
          * 
          * @return The index.
          */
+        @java.lang.Override
         public long getIndex() {
             return index_;
         }
@@ -382,6 +390,7 @@ public final class WalletProtobuf {
          * 
          * @return The blocktime.
          */
+        @java.lang.Override
         public long getBlocktime() {
             return blocktime_;
         }
@@ -394,6 +403,7 @@ public final class WalletProtobuf {
          * 
          * @return The amount.
          */
+        @java.lang.Override
         public long getAmount() {
             return amount_;
         }
@@ -406,6 +416,7 @@ public final class WalletProtobuf {
          * 
          * @return The fromaddr.
          */
+        @java.lang.Override
         public java.lang.String getFromaddr() {
             java.lang.Object ref = fromaddr_;
             if (ref instanceof java.lang.String) {
@@ -423,6 +434,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for fromaddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFromaddrBytes() {
             java.lang.Object ref = fromaddr_;
             if (ref instanceof java.lang.String) {
@@ -442,6 +454,7 @@ public final class WalletProtobuf {
          * 
          * @return The txhash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTxhash() {
             return txhash_;
         }
@@ -454,6 +467,7 @@ public final class WalletProtobuf {
          * 
          * @return The actionName.
          */
+        @java.lang.Override
         public java.lang.String getActionName() {
             java.lang.Object ref = actionName_;
             if (ref instanceof java.lang.String) {
@@ -471,6 +485,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for actionName.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getActionNameBytes() {
             java.lang.Object ref = actionName_;
             if (ref instanceof java.lang.String) {
@@ -490,6 +505,7 @@ public final class WalletProtobuf {
          * 
          * @return The payload.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPayload() {
             return payload_;
         }
@@ -1247,6 +1263,7 @@ public final class WalletProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -1285,6 +1302,7 @@ public final class WalletProtobuf {
              * 
              * @return The index.
              */
+            @java.lang.Override
             public long getIndex() {
                 return index_;
             }
@@ -1323,6 +1341,7 @@ public final class WalletProtobuf {
              * 
              * @return The blocktime.
              */
+            @java.lang.Override
             public long getBlocktime() {
                 return blocktime_;
             }
@@ -1361,6 +1380,7 @@ public final class WalletProtobuf {
              * 
              * @return The amount.
              */
+            @java.lang.Override
             public long getAmount() {
                 return amount_;
             }
@@ -1484,6 +1504,7 @@ public final class WalletProtobuf {
              * 
              * @return The txhash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getTxhash() {
                 return txhash_;
             }
@@ -1610,6 +1631,7 @@ public final class WalletProtobuf {
              * 
              * @return The payload.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPayload() {
                 return payload_;
             }
@@ -1817,6 +1839,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletTxDetail txDetails = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetail> getTxDetailsList() {
             return txDetails_;
         }
@@ -1824,6 +1847,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletTxDetail txDetails = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetailOrBuilder> getTxDetailsOrBuilderList() {
             return txDetails_;
         }
@@ -1831,6 +1855,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletTxDetail txDetails = 1;</code>
          */
+        @java.lang.Override
         public int getTxDetailsCount() {
             return txDetails_.size();
         }
@@ -1838,6 +1863,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletTxDetail txDetails = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetail getTxDetails(int index) {
             return txDetails_.get(index);
         }
@@ -1845,6 +1871,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletTxDetail txDetails = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetailOrBuilder getTxDetailsOrBuilder(
                 int index) {
             return txDetails_.get(index);
@@ -2672,6 +2699,7 @@ public final class WalletProtobuf {
          * 
          * @return The privkey.
          */
+        @java.lang.Override
         public java.lang.String getPrivkey() {
             java.lang.Object ref = privkey_;
             if (ref instanceof java.lang.String) {
@@ -2689,6 +2717,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for privkey.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPrivkeyBytes() {
             java.lang.Object ref = privkey_;
             if (ref instanceof java.lang.String) {
@@ -2708,6 +2737,7 @@ public final class WalletProtobuf {
          * 
          * @return The label.
          */
+        @java.lang.Override
         public java.lang.String getLabel() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -2725,6 +2755,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for label.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLabelBytes() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -2744,6 +2775,7 @@ public final class WalletProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -2761,6 +2793,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -2780,6 +2813,7 @@ public final class WalletProtobuf {
          * 
          * @return The timeStamp.
          */
+        @java.lang.Override
         public java.lang.String getTimeStamp() {
             java.lang.Object ref = timeStamp_;
             if (ref instanceof java.lang.String) {
@@ -2797,6 +2831,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for timeStamp.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTimeStampBytes() {
             java.lang.Object ref = timeStamp_;
             if (ref instanceof java.lang.String) {
@@ -3688,6 +3723,7 @@ public final class WalletProtobuf {
          * 
          * @return The pwHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPwHash() {
             return pwHash_;
         }
@@ -3700,6 +3736,7 @@ public final class WalletProtobuf {
          * 
          * @return The randstr.
          */
+        @java.lang.Override
         public java.lang.String getRandstr() {
             java.lang.Object ref = randstr_;
             if (ref instanceof java.lang.String) {
@@ -3717,6 +3754,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for randstr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getRandstrBytes() {
             java.lang.Object ref = randstr_;
             if (ref instanceof java.lang.String) {
@@ -4061,6 +4099,7 @@ public final class WalletProtobuf {
              * 
              * @return The pwHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPwHash() {
                 return pwHash_;
             }
@@ -4371,6 +4410,7 @@ public final class WalletProtobuf {
          * 
          * @return The isWalletLock.
          */
+        @java.lang.Override
         public boolean getIsWalletLock() {
             return isWalletLock_;
         }
@@ -4383,6 +4423,7 @@ public final class WalletProtobuf {
          * 
          * @return The isAutoMining.
          */
+        @java.lang.Override
         public boolean getIsAutoMining() {
             return isAutoMining_;
         }
@@ -4395,6 +4436,7 @@ public final class WalletProtobuf {
          * 
          * @return The isHasSeed.
          */
+        @java.lang.Override
         public boolean getIsHasSeed() {
             return isHasSeed_;
         }
@@ -4407,6 +4449,7 @@ public final class WalletProtobuf {
          * 
          * @return The isTicketLock.
          */
+        @java.lang.Override
         public boolean getIsTicketLock() {
             return isTicketLock_;
         }
@@ -4777,6 +4820,7 @@ public final class WalletProtobuf {
              * 
              * @return The isWalletLock.
              */
+            @java.lang.Override
             public boolean getIsWalletLock() {
                 return isWalletLock_;
             }
@@ -4815,6 +4859,7 @@ public final class WalletProtobuf {
              * 
              * @return The isAutoMining.
              */
+            @java.lang.Override
             public boolean getIsAutoMining() {
                 return isAutoMining_;
             }
@@ -4853,6 +4898,7 @@ public final class WalletProtobuf {
              * 
              * @return The isHasSeed.
              */
+            @java.lang.Override
             public boolean getIsHasSeed() {
                 return isHasSeed_;
             }
@@ -4891,6 +4937,7 @@ public final class WalletProtobuf {
              * 
              * @return The isTicketLock.
              */
+            @java.lang.Override
             public boolean getIsTicketLock() {
                 return isTicketLock_;
             }
@@ -5095,6 +5142,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletAccount wallets = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> getWalletsList() {
             return wallets_;
         }
@@ -5102,6 +5150,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletAccount wallets = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccountOrBuilder> getWalletsOrBuilderList() {
             return wallets_;
         }
@@ -5109,6 +5158,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletAccount wallets = 1;</code>
          */
+        @java.lang.Override
         public int getWalletsCount() {
             return wallets_.size();
         }
@@ -5116,6 +5166,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletAccount wallets = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount getWallets(int index) {
             return wallets_.get(index);
         }
@@ -5123,6 +5174,7 @@ public final class WalletProtobuf {
         /**
          * <code>repeated .WalletAccount wallets = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccountOrBuilder getWalletsOrBuilder(int index) {
             return wallets_.get(index);
         }
@@ -5907,6 +5959,7 @@ public final class WalletProtobuf {
          * 
          * @return Whether the acc field is set.
          */
+        @java.lang.Override
         public boolean hasAcc() {
             return acc_ != null;
         }
@@ -5916,6 +5969,7 @@ public final class WalletProtobuf {
          * 
          * @return The acc.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getAcc() {
             return acc_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance() : acc_;
         }
@@ -5923,6 +5977,7 @@ public final class WalletProtobuf {
         /**
          * <code>.Account acc = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getAccOrBuilder() {
             return getAcc();
         }
@@ -5935,6 +5990,7 @@ public final class WalletProtobuf {
          * 
          * @return The label.
          */
+        @java.lang.Override
         public java.lang.String getLabel() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -5952,6 +6008,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for label.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLabelBytes() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -6694,6 +6751,7 @@ public final class WalletProtobuf {
          * 
          * @return The passwd.
          */
+        @java.lang.Override
         public java.lang.String getPasswd() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -6711,6 +6769,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for passwd.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPasswdBytes() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -6730,6 +6789,7 @@ public final class WalletProtobuf {
          * 
          * @return The timeout.
          */
+        @java.lang.Override
         public long getTimeout() {
             return timeout_;
         }
@@ -6742,6 +6802,7 @@ public final class WalletProtobuf {
          * 
          * @return The walletOrTicket.
          */
+        @java.lang.Override
         public boolean getWalletOrTicket() {
             return walletOrTicket_;
         }
@@ -7181,6 +7242,7 @@ public final class WalletProtobuf {
              * 
              * @return The timeout.
              */
+            @java.lang.Override
             public long getTimeout() {
                 return timeout_;
             }
@@ -7219,6 +7281,7 @@ public final class WalletProtobuf {
              * 
              * @return The walletOrTicket.
              */
+            @java.lang.Override
             public boolean getWalletOrTicket() {
                 return walletOrTicket_;
             }
@@ -7396,6 +7459,7 @@ public final class WalletProtobuf {
          * 
          * @return The lang.
          */
+        @java.lang.Override
         public int getLang() {
             return lang_;
         }
@@ -7710,6 +7774,7 @@ public final class WalletProtobuf {
              * 
              * @return The lang.
              */
+            @java.lang.Override
             public int getLang() {
                 return lang_;
             }
@@ -7896,6 +7961,7 @@ public final class WalletProtobuf {
          * 
          * @return The passwd.
          */
+        @java.lang.Override
         public java.lang.String getPasswd() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -7913,6 +7979,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for passwd.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPasswdBytes() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -8496,6 +8563,7 @@ public final class WalletProtobuf {
          * 
          * @return The seed.
          */
+        @java.lang.Override
         public java.lang.String getSeed() {
             java.lang.Object ref = seed_;
             if (ref instanceof java.lang.String) {
@@ -8513,6 +8581,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for seed.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSeedBytes() {
             java.lang.Object ref = seed_;
             if (ref instanceof java.lang.String) {
@@ -8532,6 +8601,7 @@ public final class WalletProtobuf {
          * 
          * @return The passwd.
          */
+        @java.lang.Override
         public java.lang.String getPasswd() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -8549,6 +8619,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for passwd.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPasswdBytes() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -9212,6 +9283,7 @@ public final class WalletProtobuf {
          * 
          * @return The seed.
          */
+        @java.lang.Override
         public java.lang.String getSeed() {
             java.lang.Object ref = seed_;
             if (ref instanceof java.lang.String) {
@@ -9229,6 +9301,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for seed.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSeedBytes() {
             java.lang.Object ref = seed_;
             if (ref instanceof java.lang.String) {
@@ -9806,6 +9879,7 @@ public final class WalletProtobuf {
          * 
          * @return The oldPass.
          */
+        @java.lang.Override
         public java.lang.String getOldPass() {
             java.lang.Object ref = oldPass_;
             if (ref instanceof java.lang.String) {
@@ -9823,6 +9897,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for oldPass.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOldPassBytes() {
             java.lang.Object ref = oldPass_;
             if (ref instanceof java.lang.String) {
@@ -9842,6 +9917,7 @@ public final class WalletProtobuf {
          * 
          * @return The newPass.
          */
+        @java.lang.Override
         public java.lang.String getNewPass() {
             java.lang.Object ref = newPass_;
             if (ref instanceof java.lang.String) {
@@ -9859,6 +9935,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for newPass.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNewPassBytes() {
             java.lang.Object ref = newPass_;
             if (ref instanceof java.lang.String) {
@@ -10519,6 +10596,7 @@ public final class WalletProtobuf {
          * 
          * @return The label.
          */
+        @java.lang.Override
         public java.lang.String getLabel() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -10536,6 +10614,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for label.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLabelBytes() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -11097,6 +11176,7 @@ public final class WalletProtobuf {
          * 
          * @return The label.
          */
+        @java.lang.Override
         public java.lang.String getLabel() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -11114,6 +11194,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for label.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLabelBytes() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -11700,6 +11781,7 @@ public final class WalletProtobuf {
          * 
          * @return The fromTx.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFromTx() {
             return fromTx_;
         }
@@ -11712,6 +11794,7 @@ public final class WalletProtobuf {
          * 
          * @return The count.
          */
+        @java.lang.Override
         public int getCount() {
             return count_;
         }
@@ -11724,6 +11807,7 @@ public final class WalletProtobuf {
          * 
          * @return The direction.
          */
+        @java.lang.Override
         public int getDirection() {
             return direction_;
         }
@@ -12082,6 +12166,7 @@ public final class WalletProtobuf {
              * 
              * @return The fromTx.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getFromTx() {
                 return fromTx_;
             }
@@ -12123,6 +12208,7 @@ public final class WalletProtobuf {
              * 
              * @return The count.
              */
+            @java.lang.Override
             public int getCount() {
                 return count_;
             }
@@ -12161,6 +12247,7 @@ public final class WalletProtobuf {
              * 
              * @return The direction.
              */
+            @java.lang.Override
             public int getDirection() {
                 return direction_;
             }
@@ -12381,6 +12468,7 @@ public final class WalletProtobuf {
          * 
          * @return The privkey.
          */
+        @java.lang.Override
         public java.lang.String getPrivkey() {
             java.lang.Object ref = privkey_;
             if (ref instanceof java.lang.String) {
@@ -12402,6 +12490,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for privkey.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPrivkeyBytes() {
             java.lang.Object ref = privkey_;
             if (ref instanceof java.lang.String) {
@@ -12421,6 +12510,7 @@ public final class WalletProtobuf {
          * 
          * @return The label.
          */
+        @java.lang.Override
         public java.lang.String getLabel() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -12438,6 +12528,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for label.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLabelBytes() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -13214,6 +13305,7 @@ public final class WalletProtobuf {
          * 
          * @return The from.
          */
+        @java.lang.Override
         public java.lang.String getFrom() {
             java.lang.Object ref = from_;
             if (ref instanceof java.lang.String) {
@@ -13231,6 +13323,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for from.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFromBytes() {
             java.lang.Object ref = from_;
             if (ref instanceof java.lang.String) {
@@ -13250,6 +13343,7 @@ public final class WalletProtobuf {
          * 
          * @return The to.
          */
+        @java.lang.Override
         public java.lang.String getTo() {
             java.lang.Object ref = to_;
             if (ref instanceof java.lang.String) {
@@ -13267,6 +13361,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for to.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getToBytes() {
             java.lang.Object ref = to_;
             if (ref instanceof java.lang.String) {
@@ -13286,6 +13381,7 @@ public final class WalletProtobuf {
          * 
          * @return The amount.
          */
+        @java.lang.Override
         public long getAmount() {
             return amount_;
         }
@@ -13298,6 +13394,7 @@ public final class WalletProtobuf {
          * 
          * @return The note.
          */
+        @java.lang.Override
         public java.lang.String getNote() {
             java.lang.Object ref = note_;
             if (ref instanceof java.lang.String) {
@@ -13315,6 +13412,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for note.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNoteBytes() {
             java.lang.Object ref = note_;
             if (ref instanceof java.lang.String) {
@@ -13334,6 +13432,7 @@ public final class WalletProtobuf {
          * 
          * @return The isToken.
          */
+        @java.lang.Override
         public boolean getIsToken() {
             return isToken_;
         }
@@ -13346,6 +13445,7 @@ public final class WalletProtobuf {
          * 
          * @return The tokenSymbol.
          */
+        @java.lang.Override
         public java.lang.String getTokenSymbol() {
             java.lang.Object ref = tokenSymbol_;
             if (ref instanceof java.lang.String) {
@@ -13363,6 +13463,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for tokenSymbol.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTokenSymbolBytes() {
             java.lang.Object ref = tokenSymbol_;
             if (ref instanceof java.lang.String) {
@@ -13949,6 +14050,7 @@ public final class WalletProtobuf {
              * 
              * @return The amount.
              */
+            @java.lang.Override
             public long getAmount() {
                 return amount_;
             }
@@ -14072,6 +14174,7 @@ public final class WalletProtobuf {
              * 
              * @return The isToken.
              */
+            @java.lang.Override
             public boolean getIsToken() {
                 return isToken_;
             }
@@ -14335,6 +14438,7 @@ public final class WalletProtobuf {
          * 
          * @return The amount.
          */
+        @java.lang.Override
         public long getAmount() {
             return amount_;
         }
@@ -14650,6 +14754,7 @@ public final class WalletProtobuf {
              * 
              * @return The amount.
              */
+            @java.lang.Override
             public long getAmount() {
                 return amount_;
             }
@@ -14858,6 +14963,7 @@ public final class WalletProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -14875,6 +14981,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -14894,6 +15001,7 @@ public final class WalletProtobuf {
          * 
          * @return The label.
          */
+        @java.lang.Override
         public java.lang.String getLabel() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -14911,6 +15019,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for label.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLabelBytes() {
             java.lang.Object ref = label_;
             if (ref instanceof java.lang.String) {
@@ -15570,6 +15679,7 @@ public final class WalletProtobuf {
          * 
          * @return The to.
          */
+        @java.lang.Override
         public java.lang.String getTo() {
             java.lang.Object ref = to_;
             if (ref instanceof java.lang.String) {
@@ -15587,6 +15697,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for to.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getToBytes() {
             java.lang.Object ref = to_;
             if (ref instanceof java.lang.String) {
@@ -16254,6 +16365,7 @@ public final class WalletProtobuf {
          * 
          * @return The creatorAddr.
          */
+        @java.lang.Override
         public java.lang.String getCreatorAddr() {
             java.lang.Object ref = creatorAddr_;
             if (ref instanceof java.lang.String) {
@@ -16271,6 +16383,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for creatorAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getCreatorAddrBytes() {
             java.lang.Object ref = creatorAddr_;
             if (ref instanceof java.lang.String) {
@@ -16290,6 +16403,7 @@ public final class WalletProtobuf {
          * 
          * @return The name.
          */
+        @java.lang.Override
         public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -16307,6 +16421,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for name.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNameBytes() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -16326,6 +16441,7 @@ public final class WalletProtobuf {
          * 
          * @return The symbol.
          */
+        @java.lang.Override
         public java.lang.String getSymbol() {
             java.lang.Object ref = symbol_;
             if (ref instanceof java.lang.String) {
@@ -16343,6 +16459,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for symbol.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSymbolBytes() {
             java.lang.Object ref = symbol_;
             if (ref instanceof java.lang.String) {
@@ -16362,6 +16479,7 @@ public final class WalletProtobuf {
          * 
          * @return The introduction.
          */
+        @java.lang.Override
         public java.lang.String getIntroduction() {
             java.lang.Object ref = introduction_;
             if (ref instanceof java.lang.String) {
@@ -16379,6 +16497,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for introduction.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIntroductionBytes() {
             java.lang.Object ref = introduction_;
             if (ref instanceof java.lang.String) {
@@ -16398,6 +16517,7 @@ public final class WalletProtobuf {
          * 
          * @return The ownerAddr.
          */
+        @java.lang.Override
         public java.lang.String getOwnerAddr() {
             java.lang.Object ref = ownerAddr_;
             if (ref instanceof java.lang.String) {
@@ -16415,6 +16535,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for ownerAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOwnerAddrBytes() {
             java.lang.Object ref = ownerAddr_;
             if (ref instanceof java.lang.String) {
@@ -16434,6 +16555,7 @@ public final class WalletProtobuf {
          * 
          * @return The total.
          */
+        @java.lang.Override
         public long getTotal() {
             return total_;
         }
@@ -16446,6 +16568,7 @@ public final class WalletProtobuf {
          * 
          * @return The price.
          */
+        @java.lang.Override
         public long getPrice() {
             return price_;
         }
@@ -17287,6 +17410,7 @@ public final class WalletProtobuf {
              * 
              * @return The total.
              */
+            @java.lang.Override
             public long getTotal() {
                 return total_;
             }
@@ -17325,6 +17449,7 @@ public final class WalletProtobuf {
              * 
              * @return The price.
              */
+            @java.lang.Override
             public long getPrice() {
                 return price_;
             }
@@ -17554,6 +17679,7 @@ public final class WalletProtobuf {
          * 
          * @return The finisherAddr.
          */
+        @java.lang.Override
         public java.lang.String getFinisherAddr() {
             java.lang.Object ref = finisherAddr_;
             if (ref instanceof java.lang.String) {
@@ -17571,6 +17697,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for finisherAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFinisherAddrBytes() {
             java.lang.Object ref = finisherAddr_;
             if (ref instanceof java.lang.String) {
@@ -17590,6 +17717,7 @@ public final class WalletProtobuf {
          * 
          * @return The symbol.
          */
+        @java.lang.Override
         public java.lang.String getSymbol() {
             java.lang.Object ref = symbol_;
             if (ref instanceof java.lang.String) {
@@ -17607,6 +17735,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for symbol.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSymbolBytes() {
             java.lang.Object ref = symbol_;
             if (ref instanceof java.lang.String) {
@@ -17626,6 +17755,7 @@ public final class WalletProtobuf {
          * 
          * @return The ownerAddr.
          */
+        @java.lang.Override
         public java.lang.String getOwnerAddr() {
             java.lang.Object ref = ownerAddr_;
             if (ref instanceof java.lang.String) {
@@ -17643,6 +17773,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for ownerAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOwnerAddrBytes() {
             java.lang.Object ref = ownerAddr_;
             if (ref instanceof java.lang.String) {
@@ -18447,6 +18578,7 @@ public final class WalletProtobuf {
          * 
          * @return The revokerAddr.
          */
+        @java.lang.Override
         public java.lang.String getRevokerAddr() {
             java.lang.Object ref = revokerAddr_;
             if (ref instanceof java.lang.String) {
@@ -18464,6 +18596,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for revokerAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getRevokerAddrBytes() {
             java.lang.Object ref = revokerAddr_;
             if (ref instanceof java.lang.String) {
@@ -18483,6 +18616,7 @@ public final class WalletProtobuf {
          * 
          * @return The symbol.
          */
+        @java.lang.Override
         public java.lang.String getSymbol() {
             java.lang.Object ref = symbol_;
             if (ref instanceof java.lang.String) {
@@ -18500,6 +18634,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for symbol.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSymbolBytes() {
             java.lang.Object ref = symbol_;
             if (ref instanceof java.lang.String) {
@@ -18519,6 +18654,7 @@ public final class WalletProtobuf {
          * 
          * @return The ownerAddr.
          */
+        @java.lang.Override
         public java.lang.String getOwnerAddr() {
             java.lang.Object ref = ownerAddr_;
             if (ref instanceof java.lang.String) {
@@ -18536,6 +18672,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for ownerAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOwnerAddrBytes() {
             java.lang.Object ref = ownerAddr_;
             if (ref instanceof java.lang.String) {
@@ -19361,6 +19498,7 @@ public final class WalletProtobuf {
          * 
          * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -19378,6 +19516,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -19397,6 +19536,7 @@ public final class WalletProtobuf {
          * 
          * @return The op.
          */
+        @java.lang.Override
         public java.lang.String getOp() {
             java.lang.Object ref = op_;
             if (ref instanceof java.lang.String) {
@@ -19414,6 +19554,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for op.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOpBytes() {
             java.lang.Object ref = op_;
             if (ref instanceof java.lang.String) {
@@ -19433,6 +19574,7 @@ public final class WalletProtobuf {
          * 
          * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -19450,6 +19592,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -19469,6 +19612,7 @@ public final class WalletProtobuf {
          * 
          * @return The modifier.
          */
+        @java.lang.Override
         public java.lang.String getModifier() {
             java.lang.Object ref = modifier_;
             if (ref instanceof java.lang.String) {
@@ -19486,6 +19630,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for modifier.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getModifierBytes() {
             java.lang.Object ref = modifier_;
             if (ref instanceof java.lang.String) {
@@ -20500,6 +20645,7 @@ public final class WalletProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -20517,6 +20663,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -20536,6 +20683,7 @@ public final class WalletProtobuf {
          * 
          * @return The privkey.
          */
+        @java.lang.Override
         public java.lang.String getPrivkey() {
             java.lang.Object ref = privkey_;
             if (ref instanceof java.lang.String) {
@@ -20553,6 +20701,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for privkey.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPrivkeyBytes() {
             java.lang.Object ref = privkey_;
             if (ref instanceof java.lang.String) {
@@ -20572,6 +20721,7 @@ public final class WalletProtobuf {
          * 
          * @return The txHex.
          */
+        @java.lang.Override
         public java.lang.String getTxHex() {
             java.lang.Object ref = txHex_;
             if (ref instanceof java.lang.String) {
@@ -20589,6 +20739,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for txHex.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTxHexBytes() {
             java.lang.Object ref = txHex_;
             if (ref instanceof java.lang.String) {
@@ -20608,6 +20759,7 @@ public final class WalletProtobuf {
          * 
          * @return The expire.
          */
+        @java.lang.Override
         public java.lang.String getExpire() {
             java.lang.Object ref = expire_;
             if (ref instanceof java.lang.String) {
@@ -20625,6 +20777,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for expire.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExpireBytes() {
             java.lang.Object ref = expire_;
             if (ref instanceof java.lang.String) {
@@ -20644,6 +20797,7 @@ public final class WalletProtobuf {
          * 
          * @return The index.
          */
+        @java.lang.Override
         public int getIndex() {
             return index_;
         }
@@ -20663,6 +20817,7 @@ public final class WalletProtobuf {
          * 
          * @return The token.
          */
+        @java.lang.Override
         public java.lang.String getToken() {
             java.lang.Object ref = token_;
             if (ref instanceof java.lang.String) {
@@ -20687,6 +20842,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for token.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTokenBytes() {
             java.lang.Object ref = token_;
             if (ref instanceof java.lang.String) {
@@ -20706,6 +20862,7 @@ public final class WalletProtobuf {
          * 
          * @return The fee.
          */
+        @java.lang.Override
         public long getFee() {
             return fee_;
         }
@@ -20722,6 +20879,7 @@ public final class WalletProtobuf {
          * 
          * @return The newToAddr.
          */
+        @java.lang.Override
         public java.lang.String getNewToAddr() {
             java.lang.Object ref = newToAddr_;
             if (ref instanceof java.lang.String) {
@@ -20743,6 +20901,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for newToAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNewToAddrBytes() {
             java.lang.Object ref = newToAddr_;
             if (ref instanceof java.lang.String) {
@@ -21522,6 +21681,7 @@ public final class WalletProtobuf {
              * 
              * @return The index.
              */
+            @java.lang.Override
             public int getIndex() {
                 return index_;
             }
@@ -21680,6 +21840,7 @@ public final class WalletProtobuf {
              * 
              * @return The fee.
              */
+            @java.lang.Override
             public long getFee() {
                 return fee_;
             }
@@ -21972,6 +22133,7 @@ public final class WalletProtobuf {
          * 
          * @return The txHex.
          */
+        @java.lang.Override
         public java.lang.String getTxHex() {
             java.lang.Object ref = txHex_;
             if (ref instanceof java.lang.String) {
@@ -21989,6 +22151,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for txHex.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTxHexBytes() {
             java.lang.Object ref = txHex_;
             if (ref instanceof java.lang.String) {
@@ -22588,6 +22751,7 @@ public final class WalletProtobuf {
          * 
          * @return The frommodule.
          */
+        @java.lang.Override
         public java.lang.String getFrommodule() {
             java.lang.Object ref = frommodule_;
             if (ref instanceof java.lang.String) {
@@ -22605,6 +22769,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for frommodule.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFrommoduleBytes() {
             java.lang.Object ref = frommodule_;
             if (ref instanceof java.lang.String) {
@@ -22624,6 +22789,7 @@ public final class WalletProtobuf {
          * 
          * @return The tomodule.
          */
+        @java.lang.Override
         public java.lang.String getTomodule() {
             java.lang.Object ref = tomodule_;
             if (ref instanceof java.lang.String) {
@@ -22641,6 +22807,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for tomodule.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTomoduleBytes() {
             java.lang.Object ref = tomodule_;
             if (ref instanceof java.lang.String) {
@@ -22660,6 +22827,7 @@ public final class WalletProtobuf {
          * 
          * @return The error.
          */
+        @java.lang.Override
         public java.lang.String getError() {
             java.lang.Object ref = error_;
             if (ref instanceof java.lang.String) {
@@ -22677,6 +22845,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for error.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getErrorBytes() {
             java.lang.Object ref = error_;
             if (ref instanceof java.lang.String) {
@@ -23428,6 +23597,7 @@ public final class WalletProtobuf {
          * 
          * @return The data.
          */
+        @java.lang.Override
         public int getData() {
             return data_;
         }
@@ -23740,6 +23910,7 @@ public final class WalletProtobuf {
              * 
              * @return The data.
              */
+            @java.lang.Override
             public int getData() {
                 return data_;
             }
@@ -23918,6 +24089,7 @@ public final class WalletProtobuf {
          * 
          * @return The withoutBalance.
          */
+        @java.lang.Override
         public boolean getWithoutBalance() {
             return withoutBalance_;
         }
@@ -24233,6 +24405,7 @@ public final class WalletProtobuf {
              * 
              * @return The withoutBalance.
              */
+            @java.lang.Override
             public boolean getWithoutBalance() {
                 return withoutBalance_;
             }
@@ -24441,6 +24614,7 @@ public final class WalletProtobuf {
          * 
          * @return The fileName.
          */
+        @java.lang.Override
         public java.lang.String getFileName() {
             java.lang.Object ref = fileName_;
             if (ref instanceof java.lang.String) {
@@ -24458,6 +24632,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for fileName.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFileNameBytes() {
             java.lang.Object ref = fileName_;
             if (ref instanceof java.lang.String) {
@@ -24477,6 +24652,7 @@ public final class WalletProtobuf {
          * 
          * @return The passwd.
          */
+        @java.lang.Override
         public java.lang.String getPasswd() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {
@@ -24494,6 +24670,7 @@ public final class WalletProtobuf {
          * 
          * @return The bytes for passwd.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPasswdBytes() {
             java.lang.Object ref = passwd_;
             if (ref instanceof java.lang.String) {

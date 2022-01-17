@@ -1,66 +1,65 @@
 syntax = "proto3";
 
 package types;
-option java_outer_classname = "WasmProtobuf";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option  java_outer_classname = "WasmProtobuf";
+option  java_package         = "cn.chain33.javasdk.model.protobuf";
 
 message wasmAction {
-  oneof value {
-    wasmCreate create = 1;
-    wasmUpdate update = 2;
-    wasmCall call = 3;
-  }
-  int32 ty = 4;
+    oneof value {
+        wasmCreate create = 1;
+        wasmUpdate update = 2;
+        wasmCall   call   = 3;
+    }
+    int32 ty = 4;
 }
 
 message wasmCreate {
-  string name = 1;
-  bytes code = 2;
+    string name = 1;
+    bytes  code = 2;
 }
 
 message wasmUpdate {
-  string name = 1;
-  bytes code = 2;
+    string name = 1;
+    bytes  code = 2;
 }
 
 message wasmCall {
-  string contract = 1;
-  string method = 2;
-  repeated int64 parameters = 3;
-  repeated string env = 4;
+    string          contract   = 1;
+    string          method     = 2;
+    repeated int64  parameters = 3;
+    repeated string env        = 4;
 }
 
 message queryCheckContract {
-  string name = 1;
+    string name = 1;
 }
 
 message queryContractDB {
-  string contract = 1;
-  string key = 2;
+    string contract = 1;
+    string key      = 2;
 }
 
 message customLog {
-  repeated string info = 1;
+    repeated string info = 1;
 }
 
 message createContractLog {
-  string name = 1;
-  string code = 2;
+    string name = 1;
+    string code = 2;
 }
 
 message updateContractLog {
-  string name = 1;
-  string code = 2;
+    string name = 1;
+    string code = 2;
 }
 
 message callContractLog {
-  string contract = 1;
-  string method = 2;
-  int32 result = 3;
+    string contract = 1;
+    string method   = 2;
+    int32  result   = 3;
 }
 
 message localDataLog {
-  bytes key = 1;
-  bytes value = 2;
+    bytes key   = 1;
+    bytes value = 2;
 }
-

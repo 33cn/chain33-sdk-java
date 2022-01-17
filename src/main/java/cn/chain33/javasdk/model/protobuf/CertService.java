@@ -24,6 +24,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * 
+         * @return The name.
          */
         java.lang.String getName();
 
@@ -33,6 +35,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
          */
         com.google.protobuf.ByteString getNameBytes();
 
@@ -42,6 +46,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 2;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
@@ -51,6 +57,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 2;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
@@ -60,6 +68,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string pubKey = 3;</code>
+         * 
+         * @return The pubKey.
          */
         java.lang.String getPubKey();
 
@@ -69,6 +79,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string pubKey = 3;</code>
+         * 
+         * @return The bytes for pubKey.
          */
         com.google.protobuf.ByteString getPubKeyBytes();
 
@@ -78,6 +90,8 @@ public final class CertService {
          * </pre>
          *
          * <code>bytes sign = 4;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -196,7 +210,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * 
+         * @return The name.
          */
+        @java.lang.Override
         public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -215,7 +232,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNameBytes() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -236,7 +256,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 2;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -255,7 +278,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 2;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -276,7 +302,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string pubKey = 3;</code>
+         * 
+         * @return The pubKey.
          */
+        @java.lang.Override
         public java.lang.String getPubKey() {
             java.lang.Object ref = pubKey_;
             if (ref instanceof java.lang.String) {
@@ -295,7 +324,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string pubKey = 3;</code>
+         * 
+         * @return The bytes for pubKey.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPubKeyBytes() {
             java.lang.Object ref = pubKey_;
             if (ref instanceof java.lang.String) {
@@ -316,7 +348,10 @@ public final class CertService {
          * </pre>
          *
          * <code>bytes sign = 4;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -687,6 +722,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string name = 1;</code>
+             * 
+             * @return The name.
              */
             public java.lang.String getName() {
                 java.lang.Object ref = name_;
@@ -706,6 +743,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
              */
             public com.google.protobuf.ByteString getNameBytes() {
                 java.lang.Object ref = name_;
@@ -725,6 +764,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setName(java.lang.String value) {
                 if (value == null) {
@@ -742,6 +786,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearName() {
 
@@ -756,6 +802,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setNameBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -776,6 +827,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 2;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -795,6 +848,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 2;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -814,6 +869,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 2;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -831,6 +891,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -845,6 +907,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 2;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -865,6 +932,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string pubKey = 3;</code>
+             * 
+             * @return The pubKey.
              */
             public java.lang.String getPubKey() {
                 java.lang.Object ref = pubKey_;
@@ -884,6 +953,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string pubKey = 3;</code>
+             * 
+             * @return The bytes for pubKey.
              */
             public com.google.protobuf.ByteString getPubKeyBytes() {
                 java.lang.Object ref = pubKey_;
@@ -903,6 +974,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string pubKey = 3;</code>
+             * 
+             * @param value
+             *            The pubKey to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setPubKey(java.lang.String value) {
                 if (value == null) {
@@ -920,6 +996,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string pubKey = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearPubKey() {
 
@@ -934,6 +1012,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string pubKey = 3;</code>
+             * 
+             * @param value
+             *            The bytes for pubKey to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setPubKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -954,7 +1037,10 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 4;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
@@ -965,6 +1051,11 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 4;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -982,6 +1073,8 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -1048,6 +1141,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
@@ -1057,6 +1152,8 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
@@ -1066,6 +1163,8 @@ public final class CertService {
          * </pre>
          *
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -1169,7 +1268,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -1188,7 +1290,10 @@ public final class CertService {
          * </pre>
          *
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -1209,7 +1314,10 @@ public final class CertService {
          * </pre>
          *
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -1546,6 +1654,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 1;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -1565,6 +1675,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 1;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -1584,6 +1696,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -1601,6 +1718,8 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -1615,6 +1734,11 @@ public final class CertService {
              * </pre>
              *
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -1635,7 +1759,10 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 2;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
@@ -1646,6 +1773,11 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 2;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -1663,6 +1795,8 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -1725,16 +1859,22 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -1834,7 +1974,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -1849,7 +1992,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -1866,7 +2012,10 @@ public final class CertService {
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -2197,6 +2346,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -2212,6 +2363,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -2227,6 +2380,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -2240,6 +2398,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -2250,6 +2410,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -2266,13 +2431,21 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -2286,6 +2459,8 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -2348,16 +2523,22 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The serial.
          */
         java.lang.String getSerial();
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The bytes for serial.
          */
         com.google.protobuf.ByteString getSerialBytes();
 
         /**
          * <code>bytes cert = 2;</code>
+         * 
+         * @return The cert.
          */
         com.google.protobuf.ByteString getCert();
     }
@@ -2457,7 +2638,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The serial.
          */
+        @java.lang.Override
         public java.lang.String getSerial() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -2472,7 +2656,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The bytes for serial.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSerialBytes() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -2489,7 +2676,10 @@ public final class CertService {
 
         /**
          * <code>bytes cert = 2;</code>
+         * 
+         * @return The cert.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getCert() {
             return cert_;
         }
@@ -2820,6 +3010,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return The serial.
              */
             public java.lang.String getSerial() {
                 java.lang.Object ref = serial_;
@@ -2835,6 +3027,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return The bytes for serial.
              */
             public com.google.protobuf.ByteString getSerialBytes() {
                 java.lang.Object ref = serial_;
@@ -2850,6 +3044,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @param value
+             *            The serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerial(java.lang.String value) {
                 if (value == null) {
@@ -2863,6 +3062,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSerial() {
 
@@ -2873,6 +3074,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @param value
+             *            The bytes for serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerialBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -2889,13 +3095,21 @@ public final class CertService {
 
             /**
              * <code>bytes cert = 2;</code>
+             * 
+             * @return The cert.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getCert() {
                 return cert_;
             }
 
             /**
              * <code>bytes cert = 2;</code>
+             * 
+             * @param value
+             *            The cert to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setCert(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -2909,6 +3123,8 @@ public final class CertService {
 
             /**
              * <code>bytes cert = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearCert() {
 
@@ -2971,21 +3187,29 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The serial.
          */
         java.lang.String getSerial();
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The bytes for serial.
          */
         com.google.protobuf.ByteString getSerialBytes();
 
         /**
          * <code>string identity = 2;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
         /**
          * <code>string identity = 2;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
@@ -2995,6 +3219,8 @@ public final class CertService {
          * </pre>
          *
          * <code>bytes sign = 3;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -3101,7 +3327,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The serial.
          */
+        @java.lang.Override
         public java.lang.String getSerial() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -3116,7 +3345,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The bytes for serial.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSerialBytes() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -3133,7 +3365,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 2;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -3148,7 +3383,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 2;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -3169,7 +3407,10 @@ public final class CertService {
          * </pre>
          *
          * <code>bytes sign = 3;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -3519,6 +3760,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return The serial.
              */
             public java.lang.String getSerial() {
                 java.lang.Object ref = serial_;
@@ -3534,6 +3777,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return The bytes for serial.
              */
             public com.google.protobuf.ByteString getSerialBytes() {
                 java.lang.Object ref = serial_;
@@ -3549,6 +3794,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @param value
+             *            The serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerial(java.lang.String value) {
                 if (value == null) {
@@ -3562,6 +3812,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSerial() {
 
@@ -3572,6 +3824,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @param value
+             *            The bytes for serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerialBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -3588,6 +3845,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 2;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -3603,6 +3862,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 2;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -3618,6 +3879,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 2;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -3631,6 +3897,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -3641,6 +3909,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 2;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -3661,7 +3934,10 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 3;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
@@ -3672,6 +3948,11 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 3;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -3689,6 +3970,8 @@ public final class CertService {
              * </pre>
              *
              * <code>bytes sign = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -3751,16 +4034,22 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -3860,7 +4149,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -3875,7 +4167,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -3892,7 +4187,10 @@ public final class CertService {
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -4223,6 +4521,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -4238,6 +4538,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -4253,6 +4555,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -4266,6 +4573,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -4276,6 +4585,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4292,13 +4606,21 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4312,6 +4634,8 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -4374,16 +4698,22 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -4483,7 +4813,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -4498,7 +4831,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 1;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -4515,7 +4851,10 @@ public final class CertService {
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -4848,6 +5187,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -4863,6 +5204,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -4878,6 +5221,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -4891,6 +5239,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -4901,6 +5251,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 1;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4917,13 +5272,21 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4937,6 +5300,8 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -4999,36 +5364,50 @@ public final class CertService {
 
         /**
          * <code>string name = 1;</code>
+         * 
+         * @return The name.
          */
         java.lang.String getName();
 
         /**
          * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
          */
         com.google.protobuf.ByteString getNameBytes();
 
         /**
          * <code>bytes pubKey = 2;</code>
+         * 
+         * @return The pubKey.
          */
         com.google.protobuf.ByteString getPubKey();
 
         /**
          * <code>string identity = 3;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
         /**
          * <code>string identity = 3;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
 
         /**
          * <code>string serial = 4;</code>
+         * 
+         * @return The serial.
          */
         java.lang.String getSerial();
 
         /**
          * <code>string serial = 4;</code>
+         * 
+         * @return The bytes for serial.
          */
         com.google.protobuf.ByteString getSerialBytes();
     }
@@ -5142,7 +5521,10 @@ public final class CertService {
 
         /**
          * <code>string name = 1;</code>
+         * 
+         * @return The name.
          */
+        @java.lang.Override
         public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -5157,7 +5539,10 @@ public final class CertService {
 
         /**
          * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNameBytes() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -5174,7 +5559,10 @@ public final class CertService {
 
         /**
          * <code>bytes pubKey = 2;</code>
+         * 
+         * @return The pubKey.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPubKey() {
             return pubKey_;
         }
@@ -5184,7 +5572,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 3;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -5199,7 +5590,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 3;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -5216,7 +5610,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 4;</code>
+         * 
+         * @return The serial.
          */
+        @java.lang.Override
         public java.lang.String getSerial() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -5231,7 +5628,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 4;</code>
+         * 
+         * @return The bytes for serial.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSerialBytes() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -5605,6 +6005,8 @@ public final class CertService {
 
             /**
              * <code>string name = 1;</code>
+             * 
+             * @return The name.
              */
             public java.lang.String getName() {
                 java.lang.Object ref = name_;
@@ -5620,6 +6022,8 @@ public final class CertService {
 
             /**
              * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
              */
             public com.google.protobuf.ByteString getNameBytes() {
                 java.lang.Object ref = name_;
@@ -5635,6 +6039,11 @@ public final class CertService {
 
             /**
              * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setName(java.lang.String value) {
                 if (value == null) {
@@ -5648,6 +6057,8 @@ public final class CertService {
 
             /**
              * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearName() {
 
@@ -5658,6 +6069,11 @@ public final class CertService {
 
             /**
              * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setNameBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5674,13 +6090,21 @@ public final class CertService {
 
             /**
              * <code>bytes pubKey = 2;</code>
+             * 
+             * @return The pubKey.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPubKey() {
                 return pubKey_;
             }
 
             /**
              * <code>bytes pubKey = 2;</code>
+             * 
+             * @param value
+             *            The pubKey to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setPubKey(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5694,6 +6118,8 @@ public final class CertService {
 
             /**
              * <code>bytes pubKey = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearPubKey() {
 
@@ -5706,6 +6132,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 3;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -5721,6 +6149,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 3;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -5736,6 +6166,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 3;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -5749,6 +6184,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -5759,6 +6196,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 3;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5775,6 +6217,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 4;</code>
+             * 
+             * @return The serial.
              */
             public java.lang.String getSerial() {
                 java.lang.Object ref = serial_;
@@ -5790,6 +6234,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 4;</code>
+             * 
+             * @return The bytes for serial.
              */
             public com.google.protobuf.ByteString getSerialBytes() {
                 java.lang.Object ref = serial_;
@@ -5805,6 +6251,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 4;</code>
+             * 
+             * @param value
+             *            The serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerial(java.lang.String value) {
                 if (value == null) {
@@ -5818,6 +6269,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSerial() {
 
@@ -5828,6 +6281,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 4;</code>
+             * 
+             * @param value
+             *            The bytes for serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerialBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5894,16 +6352,22 @@ public final class CertService {
 
         /**
          * <code>string sn = 1;</code>
+         * 
+         * @return The sn.
          */
         java.lang.String getSn();
 
         /**
          * <code>string sn = 1;</code>
+         * 
+         * @return The bytes for sn.
          */
         com.google.protobuf.ByteString getSnBytes();
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
         com.google.protobuf.ByteString getSign();
     }
@@ -6003,7 +6467,10 @@ public final class CertService {
 
         /**
          * <code>string sn = 1;</code>
+         * 
+         * @return The sn.
          */
+        @java.lang.Override
         public java.lang.String getSn() {
             java.lang.Object ref = sn_;
             if (ref instanceof java.lang.String) {
@@ -6018,7 +6485,10 @@ public final class CertService {
 
         /**
          * <code>string sn = 1;</code>
+         * 
+         * @return The bytes for sn.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSnBytes() {
             java.lang.Object ref = sn_;
             if (ref instanceof java.lang.String) {
@@ -6035,7 +6505,10 @@ public final class CertService {
 
         /**
          * <code>bytes sign = 2;</code>
+         * 
+         * @return The sign.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSign() {
             return sign_;
         }
@@ -6368,6 +6841,8 @@ public final class CertService {
 
             /**
              * <code>string sn = 1;</code>
+             * 
+             * @return The sn.
              */
             public java.lang.String getSn() {
                 java.lang.Object ref = sn_;
@@ -6383,6 +6858,8 @@ public final class CertService {
 
             /**
              * <code>string sn = 1;</code>
+             * 
+             * @return The bytes for sn.
              */
             public com.google.protobuf.ByteString getSnBytes() {
                 java.lang.Object ref = sn_;
@@ -6398,6 +6875,11 @@ public final class CertService {
 
             /**
              * <code>string sn = 1;</code>
+             * 
+             * @param value
+             *            The sn to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSn(java.lang.String value) {
                 if (value == null) {
@@ -6411,6 +6893,8 @@ public final class CertService {
 
             /**
              * <code>string sn = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSn() {
 
@@ -6421,6 +6905,11 @@ public final class CertService {
 
             /**
              * <code>string sn = 1;</code>
+             * 
+             * @param value
+             *            The bytes for sn to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSnBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -6437,13 +6926,21 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return The sign.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSign() {
                 return sign_;
             }
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @param value
+             *            The sign to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSign(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -6457,6 +6954,8 @@ public final class CertService {
 
             /**
              * <code>bytes sign = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSign() {
 
@@ -6519,11 +7018,15 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The serial.
          */
         java.lang.String getSerial();
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The bytes for serial.
          */
         com.google.protobuf.ByteString getSerialBytes();
 
@@ -6533,31 +7036,43 @@ public final class CertService {
          * </pre>
          *
          * <code>int32 status = 2;</code>
+         * 
+         * @return The status.
          */
         int getStatus();
 
         /**
          * <code>int64 exipreTime = 3;</code>
+         * 
+         * @return The exipreTime.
          */
         long getExipreTime();
 
         /**
          * <code>int64 revokeTime = 4;</code>
+         * 
+         * @return The revokeTime.
          */
         long getRevokeTime();
 
         /**
          * <code>bytes cert = 5;</code>
+         * 
+         * @return The cert.
          */
         com.google.protobuf.ByteString getCert();
 
         /**
          * <code>string identity = 6;</code>
+         * 
+         * @return The identity.
          */
         java.lang.String getIdentity();
 
         /**
          * <code>string identity = 6;</code>
+         * 
+         * @return The bytes for identity.
          */
         com.google.protobuf.ByteString getIdentityBytes();
     }
@@ -6679,7 +7194,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The serial.
          */
+        @java.lang.Override
         public java.lang.String getSerial() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -6694,7 +7212,10 @@ public final class CertService {
 
         /**
          * <code>string serial = 1;</code>
+         * 
+         * @return The bytes for serial.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSerialBytes() {
             java.lang.Object ref = serial_;
             if (ref instanceof java.lang.String) {
@@ -6715,7 +7236,10 @@ public final class CertService {
          * </pre>
          *
          * <code>int32 status = 2;</code>
+         * 
+         * @return The status.
          */
+        @java.lang.Override
         public int getStatus() {
             return status_;
         }
@@ -6725,7 +7249,10 @@ public final class CertService {
 
         /**
          * <code>int64 exipreTime = 3;</code>
+         * 
+         * @return The exipreTime.
          */
+        @java.lang.Override
         public long getExipreTime() {
             return exipreTime_;
         }
@@ -6735,7 +7262,10 @@ public final class CertService {
 
         /**
          * <code>int64 revokeTime = 4;</code>
+         * 
+         * @return The revokeTime.
          */
+        @java.lang.Override
         public long getRevokeTime() {
             return revokeTime_;
         }
@@ -6745,7 +7275,10 @@ public final class CertService {
 
         /**
          * <code>bytes cert = 5;</code>
+         * 
+         * @return The cert.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getCert() {
             return cert_;
         }
@@ -6755,7 +7288,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 6;</code>
+         * 
+         * @return The identity.
          */
+        @java.lang.Override
         public java.lang.String getIdentity() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -6770,7 +7306,10 @@ public final class CertService {
 
         /**
          * <code>string identity = 6;</code>
+         * 
+         * @return The bytes for identity.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getIdentityBytes() {
             java.lang.Object ref = identity_;
             if (ref instanceof java.lang.String) {
@@ -7175,6 +7714,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return The serial.
              */
             public java.lang.String getSerial() {
                 java.lang.Object ref = serial_;
@@ -7190,6 +7731,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return The bytes for serial.
              */
             public com.google.protobuf.ByteString getSerialBytes() {
                 java.lang.Object ref = serial_;
@@ -7205,6 +7748,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @param value
+             *            The serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerial(java.lang.String value) {
                 if (value == null) {
@@ -7218,6 +7766,8 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSerial() {
 
@@ -7228,6 +7778,11 @@ public final class CertService {
 
             /**
              * <code>string serial = 1;</code>
+             * 
+             * @param value
+             *            The bytes for serial to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSerialBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7248,7 +7803,10 @@ public final class CertService {
              * </pre>
              *
              * <code>int32 status = 2;</code>
+             * 
+             * @return The status.
              */
+            @java.lang.Override
             public int getStatus() {
                 return status_;
             }
@@ -7259,6 +7817,11 @@ public final class CertService {
              * </pre>
              *
              * <code>int32 status = 2;</code>
+             * 
+             * @param value
+             *            The status to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setStatus(int value) {
 
@@ -7273,6 +7836,8 @@ public final class CertService {
              * </pre>
              *
              * <code>int32 status = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearStatus() {
 
@@ -7285,13 +7850,21 @@ public final class CertService {
 
             /**
              * <code>int64 exipreTime = 3;</code>
+             * 
+             * @return The exipreTime.
              */
+            @java.lang.Override
             public long getExipreTime() {
                 return exipreTime_;
             }
 
             /**
              * <code>int64 exipreTime = 3;</code>
+             * 
+             * @param value
+             *            The exipreTime to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setExipreTime(long value) {
 
@@ -7302,6 +7875,8 @@ public final class CertService {
 
             /**
              * <code>int64 exipreTime = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearExipreTime() {
 
@@ -7314,13 +7889,21 @@ public final class CertService {
 
             /**
              * <code>int64 revokeTime = 4;</code>
+             * 
+             * @return The revokeTime.
              */
+            @java.lang.Override
             public long getRevokeTime() {
                 return revokeTime_;
             }
 
             /**
              * <code>int64 revokeTime = 4;</code>
+             * 
+             * @param value
+             *            The revokeTime to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setRevokeTime(long value) {
 
@@ -7331,6 +7914,8 @@ public final class CertService {
 
             /**
              * <code>int64 revokeTime = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearRevokeTime() {
 
@@ -7343,13 +7928,21 @@ public final class CertService {
 
             /**
              * <code>bytes cert = 5;</code>
+             * 
+             * @return The cert.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getCert() {
                 return cert_;
             }
 
             /**
              * <code>bytes cert = 5;</code>
+             * 
+             * @param value
+             *            The cert to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setCert(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7363,6 +7956,8 @@ public final class CertService {
 
             /**
              * <code>bytes cert = 5;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearCert() {
 
@@ -7375,6 +7970,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 6;</code>
+             * 
+             * @return The identity.
              */
             public java.lang.String getIdentity() {
                 java.lang.Object ref = identity_;
@@ -7390,6 +7987,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 6;</code>
+             * 
+             * @return The bytes for identity.
              */
             public com.google.protobuf.ByteString getIdentityBytes() {
                 java.lang.Object ref = identity_;
@@ -7405,6 +8004,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 6;</code>
+             * 
+             * @param value
+             *            The identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentity(java.lang.String value) {
                 if (value == null) {
@@ -7418,6 +8022,8 @@ public final class CertService {
 
             /**
              * <code>string identity = 6;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearIdentity() {
 
@@ -7428,6 +8034,11 @@ public final class CertService {
 
             /**
              * <code>string identity = 6;</code>
+             * 
+             * @param value
+             *            The bytes for identity to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setIdentityBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7494,11 +8105,15 @@ public final class CertService {
 
         /**
          * <code>.CertNew new = 1;</code>
+         * 
+         * @return Whether the new field is set.
          */
         boolean hasNew();
 
         /**
          * <code>.CertNew new = 1;</code>
+         * 
+         * @return The new.
          */
         cn.chain33.javasdk.model.protobuf.CertService.CertNew getNew();
 
@@ -7509,11 +8124,15 @@ public final class CertService {
 
         /**
          * <code>.CertUpdate update = 2;</code>
+         * 
+         * @return Whether the update field is set.
          */
         boolean hasUpdate();
 
         /**
          * <code>.CertUpdate update = 2;</code>
+         * 
+         * @return The update.
          */
         cn.chain33.javasdk.model.protobuf.CertService.CertUpdate getUpdate();
 
@@ -7524,11 +8143,15 @@ public final class CertService {
 
         /**
          * <code>.CertNormal normal = 3;</code>
+         * 
+         * @return Whether the normal field is set.
          */
         boolean hasNormal();
 
         /**
          * <code>.CertNormal normal = 3;</code>
+         * 
+         * @return The normal.
          */
         cn.chain33.javasdk.model.protobuf.CertService.CertNormal getNormal();
 
@@ -7539,6 +8162,8 @@ public final class CertService {
 
         /**
          * <code>int32 ty = 4;</code>
+         * 
+         * @return The ty.
          */
         int getTy();
 
@@ -7674,7 +8299,8 @@ public final class CertService {
         private int valueCase_ = 0;
         private java.lang.Object value_;
 
-        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
             NEW(1), UPDATE(2), NORMAL(3), VALUE_NOT_SET(0);
 
             private final int value;
@@ -7684,6 +8310,11 @@ public final class CertService {
             }
 
             /**
+             * @param value
+             *            The number of the enum to look for.
+             * 
+             * @return The enum associated with the given number.
+             * 
              * @deprecated Use {@link #forNumber(int)} instead.
              */
             @java.lang.Deprecated
@@ -7719,14 +8350,20 @@ public final class CertService {
 
         /**
          * <code>.CertNew new = 1;</code>
+         * 
+         * @return Whether the new field is set.
          */
+        @java.lang.Override
         public boolean hasNew() {
             return valueCase_ == 1;
         }
 
         /**
          * <code>.CertNew new = 1;</code>
+         * 
+         * @return The new.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CertService.CertNew getNew() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.CertService.CertNew) value_;
@@ -7737,6 +8374,7 @@ public final class CertService {
         /**
          * <code>.CertNew new = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CertService.CertNewOrBuilder getNewOrBuilder() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.CertService.CertNew) value_;
@@ -7748,14 +8386,20 @@ public final class CertService {
 
         /**
          * <code>.CertUpdate update = 2;</code>
+         * 
+         * @return Whether the update field is set.
          */
+        @java.lang.Override
         public boolean hasUpdate() {
             return valueCase_ == 2;
         }
 
         /**
          * <code>.CertUpdate update = 2;</code>
+         * 
+         * @return The update.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CertService.CertUpdate getUpdate() {
             if (valueCase_ == 2) {
                 return (cn.chain33.javasdk.model.protobuf.CertService.CertUpdate) value_;
@@ -7766,6 +8410,7 @@ public final class CertService {
         /**
          * <code>.CertUpdate update = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CertService.CertUpdateOrBuilder getUpdateOrBuilder() {
             if (valueCase_ == 2) {
                 return (cn.chain33.javasdk.model.protobuf.CertService.CertUpdate) value_;
@@ -7777,14 +8422,20 @@ public final class CertService {
 
         /**
          * <code>.CertNormal normal = 3;</code>
+         * 
+         * @return Whether the normal field is set.
          */
+        @java.lang.Override
         public boolean hasNormal() {
             return valueCase_ == 3;
         }
 
         /**
          * <code>.CertNormal normal = 3;</code>
+         * 
+         * @return The normal.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CertService.CertNormal getNormal() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.CertService.CertNormal) value_;
@@ -7795,6 +8446,7 @@ public final class CertService {
         /**
          * <code>.CertNormal normal = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CertService.CertNormalOrBuilder getNormalOrBuilder() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.CertService.CertNormal) value_;
@@ -7807,7 +8459,10 @@ public final class CertService {
 
         /**
          * <code>int32 ty = 4;</code>
+         * 
+         * @return The ty.
          */
+        @java.lang.Override
         public int getTy() {
             return ty_;
         }
@@ -8231,14 +8886,20 @@ public final class CertService {
 
             /**
              * <code>.CertNew new = 1;</code>
+             * 
+             * @return Whether the new field is set.
              */
+            @java.lang.Override
             public boolean hasNew() {
                 return valueCase_ == 1;
             }
 
             /**
              * <code>.CertNew new = 1;</code>
+             * 
+             * @return The new.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.CertService.CertNew getNew() {
                 if (newBuilder_ == null) {
                     if (valueCase_ == 1) {
@@ -8338,6 +8999,7 @@ public final class CertService {
             /**
              * <code>.CertNew new = 1;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.CertService.CertNewOrBuilder getNewOrBuilder() {
                 if ((valueCase_ == 1) && (newBuilder_ != null)) {
                     return newBuilder_.getMessageOrBuilder();
@@ -8372,14 +9034,20 @@ public final class CertService {
 
             /**
              * <code>.CertUpdate update = 2;</code>
+             * 
+             * @return Whether the update field is set.
              */
+            @java.lang.Override
             public boolean hasUpdate() {
                 return valueCase_ == 2;
             }
 
             /**
              * <code>.CertUpdate update = 2;</code>
+             * 
+             * @return The update.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.CertService.CertUpdate getUpdate() {
                 if (updateBuilder_ == null) {
                     if (valueCase_ == 2) {
@@ -8479,6 +9147,7 @@ public final class CertService {
             /**
              * <code>.CertUpdate update = 2;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.CertService.CertUpdateOrBuilder getUpdateOrBuilder() {
                 if ((valueCase_ == 2) && (updateBuilder_ != null)) {
                     return updateBuilder_.getMessageOrBuilder();
@@ -8513,14 +9182,20 @@ public final class CertService {
 
             /**
              * <code>.CertNormal normal = 3;</code>
+             * 
+             * @return Whether the normal field is set.
              */
+            @java.lang.Override
             public boolean hasNormal() {
                 return valueCase_ == 3;
             }
 
             /**
              * <code>.CertNormal normal = 3;</code>
+             * 
+             * @return The normal.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.CertService.CertNormal getNormal() {
                 if (normalBuilder_ == null) {
                     if (valueCase_ == 3) {
@@ -8620,6 +9295,7 @@ public final class CertService {
             /**
              * <code>.CertNormal normal = 3;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.CertService.CertNormalOrBuilder getNormalOrBuilder() {
                 if ((valueCase_ == 3) && (normalBuilder_ != null)) {
                     return normalBuilder_.getMessageOrBuilder();
@@ -8654,13 +9330,21 @@ public final class CertService {
 
             /**
              * <code>int32 ty = 4;</code>
+             * 
+             * @return The ty.
              */
+            @java.lang.Override
             public int getTy() {
                 return ty_;
             }
 
             /**
              * <code>int32 ty = 4;</code>
+             * 
+             * @param value
+             *            The ty to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTy(int value) {
 
@@ -8671,6 +9355,8 @@ public final class CertService {
 
             /**
              * <code>int32 ty = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearTy() {
 
@@ -8733,16 +9419,22 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
         /**
          * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
          */
         com.google.protobuf.ByteString getValue();
     }
@@ -8842,7 +9534,10 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8857,7 +9552,10 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8874,7 +9572,10 @@ public final class CertService {
 
         /**
          * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValue() {
             return value_;
         }
@@ -9205,6 +9906,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -9220,6 +9923,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -9235,6 +9940,11 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -9248,6 +9958,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -9258,6 +9970,11 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -9274,13 +9991,21 @@ public final class CertService {
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @return The value.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getValue() {
                 return value_;
             }
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -9294,6 +10019,8 @@ public final class CertService {
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -9356,16 +10083,22 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
         /**
          * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
          */
         com.google.protobuf.ByteString getValue();
     }
@@ -9465,7 +10198,10 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -9480,7 +10216,10 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -9497,7 +10236,10 @@ public final class CertService {
 
         /**
          * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValue() {
             return value_;
         }
@@ -9828,6 +10570,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -9843,6 +10587,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -9858,6 +10604,11 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -9871,6 +10622,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -9881,6 +10634,11 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -9897,13 +10655,21 @@ public final class CertService {
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @return The value.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getValue() {
                 return value_;
             }
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -9917,6 +10683,8 @@ public final class CertService {
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -9979,16 +10747,22 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
         /**
          * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
          */
         com.google.protobuf.ByteString getValue();
     }
@@ -10088,7 +10862,10 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -10103,7 +10880,10 @@ public final class CertService {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -10120,7 +10900,10 @@ public final class CertService {
 
         /**
          * <code>bytes value = 2;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValue() {
             return value_;
         }
@@ -10451,6 +11234,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -10466,6 +11251,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -10481,6 +11268,11 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -10494,6 +11286,8 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -10504,6 +11298,11 @@ public final class CertService {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -10520,13 +11319,21 @@ public final class CertService {
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @return The value.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getValue() {
                 return value_;
             }
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -10540,6 +11347,8 @@ public final class CertService {
 
             /**
              * <code>bytes value = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -10602,16 +11411,22 @@ public final class CertService {
 
         /**
          * <code>bytes signature = 1;</code>
+         * 
+         * @return The signature.
          */
         com.google.protobuf.ByteString getSignature();
 
         /**
          * <code>bytes cert = 2;</code>
+         * 
+         * @return The cert.
          */
         com.google.protobuf.ByteString getCert();
 
         /**
          * <code>bytes uid = 3;</code>
+         * 
+         * @return The uid.
          */
         com.google.protobuf.ByteString getUid();
     }
@@ -10716,7 +11531,10 @@ public final class CertService {
 
         /**
          * <code>bytes signature = 1;</code>
+         * 
+         * @return The signature.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getSignature() {
             return signature_;
         }
@@ -10726,7 +11544,10 @@ public final class CertService {
 
         /**
          * <code>bytes cert = 2;</code>
+         * 
+         * @return The cert.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getCert() {
             return cert_;
         }
@@ -10736,7 +11557,10 @@ public final class CertService {
 
         /**
          * <code>bytes uid = 3;</code>
+         * 
+         * @return The uid.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getUid() {
             return uid_;
         }
@@ -11084,13 +11908,21 @@ public final class CertService {
 
             /**
              * <code>bytes signature = 1;</code>
+             * 
+             * @return The signature.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getSignature() {
                 return signature_;
             }
 
             /**
              * <code>bytes signature = 1;</code>
+             * 
+             * @param value
+             *            The signature to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setSignature(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -11104,6 +11936,8 @@ public final class CertService {
 
             /**
              * <code>bytes signature = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearSignature() {
 
@@ -11116,13 +11950,21 @@ public final class CertService {
 
             /**
              * <code>bytes cert = 2;</code>
+             * 
+             * @return The cert.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getCert() {
                 return cert_;
             }
 
             /**
              * <code>bytes cert = 2;</code>
+             * 
+             * @param value
+             *            The cert to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setCert(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -11136,6 +11978,8 @@ public final class CertService {
 
             /**
              * <code>bytes cert = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearCert() {
 
@@ -11148,13 +11992,21 @@ public final class CertService {
 
             /**
              * <code>bytes uid = 3;</code>
+             * 
+             * @return The uid.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getUid() {
                 return uid_;
             }
 
             /**
              * <code>bytes uid = 3;</code>
+             * 
+             * @param value
+             *            The uid to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setUid(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -11168,6 +12020,8 @@ public final class CertService {
 
             /**
              * <code>bytes uid = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearUid() {
 

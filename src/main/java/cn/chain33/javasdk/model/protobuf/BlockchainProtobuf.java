@@ -259,6 +259,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The version.
          */
+        @java.lang.Override
         public long getVersion() {
             return version_;
         }
@@ -271,6 +272,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The parentHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getParentHash() {
             return parentHash_;
         }
@@ -283,6 +285,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The txHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTxHash() {
             return txHash_;
         }
@@ -295,6 +298,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The stateHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getStateHash() {
             return stateHash_;
         }
@@ -307,6 +311,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -319,6 +324,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The blockTime.
          */
+        @java.lang.Override
         public long getBlockTime() {
             return blockTime_;
         }
@@ -331,6 +337,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The txCount.
          */
+        @java.lang.Override
         public long getTxCount() {
             return txCount_;
         }
@@ -343,6 +350,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -355,6 +363,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The difficulty.
          */
+        @java.lang.Override
         public int getDifficulty() {
             return difficulty_;
         }
@@ -367,6 +376,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the signature field is set.
          */
+        @java.lang.Override
         public boolean hasSignature() {
             return signature_ != null;
         }
@@ -376,6 +386,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The signature.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Signature getSignature() {
             return signature_ == null
                     ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Signature.getDefaultInstance()
@@ -385,6 +396,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Signature signature = 8;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
             return getSignature();
         }
@@ -870,6 +882,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The version.
              */
+            @java.lang.Override
             public long getVersion() {
                 return version_;
             }
@@ -908,6 +921,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The parentHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getParentHash() {
                 return parentHash_;
             }
@@ -949,6 +963,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The txHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getTxHash() {
                 return txHash_;
             }
@@ -990,6 +1005,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The stateHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getStateHash() {
                 return stateHash_;
             }
@@ -1031,6 +1047,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -1069,6 +1086,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The blockTime.
              */
+            @java.lang.Override
             public long getBlockTime() {
                 return blockTime_;
             }
@@ -1107,6 +1125,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The txCount.
              */
+            @java.lang.Override
             public long getTxCount() {
                 return txCount_;
             }
@@ -1145,6 +1164,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -1186,6 +1206,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The difficulty.
              */
+            @java.lang.Override
             public int getDifficulty() {
                 return difficulty_;
             }
@@ -1669,6 +1690,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The version.
          */
+        @java.lang.Override
         public long getVersion() {
             return version_;
         }
@@ -1681,6 +1703,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The parentHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getParentHash() {
             return parentHash_;
         }
@@ -1693,6 +1716,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The txHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTxHash() {
             return txHash_;
         }
@@ -1705,6 +1729,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The stateHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getStateHash() {
             return stateHash_;
         }
@@ -1717,6 +1742,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -1729,6 +1755,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The blockTime.
          */
+        @java.lang.Override
         public long getBlockTime() {
             return blockTime_;
         }
@@ -1741,6 +1768,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The difficulty.
          */
+        @java.lang.Override
         public int getDifficulty() {
             return difficulty_;
         }
@@ -1753,6 +1781,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The mainHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getMainHash() {
             return mainHash_;
         }
@@ -1765,6 +1794,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The mainHeight.
          */
+        @java.lang.Override
         public long getMainHeight() {
             return mainHeight_;
         }
@@ -1777,6 +1807,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the signature field is set.
          */
+        @java.lang.Override
         public boolean hasSignature() {
             return signature_ != null;
         }
@@ -1786,6 +1817,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The signature.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Signature getSignature() {
             return signature_ == null
                     ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Signature.getDefaultInstance()
@@ -1795,6 +1827,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Signature signature = 8;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
             return getSignature();
         }
@@ -1805,6 +1838,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 7;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction> getTxsList() {
             return txs_;
         }
@@ -1812,6 +1846,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 7;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder> getTxsOrBuilderList() {
             return txs_;
         }
@@ -1819,6 +1854,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 7;</code>
          */
+        @java.lang.Override
         public int getTxsCount() {
             return txs_.size();
         }
@@ -1826,6 +1862,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 7;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTxs(int index) {
             return txs_.get(index);
         }
@@ -1833,6 +1870,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 7;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxsOrBuilder(
                 int index) {
             return txs_.get(index);
@@ -2367,6 +2405,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The version.
              */
+            @java.lang.Override
             public long getVersion() {
                 return version_;
             }
@@ -2405,6 +2444,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The parentHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getParentHash() {
                 return parentHash_;
             }
@@ -2446,6 +2486,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The txHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getTxHash() {
                 return txHash_;
             }
@@ -2487,6 +2528,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The stateHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getStateHash() {
                 return stateHash_;
             }
@@ -2528,6 +2570,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -2566,6 +2609,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The blockTime.
              */
+            @java.lang.Override
             public long getBlockTime() {
                 return blockTime_;
             }
@@ -2604,6 +2648,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The difficulty.
              */
+            @java.lang.Override
             public int getDifficulty() {
                 return difficulty_;
             }
@@ -2642,6 +2687,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The mainHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getMainHash() {
                 return mainHash_;
             }
@@ -2683,6 +2729,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The mainHeight.
              */
+            @java.lang.Override
             public long getMainHeight() {
                 return mainHeight_;
             }
@@ -3264,6 +3311,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Block items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block> getItemsList() {
             return items_;
         }
@@ -3271,6 +3319,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Block items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -3278,6 +3327,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Block items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -3285,6 +3335,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Block items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block getItems(int index) {
             return items_.get(index);
         }
@@ -3292,6 +3343,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Block items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -4100,6 +4152,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The num.
          */
+        @java.lang.Override
         public long getNum() {
             return num_;
         }
@@ -4112,6 +4165,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the seq field is set.
          */
+        @java.lang.Override
         public boolean hasSeq() {
             return seq_ != null;
         }
@@ -4121,6 +4175,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The seq.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequence getSeq() {
             return seq_ == null
                     ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequence.getDefaultInstance() : seq_;
@@ -4129,6 +4184,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.BlockSequence seq = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequenceOrBuilder getSeqOrBuilder() {
             return getSeq();
         }
@@ -4141,6 +4197,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the detail field is set.
          */
+        @java.lang.Override
         public boolean hasDetail() {
             return detail_ != null;
         }
@@ -4150,6 +4207,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The detail.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetail getDetail() {
             return detail_ == null
                     ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetail.getDefaultInstance() : detail_;
@@ -4158,6 +4216,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.BlockDetail detail = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetailOrBuilder getDetailOrBuilder() {
             return getDetail();
         }
@@ -4532,6 +4591,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The num.
              */
+            @java.lang.Override
             public long getNum() {
                 return num_;
             }
@@ -4990,6 +5050,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq> getSeqsList() {
             return seqs_;
         }
@@ -4997,6 +5058,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqOrBuilder> getSeqsOrBuilderList() {
             return seqs_;
         }
@@ -5004,6 +5066,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public int getSeqsCount() {
             return seqs_.size();
         }
@@ -5011,6 +5074,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq getSeqs(int index) {
             return seqs_.get(index);
         }
@@ -5018,6 +5082,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqOrBuilder getSeqsOrBuilder(int index) {
             return seqs_.get(index);
         }
@@ -5805,6 +5870,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The pid.
          */
+        @java.lang.Override
         public java.lang.String getPid() {
             java.lang.Object ref = pid_;
             if (ref instanceof java.lang.String) {
@@ -5822,6 +5888,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for pid.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPidBytes() {
             java.lang.Object ref = pid_;
             if (ref instanceof java.lang.String) {
@@ -5841,6 +5908,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the block field is set.
          */
+        @java.lang.Override
         public boolean hasBlock() {
             return block_ != null;
         }
@@ -5850,6 +5918,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The block.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block getBlock() {
             return block_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block.getDefaultInstance()
                     : block_;
@@ -5858,6 +5927,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Block block = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOrBuilder getBlockOrBuilder() {
             return getBlock();
         }
@@ -6587,6 +6657,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockDetail items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetail> getItemsList() {
             return items_;
         }
@@ -6594,6 +6665,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockDetail items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetailOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -6601,6 +6673,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockDetail items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -6608,6 +6681,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockDetail items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetail getItems(int index) {
             return items_.get(index);
         }
@@ -6615,6 +6689,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockDetail items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetailOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -7390,6 +7465,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Header items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header> getItemsList() {
             return items_;
         }
@@ -7397,6 +7473,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Header items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -7404,6 +7481,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Header items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -7411,6 +7489,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Header items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header getItems(int index) {
             return items_.get(index);
         }
@@ -7418,6 +7497,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Header items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -8205,6 +8285,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The pid.
          */
+        @java.lang.Override
         public java.lang.String getPid() {
             java.lang.Object ref = pid_;
             if (ref instanceof java.lang.String) {
@@ -8222,6 +8303,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for pid.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPidBytes() {
             java.lang.Object ref = pid_;
             if (ref instanceof java.lang.String) {
@@ -8241,6 +8323,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the headers field is set.
          */
+        @java.lang.Override
         public boolean hasHeaders() {
             return headers_ != null;
         }
@@ -8250,6 +8333,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The headers.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers getHeaders() {
             return headers_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers.getDefaultInstance()
                     : headers_;
@@ -8258,6 +8342,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Headers headers = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeadersOrBuilder getHeadersOrBuilder() {
             return getHeaders();
         }
@@ -9033,6 +9118,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the head field is set.
          */
+        @java.lang.Override
         public boolean hasHead() {
             return head_ != null;
         }
@@ -9042,6 +9128,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The head.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header getHead() {
             return head_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header.getDefaultInstance()
                     : head_;
@@ -9050,6 +9137,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Header head = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderOrBuilder getHeadOrBuilder() {
             return getHead();
         }
@@ -9062,6 +9150,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The txCount.
          */
+        @java.lang.Override
         public long getTxCount() {
             return txCount_;
         }
@@ -9074,6 +9163,7 @@ public final class BlockchainProtobuf {
          * 
          * @return A list containing the txHashes.
          */
+        @java.lang.Override
         public java.util.List<com.google.protobuf.ByteString> getTxHashesList() {
             return txHashes_;
         }
@@ -9609,6 +9699,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The txCount.
              */
+            @java.lang.Override
             public long getTxCount() {
                 return txCount_;
             }
@@ -10009,6 +10100,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the block field is set.
          */
+        @java.lang.Override
         public boolean hasBlock() {
             return block_ != null;
         }
@@ -10018,6 +10110,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The block.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block getBlock() {
             return block_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block.getDefaultInstance()
                     : block_;
@@ -10026,6 +10119,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Block block = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOrBuilder getBlockOrBuilder() {
             return getBlock();
         }
@@ -10036,6 +10130,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData> getReceiptsList() {
             return receipts_;
         }
@@ -10043,6 +10138,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder> getReceiptsOrBuilderList() {
             return receipts_;
         }
@@ -10050,6 +10146,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public int getReceiptsCount() {
             return receipts_.size();
         }
@@ -10057,6 +10154,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceipts(int index) {
             return receipts_.get(index);
         }
@@ -10064,6 +10162,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptsOrBuilder(
                 int index) {
             return receipts_.get(index);
@@ -10075,6 +10174,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .KeyValue KV = 3;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValue> getKVList() {
             return kV_;
         }
@@ -10082,6 +10182,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .KeyValue KV = 3;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValueOrBuilder> getKVOrBuilderList() {
             return kV_;
         }
@@ -10089,6 +10190,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .KeyValue KV = 3;</code>
          */
+        @java.lang.Override
         public int getKVCount() {
             return kV_.size();
         }
@@ -10096,6 +10198,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .KeyValue KV = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValue getKV(int index) {
             return kV_.get(index);
         }
@@ -10103,6 +10206,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .KeyValue KV = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValueOrBuilder getKVOrBuilder(int index) {
             return kV_.get(index);
         }
@@ -10115,6 +10219,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The prevStatusHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPrevStatusHash() {
             return prevStatusHash_;
         }
@@ -11195,6 +11300,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The prevStatusHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPrevStatusHash() {
                 return prevStatusHash_;
             }
@@ -11402,6 +11508,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Receipt receipts = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Receipt> getReceiptsList() {
             return receipts_;
         }
@@ -11409,6 +11516,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Receipt receipts = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptOrBuilder> getReceiptsOrBuilderList() {
             return receipts_;
         }
@@ -11416,6 +11524,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Receipt receipts = 1;</code>
          */
+        @java.lang.Override
         public int getReceiptsCount() {
             return receipts_.size();
         }
@@ -11423,6 +11532,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Receipt receipts = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Receipt getReceipts(int index) {
             return receipts_.get(index);
         }
@@ -11430,6 +11540,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Receipt receipts = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptOrBuilder getReceiptsOrBuilder(
                 int index) {
             return receipts_.get(index);
@@ -12889,6 +13000,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The currentHeight.
          */
+        @java.lang.Override
         public long getCurrentHeight() {
             return currentHeight_;
         }
@@ -12901,6 +13013,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The mempoolSize.
          */
+        @java.lang.Override
         public long getMempoolSize() {
             return mempoolSize_;
         }
@@ -12913,6 +13026,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The msgQueueSize.
          */
+        @java.lang.Override
         public long getMsgQueueSize() {
             return msgQueueSize_;
         }
@@ -13267,6 +13381,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The currentHeight.
              */
+            @java.lang.Override
             public long getCurrentHeight() {
                 return currentHeight_;
             }
@@ -13305,6 +13420,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The mempoolSize.
              */
+            @java.lang.Override
             public long getMempoolSize() {
                 return mempoolSize_;
             }
@@ -13343,6 +13459,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The msgQueueSize.
              */
+            @java.lang.Override
             public long getMsgQueueSize() {
                 return msgQueueSize_;
             }
@@ -13601,6 +13718,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The start.
          */
+        @java.lang.Override
         public long getStart() {
             return start_;
         }
@@ -13613,6 +13731,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The end.
          */
+        @java.lang.Override
         public long getEnd() {
             return end_;
         }
@@ -13625,6 +13744,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The isDetail.
          */
+        @java.lang.Override
         public boolean getIsDetail() {
             return isDetail_;
         }
@@ -14062,6 +14182,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The start.
              */
+            @java.lang.Override
             public long getStart() {
                 return start_;
             }
@@ -14100,6 +14221,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The end.
              */
+            @java.lang.Override
             public long getEnd() {
                 return end_;
             }
@@ -14138,6 +14260,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The isDetail.
              */
+            @java.lang.Override
             public boolean getIsDetail() {
                 return isDetail_;
             }
@@ -14451,6 +14574,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The size.
          */
+        @java.lang.Override
         public long getSize() {
             return size_;
         }
@@ -14766,6 +14890,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The size.
              */
+            @java.lang.Override
             public long getSize() {
                 return size_;
             }
@@ -14944,6 +15069,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -15260,6 +15386,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -15563,6 +15690,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction> getTxsList() {
             return txs_;
         }
@@ -15570,6 +15698,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder> getTxsOrBuilderList() {
             return txs_;
         }
@@ -15577,6 +15706,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 1;</code>
          */
+        @java.lang.Override
         public int getTxsCount() {
             return txs_.size();
         }
@@ -15584,6 +15714,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTxs(int index) {
             return txs_.get(index);
         }
@@ -15591,6 +15722,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .Transaction txs = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxsOrBuilder(
                 int index) {
             return txs_.get(index);
@@ -15602,6 +15734,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData> getReceiptsList() {
             return receipts_;
         }
@@ -15609,6 +15742,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder> getReceiptsOrBuilderList() {
             return receipts_;
         }
@@ -15616,6 +15750,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public int getReceiptsCount() {
             return receipts_.size();
         }
@@ -15623,6 +15758,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceipts(int index) {
             return receipts_.get(index);
         }
@@ -15630,6 +15766,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptsOrBuilder(
                 int index) {
             return receipts_.get(index);
@@ -15643,6 +15780,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The mainHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getMainHash() {
             return mainHash_;
         }
@@ -15655,6 +15793,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The mainHeight.
          */
+        @java.lang.Override
         public long getMainHeight() {
             return mainHeight_;
         }
@@ -15667,6 +15806,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -15679,6 +15819,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -16663,6 +16804,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The mainHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getMainHash() {
                 return mainHash_;
             }
@@ -16704,6 +16846,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The mainHeight.
              */
+            @java.lang.Override
             public long getMainHeight() {
                 return mainHeight_;
             }
@@ -16742,6 +16885,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -16783,6 +16927,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -17019,6 +17164,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData> getReceiptsList() {
             return receipts_;
         }
@@ -17026,6 +17172,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder> getReceiptsOrBuilderList() {
             return receipts_;
         }
@@ -17033,6 +17180,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 1;</code>
          */
+        @java.lang.Override
         public int getReceiptsCount() {
             return receipts_.size();
         }
@@ -17040,6 +17188,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceipts(int index) {
             return receipts_.get(index);
         }
@@ -17047,6 +17196,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ReceiptData receipts = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptsOrBuilder(
                 int index) {
             return receipts_.get(index);
@@ -17060,6 +17210,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -17072,6 +17223,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -17717,6 +17869,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -17758,6 +17911,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -17940,6 +18094,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The iscaughtup.
          */
+        @java.lang.Override
         public boolean getIscaughtup() {
             return iscaughtup_;
         }
@@ -18259,6 +18414,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The iscaughtup.
              */
+            @java.lang.Override
             public boolean getIscaughtup() {
                 return iscaughtup_;
             }
@@ -18441,6 +18597,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The isntpclocksync.
          */
+        @java.lang.Override
         public boolean getIsntpclocksync() {
             return isntpclocksync_;
         }
@@ -18761,6 +18918,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The isntpclocksync.
              */
+            @java.lang.Override
             public boolean getIsntpclocksync() {
                 return isntpclocksync_;
             }
@@ -19012,6 +19170,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The driver.
          */
+        @java.lang.Override
         public java.lang.String getDriver() {
             java.lang.Object ref = driver_;
             if (ref instanceof java.lang.String) {
@@ -19029,6 +19188,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for driver.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getDriverBytes() {
             java.lang.Object ref = driver_;
             if (ref instanceof java.lang.String) {
@@ -19048,6 +19208,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The funcName.
          */
+        @java.lang.Override
         public java.lang.String getFuncName() {
             java.lang.Object ref = funcName_;
             if (ref instanceof java.lang.String) {
@@ -19065,6 +19226,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for funcName.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFuncNameBytes() {
             java.lang.Object ref = funcName_;
             if (ref instanceof java.lang.String) {
@@ -19084,6 +19246,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The stateHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getStateHash() {
             return stateHash_;
         }
@@ -19096,6 +19259,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The param.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getParam() {
             return param_;
         }
@@ -19112,6 +19276,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The extra.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExtra() {
             return extra_;
         }
@@ -19663,6 +19828,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The stateHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getStateHash() {
                 return stateHash_;
             }
@@ -19704,6 +19870,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The param.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getParam() {
                 return param_;
             }
@@ -19749,6 +19916,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The extra.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getExtra() {
                 return extra_;
             }
@@ -19955,6 +20123,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -19967,6 +20136,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The type.
          */
+        @java.lang.Override
         public long getType() {
             return type_;
         }
@@ -20302,6 +20472,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -20343,6 +20514,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The type.
              */
+            @java.lang.Override
             public long getType() {
                 return type_;
             }
@@ -20551,6 +20723,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSequence items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequence> getItemsList() {
             return items_;
         }
@@ -20558,6 +20731,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSequence items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequenceOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -20565,6 +20739,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSequence items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -20572,6 +20747,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSequence items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequence getItems(int index) {
             return items_.get(index);
         }
@@ -20579,6 +20755,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockSequence items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequenceOrBuilder getItemsOrBuilder(
                 int index) {
             return items_.get(index);
@@ -21384,6 +21561,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the blockdetail field is set.
          */
+        @java.lang.Override
         public boolean hasBlockdetail() {
             return blockdetail_ != null;
         }
@@ -21393,6 +21571,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The blockdetail.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetail getBlockdetail() {
             return blockdetail_ == null
                     ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetail.getDefaultInstance()
@@ -21402,6 +21581,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.BlockDetail blockdetail = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetailOrBuilder getBlockdetailOrBuilder() {
             return getBlockdetail();
         }
@@ -21414,6 +21594,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The sequence.
          */
+        @java.lang.Override
         public long getSequence() {
             return sequence_;
         }
@@ -21426,6 +21607,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The isSync.
          */
+        @java.lang.Override
         public boolean getIsSync() {
             return isSync_;
         }
@@ -21923,6 +22105,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The sequence.
              */
+            @java.lang.Override
             public long getSequence() {
                 return sequence_;
             }
@@ -21961,6 +22144,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The isSync.
              */
+            @java.lang.Override
             public boolean getIsSync() {
                 return isSync_;
             }
@@ -22169,6 +22353,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ParaTxDetail items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetail> getItemsList() {
             return items_;
         }
@@ -22176,6 +22361,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ParaTxDetail items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetailOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -22183,6 +22369,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ParaTxDetail items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -22190,6 +22377,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ParaTxDetail items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetail getItems(int index) {
             return items_.get(index);
         }
@@ -22197,6 +22385,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ParaTxDetail items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetailOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -23091,6 +23280,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The type.
          */
+        @java.lang.Override
         public long getType() {
             return type_;
         }
@@ -23103,6 +23293,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the header field is set.
          */
+        @java.lang.Override
         public boolean hasHeader() {
             return header_ != null;
         }
@@ -23112,6 +23303,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The header.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header getHeader() {
             return header_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header.getDefaultInstance()
                     : header_;
@@ -23120,6 +23312,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Header header = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderOrBuilder getHeaderOrBuilder() {
             return getHeader();
         }
@@ -23130,6 +23323,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .TxDetail txDetails = 3;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.TxDetail> getTxDetailsList() {
             return txDetails_;
         }
@@ -23137,6 +23331,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .TxDetail txDetails = 3;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.TxDetailOrBuilder> getTxDetailsOrBuilderList() {
             return txDetails_;
         }
@@ -23144,6 +23339,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .TxDetail txDetails = 3;</code>
          */
+        @java.lang.Override
         public int getTxDetailsCount() {
             return txDetails_.size();
         }
@@ -23151,6 +23347,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .TxDetail txDetails = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.TxDetail getTxDetails(int index) {
             return txDetails_.get(index);
         }
@@ -23158,6 +23355,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .TxDetail txDetails = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.TxDetailOrBuilder getTxDetailsOrBuilder(int index) {
             return txDetails_.get(index);
         }
@@ -23170,6 +23368,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The childHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getChildHash() {
             return childHash_;
         }
@@ -23182,6 +23381,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The index.
          */
+        @java.lang.Override
         public int getIndex() {
             return index_;
         }
@@ -23194,6 +23394,7 @@ public final class BlockchainProtobuf {
          * 
          * @return A list containing the proofs.
          */
+        @java.lang.Override
         public java.util.List<com.google.protobuf.ByteString> getProofsList() {
             return proofs_;
         }
@@ -23691,6 +23892,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The type.
              */
+            @java.lang.Override
             public long getType() {
                 return type_;
             }
@@ -24107,6 +24309,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The childHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getChildHash() {
                 return childHash_;
             }
@@ -24148,6 +24351,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The index.
              */
+            @java.lang.Override
             public int getIndex() {
                 return index_;
             }
@@ -24543,6 +24747,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The index.
          */
+        @java.lang.Override
         public int getIndex() {
             return index_;
         }
@@ -24555,6 +24760,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the tx field is set.
          */
+        @java.lang.Override
         public boolean hasTx() {
             return tx_ != null;
         }
@@ -24564,6 +24770,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The tx.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTx() {
             return tx_ == null
                     ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction.getDefaultInstance() : tx_;
@@ -24572,6 +24779,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Transaction tx = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxOrBuilder() {
             return getTx();
         }
@@ -24584,6 +24792,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the receipt field is set.
          */
+        @java.lang.Override
         public boolean hasReceipt() {
             return receipt_ != null;
         }
@@ -24593,6 +24802,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The receipt.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceipt() {
             return receipt_ == null
                     ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData.getDefaultInstance()
@@ -24602,6 +24812,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.ReceiptData receipt = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptOrBuilder() {
             return getReceipt();
         }
@@ -24614,6 +24825,7 @@ public final class BlockchainProtobuf {
          * 
          * @return A list containing the proofs.
          */
+        @java.lang.Override
         public java.util.List<com.google.protobuf.ByteString> getProofsList() {
             return proofs_;
         }
@@ -25054,6 +25266,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The index.
              */
+            @java.lang.Override
             public int getIndex() {
                 return index_;
             }
@@ -25639,6 +25852,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The start.
          */
+        @java.lang.Override
         public long getStart() {
             return start_;
         }
@@ -25651,6 +25865,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The end.
          */
+        @java.lang.Override
         public long getEnd() {
             return end_;
         }
@@ -25663,6 +25878,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -25680,6 +25896,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -25699,6 +25916,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The isSeq.
          */
+        @java.lang.Override
         public boolean getIsSeq() {
             return isSeq_;
         }
@@ -26068,6 +26286,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The start.
              */
+            @java.lang.Override
             public long getStart() {
                 return start_;
             }
@@ -26106,6 +26325,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The end.
              */
+            @java.lang.Override
             public long getEnd() {
                 return end_;
             }
@@ -26229,6 +26449,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The isSeq.
              */
+            @java.lang.Override
             public boolean getIsSeq() {
                 return isSeq_;
             }
@@ -26465,6 +26686,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The startHeight.
          */
+        @java.lang.Override
         public long getStartHeight() {
             return startHeight_;
         }
@@ -26477,6 +26699,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The driver.
          */
+        @java.lang.Override
         public java.lang.String getDriver() {
             java.lang.Object ref = driver_;
             if (ref instanceof java.lang.String) {
@@ -26494,6 +26717,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for driver.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getDriverBytes() {
             java.lang.Object ref = driver_;
             if (ref instanceof java.lang.String) {
@@ -26513,6 +26737,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -26530,6 +26755,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -26549,6 +26775,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The testNet.
          */
+        @java.lang.Override
         public boolean getTestNet() {
             return testNet_;
         }
@@ -26918,6 +27145,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The startHeight.
              */
+            @java.lang.Override
             public long getStartHeight() {
                 return startHeight_;
             }
@@ -27126,6 +27354,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The testNet.
              */
+            @java.lang.Override
             public boolean getTestNet() {
                 return testNet_;
             }
@@ -27321,6 +27550,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -27333,6 +27563,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -27667,6 +27898,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -27705,6 +27937,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -27958,6 +28191,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The num.
          */
+        @java.lang.Override
         public long getNum() {
             return num_;
         }
@@ -27970,6 +28204,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the seq field is set.
          */
+        @java.lang.Override
         public boolean hasSeq() {
             return seq_ != null;
         }
@@ -27979,6 +28214,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The seq.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequence getSeq() {
             return seq_ == null
                     ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequence.getDefaultInstance() : seq_;
@@ -27987,6 +28223,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.BlockSequence seq = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSequenceOrBuilder getSeqOrBuilder() {
             return getSeq();
         }
@@ -27999,6 +28236,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the header field is set.
          */
+        @java.lang.Override
         public boolean hasHeader() {
             return header_ != null;
         }
@@ -28008,6 +28246,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The header.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header getHeader() {
             return header_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header.getDefaultInstance()
                     : header_;
@@ -28016,6 +28255,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Header header = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderOrBuilder getHeaderOrBuilder() {
             return getHeader();
         }
@@ -28395,6 +28635,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The num.
              */
+            @java.lang.Override
             public long getNum() {
                 return num_;
             }
@@ -28857,6 +29098,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeaderSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeq> getSeqsList() {
             return seqs_;
         }
@@ -28864,6 +29106,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeaderSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqOrBuilder> getSeqsOrBuilderList() {
             return seqs_;
         }
@@ -28871,6 +29114,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeaderSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public int getSeqsCount() {
             return seqs_.size();
         }
@@ -28878,6 +29122,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeaderSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeq getSeqs(int index) {
             return seqs_.get(index);
         }
@@ -28885,6 +29130,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeaderSeq seqs = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqOrBuilder getSeqsOrBuilder(int index) {
             return seqs_.get(index);
         }
@@ -29721,6 +29967,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -29733,6 +29980,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -29750,6 +29998,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -29769,6 +30018,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -29781,6 +30031,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The childHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getChildHash() {
             return childHash_;
         }
@@ -29793,6 +30044,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The startIndex.
          */
+        @java.lang.Override
         public int getStartIndex() {
             return startIndex_;
         }
@@ -29805,6 +30057,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The childHashIndex.
          */
+        @java.lang.Override
         public int getChildHashIndex() {
             return childHashIndex_;
         }
@@ -29817,6 +30070,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The txCount.
          */
+        @java.lang.Override
         public int getTxCount() {
             return txCount_;
         }
@@ -30237,6 +30491,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -30360,6 +30615,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -30401,6 +30657,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The childHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getChildHash() {
                 return childHash_;
             }
@@ -30442,6 +30699,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The startIndex.
              */
+            @java.lang.Override
             public int getStartIndex() {
                 return startIndex_;
             }
@@ -30480,6 +30738,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The childHashIndex.
              */
+            @java.lang.Override
             public int getChildHashIndex() {
                 return childHashIndex_;
             }
@@ -30518,6 +30777,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The txCount.
              */
+            @java.lang.Override
             public int getTxCount() {
                 return txCount_;
             }
@@ -30722,6 +30982,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeightPara items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeightPara> getItemsList() {
             return items_;
         }
@@ -30729,6 +30990,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeightPara items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeightParaOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -30736,6 +30998,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeightPara items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -30743,6 +31006,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeightPara items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeightPara getItems(int index) {
             return items_.get(index);
         }
@@ -30750,6 +31014,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .HeightPara items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeightParaOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -31546,6 +31811,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -31563,6 +31829,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -31582,6 +31849,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The startIndex.
          */
+        @java.lang.Override
         public int getStartIndex() {
             return startIndex_;
         }
@@ -31594,6 +31862,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The childHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getChildHash() {
             return childHash_;
         }
@@ -31606,6 +31875,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The txCount.
          */
+        @java.lang.Override
         public int getTxCount() {
             return txCount_;
         }
@@ -32063,6 +32333,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The startIndex.
              */
+            @java.lang.Override
             public int getStartIndex() {
                 return startIndex_;
             }
@@ -32101,6 +32372,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The childHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getChildHash() {
                 return childHash_;
             }
@@ -32142,6 +32414,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The txCount.
              */
+            @java.lang.Override
             public int getTxCount() {
                 return txCount_;
             }
@@ -32369,6 +32642,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -32381,6 +32655,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -32398,6 +32673,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -32417,6 +32693,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The count.
          */
+        @java.lang.Override
         public int getCount() {
             return count_;
         }
@@ -32429,6 +32706,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The direction.
          */
+        @java.lang.Override
         public int getDirection() {
             return direction_;
         }
@@ -32798,6 +33076,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -32921,6 +33200,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The count.
              */
+            @java.lang.Override
             public int getCount() {
                 return count_;
             }
@@ -32959,6 +33239,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The direction.
              */
+            @java.lang.Override
             public int getDirection() {
                 return direction_;
             }
@@ -33186,6 +33467,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -33203,6 +33485,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -33220,6 +33503,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockInfo items = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockInfo> getItemsList() {
             return items_;
         }
@@ -33227,6 +33511,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockInfo items = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockInfoOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -33234,6 +33519,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockInfo items = 2;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -33241,6 +33527,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockInfo items = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockInfo getItems(int index) {
             return items_.get(index);
         }
@@ -33248,6 +33535,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockInfo items = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockInfoOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -34111,6 +34399,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -34123,6 +34412,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -34458,6 +34748,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -34496,6 +34787,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -34740,6 +35032,7 @@ public final class BlockchainProtobuf {
          * 
          * @return A list containing the items.
          */
+        @java.lang.Override
         public java.util.List<java.lang.Long> getItemsList() {
             return items_;
         }
@@ -34775,6 +35068,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The title.
          */
+        @java.lang.Override
         public java.lang.String getTitle() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -34792,6 +35086,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for title.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTitleBytes() {
             java.lang.Object ref = title_;
             if (ref instanceof java.lang.String) {
@@ -35528,6 +35823,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the block field is set.
          */
+        @java.lang.Override
         public boolean hasBlock() {
             return block_ != null;
         }
@@ -35537,6 +35833,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The block.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block getBlock() {
             return block_ == null ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Block.getDefaultInstance()
                     : block_;
@@ -35545,6 +35842,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.Block block = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOrBuilder getBlockOrBuilder() {
             return getBlock();
         }
@@ -35557,6 +35855,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The cmpHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getCmpHash() {
             return cmpHash_;
         }
@@ -36030,6 +36329,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The cmpHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getCmpHash() {
                 return cmpHash_;
             }
@@ -36241,6 +36541,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockBody items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockBody> getItemsList() {
             return items_;
         }
@@ -36248,6 +36549,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockBody items = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockBodyOrBuilder> getItemsOrBuilderList() {
             return items_;
         }
@@ -36255,6 +36557,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockBody items = 1;</code>
          */
+        @java.lang.Override
         public int getItemsCount() {
             return items_.size();
         }
@@ -36262,6 +36565,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockBody items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockBody getItems(int index) {
             return items_.get(index);
         }
@@ -36269,6 +36573,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .BlockBody items = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockBodyOrBuilder getItemsOrBuilder(int index) {
             return items_.get(index);
         }
@@ -37045,6 +37350,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ChunkInfo infos = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChunkInfo> getInfosList() {
             return infos_;
         }
@@ -37052,6 +37358,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ChunkInfo infos = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChunkInfoOrBuilder> getInfosOrBuilderList() {
             return infos_;
         }
@@ -37059,6 +37366,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ChunkInfo infos = 1;</code>
          */
+        @java.lang.Override
         public int getInfosCount() {
             return infos_.size();
         }
@@ -37066,6 +37374,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ChunkInfo infos = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChunkInfo getInfos(int index) {
             return infos_.get(index);
         }
@@ -37073,6 +37382,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .ChunkInfo infos = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChunkInfoOrBuilder getInfosOrBuilder(int index) {
             return infos_.get(index);
         }
@@ -37848,6 +38158,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The chunkHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getChunkHash() {
             return chunkHash_;
         }
@@ -37860,6 +38171,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The start.
          */
+        @java.lang.Override
         public long getStart() {
             return start_;
         }
@@ -37872,6 +38184,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The end.
          */
+        @java.lang.Override
         public long getEnd() {
             return end_;
         }
@@ -38223,6 +38536,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The chunkHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getChunkHash() {
                 return chunkHash_;
             }
@@ -38264,6 +38578,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The start.
              */
+            @java.lang.Override
             public long getStart() {
                 return start_;
             }
@@ -38302,6 +38617,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The end.
              */
+            @java.lang.Override
             public long getEnd() {
                 return end_;
             }
@@ -38521,6 +38837,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The chunkNum.
          */
+        @java.lang.Override
         public long getChunkNum() {
             return chunkNum_;
         }
@@ -38533,6 +38850,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The chunkHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getChunkHash() {
             return chunkHash_;
         }
@@ -38545,6 +38863,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The start.
          */
+        @java.lang.Override
         public long getStart() {
             return start_;
         }
@@ -38557,6 +38876,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The end.
          */
+        @java.lang.Override
         public long getEnd() {
             return end_;
         }
@@ -38924,6 +39244,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The chunkNum.
              */
+            @java.lang.Override
             public long getChunkNum() {
                 return chunkNum_;
             }
@@ -38962,6 +39283,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The chunkHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getChunkHash() {
                 return chunkHash_;
             }
@@ -39003,6 +39325,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The start.
              */
+            @java.lang.Override
             public long getStart() {
                 return start_;
             }
@@ -39041,6 +39364,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The end.
              */
+            @java.lang.Override
             public long getEnd() {
                 return end_;
             }
@@ -39299,6 +39623,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The start.
          */
+        @java.lang.Override
         public long getStart() {
             return start_;
         }
@@ -39311,6 +39636,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The end.
          */
+        @java.lang.Override
         public long getEnd() {
             return end_;
         }
@@ -39323,6 +39649,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The isDetail.
          */
+        @java.lang.Override
         public boolean getIsDetail() {
             return isDetail_;
         }
@@ -39761,6 +40088,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The start.
              */
+            @java.lang.Override
             public long getStart() {
                 return start_;
             }
@@ -39799,6 +40127,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The end.
              */
+            @java.lang.Override
             public long getEnd() {
                 return end_;
             }
@@ -39837,6 +40166,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The isDetail.
              */
+            @java.lang.Override
             public boolean getIsDetail() {
                 return isDetail_;
             }
@@ -40339,6 +40669,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The name.
          */
+        @java.lang.Override
         public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -40356,6 +40687,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for name.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNameBytes() {
             java.lang.Object ref = name_;
             if (ref instanceof java.lang.String) {
@@ -40375,6 +40707,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The uRL.
          */
+        @java.lang.Override
         public java.lang.String getURL() {
             java.lang.Object ref = uRL_;
             if (ref instanceof java.lang.String) {
@@ -40392,6 +40725,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for uRL.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getURLBytes() {
             java.lang.Object ref = uRL_;
             if (ref instanceof java.lang.String) {
@@ -40411,6 +40745,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The encode.
          */
+        @java.lang.Override
         public java.lang.String getEncode() {
             java.lang.Object ref = encode_;
             if (ref instanceof java.lang.String) {
@@ -40428,6 +40763,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for encode.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getEncodeBytes() {
             java.lang.Object ref = encode_;
             if (ref instanceof java.lang.String) {
@@ -40447,6 +40783,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The lastSequence.
          */
+        @java.lang.Override
         public long getLastSequence() {
             return lastSequence_;
         }
@@ -40459,6 +40796,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The lastHeight.
          */
+        @java.lang.Override
         public long getLastHeight() {
             return lastHeight_;
         }
@@ -40471,6 +40809,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The lastBlockHash.
          */
+        @java.lang.Override
         public java.lang.String getLastBlockHash() {
             java.lang.Object ref = lastBlockHash_;
             if (ref instanceof java.lang.String) {
@@ -40488,6 +40827,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for lastBlockHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLastBlockHashBytes() {
             java.lang.Object ref = lastBlockHash_;
             if (ref instanceof java.lang.String) {
@@ -40511,6 +40851,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The type.
          */
+        @java.lang.Override
         public int getType() {
             return type_;
         }
@@ -40545,6 +40886,7 @@ public final class BlockchainProtobuf {
          * <code>map&lt;string, bool&gt; contract = 8;</code>
          */
 
+        @java.lang.Override
         public boolean containsContract(java.lang.String key) {
             if (key == null) {
                 throw new java.lang.NullPointerException();
@@ -40555,6 +40897,7 @@ public final class BlockchainProtobuf {
         /**
          * Use {@link #getContractMap()} instead.
          */
+        @java.lang.Override
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.Boolean> getContract() {
             return getContractMap();
@@ -40567,6 +40910,7 @@ public final class BlockchainProtobuf {
          *
          * <code>map&lt;string, bool&gt; contract = 8;</code>
          */
+        @java.lang.Override
 
         public java.util.Map<java.lang.String, java.lang.Boolean> getContractMap() {
             return internalGetContract().getMap();
@@ -40579,6 +40923,7 @@ public final class BlockchainProtobuf {
          *
          * <code>map&lt;string, bool&gt; contract = 8;</code>
          */
+        @java.lang.Override
 
         public boolean getContractOrDefault(java.lang.String key, boolean defaultValue) {
             if (key == null) {
@@ -40595,6 +40940,7 @@ public final class BlockchainProtobuf {
          *
          * <code>map&lt;string, bool&gt; contract = 8;</code>
          */
+        @java.lang.Override
 
         public boolean getContractOrThrow(java.lang.String key) {
             if (key == null) {
@@ -41315,6 +41661,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The lastSequence.
              */
+            @java.lang.Override
             public long getLastSequence() {
                 return lastSequence_;
             }
@@ -41353,6 +41700,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The lastHeight.
              */
+            @java.lang.Override
             public long getLastHeight() {
                 return lastHeight_;
             }
@@ -41480,6 +41828,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The type.
              */
+            @java.lang.Override
             public int getType() {
                 return type_;
             }
@@ -41552,6 +41901,7 @@ public final class BlockchainProtobuf {
              * <code>map&lt;string, bool&gt; contract = 8;</code>
              */
 
+            @java.lang.Override
             public boolean containsContract(java.lang.String key) {
                 if (key == null) {
                     throw new java.lang.NullPointerException();
@@ -41562,6 +41912,7 @@ public final class BlockchainProtobuf {
             /**
              * Use {@link #getContractMap()} instead.
              */
+            @java.lang.Override
             @java.lang.Deprecated
             public java.util.Map<java.lang.String, java.lang.Boolean> getContract() {
                 return getContractMap();
@@ -41574,6 +41925,7 @@ public final class BlockchainProtobuf {
              *
              * <code>map&lt;string, bool&gt; contract = 8;</code>
              */
+            @java.lang.Override
 
             public java.util.Map<java.lang.String, java.lang.Boolean> getContractMap() {
                 return internalGetContract().getMap();
@@ -41586,6 +41938,7 @@ public final class BlockchainProtobuf {
              *
              * <code>map&lt;string, bool&gt; contract = 8;</code>
              */
+            @java.lang.Override
 
             public boolean getContractOrDefault(java.lang.String key, boolean defaultValue) {
                 if (key == null) {
@@ -41602,6 +41955,7 @@ public final class BlockchainProtobuf {
              *
              * <code>map&lt;string, bool&gt; contract = 8;</code>
              */
+            @java.lang.Override
 
             public boolean getContractOrThrow(java.lang.String key) {
                 if (key == null) {
@@ -41853,6 +42207,7 @@ public final class BlockchainProtobuf {
          * 
          * @return Whether the push field is set.
          */
+        @java.lang.Override
         public boolean hasPush() {
             return push_ != null;
         }
@@ -41862,6 +42217,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The push.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReq getPush() {
             return push_ == null
                     ? cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReq.getDefaultInstance()
@@ -41871,6 +42227,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>.PushSubscribeReq push = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReqOrBuilder getPushOrBuilder() {
             return getPush();
         }
@@ -41883,6 +42240,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The status.
          */
+        @java.lang.Override
         public int getStatus() {
             return status_;
         }
@@ -42356,6 +42714,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The status.
              */
+            @java.lang.Override
             public int getStatus() {
                 return status_;
             }
@@ -42560,6 +42919,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .PushSubscribeReq pushes = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReq> getPushesList() {
             return pushes_;
         }
@@ -42567,6 +42927,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .PushSubscribeReq pushes = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReqOrBuilder> getPushesOrBuilderList() {
             return pushes_;
         }
@@ -42574,6 +42935,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .PushSubscribeReq pushes = 1;</code>
          */
+        @java.lang.Override
         public int getPushesCount() {
             return pushes_.size();
         }
@@ -42581,6 +42943,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .PushSubscribeReq pushes = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReq getPushes(int index) {
             return pushes_.get(index);
         }
@@ -42588,6 +42951,7 @@ public final class BlockchainProtobuf {
         /**
          * <code>repeated .PushSubscribeReq pushes = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.PushSubscribeReqOrBuilder getPushesOrBuilder(
                 int index) {
             return pushes_.get(index);
@@ -43357,6 +43721,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The isOk.
          */
+        @java.lang.Override
         public boolean getIsOk() {
             return isOk_;
         }
@@ -43369,6 +43734,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The msg.
          */
+        @java.lang.Override
         public java.lang.String getMsg() {
             java.lang.Object ref = msg_;
             if (ref instanceof java.lang.String) {
@@ -43386,6 +43752,7 @@ public final class BlockchainProtobuf {
          * 
          * @return The bytes for msg.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getMsgBytes() {
             java.lang.Object ref = msg_;
             if (ref instanceof java.lang.String) {
@@ -43727,6 +44094,7 @@ public final class BlockchainProtobuf {
              * 
              * @return The isOk.
              */
+            @java.lang.Override
             public boolean getIsOk() {
                 return isOk_;
             }

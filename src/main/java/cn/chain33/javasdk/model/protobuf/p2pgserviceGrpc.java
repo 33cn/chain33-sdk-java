@@ -1,21 +1,10 @@
 package cn.chain33.javasdk.model.protobuf;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
-@javax.annotation.Generated(value = "by gRPC proto compiler (version 1.31.1)", comments = "Source: p2p.proto")
+@javax.annotation.Generated(value = "by gRPC proto compiler (version 1.39.0)", comments = "Source: p2p.proto")
 public final class p2pgserviceGrpc {
 
     private p2pgserviceGrpc() {
@@ -482,7 +471,7 @@ public final class p2pgserviceGrpc {
          */
         public void broadCastTx(cn.chain33.javasdk.model.protobuf.P2pService.P2PTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getBroadCastTxMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBroadCastTxMethod(), responseObserver);
         }
 
         /**
@@ -492,7 +481,7 @@ public final class p2pgserviceGrpc {
          */
         public void broadCastBlock(cn.chain33.javasdk.model.protobuf.P2pService.P2PBlock request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getBroadCastBlockMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBroadCastBlockMethod(), responseObserver);
         }
 
         /**
@@ -502,7 +491,7 @@ public final class p2pgserviceGrpc {
          */
         public void ping(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PPong> responseObserver) {
-            asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
         }
 
         /**
@@ -512,14 +501,14 @@ public final class p2pgserviceGrpc {
          */
         public void getAddr(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PAddr> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetAddrMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAddrMethod(), responseObserver);
         }
 
         /**
          */
         public void getAddrList(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PAddrList> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetAddrListMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAddrListMethod(), responseObserver);
         }
 
         /**
@@ -529,7 +518,7 @@ public final class p2pgserviceGrpc {
          */
         public void version(cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PVerAck> responseObserver) {
-            asyncUnimplementedUnaryCall(getVersionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVersionMethod(), responseObserver);
         }
 
         /**
@@ -539,7 +528,7 @@ public final class p2pgserviceGrpc {
          */
         public void version2(cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion> responseObserver) {
-            asyncUnimplementedUnaryCall(getVersion2Method(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVersion2Method(), responseObserver);
         }
 
         /**
@@ -549,7 +538,7 @@ public final class p2pgserviceGrpc {
          */
         public void softVersion(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getSoftVersionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSoftVersionMethod(), responseObserver);
         }
 
         /**
@@ -559,7 +548,7 @@ public final class p2pgserviceGrpc {
          */
         public void getBlocks(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetBlocks request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PInv> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBlocksMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlocksMethod(), responseObserver);
         }
 
         /**
@@ -569,7 +558,7 @@ public final class p2pgserviceGrpc {
          */
         public void getMemPool(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetMempool request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PInv> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetMemPoolMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMemPoolMethod(), responseObserver);
         }
 
         /**
@@ -579,7 +568,7 @@ public final class p2pgserviceGrpc {
          */
         public void getData(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetData request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.InvDatas> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetDataMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataMethod(), responseObserver);
         }
 
         /**
@@ -589,7 +578,7 @@ public final class p2pgserviceGrpc {
          */
         public void getHeaders(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetHeaders request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PHeaders> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetHeadersMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHeadersMethod(), responseObserver);
         }
 
         /**
@@ -599,7 +588,7 @@ public final class p2pgserviceGrpc {
          */
         public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerInfo request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PPeerInfo> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetPeerInfoMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPeerInfoMethod(), responseObserver);
         }
 
         /**
@@ -609,7 +598,8 @@ public final class p2pgserviceGrpc {
          */
         public io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData> serverStreamRead(
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil> responseObserver) {
-            return asyncUnimplementedStreamingCall(getServerStreamReadMethod(), responseObserver);
+            return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getServerStreamReadMethod(),
+                    responseObserver);
         }
 
         /**
@@ -619,7 +609,7 @@ public final class p2pgserviceGrpc {
          */
         public void serverStreamSend(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData> responseObserver) {
-            asyncUnimplementedUnaryCall(getServerStreamSendMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getServerStreamSendMethod(), responseObserver);
         }
 
         /**
@@ -629,68 +619,68 @@ public final class p2pgserviceGrpc {
          */
         public void collectInPeers(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> responseObserver) {
-            asyncUnimplementedUnaryCall(getCollectInPeersMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCollectInPeersMethod(), responseObserver);
         }
 
         /**
          */
         public void collectInPeers2(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeersReply> responseObserver) {
-            asyncUnimplementedUnaryCall(getCollectInPeers2Method(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCollectInPeers2Method(), responseObserver);
         }
 
         @java.lang.Override
         public final io.grpc.ServerServiceDefinition bindService() {
             return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-                    .addMethod(getBroadCastTxMethod(), asyncUnaryCall(
+                    .addMethod(getBroadCastTxMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PTx, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_BROAD_CAST_TX)))
-                    .addMethod(getBroadCastBlockMethod(), asyncUnaryCall(
+                    .addMethod(getBroadCastBlockMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PBlock, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_BROAD_CAST_BLOCK)))
-                    .addMethod(getPingMethod(), asyncUnaryCall(
+                    .addMethod(getPingMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PPing, cn.chain33.javasdk.model.protobuf.P2pService.P2PPong>(
                                     this, METHODID_PING)))
-                    .addMethod(getGetAddrMethod(), asyncUnaryCall(
+                    .addMethod(getGetAddrMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr, cn.chain33.javasdk.model.protobuf.P2pService.P2PAddr>(
                                     this, METHODID_GET_ADDR)))
-                    .addMethod(getGetAddrListMethod(), asyncUnaryCall(
+                    .addMethod(getGetAddrListMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr, cn.chain33.javasdk.model.protobuf.P2pService.P2PAddrList>(
                                     this, METHODID_GET_ADDR_LIST)))
-                    .addMethod(getVersionMethod(), asyncUnaryCall(
+                    .addMethod(getVersionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion, cn.chain33.javasdk.model.protobuf.P2pService.P2PVerAck>(
                                     this, METHODID_VERSION)))
-                    .addMethod(getVersion2Method(), asyncUnaryCall(
+                    .addMethod(getVersion2Method(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion, cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion>(
                                     this, METHODID_VERSION2)))
-                    .addMethod(getSoftVersionMethod(), asyncUnaryCall(
+                    .addMethod(getSoftVersionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PPing, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_SOFT_VERSION)))
-                    .addMethod(getGetBlocksMethod(), asyncUnaryCall(
+                    .addMethod(getGetBlocksMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetBlocks, cn.chain33.javasdk.model.protobuf.P2pService.P2PInv>(
                                     this, METHODID_GET_BLOCKS)))
-                    .addMethod(getGetMemPoolMethod(), asyncUnaryCall(
+                    .addMethod(getGetMemPoolMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetMempool, cn.chain33.javasdk.model.protobuf.P2pService.P2PInv>(
                                     this, METHODID_GET_MEM_POOL)))
-                    .addMethod(getGetDataMethod(), asyncServerStreamingCall(
+                    .addMethod(getGetDataMethod(), io.grpc.stub.ServerCalls.asyncServerStreamingCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetData, cn.chain33.javasdk.model.protobuf.P2pService.InvDatas>(
                                     this, METHODID_GET_DATA)))
-                    .addMethod(getGetHeadersMethod(), asyncUnaryCall(
+                    .addMethod(getGetHeadersMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetHeaders, cn.chain33.javasdk.model.protobuf.P2pService.P2PHeaders>(
                                     this, METHODID_GET_HEADERS)))
-                    .addMethod(getGetPeerInfoMethod(), asyncUnaryCall(
+                    .addMethod(getGetPeerInfoMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerInfo, cn.chain33.javasdk.model.protobuf.P2pService.P2PPeerInfo>(
                                     this, METHODID_GET_PEER_INFO)))
-                    .addMethod(getServerStreamReadMethod(), asyncClientStreamingCall(
+                    .addMethod(getServerStreamReadMethod(), io.grpc.stub.ServerCalls.asyncClientStreamingCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData, cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil>(
                                     this, METHODID_SERVER_STREAM_READ)))
-                    .addMethod(getServerStreamSendMethod(), asyncServerStreamingCall(
+                    .addMethod(getServerStreamSendMethod(), io.grpc.stub.ServerCalls.asyncServerStreamingCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PPing, cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData>(
                                     this, METHODID_SERVER_STREAM_SEND)))
-                    .addMethod(getCollectInPeersMethod(), asyncUnaryCall(
+                    .addMethod(getCollectInPeersMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PPing, cn.chain33.javasdk.model.protobuf.P2pService.PeerList>(
                                     this, METHODID_COLLECT_IN_PEERS)))
-                    .addMethod(getCollectInPeers2Method(), asyncUnaryCall(
+                    .addMethod(getCollectInPeers2Method(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PPing, cn.chain33.javasdk.model.protobuf.P2pService.PeersReply>(
                                     this, METHODID_COLLECT_IN_PEERS2)))
                     .build();
@@ -716,7 +706,8 @@ public final class p2pgserviceGrpc {
          */
         public void broadCastTx(cn.chain33.javasdk.model.protobuf.P2pService.P2PTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getBroadCastTxMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getBroadCastTxMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -726,8 +717,8 @@ public final class p2pgserviceGrpc {
          */
         public void broadCastBlock(cn.chain33.javasdk.model.protobuf.P2pService.P2PBlock request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getBroadCastBlockMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getBroadCastBlockMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -737,7 +728,8 @@ public final class p2pgserviceGrpc {
          */
         public void ping(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PPong> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getPingMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -747,14 +739,16 @@ public final class p2pgserviceGrpc {
          */
         public void getAddr(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PAddr> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetAddrMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetAddrMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
          */
         public void getAddrList(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PAddrList> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetAddrListMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetAddrListMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -764,7 +758,8 @@ public final class p2pgserviceGrpc {
          */
         public void version(cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PVerAck> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -774,7 +769,8 @@ public final class p2pgserviceGrpc {
          */
         public void version2(cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getVersion2Method(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getVersion2Method(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -784,7 +780,8 @@ public final class p2pgserviceGrpc {
          */
         public void softVersion(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSoftVersionMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSoftVersionMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -794,7 +791,8 @@ public final class p2pgserviceGrpc {
          */
         public void getBlocks(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetBlocks request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PInv> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -804,7 +802,8 @@ public final class p2pgserviceGrpc {
          */
         public void getMemPool(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetMempool request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PInv> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -814,8 +813,8 @@ public final class p2pgserviceGrpc {
          */
         public void getData(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetData request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.InvDatas> responseObserver) {
-            asyncServerStreamingCall(getChannel().newCall(getGetDataMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+                    getChannel().newCall(getGetDataMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -825,7 +824,8 @@ public final class p2pgserviceGrpc {
          */
         public void getHeaders(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetHeaders request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PHeaders> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -835,7 +835,8 @@ public final class p2pgserviceGrpc {
          */
         public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerInfo request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.P2PPeerInfo> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -845,8 +846,8 @@ public final class p2pgserviceGrpc {
          */
         public io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData> serverStreamRead(
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil> responseObserver) {
-            return asyncClientStreamingCall(getChannel().newCall(getServerStreamReadMethod(), getCallOptions()),
-                    responseObserver);
+            return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+                    getChannel().newCall(getServerStreamReadMethod(), getCallOptions()), responseObserver);
         }
 
         /**
@@ -856,8 +857,8 @@ public final class p2pgserviceGrpc {
          */
         public void serverStreamSend(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData> responseObserver) {
-            asyncServerStreamingCall(getChannel().newCall(getServerStreamSendMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+                    getChannel().newCall(getServerStreamSendMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -867,16 +868,16 @@ public final class p2pgserviceGrpc {
          */
         public void collectInPeers(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCollectInPeersMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getCollectInPeersMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void collectInPeers2(cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeersReply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCollectInPeers2Method(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getCollectInPeers2Method(), getCallOptions()),
+                    request, responseObserver);
         }
     }
 
@@ -900,7 +901,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply broadCastTx(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PTx request) {
-            return blockingUnaryCall(getChannel(), getBroadCastTxMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getBroadCastTxMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -910,7 +912,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply broadCastBlock(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PBlock request) {
-            return blockingUnaryCall(getChannel(), getBroadCastBlockMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getBroadCastBlockMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -920,7 +923,7 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PPong ping(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return blockingUnaryCall(getChannel(), getPingMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getPingMethod(), getCallOptions(), request);
         }
 
         /**
@@ -930,14 +933,16 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PAddr getAddr(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request) {
-            return blockingUnaryCall(getChannel(), getGetAddrMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetAddrMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PAddrList getAddrList(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request) {
-            return blockingUnaryCall(getChannel(), getGetAddrListMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetAddrListMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -947,7 +952,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PVerAck version(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request) {
-            return blockingUnaryCall(getChannel(), getVersionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getVersionMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -957,7 +963,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion version2(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request) {
-            return blockingUnaryCall(getChannel(), getVersion2Method(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getVersion2Method(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -967,7 +974,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply softVersion(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return blockingUnaryCall(getChannel(), getSoftVersionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSoftVersionMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -977,7 +985,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PInv getBlocks(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetBlocks request) {
-            return blockingUnaryCall(getChannel(), getGetBlocksMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBlocksMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -987,7 +996,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PInv getMemPool(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetMempool request) {
-            return blockingUnaryCall(getChannel(), getGetMemPoolMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetMemPoolMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -997,7 +1007,8 @@ public final class p2pgserviceGrpc {
          */
         public java.util.Iterator<cn.chain33.javasdk.model.protobuf.P2pService.InvDatas> getData(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetData request) {
-            return blockingServerStreamingCall(getChannel(), getGetDataMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingServerStreamingCall(getChannel(), getGetDataMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -1007,7 +1018,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PHeaders getHeaders(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetHeaders request) {
-            return blockingUnaryCall(getChannel(), getGetHeadersMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetHeadersMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -1017,7 +1029,8 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.P2PPeerInfo getPeerInfo(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerInfo request) {
-            return blockingUnaryCall(getChannel(), getGetPeerInfoMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetPeerInfoMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -1027,7 +1040,8 @@ public final class p2pgserviceGrpc {
          */
         public java.util.Iterator<cn.chain33.javasdk.model.protobuf.P2pService.BroadCastData> serverStreamSend(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return blockingServerStreamingCall(getChannel(), getServerStreamSendMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingServerStreamingCall(getChannel(), getServerStreamSendMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -1037,14 +1051,16 @@ public final class p2pgserviceGrpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.PeerList collectInPeers(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return blockingUnaryCall(getChannel(), getCollectInPeersMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCollectInPeersMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.PeersReply collectInPeers2(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return blockingUnaryCall(getChannel(), getCollectInPeers2Method(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCollectInPeers2Method(),
+                    getCallOptions(), request);
         }
     }
 
@@ -1067,7 +1083,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> broadCastTx(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PTx request) {
-            return futureUnaryCall(getChannel().newCall(getBroadCastTxMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getBroadCastTxMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1077,7 +1094,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> broadCastBlock(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PBlock request) {
-            return futureUnaryCall(getChannel().newCall(getBroadCastBlockMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getBroadCastBlockMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1087,7 +1105,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PPong> ping(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return futureUnaryCall(getChannel().newCall(getPingMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getPingMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -1097,14 +1116,16 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PAddr> getAddr(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request) {
-            return futureUnaryCall(getChannel().newCall(getGetAddrMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getGetAddrMethod(), getCallOptions()),
+                    request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PAddrList> getAddrList(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetAddr request) {
-            return futureUnaryCall(getChannel().newCall(getGetAddrListMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetAddrListMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1114,7 +1135,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PVerAck> version(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request) {
-            return futureUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -1124,7 +1146,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion> version2(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PVersion request) {
-            return futureUnaryCall(getChannel().newCall(getVersion2Method(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getVersion2Method(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -1134,7 +1157,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> softVersion(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return futureUnaryCall(getChannel().newCall(getSoftVersionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getSoftVersionMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1144,7 +1168,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PInv> getBlocks(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetBlocks request) {
-            return futureUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1154,7 +1179,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PInv> getMemPool(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetMempool request) {
-            return futureUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1164,7 +1190,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PHeaders> getHeaders(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetHeaders request) {
-            return futureUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1174,7 +1201,8 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.P2PPeerInfo> getPeerInfo(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerInfo request) {
-            return futureUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request);
         }
 
         /**
@@ -1184,14 +1212,16 @@ public final class p2pgserviceGrpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> collectInPeers(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return futureUnaryCall(getChannel().newCall(getCollectInPeersMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCollectInPeersMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.PeersReply> collectInPeers2(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PPing request) {
-            return futureUnaryCall(getChannel().newCall(getCollectInPeers2Method(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCollectInPeers2Method(), getCallOptions()), request);
         }
     }
 

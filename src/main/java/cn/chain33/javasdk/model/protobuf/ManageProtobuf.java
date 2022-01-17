@@ -20,11 +20,15 @@ public final class ManageProtobuf {
 
         /**
          * <code>.ModifyConfig modify = 1;</code>
+         * 
+         * @return Whether the modify field is set.
          */
         boolean hasModify();
 
         /**
          * <code>.ModifyConfig modify = 1;</code>
+         * 
+         * @return The modify.
          */
         cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify();
 
@@ -35,6 +39,8 @@ public final class ManageProtobuf {
 
         /**
          * <code>int32 Ty = 2;</code>
+         * 
+         * @return The ty.
          */
         int getTy();
 
@@ -55,7 +61,12 @@ public final class ManageProtobuf {
         }
 
         private ManageAction() {
-            ty_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new ManageAction();
         }
 
         @java.lang.Override
@@ -70,7 +81,6 @@ public final class ManageProtobuf {
             if (extensionRegistry == null) {
                 throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
                     .newBuilder();
             try {
@@ -104,7 +114,7 @@ public final class ManageProtobuf {
                         break;
                     }
                     default: {
-                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
                             done = true;
                         }
                         break;
@@ -136,7 +146,8 @@ public final class ManageProtobuf {
         private int valueCase_ = 0;
         private java.lang.Object value_;
 
-        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
             MODIFY(1), VALUE_NOT_SET(0);
 
             private final int value;
@@ -146,6 +157,11 @@ public final class ManageProtobuf {
             }
 
             /**
+             * @param value
+             *            The number of the enum to look for.
+             * 
+             * @return The enum associated with the given number.
+             * 
              * @deprecated Use {@link #forNumber(int)} instead.
              */
             @java.lang.Deprecated
@@ -177,14 +193,20 @@ public final class ManageProtobuf {
 
         /**
          * <code>.ModifyConfig modify = 1;</code>
+         * 
+         * @return Whether the modify field is set.
          */
+        @java.lang.Override
         public boolean hasModify() {
             return valueCase_ == 1;
         }
 
         /**
          * <code>.ModifyConfig modify = 1;</code>
+         * 
+         * @return The modify.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
@@ -195,6 +217,7 @@ public final class ManageProtobuf {
         /**
          * <code>.ModifyConfig modify = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) value_;
@@ -207,7 +230,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>int32 Ty = 2;</code>
+         * 
+         * @return The ty.
          */
+        @java.lang.Override
         public int getTy() {
             return ty_;
         }
@@ -266,20 +292,21 @@ public final class ManageProtobuf {
             }
             cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction other = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction) obj;
 
-            boolean result = true;
-            result = result && (getTy() == other.getTy());
-            result = result && getValueCase().equals(other.getValueCase());
-            if (!result)
+            if (getTy() != other.getTy())
+                return false;
+            if (!getValueCase().equals(other.getValueCase()))
                 return false;
             switch (valueCase_) {
             case 1:
-                result = result && getModify().equals(other.getModify());
+                if (!getModify().equals(other.getModify()))
+                    return false;
                 break;
             case 0:
             default:
             }
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
 
         @java.lang.Override
@@ -475,34 +502,34 @@ public final class ManageProtobuf {
 
             @java.lang.Override
             public Builder clone() {
-                return (Builder) super.clone();
+                return super.clone();
             }
 
             @java.lang.Override
             public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
-                return (Builder) super.setField(field, value);
+                return super.setField(field, value);
             }
 
             @java.lang.Override
             public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
-                return (Builder) super.clearField(field);
+                return super.clearField(field);
             }
 
             @java.lang.Override
             public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-                return (Builder) super.clearOneof(oneof);
+                return super.clearOneof(oneof);
             }
 
             @java.lang.Override
             public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
                     java.lang.Object value) {
-                return (Builder) super.setRepeatedField(field, index, value);
+                return super.setRepeatedField(field, index, value);
             }
 
             @java.lang.Override
             public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
                     java.lang.Object value) {
-                return (Builder) super.addRepeatedField(field, value);
+                return super.addRepeatedField(field, value);
             }
 
             @java.lang.Override
@@ -576,14 +603,20 @@ public final class ManageProtobuf {
 
             /**
              * <code>.ModifyConfig modify = 1;</code>
+             * 
+             * @return Whether the modify field is set.
              */
+            @java.lang.Override
             public boolean hasModify() {
                 return valueCase_ == 1;
             }
 
             /**
              * <code>.ModifyConfig modify = 1;</code>
+             * 
+             * @return The modify.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig getModify() {
                 if (modifyBuilder_ == null) {
                     if (valueCase_ == 1) {
@@ -684,6 +717,7 @@ public final class ManageProtobuf {
             /**
              * <code>.ModifyConfig modify = 1;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
                 if ((valueCase_ == 1) && (modifyBuilder_ != null)) {
                     return modifyBuilder_.getMessageOrBuilder();
@@ -718,13 +752,21 @@ public final class ManageProtobuf {
 
             /**
              * <code>int32 Ty = 2;</code>
+             * 
+             * @return The ty.
              */
+            @java.lang.Override
             public int getTy() {
                 return ty_;
             }
 
             /**
              * <code>int32 Ty = 2;</code>
+             * 
+             * @param value
+             *            The ty to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTy(int value) {
 
@@ -735,6 +777,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>int32 Ty = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearTy() {
 
@@ -745,7 +789,7 @@ public final class ManageProtobuf {
 
             @java.lang.Override
             public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
-                return super.setUnknownFieldsProto3(unknownFields);
+                return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -797,41 +841,57 @@ public final class ManageProtobuf {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
         /**
          * <code>string value = 2;</code>
+         * 
+         * @return The value.
          */
         java.lang.String getValue();
 
         /**
          * <code>string value = 2;</code>
+         * 
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString getValueBytes();
 
         /**
          * <code>string op = 3;</code>
+         * 
+         * @return The op.
          */
         java.lang.String getOp();
 
         /**
          * <code>string op = 3;</code>
+         * 
+         * @return The bytes for op.
          */
         com.google.protobuf.ByteString getOpBytes();
 
         /**
          * <code>string addr = 4;</code>
+         * 
+         * @return The addr.
          */
         java.lang.String getAddr();
 
         /**
          * <code>string addr = 4;</code>
+         * 
+         * @return The bytes for addr.
          */
         com.google.protobuf.ByteString getAddrBytes();
     }
@@ -857,6 +917,12 @@ public final class ManageProtobuf {
         }
 
         @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new ModifyConfig();
+        }
+
+        @java.lang.Override
         public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
             return this.unknownFields;
         }
@@ -868,7 +934,6 @@ public final class ManageProtobuf {
             if (extensionRegistry == null) {
                 throw new java.lang.NullPointerException();
             }
-            int mutable_bitField0_ = 0;
             com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
                     .newBuilder();
             try {
@@ -904,7 +969,7 @@ public final class ManageProtobuf {
                         break;
                     }
                     default: {
-                        if (!parseUnknownFieldProto3(input, unknownFields, extensionRegistry, tag)) {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
                             done = true;
                         }
                         break;
@@ -938,7 +1003,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -953,7 +1021,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -970,7 +1041,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string value = 2;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -985,7 +1059,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string value = 2;</code>
+         * 
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -1002,7 +1079,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string op = 3;</code>
+         * 
+         * @return The op.
          */
+        @java.lang.Override
         public java.lang.String getOp() {
             java.lang.Object ref = op_;
             if (ref instanceof java.lang.String) {
@@ -1017,7 +1097,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string op = 3;</code>
+         * 
+         * @return The bytes for op.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOpBytes() {
             java.lang.Object ref = op_;
             if (ref instanceof java.lang.String) {
@@ -1034,7 +1117,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string addr = 4;</code>
+         * 
+         * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -1049,7 +1135,10 @@ public final class ManageProtobuf {
 
         /**
          * <code>string addr = 4;</code>
+         * 
+         * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -1126,13 +1215,17 @@ public final class ManageProtobuf {
             }
             cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig other = (cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig) obj;
 
-            boolean result = true;
-            result = result && getKey().equals(other.getKey());
-            result = result && getValue().equals(other.getValue());
-            result = result && getOp().equals(other.getOp());
-            result = result && getAddr().equals(other.getAddr());
-            result = result && unknownFields.equals(other.unknownFields);
-            return result;
+            if (!getKey().equals(other.getKey()))
+                return false;
+            if (!getValue().equals(other.getValue()))
+                return false;
+            if (!getOp().equals(other.getOp()))
+                return false;
+            if (!getAddr().equals(other.getAddr()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
 
         @java.lang.Override
@@ -1325,34 +1418,34 @@ public final class ManageProtobuf {
 
             @java.lang.Override
             public Builder clone() {
-                return (Builder) super.clone();
+                return super.clone();
             }
 
             @java.lang.Override
             public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
-                return (Builder) super.setField(field, value);
+                return super.setField(field, value);
             }
 
             @java.lang.Override
             public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
-                return (Builder) super.clearField(field);
+                return super.clearField(field);
             }
 
             @java.lang.Override
             public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-                return (Builder) super.clearOneof(oneof);
+                return super.clearOneof(oneof);
             }
 
             @java.lang.Override
             public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
                     java.lang.Object value) {
-                return (Builder) super.setRepeatedField(field, index, value);
+                return super.setRepeatedField(field, index, value);
             }
 
             @java.lang.Override
             public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
                     java.lang.Object value) {
-                return (Builder) super.addRepeatedField(field, value);
+                return super.addRepeatedField(field, value);
             }
 
             @java.lang.Override
@@ -1416,6 +1509,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -1431,6 +1526,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -1446,6 +1543,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -1459,6 +1561,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -1469,6 +1573,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -1485,6 +1594,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string value = 2;</code>
+             * 
+             * @return The value.
              */
             public java.lang.String getValue() {
                 java.lang.Object ref = value_;
@@ -1500,6 +1611,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string value = 2;</code>
+             * 
+             * @return The bytes for value.
              */
             public com.google.protobuf.ByteString getValueBytes() {
                 java.lang.Object ref = value_;
@@ -1515,6 +1628,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string value = 2;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(java.lang.String value) {
                 if (value == null) {
@@ -1528,6 +1646,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string value = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -1538,6 +1658,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string value = 2;</code>
+             * 
+             * @param value
+             *            The bytes for value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValueBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -1554,6 +1679,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string op = 3;</code>
+             * 
+             * @return The op.
              */
             public java.lang.String getOp() {
                 java.lang.Object ref = op_;
@@ -1569,6 +1696,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string op = 3;</code>
+             * 
+             * @return The bytes for op.
              */
             public com.google.protobuf.ByteString getOpBytes() {
                 java.lang.Object ref = op_;
@@ -1584,6 +1713,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string op = 3;</code>
+             * 
+             * @param value
+             *            The op to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setOp(java.lang.String value) {
                 if (value == null) {
@@ -1597,6 +1731,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string op = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearOp() {
 
@@ -1607,6 +1743,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string op = 3;</code>
+             * 
+             * @param value
+             *            The bytes for op to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setOpBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -1623,6 +1764,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string addr = 4;</code>
+             * 
+             * @return The addr.
              */
             public java.lang.String getAddr() {
                 java.lang.Object ref = addr_;
@@ -1638,6 +1781,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string addr = 4;</code>
+             * 
+             * @return The bytes for addr.
              */
             public com.google.protobuf.ByteString getAddrBytes() {
                 java.lang.Object ref = addr_;
@@ -1653,6 +1798,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string addr = 4;</code>
+             * 
+             * @param value
+             *            The addr to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setAddr(java.lang.String value) {
                 if (value == null) {
@@ -1666,6 +1816,8 @@ public final class ManageProtobuf {
 
             /**
              * <code>string addr = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearAddr() {
 
@@ -1676,6 +1828,11 @@ public final class ManageProtobuf {
 
             /**
              * <code>string addr = 4;</code>
+             * 
+             * @param value
+             *            The bytes for addr to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setAddrBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -1690,7 +1847,7 @@ public final class ManageProtobuf {
 
             @java.lang.Override
             public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
-                return super.setUnknownFieldsProto3(unknownFields);
+                return super.setUnknownFields(unknownFields);
             }
 
             @java.lang.Override
@@ -1750,17 +1907,10 @@ public final class ManageProtobuf {
         java.lang.String[] descriptorData = { "\n\014Manage.proto\"D\n\014ManageAction\022\037\n\006modify"
                 + "\030\001 \001(\0132\r.ModifyConfigH\000\022\n\n\002Ty\030\002 \001(\005B\007\n\005v"
                 + "alue\"D\n\014ModifyConfig\022\013\n\003key\030\001 \001(\t\022\r\n\005val"
-                + "ue\030\002 \001(\t\022\n\n\002op\030\003 \001(\t\022\014\n\004addr\030\004 \001(\tB\"\n\030cn"
-                + ".chain33.javasdk.modelB\006Manageb\006proto3" };
-        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-            public com.google.protobuf.ExtensionRegistry assignDescriptors(
-                    com.google.protobuf.Descriptors.FileDescriptor root) {
-                descriptor = root;
-                return null;
-            }
-        };
-        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
-                new com.google.protobuf.Descriptors.FileDescriptor[] {}, assigner);
+                + "ue\030\002 \001(\t\022\n\n\002op\030\003 \001(\t\022\014\n\004addr\030\004 \001(\tB3\n!cn"
+                + ".chain33.javasdk.model.protobufB\016ManageP" + "rotobufb\006proto3" };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {});
         internal_static_ManageAction_descriptor = getDescriptor().getMessageTypes().get(0);
         internal_static_ManageAction_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
                 internal_static_ManageAction_descriptor, new java.lang.String[] { "Modify", "Ty", "Value", });

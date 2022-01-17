@@ -185,6 +185,7 @@ public final class AccountProtobuf {
          * 
          * @return The currency.
          */
+        @java.lang.Override
         public int getCurrency() {
             return currency_;
         }
@@ -201,6 +202,7 @@ public final class AccountProtobuf {
          * 
          * @return The balance.
          */
+        @java.lang.Override
         public long getBalance() {
             return balance_;
         }
@@ -217,6 +219,7 @@ public final class AccountProtobuf {
          * 
          * @return The frozen.
          */
+        @java.lang.Override
         public long getFrozen() {
             return frozen_;
         }
@@ -233,6 +236,7 @@ public final class AccountProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -254,6 +258,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -632,6 +637,7 @@ public final class AccountProtobuf {
              * 
              * @return The currency.
              */
+            @java.lang.Override
             public int getCurrency() {
                 return currency_;
             }
@@ -682,6 +688,7 @@ public final class AccountProtobuf {
              * 
              * @return The balance.
              */
+            @java.lang.Override
             public long getBalance() {
                 return balance_;
             }
@@ -732,6 +739,7 @@ public final class AccountProtobuf {
              * 
              * @return The frozen.
              */
+            @java.lang.Override
             public long getFrozen() {
                 return frozen_;
             }
@@ -1138,6 +1146,7 @@ public final class AccountProtobuf {
          * 
          * @return The execAddr.
          */
+        @java.lang.Override
         public java.lang.String getExecAddr() {
             java.lang.Object ref = execAddr_;
             if (ref instanceof java.lang.String) {
@@ -1159,6 +1168,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for execAddr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExecAddrBytes() {
             java.lang.Object ref = execAddr_;
             if (ref instanceof java.lang.String) {
@@ -1182,6 +1192,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the prev field is set.
          */
+        @java.lang.Override
         public boolean hasPrev() {
             return prev_ != null;
         }
@@ -1195,6 +1206,7 @@ public final class AccountProtobuf {
          * 
          * @return The prev.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getPrev() {
             return prev_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : prev_;
@@ -1207,6 +1219,7 @@ public final class AccountProtobuf {
          *
          * <code>.Account prev = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getPrevOrBuilder() {
             return getPrev();
         }
@@ -1223,6 +1236,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the current field is set.
          */
+        @java.lang.Override
         public boolean hasCurrent() {
             return current_ != null;
         }
@@ -1236,6 +1250,7 @@ public final class AccountProtobuf {
          * 
          * @return The current.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getCurrent() {
             return current_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : current_;
@@ -1248,6 +1263,7 @@ public final class AccountProtobuf {
          *
          * <code>.Account current = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getCurrentOrBuilder() {
             return getCurrent();
         }
@@ -2285,6 +2301,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the prev field is set.
          */
+        @java.lang.Override
         public boolean hasPrev() {
             return prev_ != null;
         }
@@ -2298,6 +2315,7 @@ public final class AccountProtobuf {
          * 
          * @return The prev.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getPrev() {
             return prev_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : prev_;
@@ -2310,6 +2328,7 @@ public final class AccountProtobuf {
          *
          * <code>.Account prev = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getPrevOrBuilder() {
             return getPrev();
         }
@@ -2326,6 +2345,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the current field is set.
          */
+        @java.lang.Override
         public boolean hasCurrent() {
             return current_ != null;
         }
@@ -2339,6 +2359,7 @@ public final class AccountProtobuf {
          * 
          * @return The current.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getCurrent() {
             return current_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : current_;
@@ -2351,6 +2372,7 @@ public final class AccountProtobuf {
          *
          * <code>.Account current = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getCurrentOrBuilder() {
             return getCurrent();
         }
@@ -3263,6 +3285,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the prev field is set.
          */
+        @java.lang.Override
         public boolean hasPrev() {
             return prev_ != null;
         }
@@ -3276,6 +3299,7 @@ public final class AccountProtobuf {
          * 
          * @return The prev.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getPrev() {
             return prev_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : prev_;
@@ -3288,6 +3312,7 @@ public final class AccountProtobuf {
          *
          * <code>.Account prev = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getPrevOrBuilder() {
             return getPrev();
         }
@@ -3304,6 +3329,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the current field is set.
          */
+        @java.lang.Override
         public boolean hasCurrent() {
             return current_ != null;
         }
@@ -3317,6 +3343,7 @@ public final class AccountProtobuf {
          * 
          * @return The current.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getCurrent() {
             return current_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : current_;
@@ -3329,6 +3356,7 @@ public final class AccountProtobuf {
          *
          * <code>.Account current = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getCurrentOrBuilder() {
             return getCurrent();
         }
@@ -4208,6 +4236,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the prev field is set.
          */
+        @java.lang.Override
         public boolean hasPrev() {
             return prev_ != null;
         }
@@ -4217,6 +4246,7 @@ public final class AccountProtobuf {
          * 
          * @return The prev.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getPrev() {
             return prev_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : prev_;
@@ -4225,6 +4255,7 @@ public final class AccountProtobuf {
         /**
          * <code>.Account prev = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getPrevOrBuilder() {
             return getPrev();
         }
@@ -4237,6 +4268,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the current field is set.
          */
+        @java.lang.Override
         public boolean hasCurrent() {
             return current_ != null;
         }
@@ -4246,6 +4278,7 @@ public final class AccountProtobuf {
          * 
          * @return The current.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getCurrent() {
             return current_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : current_;
@@ -4254,6 +4287,7 @@ public final class AccountProtobuf {
         /**
          * <code>.Account current = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getCurrentOrBuilder() {
             return getCurrent();
         }
@@ -5215,6 +5249,7 @@ public final class AccountProtobuf {
          * 
          * @return The execer.
          */
+        @java.lang.Override
         public java.lang.String getExecer() {
             java.lang.Object ref = execer_;
             if (ref instanceof java.lang.String) {
@@ -5236,6 +5271,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for execer.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExecerBytes() {
             java.lang.Object ref = execer_;
             if (ref instanceof java.lang.String) {
@@ -5255,6 +5291,7 @@ public final class AccountProtobuf {
          * 
          * @return The stateHash.
          */
+        @java.lang.Override
         public java.lang.String getStateHash() {
             java.lang.Object ref = stateHash_;
             if (ref instanceof java.lang.String) {
@@ -5272,6 +5309,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for stateHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getStateHashBytes() {
             java.lang.Object ref = stateHash_;
             if (ref instanceof java.lang.String) {
@@ -5291,6 +5329,7 @@ public final class AccountProtobuf {
          * 
          * @return The assetExec.
          */
+        @java.lang.Override
         public java.lang.String getAssetExec() {
             java.lang.Object ref = assetExec_;
             if (ref instanceof java.lang.String) {
@@ -5308,6 +5347,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for assetExec.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAssetExecBytes() {
             java.lang.Object ref = assetExec_;
             if (ref instanceof java.lang.String) {
@@ -5327,6 +5367,7 @@ public final class AccountProtobuf {
          * 
          * @return The assetSymbol.
          */
+        @java.lang.Override
         public java.lang.String getAssetSymbol() {
             java.lang.Object ref = assetSymbol_;
             if (ref instanceof java.lang.String) {
@@ -5344,6 +5385,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for assetSymbol.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAssetSymbolBytes() {
             java.lang.Object ref = assetSymbol_;
             if (ref instanceof java.lang.String) {
@@ -6457,6 +6499,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .Account acc = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account> getAccList() {
             return acc_;
         }
@@ -6464,6 +6507,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .Account acc = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder> getAccOrBuilderList() {
             return acc_;
         }
@@ -6471,6 +6515,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .Account acc = 1;</code>
          */
+        @java.lang.Override
         public int getAccCount() {
             return acc_.size();
         }
@@ -6478,6 +6523,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .Account acc = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getAcc(int index) {
             return acc_.get(index);
         }
@@ -6485,6 +6531,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .Account acc = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getAccOrBuilder(int index) {
             return acc_.get(index);
         }
@@ -7269,6 +7316,7 @@ public final class AccountProtobuf {
          * 
          * @return The execer.
          */
+        @java.lang.Override
         public java.lang.String getExecer() {
             java.lang.Object ref = execer_;
             if (ref instanceof java.lang.String) {
@@ -7286,6 +7334,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for execer.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExecerBytes() {
             java.lang.Object ref = execer_;
             if (ref instanceof java.lang.String) {
@@ -7305,6 +7354,7 @@ public final class AccountProtobuf {
          * 
          * @return Whether the account field is set.
          */
+        @java.lang.Override
         public boolean hasAccount() {
             return account_ != null;
         }
@@ -7314,6 +7364,7 @@ public final class AccountProtobuf {
          * 
          * @return The account.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account getAccount() {
             return account_ == null ? cn.chain33.javasdk.model.protobuf.AccountProtobuf.Account.getDefaultInstance()
                     : account_;
@@ -7322,6 +7373,7 @@ public final class AccountProtobuf {
         /**
          * <code>.Account account = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AccountOrBuilder getAccountOrBuilder() {
             return getAccount();
         }
@@ -8066,6 +8118,7 @@ public final class AccountProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -8083,6 +8136,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -8100,6 +8154,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .ExecAccount ExecAccount = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.AccountProtobuf.ExecAccount> getExecAccountList() {
             return execAccount_;
         }
@@ -8107,6 +8162,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .ExecAccount ExecAccount = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.AccountProtobuf.ExecAccountOrBuilder> getExecAccountOrBuilderList() {
             return execAccount_;
         }
@@ -8114,6 +8170,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .ExecAccount ExecAccount = 2;</code>
          */
+        @java.lang.Override
         public int getExecAccountCount() {
             return execAccount_.size();
         }
@@ -8121,6 +8178,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .ExecAccount ExecAccount = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.ExecAccount getExecAccount(int index) {
             return execAccount_.get(index);
         }
@@ -8128,6 +8186,7 @@ public final class AccountProtobuf {
         /**
          * <code>repeated .ExecAccount ExecAccount = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.ExecAccountOrBuilder getExecAccountOrBuilder(
                 int index) {
             return execAccount_.get(index);
@@ -9090,6 +9149,7 @@ public final class AccountProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -9111,6 +9171,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -9134,6 +9195,7 @@ public final class AccountProtobuf {
          * 
          * @return The execer.
          */
+        @java.lang.Override
         public java.lang.String getExecer() {
             java.lang.Object ref = execer_;
             if (ref instanceof java.lang.String) {
@@ -9155,6 +9217,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for execer.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExecerBytes() {
             java.lang.Object ref = execer_;
             if (ref instanceof java.lang.String) {
@@ -9174,6 +9237,7 @@ public final class AccountProtobuf {
          * 
          * @return The stateHash.
          */
+        @java.lang.Override
         public java.lang.String getStateHash() {
             java.lang.Object ref = stateHash_;
             if (ref instanceof java.lang.String) {
@@ -9191,6 +9255,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for stateHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getStateHashBytes() {
             java.lang.Object ref = stateHash_;
             if (ref instanceof java.lang.String) {
@@ -9210,6 +9275,7 @@ public final class AccountProtobuf {
          * 
          * @return The assetExec.
          */
+        @java.lang.Override
         public java.lang.String getAssetExec() {
             java.lang.Object ref = assetExec_;
             if (ref instanceof java.lang.String) {
@@ -9227,6 +9293,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for assetExec.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAssetExecBytes() {
             java.lang.Object ref = assetExec_;
             if (ref instanceof java.lang.String) {
@@ -9246,6 +9313,7 @@ public final class AccountProtobuf {
          * 
          * @return The assetSymbol.
          */
+        @java.lang.Override
         public java.lang.String getAssetSymbol() {
             java.lang.Object ref = assetSymbol_;
             if (ref instanceof java.lang.String) {
@@ -9263,6 +9331,7 @@ public final class AccountProtobuf {
          * 
          * @return The bytes for assetSymbol.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAssetSymbolBytes() {
             java.lang.Object ref = assetSymbol_;
             if (ref instanceof java.lang.String) {

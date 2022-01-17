@@ -1,21 +1,16 @@
 package cn.chain33.javasdk.model.protobuf;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
-@javax.annotation.Generated(value = "by gRPC proto compiler (version 1.31.1)", comments = "Source: grpc.proto")
+@javax.annotation.Generated(value = "by gRPC proto compiler (version 1.39.0)", comments = "Source: grpc.proto")
 public final class chain33Grpc {
 
     private chain33Grpc() {
     }
 
-    public static final String SERVICE_NAME = "types.chain33";
+    public static final String SERVICE_NAME = "chain33";
 
     // Static method descriptors that strictly reflect the proto.
     private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> getGetBlocksMethod;
@@ -1565,7 +1560,7 @@ public final class chain33Grpc {
          */
         public void getBlocks(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBlocksMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlocksMethod(), responseObserver);
         }
 
         /**
@@ -1575,7 +1570,7 @@ public final class chain33Grpc {
          */
         public void getLastHeader(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetLastHeaderMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLastHeaderMethod(), responseObserver);
         }
 
         /**
@@ -1585,7 +1580,7 @@ public final class chain33Grpc {
          */
         public void createRawTransaction(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getCreateRawTransactionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRawTransactionMethod(), responseObserver);
         }
 
         /**
@@ -1593,7 +1588,7 @@ public final class chain33Grpc {
         public void createRawTxGroup(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTransactionGroup request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getCreateRawTxGroupMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRawTxGroupMethod(), responseObserver);
         }
 
         /**
@@ -1603,7 +1598,7 @@ public final class chain33Grpc {
          */
         public void queryTransaction(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail> responseObserver) {
-            asyncUnimplementedUnaryCall(getQueryTransactionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryTransactionMethod(), responseObserver);
         }
 
         /**
@@ -1613,7 +1608,7 @@ public final class chain33Grpc {
          */
         public void sendTransaction(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getSendTransactionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendTransactionMethod(), responseObserver);
         }
 
         /**
@@ -1623,7 +1618,7 @@ public final class chain33Grpc {
          */
         public void getTransactionByAddr(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfos> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetTransactionByAddrMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTransactionByAddrMethod(), responseObserver);
         }
 
         /**
@@ -1633,7 +1628,7 @@ public final class chain33Grpc {
          */
         public void getTransactionByHashes(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetails> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetTransactionByHashesMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTransactionByHashesMethod(), responseObserver);
         }
 
         /**
@@ -1643,7 +1638,7 @@ public final class chain33Grpc {
          */
         public void getMemPool(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqGetMempool request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetMemPoolMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMemPoolMethod(), responseObserver);
         }
 
         /**
@@ -1654,7 +1649,7 @@ public final class chain33Grpc {
          */
         public void getAccounts(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccounts> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetAccountsMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAccountsMethod(), responseObserver);
         }
 
         /**
@@ -1664,7 +1659,7 @@ public final class chain33Grpc {
          */
         public void getAccount(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqGetAccount request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetAccountMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAccountMethod(), responseObserver);
         }
 
         /**
@@ -1674,7 +1669,7 @@ public final class chain33Grpc {
          */
         public void newAccount(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqNewAccount request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnimplementedUnaryCall(getNewAccountMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNewAccountMethod(), responseObserver);
         }
 
         /**
@@ -1685,7 +1680,7 @@ public final class chain33Grpc {
         public void walletTransactionList(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletTransactionList request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetails> responseObserver) {
-            asyncUnimplementedUnaryCall(getWalletTransactionListMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWalletTransactionListMethod(), responseObserver);
         }
 
         /**
@@ -1695,7 +1690,7 @@ public final class chain33Grpc {
          */
         public void importPrivkey(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletImportPrivkey request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnimplementedUnaryCall(getImportPrivkeyMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportPrivkeyMethod(), responseObserver);
         }
 
         /**
@@ -1705,7 +1700,7 @@ public final class chain33Grpc {
          */
         public void sendToAddress(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSendToAddress request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> responseObserver) {
-            asyncUnimplementedUnaryCall(getSendToAddressMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendToAddressMethod(), responseObserver);
         }
 
         /**
@@ -1715,7 +1710,7 @@ public final class chain33Grpc {
          */
         public void setTxFee(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetFee request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getSetTxFeeMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetTxFeeMethod(), responseObserver);
         }
 
         /**
@@ -1725,7 +1720,7 @@ public final class chain33Grpc {
          */
         public void setLabl(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetLabel request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnimplementedUnaryCall(getSetLablMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetLablMethod(), responseObserver);
         }
 
         /**
@@ -1735,7 +1730,7 @@ public final class chain33Grpc {
          */
         public void mergeBalance(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletMergeBalance request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHashes> responseObserver) {
-            asyncUnimplementedUnaryCall(getMergeBalanceMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMergeBalanceMethod(), responseObserver);
         }
 
         /**
@@ -1745,7 +1740,7 @@ public final class chain33Grpc {
          */
         public void setPasswd(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetPasswd request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getSetPasswdMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPasswdMethod(), responseObserver);
         }
 
         /**
@@ -1755,7 +1750,7 @@ public final class chain33Grpc {
          */
         public void lock(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getLockMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLockMethod(), responseObserver);
         }
 
         /**
@@ -1765,7 +1760,7 @@ public final class chain33Grpc {
          */
         public void unLock(cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletUnLock request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getUnLockMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnLockMethod(), responseObserver);
         }
 
         /**
@@ -1775,7 +1770,7 @@ public final class chain33Grpc {
          */
         public void getLastMemPool(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetLastMemPoolMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLastMemPoolMethod(), responseObserver);
         }
 
         /**
@@ -1785,7 +1780,7 @@ public final class chain33Grpc {
          */
         public void getProperFee(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqProperFee request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyProperFee> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetProperFeeMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProperFeeMethod(), responseObserver);
         }
 
         /**
@@ -1795,7 +1790,7 @@ public final class chain33Grpc {
          */
         public void getWalletStatus(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletStatus> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetWalletStatusMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWalletStatusMethod(), responseObserver);
         }
 
         /**
@@ -1806,21 +1801,21 @@ public final class chain33Grpc {
          */
         public void getBlockOverview(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOverview> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBlockOverviewMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlockOverviewMethod(), responseObserver);
         }
 
         /**
          */
         public void getAddrOverview(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AddrOverview> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetAddrOverviewMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAddrOverviewMethod(), responseObserver);
         }
 
         /**
          */
         public void getBlockHash(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqInt request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBlockHashMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlockHashMethod(), responseObserver);
         }
 
         /**
@@ -1831,7 +1826,7 @@ public final class chain33Grpc {
          */
         public void genSeed(cn.chain33.javasdk.model.protobuf.WalletProtobuf.GenSeedLang request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed> responseObserver) {
-            asyncUnimplementedUnaryCall(getGenSeedMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenSeedMethod(), responseObserver);
         }
 
         /**
@@ -1841,7 +1836,7 @@ public final class chain33Grpc {
          */
         public void getSeed(cn.chain33.javasdk.model.protobuf.WalletProtobuf.GetSeedByPw request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetSeedMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSeedMethod(), responseObserver);
         }
 
         /**
@@ -1851,7 +1846,7 @@ public final class chain33Grpc {
          */
         public void saveSeed(cn.chain33.javasdk.model.protobuf.WalletProtobuf.SaveSeedByPw request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getSaveSeedMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSaveSeedMethod(), responseObserver);
         }
 
         /**
@@ -1862,35 +1857,35 @@ public final class chain33Grpc {
          */
         public void getBalance(cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqBalance request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.AccountProtobuf.Accounts> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBalanceMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBalanceMethod(), responseObserver);
         }
 
         /**
          */
         public void queryChain(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getQueryChainMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryChainMethod(), responseObserver);
         }
 
         /**
          */
         public void execWallet(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getExecWalletMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExecWalletMethod(), responseObserver);
         }
 
         /**
          */
         public void queryConsensus(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getQueryConsensusMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryConsensusMethod(), responseObserver);
         }
 
         /**
          */
         public void createTransaction(cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.CreateTxIn request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getCreateTransactionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTransactionMethod(), responseObserver);
         }
 
         /**
@@ -1900,7 +1895,7 @@ public final class chain33Grpc {
          */
         public void getHexTxByHash(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.HexTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetHexTxByHashMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHexTxByHashMethod(), responseObserver);
         }
 
         /**
@@ -1910,7 +1905,7 @@ public final class chain33Grpc {
          */
         public void dumpPrivkey(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqString request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyString> responseObserver) {
-            asyncUnimplementedUnaryCall(getDumpPrivkeyMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDumpPrivkeyMethod(), responseObserver);
         }
 
         /**
@@ -1920,7 +1915,7 @@ public final class chain33Grpc {
          */
         public void dumpPrivkeysFile(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getDumpPrivkeysFileMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDumpPrivkeysFileMethod(), responseObserver);
         }
 
         /**
@@ -1930,7 +1925,7 @@ public final class chain33Grpc {
          */
         public void importPrivkeysFile(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getImportPrivkeysFileMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportPrivkeysFileMethod(), responseObserver);
         }
 
         /**
@@ -1940,7 +1935,7 @@ public final class chain33Grpc {
          */
         public void version(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.VersionInfo> responseObserver) {
-            asyncUnimplementedUnaryCall(getVersionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVersionMethod(), responseObserver);
         }
 
         /**
@@ -1950,7 +1945,7 @@ public final class chain33Grpc {
          */
         public void isSync(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getIsSyncMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsSyncMethod(), responseObserver);
         }
 
         /**
@@ -1960,7 +1955,7 @@ public final class chain33Grpc {
          */
         public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetPeerInfoMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPeerInfoMethod(), responseObserver);
         }
 
         /**
@@ -1970,7 +1965,7 @@ public final class chain33Grpc {
          */
         public void netInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> responseObserver) {
-            asyncUnimplementedUnaryCall(getNetInfoMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNetInfoMethod(), responseObserver);
         }
 
         /**
@@ -1980,7 +1975,7 @@ public final class chain33Grpc {
          */
         public void isNtpClockSync(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getIsNtpClockSyncMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsNtpClockSyncMethod(), responseObserver);
         }
 
         /**
@@ -1990,14 +1985,14 @@ public final class chain33Grpc {
          */
         public void getFatalFailure(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.Int32> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetFatalFailureMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFatalFailureMethod(), responseObserver);
         }
 
         /**
          */
         public void getLastBlockSequence(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetLastBlockSequenceMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLastBlockSequenceMethod(), responseObserver);
         }
 
         /**
@@ -2007,7 +2002,7 @@ public final class chain33Grpc {
          */
         public void getSequenceByHash(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetSequenceByHashMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSequenceByHashMethod(), responseObserver);
         }
 
         /**
@@ -2017,7 +2012,7 @@ public final class chain33Grpc {
          */
         public void getBlockByHashes(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetails> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBlockByHashesMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlockByHashesMethod(), responseObserver);
         }
 
         /**
@@ -2027,7 +2022,7 @@ public final class chain33Grpc {
          */
         public void getBlockBySeq(cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetBlockBySeqMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlockBySeqMethod(), responseObserver);
         }
 
         /**
@@ -2037,7 +2032,7 @@ public final class chain33Grpc {
          */
         public void closeQueue(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnimplementedUnaryCall(getCloseQueueMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseQueueMethod(), responseObserver);
         }
 
         /**
@@ -2047,7 +2042,7 @@ public final class chain33Grpc {
          */
         public void getAllExecBalance(cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqAllExecBalance request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.AccountProtobuf.AllExecBalance> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetAllExecBalanceMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllExecBalanceMethod(), responseObserver);
         }
 
         /**
@@ -2057,7 +2052,7 @@ public final class chain33Grpc {
          */
         public void signRawTx(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqSignRawTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getSignRawTxMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSignRawTxMethod(), responseObserver);
         }
 
         /**
@@ -2065,7 +2060,8 @@ public final class chain33Grpc {
         public void createNoBalanceTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getCreateNoBalanceTransactionMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateNoBalanceTransactionMethod(),
+                    responseObserver);
         }
 
         /**
@@ -2075,7 +2071,7 @@ public final class chain33Grpc {
          */
         public void queryRandNum(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqRandHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> responseObserver) {
-            asyncUnimplementedUnaryCall(getQueryRandNumMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getQueryRandNumMethod(), responseObserver);
         }
 
         /**
@@ -2085,14 +2081,14 @@ public final class chain33Grpc {
          */
         public void getFork(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqKey request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetForkMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetForkMethod(), responseObserver);
         }
 
         /**
          */
         public void createNoBalanceTxs(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTxs request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> responseObserver) {
-            asyncUnimplementedUnaryCall(getCreateNoBalanceTxsMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateNoBalanceTxsMethod(), responseObserver);
         }
 
         /**
@@ -2102,7 +2098,7 @@ public final class chain33Grpc {
          */
         public void getParaTxByTitle(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByTitle request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetParaTxByTitleMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetParaTxByTitleMethod(), responseObserver);
         }
 
         /**
@@ -2112,7 +2108,7 @@ public final class chain33Grpc {
          */
         public void loadParaTxByTitle(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqHeightByTitle request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReplyHeightByTitle> responseObserver) {
-            asyncUnimplementedUnaryCall(getLoadParaTxByTitleMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoadParaTxByTitleMethod(), responseObserver);
         }
 
         /**
@@ -2122,7 +2118,7 @@ public final class chain33Grpc {
          */
         public void getParaTxByHeight(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByHeight request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetParaTxByHeightMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetParaTxByHeightMethod(), responseObserver);
         }
 
         /**
@@ -2132,190 +2128,190 @@ public final class chain33Grpc {
          */
         public void getHeaders(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers> responseObserver) {
-            asyncUnimplementedUnaryCall(getGetHeadersMethod(), responseObserver);
+            io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHeadersMethod(), responseObserver);
         }
 
         @java.lang.Override
         public final io.grpc.ServerServiceDefinition bindService() {
             return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-                    .addMethod(getGetBlocksMethod(), asyncUnaryCall(
+                    .addMethod(getGetBlocksMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_GET_BLOCKS)))
-                    .addMethod(getGetLastHeaderMethod(), asyncUnaryCall(
+                    .addMethod(getGetLastHeaderMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header>(
                                     this, METHODID_GET_LAST_HEADER)))
-                    .addMethod(getCreateRawTransactionMethod(), asyncUnaryCall(
+                    .addMethod(getCreateRawTransactionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTx, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx>(
                                     this, METHODID_CREATE_RAW_TRANSACTION)))
-                    .addMethod(getCreateRawTxGroupMethod(), asyncUnaryCall(
+                    .addMethod(getCreateRawTxGroupMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTransactionGroup, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx>(
                                     this, METHODID_CREATE_RAW_TX_GROUP)))
-                    .addMethod(getQueryTransactionMethod(), asyncUnaryCall(
+                    .addMethod(getQueryTransactionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail>(
                                     this, METHODID_QUERY_TRANSACTION)))
-                    .addMethod(getSendTransactionMethod(), asyncUnaryCall(
+                    .addMethod(getSendTransactionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_SEND_TRANSACTION)))
-                    .addMethod(getGetTransactionByAddrMethod(), asyncUnaryCall(
+                    .addMethod(getGetTransactionByAddrMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfos>(
                                     this, METHODID_GET_TRANSACTION_BY_ADDR)))
-                    .addMethod(getGetTransactionByHashesMethod(), asyncUnaryCall(
+                    .addMethod(getGetTransactionByHashesMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetails>(
                                     this, METHODID_GET_TRANSACTION_BY_HASHES)))
-                    .addMethod(getGetMemPoolMethod(), asyncUnaryCall(
+                    .addMethod(getGetMemPoolMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqGetMempool, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList>(
                                     this, METHODID_GET_MEM_POOL)))
-                    .addMethod(getGetAccountsMethod(), asyncUnaryCall(
+                    .addMethod(getGetAccountsMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccounts>(
                                     this, METHODID_GET_ACCOUNTS)))
-                    .addMethod(getGetAccountMethod(), asyncUnaryCall(
+                    .addMethod(getGetAccountMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqGetAccount, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount>(
                                     this, METHODID_GET_ACCOUNT)))
-                    .addMethod(getNewAccountMethod(), asyncUnaryCall(
+                    .addMethod(getNewAccountMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqNewAccount, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount>(
                                     this, METHODID_NEW_ACCOUNT)))
-                    .addMethod(getWalletTransactionListMethod(), asyncUnaryCall(
+                    .addMethod(getWalletTransactionListMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletTransactionList, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetails>(
                                     this, METHODID_WALLET_TRANSACTION_LIST)))
-                    .addMethod(getImportPrivkeyMethod(), asyncUnaryCall(
+                    .addMethod(getImportPrivkeyMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletImportPrivkey, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount>(
                                     this, METHODID_IMPORT_PRIVKEY)))
-                    .addMethod(getSendToAddressMethod(), asyncUnaryCall(
+                    .addMethod(getSendToAddressMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSendToAddress, cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash>(
                                     this, METHODID_SEND_TO_ADDRESS)))
-                    .addMethod(getSetTxFeeMethod(), asyncUnaryCall(
+                    .addMethod(getSetTxFeeMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetFee, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_SET_TX_FEE)))
-                    .addMethod(getSetLablMethod(), asyncUnaryCall(
+                    .addMethod(getSetLablMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetLabel, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount>(
                                     this, METHODID_SET_LABL)))
-                    .addMethod(getMergeBalanceMethod(), asyncUnaryCall(
+                    .addMethod(getMergeBalanceMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletMergeBalance, cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHashes>(
                                     this, METHODID_MERGE_BALANCE)))
-                    .addMethod(getSetPasswdMethod(), asyncUnaryCall(
+                    .addMethod(getSetPasswdMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetPasswd, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_SET_PASSWD)))
-                    .addMethod(getLockMethod(), asyncUnaryCall(
+                    .addMethod(getLockMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_LOCK)))
-                    .addMethod(getUnLockMethod(), asyncUnaryCall(
+                    .addMethod(getUnLockMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletUnLock, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_UN_LOCK)))
-                    .addMethod(getGetLastMemPoolMethod(), asyncUnaryCall(
+                    .addMethod(getGetLastMemPoolMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList>(
                                     this, METHODID_GET_LAST_MEM_POOL)))
-                    .addMethod(getGetProperFeeMethod(), asyncUnaryCall(
+                    .addMethod(getGetProperFeeMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqProperFee, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyProperFee>(
                                     this, METHODID_GET_PROPER_FEE)))
-                    .addMethod(getGetWalletStatusMethod(), asyncUnaryCall(
+                    .addMethod(getGetWalletStatusMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletStatus>(
                                     this, METHODID_GET_WALLET_STATUS)))
-                    .addMethod(getGetBlockOverviewMethod(), asyncUnaryCall(
+                    .addMethod(getGetBlockOverviewMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOverview>(
                                     this, METHODID_GET_BLOCK_OVERVIEW)))
-                    .addMethod(getGetAddrOverviewMethod(), asyncUnaryCall(
+                    .addMethod(getGetAddrOverviewMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AddrOverview>(
                                     this, METHODID_GET_ADDR_OVERVIEW)))
-                    .addMethod(getGetBlockHashMethod(), asyncUnaryCall(
+                    .addMethod(getGetBlockHashMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqInt, cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash>(
                                     this, METHODID_GET_BLOCK_HASH)))
-                    .addMethod(getGenSeedMethod(), asyncUnaryCall(
+                    .addMethod(getGenSeedMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.GenSeedLang, cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed>(
                                     this, METHODID_GEN_SEED)))
-                    .addMethod(getGetSeedMethod(), asyncUnaryCall(
+                    .addMethod(getGetSeedMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.GetSeedByPw, cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed>(
                                     this, METHODID_GET_SEED)))
-                    .addMethod(getSaveSeedMethod(), asyncUnaryCall(
+                    .addMethod(getSaveSeedMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.SaveSeedByPw, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_SAVE_SEED)))
-                    .addMethod(getGetBalanceMethod(), asyncUnaryCall(
+                    .addMethod(getGetBalanceMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqBalance, cn.chain33.javasdk.model.protobuf.AccountProtobuf.Accounts>(
                                     this, METHODID_GET_BALANCE)))
-                    .addMethod(getQueryChainMethod(), asyncUnaryCall(
+                    .addMethod(getQueryChainMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_QUERY_CHAIN)))
-                    .addMethod(getExecWalletMethod(), asyncUnaryCall(
+                    .addMethod(getExecWalletMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_EXEC_WALLET)))
-                    .addMethod(getQueryConsensusMethod(), asyncUnaryCall(
+                    .addMethod(getQueryConsensusMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_QUERY_CONSENSUS)))
-                    .addMethod(getCreateTransactionMethod(), asyncUnaryCall(
+                    .addMethod(getCreateTransactionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.CreateTxIn, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx>(
                                     this, METHODID_CREATE_TRANSACTION)))
-                    .addMethod(getGetHexTxByHashMethod(), asyncUnaryCall(
+                    .addMethod(getGetHexTxByHashMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash, cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.HexTx>(
                                     this, METHODID_GET_HEX_TX_BY_HASH)))
-                    .addMethod(getDumpPrivkeyMethod(), asyncUnaryCall(
+                    .addMethod(getDumpPrivkeyMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqString, cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyString>(
                                     this, METHODID_DUMP_PRIVKEY)))
-                    .addMethod(getDumpPrivkeysFileMethod(), asyncUnaryCall(
+                    .addMethod(getDumpPrivkeysFileMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_DUMP_PRIVKEYS_FILE)))
-                    .addMethod(getImportPrivkeysFileMethod(), asyncUnaryCall(
+                    .addMethod(getImportPrivkeysFileMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_IMPORT_PRIVKEYS_FILE)))
-                    .addMethod(getVersionMethod(), asyncUnaryCall(
+                    .addMethod(getVersionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.CommonProtobuf.VersionInfo>(
                                     this, METHODID_VERSION)))
-                    .addMethod(getIsSyncMethod(), asyncUnaryCall(
+                    .addMethod(getIsSyncMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_IS_SYNC)))
-                    .addMethod(getGetPeerInfoMethod(), asyncUnaryCall(
+                    .addMethod(getGetPeerInfoMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq, cn.chain33.javasdk.model.protobuf.P2pService.PeerList>(
                                     this, METHODID_GET_PEER_INFO)))
-                    .addMethod(getNetInfoMethod(), asyncUnaryCall(
+                    .addMethod(getNetInfoMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq, cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo>(
                                     this, METHODID_NET_INFO)))
-                    .addMethod(getIsNtpClockSyncMethod(), asyncUnaryCall(
+                    .addMethod(getIsNtpClockSyncMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_IS_NTP_CLOCK_SYNC)))
-                    .addMethod(getGetFatalFailureMethod(), asyncUnaryCall(
+                    .addMethod(getGetFatalFailureMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.WalletProtobuf.Int32>(
                                     this, METHODID_GET_FATAL_FAILURE)))
-                    .addMethod(getGetLastBlockSequenceMethod(), asyncUnaryCall(
+                    .addMethod(getGetLastBlockSequenceMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64>(
                                     this, METHODID_GET_LAST_BLOCK_SEQUENCE)))
-                    .addMethod(getGetSequenceByHashMethod(), asyncUnaryCall(
+                    .addMethod(getGetSequenceByHashMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64>(
                                     this, METHODID_GET_SEQUENCE_BY_HASH)))
-                    .addMethod(getGetBlockByHashesMethod(), asyncUnaryCall(
+                    .addMethod(getGetBlockByHashesMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetails>(
                                     this, METHODID_GET_BLOCK_BY_HASHES)))
-                    .addMethod(getGetBlockBySeqMethod(), asyncUnaryCall(
+                    .addMethod(getGetBlockBySeqMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq>(
                                     this, METHODID_GET_BLOCK_BY_SEQ)))
-                    .addMethod(getCloseQueueMethod(), asyncUnaryCall(
+                    .addMethod(getCloseQueueMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>(
                                     this, METHODID_CLOSE_QUEUE)))
-                    .addMethod(getGetAllExecBalanceMethod(), asyncUnaryCall(
+                    .addMethod(getGetAllExecBalanceMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqAllExecBalance, cn.chain33.javasdk.model.protobuf.AccountProtobuf.AllExecBalance>(
                                     this, METHODID_GET_ALL_EXEC_BALANCE)))
-                    .addMethod(getSignRawTxMethod(), asyncUnaryCall(
+                    .addMethod(getSignRawTxMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqSignRawTx, cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx>(
                                     this, METHODID_SIGN_RAW_TX)))
-                    .addMethod(getCreateNoBalanceTransactionMethod(), asyncUnaryCall(
+                    .addMethod(getCreateNoBalanceTransactionMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTx, cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx>(
                                     this, METHODID_CREATE_NO_BALANCE_TRANSACTION)))
-                    .addMethod(getQueryRandNumMethod(), asyncUnaryCall(
+                    .addMethod(getQueryRandNumMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqRandHash, cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash>(
                                     this, METHODID_QUERY_RAND_NUM)))
-                    .addMethod(getGetForkMethod(), asyncUnaryCall(
+                    .addMethod(getGetForkMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqKey, cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64>(
                                     this, METHODID_GET_FORK)))
-                    .addMethod(getCreateNoBalanceTxsMethod(), asyncUnaryCall(
+                    .addMethod(getCreateNoBalanceTxsMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTxs, cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx>(
                                     this, METHODID_CREATE_NO_BALANCE_TXS)))
-                    .addMethod(getGetParaTxByTitleMethod(), asyncUnaryCall(
+                    .addMethod(getGetParaTxByTitleMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByTitle, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails>(
                                     this, METHODID_GET_PARA_TX_BY_TITLE)))
-                    .addMethod(getLoadParaTxByTitleMethod(), asyncUnaryCall(
+                    .addMethod(getLoadParaTxByTitleMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqHeightByTitle, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReplyHeightByTitle>(
                                     this, METHODID_LOAD_PARA_TX_BY_TITLE)))
-                    .addMethod(getGetParaTxByHeightMethod(), asyncUnaryCall(
+                    .addMethod(getGetParaTxByHeightMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByHeight, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails>(
                                     this, METHODID_GET_PARA_TX_BY_HEIGHT)))
-                    .addMethod(getGetHeadersMethod(), asyncUnaryCall(
+                    .addMethod(getGetHeadersMethod(), io.grpc.stub.ServerCalls.asyncUnaryCall(
                             new MethodHandlers<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks, cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers>(
                                     this, METHODID_GET_HEADERS)))
                     .build();
@@ -2342,7 +2338,8 @@ public final class chain33Grpc {
          */
         public void getBlocks(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2352,7 +2349,8 @@ public final class chain33Grpc {
          */
         public void getLastHeader(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetLastHeaderMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetLastHeaderMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2362,8 +2360,8 @@ public final class chain33Grpc {
          */
         public void createRawTransaction(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCreateRawTransactionMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getCreateRawTransactionMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2371,8 +2369,8 @@ public final class chain33Grpc {
         public void createRawTxGroup(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTransactionGroup request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCreateRawTxGroupMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getCreateRawTxGroupMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2382,8 +2380,8 @@ public final class chain33Grpc {
          */
         public void queryTransaction(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getQueryTransactionMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getQueryTransactionMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2393,8 +2391,8 @@ public final class chain33Grpc {
          */
         public void sendTransaction(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSendTransactionMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSendTransactionMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2404,8 +2402,8 @@ public final class chain33Grpc {
          */
         public void getTransactionByAddr(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfos> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetTransactionByAddrMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getGetTransactionByAddrMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2415,7 +2413,8 @@ public final class chain33Grpc {
          */
         public void getTransactionByHashes(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetails> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetTransactionByHashesMethod(), getCallOptions()), request,
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getGetTransactionByHashesMethod(), getCallOptions()), request,
                     responseObserver);
         }
 
@@ -2426,7 +2425,8 @@ public final class chain33Grpc {
          */
         public void getMemPool(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqGetMempool request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2437,7 +2437,8 @@ public final class chain33Grpc {
          */
         public void getAccounts(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccounts> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetAccountsMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetAccountsMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2447,7 +2448,8 @@ public final class chain33Grpc {
          */
         public void getAccount(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqGetAccount request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetAccountMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetAccountMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2457,7 +2459,8 @@ public final class chain33Grpc {
          */
         public void newAccount(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqNewAccount request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getNewAccountMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getNewAccountMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2468,7 +2471,8 @@ public final class chain33Grpc {
         public void walletTransactionList(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletTransactionList request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetails> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getWalletTransactionListMethod(), getCallOptions()), request,
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getWalletTransactionListMethod(), getCallOptions()), request,
                     responseObserver);
         }
 
@@ -2479,7 +2483,8 @@ public final class chain33Grpc {
          */
         public void importPrivkey(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletImportPrivkey request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getImportPrivkeyMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getImportPrivkeyMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2489,7 +2494,8 @@ public final class chain33Grpc {
          */
         public void sendToAddress(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSendToAddress request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSendToAddressMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSendToAddressMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2499,7 +2505,8 @@ public final class chain33Grpc {
          */
         public void setTxFee(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetFee request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSetTxFeeMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSetTxFeeMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2509,7 +2516,8 @@ public final class chain33Grpc {
          */
         public void setLabl(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetLabel request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSetLablMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSetLablMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2519,7 +2527,8 @@ public final class chain33Grpc {
          */
         public void mergeBalance(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletMergeBalance request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHashes> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getMergeBalanceMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getMergeBalanceMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2529,7 +2538,8 @@ public final class chain33Grpc {
          */
         public void setPasswd(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetPasswd request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSetPasswdMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSetPasswdMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2539,7 +2549,8 @@ public final class chain33Grpc {
          */
         public void lock(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getLockMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getLockMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2549,7 +2560,8 @@ public final class chain33Grpc {
          */
         public void unLock(cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletUnLock request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getUnLockMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getUnLockMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2559,8 +2571,8 @@ public final class chain33Grpc {
          */
         public void getLastMemPool(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetLastMemPoolMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetLastMemPoolMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2570,7 +2582,8 @@ public final class chain33Grpc {
          */
         public void getProperFee(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqProperFee request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyProperFee> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetProperFeeMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetProperFeeMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2580,8 +2593,8 @@ public final class chain33Grpc {
          */
         public void getWalletStatus(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletStatus> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetWalletStatusMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetWalletStatusMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2592,23 +2605,24 @@ public final class chain33Grpc {
          */
         public void getBlockOverview(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOverview> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBlockOverviewMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBlockOverviewMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void getAddrOverview(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AddrOverview> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetAddrOverviewMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetAddrOverviewMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void getBlockHash(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqInt request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBlockHashMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBlockHashMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2619,7 +2633,8 @@ public final class chain33Grpc {
          */
         public void genSeed(cn.chain33.javasdk.model.protobuf.WalletProtobuf.GenSeedLang request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGenSeedMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGenSeedMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2629,7 +2644,8 @@ public final class chain33Grpc {
          */
         public void getSeed(cn.chain33.javasdk.model.protobuf.WalletProtobuf.GetSeedByPw request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetSeedMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetSeedMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2639,7 +2655,8 @@ public final class chain33Grpc {
          */
         public void saveSeed(cn.chain33.javasdk.model.protobuf.WalletProtobuf.SaveSeedByPw request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSaveSeedMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSaveSeedMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2650,37 +2667,40 @@ public final class chain33Grpc {
          */
         public void getBalance(cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqBalance request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.AccountProtobuf.Accounts> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBalanceMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBalanceMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void queryChain(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getQueryChainMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getQueryChainMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void execWallet(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getExecWalletMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getExecWalletMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void queryConsensus(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getQueryConsensusMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getQueryConsensusMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void createTransaction(cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.CreateTxIn request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCreateTransactionMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getCreateTransactionMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2690,8 +2710,8 @@ public final class chain33Grpc {
          */
         public void getHexTxByHash(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.HexTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetHexTxByHashMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetHexTxByHashMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2701,7 +2721,8 @@ public final class chain33Grpc {
          */
         public void dumpPrivkey(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqString request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyString> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getDumpPrivkeyMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getDumpPrivkeyMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2711,8 +2732,8 @@ public final class chain33Grpc {
          */
         public void dumpPrivkeysFile(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getDumpPrivkeysFileMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getDumpPrivkeysFileMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2722,8 +2743,8 @@ public final class chain33Grpc {
          */
         public void importPrivkeysFile(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getImportPrivkeysFileMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getImportPrivkeysFileMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2733,7 +2754,8 @@ public final class chain33Grpc {
          */
         public void version(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.VersionInfo> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2743,7 +2765,8 @@ public final class chain33Grpc {
          */
         public void isSync(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getIsSyncMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getIsSyncMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2753,7 +2776,8 @@ public final class chain33Grpc {
          */
         public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2763,7 +2787,8 @@ public final class chain33Grpc {
          */
         public void netInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getNetInfoMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getNetInfoMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
@@ -2773,8 +2798,8 @@ public final class chain33Grpc {
          */
         public void isNtpClockSync(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getIsNtpClockSyncMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getIsNtpClockSyncMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2784,16 +2809,16 @@ public final class chain33Grpc {
          */
         public void getFatalFailure(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.Int32> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetFatalFailureMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetFatalFailureMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
          */
         public void getLastBlockSequence(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetLastBlockSequenceMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getGetLastBlockSequenceMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2803,8 +2828,8 @@ public final class chain33Grpc {
          */
         public void getSequenceByHash(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetSequenceByHashMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getGetSequenceByHashMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2814,8 +2839,8 @@ public final class chain33Grpc {
          */
         public void getBlockByHashes(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetails> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBlockByHashesMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBlockByHashesMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2825,7 +2850,8 @@ public final class chain33Grpc {
          */
         public void getBlockBySeq(cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetBlockBySeqMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetBlockBySeqMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2835,7 +2861,8 @@ public final class chain33Grpc {
          */
         public void closeQueue(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCloseQueueMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getCloseQueueMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2845,8 +2872,8 @@ public final class chain33Grpc {
          */
         public void getAllExecBalance(cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqAllExecBalance request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.AccountProtobuf.AllExecBalance> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetAllExecBalanceMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getGetAllExecBalanceMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2856,7 +2883,8 @@ public final class chain33Grpc {
          */
         public void signRawTx(cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqSignRawTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getSignRawTxMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getSignRawTxMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2864,7 +2892,8 @@ public final class chain33Grpc {
         public void createNoBalanceTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTx request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCreateNoBalanceTransactionMethod(), getCallOptions()), request,
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getCreateNoBalanceTransactionMethod(), getCallOptions()), request,
                     responseObserver);
         }
 
@@ -2875,7 +2904,8 @@ public final class chain33Grpc {
          */
         public void queryRandNum(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqRandHash request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getQueryRandNumMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getQueryRandNumMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2885,15 +2915,16 @@ public final class chain33Grpc {
          */
         public void getFork(cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqKey request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetForkMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetForkMethod(), getCallOptions()), request,
+                    responseObserver);
         }
 
         /**
          */
         public void createNoBalanceTxs(cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTxs request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getCreateNoBalanceTxsMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getCreateNoBalanceTxsMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2903,8 +2934,8 @@ public final class chain33Grpc {
          */
         public void getParaTxByTitle(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByTitle request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetParaTxByTitleMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetParaTxByTitleMethod(), getCallOptions()),
+                    request, responseObserver);
         }
 
         /**
@@ -2914,8 +2945,8 @@ public final class chain33Grpc {
          */
         public void loadParaTxByTitle(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqHeightByTitle request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReplyHeightByTitle> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getLoadParaTxByTitleMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getLoadParaTxByTitleMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2925,8 +2956,8 @@ public final class chain33Grpc {
          */
         public void getParaTxByHeight(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByHeight request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetParaTxByHeightMethod(), getCallOptions()), request,
-                    responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(
+                    getChannel().newCall(getGetParaTxByHeightMethod(), getCallOptions()), request, responseObserver);
         }
 
         /**
@@ -2936,7 +2967,8 @@ public final class chain33Grpc {
          */
         public void getHeaders(cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request,
                 io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers> responseObserver) {
-            asyncUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()), request, responseObserver);
+            io.grpc.stub.ClientCalls.asyncUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()),
+                    request, responseObserver);
         }
     }
 
@@ -2960,7 +2992,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply getBlocks(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request) {
-            return blockingUnaryCall(getChannel(), getGetBlocksMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBlocksMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -2970,7 +3003,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header getLastHeader(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getGetLastHeaderMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetLastHeaderMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -2980,14 +3014,16 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx createRawTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTx request) {
-            return blockingUnaryCall(getChannel(), getCreateRawTransactionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCreateRawTransactionMethod(),
+                    getCallOptions(), request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx createRawTxGroup(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTransactionGroup request) {
-            return blockingUnaryCall(getChannel(), getCreateRawTxGroupMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCreateRawTxGroupMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -2997,7 +3033,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail queryTransaction(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return blockingUnaryCall(getChannel(), getQueryTransactionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getQueryTransactionMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3007,7 +3044,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply sendTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction request) {
-            return blockingUnaryCall(getChannel(), getSendTransactionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSendTransactionMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3017,7 +3055,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfos getTransactionByAddr(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request) {
-            return blockingUnaryCall(getChannel(), getGetTransactionByAddrMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetTransactionByAddrMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3027,7 +3066,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetails getTransactionByHashes(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request) {
-            return blockingUnaryCall(getChannel(), getGetTransactionByHashesMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetTransactionByHashesMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3037,7 +3077,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList getMemPool(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqGetMempool request) {
-            return blockingUnaryCall(getChannel(), getGetMemPoolMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetMemPoolMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3048,7 +3089,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccounts getAccounts(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getGetAccountsMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetAccountsMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3058,7 +3100,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount getAccount(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqGetAccount request) {
-            return blockingUnaryCall(getChannel(), getGetAccountMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetAccountMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3068,7 +3111,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount newAccount(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqNewAccount request) {
-            return blockingUnaryCall(getChannel(), getNewAccountMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getNewAccountMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3078,7 +3122,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetails walletTransactionList(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletTransactionList request) {
-            return blockingUnaryCall(getChannel(), getWalletTransactionListMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getWalletTransactionListMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3088,7 +3133,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount importPrivkey(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletImportPrivkey request) {
-            return blockingUnaryCall(getChannel(), getImportPrivkeyMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getImportPrivkeyMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3098,7 +3144,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash sendToAddress(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSendToAddress request) {
-            return blockingUnaryCall(getChannel(), getSendToAddressMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSendToAddressMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3108,7 +3155,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply setTxFee(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetFee request) {
-            return blockingUnaryCall(getChannel(), getSetTxFeeMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSetTxFeeMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3118,7 +3166,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount setLabl(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetLabel request) {
-            return blockingUnaryCall(getChannel(), getSetLablMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSetLablMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3128,7 +3177,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHashes mergeBalance(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletMergeBalance request) {
-            return blockingUnaryCall(getChannel(), getMergeBalanceMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getMergeBalanceMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3138,7 +3188,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply setPasswd(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetPasswd request) {
-            return blockingUnaryCall(getChannel(), getSetPasswdMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSetPasswdMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3148,7 +3199,7 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply lock(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getLockMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getLockMethod(), getCallOptions(), request);
         }
 
         /**
@@ -3158,7 +3209,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply unLock(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletUnLock request) {
-            return blockingUnaryCall(getChannel(), getUnLockMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getUnLockMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3168,7 +3220,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList getLastMemPool(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getGetLastMemPoolMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetLastMemPoolMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3178,7 +3231,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyProperFee getProperFee(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqProperFee request) {
-            return blockingUnaryCall(getChannel(), getGetProperFeeMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetProperFeeMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3188,7 +3242,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletStatus getWalletStatus(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getGetWalletStatusMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetWalletStatusMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3199,21 +3254,24 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOverview getBlockOverview(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return blockingUnaryCall(getChannel(), getGetBlockOverviewMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBlockOverviewMethod(),
+                    getCallOptions(), request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AddrOverview getAddrOverview(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request) {
-            return blockingUnaryCall(getChannel(), getGetAddrOverviewMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetAddrOverviewMethod(),
+                    getCallOptions(), request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash getBlockHash(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqInt request) {
-            return blockingUnaryCall(getChannel(), getGetBlockHashMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBlockHashMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3224,7 +3282,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed genSeed(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.GenSeedLang request) {
-            return blockingUnaryCall(getChannel(), getGenSeedMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGenSeedMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3234,7 +3293,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed getSeed(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.GetSeedByPw request) {
-            return blockingUnaryCall(getChannel(), getGetSeedMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetSeedMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3244,7 +3304,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply saveSeed(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.SaveSeedByPw request) {
-            return blockingUnaryCall(getChannel(), getSaveSeedMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSaveSeedMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3255,35 +3316,40 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.Accounts getBalance(
                 cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqBalance request) {
-            return blockingUnaryCall(getChannel(), getGetBalanceMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBalanceMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply queryChain(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request) {
-            return blockingUnaryCall(getChannel(), getQueryChainMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getQueryChainMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply execWallet(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request) {
-            return blockingUnaryCall(getChannel(), getExecWalletMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getExecWalletMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply queryConsensus(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request) {
-            return blockingUnaryCall(getChannel(), getQueryConsensusMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getQueryConsensusMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx createTransaction(
                 cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.CreateTxIn request) {
-            return blockingUnaryCall(getChannel(), getCreateTransactionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCreateTransactionMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3293,7 +3359,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.HexTx getHexTxByHash(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return blockingUnaryCall(getChannel(), getGetHexTxByHashMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetHexTxByHashMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3303,7 +3370,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyString dumpPrivkey(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqString request) {
-            return blockingUnaryCall(getChannel(), getDumpPrivkeyMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getDumpPrivkeyMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3313,7 +3381,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply dumpPrivkeysFile(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request) {
-            return blockingUnaryCall(getChannel(), getDumpPrivkeysFileMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getDumpPrivkeysFileMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3323,7 +3392,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply importPrivkeysFile(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request) {
-            return blockingUnaryCall(getChannel(), getImportPrivkeysFileMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getImportPrivkeysFileMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3333,7 +3403,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.VersionInfo version(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getVersionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getVersionMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3343,7 +3414,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply isSync(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getIsSyncMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getIsSyncMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3353,7 +3425,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.PeerList getPeerInfo(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request) {
-            return blockingUnaryCall(getChannel(), getGetPeerInfoMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetPeerInfoMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3363,7 +3436,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo netInfo(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request) {
-            return blockingUnaryCall(getChannel(), getNetInfoMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getNetInfoMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3373,7 +3447,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply isNtpClockSync(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getIsNtpClockSyncMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getIsNtpClockSyncMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3383,14 +3458,16 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.Int32 getFatalFailure(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getGetFatalFailureMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetFatalFailureMethod(),
+                    getCallOptions(), request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 getLastBlockSequence(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getGetLastBlockSequenceMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetLastBlockSequenceMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3400,7 +3477,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 getSequenceByHash(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return blockingUnaryCall(getChannel(), getGetSequenceByHashMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetSequenceByHashMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3410,7 +3488,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetails getBlockByHashes(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request) {
-            return blockingUnaryCall(getChannel(), getGetBlockByHashesMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBlockByHashesMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3420,7 +3499,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq getBlockBySeq(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 request) {
-            return blockingUnaryCall(getChannel(), getGetBlockBySeqMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetBlockBySeqMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3430,7 +3510,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply closeQueue(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return blockingUnaryCall(getChannel(), getCloseQueueMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCloseQueueMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3440,7 +3521,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.AccountProtobuf.AllExecBalance getAllExecBalance(
                 cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqAllExecBalance request) {
-            return blockingUnaryCall(getChannel(), getGetAllExecBalanceMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetAllExecBalanceMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3450,14 +3532,16 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx signRawTx(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqSignRawTx request) {
-            return blockingUnaryCall(getChannel(), getSignRawTxMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getSignRawTxMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx createNoBalanceTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTx request) {
-            return blockingUnaryCall(getChannel(), getCreateNoBalanceTransactionMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCreateNoBalanceTransactionMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3467,7 +3551,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash queryRandNum(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqRandHash request) {
-            return blockingUnaryCall(getChannel(), getQueryRandNumMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getQueryRandNumMethod(), getCallOptions(),
+                    request);
         }
 
         /**
@@ -3477,14 +3562,16 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 getFork(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqKey request) {
-            return blockingUnaryCall(getChannel(), getGetForkMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetForkMethod(), getCallOptions(),
+                    request);
         }
 
         /**
          */
         public cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx createNoBalanceTxs(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTxs request) {
-            return blockingUnaryCall(getChannel(), getCreateNoBalanceTxsMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getCreateNoBalanceTxsMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3494,7 +3581,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails getParaTxByTitle(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByTitle request) {
-            return blockingUnaryCall(getChannel(), getGetParaTxByTitleMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetParaTxByTitleMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3504,7 +3592,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReplyHeightByTitle loadParaTxByTitle(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqHeightByTitle request) {
-            return blockingUnaryCall(getChannel(), getLoadParaTxByTitleMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getLoadParaTxByTitleMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3514,7 +3603,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails getParaTxByHeight(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByHeight request) {
-            return blockingUnaryCall(getChannel(), getGetParaTxByHeightMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetParaTxByHeightMethod(),
+                    getCallOptions(), request);
         }
 
         /**
@@ -3524,7 +3614,8 @@ public final class chain33Grpc {
          */
         public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers getHeaders(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request) {
-            return blockingUnaryCall(getChannel(), getGetHeadersMethod(), getCallOptions(), request);
+            return io.grpc.stub.ClientCalls.blockingUnaryCall(getChannel(), getGetHeadersMethod(), getCallOptions(),
+                    request);
         }
     }
 
@@ -3548,7 +3639,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> getBlocks(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request) {
-            return futureUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3558,7 +3650,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Header> getLastHeader(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getGetLastHeaderMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetLastHeaderMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3568,14 +3661,16 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> createRawTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTx request) {
-            return futureUnaryCall(getChannel().newCall(getCreateRawTransactionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCreateRawTransactionMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> createRawTxGroup(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.CreateTransactionGroup request) {
-            return futureUnaryCall(getChannel().newCall(getCreateRawTxGroupMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCreateRawTxGroupMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3585,7 +3680,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail> queryTransaction(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return futureUnaryCall(getChannel().newCall(getQueryTransactionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getQueryTransactionMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3595,7 +3691,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> sendTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction request) {
-            return futureUnaryCall(getChannel().newCall(getSendTransactionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getSendTransactionMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3605,7 +3702,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfos> getTransactionByAddr(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request) {
-            return futureUnaryCall(getChannel().newCall(getGetTransactionByAddrMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetTransactionByAddrMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3615,7 +3713,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetails> getTransactionByHashes(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request) {
-            return futureUnaryCall(getChannel().newCall(getGetTransactionByHashesMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(
+                    getChannel().newCall(getGetTransactionByHashesMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3625,7 +3724,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList> getMemPool(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqGetMempool request) {
-            return futureUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetMemPoolMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3636,7 +3736,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccounts> getAccounts(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getGetAccountsMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetAccountsMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3646,7 +3747,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> getAccount(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqGetAccount request) {
-            return futureUnaryCall(getChannel().newCall(getGetAccountMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetAccountMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3656,7 +3758,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> newAccount(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqNewAccount request) {
-            return futureUnaryCall(getChannel().newCall(getNewAccountMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getNewAccountMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3666,7 +3769,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletTxDetails> walletTransactionList(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletTransactionList request) {
-            return futureUnaryCall(getChannel().newCall(getWalletTransactionListMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getWalletTransactionListMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3676,7 +3780,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> importPrivkey(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletImportPrivkey request) {
-            return futureUnaryCall(getChannel().newCall(getImportPrivkeyMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getImportPrivkeyMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3686,7 +3791,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> sendToAddress(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSendToAddress request) {
-            return futureUnaryCall(getChannel().newCall(getSendToAddressMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getSendToAddressMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3696,7 +3802,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> setTxFee(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetFee request) {
-            return futureUnaryCall(getChannel().newCall(getSetTxFeeMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getSetTxFeeMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3706,7 +3813,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletAccount> setLabl(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetLabel request) {
-            return futureUnaryCall(getChannel().newCall(getSetLablMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getSetLablMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3716,7 +3824,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHashes> mergeBalance(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletMergeBalance request) {
-            return futureUnaryCall(getChannel().newCall(getMergeBalanceMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getMergeBalanceMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3726,7 +3835,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> setPasswd(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqWalletSetPasswd request) {
-            return futureUnaryCall(getChannel().newCall(getSetPasswdMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getSetPasswdMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3736,7 +3846,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> lock(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getLockMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getLockMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3746,7 +3857,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> unLock(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletUnLock request) {
-            return futureUnaryCall(getChannel().newCall(getUnLockMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getUnLockMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3756,7 +3868,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxList> getLastMemPool(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getGetLastMemPoolMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetLastMemPoolMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3766,7 +3879,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyProperFee> getProperFee(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqProperFee request) {
-            return futureUnaryCall(getChannel().newCall(getGetProperFeeMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetProperFeeMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3776,7 +3890,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.WalletStatus> getWalletStatus(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getGetWalletStatusMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetWalletStatusMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3787,21 +3902,24 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockOverview> getBlockOverview(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return futureUnaryCall(getChannel().newCall(getGetBlockOverviewMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBlockOverviewMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AddrOverview> getAddrOverview(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReqAddr request) {
-            return futureUnaryCall(getChannel().newCall(getGetAddrOverviewMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetAddrOverviewMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> getBlockHash(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqInt request) {
-            return futureUnaryCall(getChannel().newCall(getGetBlockHashMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBlockHashMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3812,7 +3930,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed> genSeed(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.GenSeedLang request) {
-            return futureUnaryCall(getChannel().newCall(getGenSeedMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getGenSeedMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3822,7 +3941,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySeed> getSeed(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.GetSeedByPw request) {
-            return futureUnaryCall(getChannel().newCall(getGetSeedMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getGetSeedMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3832,7 +3952,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> saveSeed(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.SaveSeedByPw request) {
-            return futureUnaryCall(getChannel().newCall(getSaveSeedMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getSaveSeedMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3843,35 +3964,40 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.AccountProtobuf.Accounts> getBalance(
                 cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqBalance request) {
-            return futureUnaryCall(getChannel().newCall(getGetBalanceMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBalanceMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> queryChain(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request) {
-            return futureUnaryCall(getChannel().newCall(getQueryChainMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getQueryChainMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> execWallet(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request) {
-            return futureUnaryCall(getChannel().newCall(getExecWalletMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getExecWalletMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> queryConsensus(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ChainExecutor request) {
-            return futureUnaryCall(getChannel().newCall(getQueryConsensusMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getQueryConsensusMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.UnsignTx> createTransaction(
                 cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.CreateTxIn request) {
-            return futureUnaryCall(getChannel().newCall(getCreateTransactionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCreateTransactionMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3881,7 +4007,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.HexTx> getHexTxByHash(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return futureUnaryCall(getChannel().newCall(getGetHexTxByHashMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetHexTxByHashMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3891,7 +4018,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyString> dumpPrivkey(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqString request) {
-            return futureUnaryCall(getChannel().newCall(getDumpPrivkeyMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getDumpPrivkeyMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3901,7 +4029,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> dumpPrivkeysFile(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request) {
-            return futureUnaryCall(getChannel().newCall(getDumpPrivkeysFileMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getDumpPrivkeysFileMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3911,7 +4040,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> importPrivkeysFile(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqPrivkeysFile request) {
-            return futureUnaryCall(getChannel().newCall(getImportPrivkeysFileMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getImportPrivkeysFileMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3921,7 +4051,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.VersionInfo> version(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getVersionMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3931,7 +4062,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> isSync(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getIsSyncMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getIsSyncMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3941,7 +4073,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> getPeerInfo(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request) {
-            return futureUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3951,7 +4084,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> netInfo(
                 cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request) {
-            return futureUnaryCall(getChannel().newCall(getNetInfoMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getNetInfoMethod(), getCallOptions()),
+                    request);
         }
 
         /**
@@ -3961,7 +4095,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> isNtpClockSync(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getIsNtpClockSyncMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getIsNtpClockSyncMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3971,14 +4106,16 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.Int32> getFatalFailure(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getGetFatalFailureMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetFatalFailureMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> getLastBlockSequence(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getGetLastBlockSequenceMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetLastBlockSequenceMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3988,7 +4125,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> getSequenceByHash(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHash request) {
-            return futureUnaryCall(getChannel().newCall(getGetSequenceByHashMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetSequenceByHashMethod(), getCallOptions()), request);
         }
 
         /**
@@ -3998,7 +4136,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockDetails> getBlockByHashes(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqHashes request) {
-            return futureUnaryCall(getChannel().newCall(getGetBlockByHashesMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBlockByHashesMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4008,7 +4147,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeq> getBlockBySeq(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64 request) {
-            return futureUnaryCall(getChannel().newCall(getGetBlockBySeqMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetBlockBySeqMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4018,7 +4158,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply> closeQueue(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil request) {
-            return futureUnaryCall(getChannel().newCall(getCloseQueueMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCloseQueueMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4028,7 +4169,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.AccountProtobuf.AllExecBalance> getAllExecBalance(
                 cn.chain33.javasdk.model.protobuf.AccountProtobuf.ReqAllExecBalance request) {
-            return futureUnaryCall(getChannel().newCall(getGetAllExecBalanceMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetAllExecBalanceMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4038,15 +4180,16 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> signRawTx(
                 cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReqSignRawTx request) {
-            return futureUnaryCall(getChannel().newCall(getSignRawTxMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getSignRawTxMethod(), getCallOptions()), request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> createNoBalanceTransaction(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTx request) {
-            return futureUnaryCall(getChannel().newCall(getCreateNoBalanceTransactionMethod(), getCallOptions()),
-                    request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(
+                    getChannel().newCall(getCreateNoBalanceTransactionMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4056,7 +4199,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReplyHash> queryRandNum(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqRandHash request) {
-            return futureUnaryCall(getChannel().newCall(getQueryRandNumMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getQueryRandNumMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4066,14 +4210,16 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Int64> getFork(
                 cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqKey request) {
-            return futureUnaryCall(getChannel().newCall(getGetForkMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls.futureUnaryCall(getChannel().newCall(getGetForkMethod(), getCallOptions()),
+                    request);
         }
 
         /**
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.WalletProtobuf.ReplySignRawTx> createNoBalanceTxs(
                 cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.NoBalanceTxs request) {
-            return futureUnaryCall(getChannel().newCall(getCreateNoBalanceTxsMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getCreateNoBalanceTxsMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4083,7 +4229,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails> getParaTxByTitle(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByTitle request) {
-            return futureUnaryCall(getChannel().newCall(getGetParaTxByTitleMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetParaTxByTitleMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4093,7 +4240,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReplyHeightByTitle> loadParaTxByTitle(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqHeightByTitle request) {
-            return futureUnaryCall(getChannel().newCall(getLoadParaTxByTitleMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getLoadParaTxByTitleMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4103,7 +4251,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ParaTxDetails> getParaTxByHeight(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqParaTxByHeight request) {
-            return futureUnaryCall(getChannel().newCall(getGetParaTxByHeightMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetParaTxByHeightMethod(), getCallOptions()), request);
         }
 
         /**
@@ -4113,7 +4262,8 @@ public final class chain33Grpc {
          */
         public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.Headers> getHeaders(
                 cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks request) {
-            return futureUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()), request);
+            return io.grpc.stub.ClientCalls
+                    .futureUnaryCall(getChannel().newCall(getGetHeadersMethod(), getCallOptions()), request);
         }
     }
 

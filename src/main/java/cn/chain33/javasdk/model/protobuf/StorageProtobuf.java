@@ -20,11 +20,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return Whether the contentStorage field is set.
          */
         boolean hasContentStorage();
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return The contentStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage();
 
@@ -35,11 +39,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return Whether the hashStorage field is set.
          */
         boolean hasHashStorage();
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return The hashStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage();
 
@@ -50,11 +58,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return Whether the linkStorage field is set.
          */
         boolean hasLinkStorage();
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return The linkStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage();
 
@@ -65,11 +77,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return Whether the encryptStorage field is set.
          */
         boolean hasEncryptStorage();
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return The encryptStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage();
 
@@ -80,11 +96,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return Whether the encryptShareStorage field is set.
          */
         boolean hasEncryptShareStorage();
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return The encryptShareStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
 
@@ -95,11 +115,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return Whether the encryptAdd field is set.
          */
         boolean hasEncryptAdd();
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return The encryptAdd.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
 
@@ -110,6 +134,8 @@ public final class StorageProtobuf {
 
         /**
          * <code>int32 ty = 7;</code>
+         * 
+         * @return The ty.
          */
         int getTy();
 
@@ -303,7 +329,8 @@ public final class StorageProtobuf {
         private int valueCase_ = 0;
         private java.lang.Object value_;
 
-        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
             CONTENTSTORAGE(1), HASHSTORAGE(2), LINKSTORAGE(3), ENCRYPTSTORAGE(4), ENCRYPTSHARESTORAGE(5), ENCRYPTADD(6),
             VALUE_NOT_SET(0);
 
@@ -314,6 +341,11 @@ public final class StorageProtobuf {
             }
 
             /**
+             * @param value
+             *            The number of the enum to look for.
+             * 
+             * @return The enum associated with the given number.
+             * 
              * @deprecated Use {@link #forNumber(int)} instead.
              */
             @java.lang.Deprecated
@@ -355,14 +387,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return Whether the contentStorage field is set.
          */
+        @java.lang.Override
         public boolean hasContentStorage() {
             return valueCase_ == 1;
         }
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return The contentStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -373,6 +411,7 @@ public final class StorageProtobuf {
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -384,14 +423,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return Whether the hashStorage field is set.
          */
+        @java.lang.Override
         public boolean hasHashStorage() {
             return valueCase_ == 2;
         }
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return The hashStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
             if (valueCase_ == 2) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -402,6 +447,7 @@ public final class StorageProtobuf {
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
             if (valueCase_ == 2) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -413,14 +459,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return Whether the linkStorage field is set.
          */
+        @java.lang.Override
         public boolean hasLinkStorage() {
             return valueCase_ == 3;
         }
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return The linkStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -431,6 +483,7 @@ public final class StorageProtobuf {
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -442,14 +495,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return Whether the encryptStorage field is set.
          */
+        @java.lang.Override
         public boolean hasEncryptStorage() {
             return valueCase_ == 4;
         }
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return The encryptStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
             if (valueCase_ == 4) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -460,6 +519,7 @@ public final class StorageProtobuf {
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
             if (valueCase_ == 4) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -471,14 +531,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return Whether the encryptShareStorage field is set.
          */
+        @java.lang.Override
         public boolean hasEncryptShareStorage() {
             return valueCase_ == 5;
         }
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return The encryptShareStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
             if (valueCase_ == 5) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -489,6 +555,7 @@ public final class StorageProtobuf {
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
             if (valueCase_ == 5) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -500,14 +567,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return Whether the encryptAdd field is set.
          */
+        @java.lang.Override
         public boolean hasEncryptAdd() {
             return valueCase_ == 6;
         }
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return The encryptAdd.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
             if (valueCase_ == 6) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -518,6 +591,7 @@ public final class StorageProtobuf {
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
             if (valueCase_ == 6) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -530,7 +604,10 @@ public final class StorageProtobuf {
 
         /**
          * <code>int32 ty = 7;</code>
+         * 
+         * @return The ty.
          */
+        @java.lang.Override
         public int getTy() {
             return ty_;
         }
@@ -1037,14 +1114,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             * 
+             * @return Whether the contentStorage field is set.
              */
+            @java.lang.Override
             public boolean hasContentStorage() {
                 return valueCase_ == 1;
             }
 
             /**
              * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             * 
+             * @return The contentStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
                 if (contentStorageBuilder_ == null) {
                     if (valueCase_ == 1) {
@@ -1150,6 +1233,7 @@ public final class StorageProtobuf {
             /**
              * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
                 if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
                     return contentStorageBuilder_.getMessageOrBuilder();
@@ -1186,14 +1270,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             * 
+             * @return Whether the hashStorage field is set.
              */
+            @java.lang.Override
             public boolean hasHashStorage() {
                 return valueCase_ == 2;
             }
 
             /**
              * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             * 
+             * @return The hashStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
                 if (hashStorageBuilder_ == null) {
                     if (valueCase_ == 2) {
@@ -1297,6 +1387,7 @@ public final class StorageProtobuf {
             /**
              * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
                 if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
                     return hashStorageBuilder_.getMessageOrBuilder();
@@ -1332,14 +1423,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             * 
+             * @return Whether the linkStorage field is set.
              */
+            @java.lang.Override
             public boolean hasLinkStorage() {
                 return valueCase_ == 3;
             }
 
             /**
              * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             * 
+             * @return The linkStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
                 if (linkStorageBuilder_ == null) {
                     if (valueCase_ == 3) {
@@ -1441,6 +1538,7 @@ public final class StorageProtobuf {
             /**
              * <code>.LinkNotaryStorage linkStorage = 3;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
                 if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
                     return linkStorageBuilder_.getMessageOrBuilder();
@@ -1476,14 +1574,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             * 
+             * @return Whether the encryptStorage field is set.
              */
+            @java.lang.Override
             public boolean hasEncryptStorage() {
                 return valueCase_ == 4;
             }
 
             /**
              * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             * 
+             * @return The encryptStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
                 if (encryptStorageBuilder_ == null) {
                     if (valueCase_ == 4) {
@@ -1588,6 +1692,7 @@ public final class StorageProtobuf {
             /**
              * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
                 if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
                     return encryptStorageBuilder_.getMessageOrBuilder();
@@ -1623,14 +1728,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             * 
+             * @return Whether the encryptShareStorage field is set.
              */
+            @java.lang.Override
             public boolean hasEncryptShareStorage() {
                 return valueCase_ == 5;
             }
 
             /**
              * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             * 
+             * @return The encryptShareStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
                 if (encryptShareStorageBuilder_ == null) {
                     if (valueCase_ == 5) {
@@ -1736,6 +1847,7 @@ public final class StorageProtobuf {
             /**
              * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
                 if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
                     return encryptShareStorageBuilder_.getMessageOrBuilder();
@@ -1772,14 +1884,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             * 
+             * @return Whether the encryptAdd field is set.
              */
+            @java.lang.Override
             public boolean hasEncryptAdd() {
                 return valueCase_ == 6;
             }
 
             /**
              * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             * 
+             * @return The encryptAdd.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
                 if (encryptAddBuilder_ == null) {
                     if (valueCase_ == 6) {
@@ -1880,6 +1998,7 @@ public final class StorageProtobuf {
             /**
              * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
                 if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
                     return encryptAddBuilder_.getMessageOrBuilder();
@@ -1915,13 +2034,21 @@ public final class StorageProtobuf {
 
             /**
              * <code>int32 ty = 7;</code>
+             * 
+             * @return The ty.
              */
+            @java.lang.Override
             public int getTy() {
                 return ty_;
             }
 
             /**
              * <code>int32 ty = 7;</code>
+             * 
+             * @param value
+             *            The ty to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTy(int value) {
 
@@ -1932,6 +2059,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>int32 ty = 7;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearTy() {
 
@@ -1994,11 +2123,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return Whether the contentStorage field is set.
          */
         boolean hasContentStorage();
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return The contentStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage();
 
@@ -2009,11 +2142,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return Whether the hashStorage field is set.
          */
         boolean hasHashStorage();
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return The hashStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage();
 
@@ -2024,11 +2161,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return Whether the linkStorage field is set.
          */
         boolean hasLinkStorage();
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return The linkStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage();
 
@@ -2039,11 +2180,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return Whether the encryptStorage field is set.
          */
         boolean hasEncryptStorage();
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return The encryptStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage();
 
@@ -2054,11 +2199,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return Whether the encryptShareStorage field is set.
          */
         boolean hasEncryptShareStorage();
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return The encryptShareStorage.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage();
 
@@ -2069,11 +2218,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return Whether the encryptAdd field is set.
          */
         boolean hasEncryptAdd();
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return The encryptAdd.
          */
         cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd();
 
@@ -2084,6 +2237,8 @@ public final class StorageProtobuf {
 
         /**
          * <code>int32 ty = 7;</code>
+         * 
+         * @return The ty.
          */
         int getTy();
 
@@ -2274,7 +2429,8 @@ public final class StorageProtobuf {
         private int valueCase_ = 0;
         private java.lang.Object value_;
 
-        public enum ValueCase implements com.google.protobuf.Internal.EnumLite {
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
             CONTENTSTORAGE(1), HASHSTORAGE(2), LINKSTORAGE(3), ENCRYPTSTORAGE(4), ENCRYPTSHARESTORAGE(5), ENCRYPTADD(6),
             VALUE_NOT_SET(0);
 
@@ -2285,6 +2441,11 @@ public final class StorageProtobuf {
             }
 
             /**
+             * @param value
+             *            The number of the enum to look for.
+             * 
+             * @return The enum associated with the given number.
+             * 
              * @deprecated Use {@link #forNumber(int)} instead.
              */
             @java.lang.Deprecated
@@ -2326,14 +2487,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return Whether the contentStorage field is set.
          */
+        @java.lang.Override
         public boolean hasContentStorage() {
             return valueCase_ == 1;
         }
 
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+         * 
+         * @return The contentStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -2344,6 +2511,7 @@ public final class StorageProtobuf {
         /**
          * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
             if (valueCase_ == 1) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -2355,14 +2523,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return Whether the hashStorage field is set.
          */
+        @java.lang.Override
         public boolean hasHashStorage() {
             return valueCase_ == 2;
         }
 
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+         * 
+         * @return The hashStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
             if (valueCase_ == 2) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -2373,6 +2547,7 @@ public final class StorageProtobuf {
         /**
          * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
             if (valueCase_ == 2) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -2384,14 +2559,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return Whether the linkStorage field is set.
          */
+        @java.lang.Override
         public boolean hasLinkStorage() {
             return valueCase_ == 3;
         }
 
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
+         * 
+         * @return The linkStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -2402,6 +2583,7 @@ public final class StorageProtobuf {
         /**
          * <code>.LinkNotaryStorage linkStorage = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -2413,14 +2595,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return Whether the encryptStorage field is set.
          */
+        @java.lang.Override
         public boolean hasEncryptStorage() {
             return valueCase_ == 4;
         }
 
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+         * 
+         * @return The encryptStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
             if (valueCase_ == 4) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -2431,6 +2619,7 @@ public final class StorageProtobuf {
         /**
          * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
             if (valueCase_ == 4) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -2442,14 +2631,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return Whether the encryptShareStorage field is set.
          */
+        @java.lang.Override
         public boolean hasEncryptShareStorage() {
             return valueCase_ == 5;
         }
 
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+         * 
+         * @return The encryptShareStorage.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
             if (valueCase_ == 5) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -2460,6 +2655,7 @@ public final class StorageProtobuf {
         /**
          * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
             if (valueCase_ == 5) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -2471,14 +2667,20 @@ public final class StorageProtobuf {
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return Whether the encryptAdd field is set.
          */
+        @java.lang.Override
         public boolean hasEncryptAdd() {
             return valueCase_ == 6;
         }
 
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+         * 
+         * @return The encryptAdd.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
             if (valueCase_ == 6) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -2489,6 +2691,7 @@ public final class StorageProtobuf {
         /**
          * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
             if (valueCase_ == 6) {
                 return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -2501,7 +2704,10 @@ public final class StorageProtobuf {
 
         /**
          * <code>int32 ty = 7;</code>
+         * 
+         * @return The ty.
          */
+        @java.lang.Override
         public int getTy() {
             return ty_;
         }
@@ -3005,14 +3211,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             * 
+             * @return Whether the contentStorage field is set.
              */
+            @java.lang.Override
             public boolean hasContentStorage() {
                 return valueCase_ == 1;
             }
 
             /**
              * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
+             * 
+             * @return The contentStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
                 if (contentStorageBuilder_ == null) {
                     if (valueCase_ == 1) {
@@ -3118,6 +3330,7 @@ public final class StorageProtobuf {
             /**
              * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
                 if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
                     return contentStorageBuilder_.getMessageOrBuilder();
@@ -3154,14 +3367,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             * 
+             * @return Whether the hashStorage field is set.
              */
+            @java.lang.Override
             public boolean hasHashStorage() {
                 return valueCase_ == 2;
             }
 
             /**
              * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
+             * 
+             * @return The hashStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
                 if (hashStorageBuilder_ == null) {
                     if (valueCase_ == 2) {
@@ -3265,6 +3484,7 @@ public final class StorageProtobuf {
             /**
              * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
                 if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
                     return hashStorageBuilder_.getMessageOrBuilder();
@@ -3300,14 +3520,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             * 
+             * @return Whether the linkStorage field is set.
              */
+            @java.lang.Override
             public boolean hasLinkStorage() {
                 return valueCase_ == 3;
             }
 
             /**
              * <code>.LinkNotaryStorage linkStorage = 3;</code>
+             * 
+             * @return The linkStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
                 if (linkStorageBuilder_ == null) {
                     if (valueCase_ == 3) {
@@ -3409,6 +3635,7 @@ public final class StorageProtobuf {
             /**
              * <code>.LinkNotaryStorage linkStorage = 3;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
                 if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
                     return linkStorageBuilder_.getMessageOrBuilder();
@@ -3444,14 +3671,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             * 
+             * @return Whether the encryptStorage field is set.
              */
+            @java.lang.Override
             public boolean hasEncryptStorage() {
                 return valueCase_ == 4;
             }
 
             /**
              * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
+             * 
+             * @return The encryptStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
                 if (encryptStorageBuilder_ == null) {
                     if (valueCase_ == 4) {
@@ -3556,6 +3789,7 @@ public final class StorageProtobuf {
             /**
              * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
                 if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
                     return encryptStorageBuilder_.getMessageOrBuilder();
@@ -3591,14 +3825,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             * 
+             * @return Whether the encryptShareStorage field is set.
              */
+            @java.lang.Override
             public boolean hasEncryptShareStorage() {
                 return valueCase_ == 5;
             }
 
             /**
              * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
+             * 
+             * @return The encryptShareStorage.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
                 if (encryptShareStorageBuilder_ == null) {
                     if (valueCase_ == 5) {
@@ -3704,6 +3944,7 @@ public final class StorageProtobuf {
             /**
              * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
                 if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
                     return encryptShareStorageBuilder_.getMessageOrBuilder();
@@ -3740,14 +3981,20 @@ public final class StorageProtobuf {
 
             /**
              * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             * 
+             * @return Whether the encryptAdd field is set.
              */
+            @java.lang.Override
             public boolean hasEncryptAdd() {
                 return valueCase_ == 6;
             }
 
             /**
              * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
+             * 
+             * @return The encryptAdd.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
                 if (encryptAddBuilder_ == null) {
                     if (valueCase_ == 6) {
@@ -3848,6 +4095,7 @@ public final class StorageProtobuf {
             /**
              * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
                 if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
                     return encryptAddBuilder_.getMessageOrBuilder();
@@ -3883,13 +4131,21 @@ public final class StorageProtobuf {
 
             /**
              * <code>int32 ty = 7;</code>
+             * 
+             * @return The ty.
              */
+            @java.lang.Override
             public int getTy() {
                 return ty_;
             }
 
             /**
              * <code>int32 ty = 7;</code>
+             * 
+             * @param value
+             *            The ty to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTy(int value) {
 
@@ -3900,6 +4156,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>int32 ty = 7;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearTy() {
 
@@ -3966,6 +4224,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes content = 1;</code>
+         * 
+         * @return The content.
          */
         com.google.protobuf.ByteString getContent();
 
@@ -3975,6 +4235,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
@@ -3984,6 +4246,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
@@ -3993,6 +4257,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>int32 op = 3;</code>
+         * 
+         * @return The op.
          */
         int getOp();
 
@@ -4002,6 +4268,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The value.
          */
         java.lang.String getValue();
 
@@ -4011,6 +4279,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString getValueBytes();
     }
@@ -4127,7 +4397,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes content = 1;</code>
+         * 
+         * @return The content.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getContent() {
             return content_;
         }
@@ -4141,7 +4414,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -4160,7 +4436,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -4181,7 +4460,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>int32 op = 3;</code>
+         * 
+         * @return The op.
          */
+        @java.lang.Override
         public int getOp() {
             return op_;
         }
@@ -4195,7 +4477,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -4214,7 +4499,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -4595,7 +4883,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes content = 1;</code>
+             * 
+             * @return The content.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getContent() {
                 return content_;
             }
@@ -4606,6 +4897,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes content = 1;</code>
+             * 
+             * @param value
+             *            The content to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setContent(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4623,6 +4919,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes content = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearContent() {
 
@@ -4639,6 +4937,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -4658,6 +4958,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -4677,6 +4979,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -4694,6 +5001,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -4708,6 +5017,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4728,7 +5042,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>int32 op = 3;</code>
+             * 
+             * @return The op.
              */
+            @java.lang.Override
             public int getOp() {
                 return op_;
             }
@@ -4739,6 +5056,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>int32 op = 3;</code>
+             * 
+             * @param value
+             *            The op to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setOp(int value) {
 
@@ -4753,6 +5075,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>int32 op = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearOp() {
 
@@ -4769,6 +5093,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @return The value.
              */
             public java.lang.String getValue() {
                 java.lang.Object ref = value_;
@@ -4788,6 +5114,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @return The bytes for value.
              */
             public com.google.protobuf.ByteString getValueBytes() {
                 java.lang.Object ref = value_;
@@ -4807,6 +5135,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(java.lang.String value) {
                 if (value == null) {
@@ -4824,6 +5157,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -4838,6 +5173,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @param value
+             *            The bytes for value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValueBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -4908,6 +5248,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes hash = 1;</code>
+         * 
+         * @return The hash.
          */
         com.google.protobuf.ByteString getHash();
 
@@ -4917,6 +5259,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
@@ -4926,6 +5270,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
@@ -4935,6 +5281,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * 
+         * @return The value.
          */
         java.lang.String getValue();
 
@@ -4944,6 +5292,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * 
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString getValueBytes();
     }
@@ -5055,7 +5405,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes hash = 1;</code>
+         * 
+         * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -5069,7 +5422,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -5088,7 +5444,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 2;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -5109,7 +5468,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -5128,7 +5490,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 3;</code>
+         * 
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -5492,7 +5857,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes hash = 1;</code>
+             * 
+             * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -5503,6 +5871,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes hash = 1;</code>
+             * 
+             * @param value
+             *            The hash to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setHash(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5520,6 +5893,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes hash = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearHash() {
 
@@ -5536,6 +5911,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -5555,6 +5932,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -5574,6 +5953,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -5591,6 +5975,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -5605,6 +5991,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 2;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5625,6 +6016,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 3;</code>
+             * 
+             * @return The value.
              */
             public java.lang.String getValue() {
                 java.lang.Object ref = value_;
@@ -5644,6 +6037,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 3;</code>
+             * 
+             * @return The bytes for value.
              */
             public com.google.protobuf.ByteString getValueBytes() {
                 java.lang.Object ref = value_;
@@ -5663,6 +6058,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 3;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(java.lang.String value) {
                 if (value == null) {
@@ -5680,6 +6080,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -5694,6 +6096,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 3;</code>
+             * 
+             * @param value
+             *            The bytes for value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValueBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -5764,6 +6171,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes link = 1;</code>
+         * 
+         * @return The link.
          */
         com.google.protobuf.ByteString getLink();
 
@@ -5773,6 +6182,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes hash = 2;</code>
+         * 
+         * @return The hash.
          */
         com.google.protobuf.ByteString getHash();
 
@@ -5782,6 +6193,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 3;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
@@ -5791,6 +6204,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 3;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
@@ -5800,6 +6215,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The value.
          */
         java.lang.String getValue();
 
@@ -5809,6 +6226,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString getValueBytes();
     }
@@ -5926,7 +6345,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes link = 1;</code>
+         * 
+         * @return The link.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getLink() {
             return link_;
         }
@@ -5940,7 +6362,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes hash = 2;</code>
+         * 
+         * @return The hash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getHash() {
             return hash_;
         }
@@ -5954,7 +6379,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 3;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -5973,7 +6401,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 3;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -5994,7 +6425,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -6013,7 +6447,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 4;</code>
+         * 
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -6392,7 +6829,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes link = 1;</code>
+             * 
+             * @return The link.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getLink() {
                 return link_;
             }
@@ -6403,6 +6843,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes link = 1;</code>
+             * 
+             * @param value
+             *            The link to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setLink(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -6420,6 +6865,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes link = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearLink() {
 
@@ -6436,7 +6883,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes hash = 2;</code>
+             * 
+             * @return The hash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getHash() {
                 return hash_;
             }
@@ -6447,6 +6897,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes hash = 2;</code>
+             * 
+             * @param value
+             *            The hash to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setHash(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -6464,6 +6919,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes hash = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearHash() {
 
@@ -6480,6 +6937,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 3;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -6499,6 +6958,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 3;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -6518,6 +6979,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 3;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -6535,6 +7001,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -6549,6 +7017,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 3;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -6569,6 +7042,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @return The value.
              */
             public java.lang.String getValue() {
                 java.lang.Object ref = value_;
@@ -6588,6 +7063,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @return The bytes for value.
              */
             public com.google.protobuf.ByteString getValueBytes() {
                 java.lang.Object ref = value_;
@@ -6607,6 +7084,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(java.lang.String value) {
                 if (value == null) {
@@ -6624,6 +7106,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -6638,6 +7122,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 4;</code>
+             * 
+             * @param value
+             *            The bytes for value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValueBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -6708,6 +7197,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes contentHash = 1;</code>
+         * 
+         * @return The contentHash.
          */
         com.google.protobuf.ByteString getContentHash();
 
@@ -6717,6 +7208,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes encryptContent = 2;</code>
+         * 
+         * @return The encryptContent.
          */
         com.google.protobuf.ByteString getEncryptContent();
 
@@ -6726,6 +7219,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes nonce = 3;</code>
+         * 
+         * @return The nonce.
          */
         com.google.protobuf.ByteString getNonce();
 
@@ -6735,6 +7230,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
@@ -6744,6 +7241,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
@@ -6753,6 +7252,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The value.
          */
         java.lang.String getValue();
 
@@ -6762,6 +7263,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString getValueBytes();
     }
@@ -6885,7 +7388,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes contentHash = 1;</code>
+         * 
+         * @return The contentHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getContentHash() {
             return contentHash_;
         }
@@ -6899,7 +7405,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes encryptContent = 2;</code>
+         * 
+         * @return The encryptContent.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getEncryptContent() {
             return encryptContent_;
         }
@@ -6913,7 +7422,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes nonce = 3;</code>
+         * 
+         * @return The nonce.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getNonce() {
             return nonce_;
         }
@@ -6927,7 +7439,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -6946,7 +7461,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -6967,7 +7485,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -6986,7 +7507,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -7382,7 +7906,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes contentHash = 1;</code>
+             * 
+             * @return The contentHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getContentHash() {
                 return contentHash_;
             }
@@ -7393,6 +7920,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes contentHash = 1;</code>
+             * 
+             * @param value
+             *            The contentHash to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setContentHash(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7410,6 +7942,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes contentHash = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearContentHash() {
 
@@ -7426,7 +7960,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptContent = 2;</code>
+             * 
+             * @return The encryptContent.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getEncryptContent() {
                 return encryptContent_;
             }
@@ -7437,6 +7974,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptContent = 2;</code>
+             * 
+             * @param value
+             *            The encryptContent to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setEncryptContent(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7454,6 +7996,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptContent = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearEncryptContent() {
 
@@ -7470,7 +8014,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes nonce = 3;</code>
+             * 
+             * @return The nonce.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getNonce() {
                 return nonce_;
             }
@@ -7481,6 +8028,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes nonce = 3;</code>
+             * 
+             * @param value
+             *            The nonce to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setNonce(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7498,6 +8050,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes nonce = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearNonce() {
 
@@ -7514,6 +8068,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -7533,6 +8089,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -7552,6 +8110,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -7569,6 +8132,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -7583,6 +8148,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7603,6 +8173,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @return The value.
              */
             public java.lang.String getValue() {
                 java.lang.Object ref = value_;
@@ -7622,6 +8194,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @return The bytes for value.
              */
             public com.google.protobuf.ByteString getValueBytes() {
                 java.lang.Object ref = value_;
@@ -7641,6 +8215,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(java.lang.String value) {
                 if (value == null) {
@@ -7658,6 +8237,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -7672,6 +8253,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @param value
+             *            The bytes for value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValueBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -7742,6 +8328,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes contentHash = 1;</code>
+         * 
+         * @return The contentHash.
          */
         com.google.protobuf.ByteString getContentHash();
 
@@ -7751,6 +8339,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes encryptContent = 2;</code>
+         * 
+         * @return The encryptContent.
          */
         com.google.protobuf.ByteString getEncryptContent();
 
@@ -7760,6 +8350,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes pubKey = 3;</code>
+         * 
+         * @return The pubKey.
          */
         com.google.protobuf.ByteString getPubKey();
 
@@ -7769,6 +8361,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
@@ -7778,6 +8372,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
@@ -7787,6 +8383,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The value.
          */
         java.lang.String getValue();
 
@@ -7796,6 +8394,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The bytes for value.
          */
         com.google.protobuf.ByteString getValueBytes();
     }
@@ -7919,7 +8519,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes contentHash = 1;</code>
+         * 
+         * @return The contentHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getContentHash() {
             return contentHash_;
         }
@@ -7933,7 +8536,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes encryptContent = 2;</code>
+         * 
+         * @return The encryptContent.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getEncryptContent() {
             return encryptContent_;
         }
@@ -7947,7 +8553,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes pubKey = 3;</code>
+         * 
+         * @return The pubKey.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPubKey() {
             return pubKey_;
         }
@@ -7961,7 +8570,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -7980,7 +8592,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 4;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8001,7 +8616,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -8020,7 +8638,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string value = 5;</code>
+         * 
+         * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -8418,7 +9039,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes contentHash = 1;</code>
+             * 
+             * @return The contentHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getContentHash() {
                 return contentHash_;
             }
@@ -8429,6 +9053,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes contentHash = 1;</code>
+             * 
+             * @param value
+             *            The contentHash to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setContentHash(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -8446,6 +9075,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes contentHash = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearContentHash() {
 
@@ -8462,7 +9093,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptContent = 2;</code>
+             * 
+             * @return The encryptContent.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getEncryptContent() {
                 return encryptContent_;
             }
@@ -8473,6 +9107,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptContent = 2;</code>
+             * 
+             * @param value
+             *            The encryptContent to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setEncryptContent(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -8490,6 +9129,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptContent = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearEncryptContent() {
 
@@ -8506,7 +9147,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes pubKey = 3;</code>
+             * 
+             * @return The pubKey.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPubKey() {
                 return pubKey_;
             }
@@ -8517,6 +9161,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes pubKey = 3;</code>
+             * 
+             * @param value
+             *            The pubKey to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setPubKey(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -8534,6 +9183,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes pubKey = 3;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearPubKey() {
 
@@ -8550,6 +9201,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -8569,6 +9222,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -8588,6 +9243,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -8605,6 +9265,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -8619,6 +9281,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 4;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -8639,6 +9306,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @return The value.
              */
             public java.lang.String getValue() {
                 java.lang.Object ref = value_;
@@ -8658,6 +9327,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @return The bytes for value.
              */
             public com.google.protobuf.ByteString getValueBytes() {
                 java.lang.Object ref = value_;
@@ -8677,6 +9348,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @param value
+             *            The value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValue(java.lang.String value) {
                 if (value == null) {
@@ -8694,6 +9370,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearValue() {
 
@@ -8708,6 +9386,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string value = 5;</code>
+             * 
+             * @param value
+             *            The bytes for value to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setValueBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -8778,6 +9461,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
         java.lang.String getKey();
 
@@ -8787,6 +9472,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
         com.google.protobuf.ByteString getKeyBytes();
 
@@ -8796,6 +9483,8 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes encryptAdd = 2;</code>
+         * 
+         * @return The encryptAdd.
          */
         com.google.protobuf.ByteString getEncryptAdd();
     }
@@ -8900,7 +9589,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * 
+         * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8919,7 +9611,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>string key = 1;</code>
+         * 
+         * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8940,7 +9635,10 @@ public final class StorageProtobuf {
          * </pre>
          *
          * <code>bytes encryptAdd = 2;</code>
+         * 
+         * @return The encryptAdd.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getEncryptAdd() {
             return encryptAdd_;
         }
@@ -9278,6 +9976,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 1;</code>
+             * 
+             * @return The key.
              */
             public java.lang.String getKey() {
                 java.lang.Object ref = key_;
@@ -9297,6 +9997,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 1;</code>
+             * 
+             * @return The bytes for key.
              */
             public com.google.protobuf.ByteString getKeyBytes() {
                 java.lang.Object ref = key_;
@@ -9316,6 +10018,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKey(java.lang.String value) {
                 if (value == null) {
@@ -9333,6 +10040,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearKey() {
 
@@ -9347,6 +10056,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>string key = 1;</code>
+             * 
+             * @param value
+             *            The bytes for key to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setKeyBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -9367,7 +10081,10 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptAdd = 2;</code>
+             * 
+             * @return The encryptAdd.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getEncryptAdd() {
                 return encryptAdd_;
             }
@@ -9378,6 +10095,11 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptAdd = 2;</code>
+             * 
+             * @param value
+             *            The encryptAdd to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setEncryptAdd(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -9395,6 +10117,8 @@ public final class StorageProtobuf {
              * </pre>
              *
              * <code>bytes encryptAdd = 2;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearEncryptAdd() {
 
@@ -9457,11 +10181,15 @@ public final class StorageProtobuf {
 
         /**
          * <code>string txHash = 1;</code>
+         * 
+         * @return The txHash.
          */
         java.lang.String getTxHash();
 
         /**
          * <code>string txHash = 1;</code>
+         * 
+         * @return The bytes for txHash.
          */
         com.google.protobuf.ByteString getTxHashBytes();
     }
@@ -9556,7 +10284,10 @@ public final class StorageProtobuf {
 
         /**
          * <code>string txHash = 1;</code>
+         * 
+         * @return The txHash.
          */
+        @java.lang.Override
         public java.lang.String getTxHash() {
             java.lang.Object ref = txHash_;
             if (ref instanceof java.lang.String) {
@@ -9571,7 +10302,10 @@ public final class StorageProtobuf {
 
         /**
          * <code>string txHash = 1;</code>
+         * 
+         * @return The bytes for txHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getTxHashBytes() {
             java.lang.Object ref = txHash_;
             if (ref instanceof java.lang.String) {
@@ -9896,6 +10630,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>string txHash = 1;</code>
+             * 
+             * @return The txHash.
              */
             public java.lang.String getTxHash() {
                 java.lang.Object ref = txHash_;
@@ -9911,6 +10647,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>string txHash = 1;</code>
+             * 
+             * @return The bytes for txHash.
              */
             public com.google.protobuf.ByteString getTxHashBytes() {
                 java.lang.Object ref = txHash_;
@@ -9926,6 +10664,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>string txHash = 1;</code>
+             * 
+             * @param value
+             *            The txHash to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTxHash(java.lang.String value) {
                 if (value == null) {
@@ -9939,6 +10682,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>string txHash = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearTxHash() {
 
@@ -9949,6 +10694,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>string txHash = 1;</code>
+             * 
+             * @param value
+             *            The bytes for txHash to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTxHashBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -10015,21 +10765,35 @@ public final class StorageProtobuf {
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @return A list containing the txHashs.
          */
         java.util.List<java.lang.String> getTxHashsList();
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @return The count of txHashs.
          */
         int getTxHashsCount();
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The txHashs at the given index.
          */
         java.lang.String getTxHashs(int index);
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @param index
+         *            The index of the value to return.
+         * 
+         * @return The bytes of the txHashs at the given index.
          */
         com.google.protobuf.ByteString getTxHashsBytes(int index);
     }
@@ -10131,6 +10895,8 @@ public final class StorageProtobuf {
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @return A list containing the txHashs.
          */
         public com.google.protobuf.ProtocolStringList getTxHashsList() {
             return txHashs_;
@@ -10138,6 +10904,8 @@ public final class StorageProtobuf {
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @return The count of txHashs.
          */
         public int getTxHashsCount() {
             return txHashs_.size();
@@ -10145,6 +10913,11 @@ public final class StorageProtobuf {
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @param index
+         *            The index of the element to return.
+         * 
+         * @return The txHashs at the given index.
          */
         public java.lang.String getTxHashs(int index) {
             return txHashs_.get(index);
@@ -10152,6 +10925,11 @@ public final class StorageProtobuf {
 
         /**
          * <code>repeated string txHashs = 1;</code>
+         * 
+         * @param index
+         *            The index of the value to return.
+         * 
+         * @return The bytes of the txHashs at the given index.
          */
         public com.google.protobuf.ByteString getTxHashsBytes(int index) {
             return txHashs_.getByteString(index);
@@ -10498,6 +11276,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @return A list containing the txHashs.
              */
             public com.google.protobuf.ProtocolStringList getTxHashsList() {
                 return txHashs_.getUnmodifiableView();
@@ -10505,6 +11285,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @return The count of txHashs.
              */
             public int getTxHashsCount() {
                 return txHashs_.size();
@@ -10512,6 +11294,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @param index
+             *            The index of the element to return.
+             * 
+             * @return The txHashs at the given index.
              */
             public java.lang.String getTxHashs(int index) {
                 return txHashs_.get(index);
@@ -10519,6 +11306,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @param index
+             *            The index of the value to return.
+             * 
+             * @return The bytes of the txHashs at the given index.
              */
             public com.google.protobuf.ByteString getTxHashsBytes(int index) {
                 return txHashs_.getByteString(index);
@@ -10526,6 +11318,13 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @param index
+             *            The index to set the value at.
+             * @param value
+             *            The txHashs to set.
+             * 
+             * @return This builder for chaining.
              */
             public Builder setTxHashs(int index, java.lang.String value) {
                 if (value == null) {
@@ -10539,6 +11338,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @param value
+             *            The txHashs to add.
+             * 
+             * @return This builder for chaining.
              */
             public Builder addTxHashs(java.lang.String value) {
                 if (value == null) {
@@ -10552,6 +11356,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @param values
+             *            The txHashs to add.
+             * 
+             * @return This builder for chaining.
              */
             public Builder addAllTxHashs(java.lang.Iterable<java.lang.String> values) {
                 ensureTxHashsIsMutable();
@@ -10562,6 +11371,8 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @return This builder for chaining.
              */
             public Builder clearTxHashs() {
                 txHashs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -10572,6 +11383,11 @@ public final class StorageProtobuf {
 
             /**
              * <code>repeated string txHashs = 1;</code>
+             * 
+             * @param value
+             *            The bytes of the txHashs to add.
+             * 
+             * @return This builder for chaining.
              */
             public Builder addTxHashsBytes(com.google.protobuf.ByteString value) {
                 if (value == null) {
@@ -10756,6 +11572,7 @@ public final class StorageProtobuf {
         /**
          * <code>repeated .Storage storages = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList() {
             return storages_;
         }
@@ -10763,6 +11580,7 @@ public final class StorageProtobuf {
         /**
          * <code>repeated .Storage storages = 1;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> getStoragesOrBuilderList() {
             return storages_;
         }
@@ -10770,6 +11588,7 @@ public final class StorageProtobuf {
         /**
          * <code>repeated .Storage storages = 1;</code>
          */
+        @java.lang.Override
         public int getStoragesCount() {
             return storages_.size();
         }
@@ -10777,6 +11596,7 @@ public final class StorageProtobuf {
         /**
          * <code>repeated .Storage storages = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index) {
             return storages_.get(index);
         }
@@ -10784,6 +11604,7 @@ public final class StorageProtobuf {
         /**
          * <code>repeated .Storage storages = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(int index) {
             return storages_.get(index);
         }

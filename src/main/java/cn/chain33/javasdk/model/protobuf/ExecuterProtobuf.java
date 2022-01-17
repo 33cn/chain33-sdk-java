@@ -112,6 +112,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The isrun.
          */
+        @java.lang.Override
         public boolean getIsrun() {
             return isrun_;
         }
@@ -426,6 +427,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The isrun.
              */
+            @java.lang.Override
             public boolean getIsrun() {
                 return isrun_;
             }
@@ -731,6 +733,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The stateHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getStateHash() {
             return stateHash_;
         }
@@ -743,6 +746,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The parentHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getParentHash() {
             return parentHash_;
         }
@@ -755,6 +759,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The mainHash.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getMainHash() {
             return mainHash_;
         }
@@ -767,6 +772,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The mainHeight.
          */
+        @java.lang.Override
         public long getMainHeight() {
             return mainHeight_;
         }
@@ -779,6 +785,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The blockTime.
          */
+        @java.lang.Override
         public long getBlockTime() {
             return blockTime_;
         }
@@ -791,6 +798,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The height.
          */
+        @java.lang.Override
         public long getHeight() {
             return height_;
         }
@@ -803,6 +811,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The difficulty.
          */
+        @java.lang.Override
         public long getDifficulty() {
             return difficulty_;
         }
@@ -815,6 +824,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The isMempool.
          */
+        @java.lang.Override
         public boolean getIsMempool() {
             return isMempool_;
         }
@@ -825,6 +835,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>repeated .Transaction txs = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction> getTxsList() {
             return txs_;
         }
@@ -832,6 +843,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>repeated .Transaction txs = 2;</code>
          */
+        @java.lang.Override
         public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder> getTxsOrBuilderList() {
             return txs_;
         }
@@ -839,6 +851,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>repeated .Transaction txs = 2;</code>
          */
+        @java.lang.Override
         public int getTxsCount() {
             return txs_.size();
         }
@@ -846,6 +859,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>repeated .Transaction txs = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTxs(int index) {
             return txs_.get(index);
         }
@@ -853,6 +867,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>repeated .Transaction txs = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxsOrBuilder(
                 int index) {
             return txs_.get(index);
@@ -1336,6 +1351,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The stateHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getStateHash() {
                 return stateHash_;
             }
@@ -1377,6 +1393,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The parentHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getParentHash() {
                 return parentHash_;
             }
@@ -1418,6 +1435,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The mainHash.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getMainHash() {
                 return mainHash_;
             }
@@ -1459,6 +1477,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The mainHeight.
              */
+            @java.lang.Override
             public long getMainHeight() {
                 return mainHeight_;
             }
@@ -1497,6 +1516,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The blockTime.
              */
+            @java.lang.Override
             public long getBlockTime() {
                 return blockTime_;
             }
@@ -1535,6 +1555,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The height.
              */
+            @java.lang.Override
             public long getHeight() {
                 return height_;
             }
@@ -1573,6 +1594,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The difficulty.
              */
+            @java.lang.Override
             public long getDifficulty() {
                 return difficulty_;
             }
@@ -1611,6 +1633,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The isMempool.
              */
+            @java.lang.Override
             public boolean getIsMempool() {
                 return isMempool_;
             }
@@ -2074,6 +2097,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The execer.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExecer() {
             return execer_;
         }
@@ -2086,6 +2110,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The funcName.
          */
+        @java.lang.Override
         public java.lang.String getFuncName() {
             java.lang.Object ref = funcName_;
             if (ref instanceof java.lang.String) {
@@ -2103,6 +2128,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for funcName.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getFuncNameBytes() {
             java.lang.Object ref = funcName_;
             if (ref instanceof java.lang.String) {
@@ -2122,6 +2148,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The payload.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPayload() {
             return payload_;
         }
@@ -2467,6 +2494,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The execer.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getExecer() {
                 return execer_;
             }
@@ -2593,6 +2621,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The payload.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPayload() {
                 return payload_;
             }
@@ -2809,6 +2838,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The execer.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getExecer() {
             return execer_;
         }
@@ -2821,6 +2851,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The actionName.
          */
+        @java.lang.Override
         public java.lang.String getActionName() {
             java.lang.Object ref = actionName_;
             if (ref instanceof java.lang.String) {
@@ -2838,6 +2869,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for actionName.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getActionNameBytes() {
             java.lang.Object ref = actionName_;
             if (ref instanceof java.lang.String) {
@@ -2857,6 +2889,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The payload.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getPayload() {
             return payload_;
         }
@@ -3204,6 +3237,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The execer.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getExecer() {
                 return execer_;
             }
@@ -3330,6 +3364,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The payload.
              */
+            @java.lang.Override
             public com.google.protobuf.ByteString getPayload() {
                 return payload_;
             }
@@ -4208,6 +4243,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -4225,6 +4261,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -4773,6 +4810,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The value.
          */
+        @java.lang.Override
         public int getValue() {
             return value_;
         }
@@ -5088,6 +5126,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The value.
              */
+            @java.lang.Override
             public int getValue() {
                 return value_;
             }
@@ -5468,6 +5507,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -5485,6 +5525,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -5504,6 +5545,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -5521,6 +5563,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -5539,6 +5582,7 @@ public final class ExecuterProtobuf {
          * 
          * @return Whether the arr field is set.
          */
+        @java.lang.Override
         public boolean hasArr() {
             return valueCase_ == 3;
         }
@@ -5548,6 +5592,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The arr.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ArrayConfig getArr() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ArrayConfig) value_;
@@ -5558,6 +5603,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>.ArrayConfig arr = 3;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ArrayConfigOrBuilder getArrOrBuilder() {
             if (valueCase_ == 3) {
                 return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ArrayConfig) value_;
@@ -5572,6 +5618,7 @@ public final class ExecuterProtobuf {
          * 
          * @return Whether the str field is set.
          */
+        @java.lang.Override
         public boolean hasStr() {
             return valueCase_ == 4;
         }
@@ -5581,6 +5628,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The str.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.StringConfig getStr() {
             if (valueCase_ == 4) {
                 return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.StringConfig) value_;
@@ -5591,6 +5639,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>.StringConfig str = 4;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.StringConfigOrBuilder getStrOrBuilder() {
             if (valueCase_ == 4) {
                 return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.StringConfig) value_;
@@ -5605,6 +5654,7 @@ public final class ExecuterProtobuf {
          * 
          * @return Whether the int field is set.
          */
+        @java.lang.Override
         public boolean hasInt() {
             return valueCase_ == 5;
         }
@@ -5614,6 +5664,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The int.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.Int32Config getInt() {
             if (valueCase_ == 5) {
                 return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.Int32Config) value_;
@@ -5624,6 +5675,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>.Int32Config int = 5;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.Int32ConfigOrBuilder getIntOrBuilder() {
             if (valueCase_ == 5) {
                 return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.Int32Config) value_;
@@ -5639,6 +5691,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The ty.
          */
+        @java.lang.Override
         public int getTy() {
             return ty_;
         }
@@ -6267,6 +6320,7 @@ public final class ExecuterProtobuf {
              * 
              * @return Whether the arr field is set.
              */
+            @java.lang.Override
             public boolean hasArr() {
                 return valueCase_ == 3;
             }
@@ -6276,6 +6330,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The arr.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ArrayConfig getArr() {
                 if (arrBuilder_ == null) {
                     if (valueCase_ == 3) {
@@ -6376,6 +6431,7 @@ public final class ExecuterProtobuf {
             /**
              * <code>.ArrayConfig arr = 3;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ArrayConfigOrBuilder getArrOrBuilder() {
                 if ((valueCase_ == 3) && (arrBuilder_ != null)) {
                     return arrBuilder_.getMessageOrBuilder();
@@ -6413,6 +6469,7 @@ public final class ExecuterProtobuf {
              * 
              * @return Whether the str field is set.
              */
+            @java.lang.Override
             public boolean hasStr() {
                 return valueCase_ == 4;
             }
@@ -6422,6 +6479,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The str.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.StringConfig getStr() {
                 if (strBuilder_ == null) {
                     if (valueCase_ == 4) {
@@ -6522,6 +6580,7 @@ public final class ExecuterProtobuf {
             /**
              * <code>.StringConfig str = 4;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.StringConfigOrBuilder getStrOrBuilder() {
                 if ((valueCase_ == 4) && (strBuilder_ != null)) {
                     return strBuilder_.getMessageOrBuilder();
@@ -6559,6 +6618,7 @@ public final class ExecuterProtobuf {
              * 
              * @return Whether the int field is set.
              */
+            @java.lang.Override
             public boolean hasInt() {
                 return valueCase_ == 5;
             }
@@ -6568,6 +6628,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The int.
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.Int32Config getInt() {
                 if (intBuilder_ == null) {
                     if (valueCase_ == 5) {
@@ -6668,6 +6729,7 @@ public final class ExecuterProtobuf {
             /**
              * <code>.Int32Config int = 5;</code>
              */
+            @java.lang.Override
             public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.Int32ConfigOrBuilder getIntOrBuilder() {
                 if ((valueCase_ == 5) && (intBuilder_ != null)) {
                     return intBuilder_.getMessageOrBuilder();
@@ -6705,6 +6767,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The ty.
              */
+            @java.lang.Override
             public int getTy() {
                 return ty_;
             }
@@ -6955,6 +7018,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -6972,6 +7036,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -6991,6 +7056,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -7008,6 +7074,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -7027,6 +7094,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The op.
          */
+        @java.lang.Override
         public java.lang.String getOp() {
             java.lang.Object ref = op_;
             if (ref instanceof java.lang.String) {
@@ -7044,6 +7112,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for op.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getOpBytes() {
             java.lang.Object ref = op_;
             if (ref instanceof java.lang.String) {
@@ -7063,6 +7132,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The addr.
          */
+        @java.lang.Override
         public java.lang.String getAddr() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -7080,6 +7150,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for addr.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getAddrBytes() {
             java.lang.Object ref = addr_;
             if (ref instanceof java.lang.String) {
@@ -7990,6 +8061,7 @@ public final class ExecuterProtobuf {
          * 
          * @return Whether the prev field is set.
          */
+        @java.lang.Override
         public boolean hasPrev() {
             return prev_ != null;
         }
@@ -7999,6 +8071,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The prev.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ConfigItem getPrev() {
             return prev_ == null ? cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ConfigItem.getDefaultInstance()
                     : prev_;
@@ -8007,6 +8080,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>.ConfigItem prev = 1;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ConfigItemOrBuilder getPrevOrBuilder() {
             return getPrev();
         }
@@ -8019,6 +8093,7 @@ public final class ExecuterProtobuf {
          * 
          * @return Whether the current field is set.
          */
+        @java.lang.Override
         public boolean hasCurrent() {
             return current_ != null;
         }
@@ -8028,6 +8103,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The current.
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ConfigItem getCurrent() {
             return current_ == null ? cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ConfigItem.getDefaultInstance()
                     : current_;
@@ -8036,6 +8112,7 @@ public final class ExecuterProtobuf {
         /**
          * <code>.ConfigItem current = 2;</code>
          */
+        @java.lang.Override
         public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ConfigItemOrBuilder getCurrentOrBuilder() {
             return getCurrent();
         }
@@ -8819,6 +8896,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The key.
          */
+        @java.lang.Override
         public java.lang.String getKey() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8836,6 +8914,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for key.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getKeyBytes() {
             java.lang.Object ref = key_;
             if (ref instanceof java.lang.String) {
@@ -8855,6 +8934,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The value.
          */
+        @java.lang.Override
         public java.lang.String getValue() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -8872,6 +8952,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The bytes for value.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString getValueBytes() {
             java.lang.Object ref = value_;
             if (ref instanceof java.lang.String) {
@@ -9643,6 +9724,7 @@ public final class ExecuterProtobuf {
          * 
          * @return A list containing the rootcerts.
          */
+        @java.lang.Override
         public java.util.List<com.google.protobuf.ByteString> getRootcertsList() {
             return rootcerts_;
         }
@@ -9676,6 +9758,7 @@ public final class ExecuterProtobuf {
          * 
          * @return A list containing the intermediateCerts.
          */
+        @java.lang.Override
         public java.util.List<com.google.protobuf.ByteString> getIntermediateCertsList() {
             return intermediateCerts_;
         }
@@ -9709,6 +9792,7 @@ public final class ExecuterProtobuf {
          * 
          * @return A list containing the revocationList.
          */
+        @java.lang.Override
         public java.util.List<com.google.protobuf.ByteString> getRevocationListList() {
             return revocationList_;
         }
@@ -9742,6 +9826,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The curHeigth.
          */
+        @java.lang.Override
         public long getCurHeigth() {
             return curHeigth_;
         }
@@ -9754,6 +9839,7 @@ public final class ExecuterProtobuf {
          * 
          * @return The nxtHeight.
          */
+        @java.lang.Override
         public long getNxtHeight() {
             return nxtHeight_;
         }
@@ -10508,6 +10594,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The curHeigth.
              */
+            @java.lang.Override
             public long getCurHeigth() {
                 return curHeigth_;
             }
@@ -10546,6 +10633,7 @@ public final class ExecuterProtobuf {
              * 
              * @return The nxtHeight.
              */
+            @java.lang.Override
             public long getNxtHeight() {
                 return nxtHeight_;
             }
