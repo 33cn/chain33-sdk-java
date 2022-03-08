@@ -15,7 +15,7 @@ public class GrpcClient {
     private final ManagedChannel channel;
     private final chain33Grpc.chain33BlockingStub blockingStub;
 
-    private GrpcClient(ManagedChannel channel,List<EquivalentAddressGroup> addresses) {
+    private GrpcClient(ManagedChannel channel, List<EquivalentAddressGroup> addresses) {
         this.channel = channel;
         NameResolverRegistry nameResolverRegistry = NameResolverRegistry.getDefaultRegistry();
         NameResolverProvider nameResolverFactory = new MultipleResolverProvider(addresses);
@@ -23,11 +23,9 @@ public class GrpcClient {
         blockingStub = chain33Grpc.newBlockingStub(channel);
     }
 
-    public GrpcClient(String targetURI,List<EquivalentAddressGroup> addresses) {
-        this(ManagedChannelBuilder.forTarget(targetURI)
-                .defaultLoadBalancingPolicy("round_robin") //pick_first,grpclb,round_robin,HealthCheckingRoundRobin
-                .usePlaintext()
-                .build(),addresses);
+    public GrpcClient(String targetURI, List<EquivalentAddressGroup> addresses) {
+        this(ManagedChannelBuilder.forTarget(targetURI).defaultLoadBalancingPolicy("round_robin") // pick_first,grpclb,round_robin,HealthCheckingRoundRobin
+                .usePlaintext().build(), addresses);
     }
 
     private GrpcClient(ManagedChannel channel) {
@@ -36,15 +34,11 @@ public class GrpcClient {
     }
 
     public GrpcClient(String host, int port) {
-        this(ManagedChannelBuilder.forAddress(host, port)
-                .usePlaintext()
-                .build());
+        this(ManagedChannelBuilder.forAddress(host, port).usePlaintext().build());
     }
 
     public GrpcClient(String host) {
-        this(ManagedChannelBuilder.forTarget(host)
-                .usePlaintext()
-                .build());
+        this(ManagedChannelBuilder.forTarget(host).usePlaintext().build());
     }
 
     public void shutdown() throws InterruptedException {
@@ -52,14 +46,15 @@ public class GrpcClient {
     }
 
     /**
-     * @description »ñÈ¡×îĞÂµÄÇø¿éÍ· getLastHeader
-     * @return ×îĞÂÇø¿éĞÅÏ¢
+     * @description è·å–æœ€æ–°çš„åŒºå—å¤´ getLastHeader
+     * 
+     * @return æœ€æ–°åŒºå—ä¿¡æ¯
      */
     public BlockchainProtobuf.Header getLastHeader() {
         CommonProtobuf.ReqNil request = CommonProtobuf.ReqNil.newBuilder().build();
         BlockchainProtobuf.Header response;
         try {
-            //Ê¹ÓÃ×èÈû stubµ÷ÓÃ
+            // ä½¿ç”¨é˜»å¡ stubè°ƒç”¨
             response = blockingStub.getLastHeader(request);
             logger.info(response.toString());
             return response;
@@ -70,15 +65,17 @@ public class GrpcClient {
     }
 
     /**
-     * @description ²éÑ¯½»Ò× queryTransaction
-     * @return ½»Ò×ĞÅÏ¢
+     * @description æŸ¥è¯¢äº¤æ˜“ queryTransaction
+     * 
+     * @return äº¤æ˜“ä¿¡æ¯
      */
     public TransactionAllProtobuf.TransactionDetail queryTransaction(String hash) {
         byte[] hashBytes = HexUtil.fromHexString(hash);
-        CommonProtobuf.ReqHash request = CommonProtobuf.ReqHash.newBuilder().setHash(ByteString.copyFrom(hashBytes)).build();
+        CommonProtobuf.ReqHash request = CommonProtobuf.ReqHash.newBuilder().setHash(ByteString.copyFrom(hashBytes))
+                .build();
         TransactionAllProtobuf.TransactionDetail response;
         try {
-            //Ê¹ÓÃ×èÈû stubµ÷ÓÃ
+            // ä½¿ç”¨é˜»å¡ stubè°ƒç”¨
             response = blockingStub.queryTransaction(request);
             logger.info(response.toString());
             return response;
@@ -88,10 +85,8 @@ public class GrpcClient {
         }
     }
 
-    public <Result> Result run(Chain33Functional<chain33Grpc.chain33BlockingStub,Result> functional)
-    {
-        chain33Grpc.chain33BlockingStub blockingStub =
-                chain33Grpc.newBlockingStub(channel);
+    public <Result> Result run(Chain33Functional<chain33Grpc.chain33BlockingStub, Result> functional) {
+        chain33Grpc.chain33BlockingStub blockingStub = chain33Grpc.newBlockingStub(channel);
         return functional.run(blockingStub);
     }
 

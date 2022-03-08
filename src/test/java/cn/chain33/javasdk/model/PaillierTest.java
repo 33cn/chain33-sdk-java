@@ -47,7 +47,8 @@ public class PaillierTest {
         String privateKey = "0x85bf7aa29436bb186cac45ecd8ea9e63e56c5817e127ebb5e99cd5a9cbfe0f23";
 
         // 初始数据上链
-        String txEncode = StorageUtil.createEncryptNotaryStorage(c1, TransactionUtil.Sha256(i1.toByteArray()),  i1.toByteArray(), "", "",  "storage", privateKey);
+        String txEncode = StorageUtil.createEncryptNotaryStorage(c1, TransactionUtil.Sha256(i1.toByteArray()),
+                i1.toByteArray(), "", "", "storage", privateKey);
         String submitTransaction = client.submitTransaction(txEncode);
         Thread.sleep(1000);
 

@@ -13,9 +13,9 @@ public class MultipleResolverProvider extends NameResolverProvider {
     final List<EquivalentAddressGroup> addresses;
 
     MultipleResolverProvider(List<EquivalentAddressGroup> addresses) {
-//        this.addresses = Arrays.stream(addresses)
-//                .map(EquivalentAddressGroup::new)
-//                .collect(Collectors.toList());
+        // this.addresses = Arrays.stream(addresses)
+        // .map(EquivalentAddressGroup::new)
+        // .collect(Collectors.toList());
         this.addresses = addresses;
     }
 
@@ -25,9 +25,12 @@ public class MultipleResolverProvider extends NameResolverProvider {
             public String getServiceAuthority() {
                 return "mideaChain";
             }
+
             public void start(Listener2 listener) {
-                listener.onResult(ResolutionResult.newBuilder().setAddresses(addresses).setAttributes(Attributes.EMPTY).build());
+                listener.onResult(
+                        ResolutionResult.newBuilder().setAddresses(addresses).setAttributes(Attributes.EMPTY).build());
             }
+
             public void shutdown() {
             }
         };

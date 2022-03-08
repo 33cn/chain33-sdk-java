@@ -26,7 +26,7 @@ public class PreUtils {
 
         BigInteger sum;
         if (digest.length > orderBytes) {
-            byte[] digest1 = java.util.Arrays.copyOf(digest,orderBytes);
+            byte[] digest1 = java.util.Arrays.copyOf(digest, orderBytes);
             sum = new BigInteger(digest1);
         } else {
             sum = new BigInteger(digest);
@@ -52,7 +52,7 @@ public class PreUtils {
     private static BigInteger hornerPolyEval(BigInteger[] poly, BigInteger x) {
         BigInteger result = BigInteger.ZERO;
         result = result.add(poly[0]);
-        for(int i = 1; i < poly.length; i++) {
+        for (int i = 1; i < poly.length; i++) {
             result = result.multiply(x).add(poly[i]);
         }
         result = result.mod(baseN);
@@ -99,6 +99,7 @@ public class PreUtils {
      * @param Z
      * @param klen
      *            生成klen字节数长度的密钥
+     * 
      * @return
      */
     public static byte[] KDF(byte[] Z, int klen) {
@@ -144,7 +145,8 @@ public class PreUtils {
         return new EncryptKey(enKey, priv_r.getPublicKeyAsHex(), priv_u.getPublicKeyAsHex());
     }
 
-    public static KeyFrag[] GenerateKeyFragments(byte[] privOwner, byte[] pubRecipient, int numSplit, int threshold)  throws Exception {
+    public static KeyFrag[] GenerateKeyFragments(byte[] privOwner, byte[] pubRecipient, int numSplit, int threshold)
+            throws Exception {
         if (numSplit < 1 || threshold < 1 || numSplit < threshold) {
             throw new Exception("param error");
         }
@@ -196,7 +198,7 @@ public class PreUtils {
     public static byte[] AssembleReencryptFragment(byte[] privRecipient, ReKeyFrag[] reKeyFrags) throws Exception {
         ECKey privRecipientKey = ECKey.fromPrivate(privRecipient);
 
-        if (reKeyFrags.length ==0 || reKeyFrags[0] == null){
+        if (reKeyFrags.length == 0 || reKeyFrags[0] == null) {
             throw new Exception("param error");
         }
         ECKey precursor = ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[0].getPrecurPub()));
@@ -228,13 +230,17 @@ public class PreUtils {
             shareKeyBob = re_sum.multiply(dhBobBN).getEncoded();
         } else {
             BigInteger lambda = calcLambdaCoeff(ids[0], ids);
-            ECPoint efinal = ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[0].getReKeyR())).getPubKeyPoint().multiply(lambda);
-            ECPoint vfinal = ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[0].getReKeyU())).getPubKeyPoint().multiply(lambda);
+            ECPoint efinal = ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[0].getReKeyR())).getPubKeyPoint()
+                    .multiply(lambda);
+            ECPoint vfinal = ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[0].getReKeyU())).getPubKeyPoint()
+                    .multiply(lambda);
             for (int i = 1; i < threshold; i++) {
                 lambda = calcLambdaCoeff(ids[i], ids);
 
-                efinal = efinal.add(ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[i].getReKeyR())).getPubKeyPoint().multiply(lambda));
-                vfinal = vfinal.add(ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[i].getReKeyU())).getPubKeyPoint().multiply(lambda));
+                efinal = efinal.add(ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[i].getReKeyR()))
+                        .getPubKeyPoint().multiply(lambda));
+                vfinal = vfinal.add(ECKey.fromPublicOnly(HexUtil.fromHexString(reKeyFrags[i].getReKeyU()))
+                        .getPubKeyPoint().multiply(lambda));
             }
 
             shareKeyBob = efinal.add(vfinal).multiply(dhBobBN).getEncoded();

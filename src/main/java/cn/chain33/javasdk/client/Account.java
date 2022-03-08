@@ -13,178 +13,180 @@ import java.io.*;
 public class Account {
 
     /**
+     *
+     * @description åœ¨æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯
      * 
-     * @description ÔÚ±¾µØ´´½¨ÕË»§ĞÅÏ¢
-     * @return ÕË»§ĞÅÏ¢(Ë½Ô¿£¬¹«Ô¿£¬µØÖ·)
+     * @return è´¦æˆ·ä¿¡æ¯(ç§é’¥ï¼Œå…¬é’¥ï¼Œåœ°å€)
      *
      */
     public AccountInfo newAccountLocal() {
-    	AccountInfo accountInfo = new AccountInfo();
-    	
-    	// Éú³ÉË½Ô¿³×
-    	String privateKey = TransactionUtil.generatorPrivateKeyString();
-    	accountInfo.setPrivateKey(privateKey);
-    	// Éú³É¹«Ô¿³×
-    	String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
-    	accountInfo.setPublicKey(publicKey);
-    	byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-    	// Éú³ÉµØÖ·
-    	accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        AccountInfo accountInfo = new AccountInfo();
+
+        // ç”Ÿæˆç§é’¥åŒ™
+        String privateKey = TransactionUtil.generatorPrivateKeyString();
+        accountInfo.setPrivateKey(privateKey);
+        // ç”Ÿæˆå…¬é’¥åŒ™
+        String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
+        accountInfo.setPublicKey(publicKey);
+        byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
+        // ç”Ÿæˆåœ°å€
+        accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
         return accountInfo;
     }
 
-	/**
-	 * ±¾µØ´´½¨ÕË»§ĞÅÏ¢£¬¼ÓÃÜÊä³öµ½Ö¸¶¨Â·¾¶
-	 */
-	public AccountInfo newAccountLocal(String name, String passwd, String path) throws IOException {
-		AccountInfo accountInfo = new AccountInfo();
-		accountInfo.setName(name);
+    /**
+     * æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯ï¼ŒåŠ å¯†è¾“å‡ºåˆ°æŒ‡å®šè·¯å¾„
+     */
+    public AccountInfo newAccountLocal(String name, String passwd, String path) throws IOException {
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setName(name);
 
-		// Éú³ÉË½Ô¿³×
-		String privateKey = TransactionUtil.generatorPrivateKeyString();
-		accountInfo.setPrivateKey(privateKey);
+        // ç”Ÿæˆç§é’¥åŒ™
+        String privateKey = TransactionUtil.generatorPrivateKeyString();
+        accountInfo.setPrivateKey(privateKey);
 
-		// µ¼³öµ½ÎÄ¼ş
-		File file = new File(path);
-		if (!file.exists()) {
-			file.createNewFile();
-		}
-		FileOutputStream fos = new FileOutputStream(file);
-		if(StringUtil.isEmpty(passwd)){
-			fos.write(privateKey.getBytes());
-		} else {
-			fos.write(DesUtil.encrypt(privateKey.getBytes(), DesUtil.padding(passwd)));
-		}
-		fos.close();
+        // å¯¼å‡ºåˆ°æ–‡ä»¶
+        File file = new File(path);
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        FileOutputStream fos = new FileOutputStream(file);
+        if (StringUtil.isEmpty(passwd)) {
+            fos.write(privateKey.getBytes());
+        } else {
+            fos.write(DesUtil.encrypt(privateKey.getBytes(), DesUtil.padding(passwd)));
+        }
+        fos.close();
 
-		// Éú³É¹«Ô¿³×
-		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
-		accountInfo.setPublicKey(publicKey);
-		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-		// Éú³ÉµØÖ·
-		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
-		return accountInfo;
-	}
+        // ç”Ÿæˆå…¬é’¥åŒ™
+        String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
+        accountInfo.setPublicKey(publicKey);
+        byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
+        // ç”Ÿæˆåœ°å€
+        accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        return accountInfo;
+    }
 
-	/**
-	 * µ¼³ö±¾µØÕË»§ĞÅÏ¢
-	 */
-	public AccountInfo loadAccountLocal(String name, String passwd, String path) throws Exception {
-		File file = new File(path);
-		if (!file.exists()) {
-			return null;
-		}
+    /**
+     * å¯¼å‡ºæœ¬åœ°è´¦æˆ·ä¿¡æ¯
+     */
+    public AccountInfo loadAccountLocal(String name, String passwd, String path) throws Exception {
+        File file = new File(path);
+        if (!file.exists()) {
+            return null;
+        }
 
-		FileInputStream fis = new FileInputStream(file);
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        FileInputStream fis = new FileInputStream(file);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-		byte buffer[] = new byte[64];
-		int size;
-		while ((size = fis.read(buffer)) != -1) {
-			baos.write(buffer, 0, size);
-		}
-		fis.close();
+        byte buffer[] = new byte[64];
+        int size;
+        while ((size = fis.read(buffer)) != -1) {
+            baos.write(buffer, 0, size);
+        }
+        fis.close();
 
-		String privateKey;
-		if(StringUtil.isEmpty(passwd)) {
-			privateKey = baos.toString();
-		} else{
-			privateKey = new String(DesUtil.decrypt(baos.toByteArray(), DesUtil.padding(passwd)));
-		}
-		AccountInfo accountInfo = new AccountInfo();
-		accountInfo.setName(name);
-		accountInfo.setPrivateKey(privateKey);
-		// Éú³É¹«Ô¿³×
-		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
-		accountInfo.setPublicKey(publicKey);
-		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-		// Éú³ÉµØÖ·
-		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
-		return accountInfo;
-	}
+        String privateKey;
+        if (StringUtil.isEmpty(passwd)) {
+            privateKey = baos.toString();
+        } else {
+            privateKey = new String(DesUtil.decrypt(baos.toByteArray(), DesUtil.padding(passwd)));
+        }
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setName(name);
+        accountInfo.setPrivateKey(privateKey);
+        // ç”Ÿæˆå…¬é’¥åŒ™
+        String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
+        accountInfo.setPublicKey(publicKey);
+        byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
+        // ç”Ÿæˆåœ°å€
+        accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        return accountInfo;
+    }
 
-	/**
-	 *
-	 * @description ÔÚ±¾µØ´´½¨ÕË»§ĞÅÏ¢
-	 * @return ÕË»§ĞÅÏ¢(Ë½Ô¿£¬¹«Ô¿£¬µØÖ·)
-	 *
-	 */
-	public AccountInfo newGMAccountLocal() {
-		AccountInfo accountInfo = new AccountInfo();
+    /**
+     *
+     * @description åœ¨æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯
+     * 
+     * @return è´¦æˆ·ä¿¡æ¯(ç§é’¥ï¼Œå…¬é’¥ï¼Œåœ°å€)
+     *
+     */
+    public AccountInfo newGMAccountLocal() {
+        AccountInfo accountInfo = new AccountInfo();
 
-		SM2KeyPair keyPair = SM2Util.generateKeyPair();
-		accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
-		accountInfo.setPublicKey(keyPair.getPublicKeyString());
+        SM2KeyPair keyPair = SM2Util.generateKeyPair();
+        accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
+        accountInfo.setPublicKey(keyPair.getPublicKeyString());
 
-		byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
-		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
+        accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 
-		return accountInfo;
-	}
+        return accountInfo;
+    }
 
-	/**
-	 * ±¾µØ´´½¨ÕË»§ĞÅÏ¢£¬¼ÓÃÜÊä³öµ½Ö¸¶¨Â·¾¶
-	 */
-	public AccountInfo newGMAccountLocal(String name, String passwd, String path) throws IOException {
-		AccountInfo accountInfo = new AccountInfo();
-		accountInfo.setName(name);
+    /**
+     * æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯ï¼ŒåŠ å¯†è¾“å‡ºåˆ°æŒ‡å®šè·¯å¾„
+     */
+    public AccountInfo newGMAccountLocal(String name, String passwd, String path) throws IOException {
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setName(name);
 
-		SM2KeyPair keyPair = SM2Util.generateKeyPair();
-		accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
-		accountInfo.setPublicKey(keyPair.getPublicKeyString());
+        SM2KeyPair keyPair = SM2Util.generateKeyPair();
+        accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
+        accountInfo.setPublicKey(keyPair.getPublicKeyString());
 
-		// µ¼³öµ½ÎÄ¼ş
-		File file = new File(path);
-		if (!file.exists()) {
-			file.createNewFile();
-		}
-		FileOutputStream fos = new FileOutputStream(file);
-		if(StringUtil.isEmpty(passwd)){
-			fos.write(accountInfo.getPrivateKey().getBytes());
-		} else {
-			fos.write(DesUtil.encrypt(accountInfo.getPrivateKey().getBytes(), DesUtil.padding(passwd)));
-		}
-		fos.close();
+        // å¯¼å‡ºåˆ°æ–‡ä»¶
+        File file = new File(path);
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        FileOutputStream fos = new FileOutputStream(file);
+        if (StringUtil.isEmpty(passwd)) {
+            fos.write(accountInfo.getPrivateKey().getBytes());
+        } else {
+            fos.write(DesUtil.encrypt(accountInfo.getPrivateKey().getBytes(), DesUtil.padding(passwd)));
+        }
+        fos.close();
 
-		byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
-		// Éú³ÉµØÖ·
-		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
-		return accountInfo;
-	}
+        byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
+        // ç”Ÿæˆåœ°å€
+        accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        return accountInfo;
+    }
 
-	/**
-	 * µ¼³ö±¾µØÕË»§ĞÅÏ¢
-	 */
-	public AccountInfo loadGMAccountLocal(String name, String passwd, String path) throws Exception {
-		File file = new File(path);
-		if (!file.exists()) {
-			return null;
-		}
+    /**
+     * å¯¼å‡ºæœ¬åœ°è´¦æˆ·ä¿¡æ¯
+     */
+    public AccountInfo loadGMAccountLocal(String name, String passwd, String path) throws Exception {
+        File file = new File(path);
+        if (!file.exists()) {
+            return null;
+        }
 
-		FileInputStream fis = new FileInputStream(file);
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        FileInputStream fis = new FileInputStream(file);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-		byte buffer[] = new byte[64];
-		int size;
-		while ((size = fis.read(buffer)) != -1) {
-			baos.write(buffer, 0, size);
-		}
-		fis.close();
+        byte buffer[] = new byte[64];
+        int size;
+        while ((size = fis.read(buffer)) != -1) {
+            baos.write(buffer, 0, size);
+        }
+        fis.close();
 
-		byte[] privateKey;
-		if(StringUtil.isEmpty(passwd)) {
-			privateKey = baos.toByteArray();
-		} else{
-			privateKey = DesUtil.decrypt(baos.toByteArray(), DesUtil.padding(passwd));
-		}
+        byte[] privateKey;
+        if (StringUtil.isEmpty(passwd)) {
+            privateKey = baos.toByteArray();
+        } else {
+            privateKey = DesUtil.decrypt(baos.toByteArray(), DesUtil.padding(passwd));
+        }
 
-		SM2KeyPair keyPair = SM2Util.fromPrivateKey(HexUtil.fromHexString(new String(privateKey)));
-		AccountInfo accountInfo = new AccountInfo();
-		accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
-		accountInfo.setPublicKey(keyPair.getPublicKeyString());
+        SM2KeyPair keyPair = SM2Util.fromPrivateKey(HexUtil.fromHexString(new String(privateKey)));
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
+        accountInfo.setPublicKey(keyPair.getPublicKeyString());
 
-		byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
-		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
-		return accountInfo;
-	}
+        byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
+        accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        return accountInfo;
+    }
 }

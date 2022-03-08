@@ -38,7 +38,8 @@ public class PaillierKeyPair {
 
         BigInteger lambda = pMinusOne.multiply(qMinusOne);
 
-        BigInteger g = n.add(BigInteger.ONE);;
+        BigInteger g = n.add(BigInteger.ONE);
+        ;
 
         BigInteger mu = lambda.modInverse(n);
         PublicKey publicKey = new PublicKey(n, nSquared, g);

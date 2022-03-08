@@ -4,991 +4,201 @@
 package cn.chain33.javasdk.model.protobuf;
 
 public final class TokenActionProtoBuf {
-  private TokenActionProtoBuf() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface TokenActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TokenAction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-     * @return Whether the tokenPreCreate field is set.
-     */
-    boolean hasTokenPreCreate();
-    /**
-     * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-     * @return The tokenPreCreate.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getTokenPreCreate();
-    /**
-     * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder getTokenPreCreateOrBuilder();
-
-    /**
-     * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-     * @return Whether the tokenFinishCreate field is set.
-     */
-    boolean hasTokenFinishCreate();
-    /**
-     * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-     * @return The tokenFinishCreate.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getTokenFinishCreate();
-    /**
-     * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder getTokenFinishCreateOrBuilder();
-
-    /**
-     * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-     * @return Whether the tokenRevokeCreate field is set.
-     */
-    boolean hasTokenRevokeCreate();
-    /**
-     * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-     * @return The tokenRevokeCreate.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getTokenRevokeCreate();
-    /**
-     * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder getTokenRevokeCreateOrBuilder();
-
-    /**
-     * <code>.AssetsTransfer transfer = 4;</code>
-     * @return Whether the transfer field is set.
-     */
-    boolean hasTransfer();
-    /**
-     * <code>.AssetsTransfer transfer = 4;</code>
-     * @return The transfer.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getTransfer();
-    /**
-     * <code>.AssetsTransfer transfer = 4;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder getTransferOrBuilder();
-
-    /**
-     * <code>.AssetsWithdraw withdraw = 5;</code>
-     * @return Whether the withdraw field is set.
-     */
-    boolean hasWithdraw();
-    /**
-     * <code>.AssetsWithdraw withdraw = 5;</code>
-     * @return The withdraw.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getWithdraw();
-    /**
-     * <code>.AssetsWithdraw withdraw = 5;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder();
-
-    /**
-     * <code>.AssetsGenesis genesis = 6;</code>
-     * @return Whether the genesis field is set.
-     */
-    boolean hasGenesis();
-    /**
-     * <code>.AssetsGenesis genesis = 6;</code>
-     * @return The genesis.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getGenesis();
-    /**
-     * <code>.AssetsGenesis genesis = 6;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder getGenesisOrBuilder();
-
-    /**
-     * <code>.AssetsTransferToExec transferToExec = 8;</code>
-     * @return Whether the transferToExec field is set.
-     */
-    boolean hasTransferToExec();
-    /**
-     * <code>.AssetsTransferToExec transferToExec = 8;</code>
-     * @return The transferToExec.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getTransferToExec();
-    /**
-     * <code>.AssetsTransferToExec transferToExec = 8;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder();
-
-    /**
-     * <code>.TokenMint tokenMint = 9;</code>
-     * @return Whether the tokenMint field is set.
-     */
-    boolean hasTokenMint();
-    /**
-     * <code>.TokenMint tokenMint = 9;</code>
-     * @return The tokenMint.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getTokenMint();
-    /**
-     * <code>.TokenMint tokenMint = 9;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder getTokenMintOrBuilder();
-
-    /**
-     * <code>.TokenBurn tokenBurn = 10;</code>
-     * @return Whether the tokenBurn field is set.
-     */
-    boolean hasTokenBurn();
-    /**
-     * <code>.TokenBurn tokenBurn = 10;</code>
-     * @return The tokenBurn.
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getTokenBurn();
-    /**
-     * <code>.TokenBurn tokenBurn = 10;</code>
-     */
-    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder getTokenBurnOrBuilder();
-
-    /**
-     * <code>int32 Ty = 7;</code>
-     * @return The ty.
-     */
-    int getTy();
-
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.ValueCase getValueCase();
-  }
-  /**
-   * <pre>
-   * action
-   * </pre>
-   *
-   * Protobuf type {@code TokenAction}
-   */
-  public  static final class TokenAction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:TokenAction)
-      TokenActionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TokenAction.newBuilder() to construct.
-    private TokenAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TokenAction() {
+    private TokenActionProtoBuf() {
     }
 
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TokenAction();
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TokenAction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder subBuilder = null;
-              if (valueCase_ == 1) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 1;
-              break;
-            }
-            case 18: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder subBuilder = null;
-              if (valueCase_ == 2) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 2;
-              break;
-            }
-            case 26: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder subBuilder = null;
-              if (valueCase_ == 3) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 3;
-              break;
-            }
-            case 34: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder subBuilder = null;
-              if (valueCase_ == 4) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 4;
-              break;
-            }
-            case 42: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder subBuilder = null;
-              if (valueCase_ == 5) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 5;
-              break;
-            }
-            case 50: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder subBuilder = null;
-              if (valueCase_ == 6) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 6;
-              break;
-            }
-            case 56: {
-
-              ty_ = input.readInt32();
-              break;
-            }
-            case 66: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder subBuilder = null;
-              if (valueCase_ == 8) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 8;
-              break;
-            }
-            case 74: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder subBuilder = null;
-              if (valueCase_ == 9) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 9;
-              break;
-            }
-            case 82: {
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder subBuilder = null;
-              if (valueCase_ == 10) {
-                subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_).toBuilder();
-              }
-              value_ =
-                  input.readMessage(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_);
-                value_ = subBuilder.buildPartial();
-              }
-              valueCase_ = 10;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_descriptor;
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.Builder.class);
+    public interface TokenActionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:TokenAction)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+         * 
+         * @return Whether the tokenPreCreate field is set.
+         */
+        boolean hasTokenPreCreate();
+
+        /**
+         * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+         * 
+         * @return The tokenPreCreate.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getTokenPreCreate();
+
+        /**
+         * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder getTokenPreCreateOrBuilder();
+
+        /**
+         * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+         * 
+         * @return Whether the tokenFinishCreate field is set.
+         */
+        boolean hasTokenFinishCreate();
+
+        /**
+         * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+         * 
+         * @return The tokenFinishCreate.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getTokenFinishCreate();
+
+        /**
+         * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder getTokenFinishCreateOrBuilder();
+
+        /**
+         * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+         * 
+         * @return Whether the tokenRevokeCreate field is set.
+         */
+        boolean hasTokenRevokeCreate();
+
+        /**
+         * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+         * 
+         * @return The tokenRevokeCreate.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getTokenRevokeCreate();
+
+        /**
+         * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder getTokenRevokeCreateOrBuilder();
+
+        /**
+         * <code>.AssetsTransfer transfer = 4;</code>
+         * 
+         * @return Whether the transfer field is set.
+         */
+        boolean hasTransfer();
+
+        /**
+         * <code>.AssetsTransfer transfer = 4;</code>
+         * 
+         * @return The transfer.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getTransfer();
+
+        /**
+         * <code>.AssetsTransfer transfer = 4;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder getTransferOrBuilder();
+
+        /**
+         * <code>.AssetsWithdraw withdraw = 5;</code>
+         * 
+         * @return Whether the withdraw field is set.
+         */
+        boolean hasWithdraw();
+
+        /**
+         * <code>.AssetsWithdraw withdraw = 5;</code>
+         * 
+         * @return The withdraw.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getWithdraw();
+
+        /**
+         * <code>.AssetsWithdraw withdraw = 5;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder();
+
+        /**
+         * <code>.AssetsGenesis genesis = 6;</code>
+         * 
+         * @return Whether the genesis field is set.
+         */
+        boolean hasGenesis();
+
+        /**
+         * <code>.AssetsGenesis genesis = 6;</code>
+         * 
+         * @return The genesis.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getGenesis();
+
+        /**
+         * <code>.AssetsGenesis genesis = 6;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder getGenesisOrBuilder();
+
+        /**
+         * <code>.AssetsTransferToExec transferToExec = 8;</code>
+         * 
+         * @return Whether the transferToExec field is set.
+         */
+        boolean hasTransferToExec();
+
+        /**
+         * <code>.AssetsTransferToExec transferToExec = 8;</code>
+         * 
+         * @return The transferToExec.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getTransferToExec();
+
+        /**
+         * <code>.AssetsTransferToExec transferToExec = 8;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder();
+
+        /**
+         * <code>.TokenMint tokenMint = 9;</code>
+         * 
+         * @return Whether the tokenMint field is set.
+         */
+        boolean hasTokenMint();
+
+        /**
+         * <code>.TokenMint tokenMint = 9;</code>
+         * 
+         * @return The tokenMint.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getTokenMint();
+
+        /**
+         * <code>.TokenMint tokenMint = 9;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder getTokenMintOrBuilder();
+
+        /**
+         * <code>.TokenBurn tokenBurn = 10;</code>
+         * 
+         * @return Whether the tokenBurn field is set.
+         */
+        boolean hasTokenBurn();
+
+        /**
+         * <code>.TokenBurn tokenBurn = 10;</code>
+         * 
+         * @return The tokenBurn.
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getTokenBurn();
+
+        /**
+         * <code>.TokenBurn tokenBurn = 10;</code>
+         */
+        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder getTokenBurnOrBuilder();
+
+        /**
+         * <code>int32 Ty = 7;</code>
+         * 
+         * @return The ty.
+         */
+        int getTy();
+
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.ValueCase getValueCase();
     }
 
-    private int valueCase_ = 0;
-    private java.lang.Object value_;
-    public enum ValueCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      TOKENPRECREATE(1),
-      TOKENFINISHCREATE(2),
-      TOKENREVOKECREATE(3),
-      TRANSFER(4),
-      WITHDRAW(5),
-      GENESIS(6),
-      TRANSFERTOEXEC(8),
-      TOKENMINT(9),
-      TOKENBURN(10),
-      VALUE_NOT_SET(0);
-      private final int value;
-      private ValueCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ValueCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ValueCase forNumber(int value) {
-        switch (value) {
-          case 1: return TOKENPRECREATE;
-          case 2: return TOKENFINISHCREATE;
-          case 3: return TOKENREVOKECREATE;
-          case 4: return TRANSFER;
-          case 5: return WITHDRAW;
-          case 6: return GENESIS;
-          case 8: return TRANSFERTOEXEC;
-          case 9: return TOKENMINT;
-          case 10: return TOKENBURN;
-          case 0: return VALUE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public ValueCase
-    getValueCase() {
-      return ValueCase.forNumber(
-          valueCase_);
-    }
-
-    public static final int TOKENPRECREATE_FIELD_NUMBER = 1;
-    /**
-     * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-     * @return Whether the tokenPreCreate field is set.
-     */
-    public boolean hasTokenPreCreate() {
-      return valueCase_ == 1;
-    }
-    /**
-     * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-     * @return The tokenPreCreate.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getTokenPreCreate() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-    }
-    /**
-     * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder getTokenPreCreateOrBuilder() {
-      if (valueCase_ == 1) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-    }
-
-    public static final int TOKENFINISHCREATE_FIELD_NUMBER = 2;
-    /**
-     * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-     * @return Whether the tokenFinishCreate field is set.
-     */
-    public boolean hasTokenFinishCreate() {
-      return valueCase_ == 2;
-    }
-    /**
-     * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-     * @return The tokenFinishCreate.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getTokenFinishCreate() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
-    }
-    /**
-     * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder getTokenFinishCreateOrBuilder() {
-      if (valueCase_ == 2) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
-    }
-
-    public static final int TOKENREVOKECREATE_FIELD_NUMBER = 3;
-    /**
-     * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-     * @return Whether the tokenRevokeCreate field is set.
-     */
-    public boolean hasTokenRevokeCreate() {
-      return valueCase_ == 3;
-    }
-    /**
-     * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-     * @return The tokenRevokeCreate.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getTokenRevokeCreate() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-    }
-    /**
-     * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder getTokenRevokeCreateOrBuilder() {
-      if (valueCase_ == 3) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-    }
-
-    public static final int TRANSFER_FIELD_NUMBER = 4;
-    /**
-     * <code>.AssetsTransfer transfer = 4;</code>
-     * @return Whether the transfer field is set.
-     */
-    public boolean hasTransfer() {
-      return valueCase_ == 4;
-    }
-    /**
-     * <code>.AssetsTransfer transfer = 4;</code>
-     * @return The transfer.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getTransfer() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
-    }
-    /**
-     * <code>.AssetsTransfer transfer = 4;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder getTransferOrBuilder() {
-      if (valueCase_ == 4) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
-    }
-
-    public static final int WITHDRAW_FIELD_NUMBER = 5;
-    /**
-     * <code>.AssetsWithdraw withdraw = 5;</code>
-     * @return Whether the withdraw field is set.
-     */
-    public boolean hasWithdraw() {
-      return valueCase_ == 5;
-    }
-    /**
-     * <code>.AssetsWithdraw withdraw = 5;</code>
-     * @return The withdraw.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getWithdraw() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
-    }
-    /**
-     * <code>.AssetsWithdraw withdraw = 5;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder() {
-      if (valueCase_ == 5) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
-    }
-
-    public static final int GENESIS_FIELD_NUMBER = 6;
-    /**
-     * <code>.AssetsGenesis genesis = 6;</code>
-     * @return Whether the genesis field is set.
-     */
-    public boolean hasGenesis() {
-      return valueCase_ == 6;
-    }
-    /**
-     * <code>.AssetsGenesis genesis = 6;</code>
-     * @return The genesis.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getGenesis() {
-      if (valueCase_ == 6) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
-    }
-    /**
-     * <code>.AssetsGenesis genesis = 6;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder getGenesisOrBuilder() {
-      if (valueCase_ == 6) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
-    }
-
-    public static final int TRANSFERTOEXEC_FIELD_NUMBER = 8;
-    /**
-     * <code>.AssetsTransferToExec transferToExec = 8;</code>
-     * @return Whether the transferToExec field is set.
-     */
-    public boolean hasTransferToExec() {
-      return valueCase_ == 8;
-    }
-    /**
-     * <code>.AssetsTransferToExec transferToExec = 8;</code>
-     * @return The transferToExec.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getTransferToExec() {
-      if (valueCase_ == 8) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
-    }
-    /**
-     * <code>.AssetsTransferToExec transferToExec = 8;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder() {
-      if (valueCase_ == 8) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
-    }
-
-    public static final int TOKENMINT_FIELD_NUMBER = 9;
-    /**
-     * <code>.TokenMint tokenMint = 9;</code>
-     * @return Whether the tokenMint field is set.
-     */
-    public boolean hasTokenMint() {
-      return valueCase_ == 9;
-    }
-    /**
-     * <code>.TokenMint tokenMint = 9;</code>
-     * @return The tokenMint.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getTokenMint() {
-      if (valueCase_ == 9) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
-    }
-    /**
-     * <code>.TokenMint tokenMint = 9;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder getTokenMintOrBuilder() {
-      if (valueCase_ == 9) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
-    }
-
-    public static final int TOKENBURN_FIELD_NUMBER = 10;
-    /**
-     * <code>.TokenBurn tokenBurn = 10;</code>
-     * @return Whether the tokenBurn field is set.
-     */
-    public boolean hasTokenBurn() {
-      return valueCase_ == 10;
-    }
-    /**
-     * <code>.TokenBurn tokenBurn = 10;</code>
-     * @return The tokenBurn.
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getTokenBurn() {
-      if (valueCase_ == 10) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
-    }
-    /**
-     * <code>.TokenBurn tokenBurn = 10;</code>
-     */
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder getTokenBurnOrBuilder() {
-      if (valueCase_ == 10) {
-         return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
-      }
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
-    }
-
-    public static final int TY_FIELD_NUMBER = 7;
-    private int ty_;
-    /**
-     * <code>int32 Ty = 7;</code>
-     * @return The ty.
-     */
-    public int getTy() {
-      return ty_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (valueCase_ == 1) {
-        output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_);
-      }
-      if (valueCase_ == 2) {
-        output.writeMessage(2, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_);
-      }
-      if (valueCase_ == 3) {
-        output.writeMessage(3, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_);
-      }
-      if (valueCase_ == 4) {
-        output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_);
-      }
-      if (valueCase_ == 5) {
-        output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_);
-      }
-      if (valueCase_ == 6) {
-        output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_);
-      }
-      if (ty_ != 0) {
-        output.writeInt32(7, ty_);
-      }
-      if (valueCase_ == 8) {
-        output.writeMessage(8, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_);
-      }
-      if (valueCase_ == 9) {
-        output.writeMessage(9, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_);
-      }
-      if (valueCase_ == 10) {
-        output.writeMessage(10, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (valueCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_);
-      }
-      if (valueCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_);
-      }
-      if (valueCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_);
-      }
-      if (valueCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_);
-      }
-      if (valueCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_);
-      }
-      if (valueCase_ == 6) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_);
-      }
-      if (ty_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, ty_);
-      }
-      if (valueCase_ == 8) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_);
-      }
-      if (valueCase_ == 9) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_);
-      }
-      if (valueCase_ == 10) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) obj;
-
-      if (getTy()
-          != other.getTy()) return false;
-      if (!getValueCase().equals(other.getValueCase())) return false;
-      switch (valueCase_) {
-        case 1:
-          if (!getTokenPreCreate()
-              .equals(other.getTokenPreCreate())) return false;
-          break;
-        case 2:
-          if (!getTokenFinishCreate()
-              .equals(other.getTokenFinishCreate())) return false;
-          break;
-        case 3:
-          if (!getTokenRevokeCreate()
-              .equals(other.getTokenRevokeCreate())) return false;
-          break;
-        case 4:
-          if (!getTransfer()
-              .equals(other.getTransfer())) return false;
-          break;
-        case 5:
-          if (!getWithdraw()
-              .equals(other.getWithdraw())) return false;
-          break;
-        case 6:
-          if (!getGenesis()
-              .equals(other.getGenesis())) return false;
-          break;
-        case 8:
-          if (!getTransferToExec()
-              .equals(other.getTransferToExec())) return false;
-          break;
-        case 9:
-          if (!getTokenMint()
-              .equals(other.getTokenMint())) return false;
-          break;
-        case 10:
-          if (!getTokenBurn()
-              .equals(other.getTokenBurn())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TY_FIELD_NUMBER;
-      hash = (53 * hash) + getTy();
-      switch (valueCase_) {
-        case 1:
-          hash = (37 * hash) + TOKENPRECREATE_FIELD_NUMBER;
-          hash = (53 * hash) + getTokenPreCreate().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + TOKENFINISHCREATE_FIELD_NUMBER;
-          hash = (53 * hash) + getTokenFinishCreate().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + TOKENREVOKECREATE_FIELD_NUMBER;
-          hash = (53 * hash) + getTokenRevokeCreate().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + TRANSFER_FIELD_NUMBER;
-          hash = (53 * hash) + getTransfer().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + WITHDRAW_FIELD_NUMBER;
-          hash = (53 * hash) + getWithdraw().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + GENESIS_FIELD_NUMBER;
-          hash = (53 * hash) + getGenesis().hashCode();
-          break;
-        case 8:
-          hash = (37 * hash) + TRANSFERTOEXEC_FIELD_NUMBER;
-          hash = (53 * hash) + getTransferToExec().hashCode();
-          break;
-        case 9:
-          hash = (37 * hash) + TOKENMINT_FIELD_NUMBER;
-          hash = (53 * hash) + getTokenMint().hashCode();
-          break;
-        case 10:
-          hash = (37 * hash) + TOKENBURN_FIELD_NUMBER;
-          hash = (53 * hash) + getTokenBurn().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * action
@@ -996,2183 +206,2694 @@ public final class TokenActionProtoBuf {
      *
      * Protobuf type {@code TokenAction}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:TokenAction)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenActionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_descriptor;
-      }
+    public static final class TokenAction extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:TokenAction)
+            TokenActionOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.Builder.class);
-      }
+        // Use TokenAction.newBuilder() to construct.
+        private TokenAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
 
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+        private TokenAction() {
+        }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new TokenAction();
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        ty_ = 0;
 
-        valueCase_ = 0;
-        value_ = null;
-        return this;
-      }
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
+        }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_descriptor;
-      }
+        private TokenAction(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder subBuilder = null;
+                        if (valueCase_ == 1) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 1;
+                        break;
+                    }
+                    case 18: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder subBuilder = null;
+                        if (valueCase_ == 2) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 2;
+                        break;
+                    }
+                    case 26: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder subBuilder = null;
+                        if (valueCase_ == 3) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 3;
+                        break;
+                    }
+                    case 34: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder subBuilder = null;
+                        if (valueCase_ == 4) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 4;
+                        break;
+                    }
+                    case 42: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder subBuilder = null;
+                        if (valueCase_ == 5) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 5;
+                        break;
+                    }
+                    case 50: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder subBuilder = null;
+                        if (valueCase_ == 6) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 6;
+                        break;
+                    }
+                    case 56: {
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.getDefaultInstance();
-      }
+                        ty_ = input.readInt32();
+                        break;
+                    }
+                    case 66: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder subBuilder = null;
+                        if (valueCase_ == 8) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 8;
+                        break;
+                    }
+                    case 74: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder subBuilder = null;
+                        if (valueCase_ == 9) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 9;
+                        break;
+                    }
+                    case 82: {
+                        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder subBuilder = null;
+                        if (valueCase_ == 10) {
+                            subBuilder = ((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_)
+                                    .toBuilder();
+                        }
+                        value_ = input.readMessage(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.parser(),
+                                extensionRegistry);
+                        if (subBuilder != null) {
+                            subBuilder.mergeFrom(
+                                    (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_);
+                            value_ = subBuilder.buildPartial();
+                        }
+                        valueCase_ = 10;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_descriptor;
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction(this);
-        if (valueCase_ == 1) {
-          if (tokenPreCreateBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = tokenPreCreateBuilder_.build();
-          }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.Builder.class);
         }
-        if (valueCase_ == 2) {
-          if (tokenFinishCreateBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = tokenFinishCreateBuilder_.build();
-          }
-        }
-        if (valueCase_ == 3) {
-          if (tokenRevokeCreateBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = tokenRevokeCreateBuilder_.build();
-          }
-        }
-        if (valueCase_ == 4) {
-          if (transferBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = transferBuilder_.build();
-          }
-        }
-        if (valueCase_ == 5) {
-          if (withdrawBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = withdrawBuilder_.build();
-          }
-        }
-        if (valueCase_ == 6) {
-          if (genesisBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = genesisBuilder_.build();
-          }
-        }
-        if (valueCase_ == 8) {
-          if (transferToExecBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = transferToExecBuilder_.build();
-          }
-        }
-        if (valueCase_ == 9) {
-          if (tokenMintBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = tokenMintBuilder_.build();
-          }
-        }
-        if (valueCase_ == 10) {
-          if (tokenBurnBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = tokenBurnBuilder_.build();
-          }
-        }
-        result.ty_ = ty_;
-        result.valueCase_ = valueCase_;
-        onBuilt();
-        return result;
-      }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
+        private int valueCase_ = 0;
+        private java.lang.Object value_;
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.getDefaultInstance()) return this;
-        if (other.getTy() != 0) {
-          setTy(other.getTy());
-        }
-        switch (other.getValueCase()) {
-          case TOKENPRECREATE: {
-            mergeTokenPreCreate(other.getTokenPreCreate());
-            break;
-          }
-          case TOKENFINISHCREATE: {
-            mergeTokenFinishCreate(other.getTokenFinishCreate());
-            break;
-          }
-          case TOKENREVOKECREATE: {
-            mergeTokenRevokeCreate(other.getTokenRevokeCreate());
-            break;
-          }
-          case TRANSFER: {
-            mergeTransfer(other.getTransfer());
-            break;
-          }
-          case WITHDRAW: {
-            mergeWithdraw(other.getWithdraw());
-            break;
-          }
-          case GENESIS: {
-            mergeGenesis(other.getGenesis());
-            break;
-          }
-          case TRANSFERTOEXEC: {
-            mergeTransferToExec(other.getTransferToExec());
-            break;
-          }
-          case TOKENMINT: {
-            mergeTokenMint(other.getTokenMint());
-            break;
-          }
-          case TOKENBURN: {
-            mergeTokenBurn(other.getTokenBurn());
-            break;
-          }
-          case VALUE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
+        public enum ValueCase implements com.google.protobuf.Internal.EnumLite,
+                com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+            TOKENPRECREATE(1), TOKENFINISHCREATE(2), TOKENREVOKECREATE(3), TRANSFER(4), WITHDRAW(5), GENESIS(6),
+            TRANSFERTOEXEC(8), TOKENMINT(9), TOKENBURN(10), VALUE_NOT_SET(0);
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+            private final int value;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int valueCase_ = 0;
-      private java.lang.Object value_;
-      public ValueCase
-          getValueCase() {
-        return ValueCase.forNumber(
-            valueCase_);
-      }
+            private ValueCase(int value) {
+                this.value = value;
+            }
 
-      public Builder clearValue() {
-        valueCase_ = 0;
-        value_ = null;
-        onChanged();
-        return this;
-      }
+            /**
+             * @param value
+             *            The number of the enum to look for.
+             * 
+             * @return The enum associated with the given number.
+             * 
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static ValueCase valueOf(int value) {
+                return forNumber(value);
+            }
 
+            public static ValueCase forNumber(int value) {
+                switch (value) {
+                case 1:
+                    return TOKENPRECREATE;
+                case 2:
+                    return TOKENFINISHCREATE;
+                case 3:
+                    return TOKENREVOKECREATE;
+                case 4:
+                    return TRANSFER;
+                case 5:
+                    return WITHDRAW;
+                case 6:
+                    return GENESIS;
+                case 8:
+                    return TRANSFERTOEXEC;
+                case 9:
+                    return TOKENMINT;
+                case 10:
+                    return TOKENBURN;
+                case 0:
+                    return VALUE_NOT_SET;
+                default:
+                    return null;
+                }
+            }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder> tokenPreCreateBuilder_;
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       * @return Whether the tokenPreCreate field is set.
-       */
-      public boolean hasTokenPreCreate() {
-        return valueCase_ == 1;
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       * @return The tokenPreCreate.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getTokenPreCreate() {
-        if (tokenPreCreateBuilder_ == null) {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-        } else {
-          if (valueCase_ == 1) {
-            return tokenPreCreateBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      public Builder setTokenPreCreate(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate value) {
-        if (tokenPreCreateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          tokenPreCreateBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      public Builder setTokenPreCreate(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder builderForValue) {
-        if (tokenPreCreateBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenPreCreateBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      public Builder mergeTokenPreCreate(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate value) {
-        if (tokenPreCreateBuilder_ == null) {
-          if (valueCase_ == 1 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 1) {
-            tokenPreCreateBuilder_.mergeFrom(value);
-          }
-          tokenPreCreateBuilder_.setMessage(value);
-        }
-        valueCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      public Builder clearTokenPreCreate() {
-        if (tokenPreCreateBuilder_ == null) {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 1) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          tokenPreCreateBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder getTokenPreCreateBuilder() {
-        return getTokenPreCreateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder getTokenPreCreateOrBuilder() {
-        if ((valueCase_ == 1) && (tokenPreCreateBuilder_ != null)) {
-          return tokenPreCreateBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 1) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.TokenPreCreate tokenPreCreate = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder> 
-          getTokenPreCreateFieldBuilder() {
-        if (tokenPreCreateBuilder_ == null) {
-          if (!(valueCase_ == 1)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-          }
-          tokenPreCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 1;
-        onChanged();;
-        return tokenPreCreateBuilder_;
-      }
+            public int getNumber() {
+                return this.value;
+            }
+        };
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder> tokenFinishCreateBuilder_;
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       * @return Whether the tokenFinishCreate field is set.
-       */
-      public boolean hasTokenFinishCreate() {
-        return valueCase_ == 2;
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       * @return The tokenFinishCreate.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getTokenFinishCreate() {
-        if (tokenFinishCreateBuilder_ == null) {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
-        } else {
-          if (valueCase_ == 2) {
-            return tokenFinishCreateBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
+        public ValueCase getValueCase() {
+            return ValueCase.forNumber(valueCase_);
         }
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      public Builder setTokenFinishCreate(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate value) {
-        if (tokenFinishCreateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          tokenFinishCreateBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      public Builder setTokenFinishCreate(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder builderForValue) {
-        if (tokenFinishCreateBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenFinishCreateBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      public Builder mergeTokenFinishCreate(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate value) {
-        if (tokenFinishCreateBuilder_ == null) {
-          if (valueCase_ == 2 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 2) {
-            tokenFinishCreateBuilder_.mergeFrom(value);
-          }
-          tokenFinishCreateBuilder_.setMessage(value);
-        }
-        valueCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      public Builder clearTokenFinishCreate() {
-        if (tokenFinishCreateBuilder_ == null) {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 2) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          tokenFinishCreateBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder getTokenFinishCreateBuilder() {
-        return getTokenFinishCreateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder getTokenFinishCreateOrBuilder() {
-        if ((valueCase_ == 2) && (tokenFinishCreateBuilder_ != null)) {
-          return tokenFinishCreateBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 2) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder> 
-          getTokenFinishCreateFieldBuilder() {
-        if (tokenFinishCreateBuilder_ == null) {
-          if (!(valueCase_ == 2)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
-          }
-          tokenFinishCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 2;
-        onChanged();;
-        return tokenFinishCreateBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder> tokenRevokeCreateBuilder_;
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       * @return Whether the tokenRevokeCreate field is set.
-       */
-      public boolean hasTokenRevokeCreate() {
-        return valueCase_ == 3;
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       * @return The tokenRevokeCreate.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getTokenRevokeCreate() {
-        if (tokenRevokeCreateBuilder_ == null) {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-        } else {
-          if (valueCase_ == 3) {
-            return tokenRevokeCreateBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      public Builder setTokenRevokeCreate(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate value) {
-        if (tokenRevokeCreateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          tokenRevokeCreateBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      public Builder setTokenRevokeCreate(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder builderForValue) {
-        if (tokenRevokeCreateBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenRevokeCreateBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      public Builder mergeTokenRevokeCreate(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate value) {
-        if (tokenRevokeCreateBuilder_ == null) {
-          if (valueCase_ == 3 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 3) {
-            tokenRevokeCreateBuilder_.mergeFrom(value);
-          }
-          tokenRevokeCreateBuilder_.setMessage(value);
-        }
-        valueCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      public Builder clearTokenRevokeCreate() {
-        if (tokenRevokeCreateBuilder_ == null) {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 3) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          tokenRevokeCreateBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder getTokenRevokeCreateBuilder() {
-        return getTokenRevokeCreateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder getTokenRevokeCreateOrBuilder() {
-        if ((valueCase_ == 3) && (tokenRevokeCreateBuilder_ != null)) {
-          return tokenRevokeCreateBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 3) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder> 
-          getTokenRevokeCreateFieldBuilder() {
-        if (tokenRevokeCreateBuilder_ == null) {
-          if (!(valueCase_ == 3)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-          }
-          tokenRevokeCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 3;
-        onChanged();;
-        return tokenRevokeCreateBuilder_;
-      }
+        public static final int TOKENPRECREATE_FIELD_NUMBER = 1;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder> transferBuilder_;
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       * @return Whether the transfer field is set.
-       */
-      public boolean hasTransfer() {
-        return valueCase_ == 4;
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       * @return The transfer.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getTransfer() {
-        if (transferBuilder_ == null) {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
-        } else {
-          if (valueCase_ == 4) {
-            return transferBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
+        /**
+         * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+         * 
+         * @return Whether the tokenPreCreate field is set.
+         */
+        public boolean hasTokenPreCreate() {
+            return valueCase_ == 1;
         }
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      public Builder setTransfer(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer value) {
-        if (transferBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          transferBuilder_.setMessage(value);
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      public Builder setTransfer(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder builderForValue) {
-        if (transferBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          transferBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      public Builder mergeTransfer(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer value) {
-        if (transferBuilder_ == null) {
-          if (valueCase_ == 4 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 4) {
-            transferBuilder_.mergeFrom(value);
-          }
-          transferBuilder_.setMessage(value);
-        }
-        valueCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      public Builder clearTransfer() {
-        if (transferBuilder_ == null) {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 4) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          transferBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder getTransferBuilder() {
-        return getTransferFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder getTransferOrBuilder() {
-        if ((valueCase_ == 4) && (transferBuilder_ != null)) {
-          return transferBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 4) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.AssetsTransfer transfer = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder> 
-          getTransferFieldBuilder() {
-        if (transferBuilder_ == null) {
-          if (!(valueCase_ == 4)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
-          }
-          transferBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 4;
-        onChanged();;
-        return transferBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder> withdrawBuilder_;
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       * @return Whether the withdraw field is set.
-       */
-      public boolean hasWithdraw() {
-        return valueCase_ == 5;
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       * @return The withdraw.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getWithdraw() {
-        if (withdrawBuilder_ == null) {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
-        } else {
-          if (valueCase_ == 5) {
-            return withdrawBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
+        /**
+         * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+         * 
+         * @return The tokenPreCreate.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getTokenPreCreate() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      public Builder setWithdraw(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw value) {
-        if (withdrawBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          withdrawBuilder_.setMessage(value);
-        }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      public Builder setWithdraw(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder builderForValue) {
-        if (withdrawBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          withdrawBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      public Builder mergeWithdraw(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw value) {
-        if (withdrawBuilder_ == null) {
-          if (valueCase_ == 5 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 5) {
-            withdrawBuilder_.mergeFrom(value);
-          }
-          withdrawBuilder_.setMessage(value);
-        }
-        valueCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      public Builder clearWithdraw() {
-        if (withdrawBuilder_ == null) {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 5) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          withdrawBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder getWithdrawBuilder() {
-        return getWithdrawFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder() {
-        if ((valueCase_ == 5) && (withdrawBuilder_ != null)) {
-          return withdrawBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 5) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.AssetsWithdraw withdraw = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder> 
-          getWithdrawFieldBuilder() {
-        if (withdrawBuilder_ == null) {
-          if (!(valueCase_ == 5)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
-          }
-          withdrawBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 5;
-        onChanged();;
-        return withdrawBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder> genesisBuilder_;
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       * @return Whether the genesis field is set.
-       */
-      public boolean hasGenesis() {
-        return valueCase_ == 6;
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       * @return The genesis.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getGenesis() {
-        if (genesisBuilder_ == null) {
-          if (valueCase_ == 6) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
-        } else {
-          if (valueCase_ == 6) {
-            return genesisBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
+        /**
+         * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder getTokenPreCreateOrBuilder() {
+            if (valueCase_ == 1) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      public Builder setGenesis(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis value) {
-        if (genesisBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          genesisBuilder_.setMessage(value);
-        }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      public Builder setGenesis(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder builderForValue) {
-        if (genesisBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          genesisBuilder_.setMessage(builderForValue.build());
-        }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      public Builder mergeGenesis(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis value) {
-        if (genesisBuilder_ == null) {
-          if (valueCase_ == 6 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 6) {
-            genesisBuilder_.mergeFrom(value);
-          }
-          genesisBuilder_.setMessage(value);
-        }
-        valueCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      public Builder clearGenesis() {
-        if (genesisBuilder_ == null) {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 6) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          genesisBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder getGenesisBuilder() {
-        return getGenesisFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder getGenesisOrBuilder() {
-        if ((valueCase_ == 6) && (genesisBuilder_ != null)) {
-          return genesisBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 6) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.AssetsGenesis genesis = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder> 
-          getGenesisFieldBuilder() {
-        if (genesisBuilder_ == null) {
-          if (!(valueCase_ == 6)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
-          }
-          genesisBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        valueCase_ = 6;
-        onChanged();;
-        return genesisBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder> transferToExecBuilder_;
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       * @return Whether the transferToExec field is set.
-       */
-      public boolean hasTransferToExec() {
-        return valueCase_ == 8;
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       * @return The transferToExec.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getTransferToExec() {
-        if (transferToExecBuilder_ == null) {
-          if (valueCase_ == 8) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
-        } else {
-          if (valueCase_ == 8) {
-            return transferToExecBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
+        public static final int TOKENFINISHCREATE_FIELD_NUMBER = 2;
+
+        /**
+         * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+         * 
+         * @return Whether the tokenFinishCreate field is set.
+         */
+        public boolean hasTokenFinishCreate() {
+            return valueCase_ == 2;
         }
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      public Builder setTransferToExec(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec value) {
-        if (transferToExecBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          transferToExecBuilder_.setMessage(value);
+
+        /**
+         * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+         * 
+         * @return The tokenFinishCreate.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getTokenFinishCreate() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
         }
-        valueCase_ = 8;
-        return this;
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      public Builder setTransferToExec(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder builderForValue) {
-        if (transferToExecBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          transferToExecBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder getTokenFinishCreateOrBuilder() {
+            if (valueCase_ == 2) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
         }
-        valueCase_ = 8;
-        return this;
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      public Builder mergeTransferToExec(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec value) {
-        if (transferToExecBuilder_ == null) {
-          if (valueCase_ == 8 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 8) {
-            transferToExecBuilder_.mergeFrom(value);
-          }
-          transferToExecBuilder_.setMessage(value);
+
+        public static final int TOKENREVOKECREATE_FIELD_NUMBER = 3;
+
+        /**
+         * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+         * 
+         * @return Whether the tokenRevokeCreate field is set.
+         */
+        public boolean hasTokenRevokeCreate() {
+            return valueCase_ == 3;
         }
-        valueCase_ = 8;
-        return this;
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      public Builder clearTransferToExec() {
-        if (transferToExecBuilder_ == null) {
-          if (valueCase_ == 8) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 8) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          transferToExecBuilder_.clear();
+
+        /**
+         * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+         * 
+         * @return The tokenRevokeCreate.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getTokenRevokeCreate() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
         }
-        return this;
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder getTransferToExecBuilder() {
-        return getTransferToExecFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder() {
-        if ((valueCase_ == 8) && (transferToExecBuilder_ != null)) {
-          return transferToExecBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 8) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
+
+        /**
+         * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder getTokenRevokeCreateOrBuilder() {
+            if (valueCase_ == 3) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.AssetsTransferToExec transferToExec = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder> 
-          getTransferToExecFieldBuilder() {
-        if (transferToExecBuilder_ == null) {
-          if (!(valueCase_ == 8)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
-          }
-          transferToExecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        public static final int TRANSFER_FIELD_NUMBER = 4;
+
+        /**
+         * <code>.AssetsTransfer transfer = 4;</code>
+         * 
+         * @return Whether the transfer field is set.
+         */
+        public boolean hasTransfer() {
+            return valueCase_ == 4;
         }
-        valueCase_ = 8;
-        onChanged();;
-        return transferToExecBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder> tokenMintBuilder_;
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       * @return Whether the tokenMint field is set.
-       */
-      public boolean hasTokenMint() {
-        return valueCase_ == 9;
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       * @return The tokenMint.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getTokenMint() {
-        if (tokenMintBuilder_ == null) {
-          if (valueCase_ == 9) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
-        } else {
-          if (valueCase_ == 9) {
-            return tokenMintBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+        /**
+         * <code>.AssetsTransfer transfer = 4;</code>
+         * 
+         * @return The transfer.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getTransfer() {
+            if (valueCase_ == 4) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      public Builder setTokenMint(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint value) {
-        if (tokenMintBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          tokenMintBuilder_.setMessage(value);
+
+        /**
+         * <code>.AssetsTransfer transfer = 4;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder getTransferOrBuilder() {
+            if (valueCase_ == 4) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
         }
-        valueCase_ = 9;
-        return this;
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      public Builder setTokenMint(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder builderForValue) {
-        if (tokenMintBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenMintBuilder_.setMessage(builderForValue.build());
+
+        public static final int WITHDRAW_FIELD_NUMBER = 5;
+
+        /**
+         * <code>.AssetsWithdraw withdraw = 5;</code>
+         * 
+         * @return Whether the withdraw field is set.
+         */
+        public boolean hasWithdraw() {
+            return valueCase_ == 5;
         }
-        valueCase_ = 9;
-        return this;
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      public Builder mergeTokenMint(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint value) {
-        if (tokenMintBuilder_ == null) {
-          if (valueCase_ == 9 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 9) {
-            tokenMintBuilder_.mergeFrom(value);
-          }
-          tokenMintBuilder_.setMessage(value);
+
+        /**
+         * <code>.AssetsWithdraw withdraw = 5;</code>
+         * 
+         * @return The withdraw.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getWithdraw() {
+            if (valueCase_ == 5) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
         }
-        valueCase_ = 9;
-        return this;
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      public Builder clearTokenMint() {
-        if (tokenMintBuilder_ == null) {
-          if (valueCase_ == 9) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 9) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          tokenMintBuilder_.clear();
+
+        /**
+         * <code>.AssetsWithdraw withdraw = 5;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder() {
+            if (valueCase_ == 5) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
         }
-        return this;
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder getTokenMintBuilder() {
-        return getTokenMintFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder getTokenMintOrBuilder() {
-        if ((valueCase_ == 9) && (tokenMintBuilder_ != null)) {
-          return tokenMintBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 9) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+
+        public static final int GENESIS_FIELD_NUMBER = 6;
+
+        /**
+         * <code>.AssetsGenesis genesis = 6;</code>
+         * 
+         * @return Whether the genesis field is set.
+         */
+        public boolean hasGenesis() {
+            return valueCase_ == 6;
         }
-      }
-      /**
-       * <code>.TokenMint tokenMint = 9;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder> 
-          getTokenMintFieldBuilder() {
-        if (tokenMintBuilder_ == null) {
-          if (!(valueCase_ == 9)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
-          }
-          tokenMintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        /**
+         * <code>.AssetsGenesis genesis = 6;</code>
+         * 
+         * @return The genesis.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getGenesis() {
+            if (valueCase_ == 6) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
         }
-        valueCase_ = 9;
-        onChanged();;
-        return tokenMintBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder> tokenBurnBuilder_;
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       * @return Whether the tokenBurn field is set.
-       */
-      public boolean hasTokenBurn() {
-        return valueCase_ == 10;
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       * @return The tokenBurn.
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getTokenBurn() {
-        if (tokenBurnBuilder_ == null) {
-          if (valueCase_ == 10) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
-        } else {
-          if (valueCase_ == 10) {
-            return tokenBurnBuilder_.getMessage();
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+        /**
+         * <code>.AssetsGenesis genesis = 6;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder getGenesisOrBuilder() {
+            if (valueCase_ == 6) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      public Builder setTokenBurn(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn value) {
-        if (tokenBurnBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          tokenBurnBuilder_.setMessage(value);
+
+        public static final int TRANSFERTOEXEC_FIELD_NUMBER = 8;
+
+        /**
+         * <code>.AssetsTransferToExec transferToExec = 8;</code>
+         * 
+         * @return Whether the transferToExec field is set.
+         */
+        public boolean hasTransferToExec() {
+            return valueCase_ == 8;
         }
-        valueCase_ = 10;
-        return this;
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      public Builder setTokenBurn(
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder builderForValue) {
-        if (tokenBurnBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenBurnBuilder_.setMessage(builderForValue.build());
+
+        /**
+         * <code>.AssetsTransferToExec transferToExec = 8;</code>
+         * 
+         * @return The transferToExec.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getTransferToExec() {
+            if (valueCase_ == 8) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
         }
-        valueCase_ = 10;
-        return this;
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      public Builder mergeTokenBurn(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn value) {
-        if (tokenBurnBuilder_ == null) {
-          if (valueCase_ == 10 &&
-              value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance()) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          if (valueCase_ == 10) {
-            tokenBurnBuilder_.mergeFrom(value);
-          }
-          tokenBurnBuilder_.setMessage(value);
+
+        /**
+         * <code>.AssetsTransferToExec transferToExec = 8;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder() {
+            if (valueCase_ == 8) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
         }
-        valueCase_ = 10;
-        return this;
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      public Builder clearTokenBurn() {
-        if (tokenBurnBuilder_ == null) {
-          if (valueCase_ == 10) {
-            valueCase_ = 0;
-            value_ = null;
-            onChanged();
-          }
-        } else {
-          if (valueCase_ == 10) {
-            valueCase_ = 0;
-            value_ = null;
-          }
-          tokenBurnBuilder_.clear();
+
+        public static final int TOKENMINT_FIELD_NUMBER = 9;
+
+        /**
+         * <code>.TokenMint tokenMint = 9;</code>
+         * 
+         * @return Whether the tokenMint field is set.
+         */
+        public boolean hasTokenMint() {
+            return valueCase_ == 9;
         }
-        return this;
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder getTokenBurnBuilder() {
-        return getTokenBurnFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder getTokenBurnOrBuilder() {
-        if ((valueCase_ == 10) && (tokenBurnBuilder_ != null)) {
-          return tokenBurnBuilder_.getMessageOrBuilder();
-        } else {
-          if (valueCase_ == 10) {
-            return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
-          }
-          return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+
+        /**
+         * <code>.TokenMint tokenMint = 9;</code>
+         * 
+         * @return The tokenMint.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getTokenMint() {
+            if (valueCase_ == 9) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
         }
-      }
-      /**
-       * <code>.TokenBurn tokenBurn = 10;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder> 
-          getTokenBurnFieldBuilder() {
-        if (tokenBurnBuilder_ == null) {
-          if (!(valueCase_ == 10)) {
-            value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
-          }
-          tokenBurnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder>(
-                  (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
+
+        /**
+         * <code>.TokenMint tokenMint = 9;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder getTokenMintOrBuilder() {
+            if (valueCase_ == 9) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
         }
-        valueCase_ = 10;
-        onChanged();;
-        return tokenBurnBuilder_;
-      }
 
-      private int ty_ ;
-      /**
-       * <code>int32 Ty = 7;</code>
-       * @return The ty.
-       */
-      public int getTy() {
-        return ty_;
-      }
-      /**
-       * <code>int32 Ty = 7;</code>
-       * @param value The ty to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTy(int value) {
-        
-        ty_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 Ty = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTy() {
-        
-        ty_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
+        public static final int TOKENBURN_FIELD_NUMBER = 10;
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>.TokenBurn tokenBurn = 10;</code>
+         * 
+         * @return Whether the tokenBurn field is set.
+         */
+        public boolean hasTokenBurn() {
+            return valueCase_ == 10;
+        }
 
+        /**
+         * <code>.TokenBurn tokenBurn = 10;</code>
+         * 
+         * @return The tokenBurn.
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getTokenBurn() {
+            if (valueCase_ == 10) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+        }
 
-      // @@protoc_insertion_point(builder_scope:TokenAction)
-    }
+        /**
+         * <code>.TokenBurn tokenBurn = 10;</code>
+         */
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder getTokenBurnOrBuilder() {
+            if (valueCase_ == 10) {
+                return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
+            }
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+        }
 
-    // @@protoc_insertion_point(class_scope:TokenAction)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction();
-    }
+        public static final int TY_FIELD_NUMBER = 7;
+        private int ty_;
 
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+        /**
+         * <code>int32 Ty = 7;</code>
+         * 
+         * @return The ty.
+         */
+        public int getTy() {
+            return ty_;
+        }
 
-    private static final com.google.protobuf.Parser<TokenAction>
-        PARSER = new com.google.protobuf.AbstractParser<TokenAction>() {
-      @java.lang.Override
-      public TokenAction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TokenAction(input, extensionRegistry);
-      }
-    };
+        private byte memoizedIsInitialized = -1;
 
-    public static com.google.protobuf.Parser<TokenAction> parser() {
-      return PARSER;
-    }
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<TokenAction> getParserForType() {
-      return PARSER;
-    }
+            memoizedIsInitialized = 1;
+            return true;
+        }
 
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (valueCase_ == 1) {
+                output.writeMessage(1, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_);
+            }
+            if (valueCase_ == 2) {
+                output.writeMessage(2,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_);
+            }
+            if (valueCase_ == 3) {
+                output.writeMessage(3,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_);
+            }
+            if (valueCase_ == 4) {
+                output.writeMessage(4, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_);
+            }
+            if (valueCase_ == 5) {
+                output.writeMessage(5, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_);
+            }
+            if (valueCase_ == 6) {
+                output.writeMessage(6, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_);
+            }
+            if (ty_ != 0) {
+                output.writeInt32(7, ty_);
+            }
+            if (valueCase_ == 8) {
+                output.writeMessage(8,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_);
+            }
+            if (valueCase_ == 9) {
+                output.writeMessage(9, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_);
+            }
+            if (valueCase_ == 10) {
+                output.writeMessage(10, (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_);
+            }
+            unknownFields.writeTo(output);
+        }
 
-  }
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
 
-  public interface TokenPreCreateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TokenPreCreate)
-      com.google.protobuf.MessageOrBuilder {
+            size = 0;
+            if (valueCase_ == 1) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(1,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_);
+            }
+            if (valueCase_ == 2) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(2,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_);
+            }
+            if (valueCase_ == 3) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(3,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_);
+            }
+            if (valueCase_ == 4) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(4,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_);
+            }
+            if (valueCase_ == 5) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(5,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_);
+            }
+            if (valueCase_ == 6) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(6,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_);
+            }
+            if (ty_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(7, ty_);
+            }
+            if (valueCase_ == 8) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(8,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_);
+            }
+            if (valueCase_ == 9) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(9,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_);
+            }
+            if (valueCase_ == 10) {
+                size += com.google.protobuf.CodedOutputStream.computeMessageSize(10,
+                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
 
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) obj;
 
-    /**
-     * <code>string symbol = 2;</code>
-     * @return The symbol.
-     */
-    java.lang.String getSymbol();
-    /**
-     * <code>string symbol = 2;</code>
-     * @return The bytes for symbol.
-     */
-    com.google.protobuf.ByteString
-        getSymbolBytes();
-
-    /**
-     * <code>string introduction = 3;</code>
-     * @return The introduction.
-     */
-    java.lang.String getIntroduction();
-    /**
-     * <code>string introduction = 3;</code>
-     * @return The bytes for introduction.
-     */
-    com.google.protobuf.ByteString
-        getIntroductionBytes();
-
-    /**
-     * <code>int64 total = 4;</code>
-     * @return The total.
-     */
-    long getTotal();
-
-    /**
-     * <code>int64 price = 5;</code>
-     * @return The price.
-     */
-    long getPrice();
-
-    /**
-     * <code>string owner = 6;</code>
-     * @return The owner.
-     */
-    java.lang.String getOwner();
-    /**
-     * <code>string owner = 6;</code>
-     * @return The bytes for owner.
-     */
-    com.google.protobuf.ByteString
-        getOwnerBytes();
-
-    /**
-     * <code>int32 category = 7;</code>
-     * @return The category.
-     */
-    int getCategory();
-  }
-  /**
-   * <pre>
-   *创建token，支持最大精确度是8位小数,即存入数据库的实际总额需要放大1e8倍
-   * </pre>
-   *
-   * Protobuf type {@code TokenPreCreate}
-   */
-  public  static final class TokenPreCreate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:TokenPreCreate)
-      TokenPreCreateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TokenPreCreate.newBuilder() to construct.
-    private TokenPreCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TokenPreCreate() {
-      name_ = "";
-      symbol_ = "";
-      introduction_ = "";
-      owner_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TokenPreCreate();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TokenPreCreate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
+            if (getTy() != other.getTy())
+                return false;
+            if (!getValueCase().equals(other.getValueCase()))
+                return false;
+            switch (valueCase_) {
+            case 1:
+                if (!getTokenPreCreate().equals(other.getTokenPreCreate()))
+                    return false;
+                break;
+            case 2:
+                if (!getTokenFinishCreate().equals(other.getTokenFinishCreate()))
+                    return false;
+                break;
+            case 3:
+                if (!getTokenRevokeCreate().equals(other.getTokenRevokeCreate()))
+                    return false;
+                break;
+            case 4:
+                if (!getTransfer().equals(other.getTransfer()))
+                    return false;
+                break;
+            case 5:
+                if (!getWithdraw().equals(other.getWithdraw()))
+                    return false;
+                break;
+            case 6:
+                if (!getGenesis().equals(other.getGenesis()))
+                    return false;
+                break;
+            case 8:
+                if (!getTransferToExec().equals(other.getTransferToExec()))
+                    return false;
+                break;
+            case 9:
+                if (!getTokenMint().equals(other.getTokenMint()))
+                    return false;
+                break;
+            case 10:
+                if (!getTokenBurn().equals(other.getTokenBurn()))
+                    return false;
+                break;
             case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
+            default:
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              symbol_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              introduction_ = s;
-              break;
-            }
-            case 32: {
-
-              total_ = input.readInt64();
-              break;
-            }
-            case 40: {
-
-              price_ = input.readInt64();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              owner_ = s;
-              break;
-            }
-            case 56: {
-
-              category_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_descriptor;
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + TY_FIELD_NUMBER;
+            hash = (53 * hash) + getTy();
+            switch (valueCase_) {
+            case 1:
+                hash = (37 * hash) + TOKENPRECREATE_FIELD_NUMBER;
+                hash = (53 * hash) + getTokenPreCreate().hashCode();
+                break;
+            case 2:
+                hash = (37 * hash) + TOKENFINISHCREATE_FIELD_NUMBER;
+                hash = (53 * hash) + getTokenFinishCreate().hashCode();
+                break;
+            case 3:
+                hash = (37 * hash) + TOKENREVOKECREATE_FIELD_NUMBER;
+                hash = (53 * hash) + getTokenRevokeCreate().hashCode();
+                break;
+            case 4:
+                hash = (37 * hash) + TRANSFER_FIELD_NUMBER;
+                hash = (53 * hash) + getTransfer().hashCode();
+                break;
+            case 5:
+                hash = (37 * hash) + WITHDRAW_FIELD_NUMBER;
+                hash = (53 * hash) + getWithdraw().hashCode();
+                break;
+            case 6:
+                hash = (37 * hash) + GENESIS_FIELD_NUMBER;
+                hash = (53 * hash) + getGenesis().hashCode();
+                break;
+            case 8:
+                hash = (37 * hash) + TRANSFERTOEXEC_FIELD_NUMBER;
+                hash = (53 * hash) + getTransferToExec().hashCode();
+                break;
+            case 9:
+                hash = (37 * hash) + TOKENMINT_FIELD_NUMBER;
+                hash = (53 * hash) + getTokenMint().hashCode();
+                break;
+            case 10:
+                hash = (37 * hash) + TOKENBURN_FIELD_NUMBER;
+                hash = (53 * hash) + getTokenBurn().hashCode();
+                break;
+            case 0:
+            default:
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         * action
+         * </pre>
+         *
+         * Protobuf type {@code TokenAction}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:TokenAction)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenActionOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                ty_ = 0;
+
+                valueCase_ = 0;
+                value_ = null;
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenAction_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction(
+                        this);
+                if (valueCase_ == 1) {
+                    if (tokenPreCreateBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = tokenPreCreateBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 2) {
+                    if (tokenFinishCreateBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = tokenFinishCreateBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 3) {
+                    if (tokenRevokeCreateBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = tokenRevokeCreateBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 4) {
+                    if (transferBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = transferBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 5) {
+                    if (withdrawBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = withdrawBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 6) {
+                    if (genesisBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = genesisBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 8) {
+                    if (transferToExecBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = transferToExecBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 9) {
+                    if (tokenMintBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = tokenMintBuilder_.build();
+                    }
+                }
+                if (valueCase_ == 10) {
+                    if (tokenBurnBuilder_ == null) {
+                        result.value_ = value_;
+                    } else {
+                        result.value_ = tokenBurnBuilder_.build();
+                    }
+                }
+                result.ty_ = ty_;
+                result.valueCase_ = valueCase_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction.getDefaultInstance())
+                    return this;
+                if (other.getTy() != 0) {
+                    setTy(other.getTy());
+                }
+                switch (other.getValueCase()) {
+                case TOKENPRECREATE: {
+                    mergeTokenPreCreate(other.getTokenPreCreate());
+                    break;
+                }
+                case TOKENFINISHCREATE: {
+                    mergeTokenFinishCreate(other.getTokenFinishCreate());
+                    break;
+                }
+                case TOKENREVOKECREATE: {
+                    mergeTokenRevokeCreate(other.getTokenRevokeCreate());
+                    break;
+                }
+                case TRANSFER: {
+                    mergeTransfer(other.getTransfer());
+                    break;
+                }
+                case WITHDRAW: {
+                    mergeWithdraw(other.getWithdraw());
+                    break;
+                }
+                case GENESIS: {
+                    mergeGenesis(other.getGenesis());
+                    break;
+                }
+                case TRANSFERTOEXEC: {
+                    mergeTransferToExec(other.getTransferToExec());
+                    break;
+                }
+                case TOKENMINT: {
+                    mergeTokenMint(other.getTokenMint());
+                    break;
+                }
+                case TOKENBURN: {
+                    mergeTokenBurn(other.getTokenBurn());
+                    break;
+                }
+                case VALUE_NOT_SET: {
+                    break;
+                }
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private int valueCase_ = 0;
+            private java.lang.Object value_;
+
+            public ValueCase getValueCase() {
+                return ValueCase.forNumber(valueCase_);
+            }
+
+            public Builder clearValue() {
+                valueCase_ = 0;
+                value_ = null;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder> tokenPreCreateBuilder_;
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             * 
+             * @return Whether the tokenPreCreate field is set.
+             */
+            public boolean hasTokenPreCreate() {
+                return valueCase_ == 1;
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             * 
+             * @return The tokenPreCreate.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getTokenPreCreate() {
+                if (tokenPreCreateBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 1) {
+                        return tokenPreCreateBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            public Builder setTokenPreCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate value) {
+                if (tokenPreCreateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    tokenPreCreateBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            public Builder setTokenPreCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder builderForValue) {
+                if (tokenPreCreateBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    tokenPreCreateBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            public Builder mergeTokenPreCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate value) {
+                if (tokenPreCreateBuilder_ == null) {
+                    if (valueCase_ == 1
+                            && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 1) {
+                        tokenPreCreateBuilder_.mergeFrom(value);
+                    }
+                    tokenPreCreateBuilder_.setMessage(value);
+                }
+                valueCase_ = 1;
+                return this;
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            public Builder clearTokenPreCreate() {
+                if (tokenPreCreateBuilder_ == null) {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 1) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    tokenPreCreateBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder getTokenPreCreateBuilder() {
+                return getTokenPreCreateFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder getTokenPreCreateOrBuilder() {
+                if ((valueCase_ == 1) && (tokenPreCreateBuilder_ != null)) {
+                    return tokenPreCreateBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 1) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenPreCreate tokenPreCreate = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder> getTokenPreCreateFieldBuilder() {
+                if (tokenPreCreateBuilder_ == null) {
+                    if (!(valueCase_ == 1)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate
+                                .getDefaultInstance();
+                    }
+                    tokenPreCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 1;
+                onChanged();
+                ;
+                return tokenPreCreateBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder> tokenFinishCreateBuilder_;
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             * 
+             * @return Whether the tokenFinishCreate field is set.
+             */
+            public boolean hasTokenFinishCreate() {
+                return valueCase_ == 2;
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             * 
+             * @return The tokenFinishCreate.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getTokenFinishCreate() {
+                if (tokenFinishCreateBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 2) {
+                        return tokenFinishCreateBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            public Builder setTokenFinishCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate value) {
+                if (tokenFinishCreateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    tokenFinishCreateBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            public Builder setTokenFinishCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder builderForValue) {
+                if (tokenFinishCreateBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    tokenFinishCreateBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            public Builder mergeTokenFinishCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate value) {
+                if (tokenFinishCreateBuilder_ == null) {
+                    if (valueCase_ == 2
+                            && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 2) {
+                        tokenFinishCreateBuilder_.mergeFrom(value);
+                    }
+                    tokenFinishCreateBuilder_.setMessage(value);
+                }
+                valueCase_ = 2;
+                return this;
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            public Builder clearTokenFinishCreate() {
+                if (tokenFinishCreateBuilder_ == null) {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 2) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    tokenFinishCreateBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder getTokenFinishCreateBuilder() {
+                return getTokenFinishCreateFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder getTokenFinishCreateOrBuilder() {
+                if ((valueCase_ == 2) && (tokenFinishCreateBuilder_ != null)) {
+                    return tokenFinishCreateBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 2) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenFinishCreate tokenFinishCreate = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder> getTokenFinishCreateFieldBuilder() {
+                if (tokenFinishCreateBuilder_ == null) {
+                    if (!(valueCase_ == 2)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate
+                                .getDefaultInstance();
+                    }
+                    tokenFinishCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 2;
+                onChanged();
+                ;
+                return tokenFinishCreateBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder> tokenRevokeCreateBuilder_;
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             * 
+             * @return Whether the tokenRevokeCreate field is set.
+             */
+            public boolean hasTokenRevokeCreate() {
+                return valueCase_ == 3;
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             * 
+             * @return The tokenRevokeCreate.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getTokenRevokeCreate() {
+                if (tokenRevokeCreateBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 3) {
+                        return tokenRevokeCreateBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            public Builder setTokenRevokeCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate value) {
+                if (tokenRevokeCreateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    tokenRevokeCreateBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            public Builder setTokenRevokeCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder builderForValue) {
+                if (tokenRevokeCreateBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    tokenRevokeCreateBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            public Builder mergeTokenRevokeCreate(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate value) {
+                if (tokenRevokeCreateBuilder_ == null) {
+                    if (valueCase_ == 3
+                            && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 3) {
+                        tokenRevokeCreateBuilder_.mergeFrom(value);
+                    }
+                    tokenRevokeCreateBuilder_.setMessage(value);
+                }
+                valueCase_ = 3;
+                return this;
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            public Builder clearTokenRevokeCreate() {
+                if (tokenRevokeCreateBuilder_ == null) {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 3) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    tokenRevokeCreateBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder getTokenRevokeCreateBuilder() {
+                return getTokenRevokeCreateFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder getTokenRevokeCreateOrBuilder() {
+                if ((valueCase_ == 3) && (tokenRevokeCreateBuilder_ != null)) {
+                    return tokenRevokeCreateBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 3) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenRevokeCreate tokenRevokeCreate = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder> getTokenRevokeCreateFieldBuilder() {
+                if (tokenRevokeCreateBuilder_ == null) {
+                    if (!(valueCase_ == 3)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate
+                                .getDefaultInstance();
+                    }
+                    tokenRevokeCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 3;
+                onChanged();
+                ;
+                return tokenRevokeCreateBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder> transferBuilder_;
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             * 
+             * @return Whether the transfer field is set.
+             */
+            public boolean hasTransfer() {
+                return valueCase_ == 4;
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             * 
+             * @return The transfer.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getTransfer() {
+                if (transferBuilder_ == null) {
+                    if (valueCase_ == 4) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 4) {
+                        return transferBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            public Builder setTransfer(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer value) {
+                if (transferBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    transferBuilder_.setMessage(value);
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            public Builder setTransfer(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder builderForValue) {
+                if (transferBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    transferBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            public Builder mergeTransfer(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer value) {
+                if (transferBuilder_ == null) {
+                    if (valueCase_ == 4
+                            && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 4) {
+                        transferBuilder_.mergeFrom(value);
+                    }
+                    transferBuilder_.setMessage(value);
+                }
+                valueCase_ = 4;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            public Builder clearTransfer() {
+                if (transferBuilder_ == null) {
+                    if (valueCase_ == 4) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 4) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    transferBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder getTransferBuilder() {
+                return getTransferFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder getTransferOrBuilder() {
+                if ((valueCase_ == 4) && (transferBuilder_ != null)) {
+                    return transferBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 4) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsTransfer transfer = 4;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder> getTransferFieldBuilder() {
+                if (transferBuilder_ == null) {
+                    if (!(valueCase_ == 4)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer
+                                .getDefaultInstance();
+                    }
+                    transferBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 4;
+                onChanged();
+                ;
+                return transferBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder> withdrawBuilder_;
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             * 
+             * @return Whether the withdraw field is set.
+             */
+            public boolean hasWithdraw() {
+                return valueCase_ == 5;
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             * 
+             * @return The withdraw.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getWithdraw() {
+                if (withdrawBuilder_ == null) {
+                    if (valueCase_ == 5) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 5) {
+                        return withdrawBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            public Builder setWithdraw(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw value) {
+                if (withdrawBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    withdrawBuilder_.setMessage(value);
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            public Builder setWithdraw(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder builderForValue) {
+                if (withdrawBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    withdrawBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            public Builder mergeWithdraw(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw value) {
+                if (withdrawBuilder_ == null) {
+                    if (valueCase_ == 5
+                            && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 5) {
+                        withdrawBuilder_.mergeFrom(value);
+                    }
+                    withdrawBuilder_.setMessage(value);
+                }
+                valueCase_ = 5;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            public Builder clearWithdraw() {
+                if (withdrawBuilder_ == null) {
+                    if (valueCase_ == 5) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 5) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    withdrawBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder getWithdrawBuilder() {
+                return getWithdrawFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder() {
+                if ((valueCase_ == 5) && (withdrawBuilder_ != null)) {
+                    return withdrawBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 5) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsWithdraw withdraw = 5;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder> getWithdrawFieldBuilder() {
+                if (withdrawBuilder_ == null) {
+                    if (!(valueCase_ == 5)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw
+                                .getDefaultInstance();
+                    }
+                    withdrawBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 5;
+                onChanged();
+                ;
+                return withdrawBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder> genesisBuilder_;
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             * 
+             * @return Whether the genesis field is set.
+             */
+            public boolean hasGenesis() {
+                return valueCase_ == 6;
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             * 
+             * @return The genesis.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getGenesis() {
+                if (genesisBuilder_ == null) {
+                    if (valueCase_ == 6) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 6) {
+                        return genesisBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            public Builder setGenesis(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis value) {
+                if (genesisBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    genesisBuilder_.setMessage(value);
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            public Builder setGenesis(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder builderForValue) {
+                if (genesisBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    genesisBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            public Builder mergeGenesis(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis value) {
+                if (genesisBuilder_ == null) {
+                    if (valueCase_ == 6 && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis
+                                .newBuilder(
+                                        (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 6) {
+                        genesisBuilder_.mergeFrom(value);
+                    }
+                    genesisBuilder_.setMessage(value);
+                }
+                valueCase_ = 6;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            public Builder clearGenesis() {
+                if (genesisBuilder_ == null) {
+                    if (valueCase_ == 6) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 6) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    genesisBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder getGenesisBuilder() {
+                return getGenesisFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder getGenesisOrBuilder() {
+                if ((valueCase_ == 6) && (genesisBuilder_ != null)) {
+                    return genesisBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 6) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsGenesis genesis = 6;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder> getGenesisFieldBuilder() {
+                if (genesisBuilder_ == null) {
+                    if (!(valueCase_ == 6)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis
+                                .getDefaultInstance();
+                    }
+                    genesisBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 6;
+                onChanged();
+                ;
+                return genesisBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder> transferToExecBuilder_;
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             * 
+             * @return Whether the transferToExec field is set.
+             */
+            public boolean hasTransferToExec() {
+                return valueCase_ == 8;
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             * 
+             * @return The transferToExec.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getTransferToExec() {
+                if (transferToExecBuilder_ == null) {
+                    if (valueCase_ == 8) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec
+                            .getDefaultInstance();
+                } else {
+                    if (valueCase_ == 8) {
+                        return transferToExecBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            public Builder setTransferToExec(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec value) {
+                if (transferToExecBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    transferToExecBuilder_.setMessage(value);
+                }
+                valueCase_ = 8;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            public Builder setTransferToExec(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder builderForValue) {
+                if (transferToExecBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    transferToExecBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 8;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            public Builder mergeTransferToExec(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec value) {
+                if (transferToExecBuilder_ == null) {
+                    if (valueCase_ == 8
+                            && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec
+                                    .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.newBuilder(
+                                (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 8) {
+                        transferToExecBuilder_.mergeFrom(value);
+                    }
+                    transferToExecBuilder_.setMessage(value);
+                }
+                valueCase_ = 8;
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            public Builder clearTransferToExec() {
+                if (transferToExecBuilder_ == null) {
+                    if (valueCase_ == 8) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 8) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    transferToExecBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder getTransferToExecBuilder() {
+                return getTransferToExecFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder() {
+                if ((valueCase_ == 8) && (transferToExecBuilder_ != null)) {
+                    return transferToExecBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 8) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec
+                            .getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.AssetsTransferToExec transferToExec = 8;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder> getTransferToExecFieldBuilder() {
+                if (transferToExecBuilder_ == null) {
+                    if (!(valueCase_ == 8)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec
+                                .getDefaultInstance();
+                    }
+                    transferToExecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 8;
+                onChanged();
+                ;
+                return transferToExecBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder> tokenMintBuilder_;
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             * 
+             * @return Whether the tokenMint field is set.
+             */
+            public boolean hasTokenMint() {
+                return valueCase_ == 9;
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             * 
+             * @return The tokenMint.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getTokenMint() {
+                if (tokenMintBuilder_ == null) {
+                    if (valueCase_ == 9) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 9) {
+                        return tokenMintBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            public Builder setTokenMint(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint value) {
+                if (tokenMintBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    tokenMintBuilder_.setMessage(value);
+                }
+                valueCase_ = 9;
+                return this;
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            public Builder setTokenMint(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder builderForValue) {
+                if (tokenMintBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    tokenMintBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 9;
+                return this;
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            public Builder mergeTokenMint(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint value) {
+                if (tokenMintBuilder_ == null) {
+                    if (valueCase_ == 9 && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 9) {
+                        tokenMintBuilder_.mergeFrom(value);
+                    }
+                    tokenMintBuilder_.setMessage(value);
+                }
+                valueCase_ = 9;
+                return this;
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            public Builder clearTokenMint() {
+                if (tokenMintBuilder_ == null) {
+                    if (valueCase_ == 9) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 9) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    tokenMintBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder getTokenMintBuilder() {
+                return getTokenMintFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder getTokenMintOrBuilder() {
+                if ((valueCase_ == 9) && (tokenMintBuilder_ != null)) {
+                    return tokenMintBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 9) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenMint tokenMint = 9;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder> getTokenMintFieldBuilder() {
+                if (tokenMintBuilder_ == null) {
+                    if (!(valueCase_ == 9)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+                    }
+                    tokenMintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 9;
+                onChanged();
+                ;
+                return tokenMintBuilder_;
+            }
+
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder> tokenBurnBuilder_;
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             * 
+             * @return Whether the tokenBurn field is set.
+             */
+            public boolean hasTokenBurn() {
+                return valueCase_ == 10;
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             * 
+             * @return The tokenBurn.
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getTokenBurn() {
+                if (tokenBurnBuilder_ == null) {
+                    if (valueCase_ == 10) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+                } else {
+                    if (valueCase_ == 10) {
+                        return tokenBurnBuilder_.getMessage();
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            public Builder setTokenBurn(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn value) {
+                if (tokenBurnBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    value_ = value;
+                    onChanged();
+                } else {
+                    tokenBurnBuilder_.setMessage(value);
+                }
+                valueCase_ = 10;
+                return this;
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            public Builder setTokenBurn(
+                    cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder builderForValue) {
+                if (tokenBurnBuilder_ == null) {
+                    value_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    tokenBurnBuilder_.setMessage(builderForValue.build());
+                }
+                valueCase_ = 10;
+                return this;
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            public Builder mergeTokenBurn(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn value) {
+                if (tokenBurnBuilder_ == null) {
+                    if (valueCase_ == 10 && value_ != cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn
+                            .getDefaultInstance()) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn
+                                .newBuilder((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_)
+                                .mergeFrom(value).buildPartial();
+                    } else {
+                        value_ = value;
+                    }
+                    onChanged();
+                } else {
+                    if (valueCase_ == 10) {
+                        tokenBurnBuilder_.mergeFrom(value);
+                    }
+                    tokenBurnBuilder_.setMessage(value);
+                }
+                valueCase_ = 10;
+                return this;
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            public Builder clearTokenBurn() {
+                if (tokenBurnBuilder_ == null) {
+                    if (valueCase_ == 10) {
+                        valueCase_ = 0;
+                        value_ = null;
+                        onChanged();
+                    }
+                } else {
+                    if (valueCase_ == 10) {
+                        valueCase_ = 0;
+                        value_ = null;
+                    }
+                    tokenBurnBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder getTokenBurnBuilder() {
+                return getTokenBurnFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder getTokenBurnOrBuilder() {
+                if ((valueCase_ == 10) && (tokenBurnBuilder_ != null)) {
+                    return tokenBurnBuilder_.getMessageOrBuilder();
+                } else {
+                    if (valueCase_ == 10) {
+                        return (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_;
+                    }
+                    return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+                }
+            }
+
+            /**
+             * <code>.TokenBurn tokenBurn = 10;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder> getTokenBurnFieldBuilder() {
+                if (tokenBurnBuilder_ == null) {
+                    if (!(valueCase_ == 10)) {
+                        value_ = cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+                    }
+                    tokenBurnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder>(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) value_,
+                            getParentForChildren(), isClean());
+                    value_ = null;
+                }
+                valueCase_ = 10;
+                onChanged();
+                ;
+                return tokenBurnBuilder_;
+            }
+
+            private int ty_;
+
+            /**
+             * <code>int32 Ty = 7;</code>
+             * 
+             * @return The ty.
+             */
+            public int getTy() {
+                return ty_;
+            }
+
+            /**
+             * <code>int32 Ty = 7;</code>
+             * 
+             * @param value
+             *            The ty to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setTy(int value) {
+
+                ty_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 Ty = 7;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearTy() {
+
+                ty_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:TokenAction)
+        }
+
+        // @@protoc_insertion_point(class_scope:TokenAction)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TokenAction> PARSER = new com.google.protobuf.AbstractParser<TokenAction>() {
+            @java.lang.Override
+            public TokenAction parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new TokenAction(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<TokenAction> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TokenAction> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder.class);
+    public interface TokenPreCreateOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:TokenPreCreate)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        java.lang.String getName();
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString getNameBytes();
+
+        /**
+         * <code>string symbol = 2;</code>
+         * 
+         * @return The symbol.
+         */
+        java.lang.String getSymbol();
+
+        /**
+         * <code>string symbol = 2;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        com.google.protobuf.ByteString getSymbolBytes();
+
+        /**
+         * <code>string introduction = 3;</code>
+         * 
+         * @return The introduction.
+         */
+        java.lang.String getIntroduction();
+
+        /**
+         * <code>string introduction = 3;</code>
+         * 
+         * @return The bytes for introduction.
+         */
+        com.google.protobuf.ByteString getIntroductionBytes();
+
+        /**
+         * <code>int64 total = 4;</code>
+         * 
+         * @return The total.
+         */
+        long getTotal();
+
+        /**
+         * <code>int64 price = 5;</code>
+         * 
+         * @return The price.
+         */
+        long getPrice();
+
+        /**
+         * <code>string owner = 6;</code>
+         * 
+         * @return The owner.
+         */
+        java.lang.String getOwner();
+
+        /**
+         * <code>string owner = 6;</code>
+         * 
+         * @return The bytes for owner.
+         */
+        com.google.protobuf.ByteString getOwnerBytes();
+
+        /**
+         * <code>int32 category = 7;</code>
+         * 
+         * @return The category.
+         */
+        int getCategory();
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SYMBOL_FIELD_NUMBER = 2;
-    private volatile java.lang.Object symbol_;
-    /**
-     * <code>string symbol = 2;</code>
-     * @return The symbol.
-     */
-    public java.lang.String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        symbol_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string symbol = 2;</code>
-     * @return The bytes for symbol.
-     */
-    public com.google.protobuf.ByteString
-        getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int INTRODUCTION_FIELD_NUMBER = 3;
-    private volatile java.lang.Object introduction_;
-    /**
-     * <code>string introduction = 3;</code>
-     * @return The introduction.
-     */
-    public java.lang.String getIntroduction() {
-      java.lang.Object ref = introduction_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        introduction_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string introduction = 3;</code>
-     * @return The bytes for introduction.
-     */
-    public com.google.protobuf.ByteString
-        getIntroductionBytes() {
-      java.lang.Object ref = introduction_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        introduction_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TOTAL_FIELD_NUMBER = 4;
-    private long total_;
-    /**
-     * <code>int64 total = 4;</code>
-     * @return The total.
-     */
-    public long getTotal() {
-      return total_;
-    }
-
-    public static final int PRICE_FIELD_NUMBER = 5;
-    private long price_;
-    /**
-     * <code>int64 price = 5;</code>
-     * @return The price.
-     */
-    public long getPrice() {
-      return price_;
-    }
-
-    public static final int OWNER_FIELD_NUMBER = 6;
-    private volatile java.lang.Object owner_;
-    /**
-     * <code>string owner = 6;</code>
-     * @return The owner.
-     */
-    public java.lang.String getOwner() {
-      java.lang.Object ref = owner_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        owner_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string owner = 6;</code>
-     * @return The bytes for owner.
-     */
-    public com.google.protobuf.ByteString
-        getOwnerBytes() {
-      java.lang.Object ref = owner_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        owner_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CATEGORY_FIELD_NUMBER = 7;
-    private int category_;
-    /**
-     * <code>int32 category = 7;</code>
-     * @return The category.
-     */
-    public int getCategory() {
-      return category_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!getSymbolBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
-      }
-      if (!getIntroductionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, introduction_);
-      }
-      if (total_ != 0L) {
-        output.writeInt64(4, total_);
-      }
-      if (price_ != 0L) {
-        output.writeInt64(5, price_);
-      }
-      if (!getOwnerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, owner_);
-      }
-      if (category_ != 0) {
-        output.writeInt32(7, category_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!getSymbolBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
-      }
-      if (!getIntroductionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, introduction_);
-      }
-      if (total_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, total_);
-      }
-      if (price_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, price_);
-      }
-      if (!getOwnerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, owner_);
-      }
-      if (category_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, category_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getSymbol()
-          .equals(other.getSymbol())) return false;
-      if (!getIntroduction()
-          .equals(other.getIntroduction())) return false;
-      if (getTotal()
-          != other.getTotal()) return false;
-      if (getPrice()
-          != other.getPrice()) return false;
-      if (!getOwner()
-          .equals(other.getOwner())) return false;
-      if (getCategory()
-          != other.getCategory()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
-      hash = (53 * hash) + getSymbol().hashCode();
-      hash = (37 * hash) + INTRODUCTION_FIELD_NUMBER;
-      hash = (53 * hash) + getIntroduction().hashCode();
-      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getTotal());
-      hash = (37 * hash) + PRICE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPrice());
-      hash = (37 * hash) + OWNER_FIELD_NUMBER;
-      hash = (53 * hash) + getOwner().hashCode();
-      hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
-      hash = (53 * hash) + getCategory();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      *创建token，支持最大精确度是8位小数,即存入数据库的实际总额需要放大1e8倍
@@ -3180,6984 +2901,7734 @@ public final class TokenActionProtoBuf {
      *
      * Protobuf type {@code TokenPreCreate}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:TokenPreCreate)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_descriptor;
-      }
+    public static final class TokenPreCreate extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:TokenPreCreate)
+            TokenPreCreateOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use TokenPreCreate.newBuilder() to construct.
+        private TokenPreCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        name_ = "";
 
-        symbol_ = "";
-
-        introduction_ = "";
-
-        total_ = 0L;
-
-        price_ = 0L;
-
-        owner_ = "";
-
-        category_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private TokenPreCreate() {
+            name_ = "";
+            symbol_ = "";
+            introduction_ = "";
+            owner_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate(this);
-        result.name_ = name_;
-        result.symbol_ = symbol_;
-        result.introduction_ = introduction_;
-        result.total_ = total_;
-        result.price_ = price_;
-        result.owner_ = owner_;
-        result.category_ = category_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new TokenPreCreate();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getSymbol().isEmpty()) {
-          symbol_ = other.symbol_;
-          onChanged();
-        }
-        if (!other.getIntroduction().isEmpty()) {
-          introduction_ = other.introduction_;
-          onChanged();
-        }
-        if (other.getTotal() != 0L) {
-          setTotal(other.getTotal());
-        }
-        if (other.getPrice() != 0L) {
-          setPrice(other.getPrice());
-        }
-        if (!other.getOwner().isEmpty()) {
-          owner_ = other.owner_;
-          onChanged();
-        }
-        if (other.getCategory() != 0) {
-          setCategory(other.getCategory());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object symbol_ = "";
-      /**
-       * <code>string symbol = 2;</code>
-       * @return The symbol.
-       */
-      public java.lang.String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 2;</code>
-       * @return The bytes for symbol.
-       */
-      public com.google.protobuf.ByteString
-          getSymbolBytes() {
-        java.lang.Object ref = symbol_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          symbol_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 2;</code>
-       * @param value The symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbol(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSymbol() {
-        
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 2;</code>
-       * @param value The bytes for symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbolBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object introduction_ = "";
-      /**
-       * <code>string introduction = 3;</code>
-       * @return The introduction.
-       */
-      public java.lang.String getIntroduction() {
-        java.lang.Object ref = introduction_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          introduction_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string introduction = 3;</code>
-       * @return The bytes for introduction.
-       */
-      public com.google.protobuf.ByteString
-          getIntroductionBytes() {
-        java.lang.Object ref = introduction_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          introduction_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string introduction = 3;</code>
-       * @param value The introduction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIntroduction(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        introduction_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string introduction = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIntroduction() {
-        
-        introduction_ = getDefaultInstance().getIntroduction();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string introduction = 3;</code>
-       * @param value The bytes for introduction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIntroductionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        introduction_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long total_ ;
-      /**
-       * <code>int64 total = 4;</code>
-       * @return The total.
-       */
-      public long getTotal() {
-        return total_;
-      }
-      /**
-       * <code>int64 total = 4;</code>
-       * @param value The total to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTotal(long value) {
-        
-        total_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 total = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTotal() {
-        
-        total_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long price_ ;
-      /**
-       * <code>int64 price = 5;</code>
-       * @return The price.
-       */
-      public long getPrice() {
-        return price_;
-      }
-      /**
-       * <code>int64 price = 5;</code>
-       * @param value The price to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrice(long value) {
-        
-        price_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 price = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPrice() {
-        
-        price_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object owner_ = "";
-      /**
-       * <code>string owner = 6;</code>
-       * @return The owner.
-       */
-      public java.lang.String getOwner() {
-        java.lang.Object ref = owner_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          owner_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string owner = 6;</code>
-       * @return The bytes for owner.
-       */
-      public com.google.protobuf.ByteString
-          getOwnerBytes() {
-        java.lang.Object ref = owner_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          owner_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string owner = 6;</code>
-       * @param value The owner to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOwner(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        owner_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string owner = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOwner() {
-        
-        owner_ = getDefaultInstance().getOwner();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string owner = 6;</code>
-       * @param value The bytes for owner to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOwnerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        owner_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int category_ ;
-      /**
-       * <code>int32 category = 7;</code>
-       * @return The category.
-       */
-      public int getCategory() {
-        return category_;
-      }
-      /**
-       * <code>int32 category = 7;</code>
-       * @param value The category to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCategory(int value) {
-        
-        category_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 category = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCategory() {
-        
-        category_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:TokenPreCreate)
-    }
-
-    // @@protoc_insertion_point(class_scope:TokenPreCreate)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TokenPreCreate>
-        PARSER = new com.google.protobuf.AbstractParser<TokenPreCreate>() {
-      @java.lang.Override
-      public TokenPreCreate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TokenPreCreate(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TokenPreCreate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TokenPreCreate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TokenFinishCreateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TokenFinishCreate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    java.lang.String getSymbol();
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    com.google.protobuf.ByteString
-        getSymbolBytes();
-
-    /**
-     * <code>string owner = 2;</code>
-     * @return The owner.
-     */
-    java.lang.String getOwner();
-    /**
-     * <code>string owner = 2;</code>
-     * @return The bytes for owner.
-     */
-    com.google.protobuf.ByteString
-        getOwnerBytes();
-  }
-  /**
-   * Protobuf type {@code TokenFinishCreate}
-   */
-  public  static final class TokenFinishCreate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:TokenFinishCreate)
-      TokenFinishCreateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TokenFinishCreate.newBuilder() to construct.
-    private TokenFinishCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TokenFinishCreate() {
-      symbol_ = "";
-      owner_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TokenFinishCreate();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TokenFinishCreate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              symbol_ = s;
-              break;
+        private TokenPreCreate(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              owner_ = s;
-              break;
+                        name_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        symbol_ = s;
+                        break;
+                    }
+                    case 26: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        introduction_ = s;
+                        break;
+                    }
+                    case 32: {
+
+                        total_ = input.readInt64();
+                        break;
+                    }
+                    case 40: {
+
+                        price_ = input.readInt64();
+                        break;
+                    }
+                    case 50: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        owner_ = s;
+                        break;
+                    }
+                    case 56: {
+
+                        category_ = input.readInt32();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder.class);
+        }
+
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The name.
+         */
+        public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string name = 1;</code>
+         * 
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int SYMBOL_FIELD_NUMBER = 2;
+        private volatile java.lang.Object symbol_;
+
+        /**
+         * <code>string symbol = 2;</code>
+         * 
+         * @return The symbol.
+         */
+        public java.lang.String getSymbol() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                symbol_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string symbol = 2;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        public com.google.protobuf.ByteString getSymbolBytes() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                symbol_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int INTRODUCTION_FIELD_NUMBER = 3;
+        private volatile java.lang.Object introduction_;
+
+        /**
+         * <code>string introduction = 3;</code>
+         * 
+         * @return The introduction.
+         */
+        public java.lang.String getIntroduction() {
+            java.lang.Object ref = introduction_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                introduction_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string introduction = 3;</code>
+         * 
+         * @return The bytes for introduction.
+         */
+        public com.google.protobuf.ByteString getIntroductionBytes() {
+            java.lang.Object ref = introduction_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                introduction_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int TOTAL_FIELD_NUMBER = 4;
+        private long total_;
+
+        /**
+         * <code>int64 total = 4;</code>
+         * 
+         * @return The total.
+         */
+        public long getTotal() {
+            return total_;
+        }
+
+        public static final int PRICE_FIELD_NUMBER = 5;
+        private long price_;
+
+        /**
+         * <code>int64 price = 5;</code>
+         * 
+         * @return The price.
+         */
+        public long getPrice() {
+            return price_;
+        }
+
+        public static final int OWNER_FIELD_NUMBER = 6;
+        private volatile java.lang.Object owner_;
+
+        /**
+         * <code>string owner = 6;</code>
+         * 
+         * @return The owner.
+         */
+        public java.lang.String getOwner() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                owner_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string owner = 6;</code>
+         * 
+         * @return The bytes for owner.
+         */
+        public com.google.protobuf.ByteString getOwnerBytes() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                owner_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int CATEGORY_FIELD_NUMBER = 7;
+        private int category_;
+
+        /**
+         * <code>int32 category = 7;</code>
+         * 
+         * @return The category.
+         */
+        public int getCategory() {
+            return category_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+            }
+            if (!getSymbolBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
+            }
+            if (!getIntroductionBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, introduction_);
+            }
+            if (total_ != 0L) {
+                output.writeInt64(4, total_);
+            }
+            if (price_ != 0L) {
+                output.writeInt64(5, price_);
+            }
+            if (!getOwnerBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 6, owner_);
+            }
+            if (category_ != 0) {
+                output.writeInt32(7, category_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+            }
+            if (!getSymbolBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
+            }
+            if (!getIntroductionBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, introduction_);
+            }
+            if (total_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, total_);
+            }
+            if (price_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(5, price_);
+            }
+            if (!getOwnerBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, owner_);
+            }
+            if (category_ != 0) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(7, category_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) obj;
+
+            if (!getName().equals(other.getName()))
+                return false;
+            if (!getSymbol().equals(other.getSymbol()))
+                return false;
+            if (!getIntroduction().equals(other.getIntroduction()))
+                return false;
+            if (getTotal() != other.getTotal())
+                return false;
+            if (getPrice() != other.getPrice())
+                return false;
+            if (!getOwner().equals(other.getOwner()))
+                return false;
+            if (getCategory() != other.getCategory())
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+            hash = (53 * hash) + getSymbol().hashCode();
+            hash = (37 * hash) + INTRODUCTION_FIELD_NUMBER;
+            hash = (53 * hash) + getIntroduction().hashCode();
+            hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getTotal());
+            hash = (37 * hash) + PRICE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getPrice());
+            hash = (37 * hash) + OWNER_FIELD_NUMBER;
+            hash = (53 * hash) + getOwner().hashCode();
+            hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+            hash = (53 * hash) + getCategory();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * <pre>
+         *创建token，支持最大精确度是8位小数,即存入数据库的实际总额需要放大1e8倍
+         * </pre>
+         *
+         * Protobuf type {@code TokenPreCreate}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:TokenPreCreate)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreateOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                name_ = "";
+
+                symbol_ = "";
+
+                introduction_ = "";
+
+                total_ = 0L;
+
+                price_ = 0L;
+
+                owner_ = "";
+
+                category_ = 0;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenPreCreate_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate(
+                        this);
+                result.name_ = name_;
+                result.symbol_ = symbol_;
+                result.introduction_ = introduction_;
+                result.total_ = total_;
+                result.price_ = price_;
+                result.owner_ = owner_;
+                result.category_ = category_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate.getDefaultInstance())
+                    return this;
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (!other.getSymbol().isEmpty()) {
+                    symbol_ = other.symbol_;
+                    onChanged();
+                }
+                if (!other.getIntroduction().isEmpty()) {
+                    introduction_ = other.introduction_;
+                    onChanged();
+                }
+                if (other.getTotal() != 0L) {
+                    setTotal(other.getTotal());
+                }
+                if (other.getPrice() != 0L) {
+                    setPrice(other.getPrice());
+                }
+                if (!other.getOwner().isEmpty()) {
+                    owner_ = other.owner_;
+                    onChanged();
+                }
+                if (other.getCategory() != 0) {
+                    setCategory(other.getCategory());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object name_ = "";
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The name.
+             */
+            public java.lang.String getName() {
+                java.lang.Object ref = name_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return The bytes for name.
+             */
+            public com.google.protobuf.ByteString getNameBytes() {
+                java.lang.Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string name = 1;</code>
+             * 
+             * @param value
+             *            The bytes for name to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object symbol_ = "";
+
+            /**
+             * <code>string symbol = 2;</code>
+             * 
+             * @return The symbol.
+             */
+            public java.lang.String getSymbol() {
+                java.lang.Object ref = symbol_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    symbol_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 2;</code>
+             * 
+             * @return The bytes for symbol.
+             */
+            public com.google.protobuf.ByteString getSymbolBytes() {
+                java.lang.Object ref = symbol_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    symbol_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 2;</code>
+             * 
+             * @param value
+             *            The symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbol(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearSymbol() {
+
+                symbol_ = getDefaultInstance().getSymbol();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 2;</code>
+             * 
+             * @param value
+             *            The bytes for symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbolBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object introduction_ = "";
+
+            /**
+             * <code>string introduction = 3;</code>
+             * 
+             * @return The introduction.
+             */
+            public java.lang.String getIntroduction() {
+                java.lang.Object ref = introduction_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    introduction_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string introduction = 3;</code>
+             * 
+             * @return The bytes for introduction.
+             */
+            public com.google.protobuf.ByteString getIntroductionBytes() {
+                java.lang.Object ref = introduction_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    introduction_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string introduction = 3;</code>
+             * 
+             * @param value
+             *            The introduction to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setIntroduction(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                introduction_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string introduction = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearIntroduction() {
+
+                introduction_ = getDefaultInstance().getIntroduction();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string introduction = 3;</code>
+             * 
+             * @param value
+             *            The bytes for introduction to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setIntroductionBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                introduction_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long total_;
+
+            /**
+             * <code>int64 total = 4;</code>
+             * 
+             * @return The total.
+             */
+            public long getTotal() {
+                return total_;
+            }
+
+            /**
+             * <code>int64 total = 4;</code>
+             * 
+             * @param value
+             *            The total to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setTotal(long value) {
+
+                total_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 total = 4;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearTotal() {
+
+                total_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private long price_;
+
+            /**
+             * <code>int64 price = 5;</code>
+             * 
+             * @return The price.
+             */
+            public long getPrice() {
+                return price_;
+            }
+
+            /**
+             * <code>int64 price = 5;</code>
+             * 
+             * @param value
+             *            The price to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setPrice(long value) {
+
+                price_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 price = 5;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearPrice() {
+
+                price_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object owner_ = "";
+
+            /**
+             * <code>string owner = 6;</code>
+             * 
+             * @return The owner.
+             */
+            public java.lang.String getOwner() {
+                java.lang.Object ref = owner_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    owner_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string owner = 6;</code>
+             * 
+             * @return The bytes for owner.
+             */
+            public com.google.protobuf.ByteString getOwnerBytes() {
+                java.lang.Object ref = owner_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    owner_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string owner = 6;</code>
+             * 
+             * @param value
+             *            The owner to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setOwner(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                owner_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string owner = 6;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearOwner() {
+
+                owner_ = getDefaultInstance().getOwner();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string owner = 6;</code>
+             * 
+             * @param value
+             *            The bytes for owner to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setOwnerBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                owner_ = value;
+                onChanged();
+                return this;
+            }
+
+            private int category_;
+
+            /**
+             * <code>int32 category = 7;</code>
+             * 
+             * @return The category.
+             */
+            public int getCategory() {
+                return category_;
+            }
+
+            /**
+             * <code>int32 category = 7;</code>
+             * 
+             * @param value
+             *            The category to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCategory(int value) {
+
+                category_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int32 category = 7;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCategory() {
+
+                category_ = 0;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:TokenPreCreate)
+        }
+
+        // @@protoc_insertion_point(class_scope:TokenPreCreate)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TokenPreCreate> PARSER = new com.google.protobuf.AbstractParser<TokenPreCreate>() {
+            @java.lang.Override
+            public TokenPreCreate parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new TokenPreCreate(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<TokenPreCreate> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TokenPreCreate> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder.class);
+    public interface TokenFinishCreateOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:TokenFinishCreate)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        java.lang.String getSymbol();
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        com.google.protobuf.ByteString getSymbolBytes();
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The owner.
+         */
+        java.lang.String getOwner();
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The bytes for owner.
+         */
+        com.google.protobuf.ByteString getOwnerBytes();
     }
 
-    public static final int SYMBOL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object symbol_;
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    public java.lang.String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        symbol_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    public com.google.protobuf.ByteString
-        getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OWNER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object owner_;
-    /**
-     * <code>string owner = 2;</code>
-     * @return The owner.
-     */
-    public java.lang.String getOwner() {
-      java.lang.Object ref = owner_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        owner_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string owner = 2;</code>
-     * @return The bytes for owner.
-     */
-    public com.google.protobuf.ByteString
-        getOwnerBytes() {
-      java.lang.Object ref = owner_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        owner_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSymbolBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
-      }
-      if (!getOwnerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSymbolBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
-      }
-      if (!getOwnerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) obj;
-
-      if (!getSymbol()
-          .equals(other.getSymbol())) return false;
-      if (!getOwner()
-          .equals(other.getOwner())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
-      hash = (53 * hash) + getSymbol().hashCode();
-      hash = (37 * hash) + OWNER_FIELD_NUMBER;
-      hash = (53 * hash) + getOwner().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code TokenFinishCreate}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:TokenFinishCreate)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_descriptor;
-      }
+    public static final class TokenFinishCreate extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:TokenFinishCreate)
+            TokenFinishCreateOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use TokenFinishCreate.newBuilder() to construct.
+        private TokenFinishCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        symbol_ = "";
 
-        owner_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private TokenFinishCreate() {
+            symbol_ = "";
+            owner_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate(this);
-        result.symbol_ = symbol_;
-        result.owner_ = owner_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new TokenFinishCreate();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance()) return this;
-        if (!other.getSymbol().isEmpty()) {
-          symbol_ = other.symbol_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getOwner().isEmpty()) {
-          owner_ = other.owner_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object symbol_ = "";
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The symbol.
-       */
-      public java.lang.String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The bytes for symbol.
-       */
-      public com.google.protobuf.ByteString
-          getSymbolBytes() {
-        java.lang.Object ref = symbol_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          symbol_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbol(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSymbol() {
-        
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The bytes for symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbolBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object owner_ = "";
-      /**
-       * <code>string owner = 2;</code>
-       * @return The owner.
-       */
-      public java.lang.String getOwner() {
-        java.lang.Object ref = owner_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          owner_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @return The bytes for owner.
-       */
-      public com.google.protobuf.ByteString
-          getOwnerBytes() {
-        java.lang.Object ref = owner_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          owner_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @param value The owner to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOwner(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        owner_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOwner() {
-        
-        owner_ = getDefaultInstance().getOwner();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @param value The bytes for owner to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOwnerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        owner_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:TokenFinishCreate)
-    }
-
-    // @@protoc_insertion_point(class_scope:TokenFinishCreate)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TokenFinishCreate>
-        PARSER = new com.google.protobuf.AbstractParser<TokenFinishCreate>() {
-      @java.lang.Override
-      public TokenFinishCreate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TokenFinishCreate(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TokenFinishCreate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TokenFinishCreate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TokenRevokeCreateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TokenRevokeCreate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    java.lang.String getSymbol();
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    com.google.protobuf.ByteString
-        getSymbolBytes();
-
-    /**
-     * <code>string owner = 2;</code>
-     * @return The owner.
-     */
-    java.lang.String getOwner();
-    /**
-     * <code>string owner = 2;</code>
-     * @return The bytes for owner.
-     */
-    com.google.protobuf.ByteString
-        getOwnerBytes();
-  }
-  /**
-   * Protobuf type {@code TokenRevokeCreate}
-   */
-  public  static final class TokenRevokeCreate extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:TokenRevokeCreate)
-      TokenRevokeCreateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TokenRevokeCreate.newBuilder() to construct.
-    private TokenRevokeCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TokenRevokeCreate() {
-      symbol_ = "";
-      owner_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TokenRevokeCreate();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TokenRevokeCreate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              symbol_ = s;
-              break;
+        private TokenFinishCreate(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              owner_ = s;
-              break;
+                        symbol_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        owner_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder.class);
+        }
+
+        public static final int SYMBOL_FIELD_NUMBER = 1;
+        private volatile java.lang.Object symbol_;
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        public java.lang.String getSymbol() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                symbol_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        public com.google.protobuf.ByteString getSymbolBytes() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                symbol_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int OWNER_FIELD_NUMBER = 2;
+        private volatile java.lang.Object owner_;
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The owner.
+         */
+        public java.lang.String getOwner() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                owner_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The bytes for owner.
+         */
+        public com.google.protobuf.ByteString getOwnerBytes() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                owner_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getSymbolBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+            }
+            if (!getOwnerBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getSymbolBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+            }
+            if (!getOwnerBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) obj;
+
+            if (!getSymbol().equals(other.getSymbol()))
+                return false;
+            if (!getOwner().equals(other.getOwner()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+            hash = (53 * hash) + getSymbol().hashCode();
+            hash = (37 * hash) + OWNER_FIELD_NUMBER;
+            hash = (53 * hash) + getOwner().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code TokenFinishCreate}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:TokenFinishCreate)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreateOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                symbol_ = "";
+
+                owner_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenFinishCreate_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate(
+                        this);
+                result.symbol_ = symbol_;
+                result.owner_ = owner_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate
+                        .getDefaultInstance())
+                    return this;
+                if (!other.getSymbol().isEmpty()) {
+                    symbol_ = other.symbol_;
+                    onChanged();
+                }
+                if (!other.getOwner().isEmpty()) {
+                    owner_ = other.owner_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object symbol_ = "";
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The symbol.
+             */
+            public java.lang.String getSymbol() {
+                java.lang.Object ref = symbol_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    symbol_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The bytes for symbol.
+             */
+            public com.google.protobuf.ByteString getSymbolBytes() {
+                java.lang.Object ref = symbol_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    symbol_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbol(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearSymbol() {
+
+                symbol_ = getDefaultInstance().getSymbol();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The bytes for symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbolBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object owner_ = "";
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @return The owner.
+             */
+            public java.lang.String getOwner() {
+                java.lang.Object ref = owner_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    owner_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @return The bytes for owner.
+             */
+            public com.google.protobuf.ByteString getOwnerBytes() {
+                java.lang.Object ref = owner_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    owner_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @param value
+             *            The owner to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setOwner(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                owner_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearOwner() {
+
+                owner_ = getDefaultInstance().getOwner();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @param value
+             *            The bytes for owner to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setOwnerBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                owner_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:TokenFinishCreate)
+        }
+
+        // @@protoc_insertion_point(class_scope:TokenFinishCreate)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TokenFinishCreate> PARSER = new com.google.protobuf.AbstractParser<TokenFinishCreate>() {
+            @java.lang.Override
+            public TokenFinishCreate parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new TokenFinishCreate(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<TokenFinishCreate> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TokenFinishCreate> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder.class);
+    public interface TokenRevokeCreateOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:TokenRevokeCreate)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        java.lang.String getSymbol();
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        com.google.protobuf.ByteString getSymbolBytes();
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The owner.
+         */
+        java.lang.String getOwner();
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The bytes for owner.
+         */
+        com.google.protobuf.ByteString getOwnerBytes();
     }
 
-    public static final int SYMBOL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object symbol_;
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    public java.lang.String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        symbol_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    public com.google.protobuf.ByteString
-        getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OWNER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object owner_;
-    /**
-     * <code>string owner = 2;</code>
-     * @return The owner.
-     */
-    public java.lang.String getOwner() {
-      java.lang.Object ref = owner_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        owner_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string owner = 2;</code>
-     * @return The bytes for owner.
-     */
-    public com.google.protobuf.ByteString
-        getOwnerBytes() {
-      java.lang.Object ref = owner_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        owner_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSymbolBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
-      }
-      if (!getOwnerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSymbolBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
-      }
-      if (!getOwnerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) obj;
-
-      if (!getSymbol()
-          .equals(other.getSymbol())) return false;
-      if (!getOwner()
-          .equals(other.getOwner())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
-      hash = (53 * hash) + getSymbol().hashCode();
-      hash = (37 * hash) + OWNER_FIELD_NUMBER;
-      hash = (53 * hash) + getOwner().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code TokenRevokeCreate}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:TokenRevokeCreate)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_descriptor;
-      }
+    public static final class TokenRevokeCreate extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:TokenRevokeCreate)
+            TokenRevokeCreateOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use TokenRevokeCreate.newBuilder() to construct.
+        private TokenRevokeCreate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        symbol_ = "";
 
-        owner_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private TokenRevokeCreate() {
+            symbol_ = "";
+            owner_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate(this);
-        result.symbol_ = symbol_;
-        result.owner_ = owner_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new TokenRevokeCreate();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance()) return this;
-        if (!other.getSymbol().isEmpty()) {
-          symbol_ = other.symbol_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getOwner().isEmpty()) {
-          owner_ = other.owner_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object symbol_ = "";
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The symbol.
-       */
-      public java.lang.String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The bytes for symbol.
-       */
-      public com.google.protobuf.ByteString
-          getSymbolBytes() {
-        java.lang.Object ref = symbol_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          symbol_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbol(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSymbol() {
-        
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The bytes for symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbolBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object owner_ = "";
-      /**
-       * <code>string owner = 2;</code>
-       * @return The owner.
-       */
-      public java.lang.String getOwner() {
-        java.lang.Object ref = owner_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          owner_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @return The bytes for owner.
-       */
-      public com.google.protobuf.ByteString
-          getOwnerBytes() {
-        java.lang.Object ref = owner_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          owner_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @param value The owner to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOwner(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        owner_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOwner() {
-        
-        owner_ = getDefaultInstance().getOwner();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string owner = 2;</code>
-       * @param value The bytes for owner to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOwnerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        owner_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:TokenRevokeCreate)
-    }
-
-    // @@protoc_insertion_point(class_scope:TokenRevokeCreate)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TokenRevokeCreate>
-        PARSER = new com.google.protobuf.AbstractParser<TokenRevokeCreate>() {
-      @java.lang.Override
-      public TokenRevokeCreate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TokenRevokeCreate(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TokenRevokeCreate> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TokenRevokeCreate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TokenMintOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TokenMint)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    java.lang.String getSymbol();
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    com.google.protobuf.ByteString
-        getSymbolBytes();
-
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-  }
-  /**
-   * Protobuf type {@code TokenMint}
-   */
-  public  static final class TokenMint extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:TokenMint)
-      TokenMintOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TokenMint.newBuilder() to construct.
-    private TokenMint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TokenMint() {
-      symbol_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TokenMint();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TokenMint(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              symbol_ = s;
-              break;
+        private TokenRevokeCreate(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 16: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readInt64();
-              break;
+                        symbol_ = s;
+                        break;
+                    }
+                    case 18: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        owner_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder.class);
+        }
+
+        public static final int SYMBOL_FIELD_NUMBER = 1;
+        private volatile java.lang.Object symbol_;
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        public java.lang.String getSymbol() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                symbol_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        public com.google.protobuf.ByteString getSymbolBytes() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                symbol_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int OWNER_FIELD_NUMBER = 2;
+        private volatile java.lang.Object owner_;
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The owner.
+         */
+        public java.lang.String getOwner() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                owner_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string owner = 2;</code>
+         * 
+         * @return The bytes for owner.
+         */
+        public com.google.protobuf.ByteString getOwnerBytes() {
+            java.lang.Object ref = owner_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                owner_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getSymbolBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+            }
+            if (!getOwnerBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getSymbolBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+            }
+            if (!getOwnerBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) obj;
+
+            if (!getSymbol().equals(other.getSymbol()))
+                return false;
+            if (!getOwner().equals(other.getOwner()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+            hash = (53 * hash) + getSymbol().hashCode();
+            hash = (37 * hash) + OWNER_FIELD_NUMBER;
+            hash = (53 * hash) + getOwner().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code TokenRevokeCreate}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:TokenRevokeCreate)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreateOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                symbol_ = "";
+
+                owner_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenRevokeCreate_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate(
+                        this);
+                result.symbol_ = symbol_;
+                result.owner_ = owner_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate
+                        .getDefaultInstance())
+                    return this;
+                if (!other.getSymbol().isEmpty()) {
+                    symbol_ = other.symbol_;
+                    onChanged();
+                }
+                if (!other.getOwner().isEmpty()) {
+                    owner_ = other.owner_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object symbol_ = "";
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The symbol.
+             */
+            public java.lang.String getSymbol() {
+                java.lang.Object ref = symbol_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    symbol_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The bytes for symbol.
+             */
+            public com.google.protobuf.ByteString getSymbolBytes() {
+                java.lang.Object ref = symbol_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    symbol_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbol(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearSymbol() {
+
+                symbol_ = getDefaultInstance().getSymbol();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The bytes for symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbolBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object owner_ = "";
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @return The owner.
+             */
+            public java.lang.String getOwner() {
+                java.lang.Object ref = owner_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    owner_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @return The bytes for owner.
+             */
+            public com.google.protobuf.ByteString getOwnerBytes() {
+                java.lang.Object ref = owner_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    owner_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @param value
+             *            The owner to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setOwner(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                owner_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearOwner() {
+
+                owner_ = getDefaultInstance().getOwner();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string owner = 2;</code>
+             * 
+             * @param value
+             *            The bytes for owner to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setOwnerBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                owner_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:TokenRevokeCreate)
+        }
+
+        // @@protoc_insertion_point(class_scope:TokenRevokeCreate)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TokenRevokeCreate> PARSER = new com.google.protobuf.AbstractParser<TokenRevokeCreate>() {
+            @java.lang.Override
+            public TokenRevokeCreate parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new TokenRevokeCreate(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<TokenRevokeCreate> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TokenRevokeCreate> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenRevokeCreate getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder.class);
+    public interface TokenMintOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:TokenMint)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        java.lang.String getSymbol();
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        com.google.protobuf.ByteString getSymbolBytes();
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        long getAmount();
     }
 
-    public static final int SYMBOL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object symbol_;
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    public java.lang.String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        symbol_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    public com.google.protobuf.ByteString
-        getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSymbolBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
-      }
-      if (amount_ != 0L) {
-        output.writeInt64(2, amount_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSymbolBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
-      }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, amount_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) obj;
-
-      if (!getSymbol()
-          .equals(other.getSymbol())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
-      hash = (53 * hash) + getSymbol().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code TokenMint}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:TokenMint)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_descriptor;
-      }
+    public static final class TokenMint extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:TokenMint)
+            TokenMintOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use TokenMint.newBuilder() to construct.
+        private TokenMint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        symbol_ = "";
 
-        amount_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private TokenMint() {
+            symbol_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint(this);
-        result.symbol_ = symbol_;
-        result.amount_ = amount_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new TokenMint();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance()) return this;
-        if (!other.getSymbol().isEmpty()) {
-          symbol_ = other.symbol_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object symbol_ = "";
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The symbol.
-       */
-      public java.lang.String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The bytes for symbol.
-       */
-      public com.google.protobuf.ByteString
-          getSymbolBytes() {
-        java.lang.Object ref = symbol_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          symbol_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbol(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSymbol() {
-        
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The bytes for symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbolBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long amount_ ;
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:TokenMint)
-    }
-
-    // @@protoc_insertion_point(class_scope:TokenMint)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TokenMint>
-        PARSER = new com.google.protobuf.AbstractParser<TokenMint>() {
-      @java.lang.Override
-      public TokenMint parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TokenMint(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TokenMint> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TokenMint> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TokenBurnOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:TokenBurn)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    java.lang.String getSymbol();
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    com.google.protobuf.ByteString
-        getSymbolBytes();
-
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-  }
-  /**
-   * Protobuf type {@code TokenBurn}
-   */
-  public  static final class TokenBurn extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:TokenBurn)
-      TokenBurnOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TokenBurn.newBuilder() to construct.
-    private TokenBurn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TokenBurn() {
-      symbol_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TokenBurn();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TokenBurn(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              symbol_ = s;
-              break;
+        private TokenMint(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 16: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readInt64();
-              break;
+                        symbol_ = s;
+                        break;
+                    }
+                    case 16: {
+
+                        amount_ = input.readInt64();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder.class);
+        }
+
+        public static final int SYMBOL_FIELD_NUMBER = 1;
+        private volatile java.lang.Object symbol_;
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        public java.lang.String getSymbol() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                symbol_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        public com.google.protobuf.ByteString getSymbolBytes() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                symbol_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int AMOUNT_FIELD_NUMBER = 2;
+        private long amount_;
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        public long getAmount() {
+            return amount_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getSymbolBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+            }
+            if (amount_ != 0L) {
+                output.writeInt64(2, amount_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getSymbolBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+            }
+            if (amount_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, amount_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) obj;
+
+            if (!getSymbol().equals(other.getSymbol()))
+                return false;
+            if (getAmount() != other.getAmount())
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+            hash = (53 * hash) + getSymbol().hashCode();
+            hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAmount());
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code TokenMint}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:TokenMint)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMintOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                symbol_ = "";
+
+                amount_ = 0L;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenMint_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint(
+                        this);
+                result.symbol_ = symbol_;
+                result.amount_ = amount_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint.getDefaultInstance())
+                    return this;
+                if (!other.getSymbol().isEmpty()) {
+                    symbol_ = other.symbol_;
+                    onChanged();
+                }
+                if (other.getAmount() != 0L) {
+                    setAmount(other.getAmount());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object symbol_ = "";
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The symbol.
+             */
+            public java.lang.String getSymbol() {
+                java.lang.Object ref = symbol_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    symbol_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The bytes for symbol.
+             */
+            public com.google.protobuf.ByteString getSymbolBytes() {
+                java.lang.Object ref = symbol_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    symbol_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbol(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearSymbol() {
+
+                symbol_ = getDefaultInstance().getSymbol();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The bytes for symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbolBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long amount_;
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return The amount.
+             */
+            public long getAmount() {
+                return amount_;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @param value
+             *            The amount to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setAmount(long value) {
+
+                amount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearAmount() {
+
+                amount_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:TokenMint)
+        }
+
+        // @@protoc_insertion_point(class_scope:TokenMint)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TokenMint> PARSER = new com.google.protobuf.AbstractParser<TokenMint>() {
+            @java.lang.Override
+            public TokenMint parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new TokenMint(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<TokenMint> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TokenMint> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenMint getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder.class);
+    public interface TokenBurnOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:TokenBurn)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        java.lang.String getSymbol();
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        com.google.protobuf.ByteString getSymbolBytes();
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        long getAmount();
     }
 
-    public static final int SYMBOL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object symbol_;
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The symbol.
-     */
-    public java.lang.String getSymbol() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        symbol_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string symbol = 1;</code>
-     * @return The bytes for symbol.
-     */
-    public com.google.protobuf.ByteString
-        getSymbolBytes() {
-      java.lang.Object ref = symbol_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        symbol_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSymbolBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
-      }
-      if (amount_ != 0L) {
-        output.writeInt64(2, amount_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSymbolBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
-      }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, amount_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) obj;
-
-      if (!getSymbol()
-          .equals(other.getSymbol())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
-      hash = (53 * hash) + getSymbol().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code TokenBurn}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:TokenBurn)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_descriptor;
-      }
+    public static final class TokenBurn extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:TokenBurn)
+            TokenBurnOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use TokenBurn.newBuilder() to construct.
+        private TokenBurn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        symbol_ = "";
 
-        amount_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private TokenBurn() {
+            symbol_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn(this);
-        result.symbol_ = symbol_;
-        result.amount_ = amount_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new TokenBurn();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance()) return this;
-        if (!other.getSymbol().isEmpty()) {
-          symbol_ = other.symbol_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object symbol_ = "";
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The symbol.
-       */
-      public java.lang.String getSymbol() {
-        java.lang.Object ref = symbol_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          symbol_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return The bytes for symbol.
-       */
-      public com.google.protobuf.ByteString
-          getSymbolBytes() {
-        java.lang.Object ref = symbol_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          symbol_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbol(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSymbol() {
-        
-        symbol_ = getDefaultInstance().getSymbol();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string symbol = 1;</code>
-       * @param value The bytes for symbol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSymbolBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        symbol_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long amount_ ;
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:TokenBurn)
-    }
-
-    // @@protoc_insertion_point(class_scope:TokenBurn)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TokenBurn>
-        PARSER = new com.google.protobuf.AbstractParser<TokenBurn>() {
-      @java.lang.Override
-      public TokenBurn parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TokenBurn(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TokenBurn> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TokenBurn> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AssetsGenesisOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AssetsGenesis)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-
-    /**
-     * <code>string returnAddress = 3;</code>
-     * @return The returnAddress.
-     */
-    java.lang.String getReturnAddress();
-    /**
-     * <code>string returnAddress = 3;</code>
-     * @return The bytes for returnAddress.
-     */
-    com.google.protobuf.ByteString
-        getReturnAddressBytes();
-  }
-  /**
-   * Protobuf type {@code AssetsGenesis}
-   */
-  public  static final class AssetsGenesis extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AssetsGenesis)
-      AssetsGenesisOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AssetsGenesis.newBuilder() to construct.
-    private AssetsGenesis(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AssetsGenesis() {
-      returnAddress_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AssetsGenesis();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AssetsGenesis(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              amount_ = input.readInt64();
-              break;
+        private TokenBurn(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              returnAddress_ = s;
-              break;
+                        symbol_ = s;
+                        break;
+                    }
+                    case 16: {
+
+                        amount_ = input.readInt64();
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder.class);
+        }
+
+        public static final int SYMBOL_FIELD_NUMBER = 1;
+        private volatile java.lang.Object symbol_;
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The symbol.
+         */
+        public java.lang.String getSymbol() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                symbol_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string symbol = 1;</code>
+         * 
+         * @return The bytes for symbol.
+         */
+        public com.google.protobuf.ByteString getSymbolBytes() {
+            java.lang.Object ref = symbol_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                symbol_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int AMOUNT_FIELD_NUMBER = 2;
+        private long amount_;
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        public long getAmount() {
+            return amount_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getSymbolBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+            }
+            if (amount_ != 0L) {
+                output.writeInt64(2, amount_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getSymbolBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+            }
+            if (amount_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, amount_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) obj;
+
+            if (!getSymbol().equals(other.getSymbol()))
+                return false;
+            if (getAmount() != other.getAmount())
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+            hash = (53 * hash) + getSymbol().hashCode();
+            hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAmount());
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code TokenBurn}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:TokenBurn)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurnOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                symbol_ = "";
+
+                amount_ = 0L;
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_TokenBurn_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn(
+                        this);
+                result.symbol_ = symbol_;
+                result.amount_ = amount_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn.getDefaultInstance())
+                    return this;
+                if (!other.getSymbol().isEmpty()) {
+                    symbol_ = other.symbol_;
+                    onChanged();
+                }
+                if (other.getAmount() != 0L) {
+                    setAmount(other.getAmount());
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object symbol_ = "";
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The symbol.
+             */
+            public java.lang.String getSymbol() {
+                java.lang.Object ref = symbol_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    symbol_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return The bytes for symbol.
+             */
+            public com.google.protobuf.ByteString getSymbolBytes() {
+                java.lang.Object ref = symbol_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    symbol_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbol(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearSymbol() {
+
+                symbol_ = getDefaultInstance().getSymbol();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string symbol = 1;</code>
+             * 
+             * @param value
+             *            The bytes for symbol to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setSymbolBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                symbol_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long amount_;
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return The amount.
+             */
+            public long getAmount() {
+                return amount_;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @param value
+             *            The amount to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setAmount(long value) {
+
+                amount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearAmount() {
+
+                amount_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:TokenBurn)
+        }
+
+        // @@protoc_insertion_point(class_scope:TokenBurn)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TokenBurn> PARSER = new com.google.protobuf.AbstractParser<TokenBurn>() {
+            @java.lang.Override
+            public TokenBurn parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new TokenBurn(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<TokenBurn> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TokenBurn> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenBurn getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder.class);
+    public interface AssetsGenesisOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:AssetsGenesis)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        long getAmount();
+
+        /**
+         * <code>string returnAddress = 3;</code>
+         * 
+         * @return The returnAddress.
+         */
+        java.lang.String getReturnAddress();
+
+        /**
+         * <code>string returnAddress = 3;</code>
+         * 
+         * @return The bytes for returnAddress.
+         */
+        com.google.protobuf.ByteString getReturnAddressBytes();
     }
 
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    public static final int RETURNADDRESS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object returnAddress_;
-    /**
-     * <code>string returnAddress = 3;</code>
-     * @return The returnAddress.
-     */
-    public java.lang.String getReturnAddress() {
-      java.lang.Object ref = returnAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        returnAddress_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string returnAddress = 3;</code>
-     * @return The bytes for returnAddress.
-     */
-    public com.google.protobuf.ByteString
-        getReturnAddressBytes() {
-      java.lang.Object ref = returnAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        returnAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (amount_ != 0L) {
-        output.writeInt64(2, amount_);
-      }
-      if (!getReturnAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, returnAddress_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, amount_);
-      }
-      if (!getReturnAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, returnAddress_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) obj;
-
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!getReturnAddress()
-          .equals(other.getReturnAddress())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (37 * hash) + RETURNADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getReturnAddress().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code AssetsGenesis}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AssetsGenesis)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_descriptor;
-      }
+    public static final class AssetsGenesis extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:AssetsGenesis)
+            AssetsGenesisOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use AssetsGenesis.newBuilder() to construct.
+        private AssetsGenesis(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        amount_ = 0L;
 
-        returnAddress_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private AssetsGenesis() {
+            returnAddress_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis(this);
-        result.amount_ = amount_;
-        result.returnAddress_ = returnAddress_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new AssetsGenesis();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance()) return this;
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (!other.getReturnAddress().isEmpty()) {
-          returnAddress_ = other.returnAddress_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private long amount_ ;
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object returnAddress_ = "";
-      /**
-       * <code>string returnAddress = 3;</code>
-       * @return The returnAddress.
-       */
-      public java.lang.String getReturnAddress() {
-        java.lang.Object ref = returnAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          returnAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string returnAddress = 3;</code>
-       * @return The bytes for returnAddress.
-       */
-      public com.google.protobuf.ByteString
-          getReturnAddressBytes() {
-        java.lang.Object ref = returnAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          returnAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string returnAddress = 3;</code>
-       * @param value The returnAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReturnAddress(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        returnAddress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string returnAddress = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReturnAddress() {
-        
-        returnAddress_ = getDefaultInstance().getReturnAddress();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string returnAddress = 3;</code>
-       * @param value The bytes for returnAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReturnAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        returnAddress_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:AssetsGenesis)
-    }
-
-    // @@protoc_insertion_point(class_scope:AssetsGenesis)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AssetsGenesis>
-        PARSER = new com.google.protobuf.AbstractParser<AssetsGenesis>() {
-      @java.lang.Override
-      public AssetsGenesis parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AssetsGenesis(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AssetsGenesis> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AssetsGenesis> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AssetsTransferToExecOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AssetsTransferToExec)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The cointoken.
-     */
-    java.lang.String getCointoken();
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The bytes for cointoken.
-     */
-    com.google.protobuf.ByteString
-        getCointokenBytes();
-
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-
-    /**
-     * <code>bytes note = 3;</code>
-     * @return The note.
-     */
-    com.google.protobuf.ByteString getNote();
-
-    /**
-     * <code>string execName = 4;</code>
-     * @return The execName.
-     */
-    java.lang.String getExecName();
-    /**
-     * <code>string execName = 4;</code>
-     * @return The bytes for execName.
-     */
-    com.google.protobuf.ByteString
-        getExecNameBytes();
-
-    /**
-     * <code>string to = 5;</code>
-     * @return The to.
-     */
-    java.lang.String getTo();
-    /**
-     * <code>string to = 5;</code>
-     * @return The bytes for to.
-     */
-    com.google.protobuf.ByteString
-        getToBytes();
-  }
-  /**
-   * Protobuf type {@code AssetsTransferToExec}
-   */
-  public  static final class AssetsTransferToExec extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AssetsTransferToExec)
-      AssetsTransferToExecOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AssetsTransferToExec.newBuilder() to construct.
-    private AssetsTransferToExec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AssetsTransferToExec() {
-      cointoken_ = "";
-      note_ = com.google.protobuf.ByteString.EMPTY;
-      execName_ = "";
-      to_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AssetsTransferToExec();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AssetsTransferToExec(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cointoken_ = s;
-              break;
+        private AssetsGenesis(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 16: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 16: {
 
-              amount_ = input.readInt64();
-              break;
-            }
-            case 26: {
+                        amount_ = input.readInt64();
+                        break;
+                    }
+                    case 26: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              note_ = input.readBytes();
-              break;
+                        returnAddress_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              execName_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              to_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder.class);
+        }
+
+        public static final int AMOUNT_FIELD_NUMBER = 2;
+        private long amount_;
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        public long getAmount() {
+            return amount_;
+        }
+
+        public static final int RETURNADDRESS_FIELD_NUMBER = 3;
+        private volatile java.lang.Object returnAddress_;
+
+        /**
+         * <code>string returnAddress = 3;</code>
+         * 
+         * @return The returnAddress.
+         */
+        public java.lang.String getReturnAddress() {
+            java.lang.Object ref = returnAddress_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                returnAddress_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string returnAddress = 3;</code>
+         * 
+         * @return The bytes for returnAddress.
+         */
+        public com.google.protobuf.ByteString getReturnAddressBytes() {
+            java.lang.Object ref = returnAddress_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                returnAddress_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (amount_ != 0L) {
+                output.writeInt64(2, amount_);
+            }
+            if (!getReturnAddressBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, returnAddress_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (amount_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, amount_);
+            }
+            if (!getReturnAddressBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, returnAddress_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) obj;
+
+            if (getAmount() != other.getAmount())
+                return false;
+            if (!getReturnAddress().equals(other.getReturnAddress()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAmount());
+            hash = (37 * hash) + RETURNADDRESS_FIELD_NUMBER;
+            hash = (53 * hash) + getReturnAddress().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code AssetsGenesis}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:AssetsGenesis)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesisOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                amount_ = 0L;
+
+                returnAddress_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsGenesis_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis(
+                        this);
+                result.amount_ = amount_;
+                result.returnAddress_ = returnAddress_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis.getDefaultInstance())
+                    return this;
+                if (other.getAmount() != 0L) {
+                    setAmount(other.getAmount());
+                }
+                if (!other.getReturnAddress().isEmpty()) {
+                    returnAddress_ = other.returnAddress_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private long amount_;
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return The amount.
+             */
+            public long getAmount() {
+                return amount_;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @param value
+             *            The amount to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setAmount(long value) {
+
+                amount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearAmount() {
+
+                amount_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object returnAddress_ = "";
+
+            /**
+             * <code>string returnAddress = 3;</code>
+             * 
+             * @return The returnAddress.
+             */
+            public java.lang.String getReturnAddress() {
+                java.lang.Object ref = returnAddress_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    returnAddress_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string returnAddress = 3;</code>
+             * 
+             * @return The bytes for returnAddress.
+             */
+            public com.google.protobuf.ByteString getReturnAddressBytes() {
+                java.lang.Object ref = returnAddress_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    returnAddress_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string returnAddress = 3;</code>
+             * 
+             * @param value
+             *            The returnAddress to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setReturnAddress(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                returnAddress_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string returnAddress = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearReturnAddress() {
+
+                returnAddress_ = getDefaultInstance().getReturnAddress();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string returnAddress = 3;</code>
+             * 
+             * @param value
+             *            The bytes for returnAddress to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setReturnAddressBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                returnAddress_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:AssetsGenesis)
+        }
+
+        // @@protoc_insertion_point(class_scope:AssetsGenesis)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<AssetsGenesis> PARSER = new com.google.protobuf.AbstractParser<AssetsGenesis>() {
+            @java.lang.Override
+            public AssetsGenesis parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new AssetsGenesis(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<AssetsGenesis> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<AssetsGenesis> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsGenesis getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder.class);
+    public interface AssetsTransferToExecOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:AssetsTransferToExec)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The cointoken.
+         */
+        java.lang.String getCointoken();
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The bytes for cointoken.
+         */
+        com.google.protobuf.ByteString getCointokenBytes();
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        long getAmount();
+
+        /**
+         * <code>bytes note = 3;</code>
+         * 
+         * @return The note.
+         */
+        com.google.protobuf.ByteString getNote();
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The execName.
+         */
+        java.lang.String getExecName();
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The bytes for execName.
+         */
+        com.google.protobuf.ByteString getExecNameBytes();
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The to.
+         */
+        java.lang.String getTo();
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The bytes for to.
+         */
+        com.google.protobuf.ByteString getToBytes();
     }
 
-    public static final int COINTOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object cointoken_;
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The cointoken.
-     */
-    public java.lang.String getCointoken() {
-      java.lang.Object ref = cointoken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cointoken_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The bytes for cointoken.
-     */
-    public com.google.protobuf.ByteString
-        getCointokenBytes() {
-      java.lang.Object ref = cointoken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cointoken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    public static final int NOTE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString note_;
-    /**
-     * <code>bytes note = 3;</code>
-     * @return The note.
-     */
-    public com.google.protobuf.ByteString getNote() {
-      return note_;
-    }
-
-    public static final int EXECNAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object execName_;
-    /**
-     * <code>string execName = 4;</code>
-     * @return The execName.
-     */
-    public java.lang.String getExecName() {
-      java.lang.Object ref = execName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        execName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string execName = 4;</code>
-     * @return The bytes for execName.
-     */
-    public com.google.protobuf.ByteString
-        getExecNameBytes() {
-      java.lang.Object ref = execName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        execName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TO_FIELD_NUMBER = 5;
-    private volatile java.lang.Object to_;
-    /**
-     * <code>string to = 5;</code>
-     * @return The to.
-     */
-    public java.lang.String getTo() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        to_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string to = 5;</code>
-     * @return The bytes for to.
-     */
-    public com.google.protobuf.ByteString
-        getToBytes() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        to_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getCointokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cointoken_);
-      }
-      if (amount_ != 0L) {
-        output.writeInt64(2, amount_);
-      }
-      if (!note_.isEmpty()) {
-        output.writeBytes(3, note_);
-      }
-      if (!getExecNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, execName_);
-      }
-      if (!getToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, to_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getCointokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cointoken_);
-      }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, amount_);
-      }
-      if (!note_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, note_);
-      }
-      if (!getExecNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, execName_);
-      }
-      if (!getToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, to_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) obj;
-
-      if (!getCointoken()
-          .equals(other.getCointoken())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!getNote()
-          .equals(other.getNote())) return false;
-      if (!getExecName()
-          .equals(other.getExecName())) return false;
-      if (!getTo()
-          .equals(other.getTo())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COINTOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getCointoken().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (37 * hash) + NOTE_FIELD_NUMBER;
-      hash = (53 * hash) + getNote().hashCode();
-      hash = (37 * hash) + EXECNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getExecName().hashCode();
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code AssetsTransferToExec}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AssetsTransferToExec)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_descriptor;
-      }
+    public static final class AssetsTransferToExec extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:AssetsTransferToExec)
+            AssetsTransferToExecOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use AssetsTransferToExec.newBuilder() to construct.
+        private AssetsTransferToExec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        cointoken_ = "";
 
-        amount_ = 0L;
-
-        note_ = com.google.protobuf.ByteString.EMPTY;
-
-        execName_ = "";
-
-        to_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private AssetsTransferToExec() {
+            cointoken_ = "";
+            note_ = com.google.protobuf.ByteString.EMPTY;
+            execName_ = "";
+            to_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec(this);
-        result.cointoken_ = cointoken_;
-        result.amount_ = amount_;
-        result.note_ = note_;
-        result.execName_ = execName_;
-        result.to_ = to_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new AssetsTransferToExec();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance()) return this;
-        if (!other.getCointoken().isEmpty()) {
-          cointoken_ = other.cointoken_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
-        }
-        if (other.getNote() != com.google.protobuf.ByteString.EMPTY) {
-          setNote(other.getNote());
-        }
-        if (!other.getExecName().isEmpty()) {
-          execName_ = other.execName_;
-          onChanged();
-        }
-        if (!other.getTo().isEmpty()) {
-          to_ = other.to_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object cointoken_ = "";
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return The cointoken.
-       */
-      public java.lang.String getCointoken() {
-        java.lang.Object ref = cointoken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cointoken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return The bytes for cointoken.
-       */
-      public com.google.protobuf.ByteString
-          getCointokenBytes() {
-        java.lang.Object ref = cointoken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cointoken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @param value The cointoken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCointoken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cointoken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCointoken() {
-        
-        cointoken_ = getDefaultInstance().getCointoken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @param value The bytes for cointoken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCointokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cointoken_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long amount_ ;
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString note_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes note = 3;</code>
-       * @return The note.
-       */
-      public com.google.protobuf.ByteString getNote() {
-        return note_;
-      }
-      /**
-       * <code>bytes note = 3;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNote(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        note_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes note = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNote() {
-        
-        note_ = getDefaultInstance().getNote();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object execName_ = "";
-      /**
-       * <code>string execName = 4;</code>
-       * @return The execName.
-       */
-      public java.lang.String getExecName() {
-        java.lang.Object ref = execName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          execName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @return The bytes for execName.
-       */
-      public com.google.protobuf.ByteString
-          getExecNameBytes() {
-        java.lang.Object ref = execName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          execName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @param value The execName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExecName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        execName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExecName() {
-        
-        execName_ = getDefaultInstance().getExecName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @param value The bytes for execName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExecNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        execName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object to_ = "";
-      /**
-       * <code>string to = 5;</code>
-       * @return The to.
-       */
-      public java.lang.String getTo() {
-        java.lang.Object ref = to_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          to_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @return The bytes for to.
-       */
-      public com.google.protobuf.ByteString
-          getToBytes() {
-        java.lang.Object ref = to_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          to_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @param value The to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTo() {
-        
-        to_ = getDefaultInstance().getTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @param value The bytes for to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:AssetsTransferToExec)
-    }
-
-    // @@protoc_insertion_point(class_scope:AssetsTransferToExec)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AssetsTransferToExec>
-        PARSER = new com.google.protobuf.AbstractParser<AssetsTransferToExec>() {
-      @java.lang.Override
-      public AssetsTransferToExec parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AssetsTransferToExec(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AssetsTransferToExec> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AssetsTransferToExec> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AssetsWithdrawOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AssetsWithdraw)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The cointoken.
-     */
-    java.lang.String getCointoken();
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The bytes for cointoken.
-     */
-    com.google.protobuf.ByteString
-        getCointokenBytes();
-
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-
-    /**
-     * <code>bytes note = 3;</code>
-     * @return The note.
-     */
-    com.google.protobuf.ByteString getNote();
-
-    /**
-     * <code>string execName = 4;</code>
-     * @return The execName.
-     */
-    java.lang.String getExecName();
-    /**
-     * <code>string execName = 4;</code>
-     * @return The bytes for execName.
-     */
-    com.google.protobuf.ByteString
-        getExecNameBytes();
-
-    /**
-     * <code>string to = 5;</code>
-     * @return The to.
-     */
-    java.lang.String getTo();
-    /**
-     * <code>string to = 5;</code>
-     * @return The bytes for to.
-     */
-    com.google.protobuf.ByteString
-        getToBytes();
-  }
-  /**
-   * Protobuf type {@code AssetsWithdraw}
-   */
-  public  static final class AssetsWithdraw extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AssetsWithdraw)
-      AssetsWithdrawOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AssetsWithdraw.newBuilder() to construct.
-    private AssetsWithdraw(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AssetsWithdraw() {
-      cointoken_ = "";
-      note_ = com.google.protobuf.ByteString.EMPTY;
-      execName_ = "";
-      to_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AssetsWithdraw();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AssetsWithdraw(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cointoken_ = s;
-              break;
+        private AssetsTransferToExec(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 16: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readInt64();
-              break;
-            }
-            case 26: {
+                        cointoken_ = s;
+                        break;
+                    }
+                    case 16: {
 
-              note_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        amount_ = input.readInt64();
+                        break;
+                    }
+                    case 26: {
 
-              execName_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        note_ = input.readBytes();
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              to_ = s;
-              break;
+                        execName_ = s;
+                        break;
+                    }
+                    case 42: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        to_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder.class);
+        }
+
+        public static final int COINTOKEN_FIELD_NUMBER = 1;
+        private volatile java.lang.Object cointoken_;
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The cointoken.
+         */
+        public java.lang.String getCointoken() {
+            java.lang.Object ref = cointoken_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                cointoken_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The bytes for cointoken.
+         */
+        public com.google.protobuf.ByteString getCointokenBytes() {
+            java.lang.Object ref = cointoken_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                cointoken_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int AMOUNT_FIELD_NUMBER = 2;
+        private long amount_;
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        public long getAmount() {
+            return amount_;
+        }
+
+        public static final int NOTE_FIELD_NUMBER = 3;
+        private com.google.protobuf.ByteString note_;
+
+        /**
+         * <code>bytes note = 3;</code>
+         * 
+         * @return The note.
+         */
+        public com.google.protobuf.ByteString getNote() {
+            return note_;
+        }
+
+        public static final int EXECNAME_FIELD_NUMBER = 4;
+        private volatile java.lang.Object execName_;
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The execName.
+         */
+        public java.lang.String getExecName() {
+            java.lang.Object ref = execName_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                execName_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The bytes for execName.
+         */
+        public com.google.protobuf.ByteString getExecNameBytes() {
+            java.lang.Object ref = execName_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                execName_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int TO_FIELD_NUMBER = 5;
+        private volatile java.lang.Object to_;
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The to.
+         */
+        public java.lang.String getTo() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                to_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The bytes for to.
+         */
+        public com.google.protobuf.ByteString getToBytes() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                to_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getCointokenBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cointoken_);
+            }
+            if (amount_ != 0L) {
+                output.writeInt64(2, amount_);
+            }
+            if (!note_.isEmpty()) {
+                output.writeBytes(3, note_);
+            }
+            if (!getExecNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, execName_);
+            }
+            if (!getToBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 5, to_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getCointokenBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cointoken_);
+            }
+            if (amount_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, amount_);
+            }
+            if (!note_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(3, note_);
+            }
+            if (!getExecNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, execName_);
+            }
+            if (!getToBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, to_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) obj;
+
+            if (!getCointoken().equals(other.getCointoken()))
+                return false;
+            if (getAmount() != other.getAmount())
+                return false;
+            if (!getNote().equals(other.getNote()))
+                return false;
+            if (!getExecName().equals(other.getExecName()))
+                return false;
+            if (!getTo().equals(other.getTo()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + COINTOKEN_FIELD_NUMBER;
+            hash = (53 * hash) + getCointoken().hashCode();
+            hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAmount());
+            hash = (37 * hash) + NOTE_FIELD_NUMBER;
+            hash = (53 * hash) + getNote().hashCode();
+            hash = (37 * hash) + EXECNAME_FIELD_NUMBER;
+            hash = (53 * hash) + getExecName().hashCode();
+            hash = (37 * hash) + TO_FIELD_NUMBER;
+            hash = (53 * hash) + getTo().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code AssetsTransferToExec}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:AssetsTransferToExec)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExecOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                cointoken_ = "";
+
+                amount_ = 0L;
+
+                note_ = com.google.protobuf.ByteString.EMPTY;
+
+                execName_ = "";
+
+                to_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransferToExec_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec(
+                        this);
+                result.cointoken_ = cointoken_;
+                result.amount_ = amount_;
+                result.note_ = note_;
+                result.execName_ = execName_;
+                result.to_ = to_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) {
+                    return mergeFrom(
+                            (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec
+                        .getDefaultInstance())
+                    return this;
+                if (!other.getCointoken().isEmpty()) {
+                    cointoken_ = other.cointoken_;
+                    onChanged();
+                }
+                if (other.getAmount() != 0L) {
+                    setAmount(other.getAmount());
+                }
+                if (other.getNote() != com.google.protobuf.ByteString.EMPTY) {
+                    setNote(other.getNote());
+                }
+                if (!other.getExecName().isEmpty()) {
+                    execName_ = other.execName_;
+                    onChanged();
+                }
+                if (!other.getTo().isEmpty()) {
+                    to_ = other.to_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object cointoken_ = "";
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return The cointoken.
+             */
+            public java.lang.String getCointoken() {
+                java.lang.Object ref = cointoken_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    cointoken_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return The bytes for cointoken.
+             */
+            public com.google.protobuf.ByteString getCointokenBytes() {
+                java.lang.Object ref = cointoken_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    cointoken_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @param value
+             *            The cointoken to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCointoken(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                cointoken_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCointoken() {
+
+                cointoken_ = getDefaultInstance().getCointoken();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @param value
+             *            The bytes for cointoken to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCointokenBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                cointoken_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long amount_;
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return The amount.
+             */
+            public long getAmount() {
+                return amount_;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @param value
+             *            The amount to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setAmount(long value) {
+
+                amount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearAmount() {
+
+                amount_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString note_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @return The note.
+             */
+            public com.google.protobuf.ByteString getNote() {
+                return note_;
+            }
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @param value
+             *            The note to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNote(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                note_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearNote() {
+
+                note_ = getDefaultInstance().getNote();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object execName_ = "";
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @return The execName.
+             */
+            public java.lang.String getExecName() {
+                java.lang.Object ref = execName_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    execName_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @return The bytes for execName.
+             */
+            public com.google.protobuf.ByteString getExecNameBytes() {
+                java.lang.Object ref = execName_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    execName_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @param value
+             *            The execName to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setExecName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                execName_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearExecName() {
+
+                execName_ = getDefaultInstance().getExecName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @param value
+             *            The bytes for execName to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setExecNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                execName_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object to_ = "";
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @return The to.
+             */
+            public java.lang.String getTo() {
+                java.lang.Object ref = to_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    to_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @return The bytes for to.
+             */
+            public com.google.protobuf.ByteString getToBytes() {
+                java.lang.Object ref = to_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    to_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @param value
+             *            The to to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setTo(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearTo() {
+
+                to_ = getDefaultInstance().getTo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @param value
+             *            The bytes for to to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setToBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:AssetsTransferToExec)
+        }
+
+        // @@protoc_insertion_point(class_scope:AssetsTransferToExec)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<AssetsTransferToExec> PARSER = new com.google.protobuf.AbstractParser<AssetsTransferToExec>() {
+            @java.lang.Override
+            public AssetsTransferToExec parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new AssetsTransferToExec(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<AssetsTransferToExec> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<AssetsTransferToExec> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferToExec getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder.class);
+    public interface AssetsWithdrawOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:AssetsWithdraw)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The cointoken.
+         */
+        java.lang.String getCointoken();
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The bytes for cointoken.
+         */
+        com.google.protobuf.ByteString getCointokenBytes();
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        long getAmount();
+
+        /**
+         * <code>bytes note = 3;</code>
+         * 
+         * @return The note.
+         */
+        com.google.protobuf.ByteString getNote();
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The execName.
+         */
+        java.lang.String getExecName();
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The bytes for execName.
+         */
+        com.google.protobuf.ByteString getExecNameBytes();
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The to.
+         */
+        java.lang.String getTo();
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The bytes for to.
+         */
+        com.google.protobuf.ByteString getToBytes();
     }
 
-    public static final int COINTOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object cointoken_;
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The cointoken.
-     */
-    public java.lang.String getCointoken() {
-      java.lang.Object ref = cointoken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cointoken_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The bytes for cointoken.
-     */
-    public com.google.protobuf.ByteString
-        getCointokenBytes() {
-      java.lang.Object ref = cointoken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cointoken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    public static final int NOTE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString note_;
-    /**
-     * <code>bytes note = 3;</code>
-     * @return The note.
-     */
-    public com.google.protobuf.ByteString getNote() {
-      return note_;
-    }
-
-    public static final int EXECNAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object execName_;
-    /**
-     * <code>string execName = 4;</code>
-     * @return The execName.
-     */
-    public java.lang.String getExecName() {
-      java.lang.Object ref = execName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        execName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string execName = 4;</code>
-     * @return The bytes for execName.
-     */
-    public com.google.protobuf.ByteString
-        getExecNameBytes() {
-      java.lang.Object ref = execName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        execName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TO_FIELD_NUMBER = 5;
-    private volatile java.lang.Object to_;
-    /**
-     * <code>string to = 5;</code>
-     * @return The to.
-     */
-    public java.lang.String getTo() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        to_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string to = 5;</code>
-     * @return The bytes for to.
-     */
-    public com.google.protobuf.ByteString
-        getToBytes() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        to_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getCointokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cointoken_);
-      }
-      if (amount_ != 0L) {
-        output.writeInt64(2, amount_);
-      }
-      if (!note_.isEmpty()) {
-        output.writeBytes(3, note_);
-      }
-      if (!getExecNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, execName_);
-      }
-      if (!getToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, to_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getCointokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cointoken_);
-      }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, amount_);
-      }
-      if (!note_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, note_);
-      }
-      if (!getExecNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, execName_);
-      }
-      if (!getToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, to_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) obj;
-
-      if (!getCointoken()
-          .equals(other.getCointoken())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!getNote()
-          .equals(other.getNote())) return false;
-      if (!getExecName()
-          .equals(other.getExecName())) return false;
-      if (!getTo()
-          .equals(other.getTo())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COINTOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getCointoken().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (37 * hash) + NOTE_FIELD_NUMBER;
-      hash = (53 * hash) + getNote().hashCode();
-      hash = (37 * hash) + EXECNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getExecName().hashCode();
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code AssetsWithdraw}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AssetsWithdraw)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_descriptor;
-      }
+    public static final class AssetsWithdraw extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:AssetsWithdraw)
+            AssetsWithdrawOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use AssetsWithdraw.newBuilder() to construct.
+        private AssetsWithdraw(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        cointoken_ = "";
 
-        amount_ = 0L;
-
-        note_ = com.google.protobuf.ByteString.EMPTY;
-
-        execName_ = "";
-
-        to_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private AssetsWithdraw() {
+            cointoken_ = "";
+            note_ = com.google.protobuf.ByteString.EMPTY;
+            execName_ = "";
+            to_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw(this);
-        result.cointoken_ = cointoken_;
-        result.amount_ = amount_;
-        result.note_ = note_;
-        result.execName_ = execName_;
-        result.to_ = to_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new AssetsWithdraw();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance()) return this;
-        if (!other.getCointoken().isEmpty()) {
-          cointoken_ = other.cointoken_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
-        }
-        if (other.getNote() != com.google.protobuf.ByteString.EMPTY) {
-          setNote(other.getNote());
-        }
-        if (!other.getExecName().isEmpty()) {
-          execName_ = other.execName_;
-          onChanged();
-        }
-        if (!other.getTo().isEmpty()) {
-          to_ = other.to_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object cointoken_ = "";
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return The cointoken.
-       */
-      public java.lang.String getCointoken() {
-        java.lang.Object ref = cointoken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cointoken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return The bytes for cointoken.
-       */
-      public com.google.protobuf.ByteString
-          getCointokenBytes() {
-        java.lang.Object ref = cointoken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cointoken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @param value The cointoken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCointoken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cointoken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCointoken() {
-        
-        cointoken_ = getDefaultInstance().getCointoken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @param value The bytes for cointoken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCointokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cointoken_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long amount_ ;
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString note_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes note = 3;</code>
-       * @return The note.
-       */
-      public com.google.protobuf.ByteString getNote() {
-        return note_;
-      }
-      /**
-       * <code>bytes note = 3;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNote(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        note_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes note = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNote() {
-        
-        note_ = getDefaultInstance().getNote();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object execName_ = "";
-      /**
-       * <code>string execName = 4;</code>
-       * @return The execName.
-       */
-      public java.lang.String getExecName() {
-        java.lang.Object ref = execName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          execName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @return The bytes for execName.
-       */
-      public com.google.protobuf.ByteString
-          getExecNameBytes() {
-        java.lang.Object ref = execName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          execName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @param value The execName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExecName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        execName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExecName() {
-        
-        execName_ = getDefaultInstance().getExecName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string execName = 4;</code>
-       * @param value The bytes for execName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExecNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        execName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object to_ = "";
-      /**
-       * <code>string to = 5;</code>
-       * @return The to.
-       */
-      public java.lang.String getTo() {
-        java.lang.Object ref = to_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          to_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @return The bytes for to.
-       */
-      public com.google.protobuf.ByteString
-          getToBytes() {
-        java.lang.Object ref = to_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          to_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @param value The to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTo() {
-        
-        to_ = getDefaultInstance().getTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 5;</code>
-       * @param value The bytes for to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:AssetsWithdraw)
-    }
-
-    // @@protoc_insertion_point(class_scope:AssetsWithdraw)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw();
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AssetsWithdraw>
-        PARSER = new com.google.protobuf.AbstractParser<AssetsWithdraw>() {
-      @java.lang.Override
-      public AssetsWithdraw parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AssetsWithdraw(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AssetsWithdraw> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AssetsWithdraw> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AssetsTransferOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AssetsTransfer)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The cointoken.
-     */
-    java.lang.String getCointoken();
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The bytes for cointoken.
-     */
-    com.google.protobuf.ByteString
-        getCointokenBytes();
-
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    long getAmount();
-
-    /**
-     * <code>bytes note = 3;</code>
-     * @return The note.
-     */
-    com.google.protobuf.ByteString getNote();
-
-    /**
-     * <code>string to = 4;</code>
-     * @return The to.
-     */
-    java.lang.String getTo();
-    /**
-     * <code>string to = 4;</code>
-     * @return The bytes for to.
-     */
-    com.google.protobuf.ByteString
-        getToBytes();
-  }
-  /**
-   * Protobuf type {@code AssetsTransfer}
-   */
-  public  static final class AssetsTransfer extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AssetsTransfer)
-      AssetsTransferOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AssetsTransfer.newBuilder() to construct.
-    private AssetsTransfer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AssetsTransfer() {
-      cointoken_ = "";
-      note_ = com.google.protobuf.ByteString.EMPTY;
-      to_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AssetsTransfer();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AssetsTransfer(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cointoken_ = s;
-              break;
+        private AssetsWithdraw(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
             }
-            case 16: {
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readInt64();
-              break;
-            }
-            case 26: {
+                        cointoken_ = s;
+                        break;
+                    }
+                    case 16: {
 
-              note_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+                        amount_ = input.readInt64();
+                        break;
+                    }
+                    case 26: {
 
-              to_ = s;
-              break;
+                        note_ = input.readBytes();
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        execName_ = s;
+                        break;
+                    }
+                    case 42: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        to_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_descriptor;
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder.class);
+        }
+
+        public static final int COINTOKEN_FIELD_NUMBER = 1;
+        private volatile java.lang.Object cointoken_;
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The cointoken.
+         */
+        public java.lang.String getCointoken() {
+            java.lang.Object ref = cointoken_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                cointoken_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The bytes for cointoken.
+         */
+        public com.google.protobuf.ByteString getCointokenBytes() {
+            java.lang.Object ref = cointoken_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                cointoken_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int AMOUNT_FIELD_NUMBER = 2;
+        private long amount_;
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        public long getAmount() {
+            return amount_;
+        }
+
+        public static final int NOTE_FIELD_NUMBER = 3;
+        private com.google.protobuf.ByteString note_;
+
+        /**
+         * <code>bytes note = 3;</code>
+         * 
+         * @return The note.
+         */
+        public com.google.protobuf.ByteString getNote() {
+            return note_;
+        }
+
+        public static final int EXECNAME_FIELD_NUMBER = 4;
+        private volatile java.lang.Object execName_;
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The execName.
+         */
+        public java.lang.String getExecName() {
+            java.lang.Object ref = execName_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                execName_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string execName = 4;</code>
+         * 
+         * @return The bytes for execName.
+         */
+        public com.google.protobuf.ByteString getExecNameBytes() {
+            java.lang.Object ref = execName_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                execName_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public static final int TO_FIELD_NUMBER = 5;
+        private volatile java.lang.Object to_;
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The to.
+         */
+        public java.lang.String getTo() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                to_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string to = 5;</code>
+         * 
+         * @return The bytes for to.
+         */
+        public com.google.protobuf.ByteString getToBytes() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                to_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getCointokenBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cointoken_);
+            }
+            if (amount_ != 0L) {
+                output.writeInt64(2, amount_);
+            }
+            if (!note_.isEmpty()) {
+                output.writeBytes(3, note_);
+            }
+            if (!getExecNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, execName_);
+            }
+            if (!getToBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 5, to_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getCointokenBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cointoken_);
+            }
+            if (amount_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, amount_);
+            }
+            if (!note_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(3, note_);
+            }
+            if (!getExecNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, execName_);
+            }
+            if (!getToBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, to_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) obj;
+
+            if (!getCointoken().equals(other.getCointoken()))
+                return false;
+            if (getAmount() != other.getAmount())
+                return false;
+            if (!getNote().equals(other.getNote()))
+                return false;
+            if (!getExecName().equals(other.getExecName()))
+                return false;
+            if (!getTo().equals(other.getTo()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + COINTOKEN_FIELD_NUMBER;
+            hash = (53 * hash) + getCointoken().hashCode();
+            hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAmount());
+            hash = (37 * hash) + NOTE_FIELD_NUMBER;
+            hash = (53 * hash) + getNote().hashCode();
+            hash = (37 * hash) + EXECNAME_FIELD_NUMBER;
+            hash = (53 * hash) + getExecName().hashCode();
+            hash = (37 * hash) + TO_FIELD_NUMBER;
+            hash = (53 * hash) + getTo().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code AssetsWithdraw}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:AssetsWithdraw)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdrawOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                cointoken_ = "";
+
+                amount_ = 0L;
+
+                note_ = com.google.protobuf.ByteString.EMPTY;
+
+                execName_ = "";
+
+                to_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsWithdraw_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw(
+                        this);
+                result.cointoken_ = cointoken_;
+                result.amount_ = amount_;
+                result.note_ = note_;
+                result.execName_ = execName_;
+                result.to_ = to_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw.getDefaultInstance())
+                    return this;
+                if (!other.getCointoken().isEmpty()) {
+                    cointoken_ = other.cointoken_;
+                    onChanged();
+                }
+                if (other.getAmount() != 0L) {
+                    setAmount(other.getAmount());
+                }
+                if (other.getNote() != com.google.protobuf.ByteString.EMPTY) {
+                    setNote(other.getNote());
+                }
+                if (!other.getExecName().isEmpty()) {
+                    execName_ = other.execName_;
+                    onChanged();
+                }
+                if (!other.getTo().isEmpty()) {
+                    to_ = other.to_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object cointoken_ = "";
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return The cointoken.
+             */
+            public java.lang.String getCointoken() {
+                java.lang.Object ref = cointoken_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    cointoken_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return The bytes for cointoken.
+             */
+            public com.google.protobuf.ByteString getCointokenBytes() {
+                java.lang.Object ref = cointoken_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    cointoken_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @param value
+             *            The cointoken to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCointoken(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                cointoken_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCointoken() {
+
+                cointoken_ = getDefaultInstance().getCointoken();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @param value
+             *            The bytes for cointoken to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCointokenBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                cointoken_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long amount_;
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return The amount.
+             */
+            public long getAmount() {
+                return amount_;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @param value
+             *            The amount to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setAmount(long value) {
+
+                amount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearAmount() {
+
+                amount_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString note_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @return The note.
+             */
+            public com.google.protobuf.ByteString getNote() {
+                return note_;
+            }
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @param value
+             *            The note to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNote(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                note_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearNote() {
+
+                note_ = getDefaultInstance().getNote();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object execName_ = "";
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @return The execName.
+             */
+            public java.lang.String getExecName() {
+                java.lang.Object ref = execName_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    execName_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @return The bytes for execName.
+             */
+            public com.google.protobuf.ByteString getExecNameBytes() {
+                java.lang.Object ref = execName_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    execName_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @param value
+             *            The execName to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setExecName(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                execName_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearExecName() {
+
+                execName_ = getDefaultInstance().getExecName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string execName = 4;</code>
+             * 
+             * @param value
+             *            The bytes for execName to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setExecNameBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                execName_ = value;
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object to_ = "";
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @return The to.
+             */
+            public java.lang.String getTo() {
+                java.lang.Object ref = to_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    to_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @return The bytes for to.
+             */
+            public com.google.protobuf.ByteString getToBytes() {
+                java.lang.Object ref = to_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    to_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @param value
+             *            The to to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setTo(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearTo() {
+
+                to_ = getDefaultInstance().getTo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 5;</code>
+             * 
+             * @param value
+             *            The bytes for to to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setToBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:AssetsWithdraw)
+        }
+
+        // @@protoc_insertion_point(class_scope:AssetsWithdraw)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<AssetsWithdraw> PARSER = new com.google.protobuf.AbstractParser<AssetsWithdraw>() {
+            @java.lang.Override
+            public AssetsWithdraw parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new AssetsWithdraw(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<AssetsWithdraw> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<AssetsWithdraw> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsWithdraw getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder.class);
+    public interface AssetsTransferOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:AssetsTransfer)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The cointoken.
+         */
+        java.lang.String getCointoken();
+
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The bytes for cointoken.
+         */
+        com.google.protobuf.ByteString getCointokenBytes();
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        long getAmount();
+
+        /**
+         * <code>bytes note = 3;</code>
+         * 
+         * @return The note.
+         */
+        com.google.protobuf.ByteString getNote();
+
+        /**
+         * <code>string to = 4;</code>
+         * 
+         * @return The to.
+         */
+        java.lang.String getTo();
+
+        /**
+         * <code>string to = 4;</code>
+         * 
+         * @return The bytes for to.
+         */
+        com.google.protobuf.ByteString getToBytes();
     }
 
-    public static final int COINTOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object cointoken_;
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The cointoken.
-     */
-    public java.lang.String getCointoken() {
-      java.lang.Object ref = cointoken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cointoken_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cointoken = 1;</code>
-     * @return The bytes for cointoken.
-     */
-    public com.google.protobuf.ByteString
-        getCointokenBytes() {
-      java.lang.Object ref = cointoken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cointoken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 2;
-    private long amount_;
-    /**
-     * <code>int64 amount = 2;</code>
-     * @return The amount.
-     */
-    public long getAmount() {
-      return amount_;
-    }
-
-    public static final int NOTE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString note_;
-    /**
-     * <code>bytes note = 3;</code>
-     * @return The note.
-     */
-    public com.google.protobuf.ByteString getNote() {
-      return note_;
-    }
-
-    public static final int TO_FIELD_NUMBER = 4;
-    private volatile java.lang.Object to_;
-    /**
-     * <code>string to = 4;</code>
-     * @return The to.
-     */
-    public java.lang.String getTo() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        to_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string to = 4;</code>
-     * @return The bytes for to.
-     */
-    public com.google.protobuf.ByteString
-        getToBytes() {
-      java.lang.Object ref = to_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        to_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getCointokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cointoken_);
-      }
-      if (amount_ != 0L) {
-        output.writeInt64(2, amount_);
-      }
-      if (!note_.isEmpty()) {
-        output.writeBytes(3, note_);
-      }
-      if (!getToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, to_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getCointokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cointoken_);
-      }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, amount_);
-      }
-      if (!note_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, note_);
-      }
-      if (!getToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, to_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer)) {
-        return super.equals(obj);
-      }
-      cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) obj;
-
-      if (!getCointoken()
-          .equals(other.getCointoken())) return false;
-      if (getAmount()
-          != other.getAmount()) return false;
-      if (!getNote()
-          .equals(other.getNote())) return false;
-      if (!getTo()
-          .equals(other.getTo())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COINTOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getCointoken().hashCode();
-      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
-      hash = (37 * hash) + NOTE_FIELD_NUMBER;
-      hash = (53 * hash) + getNote().hashCode();
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code AssetsTransfer}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AssetsTransfer)
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_descriptor;
-      }
+    public static final class AssetsTransfer extends com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:AssetsTransfer)
+            AssetsTransferOrBuilder {
+        private static final long serialVersionUID = 0L;
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.class, cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder.class);
-      }
-
-      // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        // Use AssetsTransfer.newBuilder() to construct.
+        private AssetsTransfer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
         }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        cointoken_ = "";
 
-        amount_ = 0L;
-
-        note_ = com.google.protobuf.ByteString.EMPTY;
-
-        to_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_descriptor;
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getDefaultInstanceForType() {
-        return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer build() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private AssetsTransfer() {
+            cointoken_ = "";
+            note_ = com.google.protobuf.ByteString.EMPTY;
+            to_ = "";
         }
-        return result;
-      }
 
-      @java.lang.Override
-      public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer buildPartial() {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer(this);
-        result.cointoken_ = cointoken_;
-        result.amount_ = amount_;
-        result.note_ = note_;
-        result.to_ = to_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) {
-          return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        @java.lang.Override
+        @SuppressWarnings({ "unused" })
+        protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+            return new AssetsTransfer();
         }
-      }
 
-      public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer other) {
-        if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance()) return this;
-        if (!other.getCointoken().isEmpty()) {
-          cointoken_ = other.cointoken_;
-          onChanged();
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+            return this.unknownFields;
         }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
+
+        private AssetsTransfer(com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                    .newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        done = true;
+                        break;
+                    case 10: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        cointoken_ = s;
+                        break;
+                    }
+                    case 16: {
+
+                        amount_ = input.readInt64();
+                        break;
+                    }
+                    case 26: {
+
+                        note_ = input.readBytes();
+                        break;
+                    }
+                    case 34: {
+                        java.lang.String s = input.readStringRequireUtf8();
+
+                        to_ = s;
+                        break;
+                    }
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            done = true;
+                        }
+                        break;
+                    }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        if (other.getNote() != com.google.protobuf.ByteString.EMPTY) {
-          setNote(other.getNote());
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_descriptor;
         }
-        if (!other.getTo().isEmpty()) {
-          to_ = other.to_;
-          onChanged();
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+            return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.class,
+                            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder.class);
         }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
 
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
+        public static final int COINTOKEN_FIELD_NUMBER = 1;
+        private volatile java.lang.Object cointoken_;
 
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The cointoken.
+         */
+        public java.lang.String getCointoken() {
+            java.lang.Object ref = cointoken_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                cointoken_ = s;
+                return s;
+            }
         }
-        return this;
-      }
 
-      private java.lang.Object cointoken_ = "";
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return The cointoken.
-       */
-      public java.lang.String getCointoken() {
-        java.lang.Object ref = cointoken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cointoken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>string cointoken = 1;</code>
+         * 
+         * @return The bytes for cointoken.
+         */
+        public com.google.protobuf.ByteString getCointokenBytes() {
+            java.lang.Object ref = cointoken_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                cointoken_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
         }
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return The bytes for cointoken.
-       */
-      public com.google.protobuf.ByteString
-          getCointokenBytes() {
-        java.lang.Object ref = cointoken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cointoken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int AMOUNT_FIELD_NUMBER = 2;
+        private long amount_;
+
+        /**
+         * <code>int64 amount = 2;</code>
+         * 
+         * @return The amount.
+         */
+        public long getAmount() {
+            return amount_;
         }
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @param value The cointoken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCointoken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cointoken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCointoken() {
-        
-        cointoken_ = getDefaultInstance().getCointoken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cointoken = 1;</code>
-       * @param value The bytes for cointoken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCointokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cointoken_ = value;
-        onChanged();
-        return this;
-      }
 
-      private long amount_ ;
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return The amount.
-       */
-      public long getAmount() {
-        return amount_;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @param value The amount to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAmount(long value) {
-        
-        amount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 amount = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAmount() {
-        
-        amount_ = 0L;
-        onChanged();
-        return this;
-      }
+        public static final int NOTE_FIELD_NUMBER = 3;
+        private com.google.protobuf.ByteString note_;
 
-      private com.google.protobuf.ByteString note_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes note = 3;</code>
-       * @return The note.
-       */
-      public com.google.protobuf.ByteString getNote() {
-        return note_;
-      }
-      /**
-       * <code>bytes note = 3;</code>
-       * @param value The note to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNote(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        note_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes note = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNote() {
-        
-        note_ = getDefaultInstance().getNote();
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object to_ = "";
-      /**
-       * <code>string to = 4;</code>
-       * @return The to.
-       */
-      public java.lang.String getTo() {
-        java.lang.Object ref = to_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          to_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+        /**
+         * <code>bytes note = 3;</code>
+         * 
+         * @return The note.
+         */
+        public com.google.protobuf.ByteString getNote() {
+            return note_;
         }
-      }
-      /**
-       * <code>string to = 4;</code>
-       * @return The bytes for to.
-       */
-      public com.google.protobuf.ByteString
-          getToBytes() {
-        java.lang.Object ref = to_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          to_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+
+        public static final int TO_FIELD_NUMBER = 4;
+        private volatile java.lang.Object to_;
+
+        /**
+         * <code>string to = 4;</code>
+         * 
+         * @return The to.
+         */
+        public java.lang.String getTo() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                to_ = s;
+                return s;
+            }
         }
-      }
-      /**
-       * <code>string to = 4;</code>
-       * @param value The to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTo(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTo() {
-        
-        to_ = getDefaultInstance().getTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string to = 4;</code>
-       * @param value The bytes for to to set.
-       * @return This builder for chaining.
-       */
-      public Builder setToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
 
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
+        /**
+         * <code>string to = 4;</code>
+         * 
+         * @return The bytes for to.
+         */
+        public com.google.protobuf.ByteString getToBytes() {
+            java.lang.Object ref = to_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+                to_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
 
+        private byte memoizedIsInitialized = -1;
 
-      // @@protoc_insertion_point(builder_scope:AssetsTransfer)
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1)
+                return true;
+            if (isInitialized == 0)
+                return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            if (!getCointokenBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cointoken_);
+            }
+            if (amount_ != 0L) {
+                output.writeInt64(2, amount_);
+            }
+            if (!note_.isEmpty()) {
+                output.writeBytes(3, note_);
+            }
+            if (!getToBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, to_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (!getCointokenBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cointoken_);
+            }
+            if (amount_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream.computeInt64Size(2, amount_);
+            }
+            if (!note_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(3, note_);
+            }
+            if (!getToBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, to_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer)) {
+                return super.equals(obj);
+            }
+            cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer other = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) obj;
+
+            if (!getCointoken().equals(other.getCointoken()))
+                return false;
+            if (getAmount() != other.getAmount())
+                return false;
+            if (!getNote().equals(other.getNote()))
+                return false;
+            if (!getTo().equals(other.getTo()))
+                return false;
+            if (!unknownFields.equals(other.unknownFields))
+                return false;
+            return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + COINTOKEN_FIELD_NUMBER;
+            hash = (53 * hash) + getCointoken().hashCode();
+            hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getAmount());
+            hash = (37 * hash) + NOTE_FIELD_NUMBER;
+            hash = (53 * hash) + getNote().hashCode();
+            hash = (37 * hash) + TO_FIELD_NUMBER;
+            hash = (53 * hash) + getTo().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+                    extensionRegistry);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code AssetsTransfer}
+         */
+        public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:AssetsTransfer)
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransferOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.class,
+                                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.Builder.class);
+            }
+
+            // Construct using cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                cointoken_ = "";
+
+                amount_ = 0L;
+
+                note_ = com.google.protobuf.ByteString.EMPTY;
+
+                to_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.internal_static_AssetsTransfer_descriptor;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getDefaultInstanceForType() {
+                return cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer build() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer buildPartial() {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer result = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer(
+                        this);
+                result.cointoken_ = cointoken_;
+                result.amount_ = amount_;
+                result.note_ = note_;
+                result.to_ = to_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+                return super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+                    java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) {
+                    return mergeFrom((cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer other) {
+                if (other == cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer.getDefaultInstance())
+                    return this;
+                if (!other.getCointoken().isEmpty()) {
+                    cointoken_ = other.cointoken_;
+                    onChanged();
+                }
+                if (other.getAmount() != 0L) {
+                    setAmount(other.getAmount());
+                }
+                if (other.getNote() != com.google.protobuf.ByteString.EMPTY) {
+                    setNote(other.getNote());
+                }
+                if (!other.getTo().isEmpty()) {
+                    to_ = other.to_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer) e
+                            .getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private java.lang.Object cointoken_ = "";
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return The cointoken.
+             */
+            public java.lang.String getCointoken() {
+                java.lang.Object ref = cointoken_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    cointoken_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return The bytes for cointoken.
+             */
+            public com.google.protobuf.ByteString getCointokenBytes() {
+                java.lang.Object ref = cointoken_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    cointoken_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @param value
+             *            The cointoken to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCointoken(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                cointoken_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearCointoken() {
+
+                cointoken_ = getDefaultInstance().getCointoken();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string cointoken = 1;</code>
+             * 
+             * @param value
+             *            The bytes for cointoken to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setCointokenBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                cointoken_ = value;
+                onChanged();
+                return this;
+            }
+
+            private long amount_;
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return The amount.
+             */
+            public long getAmount() {
+                return amount_;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @param value
+             *            The amount to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setAmount(long value) {
+
+                amount_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>int64 amount = 2;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearAmount() {
+
+                amount_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private com.google.protobuf.ByteString note_ = com.google.protobuf.ByteString.EMPTY;
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @return The note.
+             */
+            public com.google.protobuf.ByteString getNote() {
+                return note_;
+            }
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @param value
+             *            The note to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setNote(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                note_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>bytes note = 3;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearNote() {
+
+                note_ = getDefaultInstance().getNote();
+                onChanged();
+                return this;
+            }
+
+            private java.lang.Object to_ = "";
+
+            /**
+             * <code>string to = 4;</code>
+             * 
+             * @return The to.
+             */
+            public java.lang.String getTo() {
+                java.lang.Object ref = to_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    to_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 4;</code>
+             * 
+             * @return The bytes for to.
+             */
+            public com.google.protobuf.ByteString getToBytes() {
+                java.lang.Object ref = to_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+                            .copyFromUtf8((java.lang.String) ref);
+                    to_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string to = 4;</code>
+             * 
+             * @param value
+             *            The to to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setTo(java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 4;</code>
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder clearTo() {
+
+                to_ = getDefaultInstance().getTo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string to = 4;</code>
+             * 
+             * @param value
+             *            The bytes for to to set.
+             * 
+             * @return This builder for chaining.
+             */
+            public Builder setToBytes(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+            // @@protoc_insertion_point(builder_scope:AssetsTransfer)
+        }
+
+        // @@protoc_insertion_point(class_scope:AssetsTransfer)
+        private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer DEFAULT_INSTANCE;
+        static {
+            DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer();
+        }
+
+        public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<AssetsTransfer> PARSER = new com.google.protobuf.AbstractParser<AssetsTransfer>() {
+            @java.lang.Override
+            public AssetsTransfer parsePartialFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new AssetsTransfer(input, extensionRegistry);
+            }
+        };
+
+        public static com.google.protobuf.Parser<AssetsTransfer> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<AssetsTransfer> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
     }
 
-    // @@protoc_insertion_point(class_scope:AssetsTransfer)
-    private static final cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_TokenAction_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_TokenAction_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_TokenPreCreate_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_TokenPreCreate_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_TokenFinishCreate_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_TokenFinishCreate_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_TokenRevokeCreate_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_TokenRevokeCreate_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_TokenMint_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_TokenMint_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_TokenBurn_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_TokenBurn_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_AssetsGenesis_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_AssetsGenesis_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_AssetsTransferToExec_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_AssetsTransferToExec_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_AssetsWithdraw_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_AssetsWithdraw_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor internal_static_AssetsTransfer_descriptor;
+    private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_AssetsTransfer_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
     static {
-      DEFAULT_INSTANCE = new cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer();
+        java.lang.String[] descriptorData = { "\n\013token.proto\"\217\003\n\013TokenAction\022)\n\016tokenPr"
+                + "eCreate\030\001 \001(\0132\017.TokenPreCreateH\000\022/\n\021toke"
+                + "nFinishCreate\030\002 \001(\0132\022.TokenFinishCreateH"
+                + "\000\022/\n\021tokenRevokeCreate\030\003 \001(\0132\022.TokenRevo"
+                + "keCreateH\000\022#\n\010transfer\030\004 \001(\0132\017.AssetsTra"
+                + "nsferH\000\022#\n\010withdraw\030\005 \001(\0132\017.AssetsWithdr"
+                + "awH\000\022!\n\007genesis\030\006 \001(\0132\016.AssetsGenesisH\000\022"
+                + "/\n\016transferToExec\030\010 \001(\0132\025.AssetsTransfer"
+                + "ToExecH\000\022\037\n\ttokenMint\030\t \001(\0132\n.TokenMintH"
+                + "\000\022\037\n\ttokenBurn\030\n \001(\0132\n.TokenBurnH\000\022\n\n\002Ty"
+                + "\030\007 \001(\005B\007\n\005value\"\203\001\n\016TokenPreCreate\022\014\n\004na"
+                + "me\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\024\n\014introduction"
+                + "\030\003 \001(\t\022\r\n\005total\030\004 \001(\003\022\r\n\005price\030\005 \001(\003\022\r\n\005"
+                + "owner\030\006 \001(\t\022\020\n\010category\030\007 \001(\005\"2\n\021TokenFi"
+                + "nishCreate\022\016\n\006symbol\030\001 \001(\t\022\r\n\005owner\030\002 \001("
+                + "\t\"2\n\021TokenRevokeCreate\022\016\n\006symbol\030\001 \001(\t\022\r"
+                + "\n\005owner\030\002 \001(\t\"+\n\tTokenMint\022\016\n\006symbol\030\001 \001"
+                + "(\t\022\016\n\006amount\030\002 \001(\003\"+\n\tTokenBurn\022\016\n\006symbo"
+                + "l\030\001 \001(\t\022\016\n\006amount\030\002 \001(\003\"6\n\rAssetsGenesis"
+                + "\022\016\n\006amount\030\002 \001(\003\022\025\n\rreturnAddress\030\003 \001(\t\""
+                + "e\n\024AssetsTransferToExec\022\021\n\tcointoken\030\001 \001"
+                + "(\t\022\016\n\006amount\030\002 \001(\003\022\014\n\004note\030\003 \001(\014\022\020\n\010exec"
+                + "Name\030\004 \001(\t\022\n\n\002to\030\005 \001(\t\"_\n\016AssetsWithdraw"
+                + "\022\021\n\tcointoken\030\001 \001(\t\022\016\n\006amount\030\002 \001(\003\022\014\n\004n"
+                + "ote\030\003 \001(\014\022\020\n\010execName\030\004 \001(\t\022\n\n\002to\030\005 \001(\t\""
+                + "M\n\016AssetsTransfer\022\021\n\tcointoken\030\001 \001(\t\022\016\n\006"
+                + "amount\030\002 \001(\003\022\014\n\004note\030\003 \001(\014\022\n\n\002to\030\004 \001(\tB8"
+                + "\n!cn.chain33.javasdk.model.protobufB\023Tok" + "enActionProtoBufb\006proto3" };
+        descriptor = com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {});
+        internal_static_TokenAction_descriptor = getDescriptor().getMessageTypes().get(0);
+        internal_static_TokenAction_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_TokenAction_descriptor,
+                new java.lang.String[] { "TokenPreCreate", "TokenFinishCreate", "TokenRevokeCreate", "Transfer",
+                        "Withdraw", "Genesis", "TransferToExec", "TokenMint", "TokenBurn", "Ty", "Value", });
+        internal_static_TokenPreCreate_descriptor = getDescriptor().getMessageTypes().get(1);
+        internal_static_TokenPreCreate_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_TokenPreCreate_descriptor,
+                new java.lang.String[] { "Name", "Symbol", "Introduction", "Total", "Price", "Owner", "Category", });
+        internal_static_TokenFinishCreate_descriptor = getDescriptor().getMessageTypes().get(2);
+        internal_static_TokenFinishCreate_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_TokenFinishCreate_descriptor, new java.lang.String[] { "Symbol", "Owner", });
+        internal_static_TokenRevokeCreate_descriptor = getDescriptor().getMessageTypes().get(3);
+        internal_static_TokenRevokeCreate_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_TokenRevokeCreate_descriptor, new java.lang.String[] { "Symbol", "Owner", });
+        internal_static_TokenMint_descriptor = getDescriptor().getMessageTypes().get(4);
+        internal_static_TokenMint_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_TokenMint_descriptor, new java.lang.String[] { "Symbol", "Amount", });
+        internal_static_TokenBurn_descriptor = getDescriptor().getMessageTypes().get(5);
+        internal_static_TokenBurn_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_TokenBurn_descriptor, new java.lang.String[] { "Symbol", "Amount", });
+        internal_static_AssetsGenesis_descriptor = getDescriptor().getMessageTypes().get(6);
+        internal_static_AssetsGenesis_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_AssetsGenesis_descriptor, new java.lang.String[] { "Amount", "ReturnAddress", });
+        internal_static_AssetsTransferToExec_descriptor = getDescriptor().getMessageTypes().get(7);
+        internal_static_AssetsTransferToExec_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_AssetsTransferToExec_descriptor,
+                new java.lang.String[] { "Cointoken", "Amount", "Note", "ExecName", "To", });
+        internal_static_AssetsWithdraw_descriptor = getDescriptor().getMessageTypes().get(8);
+        internal_static_AssetsWithdraw_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_AssetsWithdraw_descriptor,
+                new java.lang.String[] { "Cointoken", "Amount", "Note", "ExecName", "To", });
+        internal_static_AssetsTransfer_descriptor = getDescriptor().getMessageTypes().get(9);
+        internal_static_AssetsTransfer_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_AssetsTransfer_descriptor,
+                new java.lang.String[] { "Cointoken", "Amount", "Note", "To", });
     }
 
-    public static cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AssetsTransfer>
-        PARSER = new com.google.protobuf.AbstractParser<AssetsTransfer>() {
-      @java.lang.Override
-      public AssetsTransfer parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AssetsTransfer(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AssetsTransfer> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AssetsTransfer> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.AssetsTransfer getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TokenAction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TokenAction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TokenPreCreate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TokenPreCreate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TokenFinishCreate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TokenFinishCreate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TokenRevokeCreate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TokenRevokeCreate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TokenMint_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TokenMint_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_TokenBurn_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_TokenBurn_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AssetsGenesis_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AssetsGenesis_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AssetsTransferToExec_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AssetsTransferToExec_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AssetsWithdraw_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AssetsWithdraw_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AssetsTransfer_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AssetsTransfer_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\013token.proto\"\217\003\n\013TokenAction\022)\n\016tokenPr" +
-      "eCreate\030\001 \001(\0132\017.TokenPreCreateH\000\022/\n\021toke" +
-      "nFinishCreate\030\002 \001(\0132\022.TokenFinishCreateH" +
-      "\000\022/\n\021tokenRevokeCreate\030\003 \001(\0132\022.TokenRevo" +
-      "keCreateH\000\022#\n\010transfer\030\004 \001(\0132\017.AssetsTra" +
-      "nsferH\000\022#\n\010withdraw\030\005 \001(\0132\017.AssetsWithdr" +
-      "awH\000\022!\n\007genesis\030\006 \001(\0132\016.AssetsGenesisH\000\022" +
-      "/\n\016transferToExec\030\010 \001(\0132\025.AssetsTransfer" +
-      "ToExecH\000\022\037\n\ttokenMint\030\t \001(\0132\n.TokenMintH" +
-      "\000\022\037\n\ttokenBurn\030\n \001(\0132\n.TokenBurnH\000\022\n\n\002Ty" +
-      "\030\007 \001(\005B\007\n\005value\"\203\001\n\016TokenPreCreate\022\014\n\004na" +
-      "me\030\001 \001(\t\022\016\n\006symbol\030\002 \001(\t\022\024\n\014introduction" +
-      "\030\003 \001(\t\022\r\n\005total\030\004 \001(\003\022\r\n\005price\030\005 \001(\003\022\r\n\005" +
-      "owner\030\006 \001(\t\022\020\n\010category\030\007 \001(\005\"2\n\021TokenFi" +
-      "nishCreate\022\016\n\006symbol\030\001 \001(\t\022\r\n\005owner\030\002 \001(" +
-      "\t\"2\n\021TokenRevokeCreate\022\016\n\006symbol\030\001 \001(\t\022\r" +
-      "\n\005owner\030\002 \001(\t\"+\n\tTokenMint\022\016\n\006symbol\030\001 \001" +
-      "(\t\022\016\n\006amount\030\002 \001(\003\"+\n\tTokenBurn\022\016\n\006symbo" +
-      "l\030\001 \001(\t\022\016\n\006amount\030\002 \001(\003\"6\n\rAssetsGenesis" +
-      "\022\016\n\006amount\030\002 \001(\003\022\025\n\rreturnAddress\030\003 \001(\t\"" +
-      "e\n\024AssetsTransferToExec\022\021\n\tcointoken\030\001 \001" +
-      "(\t\022\016\n\006amount\030\002 \001(\003\022\014\n\004note\030\003 \001(\014\022\020\n\010exec" +
-      "Name\030\004 \001(\t\022\n\n\002to\030\005 \001(\t\"_\n\016AssetsWithdraw" +
-      "\022\021\n\tcointoken\030\001 \001(\t\022\016\n\006amount\030\002 \001(\003\022\014\n\004n" +
-      "ote\030\003 \001(\014\022\020\n\010execName\030\004 \001(\t\022\n\n\002to\030\005 \001(\t\"" +
-      "M\n\016AssetsTransfer\022\021\n\tcointoken\030\001 \001(\t\022\016\n\006" +
-      "amount\030\002 \001(\003\022\014\n\004note\030\003 \001(\014\022\n\n\002to\030\004 \001(\tB8" +
-      "\n!cn.chain33.javasdk.model.protobufB\023Tok" +
-      "enActionProtoBufb\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_TokenAction_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_TokenAction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TokenAction_descriptor,
-        new java.lang.String[] { "TokenPreCreate", "TokenFinishCreate", "TokenRevokeCreate", "Transfer", "Withdraw", "Genesis", "TransferToExec", "TokenMint", "TokenBurn", "Ty", "Value", });
-    internal_static_TokenPreCreate_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_TokenPreCreate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TokenPreCreate_descriptor,
-        new java.lang.String[] { "Name", "Symbol", "Introduction", "Total", "Price", "Owner", "Category", });
-    internal_static_TokenFinishCreate_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_TokenFinishCreate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TokenFinishCreate_descriptor,
-        new java.lang.String[] { "Symbol", "Owner", });
-    internal_static_TokenRevokeCreate_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_TokenRevokeCreate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TokenRevokeCreate_descriptor,
-        new java.lang.String[] { "Symbol", "Owner", });
-    internal_static_TokenMint_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_TokenMint_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TokenMint_descriptor,
-        new java.lang.String[] { "Symbol", "Amount", });
-    internal_static_TokenBurn_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_TokenBurn_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_TokenBurn_descriptor,
-        new java.lang.String[] { "Symbol", "Amount", });
-    internal_static_AssetsGenesis_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_AssetsGenesis_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AssetsGenesis_descriptor,
-        new java.lang.String[] { "Amount", "ReturnAddress", });
-    internal_static_AssetsTransferToExec_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_AssetsTransferToExec_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AssetsTransferToExec_descriptor,
-        new java.lang.String[] { "Cointoken", "Amount", "Note", "ExecName", "To", });
-    internal_static_AssetsWithdraw_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_AssetsWithdraw_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AssetsWithdraw_descriptor,
-        new java.lang.String[] { "Cointoken", "Amount", "Note", "ExecName", "To", });
-    internal_static_AssetsTransfer_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_AssetsTransfer_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AssetsTransfer_descriptor,
-        new java.lang.String[] { "Cointoken", "Amount", "Note", "To", });
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }

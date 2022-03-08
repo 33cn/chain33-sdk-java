@@ -4,7 +4,7 @@ import "transaction.proto";
 import "account.proto";
 
 option java_outer_classname = "WalletProtobuf";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 //钱包模块存贮的tx交易详细信息
 // 	 tx : tx交易信息

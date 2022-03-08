@@ -16,8 +16,8 @@ public class ConfigUtil {
     public static List<EquivalentAddressGroup> getNodes(String file) {
         List<EquivalentAddressGroup> addresses = new ArrayList<>();
         Properties properties = new Properties();
-        String filePath = System.getProperty("user.dir")+"/"+file;
-        try{
+        String filePath = System.getProperty("user.dir") + "/" + file;
+        try {
             InputStream in = new BufferedInputStream(new FileInputStream(filePath));
             properties.load(in);
             String[] ipList = properties.getProperty("targetURI").split(",");

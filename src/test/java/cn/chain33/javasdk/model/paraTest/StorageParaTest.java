@@ -17,223 +17,233 @@ import cn.chain33.javasdk.utils.StorageUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
- *	°üº¬ÄÚÈİ´æÖ¤, ¹şÏ£´æÖ¤,Á´½Ó´æÖ¤,ÒşË½´æÖ¤,·ÖÏíÒşË½´æÖ¤¼¸¸ö½Ó¿Ú£¨¹«Á´+Æ½ĞĞÁ´³¡¾°£©
+ * åŒ…å«å†…å®¹å­˜è¯, å“ˆå¸Œå­˜è¯,é“¾æ¥å­˜è¯,éšç§å­˜è¯,åˆ†äº«éšç§å­˜è¯å‡ ä¸ªæ¥å£ï¼ˆå…¬é“¾+å¹³è¡Œé“¾åœºæ™¯ï¼‰
+ * 
  * @author fkeit
  */
 public class StorageParaTest {
-	
-	// Æ½ĞĞÁ´IP
-	String ip = "Æ½ĞĞÁ´IP";
-	// Æ½ĞĞÁ´·şÎñ¶Ë¿Ú
-	int port = 8801;
+
+    // å¹³è¡Œé“¾IP
+    String ip = "å¹³è¡Œé“¾IP";
+    // å¹³è¡Œé“¾æœåŠ¡ç«¯å£
+    int port = 8801;
     RpcClient client = new RpcClient(ip, port);
-	    
-    String content = "ÒßÇé·¢Éúºó£¬NPO·¨ÈËÈÊĞÄ»áÁªºÏÈÕ±¾ºş±±×ÜÉÌ»áµÈËÄ¼Ò»ú¹¹µÚÒ»Ê±¼äÏòºş±±¾èÔù3800Ì×¶Å°î·À»¤·ş£¬°ü×°Ö½ÏäÉÏÓÃÖĞÎÄĞ´ÓĞ¡°ÆñÔ»ÎŞÒÂ£¬Óë×ÓÍ¬ÉÑ¡±¡£Õâ¾äÊ«´Ê³ö×Ô¡¶Ê«¾­¡¤ÇØ·ç¡¤ÎŞÒÂ¡·£¬·­Òë³É°×»°µÄÒâË¼ÊÇ¡°Ë­ËµÎÒÃÇÃ»ÒÂ´©£¿ÓëÄãÍ¬´©ÄÇÕ½È¹¡±¡£²»ÁÏ£¬Õâ¾äÊ«´ÊÔÚÉç½»Ã½ÌåÉÏÒı·¢ÈÈÒé£¬²»ÉÙÍøÃñÔŞÌ¾ÈÕ±¾ÈËµÄÎÄÑ§ÔìÒè¡£Êµ¼ÊÉÏ£¬NPO·¨ÈËÈÊĞÄ»áÊÇÒ»¼ÒÔÚÈÕ»ªÈË×éÖ¯£¬ÓÉÔÚÈÕ»òÓĞÁôÈÕ±³¾°µÄÒ½Ò©±£½¡´ÓÒµÕßÒÔ¼°Ïà¹Ø¹«Ë¾×é³ÉµÄĞÂÉú¹«Òæ×éÖ¯¡£NPO·¨ÈËÈÊĞÄ»áÊÂÎñ¾Ö¸æËß»·ÇòÊ±±¨-»·ÇòÍø¼ÇÕß£¬ÓÉÓÚµÚÒ»Åú¾èÔùÎï×ÊÊÇ·À»¤·ş£¬¡°ÆñÔ»ÎŞÒÂ£¬Óë×ÓÍ¬ÉÑ¡±Ç¡ºÃ¿ÉÒÔ±í´ïº£Íâ»ªÈË»ªÇÈÓëÒ»ÏßÒ½»¤ÈËÔ±¹²Í¬Õ½Ê¤²¡¶¾µÄÍ¬³ğµĞâéÖ®Çé£¬Á÷Â¶³ö¶ÔÍ¬°ûµÄÊØ»¤Ö®°®¡£";
-    
-		
+
+    String content = "ç–«æƒ…å‘ç”Ÿåï¼ŒNPOæ³•äººä»å¿ƒä¼šè”åˆæ—¥æœ¬æ¹–åŒ—æ€»å•†ä¼šç­‰å››å®¶æœºæ„ç¬¬ä¸€æ—¶é—´å‘æ¹–åŒ—æèµ 3800å¥—æœé‚¦é˜²æŠ¤æœï¼ŒåŒ…è£…çº¸ç®±ä¸Šç”¨ä¸­æ–‡å†™æœ‰â€œå²‚æ›°æ— è¡£ï¼Œä¸å­åŒè£³â€ã€‚è¿™å¥è¯—è¯å‡ºè‡ªã€Šè¯—ç»Â·ç§¦é£Â·æ— è¡£ã€‹ï¼Œç¿»è¯‘æˆç™½è¯çš„æ„æ€æ˜¯â€œè°è¯´æˆ‘ä»¬æ²¡è¡£ç©¿ï¼Ÿä¸ä½ åŒç©¿é‚£æˆ˜è£™â€ã€‚ä¸æ–™ï¼Œè¿™å¥è¯—è¯åœ¨ç¤¾äº¤åª’ä½“ä¸Šå¼•å‘çƒ­è®®ï¼Œä¸å°‘ç½‘æ°‘èµå¹æ—¥æœ¬äººçš„æ–‡å­¦é€ è¯£ã€‚å®é™…ä¸Šï¼ŒNPOæ³•äººä»å¿ƒä¼šæ˜¯ä¸€å®¶åœ¨æ—¥åäººç»„ç»‡ï¼Œç”±åœ¨æ—¥æˆ–æœ‰ç•™æ—¥èƒŒæ™¯çš„åŒ»è¯ä¿å¥ä»ä¸šè€…ä»¥åŠç›¸å…³å…¬å¸ç»„æˆçš„æ–°ç”Ÿå…¬ç›Šç»„ç»‡ã€‚NPOæ³•äººä»å¿ƒä¼šäº‹åŠ¡å±€å‘Šè¯‰ç¯çƒæ—¶æŠ¥-ç¯çƒç½‘è®°è€…ï¼Œç”±äºç¬¬ä¸€æ‰¹æèµ ç‰©èµ„æ˜¯é˜²æŠ¤æœï¼Œâ€œå²‚æ›°æ— è¡£ï¼Œä¸å­åŒè£³â€æ°å¥½å¯ä»¥è¡¨è¾¾æµ·å¤–åäººåä¾¨ä¸ä¸€çº¿åŒ»æŠ¤äººå‘˜å…±åŒæˆ˜èƒœç—…æ¯’çš„åŒä»‡æ•Œå¿¾ä¹‹æƒ…ï¼Œæµéœ²å‡ºå¯¹åŒèƒçš„å®ˆæŠ¤ä¹‹çˆ±ã€‚";
+
     /**
-     * ´ú¿ÛÄÚÈİ´æÖ¤£¬ÔÚĞèÒª½ÉÄÉÊÖĞø·ÑµÄÇé¿öÏÂ£¬¿ÉÒÔ²ÉÓÃ´ú¿ÛµÄ·½Ê½£¬ Êµ¼ÊµÄ´æÖ¤½»Ò×²»ĞèÒª½ÉÄÉÊÖĞø·Ñ£¬È«²¿Í¨¹ı´ú¿Û½»Ò×À´½ÉÄÉÊÖĞø·Ñ
+     * ä»£æ‰£å†…å®¹å­˜è¯ï¼Œåœ¨éœ€è¦ç¼´çº³æ‰‹ç»­è´¹çš„æƒ…å†µä¸‹ï¼Œå¯ä»¥é‡‡ç”¨ä»£æ‰£çš„æ–¹å¼ï¼Œ å®é™…çš„å­˜è¯äº¤æ˜“ä¸éœ€è¦ç¼´çº³æ‰‹ç»­è´¹ï¼Œå…¨éƒ¨é€šè¿‡ä»£æ‰£äº¤æ˜“æ¥ç¼´çº³æ‰‹ç»­è´¹
+     *
+     * ä»£æ‰£äº¤æ˜“æ¨¡å‹
      * 
-     * ´ú¿Û½»Ò×Ä£ĞÍ
-     * @throws IOException 
-     * @throws Exception 
+     * @throws IOException
+     * @throws Exception
      */
-	@Test
-	public void contentStoreNobalance() throws InterruptedException, IOException {
-	    // ´æÖ¤ÖÇÄÜºÏÔ¼µÄÃû³Æ£¬´ú¿ÛÇé¿öÏÂ£¬Òª´øÉÏÆ½ĞĞÁ´Ç°×º
-	    String execer = "user.p.evm.storage";
-	    // Êµ¼Ê½»Ò×Ç©ÃûÓÃµÄË½Ô¿
-	    String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-	    String contranctAddress = client.convertExectoAddr(execer);
-	    String txEncode = StorageUtil.createOnlyNotaryStorage(content.getBytes(), execer, privateKey, contranctAddress);
+    @Test
+    public void contentStoreNobalance() throws InterruptedException, IOException {
+        // å­˜è¯æ™ºèƒ½åˆçº¦çš„åç§°ï¼Œä»£æ‰£æƒ…å†µä¸‹ï¼Œè¦å¸¦ä¸Šå¹³è¡Œé“¾å‰ç¼€
+        String execer = "user.p.evm.storage";
+        // å®é™…äº¤æ˜“ç­¾åç”¨çš„ç§é’¥
+        String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+        String contranctAddress = client.convertExectoAddr(execer);
+        String txEncode = StorageUtil.createOnlyNotaryStorage(content.getBytes(), execer, privateKey, contranctAddress);
 
-	    String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
-	    // ½âÎö½»Ò×
-	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	    // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿
-	    String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
-	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
-	    String submitTransaction = client.submitTransaction(hexString);
-	    System.out.println("submitTransaction:" + submitTransaction);
+        String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+        // è§£æäº¤æ˜“
+        List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+        // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥
+        String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey,
+                withHoldPrivateKey);
+        String submitTransaction = client.submitTransaction(hexString);
+        System.out.println("submitTransaction:" + submitTransaction);
 
-		Thread.sleep(5000);
-		for (int tick = 0; tick < 5; tick++){
-			QueryTransactionResult result = client.queryTransaction(submitTransaction);
-			if(result == null) {
-				Thread.sleep(5000);
-				continue;
-			}
+        Thread.sleep(5000);
+        for (int tick = 0; tick < 5; tick++) {
+            QueryTransactionResult result = client.queryTransaction(submitTransaction);
+            if (result == null) {
+                Thread.sleep(5000);
+                continue;
+            }
 
-			System.out.println("next:" + result.getTx().getNext());
-			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-			System.out.println("ty:" + nextResult.getReceipt().getTyname());
-			break;
-		}
-	}
-	
-	/**
-	 * ¹şÏ£´æÖ¤Ä£ĞÍ£¬ÍÆ¼öÊ¹ÓÃsha256¹şÏ££¬ÏŞÖÆ256Î»µÃÕªÒªÖµ
-	 * @throws InterruptedException 
-	 * @throws IOException 
-	 */
-	@Test
-	public void hashStoreNobalance() throws InterruptedException, IOException {
-		// ´æÖ¤ÖÇÄÜºÏÔ¼µÄÃû³Æ
-	    String execer = "user.p.evm.storage";
-		// Ç©ÃûÓÃµÄË½Ô¿
-		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-	    String contranctAddress = client.convertExectoAddr(execer);
-		byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
-		String txEncode = StorageUtil.createHashStorage(contentHash, execer, privateKey, contranctAddress);
-		
-	    String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
-	    // ½âÎö½»Ò×
-	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	    // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿
-	    String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
-	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
-	    String submitTransaction = client.submitTransaction(hexString);
-	    System.out.println("submitTransaction:" + submitTransaction);
+            System.out.println("next:" + result.getTx().getNext());
+            QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+            System.out.println("ty:" + nextResult.getReceipt().getTyname());
+            break;
+        }
+    }
 
-		Thread.sleep(5000);
-		for (int tick = 0; tick < 5; tick++){
-			QueryTransactionResult result = client.queryTransaction(submitTransaction);
-			if(result == null) {
-				Thread.sleep(5000);
-				continue;
-			}
-
-			System.out.println("next:" + result.getTx().getNext());
-			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-			System.out.println("ty:" + nextResult.getReceipt().getTyname());
-			break;
-		}
-		
-	}
-	
-	
-	 /**
-     * Á´½Ó´æÖ¤Ä£ĞÍ
-	 * @throws InterruptedException 
-	 * @throws IOException 
-     */
-	@Test
-	public void hashAndLinkStoreNobalance() throws InterruptedException, IOException {
-		// ´æÖ¤ÖÇÄÜºÏÔ¼µÄÃû³Æ
-		String execer = "user.p.evm.storage";
-		String contranctAddress = client.convertExectoAddr(execer);
-		// Ç©ÃûÓÃµÄË½Ô¿
-		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-		String link = "https://cs.33.cn/product?hash=13mBHrKBxGjoyzdej4bickPPPupejAGvXr";
-		byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
-		String txEncode = StorageUtil.createLinkNotaryStorage(link.getBytes(), contentHash, execer, privateKey, contranctAddress);
-
-		String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
-	    // ½âÎö½»Ò×
-	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	    // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿
-	    String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
-	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
-	    String submitTransaction = client.submitTransaction(hexString);
-	    System.out.println("submitTransaction:" + submitTransaction);
-
-		Thread.sleep(5000);
-		for (int tick = 0; tick < 5; tick++){
-			QueryTransactionResult result = client.queryTransaction(submitTransaction);
-			if(result == null) {
-				Thread.sleep(5000);
-				continue;
-			}
-
-			System.out.println("next:" + result.getTx().getNext());
-			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-			System.out.println("ty:" + nextResult.getReceipt().getTyname());
-			break;
-		}
-		
-	}
-	
     /**
-     * ÒşË½´æÖ¤Ä£ĞÍ
-     * @throws Exception 
+     * å“ˆå¸Œå­˜è¯æ¨¡å‹ï¼Œæ¨èä½¿ç”¨sha256å“ˆå¸Œï¼Œé™åˆ¶256ä½å¾—æ‘˜è¦å€¼
+     * 
+     * @throws InterruptedException
+     * @throws IOException
      */
-	@Test
-	public void EncryptNotaryStoreNobalance() throws Exception {
-		// ´æÖ¤ÖÇÄÜºÏÔ¼µÄÃû³Æ
-		String execer = "user.p.evm.storage";
-		String contranctAddress = client.convertExectoAddr(execer);
-		// Ç©ÃûÓÃµÄË½Ô¿
-		String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
-		
-		// Éú³ÉAES¼ÓÃÜKEY
-		String aesKeyHex = "ba940eabdf09ee0f37f8766841eee763";
-		//¿ÉÓÃ¸Ã·½·¨Éú³É AesUtil.generateDesKey(128);
-		byte[] key = HexUtil.fromHexString(aesKeyHex);
-		System.out.println("key:" + HexUtil.toHexString(key));
-		// Éú³Éiv
-		byte[] iv = AesUtil.generateIv();
-		// ¶ÔÃ÷ÎÄ½øĞĞ¼ÓÃÜ
-		byte[] encrypt = AesUtil.encrypt(content, key, iv);
-		String decrypt = AesUtil.decrypt(encrypt, HexUtil.toHexString(key));
-		System.out.println("decrypt:" + decrypt);
-		byte[] contentHash = TransactionUtil.Sha256(content.getBytes("utf-8"));
-		String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt,contentHash, iv, "", "", execer, privateKey, contranctAddress);
+    @Test
+    public void hashStoreNobalance() throws InterruptedException, IOException {
+        // å­˜è¯æ™ºèƒ½åˆçº¦çš„åç§°
+        String execer = "user.p.evm.storage";
+        // ç­¾åç”¨çš„ç§é’¥
+        String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+        String contranctAddress = client.convertExectoAddr(execer);
+        byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
+        String txEncode = StorageUtil.createHashStorage(contentHash, execer, privateKey, contranctAddress);
 
-		String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
-	    // ½âÎö½»Ò×
-	    List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-	    // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿
-	    String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
-	    String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey, withHoldPrivateKey);
-	    String submitTransaction = client.submitTransaction(hexString);
-	    System.out.println("submitTransaction:" + submitTransaction);
+        String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+        // è§£æäº¤æ˜“
+        List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+        // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥
+        String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey,
+                withHoldPrivateKey);
+        String submitTransaction = client.submitTransaction(hexString);
+        System.out.println("submitTransaction:" + submitTransaction);
 
-		Thread.sleep(5000);
-		for (int tick = 0; tick < 5; tick++){
-			QueryTransactionResult result = client.queryTransaction(submitTransaction);
-			if(result == null) {
-				Thread.sleep(5000);
-				continue;
-			}
+        Thread.sleep(5000);
+        for (int tick = 0; tick < 5; tick++) {
+            QueryTransactionResult result = client.queryTransaction(submitTransaction);
+            if (result == null) {
+                Thread.sleep(5000);
+                continue;
+            }
 
-			System.out.println("next:" + result.getTx().getNext());
-			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-			System.out.println("ty:" + nextResult.getReceipt().getTyname());
-			break;
-		}
-		
-	}
-	
-	
-	/**
-	 * ¸ù¾İhash²éÑ¯´æÖ¤½á¹û
-	 * @throws IOException 
-	 */
-	@Test
-	public void queryStorage() throws IOException {
-		// contentStore
-		JSONObject resultJson = client.queryStorage("0xcc4b820c86d00019e2f0c490bb6a9bcd46812321fe6d38c0b7214421d12fed29");
-		
-		JSONObject resultArray;
+            System.out.println("next:" + result.getTx().getNext());
+            QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+            System.out.println("ty:" + nextResult.getReceipt().getTyname());
+            break;
+        }
+
+    }
+
+    /**
+     * é“¾æ¥å­˜è¯æ¨¡å‹
+     * 
+     * @throws InterruptedException
+     * @throws IOException
+     */
+    @Test
+    public void hashAndLinkStoreNobalance() throws InterruptedException, IOException {
+        // å­˜è¯æ™ºèƒ½åˆçº¦çš„åç§°
+        String execer = "user.p.evm.storage";
+        String contranctAddress = client.convertExectoAddr(execer);
+        // ç­¾åç”¨çš„ç§é’¥
+        String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+        String link = "https://cs.33.cn/product?hash=13mBHrKBxGjoyzdej4bickPPPupejAGvXr";
+        byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
+        String txEncode = StorageUtil.createLinkNotaryStorage(link.getBytes(), contentHash, execer, privateKey,
+                contranctAddress);
+
+        String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+        // è§£æäº¤æ˜“
+        List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+        // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥
+        String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey,
+                withHoldPrivateKey);
+        String submitTransaction = client.submitTransaction(hexString);
+        System.out.println("submitTransaction:" + submitTransaction);
+
+        Thread.sleep(5000);
+        for (int tick = 0; tick < 5; tick++) {
+            QueryTransactionResult result = client.queryTransaction(submitTransaction);
+            if (result == null) {
+                Thread.sleep(5000);
+                continue;
+            }
+
+            System.out.println("next:" + result.getTx().getNext());
+            QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+            System.out.println("ty:" + nextResult.getReceipt().getTyname());
+            break;
+        }
+
+    }
+
+    /**
+     * éšç§å­˜è¯æ¨¡å‹
+     * 
+     * @throws Exception
+     */
+    @Test
+    public void EncryptNotaryStoreNobalance() throws Exception {
+        // å­˜è¯æ™ºèƒ½åˆçº¦çš„åç§°
+        String execer = "user.p.evm.storage";
+        String contranctAddress = client.convertExectoAddr(execer);
+        // ç­¾åç”¨çš„ç§é’¥
+        String privateKey = "55637b77b193f2c60c6c3f95d8a5d3a98d15e2d42bf0aeae8e975fc54035e2f4";
+
+        // ç”ŸæˆAESåŠ å¯†KEY
+        String aesKeyHex = "ba940eabdf09ee0f37f8766841eee763";
+        // å¯ç”¨è¯¥æ–¹æ³•ç”Ÿæˆ AesUtil.generateDesKey(128);
+        byte[] key = HexUtil.fromHexString(aesKeyHex);
+        System.out.println("key:" + HexUtil.toHexString(key));
+        // ç”Ÿæˆiv
+        byte[] iv = AesUtil.generateIv();
+        // å¯¹æ˜æ–‡è¿›è¡ŒåŠ å¯†
+        byte[] encrypt = AesUtil.encrypt(content, key, iv);
+        String decrypt = AesUtil.decrypt(encrypt, HexUtil.toHexString(key));
+        System.out.println("decrypt:" + decrypt);
+        byte[] contentHash = TransactionUtil.Sha256(content.getBytes("utf-8"));
+        String txEncode = StorageUtil.createEncryptNotaryStorage(encrypt, contentHash, iv, "", "", execer, privateKey,
+                contranctAddress);
+
+        String createNoBalanceTx = client.createNoBalanceTx(txEncode, "");
+        // è§£æäº¤æ˜“
+        List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
+        // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥
+        String withHoldPrivateKey = "53a601fb5f6de0f4002397cdb7d1e0e6dc655392cacdbe36ede06353c444cfb2";
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, privateKey,
+                withHoldPrivateKey);
+        String submitTransaction = client.submitTransaction(hexString);
+        System.out.println("submitTransaction:" + submitTransaction);
+
+        Thread.sleep(5000);
+        for (int tick = 0; tick < 5; tick++) {
+            QueryTransactionResult result = client.queryTransaction(submitTransaction);
+            if (result == null) {
+                Thread.sleep(5000);
+                continue;
+            }
+
+            System.out.println("next:" + result.getTx().getNext());
+            QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+            System.out.println("ty:" + nextResult.getReceipt().getTyname());
+            break;
+        }
+
+    }
+
+    /**
+     * æ ¹æ®hashæŸ¥è¯¢å­˜è¯ç»“æœ
+     * 
+     * @throws IOException
+     */
+    @Test
+    public void queryStorage() throws IOException {
+        // contentStore
+        JSONObject resultJson = client
+                .queryStorage("0xcc4b820c86d00019e2f0c490bb6a9bcd46812321fe6d38c0b7214421d12fed29");
+
+        JSONObject resultArray;
         if (resultJson.containsKey("linkStorage")) {
-        	// hash¼°linkĞÍ´æÖ¤
-        	resultArray = resultJson.getJSONObject("linkStorage");
-        	String link = resultArray.getString("link");
-        	String hash = resultArray.getString("hash");
-        	byte[] linkByte = HexUtil.fromHexString(link);
-        	String linkresult = new String(linkByte,"UTF-8");
-        	System.out.println("´æÖ¤linkÊÇ:" + linkresult);
-        	System.out.println("´æÖ¤hashÊÇ:" + hash);
+            // hashåŠlinkå‹å­˜è¯
+            resultArray = resultJson.getJSONObject("linkStorage");
+            String link = resultArray.getString("link");
+            String hash = resultArray.getString("hash");
+            byte[] linkByte = HexUtil.fromHexString(link);
+            String linkresult = new String(linkByte, "UTF-8");
+            System.out.println("å­˜è¯linkæ˜¯:" + linkresult);
+            System.out.println("å­˜è¯hashæ˜¯:" + hash);
         } else if (resultJson.containsKey("hashStorage")) {
-        	// hashĞÍ´æÖ¤½âÎö
-        	resultArray = resultJson.getJSONObject("hashStorage");
-        	String hash = resultArray.getString("hash");
-        	System.out.println("Á´ÉÏ¶ÁÈ¡µÄhashÊÇ:" + hash);
-        	byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
-        	String result = HexUtil.toHexString(contentHash);
-    		System.out.println("´æÖ¤Ç°µÄhashÊÇ:" + result);
+            // hashå‹å­˜è¯è§£æ
+            resultArray = resultJson.getJSONObject("hashStorage");
+            String hash = resultArray.getString("hash");
+            System.out.println("é“¾ä¸Šè¯»å–çš„hashæ˜¯:" + hash);
+            byte[] contentHash = TransactionUtil.Sha256(content.getBytes());
+            String result = HexUtil.toHexString(contentHash);
+            System.out.println("å­˜è¯å‰çš„hashæ˜¯:" + result);
         } else if (resultJson.containsKey("encryptStorage")) {
-            //ÒşË½´æÖ¤
+            // éšç§å­˜è¯
             String desKey = "ba940eabdf09ee0f37f8766841eee763";
             resultArray = resultJson.getJSONObject("encryptStorage");
             String content = resultArray.getString("encryptContent");
@@ -241,14 +251,13 @@ public class StorageParaTest {
             String decrypt = AesUtil.decrypt(fromHexString, desKey);
             System.out.println(decrypt);
         } else {
-        	// ÄÚÈİĞÍ´æÖ¤½âÎö
-        	resultArray = resultJson.getJSONObject("contentStorage");
-        	String content = resultArray.getString("content");
-        	byte[] contentByte = HexUtil.fromHexString(content);
-        	String result = new String(contentByte,"UTF-8");
-        	System.out.println("´æÖ¤ÄÚÈİÊÇ:" + result);
+            // å†…å®¹å‹å­˜è¯è§£æ
+            resultArray = resultJson.getJSONObject("contentStorage");
+            String content = resultArray.getString("content");
+            byte[] contentByte = HexUtil.fromHexString(content);
+            String result = new String(contentByte, "UTF-8");
+            System.out.println("å­˜è¯å†…å®¹æ˜¯:" + result);
         }
-	}
-	
-	
+    }
+
 }

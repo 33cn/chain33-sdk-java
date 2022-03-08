@@ -2,29 +2,28 @@ package cn.chain33.javasdk.model.rpcresult;
 
 import java.io.Serializable;
 
-public class RpcResult <E> implements Serializable{
+public class RpcResult<E> implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private E result;
-	
-	private String error;
+    private E result;
 
-	public E getResult() {
-		return result;
-	}
+    private String error;
 
-	public void setResult(E result) {
-		this.result = result;
-	}
+    public E getResult() {
+        return result;
+    }
 
-	public String getError() {
-		return error;
-	}
+    public void setResult(E result) {
+        this.result = result;
+    }
 
-	public void setError(String error) {
-		this.error = error;
-	}
-	
-	
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
 }

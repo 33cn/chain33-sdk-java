@@ -1,11 +1,11 @@
 package cn.chain33.javasdk.model.decode;
 
 public class DecodeTransfer {
-    
+
     private Long amount;
-    
+
     private String cointoken;
-    
+
     private String to;
 
     public Long getAmount() {
@@ -36,5 +36,5 @@ public class DecodeTransfer {
     public String toString() {
         return "DecodeTransfer [amount=" + amount + ", cointoken=" + cointoken + ", to=" + to + "]";
     }
-    
+
 }

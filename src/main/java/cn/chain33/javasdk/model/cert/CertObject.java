@@ -63,9 +63,9 @@ public class CertObject {
 
     public static final class CertInfo {
         public String serial;
-        public int    status;
-        public long   exipreTime;
-        public long   revokeTime;
+        public int status;
+        public long exipreTime;
+        public long revokeTime;
         public byte[] cert;
         public String identity;
 

@@ -9,7 +9,7 @@ import "account.proto";
 import "executor.proto";
 
 option java_outer_classname = "GrpcService";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 service chain33 {
     // chain33 对外提供服务的接口

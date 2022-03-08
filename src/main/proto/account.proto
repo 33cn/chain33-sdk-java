@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_outer_classname = "AccountProtobuf";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 // Account 的信息
 message Account {
@@ -68,7 +68,7 @@ message ExecAccount {
 }
 
 message AllExecBalance {
-    string   addr                    = 1;
+    string               addr        = 1;
     repeated ExecAccount ExecAccount = 2;
 }
 

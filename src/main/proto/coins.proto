@@ -3,7 +3,7 @@ syntax = "proto3";
 import "transaction.proto";
 
 option java_outer_classname = "CoinsProtobuf";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 // message for execs.coins
 message CoinsAction {

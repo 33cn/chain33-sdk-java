@@ -3,96 +3,95 @@ package cn.chain33.javasdk.model.rpcresult;
 import java.io.Serializable;
 import java.util.Date;
 
-public class QueryTransactionResult implements Serializable{
+public class QueryTransactionResult implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	private Long amount;
-	
-	private TransactionResult tx;
-	
-	private Date blocktime;
-	
-	private Integer index;
-	
-	private String actionname;
-	
-	private String fromaddr;
-	
-	private Long height;
-	
-	private Receipt receipt;
-	
-	public TransactionResult getTx() {
-		return tx;
-	}
+    private static final long serialVersionUID = 1L;
 
-	public void setTx(TransactionResult tx) {
-		this.tx = tx;
-	}
+    private Long amount;
 
-	public Long getHeight() {
-		return height;
-	}
+    private TransactionResult tx;
 
-	public void setHeight(Long height) {
-		this.height = height;
-	}
+    private Date blocktime;
 
+    private Integer index;
 
-	public Long getAmount() {
-		return amount;
-	}
+    private String actionname;
 
-	public void setAmount(Long amount) {
-		this.amount = amount;
-	}
+    private String fromaddr;
 
-	public Date getBlocktime() {
-		return blocktime;
-	}
+    private Long height;
 
-	public void setBlocktime(Date blocktime) {
-		this.blocktime = blocktime;
-	}
+    private Receipt receipt;
 
-	public Integer getIndex() {
-		return index;
-	}
+    public TransactionResult getTx() {
+        return tx;
+    }
 
-	public void setIndex(Integer index) {
-		this.index = index;
-	}
+    public void setTx(TransactionResult tx) {
+        this.tx = tx;
+    }
 
-	public String getActionname() {
-		return actionname;
-	}
+    public Long getHeight() {
+        return height;
+    }
 
-	public void setActionname(String actionname) {
-		this.actionname = actionname;
-	}
+    public void setHeight(Long height) {
+        this.height = height;
+    }
 
-	public String getFromaddr() {
-		return fromaddr;
-	}
+    public Long getAmount() {
+        return amount;
+    }
 
-	public void setFromaddr(String fromaddr) {
-		this.fromaddr = fromaddr;
-	}
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
 
-	public Receipt getReceipt() {
-		return receipt;
-	}
+    public Date getBlocktime() {
+        return blocktime;
+    }
 
-	public void setReceipt(Receipt receipt) {
-		this.receipt = receipt;
-	}
+    public void setBlocktime(Date blocktime) {
+        this.blocktime = blocktime;
+    }
 
-	@Override
-	public String toString() {
-		return "QueryTransactionResult [amount=" + amount + ", tx=" + tx + ", blocktime=" + blocktime + ", index="
-				+ index + ", actionname=" + actionname + ", fromaddr=" + fromaddr + ", height=" + height + ", receipt="
-				+ receipt + "]";
-	}
-	
+    public Integer getIndex() {
+        return index;
+    }
+
+    public void setIndex(Integer index) {
+        this.index = index;
+    }
+
+    public String getActionname() {
+        return actionname;
+    }
+
+    public void setActionname(String actionname) {
+        this.actionname = actionname;
+    }
+
+    public String getFromaddr() {
+        return fromaddr;
+    }
+
+    public void setFromaddr(String fromaddr) {
+        this.fromaddr = fromaddr;
+    }
+
+    public Receipt getReceipt() {
+        return receipt;
+    }
+
+    public void setReceipt(Receipt receipt) {
+        this.receipt = receipt;
+    }
+
+    @Override
+    public String toString() {
+        return "QueryTransactionResult [amount=" + amount + ", tx=" + tx + ", blocktime=" + blocktime + ", index="
+                + index + ", actionname=" + actionname + ", fromaddr=" + fromaddr + ", height=" + height + ", receipt="
+                + receipt + "]";
+    }
+
 }

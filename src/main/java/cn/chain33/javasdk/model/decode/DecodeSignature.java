@@ -1,11 +1,11 @@
 package cn.chain33.javasdk.model.decode;
 
 public class DecodeSignature {
-    
+
     private Integer ty;
-    
+
     private String signature;
-    
+
     private String pubkey;
 
     public Integer getTy() {
@@ -36,6 +36,5 @@ public class DecodeSignature {
     public String toString() {
         return "DecodeSignature [ty=" + ty + ", signature=" + signature + ", pubkey=" + pubkey + "]";
     }
-    
-    
+
 }

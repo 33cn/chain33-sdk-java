@@ -6,7 +6,7 @@ import com.google.protobuf.ByteString;
 import java.io.*;
 
 public class CertUtils {
-    public static final int CertActionNew    = 1;
+    public static final int CertActionNew = 1;
     public static final int CertActionUpdate = 2;
     public static final int CertActionNormal = 3;
 
@@ -26,6 +26,6 @@ public class CertUtils {
         is.read(bytes);
         is.close();
 
-        return  bytes;
+        return bytes;
     }
 }

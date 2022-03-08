@@ -9,6 +9,23 @@ Chain33的Java SDK提供交易构造、交易签名、数据加密、发送交�
 支持原生存证、积分发行和转账等能力。  
 支持EVM合约部署，调用能力
 
+## 编译
+
+**环境要求**:
+
+- [JDK8](https://www.oracle.com/java/technologies/javase-downloads.html)
+
+**编译命令**:
+```shell
+make build
+```
+
+**打包命令**:
+
+```shell
+make package
+```
+
 # 使用
 1.下载最新的JAVA-SDK版本  
 下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.15/chain33-sdk-java-1.0.15.zip  

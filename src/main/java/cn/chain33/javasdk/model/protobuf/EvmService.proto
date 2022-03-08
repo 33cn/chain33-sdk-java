@@ -1,6 +1,6 @@
-syntax = "proto3";
+syntax                      = "proto3";
 option java_outer_classname = "EvmService";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 //合约对象信息
 message EVMContractObject {
@@ -108,8 +108,8 @@ message CheckEVMAddrResp {
 }
 
 message EstimateEVMGasReq {
-    string tx     = 1;
-    string from   = 2;
+    string tx   = 1;
+    string from = 2;
 }
 message EstimateEVMGasResp {
     uint64 gas = 1;
@@ -148,65 +148,63 @@ message EvmQueryResp {
 }
 
 message EvmContractCreateReq {
-    string code     = 1;
-    string abi      = 2;
-    int64  fee      = 3;
-    string note     = 4;
-    string alias    = 5;
-    string parameter= 6;
-    string expire   = 7;
-    string paraName = 8;
-    int64 amount    = 9;
+    string code      = 1;
+    string abi       = 2;
+    int64  fee       = 3;
+    string note      = 4;
+    string alias     = 5;
+    string parameter = 6;
+    string expire    = 7;
+    string paraName  = 8;
+    int64  amount    = 9;
 }
 
 message EvmContractCallReq {
-    int64 amount        = 1;
+    int64  amount       = 1;
     int64  fee          = 2;
-    string note          = 3;
-    string parameter     = 4;
-    string contractAddr  = 5;
-    string expire        = 6;
-    string paraName      = 7;
-    string abi           = 8;
+    string note         = 3;
+    string parameter    = 4;
+    string contractAddr = 5;
+    string expire       = 6;
+    string paraName     = 7;
+    string abi          = 8;
 }
 
 message EvmTransferOnlyReq {
-    string to         = 1;
-    int64  amount     = 2;
-    string paraName   = 3;
-    string note       = 4;
+    string to       = 1;
+    int64  amount   = 2;
+    string paraName = 3;
+    string note     = 4;
 }
 
 message EvmGetNonceReq {
-    string address     = 1;
+    string address = 1;
 }
 
 message EvmGetNonceRespose {
-    int64 nonce     = 1;
+    int64 nonce = 1;
 }
 
 message EvmCalcNewContractAddrReq {
-    string caller     = 1;
-    string txhash     = 2;
+    string caller = 1;
+    string txhash = 2;
 }
 
 message EvmGetPackDataReq {
-    string abi          = 1;
-    string parameter    = 2;
+    string abi       = 1;
+    string parameter = 2;
 }
 
 message EvmGetPackDataRespose {
-    string packData     = 1;
+    string packData = 1;
 }
 
 message EvmGetUnpackDataReq {
-    string abi          = 1;
-    string parameter    = 2;
-    string data         = 3;
+    string abi       = 1;
+    string parameter = 2;
+    string data      = 3;
 }
 
 message EvmGetUnpackDataRespose {
-    repeated string unpackData     = 1;
+    repeated string unpackData = 1;
 }
-
-

@@ -1,9 +1,9 @@
 package cn.chain33.javasdk.model.decode;
 
 public class DecodePayLoad {
-    
+
     private DecodeTransfer transfer;
-    
+
     private Integer ty;
 
     public DecodeTransfer getTransfer() {
@@ -26,6 +26,5 @@ public class DecodePayLoad {
     public String toString() {
         return "DecodePayLoad [transfer=" + transfer + ", ty=" + ty + "]";
     }
-    
-    
+
 }

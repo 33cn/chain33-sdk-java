@@ -13,85 +13,89 @@ import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 /**
- * Æ½ĞĞÁ´ÉÏ£¬Í¨¹ı´ú¿ÛµÄ·½Ê½×ªcoins
+ * å¹³è¡Œé“¾ä¸Šï¼Œé€šè¿‡ä»£æ‰£çš„æ–¹å¼è½¬coins
+ * 
  * @author fkeit
  *
  */
 public class CoinsTransParaTest {
-	
-	// Æ½ĞĞÁ´IP
-	String ip = "Æ½ĞĞÁ´IP";
-	// Æ½ĞĞÁ´·şÎñ¶Ë¿Ú
-	int port = 8801;
+
+    // å¹³è¡Œé“¾IP
+    String ip = "å¹³è¡Œé“¾IP";
+    // å¹³è¡Œé“¾æœåŠ¡ç«¯å£
+    int port = 8801;
     RpcClient client = new RpcClient(ip, port);
-    
-    // Æ½ĞĞÁ´Ãû³Æ£¬¹Ì¶¨¸ñÊ½user.p.xxxx.  ÆäÖĞxxxx¿ÉÌæ»»£¬Ö§³Ö´óĞ¡Ğ´Ó¢ÎÄ×ÖÄ¸
-	String paraName = "user.p.evm.";
-	
+
+    // å¹³è¡Œé“¾åç§°ï¼Œå›ºå®šæ ¼å¼user.p.xxxx. å…¶ä¸­xxxxå¯æ›¿æ¢ï¼Œæ”¯æŒå¤§å°å†™è‹±æ–‡å­—æ¯
+    String paraName = "user.p.evm.";
+
     /**
+     *
+     * @throws InterruptedException
+     * @throws IOException
      * 
-     * @throws InterruptedException 
-     * @throws IOException 
-     * @description ±¾µØÇ©Ãû´ú¿Û½»Ò××é£¬µ÷ÓÃcreateNoBlanceÖ®ºóÔÙ½«·µ»ØµÄÊı¾İ½âÎö,Ç©Ãû£¬·¢ËÍ½»Ò×
-     * ´ú¿Û½»Ò×Ö÷ÒªÓÃÔÚÆ½ĞĞÁ´µÄ³¡ºÏ£¬Ö÷Á´ÉÏµÄ½»Ò×²»ĞèÒª¹Ø×¢´ËÊµÏÖ
+     * @description æœ¬åœ°ç­¾åä»£æ‰£äº¤æ˜“ç»„ï¼Œè°ƒç”¨createNoBlanceä¹‹åå†å°†è¿”å›çš„æ•°æ®è§£æ,ç­¾åï¼Œå‘é€äº¤æ˜“ ä»£æ‰£äº¤æ˜“ä¸»è¦ç”¨åœ¨å¹³è¡Œé“¾çš„åœºåˆï¼Œä¸»é“¾ä¸Šçš„äº¤æ˜“ä¸éœ€è¦å…³æ³¨æ­¤å®ç°
      *
      */
     @Test
     public void transferCoins() throws InterruptedException, IOException {
-    	// ×ªÕËËµÃ÷
-        String note = "×ªÕËËµÃ÷";
-        // Ö÷´ú±ÒÔòÎª"",ÆäËûÎªtokenÃû
+        // è½¬è´¦è¯´æ˜
+        String note = "è½¬è´¦è¯´æ˜";
+        // ä¸»ä»£å¸åˆ™ä¸º"",å…¶ä»–ä¸ºtokenå
         String coinToken = "";
-        // ×ªÕËÊıÁ¿Îª1
+        // è½¬è´¦æ•°é‡ä¸º1
         Long amount = 1 * 10000000L;
         String to = "1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs";
-        // ±¾µØ¹¹Ôì×ªÕË½»Ò×µÄpayload
+        // æœ¬åœ°æ„é€ è½¬è´¦äº¤æ˜“çš„payload
         byte[] payload = TransactionUtil.createTransferPayLoad(to, amount, coinToken, note);
-        
-        // Ç©ÃûË½Ë½Ô¿£¬Ö÷Á´ÉÏ²»»á¿Û³ı±¾µØÖ·ÏÂµÄÖ÷Á´±Ò£¬ËùÒÔ´ËµØÖ·ÏÂ¿ÉÒÔÃ»ÓĞÖ÷Á´±Ò
+
+        // ç­¾åç§ç§é’¥ï¼Œä¸»é“¾ä¸Šä¸ä¼šæ‰£é™¤æœ¬åœ°å€ä¸‹çš„ä¸»é“¾å¸ï¼Œæ‰€ä»¥æ­¤åœ°å€ä¸‹å¯ä»¥æ²¡æœ‰ä¸»é“¾å¸
         String fromAddressPriveteKey = "CC38546E9E659D15E6B4893F0AB32A06D103931A8230B0BDE71459D2B27D6944";
-        // Ö´ĞĞÆ÷Ãû³Æ£¬Æ½ĞĞÁ´Ö÷´ú±ÒÎªÆ½ĞĞÁ´Ãû³Æ+coins(Æ½ĞĞÁ´¶ÔÓ¦ÅäÖÃÎÄ¼şÖĞµÄtitleÏî)
+        // æ‰§è¡Œå™¨åç§°ï¼Œå¹³è¡Œé“¾ä¸»ä»£å¸ä¸ºå¹³è¡Œé“¾åç§°+coins(å¹³è¡Œé“¾å¯¹åº”é…ç½®æ–‡ä»¶ä¸­çš„titleé¡¹)
         String execer = paraName + "coins";
-        // Æ½ĞĞÁ´×ªÕËÊ±£¬Êµ¼ÊtoµÄµØÖ·ÌîÔÚpayloadÖĞ£¬Íâ²ãµÄtoµØÖ·¶ÔÓ¦µÄÊÇºÏÔ¼µÄµØÖ·
+        // å¹³è¡Œé“¾è½¬è´¦æ—¶ï¼Œå®é™…toçš„åœ°å€å¡«åœ¨payloadä¸­ï¼Œå¤–å±‚çš„toåœ°å€å¯¹åº”çš„æ˜¯åˆçº¦çš„åœ°å€
         String contranctAddress = client.convertExectoAddr(execer);
-        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer, payload);
-        
-        //create no balance ´«ÈëµØÖ·Îª¿Õ
+        String createTransferTx = TransactionUtil.createTransferTx(fromAddressPriveteKey, contranctAddress, execer,
+                payload);
+
+        // create no balance ä¼ å…¥åœ°å€ä¸ºç©º
         String createNoBalanceTx = client.createNoBalanceTx(createTransferTx, "");
-        // ½âÎö½»Ò×
+        // è§£æäº¤æ˜“
         List<DecodeRawTransaction> decodeRawTransactions = client.decodeRawTransaction(createNoBalanceTx);
-        // ´ú¿Û½»Ò×Ç©ÃûµÄË½Ô¿
+        // ä»£æ‰£äº¤æ˜“ç­¾åçš„ç§é’¥
         String withHoldPrivateKey = "3990969DF92A5914F7B71EEB9A4E58D6E255F32BF042FEA5318FC8B3D50EE6E8";
-        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, fromAddressPriveteKey, withHoldPrivateKey);
+        String hexString = TransactionUtil.signDecodeTx(decodeRawTransactions, contranctAddress, fromAddressPriveteKey,
+                withHoldPrivateKey);
         String submitTransaction = client.submitTransaction(hexString);
         System.out.println("submitTransaction:" + submitTransaction);
-        
-		Thread.sleep(5000);
-		for (int tick = 0; tick < 5; tick++){
-			QueryTransactionResult result = client.queryTransaction(submitTransaction);
-			if(result == null) {
-				Thread.sleep(5000);
-				continue;
-			}
 
-			System.out.println("next:" + result.getTx().getNext());
-			QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
-			System.out.println("ty:" + nextResult.getReceipt().getTyname());
-			break;
-		}
+        Thread.sleep(5000);
+        for (int tick = 0; tick < 5; tick++) {
+            QueryTransactionResult result = client.queryTransaction(submitTransaction);
+            if (result == null) {
+                Thread.sleep(5000);
+                continue;
+            }
+
+            System.out.println("next:" + result.getTx().getNext());
+            QueryTransactionResult nextResult = client.queryTransaction(result.getTx().getNext());
+            System.out.println("ty:" + nextResult.getReceipt().getTyname());
+            break;
+        }
     }
-    
+
     /**
+     *
+     * @throws IOException
      * 
-     * @throws IOException 
-     * @description ²éÑ¯coinsÓà¶î
+     * @description æŸ¥è¯¢coinsä½™é¢
      *
      */
     @Test
     public void getTokenBalace() throws IOException {
-        // Ö´ĞĞÆ÷Ãû³Æ
+        // æ‰§è¡Œå™¨åç§°
         String execer = paraName + "coins";
-        
+
         List<String> addressList = new ArrayList<>();
         addressList.add("14KEKbYtKKQm4wMthSK9J4La4nAiidGozt");
         addressList.add("1CbEVT9RnM5oZhWMj4fxUrJX94VtRotzvs");

@@ -4,107 +4,105 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class BlockResult implements Serializable{
+public class BlockResult implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	private Integer version;
-	
-	private String parentHash;
-	
-	private String txHash;
-	
-	private String stateHash;
-	
-	private Long height;
-	
-	private Date blockTime;
-	
-	private Integer txcount;
-	
-	private String hash;
-	
-	private List<TransactionResult> txs;
-	
-	public Integer getVersion() {
-		return version;
-	}
+    private static final long serialVersionUID = 1L;
 
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+    private Integer version;
 
-	public String getParentHash() {
-		return parentHash;
-	}
+    private String parentHash;
 
-	public void setParentHash(String parentHash) {
-		this.parentHash = parentHash;
-	}
+    private String txHash;
 
-	public String getTxHash() {
-		return txHash;
-	}
+    private String stateHash;
 
-	public void setTxHash(String txHash) {
-		this.txHash = txHash;
-	}
+    private Long height;
 
-	public String getStateHash() {
-		return stateHash;
-	}
+    private Date blockTime;
 
-	public void setStateHash(String stateHash) {
-		this.stateHash = stateHash;
-	}
+    private Integer txcount;
 
-	public Long getHeight() {
-		return height;
-	}
+    private String hash;
 
-	public void setHeight(Long height) {
-		this.height = height;
-	}
+    private List<TransactionResult> txs;
 
-	public Date getBlockTime() {
-		return blockTime;
-	}
+    public Integer getVersion() {
+        return version;
+    }
 
-	public void setBlockTime(Date blockTime) {
-		this.blockTime = blockTime;
-	}
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
 
-	public Integer getTxcount() {
-		return txcount;
-	}
+    public String getParentHash() {
+        return parentHash;
+    }
 
-	public void setTxcount(Integer txcount) {
-		this.txcount = txcount;
-	}
+    public void setParentHash(String parentHash) {
+        this.parentHash = parentHash;
+    }
 
-	
-	
-	public List<TransactionResult> getTxs() {
-		return txs;
-	}
+    public String getTxHash() {
+        return txHash;
+    }
 
-	public void setTxs(List<TransactionResult> txs) {
-		this.txs = txs;
-	}
+    public void setTxHash(String txHash) {
+        this.txHash = txHash;
+    }
 
-	public String getHash() {
-		return hash;
-	}
+    public String getStateHash() {
+        return stateHash;
+    }
 
-	public void setHash(String hash) {
-		this.hash = hash;
-	}
+    public void setStateHash(String stateHash) {
+        this.stateHash = stateHash;
+    }
 
-	@Override
-	public String toString() {
-		return "BlockResult [version=" + version + ", parentHash=" + parentHash + ", txHash=" + txHash + ", stateHash="
-				+ stateHash + ", height=" + height + ", blockTime=" + blockTime + ", txcount=" + txcount + ", hash="
-				+ hash + ", txs=" + txs + "]";
-	}
+    public Long getHeight() {
+        return height;
+    }
+
+    public void setHeight(Long height) {
+        this.height = height;
+    }
+
+    public Date getBlockTime() {
+        return blockTime;
+    }
+
+    public void setBlockTime(Date blockTime) {
+        this.blockTime = blockTime;
+    }
+
+    public Integer getTxcount() {
+        return txcount;
+    }
+
+    public void setTxcount(Integer txcount) {
+        this.txcount = txcount;
+    }
+
+    public List<TransactionResult> getTxs() {
+        return txs;
+    }
+
+    public void setTxs(List<TransactionResult> txs) {
+        this.txs = txs;
+    }
+
+    public String getHash() {
+        return hash;
+    }
+
+    public void setHash(String hash) {
+        this.hash = hash;
+    }
+
+    @Override
+    public String toString() {
+        return "BlockResult [version=" + version + ", parentHash=" + parentHash + ", txHash=" + txHash + ", stateHash="
+                + stateHash + ", height=" + height + ", blockTime=" + blockTime + ", txcount=" + txcount + ", hash="
+                + hash + ", txs=" + txs + "]";
+    }
 
 }

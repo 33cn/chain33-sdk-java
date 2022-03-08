@@ -2,54 +2,54 @@ package cn.chain33.javasdk.model;
 
 public class Address {
 
-	private byte version;
-	
-	private byte[] hash160;
-	
-	private byte[] checkSum;
-	
-	private byte[] pubkey;
-	
-	private String Enc58Str;
+    private byte version;
 
-	public byte getVersion() {
-		return version;
-	}
+    private byte[] hash160;
 
-	public void setVersion(byte version) {
-		this.version = version;
-	}
+    private byte[] checkSum;
 
-	public byte[] getHash160() {
-		return hash160;
-	}
+    private byte[] pubkey;
 
-	public void setHash160(byte[] hash160) {
-		this.hash160 = hash160;
-	}
+    private String Enc58Str;
 
-	public byte[] getCheckSum() {
-		return checkSum;
-	}
+    public byte getVersion() {
+        return version;
+    }
 
-	public void setCheckSum(byte[] checkSum) {
-		this.checkSum = checkSum;
-	}
+    public void setVersion(byte version) {
+        this.version = version;
+    }
 
-	public byte[] getPubkey() {
-		return pubkey;
-	}
+    public byte[] getHash160() {
+        return hash160;
+    }
 
-	public void setPubkey(byte[] pubkey) {
-		this.pubkey = pubkey;
-	}
+    public void setHash160(byte[] hash160) {
+        this.hash160 = hash160;
+    }
 
-	public String getEnc58Str() {
-		return Enc58Str;
-	}
+    public byte[] getCheckSum() {
+        return checkSum;
+    }
 
-	public void setEnc58Str(String enc58Str) {
-		Enc58Str = enc58Str;
-	}
-	
+    public void setCheckSum(byte[] checkSum) {
+        this.checkSum = checkSum;
+    }
+
+    public byte[] getPubkey() {
+        return pubkey;
+    }
+
+    public void setPubkey(byte[] pubkey) {
+        this.pubkey = pubkey;
+    }
+
+    public String getEnc58Str() {
+        return Enc58Str;
+    }
+
+    public void setEnc58Str(String enc58Str) {
+        Enc58Str = enc58Str;
+    }
+
 }

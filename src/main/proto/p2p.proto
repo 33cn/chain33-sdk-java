@@ -5,7 +5,7 @@ import "common.proto";
 import "blockchain.proto";
 
 option java_outer_classname = "P2pService";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 service p2pgservice {
     //广播交易
@@ -152,7 +152,7 @@ message P2PAddr {
  **/
 
 message P2PAddrList {
-    int64    nonce                = 1;
+    int64                nonce    = 1;
     repeated P2PPeerInfo peerinfo = 2;
 }
 
@@ -231,9 +231,9 @@ message P2PBlock {
  */
 message LightBlock {
 
-    int64       size          = 1;
-    Header      header        = 2;
-    Transaction minerTx       = 3;
+    int64           size      = 1;
+    Header          header    = 2;
+    Transaction     minerTx   = 3;
     repeated string sTxHashes = 4;
 }
 
@@ -250,15 +250,15 @@ message P2PTxReq {
 
 // 请求区块内交易数据
 message P2PBlockTxReq {
-    string   blockHash       = 1;
+    string         blockHash = 1;
     repeated int32 txIndices = 2;
 }
 
 // 区块交易数据返回
 message P2PBlockTxReply {
-    string   blockHash       = 1;
-    repeated int32 txIndices = 2;
-    repeated Transaction txs = 3;
+    string               blockHash = 1;
+    repeated int32       txIndices = 2;
+    repeated Transaction txs       = 3;
 }
 
 /* 节点收到区块或交易hash,

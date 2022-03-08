@@ -4,105 +4,104 @@ import java.io.Serializable;
 
 import cn.chain33.javasdk.model.Signature;
 
-
 public class TransactionResult implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private PayLoadResult payload;
-	
-	private String execer;
-	
-	private String rawpayload;
-	
-	private long fee;
-	
-	private long expire;
-	
-	private long nonce;
-	
-	private String to;
+    private PayLoadResult payload;
 
-	private Signature signature;
+    private String execer;
 
-	private String next;
+    private String rawpayload;
 
-	public String getExecer() {
-		return execer;
-	}
+    private long fee;
 
-	public void setExecer(String execer) {
-		this.execer = execer;
-	}
+    private long expire;
 
-	public String getRawpayload() {
-		return rawpayload;
-	}
+    private long nonce;
 
-	public void setRawpayload(String rawpayload) {
-		this.rawpayload = rawpayload;
-	}
+    private String to;
 
-	public long getFee() {
-		return fee;
-	}
+    private Signature signature;
 
-	public void setFee(long fee) {
-		this.fee = fee;
-	}
+    private String next;
 
-	public long getExpire() {
-		return expire;
-	}
+    public String getExecer() {
+        return execer;
+    }
 
-	public void setExpire(long expire) {
-		this.expire = expire;
-	}
+    public void setExecer(String execer) {
+        this.execer = execer;
+    }
 
-	public long getNonce() {
-		return nonce;
-	}
+    public String getRawpayload() {
+        return rawpayload;
+    }
 
-	public void setNonce(long nonce) {
-		this.nonce = nonce;
-	}
+    public void setRawpayload(String rawpayload) {
+        this.rawpayload = rawpayload;
+    }
 
-	public String getTo() {
-		return to;
-	}
+    public long getFee() {
+        return fee;
+    }
 
-	public void setTo(String to) {
-		this.to = to;
-	}
+    public void setFee(long fee) {
+        this.fee = fee;
+    }
 
-	public Signature getSignature() {
-		return signature;
-	}
+    public long getExpire() {
+        return expire;
+    }
 
-	public void setSignature(Signature signature) {
-		this.signature = signature;
-	}
+    public void setExpire(long expire) {
+        this.expire = expire;
+    }
 
-	public PayLoadResult getPayload() {
-		return payload;
-	}
+    public long getNonce() {
+        return nonce;
+    }
 
-	public void setPayload(PayLoadResult payload) {
-		this.payload = payload;
-	}
+    public void setNonce(long nonce) {
+        this.nonce = nonce;
+    }
 
-	public String getNext() {
-		return next;
-	}
+    public String getTo() {
+        return to;
+    }
 
-	public void setNext(String next) {
-		this.next = next;
-	}
+    public void setTo(String to) {
+        this.to = to;
+    }
 
-	@Override
-	public String toString() {
-		return "TransactionResult [payload=" + payload + ", execer=" + execer + ", rawpayload=" + rawpayload + ", fee="
-				+ fee + ", expire=" + expire + ", nonce=" + nonce + ", to=" + to + ", signature=" + signature + "]";
-	}
+    public Signature getSignature() {
+        return signature;
+    }
+
+    public void setSignature(Signature signature) {
+        this.signature = signature;
+    }
+
+    public PayLoadResult getPayload() {
+        return payload;
+    }
+
+    public void setPayload(PayLoadResult payload) {
+        this.payload = payload;
+    }
+
+    public String getNext() {
+        return next;
+    }
+
+    public void setNext(String next) {
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "TransactionResult [payload=" + payload + ", execer=" + execer + ", rawpayload=" + rawpayload + ", fee="
+                + fee + ", expire=" + expire + ", nonce=" + nonce + ", to=" + to + ", signature=" + signature + "]";
+    }
 
 }

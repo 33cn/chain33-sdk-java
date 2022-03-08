@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_outer_classname = "CommonProtobuf";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 message Reply {
     bool  isOk = 1;

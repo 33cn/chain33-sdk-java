@@ -3,7 +3,8 @@ package cn.chain33.javasdk.model.paillier;
 import java.math.BigInteger;
 
 public class BytesUtils {
-    public BytesUtils() {}
+    public BytesUtils() {
+    }
 
     public static byte[] unsignedShortToByte2(int s) {
         byte[] targets = new byte[2];

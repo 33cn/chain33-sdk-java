@@ -14,8 +14,10 @@ public class DesUtil {
     /**
      * 
      * @description encrypt
+     * 
      * @param content
      * @param password
+     * 
      * @return
      */
     public static byte[] encrypt(byte[] content, String password) {
@@ -36,7 +38,9 @@ public class DesUtil {
     /**
      * 
      * @description decrypt
+     * 
      * @param password
+     * 
      * @return
      */
     public static byte[] decrypt(byte[] contentEncrypt, String password) throws Exception {
@@ -55,7 +59,7 @@ public class DesUtil {
     public static String padding(String password) {
         int length = password.length();
 
-        //计算需填充长度
+        // 计算需填充长度
         if (length % BLOCKSIZE == 0) {
             return password;
         }
@@ -63,7 +67,7 @@ public class DesUtil {
         length += BLOCKSIZE - (length % BLOCKSIZE);
         byte[] plaintext = new byte[length];
 
-        //填充
+        // 填充
         System.arraycopy(password.getBytes(), 0, plaintext, 0, password.length());
 
         return new String(plaintext);
@@ -75,7 +79,7 @@ public class DesUtil {
         String str = "测试内容";
         // 密码，长度要是8的倍数
         String password = "11111111";
-        
+
         System.out.println("content:" + str);
         System.out.println("password:" + password);
         byte[] result = encrypt(str.getBytes(), password);

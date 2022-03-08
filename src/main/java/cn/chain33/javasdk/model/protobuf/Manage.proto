@@ -1,6 +1,6 @@
-syntax = "proto3";
-option java_outer_classname = "Manage"; 
-option java_package = "cn.chain33.javasdk.model";
+syntax                      = "proto3";
+option java_outer_classname = "ManageProtobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 message ManageAction {
     oneof value {

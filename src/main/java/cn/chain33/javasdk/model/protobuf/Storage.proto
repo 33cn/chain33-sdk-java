@@ -1,6 +1,6 @@
-syntax = "proto3";
+syntax                      = "proto3";
 option java_outer_classname = "StorageProtobuf";
-option java_package = "cn.chain33.javasdk.model.protobuf";
+option java_package         = "cn.chain33.javasdk.model.protobuf";
 
 //后面如果有其他数据模型可继续往上面添加
 message Storage {
@@ -34,7 +34,7 @@ message ContentOnlyNotaryStorage {
     //自定义的主键，可以为空，如果没传，则用txhash为key
     string key = 2;
     // Op 0表示创建 1表示追加add
-    int32  op = 3;
+    int32 op = 3;
     //字符串值
     string value = 4;
 }
@@ -111,5 +111,4 @@ message BatchReplyStorage {
     repeated Storage storages = 1;
 }
 
-message ReceiptStorage {
-}
+message ReceiptStorage {}

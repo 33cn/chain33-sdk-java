@@ -14,27 +14,31 @@ import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 
 public class AesUtil {
-    
+
     /**
      * 
      * @description 按照长度生成key
-     * @param length    长度
-     * @return  key
+     * 
+     * @param length
+     *            长度
+     * 
+     * @return key
+     * 
      * @throws Exception
      *
      */
     public static byte[] generateDesKey(int length) throws Exception {
-        //实例化  
+        // 实例化
         KeyGenerator kgen = null;
         kgen = KeyGenerator.getInstance("AES");
-        //设置密钥长度  
-        kgen.init(length);  
-        //生成密钥  
-        SecretKey skey = kgen.generateKey();  
-        //返回密钥的二进制编码  
-        return skey.getEncoded();  
+        // 设置密钥长度
+        kgen.init(length);
+        // 生成密钥
+        SecretKey skey = kgen.generateKey();
+        // 返回密钥的二进制编码
+        return skey.getEncoded();
     }
-    
+
     public static byte[] generateIv() {
         try {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -50,9 +54,8 @@ public class AesUtil {
 
     }
 
-    public static byte[] encrypt(String content,byte[] symKeyData,byte[] ivData) {
-        final byte[] encodedMessage = content.getBytes(Charset
-                .forName("UTF-8"));
+    public static byte[] encrypt(String content, byte[] symKeyData, byte[] ivData) {
+        final byte[] encodedMessage = content.getBytes(Charset.forName("UTF-8"));
         try {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             int blockSize = cipher.getBlockSize();
@@ -64,24 +67,19 @@ public class AesUtil {
 
             byte[] encryptedMessage = cipher.doFinal(encodedMessage);
 
-            byte[] ivAndEncryptedMessage = new byte[ivData.length
-                    + encryptedMessage.length];
+            byte[] ivAndEncryptedMessage = new byte[ivData.length + encryptedMessage.length];
             System.arraycopy(ivData, 0, ivAndEncryptedMessage, 0, blockSize);
-            System.arraycopy(encryptedMessage, 0, ivAndEncryptedMessage,
-                    blockSize, encryptedMessage.length);
+            System.arraycopy(encryptedMessage, 0, ivAndEncryptedMessage, blockSize, encryptedMessage.length);
 
             return ivAndEncryptedMessage;
         } catch (InvalidKeyException e) {
-            throw new IllegalArgumentException(
-                    "key argument does not contain a valid AES key");
+            throw new IllegalArgumentException("key argument does not contain a valid AES key");
         } catch (GeneralSecurityException e) {
-            throw new IllegalStateException(
-                    "Unexpected exception during encryption", e);
+            throw new IllegalStateException("Unexpected exception during encryption", e);
         }
     }
 
-    public static String decrypt(byte[] ivAndEncryptedMessage,
-            String symKeyHex) {
+    public static String decrypt(byte[] ivAndEncryptedMessage, String symKeyHex) {
         byte[] symKeyData = DatatypeConverter.parseHexBinary(symKeyHex);
 
         try {
@@ -94,37 +92,32 @@ public class AesUtil {
             System.arraycopy(ivAndEncryptedMessage, 0, ivData, 0, blockSize);
             IvParameterSpec iv = new IvParameterSpec(ivData);
 
-            byte[] encryptedMessage = new byte[ivAndEncryptedMessage.length
-                    - blockSize];
-            System.arraycopy(ivAndEncryptedMessage, blockSize,
-                    encryptedMessage, 0, encryptedMessage.length);
+            byte[] encryptedMessage = new byte[ivAndEncryptedMessage.length - blockSize];
+            System.arraycopy(ivAndEncryptedMessage, blockSize, encryptedMessage, 0, encryptedMessage.length);
 
             cipher.init(Cipher.DECRYPT_MODE, symKey, iv);
 
             byte[] encodedMessage = cipher.doFinal(encryptedMessage);
 
-            String message = new String(encodedMessage,
-                    Charset.forName("UTF-8"));
+            String message = new String(encodedMessage, Charset.forName("UTF-8"));
             return message;
         } catch (InvalidKeyException e) {
-            throw new IllegalArgumentException(
-                    "key argument does not contain a valid AES key");
+            throw new IllegalArgumentException("key argument does not contain a valid AES key");
         } catch (BadPaddingException e) {
             // you'd better know about padding oracle attacks
             return null;
         } catch (GeneralSecurityException e) {
-            throw new IllegalStateException(
-                    "Unexpected exception during decryption", e);
+            throw new IllegalStateException("Unexpected exception during decryption", e);
         }
     }
-    
+
     public static void main(String[] args) {
         try {
             byte[] key = generateDesKey(128);
             byte[] iv = generateIv();
-            //byte[] bytes = "G2F4ED5m123456abx6vDrScs".getBytes();
-           // key = bytes;
-            //iv = "1KSBd17H7ZK8iT37aJztFB22XGwsPTdwE4".getBytes();
+            // byte[] bytes = "G2F4ED5m123456abx6vDrScs".getBytes();
+            // key = bytes;
+            // iv = "1KSBd17H7ZK8iT37aJztFB22XGwsPTdwE4".getBytes();
             byte[] encrypt = encrypt("hello world", key, iv);
             String keyStr = HexUtil.toHexString(key);
             String ivStr = HexUtil.toHexString(iv);
@@ -137,6 +130,5 @@ public class AesUtil {
             e.printStackTrace();
         }
     }
-    
-   
+
 }
