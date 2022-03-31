@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
@@ -20,7 +21,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 public class RpcClientTest {
 
 	// 区块链节点IP
-	String ip = "区块链节点IP";
+	String ip = "172.16.100.59";
 	// 平行链服务端口
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);
@@ -445,4 +446,16 @@ public class RpcClientTest {
         }
         
 	}
+
+    /**
+     *
+     * @throws IOException
+     */
+    @Test
+	public void queryWasmKey() throws IOException {
+	    String contractName = "eviden";
+	    String key = "test1";
+	    String result = client.queryWasmKeyInfo(contractName,key);
+	    System.out.println(result);
+    }
 }

@@ -1409,7 +1409,37 @@ public class RpcClient {
         }
         return null;
     }
-    
+
+    /**
+     * @description 查询WASM合约 key信息
+     *
+     * @param contract:  查询的wasm合约名字
+     * @param key:   查询的key名称
+     * @return String
+     * @throws IOException
+     */
+    public String queryWasmKeyInfo(String contract, String key) throws IOException {
+        RpcRequest postData = getPostData(RpcMethod.QUERY);
+        JSONObject requestParam = new JSONObject();
+        requestParam.put("execer", "wasm");
+        requestParam.put("funcName", "QueryStateDB");
+        JSONObject payloadJson = new JSONObject();
+        payloadJson.put("contract", contract);
+        payloadJson.put("key", key);
+        requestParam.put("payload", payloadJson);
+        postData.addJsonParams(requestParam);
+        String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(requestResult)) {
+            JSONObject parseObject = JSONObject.parseObject(requestResult);
+            if (messageValidate(parseObject))
+                return null;
+            JSONObject resultJson = parseObject.getJSONObject("result");
+            String data = resultJson.getString("data");
+            return data;
+        }
+        return null;
+    }
+
     /**
      * @description 查询合约ABI结果
      * 
