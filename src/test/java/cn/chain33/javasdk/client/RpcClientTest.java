@@ -21,7 +21,7 @@ import cn.chain33.javasdk.utils.TransactionUtil;
 public class RpcClientTest {
 
 	// 区块链节点IP
-	String ip = "172.16.100.59";
+	String ip = "区块链节点IP";
 	// 平行链服务端口
 	int port = 8801;
     RpcClient client = new RpcClient(ip, port);
