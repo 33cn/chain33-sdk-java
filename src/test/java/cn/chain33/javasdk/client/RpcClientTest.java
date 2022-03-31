@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
@@ -445,4 +446,16 @@ public class RpcClientTest {
         }
         
 	}
+
+    /**
+     *
+     * @throws IOException
+     */
+    @Test
+	public void queryWasmKey() throws IOException {
+	    String contractName = "eviden";
+	    String key = "test1";
+	    String result = client.queryWasmKeyInfo(contractName,key);
+	    System.out.println(result);
+    }
 }
