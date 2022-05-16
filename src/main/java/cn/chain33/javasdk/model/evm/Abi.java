@@ -41,7 +41,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Abi extends ArrayList<Abi.Entry> {
-    private static final ObjectMapper DEFAULT_MAPPER =
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final ObjectMapper DEFAULT_MAPPER =
             new ObjectMapper()
                     .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
                     .enable(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL);
