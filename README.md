@@ -11,7 +11,7 @@ Chain33的Java SDK提供交易构造、交易签名、数据加密、发送交�
 
 # 使用
 1.下载最新的JAVA-SDK版本  
-下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.15/chain33-sdk-java-1.0.15.zip  
+下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.16/chain33-sdk-java-1.0.16.zip  
 
 2.将SDK压缩包中的JAR包安装到本地仓库。 
 在JAR包所在目录，执行以下命令：  
@@ -107,5 +107,9 @@ client.run(o->o.method(builder));
  - StorageUtil.createEncryptShareNotaryStorage 创建分享隐私存证模型(payload)
  - SeedUtil.generateMnemonic  离线生成助记词
  - SeedUtil.createAccountBy33PATH  根据助记词离线生成私钥和地址
+ 
+ # 通过SDK部署调用EVM合约样例
+ https://github.com/andyYuanFZM/NFTDemo/tree/main/src/test/java/com/chain33/cn
+ 
 
 

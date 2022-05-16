@@ -255,8 +255,6 @@ public class EvmUtil {
        return createTxWithoutSign;
    }
    
-   
-    
     /**
     *
     * @description 部署合约（平行链采用代扣的情况下调用）
@@ -267,22 +265,26 @@ public class EvmUtil {
     * @return  hash，即合约名
     *
     */
-   public static String createEvmContractWithhold(byte[] code, String note, String alias, String privateKey, String execer, String contranctAddress) {
+   public static String createEvmContractWithhold(byte[] code, String note, String alias, String privateKey, String execer, String contranctAddress, long gas) {
        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
        evmActionBuilder.setCode(ByteString.copyFrom(code));
        evmActionBuilder.setNote(note);
        evmActionBuilder.setAlias(alias);
-
+       evmActionBuilder.setContractAddr(contranctAddress);
        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
        
-       String createTransferTx = TransactionUtil.createTransferTx(privateKey, contranctAddress, execer, evmContractAction.toByteArray(), EVM_FEE);
+       long fee = 0L;
+       if (gas < EVM_FEE) {
+     	  fee = EVM_FEE;
+       } else {
+     	  fee = gas + 100000L;
+       }
+       
+       String createTransferTx = TransactionUtil.createTransferTx(privateKey, contranctAddress, execer, evmContractAction.toByteArray(), fee);
 
        return createTransferTx;
    }
-    
 
- 
-    
 
    /**
     * @description  调用合约（平行链采用代扣的情况下调用）
@@ -302,6 +304,35 @@ public class EvmUtil {
        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
 
        String createTransferTx = TransactionUtil.createTransferTx(privateKey, TransactionUtil.getToAddress(exec.getBytes()), exec, evmContractAction.toByteArray(), EVM_FEE);
+
+       return createTransferTx;
+   }
+   
+   /**
+    * @description  调用合约（平行链采用代扣的情况下调用）
+    * @param parameter
+    * @param note
+    * @param amount
+    * @param privateKey
+    * @param contractAddress
+    * @return
+    */
+   public static String callEvmContractWithholdByGas(byte[] parameter, String note, long amount, String exec, String privateKey, String contractAddress, long gas) {
+       EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+       evmActionBuilder.setPara(ByteString.copyFrom(parameter));
+       evmActionBuilder.setNote(note);
+       evmActionBuilder.setAmount(amount);
+       evmActionBuilder.setContractAddr(contractAddress);
+       EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+
+       long fee = 0L;
+       if (gas < EVM_FEE) {
+     	  fee = EVM_FEE;
+       } else {
+     	  fee = gas + 100000L;
+       }
+       
+       String createTransferTx = TransactionUtil.createTransferTx(privateKey, TransactionUtil.getToAddress(exec.getBytes()), exec, evmContractAction.toByteArray(), fee);
 
        return createTransferTx;
    }
