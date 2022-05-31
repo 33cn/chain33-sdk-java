@@ -2,6 +2,7 @@ package cn.chain33.javasdk.utils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.util.List;
@@ -9,6 +10,8 @@ import java.util.Random;
 
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
+import org.web3j.crypto.ECKeyPair;
+import org.web3j.crypto.Keys;
 import org.bouncycastle.asn1.sec.SECNamedCurves;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.AsymmetricCipherKeyPair;
@@ -120,7 +123,6 @@ public class TransactionUtil {
 	}
 
 	/**
-	 * 
 	 * @description 通过公钥生成地址
 	 * @param pubKey
 	 *            公钥
@@ -132,6 +134,17 @@ public class TransactionUtil {
 		Address address = new Address();
 		address.setHash160(ripemd160);
 		return addressToString(address);
+	}
+	
+	/**
+	 * @description 通过公钥生成YCC格式地址（以太坊形式，以0x开头的地址）
+	 * @param pubKey 公钥
+	 * @return 地址
+	 */
+	public static String genAddressForYCC(BigInteger pubKey) {
+		//通过公钥生成钱包地址
+        String address = Keys.getAddress(pubKey);
+		return "0x" + address;
 	}
 
 	/**
@@ -566,6 +579,18 @@ public class TransactionUtil {
 		ECKey eckey = ECKey.fromPrivate(HexUtil.fromHexString(privateKey));
 		byte[] pubKey = eckey.getPubKey();
 		String pubKeyStr = HexUtil.toHexString(pubKey);
+		return pubKeyStr;
+	}
+		
+	
+	/**
+	 * 通过私钥生成YCC格式公钥
+	 * @param privateKey
+	 * @return
+	 */
+	public static BigInteger getHexPubKeyFromPrivKeyForYCC(String privateKey) {
+		ECKeyPair keyPair = ECKeyPair.create(HexUtil.fromHexString(privateKey));
+		BigInteger pubKeyStr = keyPair.getPublicKey();
 		return pubKeyStr;
 	}
 

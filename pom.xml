@@ -45,6 +45,12 @@
 			<artifactId>bitcoinj-core</artifactId>
 			<version>0.14.7</version>
 		</dependency>
+		
+		<dependency>
+    		<groupId>org.web3j</groupId>
+    		<artifactId>core</artifactId>
+    		<version>5.0.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
