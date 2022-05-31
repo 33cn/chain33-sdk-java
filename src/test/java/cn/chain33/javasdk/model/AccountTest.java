@@ -29,13 +29,24 @@ public class AccountTest {
 	Account account = new Account();
 
 	/**
-	 * 
 	 * @description 直接创建账户 (私钥，公钥，地址)
 	 *
 	 */
 	@Test
 	public void createAccountLocal() {
 		AccountInfo accountInfo = account.newAccountLocal();
+		System.out.println("privateKey is:" + accountInfo.getPrivateKey());
+		System.out.println("publicKey is:" + accountInfo.getPublicKey());
+		System.out.println("Address is:" + accountInfo.getAddress());
+	}
+	
+	/**
+	 * @description 直接创建YCC账户 (私钥，公钥，地址),地址格式以0x开头，以太坊的形式
+	 *
+	 */
+	@Test
+	public void createAccountLocalForYCC() {
+		AccountInfo accountInfo = account.newAccountLocalYCC();
 		System.out.println("privateKey is:" + accountInfo.getPrivateKey());
 		System.out.println("publicKey is:" + accountInfo.getPublicKey());
 		System.out.println("Address is:" + accountInfo.getAddress());

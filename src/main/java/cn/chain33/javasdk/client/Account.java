@@ -9,11 +9,11 @@ import cn.chain33.javasdk.utils.StringUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
 
 import java.io.*;
+import java.math.BigInteger;
 
 public class Account {
 
     /**
-     * 
      * @description 在本地创建账户信息
      * @return 账户信息(私钥，公钥，地址)
      *
@@ -30,6 +30,25 @@ public class Account {
     	byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
     	// 生成地址
     	accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+        return accountInfo;
+    }
+    
+    /**
+     * @description 在本地创建账户信息(以太坊形式，地址格式以0x开头)
+     * @return 账户信息(私钥，公钥，地址)
+     *
+     */
+    public AccountInfo newAccountLocalYCC() {
+    	AccountInfo accountInfo = new AccountInfo();
+    	
+    	// 生成私钥匙
+    	String privateKey = TransactionUtil.generatorPrivateKeyString();
+    	accountInfo.setPrivateKey(privateKey);
+    	// 生成公钥匙
+    	BigInteger publicKey = TransactionUtil.getHexPubKeyFromPrivKeyForYCC(privateKey);
+    	accountInfo.setPublicKey(publicKey.toString(16));
+    	// 生成地址
+    	accountInfo.setAddress(TransactionUtil.genAddressForYCC(publicKey));
         return accountInfo;
     }
 
