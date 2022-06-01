@@ -54,15 +54,16 @@ public class GrpcClientTLS {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
 
+
     /**
-     * @description »ñÈ¡×îĞÂµÄÇø¿éÍ· getLastHeader
-     * @return ×îĞÂÇø¿éĞÅÏ¢
+     * @description è·å–æœ€æ–°çš„åŒºå—å¤´ getLastHeader
+     * @return æœ€æ–°åŒºå—ä¿¡æ¯
      */
     public BlockchainProtobuf.Header getLastHeader() {
         CommonProtobuf.ReqNil request = CommonProtobuf.ReqNil.newBuilder().build();
         BlockchainProtobuf.Header response;
         try {
-            //Ê¹ÓÃ×èÈû stubµ÷ÓÃ
+            //Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ stubï¿½ï¿½ï¿½ï¿½
             response = blockingStub.getLastHeader(request);
             logger.info(response.toString());
             return response;
@@ -73,15 +74,15 @@ public class GrpcClientTLS {
     }
 
     /**
-     * @description ²éÑ¯½»Ò× queryTransaction
-     * @return ½»Ò×ĞÅÏ¢
+     * @description æŸ¥è¯¢äº¤æ˜“ queryTransaction
+     * @return äº¤æ˜“ä¿¡æ¯
      */
     public TransactionAllProtobuf.TransactionDetail queryTransaction(String hash) {
         byte[] hashBytes = HexUtil.fromHexString(hash);
         CommonProtobuf.ReqHash request = CommonProtobuf.ReqHash.newBuilder().setHash(ByteString.copyFrom(hashBytes)).build();
         TransactionAllProtobuf.TransactionDetail response;
         try {
-            //Ê¹ÓÃ×èÈû stubµ÷ÓÃ
+            //Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ stubï¿½ï¿½ï¿½ï¿½
             response = blockingStub.queryTransaction(request);
             logger.info(response.toString());
             return response;

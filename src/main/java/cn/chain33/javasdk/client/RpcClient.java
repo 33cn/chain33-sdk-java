@@ -28,16 +28,12 @@ import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.HttpUtil;
 import cn.chain33.javasdk.utils.StringUtil;
 
-/**
- * µ÷ÓÃÔ¶³Ì½Ó¿Ú
- * 
- * @author logan 2018Äê5ÔÂ16ÈÕ
- */
+
 public class RpcClient {
 
     private static Logger logger = LoggerFactory.getLogger(RpcClient.class);
 
-    // Í¨¹ıÅäÖÃÎÄ¼ş»òÕßÆäËû·½Ê½ÉèÖÃURL
+    // é€šè¿‡é…ç½®æ–‡ä»¶æˆ–è€…å…¶ä»–æ–¹å¼è®¾ç½®URL
     private String BASE_URL;
     
     public static final Integer TX_EXEC_RESULT_OK = 0;
@@ -72,7 +68,7 @@ public class RpcClient {
     }
 
     /**
-     * @description ·¢ËÍ½»Ò×
+     * @description å‘é€äº¤æ˜“
      * 
      * @param transactionJsonResult
      * @return
@@ -92,11 +88,11 @@ public class RpcClient {
     }
 
     /**
-     * @description ·¢ËÍ½»Ò×
-     * 
-     * @param data Ç©ÃûºóµÄ½»Ò×
-     * @return ½»Ò×hash
-     * @throws IOException 
+     * @description å‘é€äº¤æ˜“
+     *
+     * @param data ç­¾ååçš„äº¤æ˜“
+     * @return äº¤æ˜“hash
+     * @throws IOException
      */
     public String submitTransaction(String data) throws IOException {
         JSONObject jsonObject = new JSONObject();
@@ -115,10 +111,10 @@ public class RpcClient {
     }
 
     /**
-     * 
-     * @description ²éÑ¯½ÚµãÊÇ·ñÍ¬²½
-     * @return Í¬²½½á¹û
-     * @throws IOException 
+     *
+     * @description æŸ¥è¯¢èŠ‚ç‚¹æ˜¯å¦åŒæ­¥
+     * @return åŒæ­¥ç»“æœ
+     * @throws IOException
      *
      */
     public Boolean isSync() throws IOException {
@@ -136,11 +132,12 @@ public class RpcClient {
         return false;
     }
 
+
     /**
-     * @description ¸ù¾İ½»Ò×¹şÏ£²éÑ¯½»Ò×ĞÅÏ¢
-     * @param hash ½»Ò×hash
-     * @return ½»Ò×ĞÅÏ¢
-     * @throws IOException 
+     * @description æ ¹æ®äº¤æ˜“å“ˆå¸ŒæŸ¥è¯¢äº¤æ˜“ä¿¡æ¯
+     * @param hash äº¤æ˜“hash
+     * @return äº¤æ˜“ä¿¡æ¯
+     * @throws IOException
      */
     public QueryTransactionResult queryTransaction(String hash) throws IOException {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -164,12 +161,12 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ¸ù¾İ½»Ò×¹şÏ£²éÑ¯½»Ò×ĞÅÏ¢
-     * @param hash ½»Ò×hash
-     * @return ½»Ò×ĞÅÏ¢
-     * @throws IOException 
+     * @description æ ¹æ®äº¤æ˜“å“ˆå¸ŒæŸ¥è¯¢äº¤æ˜“ä¿¡æ¯
+     * @param hash äº¤æ˜“hash
+     * @return äº¤æ˜“ä¿¡æ¯
+     * @throws IOException
      */
     public String queryTx(String hash) throws IOException {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -187,11 +184,11 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ¸ù¾İ½»Ò×¹şÏ£²éÑ¯½»Ò×ĞÅÏ¢
-     * @param hash ½»Ò×hash
-     * @return ½»Ò×ĞÅÏ¢
+     * @description æ ¹æ®äº¤æ˜“å“ˆå¸ŒæŸ¥è¯¢äº¤æ˜“ä¿¡æ¯
+     * @param hash äº¤æ˜“hash
+     * @return äº¤æ˜“ä¿¡æ¯
      */
     public Integer queryTransactionStat(String hash) throws IOException {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -219,12 +216,12 @@ public class RpcClient {
 
         return TX_EXEC_RESULT_FAIL;
     }
-    
-    
+
+
     /**
-     * @description ²éÑ¯evmºÏÔ¼Í³¼ÆĞÅÏ¢
+     * @description æŸ¥è¯¢evmåˆçº¦ç»Ÿè®¡ä¿¡æ¯
      *
-     * @param address:  ²éÑ¯µÄµØÖ·
+     * @param address:  æŸ¥è¯¢çš„åœ°å€
      * @return
      */
     public JSONObject queryEVMStatResult(String address) throws IOException {
@@ -240,12 +237,12 @@ public class RpcClient {
 
         return JSONObject.parseObject(requestResult);
     }
-    
+
     /**
-     * @description ²éÑ¯ºÏÔ¼ABI½á¹û
+     * @description æŸ¥è¯¢åˆçº¦ABIç»“æœ
      *
-     * @param address:  ²éÑ¯µÄµØÖ·
-     * @param abiPack:  ²éÑ¯²ÎÊıµÄabi¸ñÊ½
+     * @param address:  æŸ¥è¯¢çš„åœ°å€
+     * @param abiPack:  æŸ¥è¯¢å‚æ•°çš„abiæ ¼å¼
      * @return
      */
     public JSONObject callEVMAbi(String address, String abiPack) throws IOException {
@@ -264,11 +261,11 @@ public class RpcClient {
     }
 
     /**
-     * @description ¸ù¾İ¹şÏ£Êı×éÅúÁ¿»ñÈ¡½»Ò×ĞÅÏ¢ GetTxByHashes
-     * 
-     * @param hashIdList ½»Ò×IDÁĞ±í
-     * @return ½»Ò×½á¹û¶ÔÏóÁĞ±í
-     * @throws IOException 
+     * @description æ ¹æ®å“ˆå¸Œæ•°ç»„æ‰¹é‡è·å–äº¤æ˜“ä¿¡æ¯ GetTxByHashes
+     *
+     * @param hashIdList äº¤æ˜“IDåˆ—è¡¨
+     * @return äº¤æ˜“ç»“æœå¯¹è±¡åˆ—è¡¨
+     * @throws IOException
      */
     public List<QueryTransactionResult> GetTxByHashes(List<String> hashIdList) throws IOException {
         if (hashIdList != null && !hashIdList.isEmpty()) {
@@ -302,11 +299,11 @@ public class RpcClient {
     }
 
     /**
-     * @description ¸ù¾İ¹şÏ£»ñÈ¡½»Ò×µÄ×Ö·û´® GetHexTxByHash
-     * 
-     * @param hash ½»Ò×hash
-     * @return ½»Ò××Ö·û´®
-     * @throws IOException 
+     * @description æ ¹æ®å“ˆå¸Œè·å–äº¤æ˜“çš„å­—ç¬¦ä¸² GetHexTxByHash
+     *
+     * @param hash äº¤æ˜“hash
+     * @return äº¤æ˜“å­—ç¬¦ä¸²
+     * @throws IOException
      */
     public String getHexTxByHash(String hash) throws IOException {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -328,13 +325,13 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡Çø¼äÇø¿é GetBlocks
-     * 
-     * @param start    Çø¿é¿ªÊ¼¸ß¶È
-     * @param end      Çø¿é½áÊø¸ß¶È
-     * @param isDetail ÊÇ·ñ»ñÈ¡ÏêÇé
-     * @throws IOException 
-     * 
+     * @description è·å–åŒºé—´åŒºå— GetBlocks
+     *
+     * @param start    åŒºå—å¼€å§‹é«˜åº¦
+     * @param end      åŒºå—ç»“æŸé«˜åº¦
+     * @param isDetail æ˜¯å¦è·å–è¯¦æƒ…
+     * @throws IOException
+     *
      */
     public List<BlocksResult> getBlocks(Long start, Long end, boolean isDetail) throws IOException {
         JSONObject jsonObject = new JSONObject();
@@ -362,9 +359,9 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡×îĞÂµÄÇø¿éÍ· GetLastHeader
-     * @return ×îĞÂÇø¿éĞÅÏ¢
-     * @throws IOException 
+     * @description è·å–æœ€æ–°çš„åŒºå—å¤´ GetLastHeader
+     * @return æœ€æ–°åŒºå—ä¿¡æ¯
+     * @throws IOException
      */
     public BlockResult getLastHeader() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_LAST_HEADER);
@@ -382,13 +379,14 @@ public class RpcClient {
         return null;
     }
 
+
     /**
-     * @description »ñÈ¡Çø¼äÇø¿éÍ· GetHeaders ¸Ã½Ó¿ÚÓÃÓÚ»ñÈ¡Ö¸¶¨¸ß¶ÈÇø¼äµÄÇø¿éÍ·²¿ĞÅÏ¢
-     * 
-     * @param start    ¿ªÊ¼Çø¿é¸ß¶È
-     * @param end      ½áÊøÇø¿é¸ß¶È
-     * @param isDetail ÊÇ·ñ´òÓ¡Çø¿éÏêÏ¸ĞÅÏ¢
-     * @throws IOException 
+     * @description è·å–åŒºé—´åŒºå—å¤´ GetHeaders è¯¥æ¥å£ç”¨äºè·å–æŒ‡å®šé«˜åº¦åŒºé—´çš„åŒºå—å¤´éƒ¨ä¿¡æ¯
+     *
+     * @param start    å¼€å§‹åŒºå—é«˜åº¦
+     * @param end      ç»“æŸåŒºå—é«˜åº¦
+     * @param isDetail æ˜¯å¦æ‰“å°åŒºå—è¯¦ç»†ä¿¡æ¯
+     * @throws IOException
      */
     public List<BlockResult> getHeaders(Long start, Long end, boolean isDetail) throws IOException {
         JSONObject jsonObject = new JSONObject();
@@ -415,15 +413,15 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * È¡Æ½¾ù³ö¿éÊ±¼ä
+     * å–å¹³å‡å‡ºå—æ—¶é—´
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public int getBlockAverageTime() throws IOException {
     	
-    	// ´´ÊÀ¿éµÄÊ±¼ä´ÓÅäÖÃÎÄ¼şÖĞ¶ÁÈ¡£¬ ËùÒÔ¹ıÂËµô
+    	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ğ¶ï¿½È¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½Ëµï¿½
     	List<BlockResult> blockResultList = getHeaders(1l, 1l, false);
     	BlockResult resultFirst = blockResultList.get(0);
     	
@@ -435,10 +433,10 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡Ä³¸ß¶ÈÇø¿éµÄ hash Öµ GetBlockHash ¸Ã½Ó¿ÚÓÃÓÚ»ñÈ¡Ö¸¶¨¸ß¶ÈÇø¼äµÄÇø¿éÍ·²¿ĞÅÏ¢
-     * @param height Çø¿é¸ß¶È
-     * @return Çø¿éhash
-     * @throws IOException 
+     * @description è·å–æŸé«˜åº¦åŒºå—çš„ hash å€¼ GetBlockHash è¯¥æ¥å£ç”¨äºè·å–æŒ‡å®šé«˜åº¦åŒºé—´çš„åŒºå—å¤´éƒ¨ä¿¡æ¯
+     * @param height åŒºå—é«˜åº¦
+     * @return åŒºå—hash
+     * @throws IOException
      */
     public String getBlockHash(Long height) throws IOException {
         JSONObject jsonObject = new JSONObject();
@@ -458,11 +456,11 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡Çø¿éµÄÏêÏ¸ĞÅÏ¢
-     * 
-     * @param hash Çø¿éhash
-     * @return Çø¿éĞÅÏ¢
-     * @throws IOException 
+     * @description è·å–åŒºå—çš„è¯¦ç»†ä¿¡æ¯
+     *
+     * @param hash åŒºå—hash
+     * @return åŒºå—ä¿¡æ¯
+     * @throws IOException
      */
     public BlockOverViewResult getBlockOverview(String hash) throws IOException {
         if (StringUtil.isNotEmpty(hash) && hash.startsWith("0x")) {
@@ -483,13 +481,13 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ¸ù¾İ¹şÏ£ÁĞ±í»ñÈ¡Çø¿éµÄÏêÏ¸ĞÅÏ¢
-     * 
-     * @param hash Çø¿éhash
-     * @return Çø¿éĞÅÏ¢
-     * @throws IOException 
+     * @description æ ¹æ®å“ˆå¸Œåˆ—è¡¨è·å–åŒºå—çš„è¯¦ç»†ä¿¡æ¯
+     *
+     * @param hash åŒºå—hash
+     * @return åŒºå—ä¿¡æ¯
+     * @throws IOException
      */
     public List<BlockResult> getBlockByHashes(String[] hashes, boolean disableDetail) throws IOException {
         if (hashes == null || hashes.length == 0) {
@@ -521,10 +519,11 @@ public class RpcClient {
         
    }
 
+
     /**
-     * @description »ñÈ¡Ô¶³Ì½ÚµãÁĞ±í
-     * @return ½ÚµãĞÅÏ¢
-     * @throws IOException 
+     * @description è·å–è¿œç¨‹èŠ‚ç‚¹åˆ—è¡¨
+     * @return èŠ‚ç‚¹ä¿¡æ¯
+     * @throws IOException
      */
     public List<PeerResult> getPeerInfo() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_PEER_INFO);
@@ -545,12 +544,12 @@ public class RpcClient {
         }
         return null;
     }
-    
-    
+
+
     /**
-     * @description ²éÑ¯½Úµã×´Ì¬
-     * @return ½Úµã×´Ì¬
-     * @throws IOException 
+     * @description æŸ¥è¯¢èŠ‚ç‚¹çŠ¶æ€
+     * @return èŠ‚ç‚¹çŠ¶æ€
+     * @throws IOException
      */
     public NetResult getNetInfo() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_NET_INFO);
@@ -565,11 +564,12 @@ public class RpcClient {
         }
         return null;
     }
-    
+
+
     /**
-     * @description »ñÈ¡ÏµÍ³Ö§³ÖÇ©ÃûÀàĞÍ
-     * @return Ç©ÃûÀàĞÍÁĞ±í
-     * @throws IOException 
+     * @description è·å–ç³»ç»Ÿæ”¯æŒç­¾åç±»å‹
+     * @return ç­¾åç±»å‹åˆ—è¡¨
+     * @throws IOException
      */
     public List<CryptoResult> getCryptoResult() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_CRYPTO_INFO);
@@ -610,13 +610,13 @@ public class RpcClient {
         }
         return false;
     }
-    
+
     /**
-     * 
-     * @description ¸ù¾İ¹şÏ£Êı×éÅúÁ¿»ñÈ¡½»Ò×ĞÅÏ¢
-     * @param hashIdList    ½»Ò×IDÁĞ±í£¬ÓÃ¶ººÅ¡°,¡±·Ö¸î
-     * @return ½»Ò×ĞÅÏ¢ÁĞ±í
-     * @throws IOException 
+     *
+     * @description æ ¹æ®å“ˆå¸Œæ•°ç»„æ‰¹é‡è·å–äº¤æ˜“ä¿¡æ¯
+     * @param hashIdList    äº¤æ˜“IDåˆ—è¡¨ï¼Œç”¨é€—å·â€œ,â€åˆ†å‰²
+     * @return äº¤æ˜“ä¿¡æ¯åˆ—è¡¨
+     * @throws IOException
      */
     public List<QueryTransactionResult> getTxByHashes(String hashIdList) throws IOException {
         if (StringUtil.isEmpty(hashIdList)) {
@@ -658,10 +658,10 @@ public class RpcClient {
     }
 
     /**
-     * 
-     * @description ²éÑ¯Ç®°ü×´Ì¬
-     * @return Ç®°ü×´Ì¬
-     * @throws IOException 
+     *
+     * @description æŸ¥è¯¢é’±åŒ…çŠ¶æ€
+     * @return é’±åŒ…çŠ¶æ€
+     * @throws IOException
      *
      */
     public WalletStatusResult getWalletStatus() throws IOException {
@@ -679,10 +679,9 @@ public class RpcClient {
     }
 
     /**
-     * @description ÉÏËø Lock
-     * 
-     * @return ½á¹û
-     * @throws IOException 
+     * @description ä¸Šé” Lock
+     * @return ç»“æœ
+     * @throws IOException
      */
     public BooleanResult lock() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.LOCK_WALLET);
@@ -699,13 +698,13 @@ public class RpcClient {
     }
 
     /**
-     * @description ½âËø Unlock
-     * 
-     * @param passwd    ½âËøÃÜÂë
-     * @param walletorticket true£¬Ö»½âËøticketÂòÆ±¹¦ÄÜ£¬false£º½âËøÕû¸öÇ®°ü¡£
-     * @param timeout        ½âËøÊ±¼ä£¬Ä¬ÈÏ 0£¬±íÊ¾ÓÀÔ¶½âËø£»·Ç 0 Öµ£¬±íÊ¾³¬Ê±Ö®ºó¼ÌĞøËø×¡Ç®°ü£¬µ¥Î»£ºÃë¡£
-     * @return ½á¹û
-     * @throws IOException 
+     * @description è§£é” Unlock
+     *
+     * @param passwd    è§£é”å¯†ç 
+     * @param walletorticket trueï¼Œåªè§£é”ticketä¹°ç¥¨åŠŸèƒ½ï¼Œfalseï¼šè§£é”æ•´ä¸ªé’±åŒ…ã€‚
+     * @param timeout        è§£é”æ—¶é—´ï¼Œé»˜è®¤ 0ï¼Œè¡¨ç¤ºæ°¸è¿œè§£é”ï¼›é 0 å€¼ï¼Œè¡¨ç¤ºè¶…æ—¶ä¹‹åç»§ç»­é”ä½é’±åŒ…ï¼Œå•ä½ï¼šç§’ã€‚
+     * @return ç»“æœ
+     * @throws IOException
      */
     public BooleanResult unlock(String passwd, boolean walletorticket, int timeout) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.UNLOCK_WALLET);
@@ -727,11 +726,11 @@ public class RpcClient {
     }
 
     /**
-     * 
-     * @description ÔÚ½ÚµãÇ®°üÖĞ´´½¨ÕË»§µØÖ·
-     * @param label ±êÇ©
-     * @return ÕË»§ĞÅÏ¢
-     * @throws IOException 
+     *
+     * @description åœ¨èŠ‚ç‚¹é’±åŒ…ä¸­åˆ›å»ºè´¦æˆ·åœ°å€
+     * @param label æ ‡ç­¾
+     * @return è´¦æˆ·ä¿¡æ¯
+     * @throws IOException
      *
      */
     public AccountResult newAccount(String label) throws IOException {
@@ -751,14 +750,15 @@ public class RpcClient {
         }
         return null;
     }
-    
+
+
 
     /**
-     * @description Éú³ÉËæ»úµÄseed
-     * 
-     * @param lang lang=0:Ó¢Óï£¬lang=1:¼òÌåºº×Ö
+     * @description ç”Ÿæˆéšæœºçš„seed
+     *
+     * @param lang lang=0:è‹±è¯­ï¼Œlang=1:ç®€ä½“æ±‰å­—
      * @return seed
-     * @throws IOException 
+     * @throws IOException
      */
     public String seedGen(Integer lang) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GEN_SEED);
@@ -778,12 +778,12 @@ public class RpcClient {
     }
 
     /**
-     * @description ±£´æseed²¢ÓÃÃÜÂë¼ÓÃÜ
-     * 
-     * @param seed ÖÖ×ÓÒªÇó16¸öµ¥´Ê»òÕßºº×Ö£¬²Î¿¼genseedÊä³ö¸ñÊ½£¬ĞèÒª¿Õ¸ñ¸ô¿ª
-     * @param passwd ¼ÓÃÜÃÜÂë£¬±ØĞë´óÓÚ»òµÈÓÚ8¸ö×Ö·ûµÄ×ÖÄ¸ºÍÊı×Ö×éºÏ
+     * @description ä¿å­˜seedå¹¶ç”¨å¯†ç åŠ å¯†
+     *
+     * @param seed ç§å­è¦æ±‚16ä¸ªå•è¯æˆ–è€…æ±‰å­—ï¼Œå‚è€ƒgenseedè¾“å‡ºæ ¼å¼ï¼Œéœ€è¦ç©ºæ ¼éš”å¼€
+     * @param passwd åŠ å¯†å¯†ç ï¼Œå¿…é¡»å¤§äºæˆ–ç­‰äº8ä¸ªå­—ç¬¦çš„å­—æ¯å’Œæ•°å­—ç»„åˆ
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public BooleanResult seedSave(String seed, String passwd) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.SAVE_SEED);
@@ -804,11 +804,11 @@ public class RpcClient {
     }
 
     /**
-     * @description Í¨¹ıÃÜÂë»ñÈ¡seed
-     * 
-     * @param passwd ÃÜÂë
+     * @description é€šè¿‡å¯†ç è·å–seed
+     *
+     * @param passwd å¯†ç 
      * @return  seed
-     * @throws IOException 
+     * @throws IOException
      */
     public String seedGet(String passwd) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_SEED);
@@ -828,11 +828,11 @@ public class RpcClient {
     }
 
     /**
-     * @description ½«ºÏÔ¼×ª»»ÎªµØÖ·
-     * 
-     * @param execername ÀıÈçuser.p.xxchain.xxx
-     * @return ºÏÔ¼µØÖ·
-     * @throws IOException 
+     * @description å°†åˆçº¦è½¬æ¢ä¸ºåœ°å€
+     *
+     * @param execername ä¾‹å¦‚user.p.xxchain.xxx
+     * @return åˆçº¦åœ°å€
+     * @throws IOException
      */
     public String convertExectoAddr(String execername) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CONVERT_EXECER_TO_ADDRESS);
@@ -850,13 +850,14 @@ public class RpcClient {
         return null;
     }
 
+
     /**
-     * @description ÉèÖÃµØÖ·±êÇ©
-     * 
-     * @param addr  ÀıÈç 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
-     * @param label ÀıÈç macAddrlabel
-     * @return ½á¹û
-     * @throws IOException 
+     * @description è®¾ç½®åœ°å€æ ‡ç­¾
+     *
+     * @param addr  ä¾‹å¦‚ 13TbfAPJRmekQxYVEyyGWgfvLwTa8DJW6U
+     * @param label ä¾‹å¦‚ macAddrlabel
+     * @return ç»“æœ
+     * @throws IOException
      */
     public AccountResult setlabel(String addr, String label) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.SET_LABEL);
@@ -877,10 +878,10 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡ÕË»§ÁĞ±í GetAccounts
-     * 
-     * @return ÕËºÅÁĞ±í
-     * @throws IOException 
+     * @description è·å–è´¦æˆ·åˆ—è¡¨ GetAccounts
+     *
+     * @return è´¦å·åˆ—è¡¨
+     * @throws IOException
      */
     public List<AccountResult> getAccountList() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_ACCOUNT_LIST);
@@ -898,10 +899,10 @@ public class RpcClient {
     }
 
     /**
-     * ´´½¨EVMºÏÔ¼½»Ò× CreateTransaction * 11.9 Éú³ÉÔ¤´´½¨token µÄ½»Ò×
-     * 
-     * @param execer     Ö´ĞĞÆ÷Ãû³Æ£¬ÕâÀï¹Ì¶¨Îªevm
-     * @param actionName ²Ù×÷Ãû³Æ£¬ÕâÀï¹Ì¶¨ÎªCreateCall
+     * åˆ›å»ºEVMåˆçº¦äº¤æ˜“ CreateTransaction * 11.9 ç”Ÿæˆé¢„åˆ›å»ºtoken çš„äº¤æ˜“
+     *
+     * @param execer     æ‰§è¡Œå™¨åç§°ï¼Œè¿™é‡Œå›ºå®šä¸ºevm
+     * @param actionName æ“ä½œåç§°ï¼Œè¿™é‡Œå›ºå®šä¸ºCreateCall
      * @param payload    https://chain.33.cn/document/108#1.1%20%E5%88%9B%E5%BB%BAEVM%E5%90%88%E7%BA%A6%E4%BA%A4%E6%98%93%20CreateTransaction
      * @return
      * @throws Exception
@@ -923,15 +924,15 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * µ÷ÓÃ¹ÜÀíºÏÔ¼£¨´´½¨ºÚÃûµ¥£¬ ´´½¨token-finisher£©
-     * 
+     * è°ƒç”¨ç®¡ç†åˆçº¦ï¼ˆåˆ›å»ºé»‘åå•ï¼Œ åˆ›å»ºtoken-finisherï¼‰
+     *
      * @param execer
      * @param actionName
      * @param superManager
      * @return
-     * @throws Exception 
+     * @throws Exception
      */
     public String createManageTransaction(String execer, String actionName, String key, String value, String op, String superManager) throws Exception {
     	JSONObject blackListPayload = new JSONObject();
@@ -941,10 +942,11 @@ public class RpcClient {
     	String managerResult = createTransaction(execer, actionName, blackListPayload);
     	return managerResult;
     }
-    
+
+
 
     /**
-     * ´´½¨ÕËºÅ
+     * åˆ›å»ºè´¦å·
      * @param execer
      * @param actionName
      * @param accountId
@@ -957,9 +959,9 @@ public class RpcClient {
     	String accountResult = createTransaction(execer, actionName, accountPayload);
     	return accountResult;
     }
-    
+
     /**
-     * ¶ÔÕËºÅ½øĞĞÊÚÈ¨
+     * å¯¹è´¦å·è¿›è¡Œæˆæƒ
      * @param execer
      * @param actionName
      * @param accountIds
@@ -976,10 +978,10 @@ public class RpcClient {
     	String accountResult = createTransaction(execer, actionName, accountPayload);
     	return accountResult;
     }
-    
+
     /**
-     * Ôö¼Ó¹²Ê¶½Úµã
-     * 
+     * å¢åŠ å…±è¯†èŠ‚ç‚¹
+     *
      * @param execer
      * @param actionName
      * @return
@@ -992,19 +994,19 @@ public class RpcClient {
     	String nodeResult = createTransaction(execer, actionName, nodePayload);
     	return nodeResult;
     }
-    
+
 
     /**
-     * @description Éú³ÉÔ¤´´½¨tokenµÄ½»Ò×
-     * 
-     * @param name         tokenµÄÈ«Ãû£¬×î´ó³¤¶ÈÊÇ128¸ö×Ö·û¡£
-     * @param symbol       token±ê¼Ç·û£¬×î´ó³¤¶ÈÊÇ16¸ö×Ö·û£¬ÇÒ±ØĞëÎª´óĞ´×Ö·û¡£
-     * @param introduction token½éÉÜ£¬×î´ó³¤¶ÈÎª1024¸ö×Ö½Ú¡£
-     * @param ownerAddr    tokenÓµÓĞÕßµØÖ·
-     * @param total        ·¢ĞĞ×ÜÁ¿,ĞèÒª³ËÒÔ10µÄ8´Î·½£¬±ÈÈçÒª·¢ĞĞ100¸ö±Ò£¬ĞèÒª100*1e8
-     * @param price        ·¢ĞĞ¸ÃtokenÔ¸Òâ³Ğµ£µÄ·ÑÓÃ
-     * @return ½»Ò×Ê®Áù½øÖÆ±àÂëºóµÄ×Ö·û´®
-     * @throws IOException 
+     * @description ç”Ÿæˆé¢„åˆ›å»ºtokençš„äº¤æ˜“
+     *
+     * @param name         tokençš„å…¨åï¼Œæœ€å¤§é•¿åº¦æ˜¯128ä¸ªå­—ç¬¦ã€‚
+     * @param symbol       tokenæ ‡è®°ç¬¦ï¼Œæœ€å¤§é•¿åº¦æ˜¯16ä¸ªå­—ç¬¦ï¼Œä¸”å¿…é¡»ä¸ºå¤§å†™å­—ç¬¦ã€‚
+     * @param introduction tokenä»‹ç»ï¼Œæœ€å¤§é•¿åº¦ä¸º1024ä¸ªå­—èŠ‚ã€‚
+     * @param ownerAddr    tokenæ‹¥æœ‰è€…åœ°å€
+     * @param total        å‘è¡Œæ€»é‡,éœ€è¦ä¹˜ä»¥10çš„8æ¬¡æ–¹ï¼Œæ¯”å¦‚è¦å‘è¡Œ100ä¸ªå¸ï¼Œéœ€è¦100*1e8
+     * @param price        å‘è¡Œè¯¥tokenæ„¿æ„æ‰¿æ‹…çš„è´¹ç”¨
+     * @return äº¤æ˜“åå…­è¿›åˆ¶ç¼–ç åçš„å­—ç¬¦ä¸²
+     * @throws IOException
      */
     public String createRawTokenPreCreateTx(String name,String symbol,String introduction,String ownerAddr,long total,long price,Integer category) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_PRE_CREATE_TX);
@@ -1028,13 +1030,13 @@ public class RpcClient {
     }
 
     /**
-     * @description Éú³ÉÍê³É´´½¨tokenµÄ½»Ò×£¨Î´Ç©Ãû£©
-     * 
-     * @param symbol:    token±ê¼Ç·û£¬×î´ó³¤¶ÈÊÇ16¸ö×Ö·û£¬ÇÒ±ØĞëÎª´óĞ´×Ö·û¡£
-     * @param ownerAddr: tokenÓµÓĞÕßµØÖ·
-     * @param fee:       ½»Ò×µÄÊÖĞø·Ñ
-     * @return ½»Ò×Ê®Áù½øÖÆ±àÂëºóµÄ×Ö·û´®
-     * @throws IOException 
+     * @description ç”Ÿæˆå®Œæˆåˆ›å»ºtokençš„äº¤æ˜“ï¼ˆæœªç­¾åï¼‰
+     *
+     * @param symbol:    tokenæ ‡è®°ç¬¦ï¼Œæœ€å¤§é•¿åº¦æ˜¯16ä¸ªå­—ç¬¦ï¼Œä¸”å¿…é¡»ä¸ºå¤§å†™å­—ç¬¦ã€‚
+     * @param ownerAddr: tokenæ‹¥æœ‰è€…åœ°å€
+     * @param fee:       äº¤æ˜“çš„æ‰‹ç»­è´¹
+     * @return äº¤æ˜“åå…­è¿›åˆ¶ç¼–ç åçš„å­—ç¬¦ä¸²
+     * @throws IOException
      */
     public String createRawTokenFinishTx(long fee,String symbol,String ownerAddr) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_FINISH_TX);
@@ -1053,19 +1055,20 @@ public class RpcClient {
         return null;
     }
 
+
     /**
-     * @description ¹¹Ôì½»Ò×
-     * 
-     * @param to:Ä¿±êµØÖ·¡£
-     * @param amount:·¢ËÍ½ğ¶î£¬×¢Òâ»ù´¡»õ±Òµ¥Î»Îª10^8
-     * @param fee:ÊÖĞø·Ñ£¬×¢Òâ»ù´¡»õ±Òµ¥Î»Îª10^8
-     * @param note:±¸×¢¡£·Ç±ØĞë
-     * @param isToken:ÊÇ·ñÊÇtokenÀàĞÍµÄ×ªÕË £¨·Çtoken×ªÕËÕâ¸ö²»ÓÃÌî£©
-     * @param isWithdraw:ÊÇ·ñÎªÈ¡¿î½»Ò×
-     * @param tokenSymbol:token µÄ symbol £¨·Çtoken×ªÕËÕâ¸ö²»ÓÃÌî£©
-     * @param execName:TransferToExec£¨×ªµ½ºÏÔ¼£© »ò Withdraw£¨´ÓºÏÔ¼ÖĞÌá¿î£©£¬Èç¹ûÒª¹¹ÔìÆ½ĞĞÁ´ÉÏµÄ×ªÕË£¬´Ë²ÎÊıÖÃ¿Õ
-     * @return ±¸×¢£ºÈç¹ûresult ²»Îªnil,ÔòÎª¹¹ÔìºóµÄ½»Ò×16½øÖÆ×Ö·û´®±àÂë¡£½âÂëÍ¨¹ıhex decode¡£
-     * @throws IOException 
+     * @description æ„é€ äº¤æ˜“
+     *
+     * @param to:ç›®æ ‡åœ°å€ã€‚
+     * @param amount:å‘é€é‡‘é¢ï¼Œæ³¨æ„åŸºç¡€è´§å¸å•ä½ä¸º10^8
+     * @param fee:æ‰‹ç»­è´¹ï¼Œæ³¨æ„åŸºç¡€è´§å¸å•ä½ä¸º10^8
+     * @param note:å¤‡æ³¨ã€‚éå¿…é¡»
+     * @param isToken:æ˜¯å¦æ˜¯tokenç±»å‹çš„è½¬è´¦ ï¼ˆétokenè½¬è´¦è¿™ä¸ªä¸ç”¨å¡«ï¼‰
+     * @param isWithdraw:æ˜¯å¦ä¸ºå–æ¬¾äº¤æ˜“
+     * @param tokenSymbol:token çš„ symbol ï¼ˆétokenè½¬è´¦è¿™ä¸ªä¸ç”¨å¡«ï¼‰
+     * @param execName:TransferToExecï¼ˆè½¬åˆ°åˆçº¦ï¼‰ æˆ– Withdrawï¼ˆä»åˆçº¦ä¸­ææ¬¾ï¼‰ï¼Œå¦‚æœè¦æ„é€ å¹³è¡Œé“¾ä¸Šçš„è½¬è´¦ï¼Œæ­¤å‚æ•°ç½®ç©º
+     * @return å¤‡æ³¨ï¼šå¦‚æœresult ä¸ä¸ºnil,åˆ™ä¸ºæ„é€ åçš„äº¤æ˜“16è¿›åˆ¶å­—ç¬¦ä¸²ç¼–ç ã€‚è§£ç é€šè¿‡hex decodeã€‚
+     * @throws IOException
      */
     public String createRawTransaction(String to, long amount, long fee, String note, boolean isToken,
             boolean isWithdraw, String tokenSymbol, String execName) throws IOException {
@@ -1092,14 +1095,14 @@ public class RpcClient {
     }
 
     /**
-     * @description ¹¹Ôì½»Ò×(Æ½ĞĞÁ´ÉÏ»áÓÃµ½)
-     * 
-     * @param txHex:   ÓÉÉÏÒ»²½µÄcreateRawTxÉú³ÉµÄ½»Ò×ÔÙ´«Èë£¨±ÈÈç£¬CreateRawTokenPreCreateTx£ºtokenÔ¤´´½¨£»CreateRawTokenFinishTx£ºtokenÍê³É£»CreateRawTransaction£º×ªÒÆtoken£©
-     * @param payAddr: ÓÃÓÚ¸¶·ÑµÄµØÖ·£¬Õâ¸öµØÖ·ÒªÔÚÖ÷Á´ÉÏ´æÔÚ£¬²¢ÇÒÀïÃæÓĞ±ÈÌØÔªÓÃÓÚÖ§¸¶ÊÖĞø·Ñ¡£
-     * @param Privkey£º ¶ÔÓ¦ÓÚpayAddrµÄË½Ô¿¡£Èç¹ûpayAddrÒÑ¾­µ¼Èëµ½Æ½ĞĞÁ´£¬ÄÇÃ´Õâ¸öË½Ô¿¿ÉÒÔ²»´«£¨½¨Òé×ö·¨ÊÇÔÚÆ½ĞĞÁ´ÉÏµ¼ÈëµØÖ·£¬±£Ö¤Ë½Ô¿°²È«£©
-     * @param expire:  ³¬Ê±Ê±¼ä
+     * @description æ„é€ äº¤æ˜“(å¹³è¡Œé“¾ä¸Šä¼šç”¨åˆ°)
+     *
+     * @param txHex:   ç”±ä¸Šä¸€æ­¥çš„createRawTxç”Ÿæˆçš„äº¤æ˜“å†ä¼ å…¥ï¼ˆæ¯”å¦‚ï¼ŒCreateRawTokenPreCreateTxï¼štokené¢„åˆ›å»ºï¼›CreateRawTokenFinishTxï¼štokenå®Œæˆï¼›CreateRawTransactionï¼šè½¬ç§»tokenï¼‰
+     * @param payAddr: ç”¨äºä»˜è´¹çš„åœ°å€ï¼Œè¿™ä¸ªåœ°å€è¦åœ¨ä¸»é“¾ä¸Šå­˜åœ¨ï¼Œå¹¶ä¸”é‡Œé¢æœ‰æ¯”ç‰¹å…ƒç”¨äºæ”¯ä»˜æ‰‹ç»­è´¹ã€‚
+     * @param Privkeyï¼š å¯¹åº”äºpayAddrçš„ç§é’¥ã€‚å¦‚æœpayAddrå·²ç»å¯¼å…¥åˆ°å¹³è¡Œé“¾ï¼Œé‚£ä¹ˆè¿™ä¸ªç§é’¥å¯ä»¥ä¸ä¼ ï¼ˆå»ºè®®åšæ³•æ˜¯åœ¨å¹³è¡Œé“¾ä¸Šå¯¼å…¥åœ°å€ï¼Œä¿è¯ç§é’¥å®‰å…¨ï¼‰
+     * @param expire:  è¶…æ—¶æ—¶é—´
      * @return hash
-     * @throws IOException 
+     * @throws IOException
      */
     public String createRawTransaction(String txHex, String payAddr, String Privkey, String expire) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TX);
@@ -1119,17 +1122,17 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ½»Ò×Ç©Ãû
-     * 
-     * @param addr Óëkey¿ÉÒÔÖ»ÊäÈëÆäÒ»
-     * @param key Ë½Ô¿
-     * @param expire ¹ıÆÚÊ±¼ä¿ÉÊäÈëÈç"300ms"£¬"-1.5h"»òÕß"2h45m"µÄ×Ö·û´®£¬ÓĞĞ§Ê±¼äµ¥Î»Îª"ns", "us" (or "¦Ìs"), "ms","s", "m","h"
-     * @param index ÈôÊÇÇ©Ãû½»Ò××é£¬ÔòÎªÒªÇ©ÃûµÄ½»Ò×ĞòºÅ£¬´Ó1¿ªÊ¼£¬Ğ¡ÓÚµÈÓÚ0ÔòÎªÇ©Ãû×éÄÚÈ«²¿½»Ò×
-     * @param index ¹Ì¶¨ÌîĞ´2(ÕâÀïÊÇÒ»¸ö½»Ò××é£¬µÚ1±ÊnoneµÄ½»Ò×ÒÑ¾­ÓÃpay addressÇ©¹ıÃûÁË£¬´Ë´¦Ç©index=2µÄ½»Ò×)
+     * @description äº¤æ˜“ç­¾å
+     *
+     * @param addr ä¸keyå¯ä»¥åªè¾“å…¥å…¶ä¸€
+     * @param key ç§é’¥
+     * @param expire è¿‡æœŸæ—¶é—´å¯è¾“å…¥å¦‚"300ms"ï¼Œ"-1.5h"æˆ–è€…"2h45m"çš„å­—ç¬¦ä¸²ï¼Œæœ‰æ•ˆæ—¶é—´å•ä½ä¸º"ns", "us" (or "Î¼s"), "ms","s", "m","h"
+     * @param index è‹¥æ˜¯ç­¾åäº¤æ˜“ç»„ï¼Œåˆ™ä¸ºè¦ç­¾åçš„äº¤æ˜“åºå·ï¼Œä»1å¼€å§‹ï¼Œå°äºç­‰äº0åˆ™ä¸ºç­¾åç»„å†…å…¨éƒ¨äº¤æ˜“
+     * @param index å›ºå®šå¡«å†™2(è¿™é‡Œæ˜¯ä¸€ä¸ªäº¤æ˜“ç»„ï¼Œç¬¬1ç¬”noneçš„äº¤æ˜“å·²ç»ç”¨pay addressç­¾è¿‡åäº†ï¼Œæ­¤å¤„ç­¾index=2çš„äº¤æ˜“)
      * @return txhex
-     * @throws IOException 
+     * @throws IOException
      */
     public String signRawTx(String addr, String key, String txhex, String expire, int index) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.SIGN_RAW_TRANSACTION);
@@ -1151,14 +1154,15 @@ public class RpcClient {
         return null;
     }
 
+
     /**
-     * @description ²éÑ¯µØÖ·tokenÓà¶î
-     * 
-     * @param addresses µØÖ·ÁĞ±í
-     * @param execer    token ²éÑ¯¿ÉÓÃµÄÓà¶î £¬trade ²éÑ¯ÕıÔÚ½»Ò×ºÏÔ¼ÀïµÄtoken,Èç¹ûÊÇ²éÑ¯Æ½ĞĞÁ´ÉÏÓà¶î£¬ÔòĞèÒªÖ¸¶¨¾ßÌåÆ½ĞĞÁ´µÄÖ´ĞĞÆ÷execer,ÀıÈç£ºuser.p.xxx.token .
-     * @param tokenSymbol   token·ûºÅÃû³Æ
-     * @return  ÕËºÅÓà¶îÁĞ±í
-     * @throws IOException 
+     * @description æŸ¥è¯¢åœ°å€tokenä½™é¢
+     *
+     * @param addresses åœ°å€åˆ—è¡¨
+     * @param execer    token æŸ¥è¯¢å¯ç”¨çš„ä½™é¢ ï¼Œtrade æŸ¥è¯¢æ­£åœ¨äº¤æ˜“åˆçº¦é‡Œçš„token,å¦‚æœæ˜¯æŸ¥è¯¢å¹³è¡Œé“¾ä¸Šä½™é¢ï¼Œåˆ™éœ€è¦æŒ‡å®šå…·ä½“å¹³è¡Œé“¾çš„æ‰§è¡Œå™¨execer,ä¾‹å¦‚ï¼šuser.p.xxx.token .
+     * @param tokenSymbol   tokenç¬¦å·åç§°
+     * @return  è´¦å·ä½™é¢åˆ—è¡¨
+     * @throws IOException
      */
     public List<AccountAccResult> getTokenBalance(List<String> addresses, String execer, String tokenSymbol) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_TOKEN_BALANCE);
@@ -1180,12 +1184,12 @@ public class RpcClient {
     }
 
     /**
-     * @description ²éÑ¯Ö÷´ú±ÒÓà¶î
-     * 
-     * @param addresses  µØÖ·ÁĞ±í
+     * @description æŸ¥è¯¢ä¸»ä»£å¸ä½™é¢
+     *
+     * @param addresses  åœ°å€åˆ—è¡¨
      * @param execer    coins
-     * @return  Óà¶îÁĞ±í
-     * @throws IOException 
+     * @return  ä½™é¢åˆ—è¡¨
+     * @throws IOException
      */
     public List<AccountAccResult> getCoinsBalance(List<String> addresses, String execer) throws IOException {
         RpcRequest postJsonData = new RpcRequest();
@@ -1207,11 +1211,11 @@ public class RpcClient {
     }
 
     /**
-     * @description µ¼³öË½Ô¿
-     * 
-     * @param addr µ¼³öË½Ô¿µÄµØÖ·
-     * @return Ë½Ô¿
-     * @throws IOException 
+     * @description å¯¼å‡ºç§é’¥
+     *
+     * @param addr å¯¼å‡ºç§é’¥çš„åœ°å€
+     * @return ç§é’¥
+     * @throws IOException
      */
     public String dumpPrivkey(String addr) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.DUMP_PRIVKEY);
@@ -1231,12 +1235,12 @@ public class RpcClient {
     }
 
     /**
-     * @description µ¼ÈëË½Ô¿
-     * 
-     * @param privateKey Ë½Ô¿
-     * @param label   µØÖ·label
-     * @return µ¼Èë½á¹û
-     * @throws IOException 
+     * @description å¯¼å…¥ç§é’¥
+     *
+     * @param privateKey ç§é’¥
+     * @param label   åœ°å€label
+     * @return å¯¼å…¥ç»“æœ
+     * @throws IOException
      */
     public String importPrivatekey(String privateKey, String label) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.IMPORT_PRIVKEY);
@@ -1256,14 +1260,15 @@ public class RpcClient {
         return null;
     }
 
+
     /**
-     * @description ¸ù¾İµØÖ·»ñÈ¡½»Ò×ĞÅÏ¢hash
-     * 
-     * @param flag:   0£ºaddr µÄËùÓĞ½»Ò×£»1£ºµ± addr Îª·¢ËÍ·½Ê±µÄ½»Ò×£»2£ºµ± addr Îª½ÓÊÕ·½Ê±µÄ½»Ò×¡£
-     * @param height: ½»Ò×ËùÔÚµÄblock¸ß¶È£¬-1£º±íÊ¾´Ó×îĞÂµÄ¿ªÊ¼ÏòºóÈ¡£»´óÓÚµÈÓÚ0µÄÖµ£¬´Ó¾ßÌåµÄ¸ß¶È+¾ßÌåindex¿ªÊ¼È¡¡£
-     * @param index:  ½»Ò×ËùÔÚblockÖĞµÄË÷Òı£¬È¡Öµ0--100000¡£
-     * @return ½»Ò×ÁĞ±í
-     * @throws IOException 
+     * @description æ ¹æ®åœ°å€è·å–äº¤æ˜“ä¿¡æ¯hash
+     *
+     * @param flag:   0ï¼šaddr çš„æ‰€æœ‰äº¤æ˜“ï¼›1ï¼šå½“ addr ä¸ºå‘é€æ–¹æ—¶çš„äº¤æ˜“ï¼›2ï¼šå½“ addr ä¸ºæ¥æ”¶æ–¹æ—¶çš„äº¤æ˜“ã€‚
+     * @param height: äº¤æ˜“æ‰€åœ¨çš„blocké«˜åº¦ï¼Œ-1ï¼šè¡¨ç¤ºä»æœ€æ–°çš„å¼€å§‹å‘åå–ï¼›å¤§äºç­‰äº0çš„å€¼ï¼Œä»å…·ä½“çš„é«˜åº¦+å…·ä½“indexå¼€å§‹å–ã€‚
+     * @param index:  äº¤æ˜“æ‰€åœ¨blockä¸­çš„ç´¢å¼•ï¼Œå–å€¼0--100000ã€‚
+     * @return äº¤æ˜“åˆ—è¡¨
+     * @throws IOException
      */
     public List<TxResult> getTxByAddr(String addr, Integer flag, Integer count, Integer direction, Long height,
             Integer index) throws IOException {
@@ -1290,11 +1295,11 @@ public class RpcClient {
     }
 
     /**
-     * @description ²éÑ¯ËùÓĞÔ¤´´½¨µÄtoken»ò´´½¨³É¹¦µÄtoken
-     * 
-     * @param status 0:Ô¤´´½¨ 1:´´½¨³É¹¦ µÄtoken
-     * @return  tokenĞÅÏ¢ÁĞ±í
-     * @throws IOException 
+     * @description æŸ¥è¯¢æ‰€æœ‰é¢„åˆ›å»ºçš„tokenæˆ–åˆ›å»ºæˆåŠŸçš„token
+     *
+     * @param status 0:é¢„åˆ›å»º 1:åˆ›å»ºæˆåŠŸ çš„token
+     * @return  tokenä¿¡æ¯åˆ—è¡¨
+     * @throws IOException
      */
     public List<TokenResult> queryCreateTokens(Integer status,String execer) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1320,12 +1325,12 @@ public class RpcClient {
     }
 
     /**
-     * @description ²éÑ¯µØÖ·ÏÂµÄtoken/traceºÏÔ¼ÏÂµÄtoken×Ê²ú
-     * 
-     * @param address:  ²éÑ¯µÄµØÖ·
-     * @param payloadExecer:   token »ò trade
+     * @description æŸ¥è¯¢åœ°å€ä¸‹çš„token/traceåˆçº¦ä¸‹çš„tokenèµ„äº§
+     *
+     * @param address:  æŸ¥è¯¢çš„åœ°å€
+     * @param payloadExecer:   token æˆ– trade
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public List<TokenBalanceResult> queryAccountBalance(String address, String payloadExecer) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1349,15 +1354,15 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ²éÑ¯ºÏÔ¼ÏûºÄµÄGAS
-     * @param execer:   Ö´ĞĞÆ÷Ãû³Æ
-     * @param tx Î´Ç©ÃûµÄ½»Ò×hex
-     * @param address:  ²éÑ¯µÄµØÖ·
-     * @param funcName: ·½·¨Ãû
+     * @description æŸ¥è¯¢åˆçº¦æ¶ˆè€—çš„GAS
+     * @param execer:   æ‰§è¡Œå™¨åç§°
+     * @param tx æœªç­¾åçš„äº¤æ˜“hex
+     * @param address:  æŸ¥è¯¢çš„åœ°å€
+     * @param funcName: æ–¹æ³•å
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public long queryEVMGas(String execer, String tx, String address) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1379,15 +1384,15 @@ public class RpcClient {
         }
         return 0;
     }
-    
+
     /**
-     * @description ²éÑ¯ºÏÔ¼°ó¶¨µÄABIĞÅÏ¢
-     * 
-     * @param address:  ²éÑ¯µÄµØÖ·
-     * @param execer:   Ö´ĞĞÆ÷Ãû³Æ
-     * @param funcName: ·½·¨Ãû
+     * @description æŸ¥è¯¢åˆçº¦ç»‘å®šçš„ABIä¿¡æ¯
+     *
+     * @param address:  æŸ¥è¯¢çš„åœ°å€
+     * @param execer:   æ‰§è¡Œå™¨åç§°
+     * @param funcName: æ–¹æ³•å
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public JSONArray queryEVMABIInfo(String address, String execer) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1410,11 +1415,12 @@ public class RpcClient {
         return null;
     }
 
+
     /**
-     * @description ²éÑ¯WASMºÏÔ¼ keyĞÅÏ¢
+     * @description æŸ¥è¯¢WASMåˆçº¦ keyä¿¡æ¯
      *
-     * @param contract:  ²éÑ¯µÄwasmºÏÔ¼Ãû×Ö
-     * @param key:   ²éÑ¯µÄkeyÃû³Æ
+     * @param contract:  æŸ¥è¯¢çš„wasmåˆçº¦åå­—
+     * @param key:   æŸ¥è¯¢çš„keyåç§°
      * @return String
      * @throws IOException
      */
@@ -1441,13 +1447,13 @@ public class RpcClient {
     }
 
     /**
-     * @description ²éÑ¯ºÏÔ¼ABI½á¹û
-     * 
-     * @param address:  ²éÑ¯µÄµØÖ·
-     * @param execer:   Ö´ĞĞÆ÷Ãû³Æ
-     * @param funcName: ·½·¨Ãû
+     * @description æŸ¥è¯¢åˆçº¦ABIç»“æœ
+     *
+     * @param address:  æŸ¥è¯¢çš„åœ°å€
+     * @param execer:   æ‰§è¡Œå™¨åç§°
+     * @param funcName: æ–¹æ³•å
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public JSONArray queryEVMABIResult(String address, String execer, String abiFunc) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1472,12 +1478,12 @@ public class RpcClient {
     }
 
     /**
-     * @description ²éÑ¯µØÖ·Óà¶î
-     * 
-     * @param addressList µØÖ·
+     * @description æŸ¥è¯¢åœ°å€ä½™é¢
+     *
+     * @param addressList åœ°å€
      * @param execer  coins
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public List<AccountAccResult> queryBalance(List<String> addressList, String execer) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_BALANCE);
@@ -1502,13 +1508,13 @@ public class RpcClient {
     }
 
     /**
-     * @description ·¢ËÍÇ©ÃûºóµÄ½»Ò×
-     * @param unsignTx Î´Ç©ÃûµÄtx
-     * @param sign     sign:ÓÃË½Ô¿¶ÔunsigntxÇ©ÃûºÃµÄÊı¾İ
-     * @param pubkey   Ë½Ô¿¶ÔÓ¦µÄ¹«Ô¿
-     * @param signType Ç©ÃûÀàĞÍ
+     * @description å‘é€ç­¾ååçš„äº¤æ˜“
+     * @param unsignTx æœªç­¾åçš„tx
+     * @param sign     sign:ç”¨ç§é’¥å¯¹unsigntxç­¾åå¥½çš„æ•°æ®
+     * @param pubkey   ç§é’¥å¯¹åº”çš„å…¬é’¥
+     * @param signType ç­¾åç±»å‹
      * @return hash
-     * @throws IOException 
+     * @throws IOException
      */
     public String submitRawTransaction(String unsignTx, String sign, String pubkey, SignType signType) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.SEND_RAW_TRANSACTION);
@@ -1530,17 +1536,17 @@ public class RpcClient {
     }
 
     /**
-     * @description token×ªÕË
-     * 
-     * @param from:        À´Ô´µØÖ·¡£
-     * @param to:          ·¢ËÍµ½µØÖ·¡£
-     * @param amount:      ·¢ËÍ½ğ¶î¡£
-     * @param note:        ±¸×¢¡£
-     * @param isToken:     ·¢ËÍµÄÊÇ·ñÊÇtoken¡£false µÄÇé¿öÏÂ·¢ËÍµÄbt
-     * 
-     * @param tokenSymbol: token±ê¼Ç·û£¬×î´ó³¤¶ÈÊÇ16¸ö×Ö·û£¬ÇÒ±ØĞëÎª´óĞ´×Ö·û¡£
+     * @description tokenè½¬è´¦
+     *
+     * @param from:        æ¥æºåœ°å€ã€‚
+     * @param to:          å‘é€åˆ°åœ°å€ã€‚
+     * @param amount:      å‘é€é‡‘é¢ã€‚
+     * @param note:        å¤‡æ³¨ã€‚
+     * @param isToken:     å‘é€çš„æ˜¯å¦æ˜¯tokenã€‚false çš„æƒ…å†µä¸‹å‘é€çš„bt
+     *
+     * @param tokenSymbol: tokenæ ‡è®°ç¬¦ï¼Œæœ€å¤§é•¿åº¦æ˜¯16ä¸ªå­—ç¬¦ï¼Œä¸”å¿…é¡»ä¸ºå¤§å†™å­—ç¬¦ã€‚
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public String sendToAddress(String from, String to, Long amount, String note, boolean isToken, String tokenSymbol) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.SEND_TO_ADDRESS);
@@ -1564,36 +1570,33 @@ public class RpcClient {
     }
 
     /**
-     * 
-     * @param userAddr ÓÃ»§µØÖ·
-     * @param reqStr   ÇëÇó²ÎÊı
-     * @param signAddr sys_sign_addr ÏµÍ³Ç©ÃûµØÖ·£¿
+     *
+     * @param userAddr ç”¨æˆ·åœ°å€
+     * @param reqStr   è¯·æ±‚å‚æ•°
+     * @param signAddr sys_sign_addr ç³»ç»Ÿç­¾ååœ°å€ï¼Ÿ
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public String processTxGroup(String userAddr, String reqStr, String signAddr) throws IOException {
         String response = HttpUtil.httpPost(getUrl(), reqStr);
         RpcResponse rep = parseResponse(response, reqStr);
         if (rep == null) {
-            logger.error("¹¹½¨½»Ò××éÊ§°Ü");
+            logger.error("build txgroup failed");
             return "";
         }
         String rawTxHex = String.valueOf(rep.getResult());
 
-        // ¹¹½¨´ú¿ÛÊÖĞø·Ñ½»Ò×
         String withholdTxHex = createNoBalanceTx(rawTxHex, signAddr);
 
-        // ¶Ô´ú¿Û½»Ò×Ç©Ãû
         String signedTxHex = signRawTx(userAddr, null, withholdTxHex, "1h", 2);
         if ("".equals(signedTxHex)) {
-            logger.error("½»Ò×Ç©ÃûÊ§°Ü");
+            logger.error("txgroup sign failed");
             return "";
         }
 
-        // ·¢ËÍ½»Ò××é
         String txHash = submitTransaction(signedTxHex);
         if ("".equals(txHash)) {
-            logger.error("½»Ò××é·¢ËÍ½»Ò×Ê§°Ü");
+            logger.error("txgroup send failed");
             return "";
         }
         return txHash;
@@ -1620,12 +1623,12 @@ public class RpcClient {
 
 
     /**
-     * @descprition ÔÚÔ­ÓĞµÄ½»Ò×»ù´¡ÉÏ¹¹½¨Ò»¸öÊÖĞø·Ñ´ú¿Û½»Ò×£¬ĞèÔ¤ÏÈ½«payAddr¶ÔÓ¦µÄË½Ô¿µ¼Èëµ½Æ½ĞĞÁ´
-     * 
-     * @param txHex   »®×ª½»Ò×µÄ16½øÖÆ×Ö·û´®
-     * @param payAddr ´ú¿ÛÕË»§µÄµØÖ·
-     * @return °üº¬Ô­ÓĞ»®×ª½»Ò×Óë´ú¿Û½»Ò×µÄ½»Ò××é16½øÖÆ×Ö·û´®
-     * @throws IOException 
+     * @descprition åœ¨åŸæœ‰çš„äº¤æ˜“åŸºç¡€ä¸Šæ„å»ºä¸€ä¸ªæ‰‹ç»­è´¹ä»£æ‰£äº¤æ˜“ï¼Œéœ€é¢„å…ˆå°†payAddrå¯¹åº”çš„ç§é’¥å¯¼å…¥åˆ°å¹³è¡Œé“¾
+     *
+     * @param txHex   åˆ’è½¬äº¤æ˜“çš„16è¿›åˆ¶å­—ç¬¦ä¸²
+     * @param payAddr ä»£æ‰£è´¦æˆ·çš„åœ°å€
+     * @return åŒ…å«åŸæœ‰åˆ’è½¬äº¤æ˜“ä¸ä»£æ‰£äº¤æ˜“çš„äº¤æ˜“ç»„16è¿›åˆ¶å­—ç¬¦ä¸²
+     * @throws IOException
      */
     public final String createNoBalanceTx(String txHex, String payAddr) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CREATE_NO_BALANCE_TX);
@@ -1646,12 +1649,12 @@ public class RpcClient {
     }
 
     /**
-     * @descprition ´¦ÀíRPC·µ»Ø½á¹û×Ö·û´®
+     * @descprition å¤„ç†RPCè¿”å›ç»“æœå­—ç¬¦ä¸²
      * @author lyz
      * @create 2018/11/19 18:20
-     * @param response RPCÇëÇó·µ»Ø½á¹û×Ö·û´®
-     * @param reqParam ÇëÇó²ÎÊı£¬Ö÷ÒªÊÇÔÚ³ö´íµÄÊ±ºò£¬ÏÔÊ¾µ½ÈÕÖ¾
-     * @return RPC½á¹û¶ÔÏó
+     * @param response RPCè¯·æ±‚è¿”å›ç»“æœå­—ç¬¦ä¸²
+     * @param reqParam è¯·æ±‚å‚æ•°ï¼Œä¸»è¦æ˜¯åœ¨å‡ºé”™çš„æ—¶å€™ï¼Œæ˜¾ç¤ºåˆ°æ—¥å¿—
+     * @return RPCç»“æœå¯¹è±¡
      */
     public static RpcResponse parseResponse(String response, String reqParam) {
         RpcResponse rep = null;
@@ -1662,18 +1665,18 @@ public class RpcClient {
                 return rep;
             }
         }
-        logger.error("RPCÇëÇóÊ§°Ü£¬´íÎóĞÅÏ¢£º" + rep == null ? "" : rep.getError() + " , ÇëÇó²ÎÊı£º" + reqParam);
+        logger.error("RPC request failed" + rep == null ? "" : rep.getError() + " , request param" + reqParam);
         return null;
     }
-    
-    
+
+
     /**
-     * 
-     * @description    ´´½¨³·ÏúÔ¤´´½¨token½»Ò×
-     * @param symbol   »ı·Ösymbol
-     * @param owner    »ı·ÖÓµÓĞÕßµØÖ·
+     *
+     * @description    åˆ›å»ºæ’¤é”€é¢„åˆ›å»ºtokenäº¤æ˜“
+     * @param symbol   ç§¯åˆ†symbol
+     * @param owner    ç§¯åˆ†æ‹¥æœ‰è€…åœ°å€
      * @return
-     * @throws IOException 
+     * @throws IOException
      *
      */
     public String CreateRawTokenRevokeTx(String symbol,String owner) throws IOException {
@@ -1691,14 +1694,14 @@ public class RpcClient {
         }
         return null;
     }
-    
-    
+
+
     /**
-     * @description ²éÑ¯´æÖ¤ĞÅÏ¢
-     * 
+     * @description æŸ¥è¯¢å­˜è¯ä¿¡æ¯
+     *
      * @param hash:   hash
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public JSONObject queryStorage(String hash) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1719,13 +1722,13 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ¸ù¾İAccountId²éÕË»§ĞÅÏ¢
-     * 
+     * @description æ ¹æ®AccountIdæŸ¥è´¦æˆ·ä¿¡æ¯
+     *
      * @param accountId:   accountId
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public JSONObject queryAccountById(String accountId) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1746,13 +1749,13 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * @description ¸ù¾İÕË»§×´Ì¬²éÕË»§ĞÅÏ¢
-     * 
+     * @description æ ¹æ®è´¦æˆ·çŠ¶æ€æŸ¥è´¦æˆ·ä¿¡æ¯
+     *
      * @param status:   status
      * @return TokenBalanceResult
-     * @throws IOException 
+     * @throws IOException
      */
     public JSONObject queryAccountByStatus(String status) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.QUERY);
@@ -1776,17 +1779,17 @@ public class RpcClient {
 
     /**
      *
-     * @description ·¢ËÍÖØ¼ÓÃØÔ¿·ÖÆ¬¸øÖØ¼ÓÃÜ½Úµã
+     * @description å‘é€é‡åŠ ç§˜é’¥åˆ†ç‰‡ç»™é‡åŠ å¯†èŠ‚ç‚¹
      *
-     * @param pubOwner     Êı¾İ¹²ÏíÕß¹«Ô¿
-     * @param pubRecipient Êı¾İ½ÓÊÕÕß¹«Ô¿
-     * @param pubProofR    ÖØ¼ÓÃÜËæ»ú¹«Ô¿R
-     * @param pubProofU    ÖØ¼ÓÃÜËæ»ú¹«Ô¿U
-     * @param expire       ³¬Ê±Ê±¼ä
-     * @param dhProof      Éí·İÖ¤Ã÷
-     * @param frag         ÖØ¼ÓÃÜÃØÔ¿·ÖÆ¬
+     * @param pubOwner     æ•°æ®å…±äº«è€…å…¬é’¥
+     * @param pubRecipient æ•°æ®æ¥æ”¶è€…å…¬é’¥
+     * @param pubProofR    é‡åŠ å¯†éšæœºå…¬é’¥R
+     * @param pubProofU    é‡åŠ å¯†éšæœºå…¬é’¥U
+     * @param expire       è¶…æ—¶æ—¶é—´
+     * @param dhProof      èº«ä»½è¯æ˜
+     * @param frag         é‡åŠ å¯†ç§˜é’¥åˆ†ç‰‡
      * @return true/false
-     * @throws IOException 
+     * @throws IOException
      */
     public boolean sendKeyFragment(String pubOwner, String pubRecipient, String pubProofR, String pubProofU, int expire,
                                    String dhProof, KeyFrag frag) throws IOException {
@@ -1818,12 +1821,12 @@ public class RpcClient {
 
     /**
      *
-     * @description ÉêÇëÖØ¼ÓÃÜ
+     * @description ç”³è¯·é‡åŠ å¯†
      *
-     * @param pubOwner      Êı¾İ¹²ÏíÕß¹«Ô¿
-     * @param pubRecipient  Êı¾İ½ÓÊÕÕß¹«Ô¿
-     * @return ÖØ¼ÓÃÜÆ¬¶Î
-     * @throws IOException 
+     * @param pubOwner      æ•°æ®å…±äº«è€…å…¬é’¥
+     * @param pubRecipient  æ•°æ®æ¥æ”¶è€…å…¬é’¥
+     * @return é‡åŠ å¯†ç‰‡æ®µ
+     * @throws IOException
      */
     public ReKeyFrag reencrypt(String pubOwner, String pubRecipient) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.PRE_RE_ENCRYPT);
@@ -1851,14 +1854,14 @@ public class RpcClient {
 
     /**
      *
-     * @description Ö¤ÊéÓÃ»§×¢²á
+     * @description è¯ä¹¦ç”¨æˆ·æ³¨å†Œ
      *
-     * @param userName   ÓÃ»§Ãû
-     * @param identity   ÓÃ»§id
-     * @param userPub    ÓÃ»§¹«Ô¿
-     * @param adminKey   ¹ÜÀíÔ±Ë½Ô¿
-     * @return ×¢²á½á¹û
-     * @throws IOException 
+     * @param userName   ç”¨æˆ·å
+     * @param identity   ç”¨æˆ·id
+     * @param userPub    ç”¨æˆ·å…¬é’¥
+     * @param adminKey   ç®¡ç†å‘˜ç§é’¥
+     * @return æ³¨å†Œç»“æœ
+     * @throws IOException
      */
     public boolean certUserRegister(String userName, String identity, String userPub, String adminKey) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_USER_REGISTER);
@@ -1897,12 +1900,12 @@ public class RpcClient {
 
     /**
      *
-     * @description Ö¤ÊéÓÃ»§×¢Ïú
+     * @description è¯ä¹¦ç”¨æˆ·æ³¨é”€
      *
-     * @param identity   ÓÃ»§id
-     * @param adminKey   ¹ÜÀíÔ±Ë½Ô¿
-     * @return ×¢Ïú½á¹û
-     * @throws IOException 
+     * @param identity   ç”¨æˆ·id
+     * @param adminKey   ç®¡ç†å‘˜ç§é’¥
+     * @return æ³¨é”€ç»“æœ
+     * @throws IOException
      */
     public boolean certUserRevoke(String identity, String adminKey) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_USER_REVOKE);
@@ -1937,12 +1940,12 @@ public class RpcClient {
 
     /**
      *
-     * @description ÓÃ»§Ö¤ÊéÉêÇë
+     * @description ç”¨æˆ·è¯ä¹¦ç”³è¯·
      *
-     * @param identity   ÓÃ»§id
-     * @param key        ÓÃ»§Ë½Ô¿
-     * @return ×¢Ïú½á¹û
-     * @throws IOException 
+     * @param identity   ç”¨æˆ·id
+     * @param key        ç”¨æˆ·ç§é’¥
+     * @return æ³¨é”€ç»“æœ
+     * @throws IOException
      */
     public CertObject.CertEnroll certEnroll(String identity, String key) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_ENROLL);
@@ -1982,12 +1985,12 @@ public class RpcClient {
 
     /**
      *
-     * @description ÓÃ»§Ö¤ÊéÖØĞÂÉêÇë£¬ÓÃÓÚÓÃ»§Ö¤Êé±»×¢Ïúºó
+     * @description ç”¨æˆ·è¯ä¹¦é‡æ–°ç”³è¯·ï¼Œç”¨äºç”¨æˆ·è¯ä¹¦è¢«æ³¨é”€å
      *
-     * @param identity   ÓÃ»§id
-     * @param adminKey   ¹ÜÀíÔ±Ë½Ô¿
-     * @return ×¢Ïú½á¹û
-     * @throws IOException 
+     * @param identity   ç”¨æˆ·id
+     * @param adminKey   ç®¡ç†å‘˜ç§é’¥
+     * @return æ³¨é”€ç»“æœ
+     * @throws IOException
      */
     public CertObject.CertEnroll certReEnroll(String identity, String adminKey) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_REENROLL);
@@ -2027,12 +2030,12 @@ public class RpcClient {
 
     /**
      *
-     * @description ÓÃ»§Ö¤Êé×¢Ïú
+     * @description ç”¨æˆ·è¯ä¹¦æ³¨é”€
      *
-     * @param serial     Ö¤ÊéĞòĞòÁĞºÅ
-     * @param identity   ÓÃ»§id
-     * @return ×¢Ïú½á¹û
-     * @throws IOException 
+     * @param serial     è¯ä¹¦åºåºåˆ—å·
+     * @param identity   ç”¨æˆ·id
+     * @return æ³¨é”€ç»“æœ
+     * @throws IOException
      */
     public boolean certRevoke(String serial, String identity, String key) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_REVOKE);
@@ -2069,11 +2072,11 @@ public class RpcClient {
 
     /**
      *
-     * @description »ñÈ¡crl
+     * @description è·å–crl
      *
-     * @param identity   ÓÃ»§id
+     * @param identity   ç”¨æˆ·id
      * @return crl
-     * @throws IOException 
+     * @throws IOException
      */
     public byte[] certGetCRL(String identity, String key) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_CRL);
@@ -2108,11 +2111,11 @@ public class RpcClient {
 
     /**
      *
-     * @description »ñÈ¡ÓÃ»§ĞÅÏ¢
+     * @description è·å–ç”¨æˆ·ä¿¡æ¯
      *
-     * @param identity   ÓÃ»§id
-     * @return ÓÃ»§ĞÅÏ¢
-     * @throws IOException 
+     * @param identity   ç”¨æˆ·id
+     * @return ç”¨æˆ·ä¿¡æ¯
+     * @throws IOException
      */
     public CertObject.UserInfo certGetUserInfo(String identity, String key) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_USERINFO);
@@ -2151,11 +2154,11 @@ public class RpcClient {
 
     /**
      *
-     * @description »ñÈ¡Ö¤ÊéĞÅÏ¢
+     * @description è·å–è¯ä¹¦ä¿¡æ¯
      *
-     * @param serial   Ö¤ÊéĞòÁĞºÅ
-     * @return Ö¤ÊéĞÅÏ¢
-     * @throws IOException 
+     * @param serial   è¯ä¹¦åºåˆ—å·
+     * @return è¯ä¹¦ä¿¡æ¯
+     * @throws IOException
      */
     public CertObject.CertInfo certGetCertInfo(String serial, String key) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.CERT_GET_CERTINFO);
@@ -2193,18 +2196,18 @@ public class RpcClient {
     }
 
     /**
-     * @description ·¢ËÍ½»Ò×
+     * @description å‘é€äº¤æ˜“
      *
-     * @param name string ×¢²áÃû³Æ ³¤¶È²»ÄÜ³¬¹ı 128
-     * @param url string ½ÓÊÜÍÆËÍµÄ URL£¬³¤¶È²»ÄÜ³¬¹ı 1024£»
-     * @param encode string Êı¾İ±àÂë·½Ê½£»json »òÕß proto
-     * @param lastSequence int ÍÆËÍ¿ªÊ¼ĞòÁĞºÅ
-     * @param lastHeight int ÍÆËÍ¿ªÊ¼¸ß¶È
-     * @param lastBlockHash String ÍÆËÍ¿ªÊ¼¿é¹şÏ£
-     * @param type int ÍÆËÍµÄÊı¾İÀàĞÍ£»0:´ú±íÇø¿é£»1:´ú±íÇø¿éÍ·ĞÅÏ¢£»2£º´ú±í½»Ò×»ØÖ´
-     * @param contract map[string]bool ¶©ÔÄµÄºÏÔ¼Ãû³Æ£¬µ±type=2µÄÊ±ºòÆğĞ§£¬±ÈÈç¡°coins=true¡±
+     * @param name string æ³¨å†Œåç§° é•¿åº¦ä¸èƒ½è¶…è¿‡ 128
+     * @param url string æ¥å—æ¨é€çš„ URLï¼Œé•¿åº¦ä¸èƒ½è¶…è¿‡ 1024ï¼›
+     * @param encode string æ•°æ®ç¼–ç æ–¹å¼ï¼›json æˆ–è€… proto
+     * @param lastSequence int æ¨é€å¼€å§‹åºåˆ—å·
+     * @param lastHeight int æ¨é€å¼€å§‹é«˜åº¦
+     * @param lastBlockHash String æ¨é€å¼€å§‹å—å“ˆå¸Œ
+     * @param type int æ¨é€çš„æ•°æ®ç±»å‹ï¼›0:ä»£è¡¨åŒºå—ï¼›1:ä»£è¡¨åŒºå—å¤´ä¿¡æ¯ï¼›2ï¼šä»£è¡¨äº¤æ˜“å›æ‰§
+     * @param contract map[string]bool è®¢é˜…çš„åˆçº¦åç§°ï¼Œå½“type=2çš„æ—¶å€™èµ·æ•ˆï¼Œæ¯”å¦‚â€œcoins=trueâ€
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public BooleanResult addPushSubscribe(String name, String url, String encode, int lastSequence, int lastHeight, String lastBlockHash, int type, Map<String, Boolean> contract) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.ADD_PUSH_SUBSCRIBE);
@@ -2231,9 +2234,9 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡ÍÆËÍÁĞ±í listPushes
-     * @return ÍÆËÍÁĞ±í
-     * @throws IOException 
+     * @description è·å–æ¨é€åˆ—è¡¨ listPushes
+     * @return æ¨é€åˆ—è¡¨
+     * @throws IOException
      */
     public ListPushesResult listPushes() throws IOException {
         RpcRequest postData = getPostData(RpcMethod.LIST_PUSHES);
@@ -2250,9 +2253,9 @@ public class RpcClient {
     }
 
     /**
-     * @description »ñÈ¡Ä³ÍÆËÍ·şÎñ×îĞÂĞòÁĞºÅµÄÖµ getPushSeqLastNum
-     * @return »ñÈ¡Ä³ÍÆËÍ·şÎñ×îĞÂĞòÁĞºÅµÄÖµ
-     * @throws IOException 
+     * @description è·å–æŸæ¨é€æœåŠ¡æœ€æ–°åºåˆ—å·çš„å€¼ getPushSeqLastNum
+     * @return è·å–æŸæ¨é€æœåŠ¡æœ€æ–°åºåˆ—å·çš„å€¼
+     * @throws IOException
      */
     public Int64Result getPushSeqLastNum(String name) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_PUSH_SEQ_LAST_NUM);
@@ -2270,12 +2273,12 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     /**
-     * 
-     * @description »ñÈ¡°æ±¾ºÅ
-     * @return °æ±¾ºÅ
-     * @throws IOException 
+     *
+     * @description è·å–ç‰ˆæœ¬å·
+     * @return ç‰ˆæœ¬å·
+     * @throws IOException
      *
      */
     public VersionResult getVersion() throws IOException {
