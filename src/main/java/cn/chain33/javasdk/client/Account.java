@@ -18,39 +18,39 @@ public class Account {
 	 * @return 账户信息(私钥，公钥，地址)
 	 *
 	 */
-    public AccountInfo newAccountLocal() {
-    	AccountInfo accountInfo = new AccountInfo();
-    	
-    	// 生成私钥
-    	String privateKey = TransactionUtil.generatorPrivateKeyString();
-    	accountInfo.setPrivateKey(privateKey);
-    	// 根据私钥获取公钥
-    	String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
-    	accountInfo.setPublicKey(publicKey);
-    	byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-    	// 根据公钥获取地址
-    	accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
-        return accountInfo;
-    }
+	public AccountInfo newAccountLocal() {
+		AccountInfo accountInfo = new AccountInfo();
+
+		// 生成私钥匙
+		String privateKey = TransactionUtil.generatorPrivateKeyString();
+		accountInfo.setPrivateKey(privateKey);
+		// 生成公钥匙
+		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
+		accountInfo.setPublicKey(publicKey);
+		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
+		// 生成地址
+		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+		return accountInfo;
+	}
 
 	/**
 	 * @description 在本地创建账户信息(以太坊形式，地址格式以0x开头)
 	 * @return 账户信息(私钥，公钥，地址)
 	 *
 	 */
-    public AccountInfo newAccountLocalYCC() {
-    	AccountInfo accountInfo = new AccountInfo();
+	public AccountInfo newAccountLocalYCC() {
+		AccountInfo accountInfo = new AccountInfo();
 
-		// 生成私钥
-    	String privateKey = TransactionUtil.generatorPrivateKeyString();
-    	accountInfo.setPrivateKey(privateKey);
-		// 根据私钥获取公钥
-    	BigInteger publicKey = TransactionUtil.getHexPubKeyFromPrivKeyForYCC(privateKey);
-    	accountInfo.setPublicKey(publicKey.toString(16));
-		// 根据公钥获取地址
-    	accountInfo.setAddress(TransactionUtil.genAddressForYCC(publicKey));
-        return accountInfo;
-    }
+		// 生成私钥匙
+		String privateKey = TransactionUtil.generatorPrivateKeyString();
+		accountInfo.setPrivateKey(privateKey);
+		// 生成公钥匙
+		BigInteger publicKey = TransactionUtil.getHexPubKeyFromPrivKeyForYCC(privateKey);
+		accountInfo.setPublicKey(publicKey.toString(16));
+		// 生成地址
+		accountInfo.setAddress(TransactionUtil.genAddressForYCC(publicKey));
+		return accountInfo;
+	}
 
 	/**
 	 * 本地创建账户信息，加密输出到指定路径
@@ -76,11 +76,11 @@ public class Account {
 		}
 		fos.close();
 
-		// 根据私钥获取公钥
+		// 生成公钥匙
 		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
 		accountInfo.setPublicKey(publicKey);
 		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-		// 根据公钥获取地址
+		// 生成地址
 		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 		return accountInfo;
 	}
@@ -113,11 +113,11 @@ public class Account {
 		AccountInfo accountInfo = new AccountInfo();
 		accountInfo.setName(name);
 		accountInfo.setPrivateKey(privateKey);
-
+		// 生成公钥匙
 		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
 		accountInfo.setPublicKey(publicKey);
 		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-
+		// 生成地址
 		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 		return accountInfo;
 	}
@@ -152,7 +152,7 @@ public class Account {
 		accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
 		accountInfo.setPublicKey(keyPair.getPublicKeyString());
 
-		// 导出私钥文件
+		// 导出到文件
 		File file = new File(path);
 		if (!file.exists()) {
 			file.createNewFile();
@@ -166,7 +166,7 @@ public class Account {
 		fos.close();
 
 		byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
-
+		// 生成地址
 		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 		return accountInfo;
 	}
@@ -207,3 +207,4 @@ public class Account {
 		return accountInfo;
 	}
 }
+

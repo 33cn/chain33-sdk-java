@@ -44,16 +44,15 @@ public class GrpcClientTLS {
 
     public GrpcClientTLS(String targetURI,SslContext sslContext,List<EquivalentAddressGroup> addresses) {
         this(NettyChannelBuilder.forTarget(targetURI)
-                        .negotiationType(NegotiationType.TLS)
-                        .defaultLoadBalancingPolicy("round_robin") //pick_first,grpclb,round_robin,HealthCheckingRoundRobin
-                        .sslContext(sslContext)
-                        .build(),addresses);
+                .negotiationType(NegotiationType.TLS)
+                .defaultLoadBalancingPolicy("round_robin") //pick_first,grpclb,round_robin,HealthCheckingRoundRobin
+                .sslContext(sslContext)
+                .build(),addresses);
     }
 
     public void shutdown() throws InterruptedException {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
-
 
     /**
      * @description 获取最新的区块头 getLastHeader
@@ -63,7 +62,7 @@ public class GrpcClientTLS {
         CommonProtobuf.ReqNil request = CommonProtobuf.ReqNil.newBuilder().build();
         BlockchainProtobuf.Header response;
         try {
-            //ʹ������ stub����
+            //使用阻塞 stub调用
             response = blockingStub.getLastHeader(request);
             logger.info(response.toString());
             return response;
@@ -82,7 +81,7 @@ public class GrpcClientTLS {
         CommonProtobuf.ReqHash request = CommonProtobuf.ReqHash.newBuilder().setHash(ByteString.copyFrom(hashBytes)).build();
         TransactionAllProtobuf.TransactionDetail response;
         try {
-            //ʹ������ stub����
+            //使用阻塞 stub调用
             response = blockingStub.queryTransaction(request);
             logger.info(response.toString());
             return response;
@@ -100,4 +99,3 @@ public class GrpcClientTLS {
     }
 
 }
-

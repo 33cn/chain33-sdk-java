@@ -78,6 +78,7 @@ public class GrpcClient {
         CommonProtobuf.ReqHash request = CommonProtobuf.ReqHash.newBuilder().setHash(ByteString.copyFrom(hashBytes)).build();
         TransactionAllProtobuf.TransactionDetail response;
         try {
+            //使用阻塞 stub调用
             response = blockingStub.queryTransaction(request);
             logger.info(response.toString());
             return response;

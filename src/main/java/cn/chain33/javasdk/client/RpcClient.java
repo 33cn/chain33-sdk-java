@@ -28,14 +28,18 @@ import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.HttpUtil;
 import cn.chain33.javasdk.utils.StringUtil;
 
-
+/**
+ * 调用远程接口
+ *
+ * @author logan 2018年5月16日
+ */
 public class RpcClient {
 
     private static Logger logger = LoggerFactory.getLogger(RpcClient.class);
 
     // 通过配置文件或者其他方式设置URL
     private String BASE_URL;
-    
+
     public static final Integer TX_EXEC_RESULT_OK = 0;
 
     public static final Integer TX_EXEC_RESULT_FAIL = 1;
@@ -69,10 +73,10 @@ public class RpcClient {
 
     /**
      * @description 发送交易
-     * 
+     *
      * @param transactionJsonResult
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public String submitTransaction(RpcRequest transactionJsonResult) throws IOException {
         transactionJsonResult.setMethod(RpcMethod.SEND_TRANSACTION);
@@ -131,7 +135,6 @@ public class RpcClient {
         }
         return false;
     }
-
 
     /**
      * @description 根据交易哈希查询交易信息
@@ -379,7 +382,6 @@ public class RpcClient {
         return null;
     }
 
-
     /**
      * @description 获取区间区块头 GetHeaders 该接口用于获取指定高度区间的区块头部信息
      *
@@ -420,16 +422,16 @@ public class RpcClient {
      * @throws IOException
      */
     public int getBlockAverageTime() throws IOException {
-    	
-    	// �������ʱ��������ļ��ж�ȡ�� ���Թ��˵�
-    	List<BlockResult> blockResultList = getHeaders(1l, 1l, false);
-    	BlockResult resultFirst = blockResultList.get(0);
-    	
-    	BlockResult resultLast = getLastHeader();
-    	
-    	long averageSecond = (resultLast.getBlockTime().getTime() - resultFirst.getBlockTime().getTime())/((resultLast.getHeight() -1) * 1000);
-    	
-    	return (int)averageSecond ;
+
+        // 创世块的时间从配置文件中读取， 所以过滤掉
+        List<BlockResult> blockResultList = getHeaders(1l, 1l, false);
+        BlockResult resultFirst = blockResultList.get(0);
+
+        BlockResult resultLast = getLastHeader();
+
+        long averageSecond = (resultLast.getBlockTime().getTime() - resultFirst.getBlockTime().getTime())/((resultLast.getHeight() -1) * 1000);
+
+        return (int)averageSecond ;
     }
 
     /**
@@ -499,7 +501,7 @@ public class RpcClient {
         RpcRequest postData = getPostData(RpcMethod.GET_BLOCK_BY_HASHS);
         postData.addJsonParams(jsonObject);
         String result = HttpUtil.httpPost(getUrl(), postData.toJsonString());
-        
+
         if (StringUtil.isNotEmpty(result)) {
             JSONObject parseObject = JSONObject.parseObject(result);
             if (messageValidate(parseObject))
@@ -516,9 +518,8 @@ public class RpcClient {
             return blockResultList;
         }
         return null;
-        
-   }
 
+    }
 
     /**
      * @description 获取远程节点列表
@@ -565,7 +566,6 @@ public class RpcClient {
         return null;
     }
 
-
     /**
      * @description 获取系统支持签名类型
      * @return 签名类型列表
@@ -590,7 +590,7 @@ public class RpcClient {
         }
         return null;
     }
-    
+
     private RpcRequest getPostData(RpcMethod method) {
         RpcRequest postJsonData = new RpcRequest();
         postJsonData.setMethod(method);
@@ -680,6 +680,7 @@ public class RpcClient {
 
     /**
      * @description 上锁 Lock
+     *
      * @return 结果
      * @throws IOException
      */
@@ -750,7 +751,6 @@ public class RpcClient {
         }
         return null;
     }
-
 
 
     /**
@@ -850,7 +850,6 @@ public class RpcClient {
         return null;
     }
 
-
     /**
      * @description 设置地址标签
      *
@@ -935,14 +934,13 @@ public class RpcClient {
      * @throws Exception
      */
     public String createManageTransaction(String execer, String actionName, String key, String value, String op, String superManager) throws Exception {
-    	JSONObject blackListPayload = new JSONObject();
-    	blackListPayload.put("key", key);
-    	blackListPayload.put("value", value);
-    	blackListPayload.put("op", op);
-    	String managerResult = createTransaction(execer, actionName, blackListPayload);
-    	return managerResult;
+        JSONObject blackListPayload = new JSONObject();
+        blackListPayload.put("key", key);
+        blackListPayload.put("value", value);
+        blackListPayload.put("op", op);
+        String managerResult = createTransaction(execer, actionName, blackListPayload);
+        return managerResult;
     }
-
 
 
     /**
@@ -954,10 +952,10 @@ public class RpcClient {
      * @throws Exception
      */
     public String registeAccount(String execer, String actionName, String accountId) throws Exception {
-    	JSONObject accountPayload = new JSONObject();
-    	accountPayload.put("accountID", accountId);
-    	String accountResult = createTransaction(execer, actionName, accountPayload);
-    	return accountResult;
+        JSONObject accountPayload = new JSONObject();
+        accountPayload.put("accountID", accountId);
+        String accountResult = createTransaction(execer, actionName, accountPayload);
+        return accountResult;
     }
 
     /**
@@ -969,14 +967,14 @@ public class RpcClient {
      * @throws Exception
      */
     public String authAccount(String execer, String actionName, String[] accountIds, String op, String level) throws Exception {
-    	JSONObject accountPayload = new JSONObject();
-    	accountPayload.put("accountIDs", accountIds);
-    	accountPayload.put("op", op);
-    	if (StringUtil.isNotEmpty(level)) {
-        	accountPayload.put("level", level);
-    	}
-    	String accountResult = createTransaction(execer, actionName, accountPayload);
-    	return accountResult;
+        JSONObject accountPayload = new JSONObject();
+        accountPayload.put("accountIDs", accountIds);
+        accountPayload.put("op", op);
+        if (StringUtil.isNotEmpty(level)) {
+            accountPayload.put("level", level);
+        }
+        String accountResult = createTransaction(execer, actionName, accountPayload);
+        return accountResult;
     }
 
     /**
@@ -988,11 +986,11 @@ public class RpcClient {
      * @throws Exception
      */
     public String addConsensusNode(String execer, String actionName, String pubKey, int power) throws Exception {
-    	JSONObject nodePayload = new JSONObject();
-    	nodePayload.put("pubKey", pubKey);
-    	nodePayload.put("power", power);
-    	String nodeResult = createTransaction(execer, actionName, nodePayload);
-    	return nodeResult;
+        JSONObject nodePayload = new JSONObject();
+        nodePayload.put("pubKey", pubKey);
+        nodePayload.put("power", power);
+        String nodeResult = createTransaction(execer, actionName, nodePayload);
+        return nodeResult;
     }
 
 
@@ -1055,7 +1053,6 @@ public class RpcClient {
         return null;
     }
 
-
     /**
      * @description 构造交易
      *
@@ -1071,7 +1068,7 @@ public class RpcClient {
      * @throws IOException
      */
     public String createRawTransaction(String to, long amount, long fee, String note, boolean isToken,
-            boolean isWithdraw, String tokenSymbol, String execName) throws IOException {
+                                       boolean isWithdraw, String tokenSymbol, String execName) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TX);
         JSONObject requestParam = new JSONObject();
         requestParam.put("to", to);
@@ -1153,7 +1150,6 @@ public class RpcClient {
         }
         return null;
     }
-
 
     /**
      * @description 查询地址token余额
@@ -1260,7 +1256,6 @@ public class RpcClient {
         return null;
     }
 
-
     /**
      * @description 根据地址获取交易信息hash
      *
@@ -1271,7 +1266,7 @@ public class RpcClient {
      * @throws IOException
      */
     public List<TxResult> getTxByAddr(String addr, Integer flag, Integer count, Integer direction, Long height,
-            Integer index) throws IOException {
+                                      Integer index) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.GET_TX_BY_ADDR);
         JSONObject requestParam = new JSONObject();
         requestParam.put("addr", addr);
@@ -1414,7 +1409,6 @@ public class RpcClient {
         }
         return null;
     }
-
 
     /**
      * @description 查询WASM合约 key信息
@@ -1581,27 +1575,30 @@ public class RpcClient {
         String response = HttpUtil.httpPost(getUrl(), reqStr);
         RpcResponse rep = parseResponse(response, reqStr);
         if (rep == null) {
-            logger.error("build txgroup failed");
+            logger.error("构建交易组失败");
             return "";
         }
         String rawTxHex = String.valueOf(rep.getResult());
 
+        // 构建代扣手续费交易
         String withholdTxHex = createNoBalanceTx(rawTxHex, signAddr);
 
+        // 对代扣交易签名
         String signedTxHex = signRawTx(userAddr, null, withholdTxHex, "1h", 2);
         if ("".equals(signedTxHex)) {
-            logger.error("txgroup sign failed");
+            logger.error("交易签名失败");
             return "";
         }
 
+        // 发送交易组
         String txHash = submitTransaction(signedTxHex);
         if ("".equals(txHash)) {
-            logger.error("txgroup send failed");
+            logger.error("交易组发送交易失败");
             return "";
         }
         return txHash;
     }
-    
+
 
     public List<DecodeRawTransaction> decodeRawTransaction(String rawTx) throws IOException {
         RpcRequest postData = getPostData(RpcMethod.DECODE_RAW_TX);
@@ -1665,7 +1662,7 @@ public class RpcClient {
                 return rep;
             }
         }
-        logger.error("RPC request failed" + rep == null ? "" : rep.getError() + " , request param" + reqParam);
+        logger.error("RPC请求失败，错误信息：" + rep == null ? "" : rep.getError() + " , 请求参数：" + reqParam);
         return null;
     }
 
@@ -2298,6 +2295,6 @@ public class RpcClient {
         }
         return null;
     }
-    
-    
+
+
 }
