@@ -12,6 +12,42 @@ public class Transaction implements Serializable {
 	private long expire;
 	private long nonce;
 	private String to;
+	private int groupCount;
+	private byte[] header;
+	private byte[] next;
+	private int chainID;
+
+	public int getGroupCount() {
+		return groupCount;
+	}
+
+	public void setGroupCount(int groupCount) {
+		this.groupCount = groupCount;
+	}
+
+	public byte[] getHeader() {
+		return header;
+	}
+
+	public void setHeader(byte[] header) {
+		this.header = header;
+	}
+
+	public byte[] getNext() {
+		return next;
+	}
+
+	public void setNext(byte[] next) {
+		this.next = next;
+	}
+
+	public int getChainID() {
+		return chainID;
+	}
+
+	public void setChainID(int chainID) {
+		this.chainID = chainID;
+	}
 
 	private Signature signature;
 

@@ -1,12 +1,15 @@
 package cn.chain33.javasdk.client;
 
 import cn.chain33.javasdk.model.AccountInfo;
+import cn.chain33.javasdk.model.Signature;
+import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.utils.DesUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.StringUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
+import net.vrallev.java.ecc.Ecc25519Helper;
 
 import java.io.*;
 import java.math.BigInteger;
@@ -33,6 +36,7 @@ public class Account {
 		return accountInfo;
 	}
 
+
 	/**
 	 * @description 在本地创建账户信息(以太坊形式，地址格式以0x开头)
 	 * @return 账户信息(私钥，公钥，地址)
@@ -52,6 +56,25 @@ public class Account {
 		return accountInfo;
 	}
 
+	/**
+	 * @description 在本地创建SECP256K1签名格式账户
+	 * @param addressType 地址类型 0表示生成btc地址，2表示生成eth地址
+	 * @return 账户信息(私钥，公钥，地址)
+	 *
+	 */
+	public AccountInfo newAccountLocal(AddressType addressType) {
+		switch (addressType) {
+			case BTC_ADDRESS: {
+				return newAccountLocal();
+			}
+			case ETH_ADDRESS: {
+				return newAccountLocalYCC();
+			}
+
+			default:
+				return null;
+		}
+	}
 	/**
 	 * 本地创建账户信息，加密输出到指定路径
 	 */
