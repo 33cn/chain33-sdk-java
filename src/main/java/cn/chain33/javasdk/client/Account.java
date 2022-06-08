@@ -1,69 +1,92 @@
 package cn.chain33.javasdk.client;
 
 import cn.chain33.javasdk.model.AccountInfo;
+import cn.chain33.javasdk.model.Signature;
+import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.utils.DesUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.StringUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
+import net.vrallev.java.ecc.Ecc25519Helper;
 
 import java.io.*;
 import java.math.BigInteger;
 
 public class Account {
 
-    /**
-     * @description ÔÚ±¾µØ´´½¨ÕË»§ĞÅÏ¢
-     * @return ÕË»§ĞÅÏ¢(Ë½Ô¿£¬¹«Ô¿£¬µØÖ·)
-     *
-     */
-    public AccountInfo newAccountLocal() {
-    	AccountInfo accountInfo = new AccountInfo();
-    	
-    	// Éú³ÉË½Ô¿³×
-    	String privateKey = TransactionUtil.generatorPrivateKeyString();
-    	accountInfo.setPrivateKey(privateKey);
-    	// Éú³É¹«Ô¿³×
-    	String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
-    	accountInfo.setPublicKey(publicKey);
-    	byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-    	// Éú³ÉµØÖ·
-    	accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
-        return accountInfo;
-    }
-    
-    /**
-     * @description ÔÚ±¾µØ´´½¨ÕË»§ĞÅÏ¢(ÒÔÌ«·»ĞÎÊ½£¬µØÖ·¸ñÊ½ÒÔ0x¿ªÍ·)
-     * @return ÕË»§ĞÅÏ¢(Ë½Ô¿£¬¹«Ô¿£¬µØÖ·)
-     *
-     */
-    public AccountInfo newAccountLocalYCC() {
-    	AccountInfo accountInfo = new AccountInfo();
-    	
-    	// Éú³ÉË½Ô¿³×
-    	String privateKey = TransactionUtil.generatorPrivateKeyString();
-    	accountInfo.setPrivateKey(privateKey);
-    	// Éú³É¹«Ô¿³×
-    	BigInteger publicKey = TransactionUtil.getHexPubKeyFromPrivKeyForYCC(privateKey);
-    	accountInfo.setPublicKey(publicKey.toString(16));
-    	// Éú³ÉµØÖ·
-    	accountInfo.setAddress(TransactionUtil.genAddressForYCC(publicKey));
-        return accountInfo;
-    }
+	/**
+	 * @description åœ¨æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯
+	 * @return è´¦æˆ·ä¿¡æ¯(ç§é’¥ï¼Œå…¬é’¥ï¼Œåœ°å€)
+	 *
+	 */
+	public AccountInfo newAccountLocal() {
+		AccountInfo accountInfo = new AccountInfo();
+
+		// ç”Ÿæˆç§é’¥åŒ™
+		String privateKey = TransactionUtil.generatorPrivateKeyString();
+		accountInfo.setPrivateKey(privateKey);
+		// ç”Ÿæˆå…¬é’¥åŒ™
+		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
+		accountInfo.setPublicKey(publicKey);
+		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
+		// ç”Ÿæˆåœ°å€
+		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
+		return accountInfo;
+	}
+
 
 	/**
-	 * ±¾µØ´´½¨ÕË»§ĞÅÏ¢£¬¼ÓÃÜÊä³öµ½Ö¸¶¨Â·¾¶
+	 * @description åœ¨æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯(ä»¥å¤ªåŠå½¢å¼ï¼Œåœ°å€æ ¼å¼ä»¥0xå¼€å¤´)
+	 * @return è´¦æˆ·ä¿¡æ¯(ç§é’¥ï¼Œå…¬é’¥ï¼Œåœ°å€)
+	 *
+	 */
+	public AccountInfo newAccountLocalYCC() {
+		AccountInfo accountInfo = new AccountInfo();
+
+		// ç”Ÿæˆç§é’¥åŒ™
+		String privateKey = TransactionUtil.generatorPrivateKeyString();
+		accountInfo.setPrivateKey(privateKey);
+		// ç”Ÿæˆå…¬é’¥åŒ™
+		BigInteger publicKey = TransactionUtil.getHexPubKeyFromPrivKeyForYCC(privateKey);
+		accountInfo.setPublicKey(publicKey.toString(16));
+		// ç”Ÿæˆåœ°å€
+		accountInfo.setAddress(TransactionUtil.genAddressForYCC(publicKey));
+		return accountInfo;
+	}
+
+	/**
+	 * @description åœ¨æœ¬åœ°åˆ›å»ºSECP256K1ç­¾åæ ¼å¼è´¦æˆ·
+	 * @param addressType åœ°å€ç±»å‹ 0è¡¨ç¤ºç”Ÿæˆbtcåœ°å€ï¼Œ2è¡¨ç¤ºç”Ÿæˆethåœ°å€
+	 * @return è´¦æˆ·ä¿¡æ¯(ç§é’¥ï¼Œå…¬é’¥ï¼Œåœ°å€)
+	 *
+	 */
+	public AccountInfo newAccountLocal(AddressType addressType) {
+		switch (addressType) {
+			case BTC_ADDRESS: {
+				return newAccountLocal();
+			}
+			case ETH_ADDRESS: {
+				return newAccountLocalYCC();
+			}
+
+			default:
+				return null;
+		}
+	}
+	/**
+	 * æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯ï¼ŒåŠ å¯†è¾“å‡ºåˆ°æŒ‡å®šè·¯å¾„
 	 */
 	public AccountInfo newAccountLocal(String name, String passwd, String path) throws IOException {
 		AccountInfo accountInfo = new AccountInfo();
 		accountInfo.setName(name);
 
-		// Éú³ÉË½Ô¿³×
+		// ç”Ÿæˆç§é’¥åŒ™
 		String privateKey = TransactionUtil.generatorPrivateKeyString();
 		accountInfo.setPrivateKey(privateKey);
 
-		// µ¼³öµ½ÎÄ¼ş
+		// å¯¼å‡ºåˆ°æ–‡ä»¶
 		File file = new File(path);
 		if (!file.exists()) {
 			file.createNewFile();
@@ -76,17 +99,17 @@ public class Account {
 		}
 		fos.close();
 
-		// Éú³É¹«Ô¿³×
+		// ç”Ÿæˆå…¬é’¥åŒ™
 		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
 		accountInfo.setPublicKey(publicKey);
 		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-		// Éú³ÉµØÖ·
+		// ç”Ÿæˆåœ°å€
 		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 		return accountInfo;
 	}
 
 	/**
-	 * µ¼³ö±¾µØÕË»§ĞÅÏ¢
+	 * å¯¼å‡ºæœ¬åœ°è´¦æˆ·ä¿¡æ¯
 	 */
 	public AccountInfo loadAccountLocal(String name, String passwd, String path) throws Exception {
 		File file = new File(path);
@@ -113,19 +136,19 @@ public class Account {
 		AccountInfo accountInfo = new AccountInfo();
 		accountInfo.setName(name);
 		accountInfo.setPrivateKey(privateKey);
-		// Éú³É¹«Ô¿³×
+		// ç”Ÿæˆå…¬é’¥åŒ™
 		String publicKey = TransactionUtil.getHexPubKeyFromPrivKey(privateKey);
 		accountInfo.setPublicKey(publicKey);
 		byte[] publicKeyByte = HexUtil.fromHexString(publicKey);
-		// Éú³ÉµØÖ·
+		// ç”Ÿæˆåœ°å€
 		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 		return accountInfo;
 	}
 
 	/**
 	 *
-	 * @description ÔÚ±¾µØ´´½¨ÕË»§ĞÅÏ¢
-	 * @return ÕË»§ĞÅÏ¢(Ë½Ô¿£¬¹«Ô¿£¬µØÖ·)
+	 * @description åœ¨æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯
+	 * @return è´¦æˆ·ä¿¡æ¯(ç§é’¥ï¼Œå…¬é’¥ï¼Œåœ°å€)
 	 *
 	 */
 	public AccountInfo newGMAccountLocal() {
@@ -142,7 +165,7 @@ public class Account {
 	}
 
 	/**
-	 * ±¾µØ´´½¨ÕË»§ĞÅÏ¢£¬¼ÓÃÜÊä³öµ½Ö¸¶¨Â·¾¶
+	 * æœ¬åœ°åˆ›å»ºè´¦æˆ·ä¿¡æ¯ï¼ŒåŠ å¯†è¾“å‡ºåˆ°æŒ‡å®šè·¯å¾„
 	 */
 	public AccountInfo newGMAccountLocal(String name, String passwd, String path) throws IOException {
 		AccountInfo accountInfo = new AccountInfo();
@@ -152,7 +175,7 @@ public class Account {
 		accountInfo.setPrivateKey(keyPair.getPrivateKeyString());
 		accountInfo.setPublicKey(keyPair.getPublicKeyString());
 
-		// µ¼³öµ½ÎÄ¼ş
+		// å¯¼å‡ºåˆ°æ–‡ä»¶
 		File file = new File(path);
 		if (!file.exists()) {
 			file.createNewFile();
@@ -166,13 +189,13 @@ public class Account {
 		fos.close();
 
 		byte[] publicKeyByte = HexUtil.fromHexString(accountInfo.getPublicKey());
-		// Éú³ÉµØÖ·
+		// ç”Ÿæˆåœ°å€
 		accountInfo.setAddress(TransactionUtil.genAddress(publicKeyByte));
 		return accountInfo;
 	}
 
 	/**
-	 * µ¼³ö±¾µØÕË»§ĞÅÏ¢
+	 * å¯¼å‡ºæœ¬åœ°è´¦æˆ·ä¿¡æ¯
 	 */
 	public AccountInfo loadGMAccountLocal(String name, String passwd, String path) throws Exception {
 		File file = new File(path);
@@ -207,3 +230,4 @@ public class Account {
 		return accountInfo;
 	}
 }
+

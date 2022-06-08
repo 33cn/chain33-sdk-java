@@ -38,6 +38,11 @@ public class TransferBalanceRequest {
 	 * 手续费
 	 */
 	private long fee;
+
+	/**
+	 * 链ID
+	 */
+	private int chainID;
 	
 	/**
 	 * 执行器名称
@@ -106,6 +111,14 @@ public class TransferBalanceRequest {
 
 	public void setFee(long fee) {
 		this.fee = fee;
+	}
+
+	public int getChainID() {
+		return chainID;
+	}
+
+	public void setChainID(int chainID) {
+		this.chainID = chainID;
 	}
 		
 }

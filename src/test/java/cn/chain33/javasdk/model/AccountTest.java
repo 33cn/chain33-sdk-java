@@ -1,9 +1,13 @@
 package cn.chain33.javasdk.model;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.chain33.javasdk.model.enums.AddressType;
+import cn.chain33.javasdk.model.enums.ChainID;
 import org.bitcoinj.wallet.UnreadableWalletException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,11 +24,13 @@ import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.SeedUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
+import org.web3j.crypto.Keys;
+import org.web3j.utils.Numeric;
 
 public class AccountTest {
 
-    String ip = "172.22.19.101";
-    RpcClient client = new RpcClient(ip, 8801);
+    String ip = "172.22.16.179";
+    RpcClient client = new RpcClient(ip, 9901);
 
 	Account account = new Account();
 
@@ -42,7 +48,8 @@ public class AccountTest {
 	
 	/**
 	 * @description 直接创建YCC账户 (私钥，公钥，地址),地址格式以0x开头，以太坊的形式
-	 *
+	 * 3700bb329e1f7f551752af19ccd543fb5c8469e2da8bb8d26bca107a9ff99f3f
+	 * 0x6144c7ec0b252bf382481b5612cf5f2d537b378d
 	 */
 	@Test
 	public void createAccountLocalForYCC() {
@@ -86,9 +93,96 @@ public class AccountTest {
 	 */
 	@Test
 	public void validateAddress() {
-		String address = "1G1L2M1w1c1gpV6SP8tk8gBPGsJe2RfTks";
-		boolean validAddressResult = TransactionUtil.validAddress(address);
-		System.out.printf("validate result is:%s", validAddressResult);
+		String btc_address = "1G1L2M1w1c1gpV6SP8tk8gBPGsJe2RfTks";
+		System.out.printf("BTC address validate result is:%s \n", TransactionUtil.validAddress(btc_address,AddressType.BTC_ADDRESS));
+        String eth_address = "0x17c227b39713b584ebe926127ab65f979a800e96";
+		System.out.printf("ETH address validate result is:%s",TransactionUtil.validAddress(eth_address,AddressType.ETH_ADDRESS));
+	}
+
+	@Test
+	public void getExecerToAddr()  {
+		String execer="user.p.parademo.token";
+		String btc_address=TransactionUtil.getToAddress(execer.getBytes(),AddressType.BTC_ADDRESS);
+		System.out.println(btc_address);
+		String eth_address=TransactionUtil.getToAddress(execer.getBytes(),AddressType.ETH_ADDRESS);
+		System.out.println(eth_address);
+	}
+
+	/**
+	 * @throws InterruptedException
+	 * @throws IOException
+	 * @description 本地构造eth地址签名格式主链主积分转账交易
+	 */
+	@Test
+	public void createCoinTransferTxMainForYCC() throws InterruptedException, IOException {
+
+		//构建转账payload
+		byte[] payload = TransactionUtil.createTransferPayLoad("0x6144c7ec0b252bf382481b5612cf5f2d537b378d", 1 * 500000000L, "", "this is a test");
+		String createTransferTx = TransactionUtil.createTxMainForYCC("cc38546e9e659d15e6b4893f0ab32a06d103931a8230b0bde71459d2b27d6944","0x6144c7ec0b252bf382481b5612cf5f2d537b378d","coins",payload,100000);
+		// 交易发往区块链
+		String txHash = client.submitTransaction(createTransferTx);
+		System.out.println(txHash);
+
+		List<String> list = new ArrayList<>();
+		list.add("0x6144c7ec0b252bf382481b5612cf5f2d537b378d");
+		list.add(TransactionUtil.genAddress("cc38546e9e659d15e6b4893f0ab32a06d103931a8230b0bde71459d2b27d6944",AddressType.ETH_ADDRESS));
+
+		// 一般1秒一个区块
+		QueryTransactionResult queryTransaction1;
+		for (int i = 0; i < 10; i++) {
+			queryTransaction1 = client.queryTransaction(txHash);
+			if (null == queryTransaction1) {
+				Thread.sleep(3000);
+			} else {
+				break;
+			}
+		}
+
+		List<AccountAccResult> queryBtyBalance;
+		queryBtyBalance = client.getCoinsBalance(list, "coins");
+		if (queryBtyBalance != null) {
+			for (AccountAccResult accountAccResult : queryBtyBalance) {
+				System.out.println(accountAccResult);
+			}
+		}
+	}
+	/**
+	 * @throws InterruptedException
+	 * @throws IOException
+	 * @description 本地构造eth地址签名格式平行链转账交易
+	 */
+	@Test
+	public void createCoinTransferTxParaForYCC() throws InterruptedException, IOException {
+
+		//构建转账payload
+		byte[] payload = TransactionUtil.createTransferPayLoad("0x6144c7ec0b252bf382481b5612cf5f2d537b378d", 1 * 10000000000L, "", "this is a test");
+		String createTransferTx = TransactionUtil.createTxParaForYCC("cc38546e9e659d15e6b4893f0ab32a06d103931a8230b0bde71459d2b27d6944","user.p.parademo.coins",payload,100000);
+		// 交易发往区块链
+		String txHash = client.submitTransaction(createTransferTx);
+		System.out.println(txHash);
+
+		List<String> list = new ArrayList<>();
+		list.add("0x6144c7ec0b252bf382481b5612cf5f2d537b378d");
+		list.add(TransactionUtil.genAddress("cc38546e9e659d15e6b4893f0ab32a06d103931a8230b0bde71459d2b27d6944",AddressType.ETH_ADDRESS));
+
+		// 一般1秒一个区块
+		QueryTransactionResult queryTransaction1;
+		for (int i = 0; i < 10; i++) {
+			queryTransaction1 = client.queryTransaction(txHash);
+			if (null == queryTransaction1) {
+				Thread.sleep(3000);
+			} else {
+				break;
+			}
+		}
+
+		List<AccountAccResult> queryBtyBalance;
+		queryBtyBalance = client.getCoinsBalance(list, "user.p.parademo.coins");
+		if (queryBtyBalance != null) {
+			for (AccountAccResult accountAccResult : queryBtyBalance) {
+				System.out.println(accountAccResult);
+			}
+		}
 	}
 
 	/**
