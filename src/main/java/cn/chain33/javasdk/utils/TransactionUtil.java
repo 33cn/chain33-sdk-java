@@ -72,16 +72,16 @@ public class TransactionUtil {
     // private static final long MINUTE = SECOND * 1000;
 
     private static final long EXPIREBOUND = 1000000000;
-
-    public static String toHexString(byte[] byteArr) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < byteArr.length; i++) {
-            int b = byteArr[i] & 0xff;
-            String hexString = Integer.toHexString(b);
-            sb.append(hexString);
-        }
-        return sb.toString();
-    }
+//    @Deprecated
+//    public static String toHexString(byte[] byteArr) {
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < byteArr.length; i++) {
+//            int b = byteArr[i] & 0xff;
+//            String hexString = Integer.toHexString(b);
+//            sb.append(hexString);
+//        }
+//        return sb.toString();
+//    }
 
     /**
      * @param expire 单位为秒
@@ -172,6 +172,29 @@ public class TransactionUtil {
     }
 
     /**
+     * 将ETH地址转成BTC地址
+     * @param ethAddress eth格式地址
+     * @return
+     */
+    public static String convertETHToBTC(String ethAddress) {
+       return encodeAddress(HexUtil.fromHexString(ethAddress));
+    }
+
+    /**
+     * 将BTC地址转为ETH地址
+     *
+     * @param btcAddress BTC格式地址
+     * @return
+     */
+    public static String convertBTCToETH(String btcAddress) {
+        try {
+            return "0x"+HexUtil.toHexString(decodeAddress(btcAddress));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+    /**
      * 将base58编码的地址转成evm地址
      *
      * @param address chain33地址
@@ -223,9 +246,9 @@ public class TransactionUtil {
         if (!address.startsWith("0x"))
             return false;
         String cleanHexInput = Numeric.cleanHexPrefix(address);
-        try{
+        try {
             Numeric.toBigIntNoPrefix(cleanHexInput);
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             return false;
         }
         return cleanHexInput.length() == 40;
@@ -236,7 +259,7 @@ public class TransactionUtil {
      * @return 校验结果
      * @description 校验地址是否符合规则
      */
-    public static boolean validAddress(String address,AddressType addressType) {
+    public static boolean validAddress(String address, AddressType addressType) {
         switch (addressType) {
             case BTC_ADDRESS: {
                 return validAddress(address);
@@ -248,6 +271,7 @@ public class TransactionUtil {
                 return false;
         }
     }
+
     /**
      * @param byteArr
      * @param start
@@ -380,6 +404,7 @@ public class TransactionUtil {
 
     /**
      * 构建YCC主链签名交易
+     *
      * @param privateKey
      * @param toAddress
      * @param execer
@@ -387,9 +412,9 @@ public class TransactionUtil {
      * @param fee
      * @return
      */
-    public static String createTxMainForYCC(String privateKey, String toAddress,String execer, byte[] payLoad, long fee) {
+    public static String createTxMainForYCC(String privateKey, String toAddress, String execer, byte[] payLoad, long fee) {
         byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
-        return createTxMain(privateKeyBytes,toAddress,execer.getBytes(), payLoad, SignType.ETH_SECP256K1, ChainID.YCC.getID(),fee);
+        return createTxMain(privateKeyBytes, toAddress, execer.getBytes(), payLoad, SignType.ETH_SECP256K1, ChainID.YCC.getID(), fee);
     }
 
     public static String createTx(byte[] privateKey, byte[] execer, byte[] payLoad, SignType signType, long fee) {
@@ -713,10 +738,8 @@ public class TransactionUtil {
      */
     public static String getToAddress(byte[] execer, AddressType addressType) {
         byte[] mergeredByte = TransactionUtil.byteMerger(addrSeed, execer);
+        //两次sha256处理
         byte[] sha256_1 = TransactionUtil.Sha256(mergeredByte);
-        for (int i = 0; i < sha256_1.length; i++) {
-            sha256_1[i] = (byte) (sha256_1[i] & 0xff);
-        }
         byte[] sha256_2 = TransactionUtil.Sha256(sha256_1);
 
         if (addressType == AddressType.BTC_ADDRESS) {
@@ -734,11 +757,25 @@ public class TransactionUtil {
             //取后20位作为地址
             byte[] data = new byte[20];
             System.arraycopy(bytes, 12, data, 0, 20);
-            return "0x" + toHexString(data);
+            return "0x" + HexUtil.toHexString(data);
         }
         return null;
     }
 
+    /**
+     * 本地计算evm合约地址
+     *
+     * @param txHash
+     * @param addr
+     * @param addressType
+     * @return
+     */
+    public static String getContractAddress(String txHash,String addr, AddressType addressType) {
+        //TODO 要判断地址格式, 这里要重新适配
+        byte[] bytes=TransactionUtil.byteMerger(HexUtil.fromHexString(txHash),HexUtil.fromHexString(addr));
+        System.out.println("Hex: "+HexUtil.toHexString(Keccak256Util.keccak256(bytes)));
+        return getToAddress(Keccak256Util.keccak256(bytes),addressType);
+    }
     /**
      * @return 私钥
      * @description 创建私钥和公钥
@@ -928,6 +965,19 @@ public class TransactionUtil {
         }
     }
 
+    private static Signature sign(byte[] data, byte[] privateKey, SignType signType) {
+        byte[] sha256 = TransactionUtil.Sha256(data);
+        Sha256Hash sha256Hash = Sha256Hash.wrap(sha256);
+        ECKey ecKey = ECKey.fromPrivate(privateKey);
+        ECKey.ECDSASignature ecdsas = ecKey.sign(sha256Hash);
+        byte[] signByte = ecdsas.encodeToDER();
+        Signature signature = new Signature();
+        signature.setPubkey(ecKey.getPubKey());
+        signature.setSignature(signByte);
+        signature.setTy(signType.getType());
+        return signature;
+    }
+
     /**
      * @param privateKey 私钥
      * @param expire     秒数
@@ -1058,6 +1108,14 @@ public class TransactionUtil {
         return signature;
     }
 
+    /**
+     * 新增通用的比特币签名方法
+     *
+     * @param data
+     * @param privateKey
+     * @param signType   只支持secep256k1, eth_secep256k1
+     * @return
+     */
     private static Signature btcCoinSign(byte[] data, byte[] privateKey, SignType signType) {
         byte[] sha256 = TransactionUtil.Sha256(data);
         Sha256Hash sha256Hash = Sha256Hash.wrap(sha256);
@@ -1070,6 +1128,7 @@ public class TransactionUtil {
         signature.setTy(signType.getType());
         return signature;
     }
+
 
     public static TransactionAllProtobuf.Transaction decodeTxToProtobuf(DecodeRawTransaction unSignedTransaction,
                                                                         String execerAddress) {
@@ -1223,6 +1282,28 @@ public class TransactionUtil {
     }
 
     /**
+     * 新增通用的交易签名方法
+     *
+     * @param tx
+     * @param privateKey
+     * @param signType   目前只支持secp256k1格式签名
+     * @return
+     */
+    public static TransactionAllProtobuf.Transaction signProtobuf(TransactionAllProtobuf.Transaction tx, String privateKey, SignType signType) {
+        TransactionAllProtobuf.Transaction encodeTx = getSignProbuf(tx);
+        byte[] protobufData = encodeTx.toByteArray();
+        byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
+        Signature btcCoinSign = btcCoinSign(protobufData, privateKeyBytes, signType);
+        TransactionAllProtobuf.Transaction.Builder builder = tx.toBuilder();
+        TransactionAllProtobuf.Signature.Builder signatureBuilder = TransactionAllProtobuf.Signature.newBuilder();
+        signatureBuilder.setPubkey(ByteString.copyFrom(btcCoinSign.getPubkey()));
+        signatureBuilder.setTy(btcCoinSign.getTy());
+        signatureBuilder.setSignature(ByteString.copyFrom(btcCoinSign.getSignature())); // 序列化
+        TransactionAllProtobuf.Transaction.Builder setSignature = builder.setSignature(signatureBuilder.build());
+        return setSignature.build();
+    }
+
+    /**
      * @param tx
      * @return
      * @description 获取签名需要的protobuf
@@ -1237,6 +1318,7 @@ public class TransactionUtil {
         builder.setNonce(tx.getNonce());
         builder.setPayload(tx.getPayload());
         builder.setTo(tx.getTo());
+        builder.setChainID(tx.getChainID());
         if (tx.getNext() != null) {
             builder.setNext(tx.getNext());
         }
@@ -1438,20 +1520,50 @@ public class TransactionUtil {
      * @return
      */
     public static String createTxWithoutSign(byte[] execer, byte[] payLoad, long fee, long txHeight) {
-        Transaction transation = new Transaction();
-        transation.setExecer(execer);
-        transation.setPayload(payLoad);
-        transation.setFee(fee);
-        transation.setExpire(TX_HEIGHT_OFFSET + txHeight);
-        transation.setNonce(TransactionUtil.getRandomNonce());
+        Transaction transaction = new Transaction();
+        transaction.setExecer(execer);
+        transaction.setPayload(payLoad);
+        transaction.setFee(fee);
+        transaction.setExpire(TX_HEIGHT_OFFSET + txHeight);
+        transaction.setNonce(TransactionUtil.getRandomNonce());
         // 计算To
         String toAddress = getToAddress(execer);
-        transation.setTo(toAddress);
+        transaction.setTo(toAddress);
         // 签名
-        byte[] protobufData = encodeProtobuf(transation);
+        byte[] protobufData = encodeProtobuf(transaction);
 
         // 序列化
-        String transationStr = HexUtil.toHexString(protobufData);
-        return transationStr;
+        String transactionStr = HexUtil.toHexString(protobufData);
+        return transactionStr;
+    }
+
+    /**
+     * 通用的构建未签名的交易方法
+     *
+     * @param execer
+     * @param payLoad
+     * @param addressType
+     * @param chainID
+     * @param fee
+     * @param txHeight
+     * @return
+     */
+    public static String createTxWithoutSign(byte[] execer, byte[] payLoad, AddressType addressType, int chainID, long fee, long txHeight) {
+        Transaction transaction = new Transaction();
+        transaction.setExecer(execer);
+        transaction.setPayload(payLoad);
+        transaction.setFee(fee);
+        transaction.setExpire(TX_HEIGHT_OFFSET + txHeight);
+        transaction.setNonce(TransactionUtil.getRandomNonce());
+        transaction.setChainID(chainID);
+        // 计算To
+        String toAddress = getToAddress(execer, addressType);
+        transaction.setTo(toAddress);
+        // 签名
+        byte[] protobufData = encodeProtobuf(transaction);
+
+        // 序列化
+        String transactionStr = HexUtil.toHexString(protobufData);
+        return transactionStr;
     }
 }

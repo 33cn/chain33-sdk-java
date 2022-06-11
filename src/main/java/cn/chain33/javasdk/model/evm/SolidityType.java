@@ -17,18 +17,18 @@
  */
 package cn.chain33.javasdk.model.evm;
 
+import cn.chain33.javasdk.utils.ByteUtil;
+import cn.chain33.javasdk.utils.HexUtil;
+import cn.chain33.javasdk.utils.TransactionUtil;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
-import cn.chain33.javasdk.utils.ByteUtil;
-import cn.chain33.javasdk.utils.TransactionUtil;
 
 public abstract class SolidityType {
     protected String name;
@@ -37,7 +37,9 @@ public abstract class SolidityType {
         this.name = name;
     }
 
-    /** The type name as it was specified in the interface description */
+    /**
+     * The type name as it was specified in the interface description
+     */
     public String getName() {
         return name;
     }
@@ -80,7 +82,7 @@ public abstract class SolidityType {
 
     /**
      * @return fixed size in bytes. For the dynamic types returns IntType.getFixedSize() which is
-     *     effectively the int offset to dynamic data
+     * effectively the int offset to dynamic data
      */
     public int getFixedSize() {
         return 32;
@@ -388,6 +390,19 @@ public abstract class SolidityType {
         @Override
         public byte[] encode(Object value) {
             try {
+                //判断地址类型
+                if (value instanceof String && TransactionUtil.validETHAddress((String) value)) {
+                    // eth address
+                    byte[] addr = super.encode(value);
+                    for (int i = 0; i < 12; i++) {
+                        if (addr[i] != 0) {
+                            throw new RuntimeException("Invalid address (should be 20 bytes length): " + HexUtil.toHexString(addr));
+                        }
+                    }
+                    return addr;
+
+                }
+                //btc address
                 return ByteUtil.leftPadByte(TransactionUtil.decodeAddress(value.toString()), 32);
             } catch (Exception e) {
                 throw new RuntimeException(e.getMessage());
@@ -396,6 +411,12 @@ public abstract class SolidityType {
 
         @Override
         public Object decode(byte[] encoded, int offset) {
+            if (encoded.length == 20) {
+                //地址长度为20的是eth地址
+                BigInteger bi = (BigInteger) super.decode(encoded, offset);
+                return ByteUtil.bigIntegerToBytes(bi, 20);
+            }
+            //其他情况当作btc地址处理
             return TransactionUtil.encodeAddress(ByteUtil.removeLeftPad(encoded, 20));
         }
     }
