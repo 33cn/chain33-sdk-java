@@ -17,9 +17,9 @@
  */
 package cn.chain33.javasdk.model.evm;
 
+import cn.chain33.javasdk.utils.AddressUtil;
 import cn.chain33.javasdk.utils.ByteUtil;
 import cn.chain33.javasdk.utils.HexUtil;
-import cn.chain33.javasdk.utils.TransactionUtil;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -391,7 +391,7 @@ public abstract class SolidityType {
         public byte[] encode(Object value) {
             try {
                 //判断地址类型
-                if (value instanceof String && TransactionUtil.validETHAddress((String) value)) {
+                if (value instanceof String && AddressUtil.validETHAddress((String) value)) {
                     // eth address
                     byte[] addr = super.encode(value);
                     for (int i = 0; i < 12; i++) {
@@ -403,7 +403,7 @@ public abstract class SolidityType {
 
                 }
                 //btc address
-                return ByteUtil.leftPadByte(TransactionUtil.decodeAddress(value.toString()), 32);
+                return ByteUtil.leftPadByte(AddressUtil.decodeAddress(value.toString()), 32);
             } catch (Exception e) {
                 throw new RuntimeException(e.getMessage());
             }
@@ -417,7 +417,7 @@ public abstract class SolidityType {
                 return ByteUtil.bigIntegerToBytes(bi, 20);
             }
             //其他情况当作btc地址处理
-            return TransactionUtil.encodeAddress(ByteUtil.removeLeftPad(encoded, 20));
+            return AddressUtil.encodeAddress(ByteUtil.removeLeftPad(encoded, 20));
         }
     }
 
