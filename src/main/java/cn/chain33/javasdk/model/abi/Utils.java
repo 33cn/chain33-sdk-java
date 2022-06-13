@@ -55,6 +55,9 @@ public class Utils {
                 || type.equals(Ufixed.class)
                 || type.equals(Fixed.class)) {
             return simpleName + "256";
+        }else if(type.equals(AddressETH.class)||
+                type.equals(AddressBTC.class)){
+            return "address";
         } else if (type.equals(Utf8String.class)) {
             return "string";
         } else if (type.equals(DynamicBytes.class)) {

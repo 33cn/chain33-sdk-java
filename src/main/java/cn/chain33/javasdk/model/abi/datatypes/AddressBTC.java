@@ -1,6 +1,6 @@
 package cn.chain33.javasdk.model.abi.datatypes;
 
-import cn.chain33.javasdk.utils.TransactionUtil;
+import cn.chain33.javasdk.utils.AddressUtil;
 import org.web3j.utils.Numeric;
 
 import java.math.BigInteger;
@@ -12,7 +12,7 @@ import java.math.BigInteger;
  */
 public class AddressBTC implements Type<String> {
 
-    public static final String TYPE_NAME = "address_btc";
+    public static final String TYPE_NAME = "address";
     public static final int DEFAULT_LENGTH = 160;
     public static final Address DEFAULT = new Address(BigInteger.ZERO);
 
@@ -31,7 +31,7 @@ public class AddressBTC implements Type<String> {
     }
 
     public AddressBTC(String address) {
-        String hexValue = TransactionUtil.convertBTCToETH(address);
+        String hexValue = AddressUtil.convertBTCToETH(address);
         new Address(DEFAULT_LENGTH, hexValue);
         this.value = new Uint(DEFAULT_LENGTH, Numeric.toBigInt(hexValue));
     }
@@ -45,8 +45,8 @@ public class AddressBTC implements Type<String> {
         return value;
     }
 
-    public String toETHAddress(){
-        return TransactionUtil.convertBTCToETH(toString());
+    public String toETHAddress() {
+        return AddressUtil.convertBTCToETH(toString());
     }
 
     @Override
@@ -56,7 +56,7 @@ public class AddressBTC implements Type<String> {
 
     @Override
     public String toString() {
-        return TransactionUtil.convertETHToBTC(Numeric.toHexStringWithPrefixZeroPadded(value.getValue(), value.getBitSize() >> 2));
+        return AddressUtil.convertETHToBTC(Numeric.toHexStringWithPrefixZeroPadded(value.getValue(), value.getBitSize() >> 2));
     }
 
     @Override

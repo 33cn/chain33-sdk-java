@@ -1,6 +1,6 @@
 package cn.chain33.javasdk.model.abi.datatypes;
 
-import cn.chain33.javasdk.utils.TransactionUtil;
+import cn.chain33.javasdk.utils.AddressUtil;
 import org.web3j.utils.Numeric;
 
 import java.math.BigInteger;
@@ -11,8 +11,7 @@ import java.math.BigInteger;
  * eth类型地址定义,默认原生就是eth地址格式
  */
 public class AddressETH implements Type<String> {
-
-    public static final String TYPE_NAME = "address_eth";
+    public static final String TYPE_NAME = "address";
     public static final int DEFAULT_LENGTH = 160;
     public static final AddressETH DEFAULT = new AddressETH(BigInteger.ZERO);
 
@@ -42,8 +41,8 @@ public class AddressETH implements Type<String> {
         return value;
     }
 
-    public String toBTCAddress(){
-        return TransactionUtil.convertETHToBTC(toString());
+    public String toBTCAddress() {
+        return AddressUtil.convertETHToBTC(toString());
     }
 
     @Override

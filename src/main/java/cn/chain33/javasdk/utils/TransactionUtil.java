@@ -69,19 +69,7 @@ public class TransactionUtil {
 
     private static final long SECOND = MILLISECOND * 1000;
 
-    // private static final long MINUTE = SECOND * 1000;
-
     private static final long EXPIREBOUND = 1000000000;
-//    @Deprecated
-//    public static String toHexString(byte[] byteArr) {
-//        StringBuilder sb = new StringBuilder();
-//        for (int i = 0; i < byteArr.length; i++) {
-//            int b = byteArr[i] & 0xff;
-//            String hexString = Integer.toHexString(b);
-//            sb.append(hexString);
-//        }
-//        return sb.toString();
-//    }
 
     /**
      * @param expire 单位为秒
@@ -762,20 +750,6 @@ public class TransactionUtil {
         return null;
     }
 
-    /**
-     * 本地计算evm合约地址
-     *
-     * @param txHash
-     * @param addr
-     * @param addressType
-     * @return
-     */
-    public static String getContractAddress(String txHash,String addr, AddressType addressType) {
-        //TODO 要判断地址格式, 这里要重新适配
-        byte[] bytes=TransactionUtil.byteMerger(HexUtil.fromHexString(txHash),HexUtil.fromHexString(addr));
-        System.out.println("Hex: "+HexUtil.toHexString(Keccak256Util.keccak256(bytes)));
-        return getToAddress(Keccak256Util.keccak256(bytes),addressType);
-    }
     /**
      * @return 私钥
      * @description 创建私钥和公钥

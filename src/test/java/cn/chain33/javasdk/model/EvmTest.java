@@ -1,7 +1,8 @@
 package cn.chain33.javasdk.model;
 
 import cn.chain33.javasdk.client.RpcClient;
-import cn.chain33.javasdk.model.abi.DefaultFunctionReturnDecoder;
+import cn.chain33.javasdk.model.abi.EventEncoder;
+import cn.chain33.javasdk.model.abi.EventLogDecoder;
 import cn.chain33.javasdk.model.abi.FunctionEncoder;
 import cn.chain33.javasdk.model.abi.TypeReference;
 import cn.chain33.javasdk.model.abi.datatypes.*;
@@ -16,9 +17,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @authoer lhl
@@ -44,10 +44,16 @@ public class EvmTest {
         QueryTransactionResult txResult = client.queryTransaction(txhash);
         Assert.assertEquals(txResult.getReceipt().getTyname(), "ExecOk");
         System.out.println("执行结果 = " + txResult.getReceipt().getTyname());
-        //获取合约地址
+
+        //获取B合约地址
         String TestB_addr = EvmUtil.getContractAddr((JSONObject) JSONObject.toJSON(Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> log.getTy() == 603).findFirst().get().getLog()));
         System.out.println("TestB合约地址= " + TestB_addr);
-        //TODO 判断于本地计算的合约地址是否相同
+
+        //判断于本地计算的合约地址是否相同
+        String calcAddr=AddressUtil.getContractAddress(txhash,AddressUtil.genAddress(PrivateKey, AddressType.ETH_ADDRESS),AddressType.ETH_ADDRESS);
+        System.out.println("本地计算出来的合约地址= " + calcAddr);
+        Assert.assertEquals(TestB_addr,calcAddr);
+
         //部署A合约（有参构造函数合约部署）
         String code = FunctionEncoder.encodeConstructor(Arrays.asList(new AddressETH(TestB_addr)));
         tx = EvmUtil.createEvmContractForYCC(TestA_BIN, code, "this is test B deploy", "", PrivateKey, "user.p.parademo.", 1000000);
@@ -59,6 +65,7 @@ public class EvmTest {
         System.out.println("执行结果 = " + txResult.getReceipt().getTyname());
         String TestA_addr = EvmUtil.getContractAddr((JSONObject) JSONObject.toJSON(Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> log.getTy() == 603).findFirst().get().getLog()));
         System.out.println("TestA合约地址= " + TestA_addr);
+
         //调用B合约(把合约A的地址加入到B合约中）
         String encodeParams = FunctionEncoder.encode(new Function("setTestA", Arrays.asList(new AddressETH(TestA_addr)), Collections.emptyList()));
         tx = EvmUtil.callEvmContractForYCC(encodeParams, TestB_addr, "this is test B Set A address", 0, PrivateKey, "user.p.parademo.", 1000000);
@@ -67,6 +74,29 @@ public class EvmTest {
         Thread.sleep(20000);
         txResult = client.queryTransaction(txhash);
         Assert.assertEquals(txResult.getReceipt().getTyname(), "ExecOk");
+
+        //解析Event事件
+        txResult = client.queryTransaction(txhash);
+        //构造event
+        Event event = new Event("SetAddress", Arrays.asList(new TypeReference<AddressETH>() {
+        }, new TypeReference<AddressETH>() {
+        }));
+        //获取eventLog日志
+        List<String> logList=EvmUtil.getEvmLogList(txResult,event);
+        System.out.println("event log list: " + logList);
+        //解析匹配到的日志
+        //处理evmLog
+        List<List<Type>> resultList = Optional.ofNullable(logList).orElse(new ArrayList<String>()).stream().map(item -> {
+            List<Type> result = EventLogDecoder.decodeEventParameters(item, event);
+            return result;
+        }).collect(Collectors.toList());
+
+        List<Type> result = resultList.get(0);
+        for (int i = 0; i < result.size(); i++) {
+            //打印参数类型及值
+            System.out.println("type: " + result.get(i).getTypeAsString() + " ,  value: " + result.get(i).getValue());
+        }
+
         //通过B合约接口给A合约中Value设置
         encodeParams = FunctionEncoder.encode(new Function("setValue", Arrays.asList(new Uint256(BigInteger.valueOf(123456789L))), Collections.emptyList()));
         tx = EvmUtil.callEvmContractForYCC(encodeParams, TestB_addr, "this is test B Set A value", 0, PrivateKey, "user.p.parademo.", 1000000);
@@ -75,13 +105,16 @@ public class EvmTest {
         Thread.sleep(20000);
         txResult = client.queryTransaction(txhash);
         Assert.assertEquals(txResult.getReceipt().getTyname(), "ExecOk");
-        //查询value值
-        List<Type> result = client.callEVMContractReadOnlyFunc(TestA_addr, new Function("getValue", Collections.emptyList(), Collections.singletonList(new TypeReference<Uint256>() {
+
+        //通过只读函数查询value值
+        result = client.callEVMContractReadOnlyFunc(TestA_addr, new Function("getValue", Collections.emptyList(), Collections.singletonList(new TypeReference<Uint256>() {
         })));
         System.out.println(result.get(0).getValue());
+        Assert.assertEquals(new Uint256(BigInteger.valueOf(123456789L)).getValue(), result.get(0).getValue());
         result = client.callEVMContractReadOnlyFunc(TestB_addr, new Function("getValue", Collections.emptyList(), Collections.singletonList(new TypeReference<Uint256>() {
         })));
         System.out.println(result.get(0).getValue());
+        Assert.assertEquals(new Uint256(BigInteger.valueOf(123456789L)).getValue(), result.get(0).getValue());
 
     }
 
@@ -105,59 +138,40 @@ public class EvmTest {
 
     @Test
     public void testEvmEventParse() throws IOException {
-        String txhash1 = "0x3acd2164ac6c6e159fc910a306724b16f0bef432e0ea5131b10921fc6cae4d4e";
-        String txhash2 = "0x1e4ba8ad1d8fc332dd366f5fb48861b433405557d8da8fdb5e2272290faf88f2";
-        QueryTransactionResult txResult = client.queryTransaction(txhash2);
-        //获取原始日志
-        String rawLog = Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> log.getTy() == 605).findFirst().get().getRawlog();
-        System.out.println(rawLog);
+        String txhash = "0x1e4ba8ad1d8fc332dd366f5fb48861b433405557d8da8fdb5e2272290faf88f2";
+        QueryTransactionResult txResult = client.queryTransaction(txhash);
         //解析evmLog
         Event event = new Event("SetValue", Arrays.asList(new TypeReference<AddressETH>() {
         }, new TypeReference<Uint256>() {
         }, new TypeReference<Uint256>() {
         }));
-        Object object = Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> log.getTy() == 605).findFirst().get().getLog();
-//        QueryTransactionResult transactionResult = resultJson.toJavaObject(QueryTransactionResult.class);
-
-        System.out.println(JSONObject.toJSONString(object));
-        EvmLog evmLog =JSONObject.parseObject(JSONObject.toJSONString(object)).toJavaObject(EvmLog.class);
-        byte[] bytes = new byte[0];
-        for (int i = 0; i < evmLog.getTopic().length; i++) {
-            if (i == 0) {
-                continue;
+        List<String> list = Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> {
+            EvmLog evmLog = JSONObject.parseObject(JSONObject.toJSONString(log.getLog())).toJavaObject(EvmLog.class);
+            return log.getTy() == 605 && evmLog.getTopic()[0].equals(EventEncoder.encode(event));
+        }).map(item -> {
+            EvmLog evmLog = JSONObject.parseObject(JSONObject.toJSONString(item.getLog())).toJavaObject(EvmLog.class);
+            byte[] bytes = new byte[0];
+            for (int i = 0; i < evmLog.getTopic().length; i++) {
+                if (i == 0) {
+                    continue;
+                }
+                bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(evmLog.getTopic()[i]));
             }
-            bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(evmLog.getTopic()[i]));
+            if (evmLog.getData() != null) {
+                bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(evmLog.getData()));
+            }
+            return HexUtil.toHexString(bytes);
+        }).collect(Collectors.toList());
+        //处理evmLog
+        List<List<Type>> resultList = Optional.ofNullable(list).orElse(new ArrayList<String>()).stream().map(item -> {
+            List<Type> result = EventLogDecoder.decodeEventParameters(item, event);
+            return result;
+        }).collect(Collectors.toList());
+
+        List<Type> result = resultList.get(0);
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println("type: " + result.get(i).getTypeAsString() + " ,  value: " + result.get(i).getValue());
         }
-        if (evmLog.getData() != null) {
-            bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(evmLog.getData()));
-        }
-        System.out.println("event log : "+HexUtil.toHexString(bytes));
-        List<Type> list = DefaultFunctionReturnDecoder.decode(HexUtil.toHexString(bytes), event.getParameters());
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("type: " + list.get(i).getTypeAsString() + " ,  value: " + list.get(i).getValue());
-        }
-//        JSONObject jsonObject =(JSONObject) JSONObject.toJSON(Arrays.stream(txResult.getReceipt().getLogs()).filter(log->log.getTy() == 605).findFirst().get().getLog());
-//        JSONArray array = jsonObject.getJSONArray("topic");
-//        System.out.println(jsonObject.getJSONArray("topic"));
-//        String data=jsonObject.getString("data");
-//        byte[] bytes = new byte[0];
-//        for (int i=0;i<array.size();i++){
-//            if (i==0){
-//                continue;
-//            }
-//            bytes=ByteUtil.merge(bytes,HexUtil.fromHexString((String)array.get(i)));
-//        }
-//        if (data!=null){
-//                    bytes = ByteUtil.merge(bytes,HexUtil.fromHexString(data));
-//        }
-//        Event addressEvent= new Event("SetAddress",Arrays.asList(new TypeReference<AddressETH>() {},new TypeReference<AddressETH>(){}));
-//        Event valueEvent= new Event("SetValue",Arrays.asList(new TypeReference<AddressETH>() {},new TypeReference<Uint256>(){},new TypeReference<Uint256>(){}));
-//
-//        System.out.println(EventEncoder.encode(valueEvent));
-//        List<Type> list=DefaultFunctionReturnDecoder.decode(HexUtil.toHexString(bytes),valueEvent.getParameters());
-//        for(int i=0;i<list.size();i++){
-//            System.out.println("type: "+list.get(i).getTypeAsString()+"value: "+list.get(i).getValue());
-//        }
     }
 
 
@@ -166,47 +180,35 @@ public class EvmTest {
         String txhash = "0x8335ab9ea0a2e56c23c56a259b55362def9583a55ecae22a463444165ec99de2";
 
         //0xf39e69a8f2c1041edd7616cf079c7084bb7a5242
-        String addr = TransactionUtil.genAddress(PrivateKey, AddressType.ETH_ADDRESS);
-        System.out.println("addr: " + addr);
-        //TODO 本地计算合约地址
+        String addr = AddressUtil.genAddress(PrivateKey, AddressType.ETH_ADDRESS);
+        Assert.assertEquals("0xf39e69a8f2c1041edd7616cf079c7084bb7a5242",addr);
+        //本地计算合约地址
         //0x0d7670e39a629f2591f1bec0c0bf4446fdc5f0dd
-        String contractAddress = TransactionUtil.getContractAddress(txhash, addr, AddressType.ETH_ADDRESS);
-        System.out.println("部署好的合约地址 = " + contractAddress);
-        byte[] bytes = TransactionUtil.byteMerger(txhash.getBytes(), addr.getBytes());
-        System.out.println("Hex: " + HexUtil.toHexString(Keccak256Util.keccak256(bytes)));
-
+        String contractAddressETH = AddressUtil.getContractAddress(txhash, addr, AddressType.ETH_ADDRESS);
+        System.out.println("以太坊地址格式合约地址 = " + contractAddressETH);
+        Assert.assertEquals("0x0d7670e39a629f2591f1bec0c0bf4446fdc5f0dd",contractAddressETH);
+        //1DqjD3Fk8URVda7nPuGNZLtN1ZwTvuK68K
+        String contractAddressBTC = AddressUtil.getContractAddress(txhash, addr, AddressType.BTC_ADDRESS);
+        System.out.println("比特币地址格式合约地址 = " + contractAddressBTC);
+        Assert.assertEquals("1DqjD3Fk8URVda7nPuGNZLtN1ZwTvuK68K",contractAddressBTC);
     }
 
 
-
-
     @Test
-    public void testEncodeFunction() throws Exception {
-        //0x20fa54c061fe538b24dbe0f6dab18d4be0de36e4
-        //0xd4215189165742bf6585d1a5f7a35955ad006c93
+    public void testEncodeFunction() {
 
-        String code = FunctionEncoder.encodeConstructor(Arrays.asList(new AddressETH("0xd4215189165742bf6585d1a5f7a35955ad006c93")));
-        System.out.println(code);
+        String code1 = FunctionEncoder.encodeConstructor(Arrays.asList(new AddressETH("0xf39e69a8f2c1041edd7616cf079c7084bb7a5242")));
+        System.out.println(code1);
+        String code2 = FunctionEncoder.encodeConstructor(Arrays.asList(new AddressBTC("1PD8yKphczWERv8KnjQrdHjLxDWqXkBLgN")));
+        System.out.println(code2);
+        Assert.assertEquals(code1, code2);
 
-        String funcEncode = FunctionEncoder.encode(new Function("setTestA", Arrays.asList(new AddressETH("0xed958c1668b0e3e74df02200026e3bf9f9a28f70")), Collections.emptyList()));
-        System.out.println(funcEncode);
-        funcEncode = FunctionEncoder.encode(new Function("setTestA", Arrays.asList(new AddressBTC("1PD8yKphczWERv8KnjQrdHjLxDWqXkBLgN")), Collections.emptyList()));
-        System.out.println(funcEncode);
-
-        funcEncode = HexUtil.toHexString(EvmUtil.encodeParameter(TestB_ABI, "setTestA", "1PD8yKphczWERv8KnjQrdHjLxDWqXkBLgN"));
-        System.out.println(funcEncode);
-        funcEncode = HexUtil.toHexString(EvmUtil.encodeParameter(TestB_ABI, "setTestA", "0xf39e69a8f2c1041edd7616cf079c7084bb7a5242"));
-        System.out.println(funcEncode);
+        String funcEncode1 = FunctionEncoder.encode(new Function("setTestA", Arrays.asList(new AddressETH("0xf39e69a8f2c1041edd7616cf079c7084bb7a5242")), Collections.emptyList()));
+        System.out.println(funcEncode1);
+        String funcEncode2 = FunctionEncoder.encode(new Function("setTestA", Arrays.asList(new AddressBTC("1PD8yKphczWERv8KnjQrdHjLxDWqXkBLgN")), Collections.emptyList()));
+        System.out.println(funcEncode2);
+        Assert.assertEquals(funcEncode1, funcEncode2);
         System.out.println(new AddressETH("0xf39e69a8f2c1041edd7616cf079c7084bb7a5242").toBTCAddress());
         System.out.println(new AddressBTC("1PD8yKphczWERv8KnjQrdHjLxDWqXkBLgN").toETHAddress());
-        //        String TestB_addr= "0xd4215189165742bf6585d1a5f7a35955ad006c93";
-//
-//        String tx = EvmUtil.callEvmContractForYCC(funcEncode,TestB_addr,"this is test B call",0,PrivateKey,"user.p.parademo.",1000000);
-//        System.out.println(tx);
-//        String txhash = client.submitTransaction(tx);
-//        System.out.print("txhash = " + txhash);
-//        Thread.sleep(20000);
-//        QueryTransactionResult txResult = client.queryTransaction(txhash);
-//        Assert.assertEquals(txResult.getReceipt().getTyname(), "ExecOk");
     }
 }

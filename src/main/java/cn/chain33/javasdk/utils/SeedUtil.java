@@ -45,7 +45,6 @@ public class SeedUtil {
 	/**
 	 * 根据助记词生成私钥，公钥，地址
 	 * @param word 助记词
-	 * @param passphrase
 	 * @param childIndex 子账户索引
 	 * @return
 	 * @throws UnreadableWalletException

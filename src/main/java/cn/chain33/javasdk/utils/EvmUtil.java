@@ -1,5 +1,7 @@
 package cn.chain33.javasdk.utils;
 
+import cn.chain33.javasdk.model.abi.EventEncoder;
+import cn.chain33.javasdk.model.abi.datatypes.Event;
 import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.enums.ChainID;
 import cn.chain33.javasdk.model.enums.SignType;
@@ -8,15 +10,19 @@ import cn.chain33.javasdk.model.evm.compiler.CompilationResult;
 import cn.chain33.javasdk.model.evm.compiler.SolidityCompiler;
 import cn.chain33.javasdk.model.protobuf.EvmService;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
+import cn.chain33.javasdk.model.rpcresult.EvmLog;
+import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import com.alibaba.fastjson.JSONObject;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static cn.chain33.javasdk.model.evm.compiler.SolidityCompiler.Options.*;
 
@@ -404,7 +410,7 @@ public class EvmUtil {
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
-        evmActionBuilder.setContractAddr(TransactionUtil.getToAddress((paraName + "evm").getBytes(), addressType));
+        evmActionBuilder.setContractAddr(AddressUtil.getToAddress((paraName + "evm").getBytes(), addressType));
 
         EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
         long fee = 0L;
@@ -501,5 +507,32 @@ public class EvmUtil {
      */
     public static String callEvmContractForYCC(String functionEncode, String contractAddr, String note, long amount, String privateKey, String paraName, long gas) throws Exception {
         return callEvmContract(functionEncode,contractAddr,note,amount,privateKey,SignType.ETH_SECP256K1,AddressType.ETH_ADDRESS, ChainID.YCC.getID(),paraName,gas);
+    }
+
+    /**
+     * 从交易日志中获取指定event的匹配event 日志
+     * @param txResult
+     * @param event
+     * @return
+     */
+    public static List<String> getEvmLogList(QueryTransactionResult txResult, Event event){
+        List<String> list = Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> {
+            EvmLog evmLog =JSONObject.parseObject(JSONObject.toJSONString(log.getLog())).toJavaObject(EvmLog.class);
+            return log.getTy() == 605 && evmLog.getTopic()[0].equals(EventEncoder.encode(event));
+        }).map(item->{
+            EvmLog evmLog =JSONObject.parseObject(JSONObject.toJSONString(item.getLog())).toJavaObject(EvmLog.class);
+            byte[] bytes = new byte[0];
+            for (int i = 0; i < evmLog.getTopic().length; i++) {
+                if (i == 0) {
+                    continue;
+                }
+                bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(evmLog.getTopic()[i]));
+            }
+            if (evmLog.getData() != null) {
+                bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(evmLog.getData()));
+            }
+            return HexUtil.toHexString(bytes);
+        }).collect(Collectors.toList());
+        return list;
     }
 }

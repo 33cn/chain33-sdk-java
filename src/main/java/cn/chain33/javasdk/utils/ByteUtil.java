@@ -665,4 +665,24 @@ public class ByteUtil {
     public static byte[] parseWord(byte[] input, int offset, int idx) {
         return parseBytes(input, offset + 32 * idx, 32);
     }
+
+
+    /**
+     * @param byteArr
+     * @param start
+     * @param end
+     * @return
+     * @description byte数组截取
+     */
+    public static byte[] subByteArr(byte[] byteArr, Integer start, Integer end) {
+        Integer diff = end - start;
+        byte[] byteTarget = new byte[diff];
+        if (diff > byteArr.length) {
+            diff = byteArr.length;
+        }
+        for (int i = 0; i < diff; i++) {
+            byteTarget[i] = byteArr[i];
+        }
+        return byteTarget;
+    }
 }

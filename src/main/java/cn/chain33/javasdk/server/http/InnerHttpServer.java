@@ -15,9 +15,9 @@ import java.util.zip.GZIPInputStream;
  */
 public class InnerHttpServer {
 
-
+        //TODO http订阅接收服务需要封装
         public static void main(String[] args) throws IOException {
-            // 创建 http 服务器, 绑定本地 xxxx 端口
+            // 启动一个http服务
             HttpServer httpServer = HttpServer.create(new InetSocketAddress(8383), 0);
             httpServer.createContext("/", new HttpHandler() {
                 @Override
