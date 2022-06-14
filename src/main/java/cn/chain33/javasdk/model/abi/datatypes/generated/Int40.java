@@ -1,0 +1,23 @@
+package cn.chain33.javasdk.model.abi.datatypes.generated;
+
+import cn.chain33.javasdk.model.abi.datatypes.Int;
+
+import java.math.BigInteger;
+
+/**
+ * Auto generated code.
+ * <p><strong>Do not modifiy!</strong>
+ * <p>Please use cn.chain33.javasdk.model.codegen.AbiTypesGenerator in the
+ * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
+ */
+public class Int40 extends Int {
+    public static final Int40 DEFAULT = new Int40(BigInteger.ZERO);
+
+    public Int40(BigInteger value) {
+        super(40, value);
+    }
+
+    public Int40(long value) {
+        this(BigInteger.valueOf(value));
+    }
+}

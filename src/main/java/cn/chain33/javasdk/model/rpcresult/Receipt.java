@@ -10,6 +10,8 @@ public class Receipt implements Serializable{
 	
 	private String tyname;
 
+	private ReceiptLogResult[] logs;
+
 	public Integer getTy() {
 		return ty;
 	}
@@ -25,5 +27,12 @@ public class Receipt implements Serializable{
 	public void setTyname(String tyname) {
 		this.tyname = tyname;
 	}
-	
+
+	public ReceiptLogResult[] getLogs() {
+		return logs;
+	}
+
+	public void setLogs(ReceiptLogResult[] logs) {
+		this.logs = logs;
+	}
 }

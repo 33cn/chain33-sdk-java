@@ -8,6 +8,7 @@ import java.util.List;
 
 import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.enums.ChainID;
+import cn.chain33.javasdk.utils.AddressUtil;
 import org.bitcoinj.wallet.UnreadableWalletException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -101,11 +102,14 @@ public class AccountTest {
 
 	@Test
 	public void getExecerToAddr()  {
-		String execer="user.p.parademo.token";
-		String btc_address=TransactionUtil.getToAddress(execer.getBytes(),AddressType.BTC_ADDRESS);
+		String execer="evm";
+		//19tjS51kjwrCoSQS13U3owe7gYBLfSfoFm
+		String btc_address= AddressUtil.getToAddress(execer.getBytes(),AddressType.BTC_ADDRESS);
 		System.out.println(btc_address);
-		String eth_address=TransactionUtil.getToAddress(execer.getBytes(),AddressType.ETH_ADDRESS);
+		//0x780312ebf46212d09e67b48e94f4ed94cad32ffa
+		String eth_address=AddressUtil.getToAddress(execer.getBytes(),AddressType.ETH_ADDRESS);
 		System.out.println(eth_address);
+
 	}
 
 	/**
