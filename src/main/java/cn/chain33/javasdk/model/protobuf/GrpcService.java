@@ -105,7 +105,7 @@ public final class GrpcService {
           cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.getDescriptor(),
           cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.getDescriptor(),
           cn.chain33.javasdk.model.protobuf.WalletProtobuf.getDescriptor(),
-          cn.chain33.javasdk.model.protobuf.P2pService.getDescriptor(),
+          cn.chain33.javasdk.model.protobuf.P2pProtobuf.getDescriptor(),
           cn.chain33.javasdk.model.protobuf.AccountProtobuf.getDescriptor(),
           cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.getDescriptor(),
         });
@@ -113,7 +113,7 @@ public final class GrpcService {
     cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.getDescriptor();
     cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.getDescriptor();
     cn.chain33.javasdk.model.protobuf.WalletProtobuf.getDescriptor();
-    cn.chain33.javasdk.model.protobuf.P2pService.getDescriptor();
+    cn.chain33.javasdk.model.protobuf.P2pProtobuf.getDescriptor();
     cn.chain33.javasdk.model.protobuf.AccountProtobuf.getDescriptor();
     cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.getDescriptor();
   }

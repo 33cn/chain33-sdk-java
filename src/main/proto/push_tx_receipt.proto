@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+// import "common.proto";
+import "transaction.proto";
+import "blockchain.proto";
+import "evm_event.proto";
+
+option java_outer_classname = "PushTxReceiptProtobuf";
+option java_package = "cn.chain33.javasdk.model.protobuf";
+
+message TxReceipts4SubscribePerBlk {
+    repeated Transaction tx          = 1;
+    repeated ReceiptData receiptData = 2;
+    // repeated KeyValue    KV          = 3;
+    int64 height       = 4;
+    bytes blockHash    = 5;
+    bytes parentHash   = 6;
+    bytes previousHash = 7;
+    int32 addDelType   = 8;
+    int64 seqNum       = 9;
+}
+
+message TxReceipts4Subscribe {
+    repeated TxReceipts4SubscribePerBlk txReceipts = 1;
+}
+
+message TxHashWithReceiptType {
+    bytes hash = 1;
+    int32 ty   = 2;
+}
+
+message TxResultPerBlock {
+    repeated TxHashWithReceiptType items      = 1;
+    int64                          height     = 2;
+    bytes                          blockHash  = 3;
+    bytes                          parentHash = 4;
+    int32                          addDelType = 5;
+    int64                          seqNum     = 6;
+}
+
+message TxResultSeqs {
+    repeated TxResultPerBlock items = 1;
+}
+
+message PushData {
+    string name = 1;
+    oneof  value {
+        BlockSeqs            blockSeqs  = 2;
+        HeaderSeqs           headerSeqs = 3;
+        TxReceipts4Subscribe txReceipts = 4;
+        TxResultSeqs         txResult   = 5;
+        EVMTxLogsInBlks      evmLogs    = 6;
+    }
+}

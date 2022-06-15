@@ -1,5 +1,5 @@
 syntax = "proto3";
-option java_outer_classname = "CertService";
+option java_outer_classname = "CertProtobuf";
 option java_package = "cn.chain33.javasdk.model.protobuf";
 
 // 用户注册请求

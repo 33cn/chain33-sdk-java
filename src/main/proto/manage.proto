@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "executor.proto";
+
+option java_outer_classname = "ManageProtobuf";
+option java_package = "cn.chain33.javasdk.model.protobuf";
+
+message ManageAction {
+    oneof value {
+        ModifyConfig modify = 1;
+    }
+    int32 Ty = 2;
+}
