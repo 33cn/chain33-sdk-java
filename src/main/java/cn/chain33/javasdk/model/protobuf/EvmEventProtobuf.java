@@ -48,7 +48,7 @@ public final class EvmEventProtobuf {
    *
    * Protobuf type {@code EVMLog}
    */
-  public  static final class EVMLog extends
+  public static final class EVMLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMLog)
       EVMLogOrBuilder {
@@ -147,6 +147,7 @@ public final class EvmEventProtobuf {
      * <code>repeated bytes topic = 1;</code>
      * @return A list containing the topic.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getTopicList() {
       return topic_;
@@ -173,6 +174,7 @@ public final class EvmEventProtobuf {
      * <code>bytes data = 2;</code>
      * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -610,6 +612,7 @@ public final class EvmEventProtobuf {
        * <code>bytes data = 2;</code>
        * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -725,7 +728,7 @@ public final class EvmEventProtobuf {
    *
    * Protobuf type {@code EVMLogsPerTx}
    */
-  public  static final class EVMLogsPerTx extends
+  public static final class EVMLogsPerTx extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMLogsPerTx)
       EVMLogsPerTxOrBuilder {
@@ -818,12 +821,14 @@ public final class EvmEventProtobuf {
     /**
      * <code>repeated .EVMLog logs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLog> getLogsList() {
       return logs_;
     }
     /**
      * <code>repeated .EVMLog logs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLogOrBuilder> 
         getLogsOrBuilderList() {
       return logs_;
@@ -831,18 +836,21 @@ public final class EvmEventProtobuf {
     /**
      * <code>repeated .EVMLog logs = 1;</code>
      */
+    @java.lang.Override
     public int getLogsCount() {
       return logs_.size();
     }
     /**
      * <code>repeated .EVMLog logs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLog getLogs(int index) {
       return logs_.get(index);
     }
     /**
      * <code>repeated .EVMLog logs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLogOrBuilder getLogsOrBuilder(
         int index) {
       return logs_.get(index);
@@ -1523,7 +1531,7 @@ public final class EvmEventProtobuf {
   /**
    * Protobuf type {@code EVMTxAndLogs}
    */
-  public  static final class EVMTxAndLogs extends
+  public static final class EVMTxAndLogs extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMTxAndLogs)
       EVMTxAndLogsOrBuilder {
@@ -1629,6 +1637,7 @@ public final class EvmEventProtobuf {
      * <code>.Transaction tx = 1;</code>
      * @return Whether the tx field is set.
      */
+    @java.lang.Override
     public boolean hasTx() {
       return tx_ != null;
     }
@@ -1636,12 +1645,14 @@ public final class EvmEventProtobuf {
      * <code>.Transaction tx = 1;</code>
      * @return The tx.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTx() {
       return tx_ == null ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction.getDefaultInstance() : tx_;
     }
     /**
      * <code>.Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxOrBuilder() {
       return getTx();
     }
@@ -1652,6 +1663,7 @@ public final class EvmEventProtobuf {
      * <code>.EVMLogsPerTx logsPerTx = 2;</code>
      * @return Whether the logsPerTx field is set.
      */
+    @java.lang.Override
     public boolean hasLogsPerTx() {
       return logsPerTx_ != null;
     }
@@ -1659,12 +1671,14 @@ public final class EvmEventProtobuf {
      * <code>.EVMLogsPerTx logsPerTx = 2;</code>
      * @return The logsPerTx.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLogsPerTx getLogsPerTx() {
       return logsPerTx_ == null ? cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLogsPerTx.getDefaultInstance() : logsPerTx_;
     }
     /**
      * <code>.EVMLogsPerTx logsPerTx = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLogsPerTxOrBuilder getLogsPerTxOrBuilder() {
       return getLogsPerTx();
     }
@@ -2375,7 +2389,7 @@ public final class EvmEventProtobuf {
    *
    * Protobuf type {@code EVMTxLogPerBlk}
    */
-  public  static final class EVMTxLogPerBlk extends
+  public static final class EVMTxLogPerBlk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMTxLogPerBlk)
       EVMTxLogPerBlkOrBuilder {
@@ -2501,12 +2515,14 @@ public final class EvmEventProtobuf {
     /**
      * <code>repeated .EVMTxAndLogs txAndLogs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxAndLogs> getTxAndLogsList() {
       return txAndLogs_;
     }
     /**
      * <code>repeated .EVMTxAndLogs txAndLogs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxAndLogsOrBuilder> 
         getTxAndLogsOrBuilderList() {
       return txAndLogs_;
@@ -2514,18 +2530,21 @@ public final class EvmEventProtobuf {
     /**
      * <code>repeated .EVMTxAndLogs txAndLogs = 1;</code>
      */
+    @java.lang.Override
     public int getTxAndLogsCount() {
       return txAndLogs_.size();
     }
     /**
      * <code>repeated .EVMTxAndLogs txAndLogs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxAndLogs getTxAndLogs(int index) {
       return txAndLogs_.get(index);
     }
     /**
      * <code>repeated .EVMTxAndLogs txAndLogs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxAndLogsOrBuilder getTxAndLogsOrBuilder(
         int index) {
       return txAndLogs_.get(index);
@@ -2537,6 +2556,7 @@ public final class EvmEventProtobuf {
      * <code>int64 height = 2;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -2547,6 +2567,7 @@ public final class EvmEventProtobuf {
      * <code>bytes blockHash = 3;</code>
      * @return The blockHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getBlockHash() {
       return blockHash_;
     }
@@ -2557,6 +2578,7 @@ public final class EvmEventProtobuf {
      * <code>bytes parentHash = 4;</code>
      * @return The parentHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getParentHash() {
       return parentHash_;
     }
@@ -2567,6 +2589,7 @@ public final class EvmEventProtobuf {
      * <code>bytes previousHash = 5;</code>
      * @return The previousHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPreviousHash() {
       return previousHash_;
     }
@@ -2577,6 +2600,7 @@ public final class EvmEventProtobuf {
      * <code>int32 addDelType = 6;</code>
      * @return The addDelType.
      */
+    @java.lang.Override
     public int getAddDelType() {
       return addDelType_;
     }
@@ -2587,6 +2611,7 @@ public final class EvmEventProtobuf {
      * <code>int64 seqNum = 7;</code>
      * @return The seqNum.
      */
+    @java.lang.Override
     public long getSeqNum() {
       return seqNum_;
     }
@@ -3286,6 +3311,7 @@ public final class EvmEventProtobuf {
        * <code>int64 height = 2;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -3316,6 +3342,7 @@ public final class EvmEventProtobuf {
        * <code>bytes blockHash = 3;</code>
        * @return The blockHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getBlockHash() {
         return blockHash_;
       }
@@ -3349,6 +3376,7 @@ public final class EvmEventProtobuf {
        * <code>bytes parentHash = 4;</code>
        * @return The parentHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getParentHash() {
         return parentHash_;
       }
@@ -3382,6 +3410,7 @@ public final class EvmEventProtobuf {
        * <code>bytes previousHash = 5;</code>
        * @return The previousHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPreviousHash() {
         return previousHash_;
       }
@@ -3415,6 +3444,7 @@ public final class EvmEventProtobuf {
        * <code>int32 addDelType = 6;</code>
        * @return The addDelType.
        */
+      @java.lang.Override
       public int getAddDelType() {
         return addDelType_;
       }
@@ -3445,6 +3475,7 @@ public final class EvmEventProtobuf {
        * <code>int64 seqNum = 7;</code>
        * @return The seqNum.
        */
+      @java.lang.Override
       public long getSeqNum() {
         return seqNum_;
       }
@@ -3557,7 +3588,7 @@ public final class EvmEventProtobuf {
    *
    * Protobuf type {@code EVMTxLogsInBlks}
    */
-  public  static final class EVMTxLogsInBlks extends
+  public static final class EVMTxLogsInBlks extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMTxLogsInBlks)
       EVMTxLogsInBlksOrBuilder {
@@ -3650,12 +3681,14 @@ public final class EvmEventProtobuf {
     /**
      * <code>repeated .EVMTxLogPerBlk logs4EVMPerBlk = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogPerBlk> getLogs4EVMPerBlkList() {
       return logs4EVMPerBlk_;
     }
     /**
      * <code>repeated .EVMTxLogPerBlk logs4EVMPerBlk = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogPerBlkOrBuilder> 
         getLogs4EVMPerBlkOrBuilderList() {
       return logs4EVMPerBlk_;
@@ -3663,18 +3696,21 @@ public final class EvmEventProtobuf {
     /**
      * <code>repeated .EVMTxLogPerBlk logs4EVMPerBlk = 1;</code>
      */
+    @java.lang.Override
     public int getLogs4EVMPerBlkCount() {
       return logs4EVMPerBlk_.size();
     }
     /**
      * <code>repeated .EVMTxLogPerBlk logs4EVMPerBlk = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogPerBlk getLogs4EVMPerBlk(int index) {
       return logs4EVMPerBlk_.get(index);
     }
     /**
      * <code>repeated .EVMTxLogPerBlk logs4EVMPerBlk = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogPerBlkOrBuilder getLogs4EVMPerBlkOrBuilder(
         int index) {
       return logs4EVMPerBlk_.get(index);
@@ -4439,7 +4475,7 @@ public final class EvmEventProtobuf {
    *
    * Protobuf type {@code EVMContractAction4Chain33}
    */
-  public  static final class EVMContractAction4Chain33 extends
+  public static final class EVMContractAction4Chain33 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractAction4Chain33)
       EVMContractAction4Chain33OrBuilder {
@@ -4571,6 +4607,7 @@ public final class EvmEventProtobuf {
      * <code>uint64 amount = 1;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -4585,6 +4622,7 @@ public final class EvmEventProtobuf {
      * <code>uint64 gasLimit = 2;</code>
      * @return The gasLimit.
      */
+    @java.lang.Override
     public long getGasLimit() {
       return gasLimit_;
     }
@@ -4599,6 +4637,7 @@ public final class EvmEventProtobuf {
      * <code>uint32 gasPrice = 3;</code>
      * @return The gasPrice.
      */
+    @java.lang.Override
     public int getGasPrice() {
       return gasPrice_;
     }
@@ -4613,6 +4652,7 @@ public final class EvmEventProtobuf {
      * <code>bytes code = 4;</code>
      * @return The code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCode() {
       return code_;
     }
@@ -4627,6 +4667,7 @@ public final class EvmEventProtobuf {
      * <code>bytes para = 5;</code>
      * @return The para.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPara() {
       return para_;
     }
@@ -4641,6 +4682,7 @@ public final class EvmEventProtobuf {
      * <code>string alias = 6;</code>
      * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -4661,6 +4703,7 @@ public final class EvmEventProtobuf {
      * <code>string alias = 6;</code>
      * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -4685,6 +4728,7 @@ public final class EvmEventProtobuf {
      * <code>string note = 7;</code>
      * @return The note.
      */
+    @java.lang.Override
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
@@ -4705,6 +4749,7 @@ public final class EvmEventProtobuf {
      * <code>string note = 7;</code>
      * @return The bytes for note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNoteBytes() {
       java.lang.Object ref = note_;
@@ -4729,6 +4774,7 @@ public final class EvmEventProtobuf {
      * <code>string contractAddr = 8;</code>
      * @return The contractAddr.
      */
+    @java.lang.Override
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
@@ -4749,6 +4795,7 @@ public final class EvmEventProtobuf {
      * <code>string contractAddr = 8;</code>
      * @return The bytes for contractAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
       java.lang.Object ref = contractAddr_;
@@ -5199,6 +5246,7 @@ public final class EvmEventProtobuf {
        * <code>uint64 amount = 1;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -5241,6 +5289,7 @@ public final class EvmEventProtobuf {
        * <code>uint64 gasLimit = 2;</code>
        * @return The gasLimit.
        */
+      @java.lang.Override
       public long getGasLimit() {
         return gasLimit_;
       }
@@ -5283,6 +5332,7 @@ public final class EvmEventProtobuf {
        * <code>uint32 gasPrice = 3;</code>
        * @return The gasPrice.
        */
+      @java.lang.Override
       public int getGasPrice() {
         return gasPrice_;
       }
@@ -5325,6 +5375,7 @@ public final class EvmEventProtobuf {
        * <code>bytes code = 4;</code>
        * @return The code.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCode() {
         return code_;
       }
@@ -5370,6 +5421,7 @@ public final class EvmEventProtobuf {
        * <code>bytes para = 5;</code>
        * @return The para.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPara() {
         return para_;
       }

@@ -44,7 +44,7 @@ public final class ManageProtobuf {
   /**
    * Protobuf type {@code ManageAction}
    */
-  public  static final class ManageAction extends
+  public static final class ManageAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ManageAction)
       ManageActionOrBuilder {
@@ -181,6 +181,7 @@ public final class ManageProtobuf {
      * <code>.ModifyConfig modify = 1;</code>
      * @return Whether the modify field is set.
      */
+    @java.lang.Override
     public boolean hasModify() {
       return valueCase_ == 1;
     }
@@ -188,6 +189,7 @@ public final class ManageProtobuf {
      * <code>.ModifyConfig modify = 1;</code>
      * @return The modify.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfig getModify() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfig) value_;
@@ -197,6 +199,7 @@ public final class ManageProtobuf {
     /**
      * <code>.ModifyConfig modify = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfig) value_;
@@ -210,6 +213,7 @@ public final class ManageProtobuf {
      * <code>int32 Ty = 2;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -580,6 +584,7 @@ public final class ManageProtobuf {
        * <code>.ModifyConfig modify = 1;</code>
        * @return Whether the modify field is set.
        */
+      @java.lang.Override
       public boolean hasModify() {
         return valueCase_ == 1;
       }
@@ -587,6 +592,7 @@ public final class ManageProtobuf {
        * <code>.ModifyConfig modify = 1;</code>
        * @return The modify.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfig getModify() {
         if (modifyBuilder_ == null) {
           if (valueCase_ == 1) {
@@ -680,6 +686,7 @@ public final class ManageProtobuf {
       /**
        * <code>.ModifyConfig modify = 1;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfigOrBuilder getModifyOrBuilder() {
         if ((valueCase_ == 1) && (modifyBuilder_ != null)) {
           return modifyBuilder_.getMessageOrBuilder();
@@ -717,6 +724,7 @@ public final class ManageProtobuf {
        * <code>int32 Ty = 2;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }

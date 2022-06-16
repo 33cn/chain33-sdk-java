@@ -95,7 +95,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqRegisterUser}
    */
-  public  static final class ReqRegisterUser extends
+  public static final class ReqRegisterUser extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqRegisterUser)
       ReqRegisterUserOrBuilder {
@@ -206,6 +206,7 @@ public final class CertProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -226,6 +227,7 @@ public final class CertProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -250,6 +252,7 @@ public final class CertProtobuf {
      * <code>string identity = 2;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -270,6 +273,7 @@ public final class CertProtobuf {
      * <code>string identity = 2;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -294,6 +298,7 @@ public final class CertProtobuf {
      * <code>string pubKey = 3;</code>
      * @return The pubKey.
      */
+    @java.lang.Override
     public java.lang.String getPubKey() {
       java.lang.Object ref = pubKey_;
       if (ref instanceof java.lang.String) {
@@ -314,6 +319,7 @@ public final class CertProtobuf {
      * <code>string pubKey = 3;</code>
      * @return The bytes for pubKey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPubKeyBytes() {
       java.lang.Object ref = pubKey_;
@@ -338,6 +344,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 4;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -996,6 +1003,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 4;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -1125,7 +1133,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqRevokeUser}
    */
-  public  static final class ReqRevokeUser extends
+  public static final class ReqRevokeUser extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqRevokeUser)
       ReqRevokeUserOrBuilder {
@@ -1222,6 +1230,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -1242,6 +1251,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -1266,6 +1276,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 2;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -1698,6 +1709,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 2;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -1815,7 +1827,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqEnroll}
    */
-  public  static final class ReqEnroll extends
+  public static final class ReqEnroll extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqEnroll)
       ReqEnrollOrBuilder {
@@ -1908,6 +1920,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -1924,6 +1937,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -1944,6 +1958,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 2;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -2352,6 +2367,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 2;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -2461,7 +2477,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code RepEnroll}
    */
-  public  static final class RepEnroll extends
+  public static final class RepEnroll extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RepEnroll)
       RepEnrollOrBuilder {
@@ -2554,6 +2570,7 @@ public final class CertProtobuf {
      * <code>string serial = 1;</code>
      * @return The serial.
      */
+    @java.lang.Override
     public java.lang.String getSerial() {
       java.lang.Object ref = serial_;
       if (ref instanceof java.lang.String) {
@@ -2570,6 +2587,7 @@ public final class CertProtobuf {
      * <code>string serial = 1;</code>
      * @return The bytes for serial.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSerialBytes() {
       java.lang.Object ref = serial_;
@@ -2590,6 +2608,7 @@ public final class CertProtobuf {
      * <code>bytes cert = 2;</code>
      * @return The cert.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCert() {
       return cert_;
     }
@@ -2998,6 +3017,7 @@ public final class CertProtobuf {
        * <code>bytes cert = 2;</code>
        * @return The cert.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCert() {
         return cert_;
       }
@@ -3123,7 +3143,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqRevokeCert}
    */
-  public  static final class ReqRevokeCert extends
+  public static final class ReqRevokeCert extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqRevokeCert)
       ReqRevokeCertOrBuilder {
@@ -3223,6 +3243,7 @@ public final class CertProtobuf {
      * <code>string serial = 1;</code>
      * @return The serial.
      */
+    @java.lang.Override
     public java.lang.String getSerial() {
       java.lang.Object ref = serial_;
       if (ref instanceof java.lang.String) {
@@ -3239,6 +3260,7 @@ public final class CertProtobuf {
      * <code>string serial = 1;</code>
      * @return The bytes for serial.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSerialBytes() {
       java.lang.Object ref = serial_;
@@ -3259,6 +3281,7 @@ public final class CertProtobuf {
      * <code>string identity = 2;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -3275,6 +3298,7 @@ public final class CertProtobuf {
      * <code>string identity = 2;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -3299,6 +3323,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 3;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -3804,6 +3829,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 3;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -3921,7 +3947,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqGetCRL}
    */
-  public  static final class ReqGetCRL extends
+  public static final class ReqGetCRL extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqGetCRL)
       ReqGetCRLOrBuilder {
@@ -4014,6 +4040,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -4030,6 +4057,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -4050,6 +4078,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 2;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -4458,6 +4487,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 2;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -4567,7 +4597,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqGetUserInfo}
    */
-  public  static final class ReqGetUserInfo extends
+  public static final class ReqGetUserInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqGetUserInfo)
       ReqGetUserInfoOrBuilder {
@@ -4660,6 +4690,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -4676,6 +4707,7 @@ public final class CertProtobuf {
      * <code>string identity = 1;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -4696,6 +4728,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 2;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -5104,6 +5137,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 2;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -5237,7 +5271,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code RepGetUserInfo}
    */
-  public  static final class RepGetUserInfo extends
+  public static final class RepGetUserInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RepGetUserInfo)
       RepGetUserInfoOrBuilder {
@@ -5344,6 +5378,7 @@ public final class CertProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5360,6 +5395,7 @@ public final class CertProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5380,6 +5416,7 @@ public final class CertProtobuf {
      * <code>bytes pubKey = 2;</code>
      * @return The pubKey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPubKey() {
       return pubKey_;
     }
@@ -5390,6 +5427,7 @@ public final class CertProtobuf {
      * <code>string identity = 3;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -5406,6 +5444,7 @@ public final class CertProtobuf {
      * <code>string identity = 3;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -5426,6 +5465,7 @@ public final class CertProtobuf {
      * <code>string serial = 4;</code>
      * @return The serial.
      */
+    @java.lang.Override
     public java.lang.String getSerial() {
       java.lang.Object ref = serial_;
       if (ref instanceof java.lang.String) {
@@ -5442,6 +5482,7 @@ public final class CertProtobuf {
      * <code>string serial = 4;</code>
      * @return The bytes for serial.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSerialBytes() {
       java.lang.Object ref = serial_;
@@ -5894,6 +5935,7 @@ public final class CertProtobuf {
        * <code>bytes pubKey = 2;</code>
        * @return The pubKey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPubKey() {
         return pubKey_;
       }
@@ -6155,7 +6197,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code ReqGetCertInfo}
    */
-  public  static final class ReqGetCertInfo extends
+  public static final class ReqGetCertInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqGetCertInfo)
       ReqGetCertInfoOrBuilder {
@@ -6248,6 +6290,7 @@ public final class CertProtobuf {
      * <code>string sn = 1;</code>
      * @return The sn.
      */
+    @java.lang.Override
     public java.lang.String getSn() {
       java.lang.Object ref = sn_;
       if (ref instanceof java.lang.String) {
@@ -6264,6 +6307,7 @@ public final class CertProtobuf {
      * <code>string sn = 1;</code>
      * @return The bytes for sn.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSnBytes() {
       java.lang.Object ref = sn_;
@@ -6284,6 +6328,7 @@ public final class CertProtobuf {
      * <code>bytes sign = 2;</code>
      * @return The sign.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSign() {
       return sign_;
     }
@@ -6692,6 +6737,7 @@ public final class CertProtobuf {
        * <code>bytes sign = 2;</code>
        * @return The sign.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSign() {
         return sign_;
       }
@@ -6835,7 +6881,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code RepGetCertInfo}
    */
-  public  static final class RepGetCertInfo extends
+  public static final class RepGetCertInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RepGetCertInfo)
       RepGetCertInfoOrBuilder {
@@ -6950,6 +6996,7 @@ public final class CertProtobuf {
      * <code>string serial = 1;</code>
      * @return The serial.
      */
+    @java.lang.Override
     public java.lang.String getSerial() {
       java.lang.Object ref = serial_;
       if (ref instanceof java.lang.String) {
@@ -6966,6 +7013,7 @@ public final class CertProtobuf {
      * <code>string serial = 1;</code>
      * @return The bytes for serial.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSerialBytes() {
       java.lang.Object ref = serial_;
@@ -6990,6 +7038,7 @@ public final class CertProtobuf {
      * <code>int32 status = 2;</code>
      * @return The status.
      */
+    @java.lang.Override
     public int getStatus() {
       return status_;
     }
@@ -7000,6 +7049,7 @@ public final class CertProtobuf {
      * <code>int64 exipreTime = 3;</code>
      * @return The exipreTime.
      */
+    @java.lang.Override
     public long getExipreTime() {
       return exipreTime_;
     }
@@ -7010,6 +7060,7 @@ public final class CertProtobuf {
      * <code>int64 revokeTime = 4;</code>
      * @return The revokeTime.
      */
+    @java.lang.Override
     public long getRevokeTime() {
       return revokeTime_;
     }
@@ -7020,6 +7071,7 @@ public final class CertProtobuf {
      * <code>bytes cert = 5;</code>
      * @return The cert.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCert() {
       return cert_;
     }
@@ -7030,6 +7082,7 @@ public final class CertProtobuf {
      * <code>string identity = 6;</code>
      * @return The identity.
      */
+    @java.lang.Override
     public java.lang.String getIdentity() {
       java.lang.Object ref = identity_;
       if (ref instanceof java.lang.String) {
@@ -7046,6 +7099,7 @@ public final class CertProtobuf {
      * <code>string identity = 6;</code>
      * @return The bytes for identity.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdentityBytes() {
       java.lang.Object ref = identity_;
@@ -7538,6 +7592,7 @@ public final class CertProtobuf {
        * <code>int32 status = 2;</code>
        * @return The status.
        */
+      @java.lang.Override
       public int getStatus() {
         return status_;
       }
@@ -7576,6 +7631,7 @@ public final class CertProtobuf {
        * <code>int64 exipreTime = 3;</code>
        * @return The exipreTime.
        */
+      @java.lang.Override
       public long getExipreTime() {
         return exipreTime_;
       }
@@ -7606,6 +7662,7 @@ public final class CertProtobuf {
        * <code>int64 revokeTime = 4;</code>
        * @return The revokeTime.
        */
+      @java.lang.Override
       public long getRevokeTime() {
         return revokeTime_;
       }
@@ -7636,6 +7693,7 @@ public final class CertProtobuf {
        * <code>bytes cert = 5;</code>
        * @return The cert.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCert() {
         return cert_;
       }
@@ -7856,7 +7914,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code CertAction}
    */
-  public  static final class CertAction extends
+  public static final class CertAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CertAction)
       CertActionOrBuilder {
@@ -8025,6 +8083,7 @@ public final class CertProtobuf {
      * <code>.CertNew new = 1;</code>
      * @return Whether the new field is set.
      */
+    @java.lang.Override
     public boolean hasNew() {
       return valueCase_ == 1;
     }
@@ -8032,6 +8091,7 @@ public final class CertProtobuf {
      * <code>.CertNew new = 1;</code>
      * @return The new.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNew getNew() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNew) value_;
@@ -8041,6 +8101,7 @@ public final class CertProtobuf {
     /**
      * <code>.CertNew new = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNewOrBuilder getNewOrBuilder() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNew) value_;
@@ -8053,6 +8114,7 @@ public final class CertProtobuf {
      * <code>.CertUpdate update = 2;</code>
      * @return Whether the update field is set.
      */
+    @java.lang.Override
     public boolean hasUpdate() {
       return valueCase_ == 2;
     }
@@ -8060,6 +8122,7 @@ public final class CertProtobuf {
      * <code>.CertUpdate update = 2;</code>
      * @return The update.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertUpdate getUpdate() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.CertProtobuf.CertUpdate) value_;
@@ -8069,6 +8132,7 @@ public final class CertProtobuf {
     /**
      * <code>.CertUpdate update = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertUpdateOrBuilder getUpdateOrBuilder() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.CertProtobuf.CertUpdate) value_;
@@ -8081,6 +8145,7 @@ public final class CertProtobuf {
      * <code>.CertNormal normal = 3;</code>
      * @return Whether the normal field is set.
      */
+    @java.lang.Override
     public boolean hasNormal() {
       return valueCase_ == 3;
     }
@@ -8088,6 +8153,7 @@ public final class CertProtobuf {
      * <code>.CertNormal normal = 3;</code>
      * @return The normal.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNormal getNormal() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNormal) value_;
@@ -8097,6 +8163,7 @@ public final class CertProtobuf {
     /**
      * <code>.CertNormal normal = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNormalOrBuilder getNormalOrBuilder() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNormal) value_;
@@ -8110,6 +8177,7 @@ public final class CertProtobuf {
      * <code>int32 ty = 4;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -8536,6 +8604,7 @@ public final class CertProtobuf {
        * <code>.CertNew new = 1;</code>
        * @return Whether the new field is set.
        */
+      @java.lang.Override
       public boolean hasNew() {
         return valueCase_ == 1;
       }
@@ -8543,6 +8612,7 @@ public final class CertProtobuf {
        * <code>.CertNew new = 1;</code>
        * @return The new.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNew getNew() {
         if (newBuilder_ == null) {
           if (valueCase_ == 1) {
@@ -8636,6 +8706,7 @@ public final class CertProtobuf {
       /**
        * <code>.CertNew new = 1;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNewOrBuilder getNewOrBuilder() {
         if ((valueCase_ == 1) && (newBuilder_ != null)) {
           return newBuilder_.getMessageOrBuilder();
@@ -8674,6 +8745,7 @@ public final class CertProtobuf {
        * <code>.CertUpdate update = 2;</code>
        * @return Whether the update field is set.
        */
+      @java.lang.Override
       public boolean hasUpdate() {
         return valueCase_ == 2;
       }
@@ -8681,6 +8753,7 @@ public final class CertProtobuf {
        * <code>.CertUpdate update = 2;</code>
        * @return The update.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertUpdate getUpdate() {
         if (updateBuilder_ == null) {
           if (valueCase_ == 2) {
@@ -8774,6 +8847,7 @@ public final class CertProtobuf {
       /**
        * <code>.CertUpdate update = 2;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertUpdateOrBuilder getUpdateOrBuilder() {
         if ((valueCase_ == 2) && (updateBuilder_ != null)) {
           return updateBuilder_.getMessageOrBuilder();
@@ -8812,6 +8886,7 @@ public final class CertProtobuf {
        * <code>.CertNormal normal = 3;</code>
        * @return Whether the normal field is set.
        */
+      @java.lang.Override
       public boolean hasNormal() {
         return valueCase_ == 3;
       }
@@ -8819,6 +8894,7 @@ public final class CertProtobuf {
        * <code>.CertNormal normal = 3;</code>
        * @return The normal.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNormal getNormal() {
         if (normalBuilder_ == null) {
           if (valueCase_ == 3) {
@@ -8912,6 +8988,7 @@ public final class CertProtobuf {
       /**
        * <code>.CertNormal normal = 3;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.CertProtobuf.CertNormalOrBuilder getNormalOrBuilder() {
         if ((valueCase_ == 3) && (normalBuilder_ != null)) {
           return normalBuilder_.getMessageOrBuilder();
@@ -8949,6 +9026,7 @@ public final class CertProtobuf {
        * <code>int32 ty = 4;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -9055,7 +9133,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code CertNew}
    */
-  public  static final class CertNew extends
+  public static final class CertNew extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CertNew)
       CertNewOrBuilder {
@@ -9148,6 +9226,7 @@ public final class CertProtobuf {
      * <code>string key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -9164,6 +9243,7 @@ public final class CertProtobuf {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -9184,6 +9264,7 @@ public final class CertProtobuf {
      * <code>bytes value = 2;</code>
      * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
@@ -9592,6 +9673,7 @@ public final class CertProtobuf {
        * <code>bytes value = 2;</code>
        * @return The value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }
@@ -9701,7 +9783,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code CertUpdate}
    */
-  public  static final class CertUpdate extends
+  public static final class CertUpdate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CertUpdate)
       CertUpdateOrBuilder {
@@ -9794,6 +9876,7 @@ public final class CertProtobuf {
      * <code>string key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -9810,6 +9893,7 @@ public final class CertProtobuf {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -9830,6 +9914,7 @@ public final class CertProtobuf {
      * <code>bytes value = 2;</code>
      * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
@@ -10238,6 +10323,7 @@ public final class CertProtobuf {
        * <code>bytes value = 2;</code>
        * @return The value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }
@@ -10347,7 +10433,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code CertNormal}
    */
-  public  static final class CertNormal extends
+  public static final class CertNormal extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CertNormal)
       CertNormalOrBuilder {
@@ -10440,6 +10526,7 @@ public final class CertProtobuf {
      * <code>string key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -10456,6 +10543,7 @@ public final class CertProtobuf {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -10476,6 +10564,7 @@ public final class CertProtobuf {
      * <code>bytes value = 2;</code>
      * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
@@ -10884,6 +10973,7 @@ public final class CertProtobuf {
        * <code>bytes value = 2;</code>
        * @return The value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }
@@ -10993,7 +11083,7 @@ public final class CertProtobuf {
    *
    * Protobuf type {@code CertSignature}
    */
-  public  static final class CertSignature extends
+  public static final class CertSignature extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CertSignature)
       CertSignatureOrBuilder {
@@ -11091,6 +11181,7 @@ public final class CertProtobuf {
      * <code>bytes signature = 1;</code>
      * @return The signature.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSignature() {
       return signature_;
     }
@@ -11101,6 +11192,7 @@ public final class CertProtobuf {
      * <code>bytes cert = 2;</code>
      * @return The cert.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCert() {
       return cert_;
     }
@@ -11111,6 +11203,7 @@ public final class CertProtobuf {
      * <code>bytes uid = 3;</code>
      * @return The uid.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getUid() {
       return uid_;
     }
@@ -11460,6 +11553,7 @@ public final class CertProtobuf {
        * <code>bytes signature = 1;</code>
        * @return The signature.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSignature() {
         return signature_;
       }
@@ -11493,6 +11587,7 @@ public final class CertProtobuf {
        * <code>bytes cert = 2;</code>
        * @return The cert.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCert() {
         return cert_;
       }
@@ -11526,6 +11621,7 @@ public final class CertProtobuf {
        * <code>bytes uid = 3;</code>
        * @return The uid.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getUid() {
         return uid_;
       }

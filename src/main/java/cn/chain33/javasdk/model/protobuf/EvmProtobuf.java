@@ -67,7 +67,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMContractObject}
    */
-  public  static final class EVMContractObject extends
+  public static final class EVMContractObject extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractObject)
       EVMContractObjectOrBuilder {
@@ -180,6 +180,7 @@ public final class EvmProtobuf {
      * <code>string addr = 1;</code>
      * @return The addr.
      */
+    @java.lang.Override
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
       if (ref instanceof java.lang.String) {
@@ -196,6 +197,7 @@ public final class EvmProtobuf {
      * <code>string addr = 1;</code>
      * @return The bytes for addr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddrBytes() {
       java.lang.Object ref = addr_;
@@ -216,6 +218,7 @@ public final class EvmProtobuf {
      * <code>.EVMContractData data = 2;</code>
      * @return Whether the data field is set.
      */
+    @java.lang.Override
     public boolean hasData() {
       return data_ != null;
     }
@@ -223,12 +226,14 @@ public final class EvmProtobuf {
      * <code>.EVMContractData data = 2;</code>
      * @return The data.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmProtobuf.EVMContractData getData() {
       return data_ == null ? cn.chain33.javasdk.model.protobuf.EvmProtobuf.EVMContractData.getDefaultInstance() : data_;
     }
     /**
      * <code>.EVMContractData data = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmProtobuf.EVMContractDataOrBuilder getDataOrBuilder() {
       return getData();
     }
@@ -239,6 +244,7 @@ public final class EvmProtobuf {
      * <code>.EVMContractState state = 3;</code>
      * @return Whether the state field is set.
      */
+    @java.lang.Override
     public boolean hasState() {
       return state_ != null;
     }
@@ -246,12 +252,14 @@ public final class EvmProtobuf {
      * <code>.EVMContractState state = 3;</code>
      * @return The state.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmProtobuf.EVMContractState getState() {
       return state_ == null ? cn.chain33.javasdk.model.protobuf.EvmProtobuf.EVMContractState.getDefaultInstance() : state_;
     }
     /**
      * <code>.EVMContractState state = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmProtobuf.EVMContractStateOrBuilder getStateOrBuilder() {
       return getState();
     }
@@ -1079,7 +1087,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMContractData}
    */
-  public  static final class EVMContractData extends
+  public static final class EVMContractData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractData)
       EVMContractDataOrBuilder {
@@ -1206,6 +1214,7 @@ public final class EvmProtobuf {
      * <code>string creator = 1;</code>
      * @return The creator.
      */
+    @java.lang.Override
     public java.lang.String getCreator() {
       java.lang.Object ref = creator_;
       if (ref instanceof java.lang.String) {
@@ -1222,6 +1231,7 @@ public final class EvmProtobuf {
      * <code>string creator = 1;</code>
      * @return The bytes for creator.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCreatorBytes() {
       java.lang.Object ref = creator_;
@@ -1242,6 +1252,7 @@ public final class EvmProtobuf {
      * <code>string name = 2;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1258,6 +1269,7 @@ public final class EvmProtobuf {
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1278,6 +1290,7 @@ public final class EvmProtobuf {
      * <code>string alias = 3;</code>
      * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -1294,6 +1307,7 @@ public final class EvmProtobuf {
      * <code>string alias = 3;</code>
      * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -1314,6 +1328,7 @@ public final class EvmProtobuf {
      * <code>string addr = 4;</code>
      * @return The addr.
      */
+    @java.lang.Override
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
       if (ref instanceof java.lang.String) {
@@ -1330,6 +1345,7 @@ public final class EvmProtobuf {
      * <code>string addr = 4;</code>
      * @return The bytes for addr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddrBytes() {
       java.lang.Object ref = addr_;
@@ -1350,6 +1366,7 @@ public final class EvmProtobuf {
      * <code>bytes code = 5;</code>
      * @return The code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCode() {
       return code_;
     }
@@ -1360,6 +1377,7 @@ public final class EvmProtobuf {
      * <code>bytes codeHash = 6;</code>
      * @return The codeHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCodeHash() {
       return codeHash_;
     }
@@ -1374,6 +1392,7 @@ public final class EvmProtobuf {
      * <code>string abi = 7;</code>
      * @return The abi.
      */
+    @java.lang.Override
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
       if (ref instanceof java.lang.String) {
@@ -1394,6 +1413,7 @@ public final class EvmProtobuf {
      * <code>string abi = 7;</code>
      * @return The bytes for abi.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAbiBytes() {
       java.lang.Object ref = abi_;
@@ -2125,6 +2145,7 @@ public final class EvmProtobuf {
        * <code>bytes code = 5;</code>
        * @return The code.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCode() {
         return code_;
       }
@@ -2158,6 +2179,7 @@ public final class EvmProtobuf {
        * <code>bytes codeHash = 6;</code>
        * @return The codeHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCodeHash() {
         return codeHash_;
       }
@@ -2397,7 +2419,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMContractState}
    */
-  public  static final class EVMContractState extends
+  public static final class EVMContractState extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractState)
       EVMContractStateOrBuilder {
@@ -2519,6 +2541,7 @@ public final class EvmProtobuf {
      * <code>uint64 nonce = 1;</code>
      * @return The nonce.
      */
+    @java.lang.Override
     public long getNonce() {
       return nonce_;
     }
@@ -2529,6 +2552,7 @@ public final class EvmProtobuf {
      * <code>bool suicided = 2;</code>
      * @return The suicided.
      */
+    @java.lang.Override
     public boolean getSuicided() {
       return suicided_;
     }
@@ -2539,6 +2563,7 @@ public final class EvmProtobuf {
      * <code>bytes storageHash = 3;</code>
      * @return The storageHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getStorageHash() {
       return storageHash_;
     }
@@ -2573,6 +2598,7 @@ public final class EvmProtobuf {
      * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
 
+    @java.lang.Override
     public boolean containsStorage(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -2581,6 +2607,7 @@ public final class EvmProtobuf {
     /**
      * Use {@link #getStorageMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getStorage() {
       return getStorageMap();
@@ -2588,6 +2615,7 @@ public final class EvmProtobuf {
     /**
      * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getStorageMap() {
       return internalGetStorage().getMap();
@@ -2595,6 +2623,7 @@ public final class EvmProtobuf {
     /**
      * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.ByteString getStorageOrDefault(
         java.lang.String key,
@@ -2607,6 +2636,7 @@ public final class EvmProtobuf {
     /**
      * <code>map&lt;string, bytes&gt; storage = 4;</code>
      */
+    @java.lang.Override
 
     public com.google.protobuf.ByteString getStorageOrThrow(
         java.lang.String key) {
@@ -3017,6 +3047,7 @@ public final class EvmProtobuf {
        * <code>uint64 nonce = 1;</code>
        * @return The nonce.
        */
+      @java.lang.Override
       public long getNonce() {
         return nonce_;
       }
@@ -3047,6 +3078,7 @@ public final class EvmProtobuf {
        * <code>bool suicided = 2;</code>
        * @return The suicided.
        */
+      @java.lang.Override
       public boolean getSuicided() {
         return suicided_;
       }
@@ -3077,6 +3109,7 @@ public final class EvmProtobuf {
        * <code>bytes storageHash = 3;</code>
        * @return The storageHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getStorageHash() {
         return storageHash_;
       }
@@ -3135,6 +3168,7 @@ public final class EvmProtobuf {
        * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
 
+      @java.lang.Override
       public boolean containsStorage(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -3143,6 +3177,7 @@ public final class EvmProtobuf {
       /**
        * Use {@link #getStorageMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getStorage() {
         return getStorageMap();
@@ -3150,6 +3185,7 @@ public final class EvmProtobuf {
       /**
        * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getStorageMap() {
         return internalGetStorage().getMap();
@@ -3157,6 +3193,7 @@ public final class EvmProtobuf {
       /**
        * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.ByteString getStorageOrDefault(
           java.lang.String key,
@@ -3169,6 +3206,7 @@ public final class EvmProtobuf {
       /**
        * <code>map&lt;string, bytes&gt; storage = 4;</code>
        */
+      @java.lang.Override
 
       public com.google.protobuf.ByteString getStorageOrThrow(
           java.lang.String key) {
@@ -3401,7 +3439,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMContractAction}
    */
-  public  static final class EVMContractAction extends
+  public static final class EVMContractAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractAction)
       EVMContractActionOrBuilder {
@@ -3533,6 +3571,7 @@ public final class EvmProtobuf {
      * <code>uint64 amount = 1;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -3547,6 +3586,7 @@ public final class EvmProtobuf {
      * <code>uint64 gasLimit = 2;</code>
      * @return The gasLimit.
      */
+    @java.lang.Override
     public long getGasLimit() {
       return gasLimit_;
     }
@@ -3561,6 +3601,7 @@ public final class EvmProtobuf {
      * <code>uint32 gasPrice = 3;</code>
      * @return The gasPrice.
      */
+    @java.lang.Override
     public int getGasPrice() {
       return gasPrice_;
     }
@@ -3575,6 +3616,7 @@ public final class EvmProtobuf {
      * <code>bytes code = 4;</code>
      * @return The code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCode() {
       return code_;
     }
@@ -3589,6 +3631,7 @@ public final class EvmProtobuf {
      * <code>bytes para = 5;</code>
      * @return The para.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPara() {
       return para_;
     }
@@ -3603,6 +3646,7 @@ public final class EvmProtobuf {
      * <code>string alias = 6;</code>
      * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -3623,6 +3667,7 @@ public final class EvmProtobuf {
      * <code>string alias = 6;</code>
      * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -3647,6 +3692,7 @@ public final class EvmProtobuf {
      * <code>string note = 7;</code>
      * @return The note.
      */
+    @java.lang.Override
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
@@ -3667,6 +3713,7 @@ public final class EvmProtobuf {
      * <code>string note = 7;</code>
      * @return The bytes for note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNoteBytes() {
       java.lang.Object ref = note_;
@@ -3691,6 +3738,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 8;</code>
      * @return The contractAddr.
      */
+    @java.lang.Override
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
@@ -3711,6 +3759,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 8;</code>
      * @return The bytes for contractAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
       java.lang.Object ref = contractAddr_;
@@ -4161,6 +4210,7 @@ public final class EvmProtobuf {
        * <code>uint64 amount = 1;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -4203,6 +4253,7 @@ public final class EvmProtobuf {
        * <code>uint64 gasLimit = 2;</code>
        * @return The gasLimit.
        */
+      @java.lang.Override
       public long getGasLimit() {
         return gasLimit_;
       }
@@ -4245,6 +4296,7 @@ public final class EvmProtobuf {
        * <code>uint32 gasPrice = 3;</code>
        * @return The gasPrice.
        */
+      @java.lang.Override
       public int getGasPrice() {
         return gasPrice_;
       }
@@ -4287,6 +4339,7 @@ public final class EvmProtobuf {
        * <code>bytes code = 4;</code>
        * @return The code.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCode() {
         return code_;
       }
@@ -4332,6 +4385,7 @@ public final class EvmProtobuf {
        * <code>bytes para = 5;</code>
        * @return The para.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPara() {
         return para_;
       }
@@ -4791,7 +4845,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code ReceiptEVMContract}
    */
-  public  static final class ReceiptEVMContract extends
+  public static final class ReceiptEVMContract extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReceiptEVMContract)
       ReceiptEVMContractOrBuilder {
@@ -4910,6 +4964,7 @@ public final class EvmProtobuf {
      * <code>string caller = 1;</code>
      * @return The caller.
      */
+    @java.lang.Override
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
@@ -4926,6 +4981,7 @@ public final class EvmProtobuf {
      * <code>string caller = 1;</code>
      * @return The bytes for caller.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCallerBytes() {
       java.lang.Object ref = caller_;
@@ -4946,6 +5002,7 @@ public final class EvmProtobuf {
      * <code>string contractName = 2;</code>
      * @return The contractName.
      */
+    @java.lang.Override
     public java.lang.String getContractName() {
       java.lang.Object ref = contractName_;
       if (ref instanceof java.lang.String) {
@@ -4962,6 +5019,7 @@ public final class EvmProtobuf {
      * <code>string contractName = 2;</code>
      * @return The bytes for contractName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractNameBytes() {
       java.lang.Object ref = contractName_;
@@ -4982,6 +5040,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 3;</code>
      * @return The contractAddr.
      */
+    @java.lang.Override
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
@@ -4998,6 +5057,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 3;</code>
      * @return The bytes for contractAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
       java.lang.Object ref = contractAddr_;
@@ -5018,6 +5078,7 @@ public final class EvmProtobuf {
      * <code>uint64 usedGas = 4;</code>
      * @return The usedGas.
      */
+    @java.lang.Override
     public long getUsedGas() {
       return usedGas_;
     }
@@ -5032,6 +5093,7 @@ public final class EvmProtobuf {
      * <code>bytes ret = 5;</code>
      * @return The ret.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getRet() {
       return ret_;
     }
@@ -5046,6 +5108,7 @@ public final class EvmProtobuf {
      * <code>string jsonRet = 6;</code>
      * @return The jsonRet.
      */
+    @java.lang.Override
     public java.lang.String getJsonRet() {
       java.lang.Object ref = jsonRet_;
       if (ref instanceof java.lang.String) {
@@ -5066,6 +5129,7 @@ public final class EvmProtobuf {
      * <code>string jsonRet = 6;</code>
      * @return The bytes for jsonRet.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJsonRetBytes() {
       java.lang.Object ref = jsonRet_;
@@ -5705,6 +5769,7 @@ public final class EvmProtobuf {
        * <code>uint64 usedGas = 4;</code>
        * @return The usedGas.
        */
+      @java.lang.Override
       public long getUsedGas() {
         return usedGas_;
       }
@@ -5739,6 +5804,7 @@ public final class EvmProtobuf {
        * <code>bytes ret = 5;</code>
        * @return The ret.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getRet() {
         return ret_;
       }
@@ -5958,7 +6024,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMStateChangeItem}
    */
-  public  static final class EVMStateChangeItem extends
+  public static final class EVMStateChangeItem extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMStateChangeItem)
       EVMStateChangeItemOrBuilder {
@@ -6057,6 +6123,7 @@ public final class EvmProtobuf {
      * <code>string key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -6073,6 +6140,7 @@ public final class EvmProtobuf {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -6093,6 +6161,7 @@ public final class EvmProtobuf {
      * <code>bytes preValue = 2;</code>
      * @return The preValue.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPreValue() {
       return preValue_;
     }
@@ -6103,6 +6172,7 @@ public final class EvmProtobuf {
      * <code>bytes currentValue = 3;</code>
      * @return The currentValue.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCurrentValue() {
       return currentValue_;
     }
@@ -6528,6 +6598,7 @@ public final class EvmProtobuf {
        * <code>bytes preValue = 2;</code>
        * @return The preValue.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPreValue() {
         return preValue_;
       }
@@ -6561,6 +6632,7 @@ public final class EvmProtobuf {
        * <code>bytes currentValue = 3;</code>
        * @return The currentValue.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCurrentValue() {
         return currentValue_;
       }
@@ -6724,7 +6796,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMContractDataCmd}
    */
-  public  static final class EVMContractDataCmd extends
+  public static final class EVMContractDataCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractDataCmd)
       EVMContractDataCmdOrBuilder {
@@ -6846,6 +6918,7 @@ public final class EvmProtobuf {
      * <code>string creator = 1;</code>
      * @return The creator.
      */
+    @java.lang.Override
     public java.lang.String getCreator() {
       java.lang.Object ref = creator_;
       if (ref instanceof java.lang.String) {
@@ -6862,6 +6935,7 @@ public final class EvmProtobuf {
      * <code>string creator = 1;</code>
      * @return The bytes for creator.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCreatorBytes() {
       java.lang.Object ref = creator_;
@@ -6882,6 +6956,7 @@ public final class EvmProtobuf {
      * <code>string name = 2;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6898,6 +6973,7 @@ public final class EvmProtobuf {
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6918,6 +6994,7 @@ public final class EvmProtobuf {
      * <code>string alias = 3;</code>
      * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -6934,6 +7011,7 @@ public final class EvmProtobuf {
      * <code>string alias = 3;</code>
      * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -6954,6 +7032,7 @@ public final class EvmProtobuf {
      * <code>string addr = 4;</code>
      * @return The addr.
      */
+    @java.lang.Override
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
       if (ref instanceof java.lang.String) {
@@ -6970,6 +7049,7 @@ public final class EvmProtobuf {
      * <code>string addr = 4;</code>
      * @return The bytes for addr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddrBytes() {
       java.lang.Object ref = addr_;
@@ -6990,6 +7070,7 @@ public final class EvmProtobuf {
      * <code>string code = 5;</code>
      * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -7006,6 +7087,7 @@ public final class EvmProtobuf {
      * <code>string code = 5;</code>
      * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodeBytes() {
       java.lang.Object ref = code_;
@@ -7026,6 +7108,7 @@ public final class EvmProtobuf {
      * <code>string codeHash = 6;</code>
      * @return The codeHash.
      */
+    @java.lang.Override
     public java.lang.String getCodeHash() {
       java.lang.Object ref = codeHash_;
       if (ref instanceof java.lang.String) {
@@ -7042,6 +7125,7 @@ public final class EvmProtobuf {
      * <code>string codeHash = 6;</code>
      * @return The bytes for codeHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodeHashBytes() {
       java.lang.Object ref = codeHash_;
@@ -8024,7 +8108,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code EVMContractStateCmd}
    */
-  public  static final class EVMContractStateCmd extends
+  public static final class EVMContractStateCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EVMContractStateCmd)
       EVMContractStateCmdOrBuilder {
@@ -8147,6 +8231,7 @@ public final class EvmProtobuf {
      * <code>uint64 nonce = 1;</code>
      * @return The nonce.
      */
+    @java.lang.Override
     public long getNonce() {
       return nonce_;
     }
@@ -8157,6 +8242,7 @@ public final class EvmProtobuf {
      * <code>bool suicided = 2;</code>
      * @return The suicided.
      */
+    @java.lang.Override
     public boolean getSuicided() {
       return suicided_;
     }
@@ -8167,6 +8253,7 @@ public final class EvmProtobuf {
      * <code>string storageHash = 3;</code>
      * @return The storageHash.
      */
+    @java.lang.Override
     public java.lang.String getStorageHash() {
       java.lang.Object ref = storageHash_;
       if (ref instanceof java.lang.String) {
@@ -8183,6 +8270,7 @@ public final class EvmProtobuf {
      * <code>string storageHash = 3;</code>
      * @return The bytes for storageHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getStorageHashBytes() {
       java.lang.Object ref = storageHash_;
@@ -8227,6 +8315,7 @@ public final class EvmProtobuf {
      * <code>map&lt;string, string&gt; storage = 4;</code>
      */
 
+    @java.lang.Override
     public boolean containsStorage(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8235,6 +8324,7 @@ public final class EvmProtobuf {
     /**
      * Use {@link #getStorageMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String> getStorage() {
       return getStorageMap();
@@ -8242,6 +8332,7 @@ public final class EvmProtobuf {
     /**
      * <code>map&lt;string, string&gt; storage = 4;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, java.lang.String> getStorageMap() {
       return internalGetStorage().getMap();
@@ -8249,6 +8340,7 @@ public final class EvmProtobuf {
     /**
      * <code>map&lt;string, string&gt; storage = 4;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getStorageOrDefault(
         java.lang.String key,
@@ -8261,6 +8353,7 @@ public final class EvmProtobuf {
     /**
      * <code>map&lt;string, string&gt; storage = 4;</code>
      */
+    @java.lang.Override
 
     public java.lang.String getStorageOrThrow(
         java.lang.String key) {
@@ -8671,6 +8764,7 @@ public final class EvmProtobuf {
        * <code>uint64 nonce = 1;</code>
        * @return The nonce.
        */
+      @java.lang.Override
       public long getNonce() {
         return nonce_;
       }
@@ -8701,6 +8795,7 @@ public final class EvmProtobuf {
        * <code>bool suicided = 2;</code>
        * @return The suicided.
        */
+      @java.lang.Override
       public boolean getSuicided() {
         return suicided_;
       }
@@ -8832,6 +8927,7 @@ public final class EvmProtobuf {
        * <code>map&lt;string, string&gt; storage = 4;</code>
        */
 
+      @java.lang.Override
       public boolean containsStorage(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -8840,6 +8936,7 @@ public final class EvmProtobuf {
       /**
        * Use {@link #getStorageMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String> getStorage() {
         return getStorageMap();
@@ -8847,6 +8944,7 @@ public final class EvmProtobuf {
       /**
        * <code>map&lt;string, string&gt; storage = 4;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, java.lang.String> getStorageMap() {
         return internalGetStorage().getMap();
@@ -8854,6 +8952,7 @@ public final class EvmProtobuf {
       /**
        * <code>map&lt;string, string&gt; storage = 4;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getStorageOrDefault(
           java.lang.String key,
@@ -8866,6 +8965,7 @@ public final class EvmProtobuf {
       /**
        * <code>map&lt;string, string&gt; storage = 4;</code>
        */
+      @java.lang.Override
 
       public java.lang.String getStorageOrThrow(
           java.lang.String key) {
@@ -9058,7 +9158,7 @@ public final class EvmProtobuf {
    *
    * Protobuf type {@code ReceiptEVMContractCmd}
    */
-  public  static final class ReceiptEVMContractCmd extends
+  public static final class ReceiptEVMContractCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReceiptEVMContractCmd)
       ReceiptEVMContractCmdOrBuilder {
@@ -9171,6 +9271,7 @@ public final class EvmProtobuf {
      * <code>string caller = 1;</code>
      * @return The caller.
      */
+    @java.lang.Override
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
@@ -9187,6 +9288,7 @@ public final class EvmProtobuf {
      * <code>string caller = 1;</code>
      * @return The bytes for caller.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCallerBytes() {
       java.lang.Object ref = caller_;
@@ -9211,6 +9313,7 @@ public final class EvmProtobuf {
      * <code>string contractName = 2;</code>
      * @return The contractName.
      */
+    @java.lang.Override
     public java.lang.String getContractName() {
       java.lang.Object ref = contractName_;
       if (ref instanceof java.lang.String) {
@@ -9231,6 +9334,7 @@ public final class EvmProtobuf {
      * <code>string contractName = 2;</code>
      * @return The bytes for contractName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractNameBytes() {
       java.lang.Object ref = contractName_;
@@ -9251,6 +9355,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 3;</code>
      * @return The contractAddr.
      */
+    @java.lang.Override
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
@@ -9267,6 +9372,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 3;</code>
      * @return The bytes for contractAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
       java.lang.Object ref = contractAddr_;
@@ -9287,6 +9393,7 @@ public final class EvmProtobuf {
      * <code>uint64 usedGas = 4;</code>
      * @return The usedGas.
      */
+    @java.lang.Override
     public long getUsedGas() {
       return usedGas_;
     }
@@ -9301,6 +9408,7 @@ public final class EvmProtobuf {
      * <code>string ret = 5;</code>
      * @return The ret.
      */
+    @java.lang.Override
     public java.lang.String getRet() {
       java.lang.Object ref = ret_;
       if (ref instanceof java.lang.String) {
@@ -9321,6 +9429,7 @@ public final class EvmProtobuf {
      * <code>string ret = 5;</code>
      * @return The bytes for ret.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRetBytes() {
       java.lang.Object ref = ret_;
@@ -9963,6 +10072,7 @@ public final class EvmProtobuf {
        * <code>uint64 usedGas = 4;</code>
        * @return The usedGas.
        */
+      @java.lang.Override
       public long getUsedGas() {
         return usedGas_;
       }
@@ -10155,7 +10265,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code CheckEVMAddrReq}
    */
-  public  static final class CheckEVMAddrReq extends
+  public static final class CheckEVMAddrReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CheckEVMAddrReq)
       CheckEVMAddrReqOrBuilder {
@@ -10242,6 +10352,7 @@ public final class EvmProtobuf {
      * <code>string addr = 1;</code>
      * @return The addr.
      */
+    @java.lang.Override
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
       if (ref instanceof java.lang.String) {
@@ -10258,6 +10369,7 @@ public final class EvmProtobuf {
      * <code>string addr = 1;</code>
      * @return The bytes for addr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddrBytes() {
       java.lang.Object ref = addr_;
@@ -10751,7 +10863,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code CheckEVMAddrResp}
    */
-  public  static final class CheckEVMAddrResp extends
+  public static final class CheckEVMAddrResp extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CheckEVMAddrResp)
       CheckEVMAddrRespOrBuilder {
@@ -10857,6 +10969,7 @@ public final class EvmProtobuf {
      * <code>bool contract = 1;</code>
      * @return The contract.
      */
+    @java.lang.Override
     public boolean getContract() {
       return contract_;
     }
@@ -10867,6 +10980,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 2;</code>
      * @return The contractAddr.
      */
+    @java.lang.Override
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
@@ -10883,6 +10997,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 2;</code>
      * @return The bytes for contractAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
       java.lang.Object ref = contractAddr_;
@@ -10903,6 +11018,7 @@ public final class EvmProtobuf {
      * <code>string contractName = 3;</code>
      * @return The contractName.
      */
+    @java.lang.Override
     public java.lang.String getContractName() {
       java.lang.Object ref = contractName_;
       if (ref instanceof java.lang.String) {
@@ -10919,6 +11035,7 @@ public final class EvmProtobuf {
      * <code>string contractName = 3;</code>
      * @return The bytes for contractName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractNameBytes() {
       java.lang.Object ref = contractName_;
@@ -10939,6 +11056,7 @@ public final class EvmProtobuf {
      * <code>string aliasName = 4;</code>
      * @return The aliasName.
      */
+    @java.lang.Override
     public java.lang.String getAliasName() {
       java.lang.Object ref = aliasName_;
       if (ref instanceof java.lang.String) {
@@ -10955,6 +11073,7 @@ public final class EvmProtobuf {
      * <code>string aliasName = 4;</code>
      * @return The bytes for aliasName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasNameBytes() {
       java.lang.Object ref = aliasName_;
@@ -11328,6 +11447,7 @@ public final class EvmProtobuf {
        * <code>bool contract = 1;</code>
        * @return The contract.
        */
+      @java.lang.Override
       public boolean getContract() {
         return contract_;
       }
@@ -11664,7 +11784,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EstimateEVMGasReq}
    */
-  public  static final class EstimateEVMGasReq extends
+  public static final class EstimateEVMGasReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EstimateEVMGasReq)
       EstimateEVMGasReqOrBuilder {
@@ -11758,6 +11878,7 @@ public final class EvmProtobuf {
      * <code>string tx = 1;</code>
      * @return The tx.
      */
+    @java.lang.Override
     public java.lang.String getTx() {
       java.lang.Object ref = tx_;
       if (ref instanceof java.lang.String) {
@@ -11774,6 +11895,7 @@ public final class EvmProtobuf {
      * <code>string tx = 1;</code>
      * @return The bytes for tx.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxBytes() {
       java.lang.Object ref = tx_;
@@ -11794,6 +11916,7 @@ public final class EvmProtobuf {
      * <code>string from = 2;</code>
      * @return The from.
      */
+    @java.lang.Override
     public java.lang.String getFrom() {
       java.lang.Object ref = from_;
       if (ref instanceof java.lang.String) {
@@ -11810,6 +11933,7 @@ public final class EvmProtobuf {
      * <code>string from = 2;</code>
      * @return The bytes for from.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFromBytes() {
       java.lang.Object ref = from_;
@@ -12360,7 +12484,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EstimateEVMGasResp}
    */
-  public  static final class EstimateEVMGasResp extends
+  public static final class EstimateEVMGasResp extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EstimateEVMGasResp)
       EstimateEVMGasRespOrBuilder {
@@ -12445,6 +12569,7 @@ public final class EvmProtobuf {
      * <code>uint64 gas = 1;</code>
      * @return The gas.
      */
+    @java.lang.Override
     public long getGas() {
       return gas_;
     }
@@ -12757,6 +12882,7 @@ public final class EvmProtobuf {
        * <code>uint64 gas = 1;</code>
        * @return The gas.
        */
+      @java.lang.Override
       public long getGas() {
         return gas_;
       }
@@ -12851,7 +12977,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmDebugReq}
    */
-  public  static final class EvmDebugReq extends
+  public static final class EvmDebugReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmDebugReq)
       EvmDebugReqOrBuilder {
@@ -12940,6 +13066,7 @@ public final class EvmProtobuf {
      * <code>int32 optype = 1;</code>
      * @return The optype.
      */
+    @java.lang.Override
     public int getOptype() {
       return optype_;
     }
@@ -13255,6 +13382,7 @@ public final class EvmProtobuf {
        * <code>int32 optype = 1;</code>
        * @return The optype.
        */
+      @java.lang.Override
       public int getOptype() {
         return optype_;
       }
@@ -13359,7 +13487,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmDebugResp}
    */
-  public  static final class EvmDebugResp extends
+  public static final class EvmDebugResp extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmDebugResp)
       EvmDebugRespOrBuilder {
@@ -13446,6 +13574,7 @@ public final class EvmProtobuf {
      * <code>string debugStatus = 1;</code>
      * @return The debugStatus.
      */
+    @java.lang.Override
     public java.lang.String getDebugStatus() {
       java.lang.Object ref = debugStatus_;
       if (ref instanceof java.lang.String) {
@@ -13462,6 +13591,7 @@ public final class EvmProtobuf {
      * <code>string debugStatus = 1;</code>
      * @return The bytes for debugStatus.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDebugStatusBytes() {
       java.lang.Object ref = debugStatus_;
@@ -13925,7 +14055,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmQueryAbiReq}
    */
-  public  static final class EvmQueryAbiReq extends
+  public static final class EvmQueryAbiReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmQueryAbiReq)
       EvmQueryAbiReqOrBuilder {
@@ -14012,6 +14142,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -14028,6 +14159,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -14503,7 +14635,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmQueryAbiResp}
    */
-  public  static final class EvmQueryAbiResp extends
+  public static final class EvmQueryAbiResp extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmQueryAbiResp)
       EvmQueryAbiRespOrBuilder {
@@ -14597,6 +14729,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -14613,6 +14746,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -14633,6 +14767,7 @@ public final class EvmProtobuf {
      * <code>string abi = 2;</code>
      * @return The abi.
      */
+    @java.lang.Override
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
       if (ref instanceof java.lang.String) {
@@ -14649,6 +14784,7 @@ public final class EvmProtobuf {
      * <code>string abi = 2;</code>
      * @return The bytes for abi.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAbiBytes() {
       java.lang.Object ref = abi_;
@@ -15229,7 +15365,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmQueryReq}
    */
-  public  static final class EvmQueryReq extends
+  public static final class EvmQueryReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmQueryReq)
       EvmQueryReqOrBuilder {
@@ -15330,6 +15466,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -15346,6 +15483,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -15366,6 +15504,7 @@ public final class EvmProtobuf {
      * <code>string input = 2;</code>
      * @return The input.
      */
+    @java.lang.Override
     public java.lang.String getInput() {
       java.lang.Object ref = input_;
       if (ref instanceof java.lang.String) {
@@ -15382,6 +15521,7 @@ public final class EvmProtobuf {
      * <code>string input = 2;</code>
      * @return The bytes for input.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getInputBytes() {
       java.lang.Object ref = input_;
@@ -15402,6 +15542,7 @@ public final class EvmProtobuf {
      * <code>string caller = 3;</code>
      * @return The caller.
      */
+    @java.lang.Override
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
@@ -15418,6 +15559,7 @@ public final class EvmProtobuf {
      * <code>string caller = 3;</code>
      * @return The bytes for caller.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCallerBytes() {
       java.lang.Object ref = caller_;
@@ -16115,7 +16257,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmQueryResp}
    */
-  public  static final class EvmQueryResp extends
+  public static final class EvmQueryResp extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmQueryResp)
       EvmQueryRespOrBuilder {
@@ -16230,6 +16372,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -16246,6 +16389,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -16266,6 +16410,7 @@ public final class EvmProtobuf {
      * <code>string input = 2;</code>
      * @return The input.
      */
+    @java.lang.Override
     public java.lang.String getInput() {
       java.lang.Object ref = input_;
       if (ref instanceof java.lang.String) {
@@ -16282,6 +16427,7 @@ public final class EvmProtobuf {
      * <code>string input = 2;</code>
      * @return The bytes for input.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getInputBytes() {
       java.lang.Object ref = input_;
@@ -16302,6 +16448,7 @@ public final class EvmProtobuf {
      * <code>string caller = 3;</code>
      * @return The caller.
      */
+    @java.lang.Override
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
@@ -16318,6 +16465,7 @@ public final class EvmProtobuf {
      * <code>string caller = 3;</code>
      * @return The bytes for caller.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCallerBytes() {
       java.lang.Object ref = caller_;
@@ -16338,6 +16486,7 @@ public final class EvmProtobuf {
      * <code>string rawData = 4;</code>
      * @return The rawData.
      */
+    @java.lang.Override
     public java.lang.String getRawData() {
       java.lang.Object ref = rawData_;
       if (ref instanceof java.lang.String) {
@@ -16354,6 +16503,7 @@ public final class EvmProtobuf {
      * <code>string rawData = 4;</code>
      * @return The bytes for rawData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRawDataBytes() {
       java.lang.Object ref = rawData_;
@@ -16374,6 +16524,7 @@ public final class EvmProtobuf {
      * <code>string jsonData = 5;</code>
      * @return The jsonData.
      */
+    @java.lang.Override
     public java.lang.String getJsonData() {
       java.lang.Object ref = jsonData_;
       if (ref instanceof java.lang.String) {
@@ -16390,6 +16541,7 @@ public final class EvmProtobuf {
      * <code>string jsonData = 5;</code>
      * @return The bytes for jsonData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getJsonDataBytes() {
       java.lang.Object ref = jsonData_;
@@ -17309,7 +17461,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmContractCreateReq}
    */
-  public  static final class EvmContractCreateReq extends
+  public static final class EvmContractCreateReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmContractCreateReq)
       EvmContractCreateReqOrBuilder {
@@ -17448,6 +17600,7 @@ public final class EvmProtobuf {
      * <code>string code = 1;</code>
      * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -17464,6 +17617,7 @@ public final class EvmProtobuf {
      * <code>string code = 1;</code>
      * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodeBytes() {
       java.lang.Object ref = code_;
@@ -17484,6 +17638,7 @@ public final class EvmProtobuf {
      * <code>string abi = 2;</code>
      * @return The abi.
      */
+    @java.lang.Override
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
       if (ref instanceof java.lang.String) {
@@ -17500,6 +17655,7 @@ public final class EvmProtobuf {
      * <code>string abi = 2;</code>
      * @return The bytes for abi.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAbiBytes() {
       java.lang.Object ref = abi_;
@@ -17520,6 +17676,7 @@ public final class EvmProtobuf {
      * <code>int64 fee = 3;</code>
      * @return The fee.
      */
+    @java.lang.Override
     public long getFee() {
       return fee_;
     }
@@ -17530,6 +17687,7 @@ public final class EvmProtobuf {
      * <code>string note = 4;</code>
      * @return The note.
      */
+    @java.lang.Override
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
@@ -17546,6 +17704,7 @@ public final class EvmProtobuf {
      * <code>string note = 4;</code>
      * @return The bytes for note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNoteBytes() {
       java.lang.Object ref = note_;
@@ -17566,6 +17725,7 @@ public final class EvmProtobuf {
      * <code>string alias = 5;</code>
      * @return The alias.
      */
+    @java.lang.Override
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
       if (ref instanceof java.lang.String) {
@@ -17582,6 +17742,7 @@ public final class EvmProtobuf {
      * <code>string alias = 5;</code>
      * @return The bytes for alias.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAliasBytes() {
       java.lang.Object ref = alias_;
@@ -17602,6 +17763,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 6;</code>
      * @return The parameter.
      */
+    @java.lang.Override
     public java.lang.String getParameter() {
       java.lang.Object ref = parameter_;
       if (ref instanceof java.lang.String) {
@@ -17618,6 +17780,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 6;</code>
      * @return The bytes for parameter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParameterBytes() {
       java.lang.Object ref = parameter_;
@@ -17638,6 +17801,7 @@ public final class EvmProtobuf {
      * <code>string expire = 7;</code>
      * @return The expire.
      */
+    @java.lang.Override
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
       if (ref instanceof java.lang.String) {
@@ -17654,6 +17818,7 @@ public final class EvmProtobuf {
      * <code>string expire = 7;</code>
      * @return The bytes for expire.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExpireBytes() {
       java.lang.Object ref = expire_;
@@ -17674,6 +17839,7 @@ public final class EvmProtobuf {
      * <code>string paraName = 8;</code>
      * @return The paraName.
      */
+    @java.lang.Override
     public java.lang.String getParaName() {
       java.lang.Object ref = paraName_;
       if (ref instanceof java.lang.String) {
@@ -17690,6 +17856,7 @@ public final class EvmProtobuf {
      * <code>string paraName = 8;</code>
      * @return The bytes for paraName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParaNameBytes() {
       java.lang.Object ref = paraName_;
@@ -17710,6 +17877,7 @@ public final class EvmProtobuf {
      * <code>int64 amount = 9;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -18311,6 +18479,7 @@ public final class EvmProtobuf {
        * <code>int64 fee = 3;</code>
        * @return The fee.
        */
+      @java.lang.Override
       public long getFee() {
         return fee_;
       }
@@ -18721,6 +18890,7 @@ public final class EvmProtobuf {
        * <code>int64 amount = 9;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -18889,7 +19059,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmContractCallReq}
    */
-  public  static final class EvmContractCallReq extends
+  public static final class EvmContractCallReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmContractCallReq)
       EvmContractCallReqOrBuilder {
@@ -19021,6 +19191,7 @@ public final class EvmProtobuf {
      * <code>int64 amount = 1;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -19031,6 +19202,7 @@ public final class EvmProtobuf {
      * <code>int64 fee = 2;</code>
      * @return The fee.
      */
+    @java.lang.Override
     public long getFee() {
       return fee_;
     }
@@ -19041,6 +19213,7 @@ public final class EvmProtobuf {
      * <code>string note = 3;</code>
      * @return The note.
      */
+    @java.lang.Override
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
@@ -19057,6 +19230,7 @@ public final class EvmProtobuf {
      * <code>string note = 3;</code>
      * @return The bytes for note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNoteBytes() {
       java.lang.Object ref = note_;
@@ -19077,6 +19251,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 4;</code>
      * @return The parameter.
      */
+    @java.lang.Override
     public java.lang.String getParameter() {
       java.lang.Object ref = parameter_;
       if (ref instanceof java.lang.String) {
@@ -19093,6 +19268,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 4;</code>
      * @return The bytes for parameter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParameterBytes() {
       java.lang.Object ref = parameter_;
@@ -19113,6 +19289,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 5;</code>
      * @return The contractAddr.
      */
+    @java.lang.Override
     public java.lang.String getContractAddr() {
       java.lang.Object ref = contractAddr_;
       if (ref instanceof java.lang.String) {
@@ -19129,6 +19306,7 @@ public final class EvmProtobuf {
      * <code>string contractAddr = 5;</code>
      * @return The bytes for contractAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractAddrBytes() {
       java.lang.Object ref = contractAddr_;
@@ -19149,6 +19327,7 @@ public final class EvmProtobuf {
      * <code>string expire = 6;</code>
      * @return The expire.
      */
+    @java.lang.Override
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
       if (ref instanceof java.lang.String) {
@@ -19165,6 +19344,7 @@ public final class EvmProtobuf {
      * <code>string expire = 6;</code>
      * @return The bytes for expire.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExpireBytes() {
       java.lang.Object ref = expire_;
@@ -19185,6 +19365,7 @@ public final class EvmProtobuf {
      * <code>string paraName = 7;</code>
      * @return The paraName.
      */
+    @java.lang.Override
     public java.lang.String getParaName() {
       java.lang.Object ref = paraName_;
       if (ref instanceof java.lang.String) {
@@ -19201,6 +19382,7 @@ public final class EvmProtobuf {
      * <code>string paraName = 7;</code>
      * @return The bytes for paraName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParaNameBytes() {
       java.lang.Object ref = paraName_;
@@ -19221,6 +19403,7 @@ public final class EvmProtobuf {
      * <code>string abi = 8;</code>
      * @return The abi.
      */
+    @java.lang.Override
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
       if (ref instanceof java.lang.String) {
@@ -19237,6 +19420,7 @@ public final class EvmProtobuf {
      * <code>string abi = 8;</code>
      * @return The bytes for abi.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAbiBytes() {
       java.lang.Object ref = abi_;
@@ -19679,6 +19863,7 @@ public final class EvmProtobuf {
        * <code>int64 amount = 1;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -19709,6 +19894,7 @@ public final class EvmProtobuf {
        * <code>int64 fee = 2;</code>
        * @return The fee.
        */
+      @java.lang.Override
       public long getFee() {
         return fee_;
       }
@@ -20291,7 +20477,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmTransferOnlyReq}
    */
-  public  static final class EvmTransferOnlyReq extends
+  public static final class EvmTransferOnlyReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmTransferOnlyReq)
       EvmTransferOnlyReqOrBuilder {
@@ -20397,6 +20583,7 @@ public final class EvmProtobuf {
      * <code>string to = 1;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -20413,6 +20600,7 @@ public final class EvmProtobuf {
      * <code>string to = 1;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -20433,6 +20621,7 @@ public final class EvmProtobuf {
      * <code>int64 amount = 2;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -20443,6 +20632,7 @@ public final class EvmProtobuf {
      * <code>string paraName = 3;</code>
      * @return The paraName.
      */
+    @java.lang.Override
     public java.lang.String getParaName() {
       java.lang.Object ref = paraName_;
       if (ref instanceof java.lang.String) {
@@ -20459,6 +20649,7 @@ public final class EvmProtobuf {
      * <code>string paraName = 3;</code>
      * @return The bytes for paraName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParaNameBytes() {
       java.lang.Object ref = paraName_;
@@ -20479,6 +20670,7 @@ public final class EvmProtobuf {
      * <code>string note = 4;</code>
      * @return The note.
      */
+    @java.lang.Override
     public java.lang.String getNote() {
       java.lang.Object ref = note_;
       if (ref instanceof java.lang.String) {
@@ -20495,6 +20687,7 @@ public final class EvmProtobuf {
      * <code>string note = 4;</code>
      * @return The bytes for note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNoteBytes() {
       java.lang.Object ref = note_;
@@ -20944,6 +21137,7 @@ public final class EvmProtobuf {
        * <code>int64 amount = 2;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -21192,7 +21386,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmGetNonceReq}
    */
-  public  static final class EvmGetNonceReq extends
+  public static final class EvmGetNonceReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmGetNonceReq)
       EvmGetNonceReqOrBuilder {
@@ -21279,6 +21473,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The address.
      */
+    @java.lang.Override
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
@@ -21295,6 +21490,7 @@ public final class EvmProtobuf {
      * <code>string address = 1;</code>
      * @return The bytes for address.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddressBytes() {
       java.lang.Object ref = address_;
@@ -21752,7 +21948,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmGetNonceRespose}
    */
-  public  static final class EvmGetNonceRespose extends
+  public static final class EvmGetNonceRespose extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmGetNonceRespose)
       EvmGetNonceResposeOrBuilder {
@@ -21837,6 +22033,7 @@ public final class EvmProtobuf {
      * <code>int64 nonce = 1;</code>
      * @return The nonce.
      */
+    @java.lang.Override
     public long getNonce() {
       return nonce_;
     }
@@ -22149,6 +22346,7 @@ public final class EvmProtobuf {
        * <code>int64 nonce = 1;</code>
        * @return The nonce.
        */
+      @java.lang.Override
       public long getNonce() {
         return nonce_;
       }
@@ -22257,7 +22455,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmCalcNewContractAddrReq}
    */
-  public  static final class EvmCalcNewContractAddrReq extends
+  public static final class EvmCalcNewContractAddrReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmCalcNewContractAddrReq)
       EvmCalcNewContractAddrReqOrBuilder {
@@ -22351,6 +22549,7 @@ public final class EvmProtobuf {
      * <code>string caller = 1;</code>
      * @return The caller.
      */
+    @java.lang.Override
     public java.lang.String getCaller() {
       java.lang.Object ref = caller_;
       if (ref instanceof java.lang.String) {
@@ -22367,6 +22566,7 @@ public final class EvmProtobuf {
      * <code>string caller = 1;</code>
      * @return The bytes for caller.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCallerBytes() {
       java.lang.Object ref = caller_;
@@ -22387,6 +22587,7 @@ public final class EvmProtobuf {
      * <code>string txhash = 2;</code>
      * @return The txhash.
      */
+    @java.lang.Override
     public java.lang.String getTxhash() {
       java.lang.Object ref = txhash_;
       if (ref instanceof java.lang.String) {
@@ -22403,6 +22604,7 @@ public final class EvmProtobuf {
      * <code>string txhash = 2;</code>
      * @return The bytes for txhash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxhashBytes() {
       java.lang.Object ref = txhash_;
@@ -22971,7 +23173,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmGetPackDataReq}
    */
-  public  static final class EvmGetPackDataReq extends
+  public static final class EvmGetPackDataReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmGetPackDataReq)
       EvmGetPackDataReqOrBuilder {
@@ -23065,6 +23267,7 @@ public final class EvmProtobuf {
      * <code>string abi = 1;</code>
      * @return The abi.
      */
+    @java.lang.Override
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
       if (ref instanceof java.lang.String) {
@@ -23081,6 +23284,7 @@ public final class EvmProtobuf {
      * <code>string abi = 1;</code>
      * @return The bytes for abi.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAbiBytes() {
       java.lang.Object ref = abi_;
@@ -23101,6 +23305,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 2;</code>
      * @return The parameter.
      */
+    @java.lang.Override
     public java.lang.String getParameter() {
       java.lang.Object ref = parameter_;
       if (ref instanceof java.lang.String) {
@@ -23117,6 +23322,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 2;</code>
      * @return The bytes for parameter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParameterBytes() {
       java.lang.Object ref = parameter_;
@@ -23673,7 +23879,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmGetPackDataRespose}
    */
-  public  static final class EvmGetPackDataRespose extends
+  public static final class EvmGetPackDataRespose extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmGetPackDataRespose)
       EvmGetPackDataResposeOrBuilder {
@@ -23760,6 +23966,7 @@ public final class EvmProtobuf {
      * <code>string packData = 1;</code>
      * @return The packData.
      */
+    @java.lang.Override
     public java.lang.String getPackData() {
       java.lang.Object ref = packData_;
       if (ref instanceof java.lang.String) {
@@ -23776,6 +23983,7 @@ public final class EvmProtobuf {
      * <code>string packData = 1;</code>
      * @return The bytes for packData.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPackDataBytes() {
       java.lang.Object ref = packData_;
@@ -24263,7 +24471,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmGetUnpackDataReq}
    */
-  public  static final class EvmGetUnpackDataReq extends
+  public static final class EvmGetUnpackDataReq extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmGetUnpackDataReq)
       EvmGetUnpackDataReqOrBuilder {
@@ -24364,6 +24572,7 @@ public final class EvmProtobuf {
      * <code>string abi = 1;</code>
      * @return The abi.
      */
+    @java.lang.Override
     public java.lang.String getAbi() {
       java.lang.Object ref = abi_;
       if (ref instanceof java.lang.String) {
@@ -24380,6 +24589,7 @@ public final class EvmProtobuf {
      * <code>string abi = 1;</code>
      * @return The bytes for abi.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAbiBytes() {
       java.lang.Object ref = abi_;
@@ -24400,6 +24610,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 2;</code>
      * @return The parameter.
      */
+    @java.lang.Override
     public java.lang.String getParameter() {
       java.lang.Object ref = parameter_;
       if (ref instanceof java.lang.String) {
@@ -24416,6 +24627,7 @@ public final class EvmProtobuf {
      * <code>string parameter = 2;</code>
      * @return The bytes for parameter.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getParameterBytes() {
       java.lang.Object ref = parameter_;
@@ -24436,6 +24648,7 @@ public final class EvmProtobuf {
      * <code>string data = 3;</code>
      * @return The data.
      */
+    @java.lang.Override
     public java.lang.String getData() {
       java.lang.Object ref = data_;
       if (ref instanceof java.lang.String) {
@@ -24452,6 +24665,7 @@ public final class EvmProtobuf {
      * <code>string data = 3;</code>
      * @return The bytes for data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataBytes() {
       java.lang.Object ref = data_;
@@ -25114,7 +25328,7 @@ public final class EvmProtobuf {
   /**
    * Protobuf type {@code EvmGetUnpackDataRespose}
    */
-  public  static final class EvmGetUnpackDataRespose extends
+  public static final class EvmGetUnpackDataRespose extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EvmGetUnpackDataRespose)
       EvmGetUnpackDataResposeOrBuilder {

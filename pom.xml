@@ -119,10 +119,61 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-protobuf</artifactId>
+			<version>1.34.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-stub</artifactId>
+			<version>1.34.1</version>
+		</dependency>
+
     </dependencies>
 	
 	<build>
+		<extensions>
+			<extension>
+				<groupId>kr.motd.maven</groupId>
+				<artifactId>os-maven-plugin</artifactId>
+				<version>1.6.2</version>
+			</extension>
+		</extensions>
 		<plugins>
+			<plugin>
+				<groupId>org.xolstice.maven.plugins</groupId>
+				<artifactId>protobuf-maven-plugin</artifactId>
+				<version>0.6.1</version>
+				<extensions>true</extensions>
+				<configuration>
+					<!-- 工具版本 -->
+					<!--suppress UnresolvedMavenProperty -->
+					<protocArtifact>com.google.protobuf:protoc:3.12.0:exe:${os.detected.classifier}</protocArtifact>
+					<pluginId>grpc-java</pluginId>
+					<!--suppress UnresolvedMavenProperty -->
+					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.32.1:exe:${os.detected.classifier}</pluginArtifact>
+					<!--默认值，proto源文件路径-->
+					<protoSourceRoot>${project.basedir}/src/main/proto</protoSourceRoot>
+					<!--默认值，proto目标java文件路径-->
+					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<!--设置是否在生成java文件之前清空outputDirectory的文件，默认值为true，设置为false时也会覆盖同名文件-->
+					<clearOutputDirectory>false</clearOutputDirectory>
+
+				</configuration>
+				<executions>
+					<execution>
+						<!--在执行mvn compile的时候会执行以下操作-->
+						<phase>compile</phase>
+						<goals>
+<!--							&lt;!&ndash;生成OuterClass类&ndash;&gt;-->
+<!--							<goal>compile</goal>-->
+<!--							&lt;!&ndash;生成Grpc类&ndash;&gt;-->
+<!--							<goal>compile-custom</goal>-->
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

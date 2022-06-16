@@ -123,7 +123,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code Storage}
    */
-  public  static final class Storage extends
+  public static final class Storage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Storage)
       StorageOrBuilder {
@@ -340,6 +340,7 @@ public final class StorageProtobuf {
      * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
      * @return Whether the contentStorage field is set.
      */
+    @java.lang.Override
     public boolean hasContentStorage() {
       return valueCase_ == 1;
     }
@@ -347,6 +348,7 @@ public final class StorageProtobuf {
      * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
      * @return The contentStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -356,6 +358,7 @@ public final class StorageProtobuf {
     /**
      * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -368,6 +371,7 @@ public final class StorageProtobuf {
      * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
      * @return Whether the hashStorage field is set.
      */
+    @java.lang.Override
     public boolean hasHashStorage() {
       return valueCase_ == 2;
     }
@@ -375,6 +379,7 @@ public final class StorageProtobuf {
      * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
      * @return The hashStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -384,6 +389,7 @@ public final class StorageProtobuf {
     /**
      * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -396,6 +402,7 @@ public final class StorageProtobuf {
      * <code>.LinkNotaryStorage linkStorage = 3;</code>
      * @return Whether the linkStorage field is set.
      */
+    @java.lang.Override
     public boolean hasLinkStorage() {
       return valueCase_ == 3;
     }
@@ -403,6 +410,7 @@ public final class StorageProtobuf {
      * <code>.LinkNotaryStorage linkStorage = 3;</code>
      * @return The linkStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -412,6 +420,7 @@ public final class StorageProtobuf {
     /**
      * <code>.LinkNotaryStorage linkStorage = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -424,6 +433,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
      * @return Whether the encryptStorage field is set.
      */
+    @java.lang.Override
     public boolean hasEncryptStorage() {
       return valueCase_ == 4;
     }
@@ -431,6 +441,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
      * @return The encryptStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -440,6 +451,7 @@ public final class StorageProtobuf {
     /**
      * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -452,6 +464,7 @@ public final class StorageProtobuf {
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      * @return Whether the encryptShareStorage field is set.
      */
+    @java.lang.Override
     public boolean hasEncryptShareStorage() {
       return valueCase_ == 5;
     }
@@ -459,6 +472,7 @@ public final class StorageProtobuf {
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      * @return The encryptShareStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -468,6 +482,7 @@ public final class StorageProtobuf {
     /**
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -480,6 +495,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
      * @return Whether the encryptAdd field is set.
      */
+    @java.lang.Override
     public boolean hasEncryptAdd() {
       return valueCase_ == 6;
     }
@@ -487,6 +503,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
      * @return The encryptAdd.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
       if (valueCase_ == 6) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -496,6 +513,7 @@ public final class StorageProtobuf {
     /**
      * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
       if (valueCase_ == 6) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -509,6 +527,7 @@ public final class StorageProtobuf {
      * <code>int32 ty = 7;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -1013,6 +1032,7 @@ public final class StorageProtobuf {
        * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
        * @return Whether the contentStorage field is set.
        */
+      @java.lang.Override
       public boolean hasContentStorage() {
         return valueCase_ == 1;
       }
@@ -1020,6 +1040,7 @@ public final class StorageProtobuf {
        * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
        * @return The contentStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
         if (contentStorageBuilder_ == null) {
           if (valueCase_ == 1) {
@@ -1113,6 +1134,7 @@ public final class StorageProtobuf {
       /**
        * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
         if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
           return contentStorageBuilder_.getMessageOrBuilder();
@@ -1151,6 +1173,7 @@ public final class StorageProtobuf {
        * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
        * @return Whether the hashStorage field is set.
        */
+      @java.lang.Override
       public boolean hasHashStorage() {
         return valueCase_ == 2;
       }
@@ -1158,6 +1181,7 @@ public final class StorageProtobuf {
        * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
        * @return The hashStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
         if (hashStorageBuilder_ == null) {
           if (valueCase_ == 2) {
@@ -1251,6 +1275,7 @@ public final class StorageProtobuf {
       /**
        * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
         if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
           return hashStorageBuilder_.getMessageOrBuilder();
@@ -1289,6 +1314,7 @@ public final class StorageProtobuf {
        * <code>.LinkNotaryStorage linkStorage = 3;</code>
        * @return Whether the linkStorage field is set.
        */
+      @java.lang.Override
       public boolean hasLinkStorage() {
         return valueCase_ == 3;
       }
@@ -1296,6 +1322,7 @@ public final class StorageProtobuf {
        * <code>.LinkNotaryStorage linkStorage = 3;</code>
        * @return The linkStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
         if (linkStorageBuilder_ == null) {
           if (valueCase_ == 3) {
@@ -1389,6 +1416,7 @@ public final class StorageProtobuf {
       /**
        * <code>.LinkNotaryStorage linkStorage = 3;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
         if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
           return linkStorageBuilder_.getMessageOrBuilder();
@@ -1427,6 +1455,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
        * @return Whether the encryptStorage field is set.
        */
+      @java.lang.Override
       public boolean hasEncryptStorage() {
         return valueCase_ == 4;
       }
@@ -1434,6 +1463,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
        * @return The encryptStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
         if (encryptStorageBuilder_ == null) {
           if (valueCase_ == 4) {
@@ -1527,6 +1557,7 @@ public final class StorageProtobuf {
       /**
        * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
         if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
           return encryptStorageBuilder_.getMessageOrBuilder();
@@ -1565,6 +1596,7 @@ public final class StorageProtobuf {
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        * @return Whether the encryptShareStorage field is set.
        */
+      @java.lang.Override
       public boolean hasEncryptShareStorage() {
         return valueCase_ == 5;
       }
@@ -1572,6 +1604,7 @@ public final class StorageProtobuf {
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        * @return The encryptShareStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
         if (encryptShareStorageBuilder_ == null) {
           if (valueCase_ == 5) {
@@ -1665,6 +1698,7 @@ public final class StorageProtobuf {
       /**
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
         if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
           return encryptShareStorageBuilder_.getMessageOrBuilder();
@@ -1703,6 +1737,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
        * @return Whether the encryptAdd field is set.
        */
+      @java.lang.Override
       public boolean hasEncryptAdd() {
         return valueCase_ == 6;
       }
@@ -1710,6 +1745,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
        * @return The encryptAdd.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
         if (encryptAddBuilder_ == null) {
           if (valueCase_ == 6) {
@@ -1803,6 +1839,7 @@ public final class StorageProtobuf {
       /**
        * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
         if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
           return encryptAddBuilder_.getMessageOrBuilder();
@@ -1840,6 +1877,7 @@ public final class StorageProtobuf {
        * <code>int32 ty = 7;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -2022,7 +2060,7 @@ public final class StorageProtobuf {
   /**
    * Protobuf type {@code StorageAction}
    */
-  public  static final class StorageAction extends
+  public static final class StorageAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:StorageAction)
       StorageActionOrBuilder {
@@ -2239,6 +2277,7 @@ public final class StorageProtobuf {
      * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
      * @return Whether the contentStorage field is set.
      */
+    @java.lang.Override
     public boolean hasContentStorage() {
       return valueCase_ == 1;
     }
@@ -2246,6 +2285,7 @@ public final class StorageProtobuf {
      * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
      * @return The contentStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -2255,6 +2295,7 @@ public final class StorageProtobuf {
     /**
      * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage) value_;
@@ -2267,6 +2308,7 @@ public final class StorageProtobuf {
      * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
      * @return Whether the hashStorage field is set.
      */
+    @java.lang.Override
     public boolean hasHashStorage() {
       return valueCase_ == 2;
     }
@@ -2274,6 +2316,7 @@ public final class StorageProtobuf {
      * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
      * @return The hashStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -2283,6 +2326,7 @@ public final class StorageProtobuf {
     /**
      * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage) value_;
@@ -2295,6 +2339,7 @@ public final class StorageProtobuf {
      * <code>.LinkNotaryStorage linkStorage = 3;</code>
      * @return Whether the linkStorage field is set.
      */
+    @java.lang.Override
     public boolean hasLinkStorage() {
       return valueCase_ == 3;
     }
@@ -2302,6 +2347,7 @@ public final class StorageProtobuf {
      * <code>.LinkNotaryStorage linkStorage = 3;</code>
      * @return The linkStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -2311,6 +2357,7 @@ public final class StorageProtobuf {
     /**
      * <code>.LinkNotaryStorage linkStorage = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage) value_;
@@ -2323,6 +2370,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
      * @return Whether the encryptStorage field is set.
      */
+    @java.lang.Override
     public boolean hasEncryptStorage() {
       return valueCase_ == 4;
     }
@@ -2330,6 +2378,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
      * @return The encryptStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -2339,6 +2388,7 @@ public final class StorageProtobuf {
     /**
      * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage) value_;
@@ -2351,6 +2401,7 @@ public final class StorageProtobuf {
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      * @return Whether the encryptShareStorage field is set.
      */
+    @java.lang.Override
     public boolean hasEncryptShareStorage() {
       return valueCase_ == 5;
     }
@@ -2358,6 +2409,7 @@ public final class StorageProtobuf {
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      * @return The encryptShareStorage.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -2367,6 +2419,7 @@ public final class StorageProtobuf {
     /**
      * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage) value_;
@@ -2379,6 +2432,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
      * @return Whether the encryptAdd field is set.
      */
+    @java.lang.Override
     public boolean hasEncryptAdd() {
       return valueCase_ == 6;
     }
@@ -2386,6 +2440,7 @@ public final class StorageProtobuf {
      * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
      * @return The encryptAdd.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
       if (valueCase_ == 6) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -2395,6 +2450,7 @@ public final class StorageProtobuf {
     /**
      * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
       if (valueCase_ == 6) {
          return (cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd) value_;
@@ -2408,6 +2464,7 @@ public final class StorageProtobuf {
      * <code>int32 ty = 7;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -2908,6 +2965,7 @@ public final class StorageProtobuf {
        * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
        * @return Whether the contentStorage field is set.
        */
+      @java.lang.Override
       public boolean hasContentStorage() {
         return valueCase_ == 1;
       }
@@ -2915,6 +2973,7 @@ public final class StorageProtobuf {
        * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
        * @return The contentStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorage getContentStorage() {
         if (contentStorageBuilder_ == null) {
           if (valueCase_ == 1) {
@@ -3008,6 +3067,7 @@ public final class StorageProtobuf {
       /**
        * <code>.ContentOnlyNotaryStorage contentStorage = 1;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.ContentOnlyNotaryStorageOrBuilder getContentStorageOrBuilder() {
         if ((valueCase_ == 1) && (contentStorageBuilder_ != null)) {
           return contentStorageBuilder_.getMessageOrBuilder();
@@ -3046,6 +3106,7 @@ public final class StorageProtobuf {
        * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
        * @return Whether the hashStorage field is set.
        */
+      @java.lang.Override
       public boolean hasHashStorage() {
         return valueCase_ == 2;
       }
@@ -3053,6 +3114,7 @@ public final class StorageProtobuf {
        * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
        * @return The hashStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorage getHashStorage() {
         if (hashStorageBuilder_ == null) {
           if (valueCase_ == 2) {
@@ -3146,6 +3208,7 @@ public final class StorageProtobuf {
       /**
        * <code>.HashOnlyNotaryStorage hashStorage = 2;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.HashOnlyNotaryStorageOrBuilder getHashStorageOrBuilder() {
         if ((valueCase_ == 2) && (hashStorageBuilder_ != null)) {
           return hashStorageBuilder_.getMessageOrBuilder();
@@ -3184,6 +3247,7 @@ public final class StorageProtobuf {
        * <code>.LinkNotaryStorage linkStorage = 3;</code>
        * @return Whether the linkStorage field is set.
        */
+      @java.lang.Override
       public boolean hasLinkStorage() {
         return valueCase_ == 3;
       }
@@ -3191,6 +3255,7 @@ public final class StorageProtobuf {
        * <code>.LinkNotaryStorage linkStorage = 3;</code>
        * @return The linkStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorage getLinkStorage() {
         if (linkStorageBuilder_ == null) {
           if (valueCase_ == 3) {
@@ -3284,6 +3349,7 @@ public final class StorageProtobuf {
       /**
        * <code>.LinkNotaryStorage linkStorage = 3;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.LinkNotaryStorageOrBuilder getLinkStorageOrBuilder() {
         if ((valueCase_ == 3) && (linkStorageBuilder_ != null)) {
           return linkStorageBuilder_.getMessageOrBuilder();
@@ -3322,6 +3388,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
        * @return Whether the encryptStorage field is set.
        */
+      @java.lang.Override
       public boolean hasEncryptStorage() {
         return valueCase_ == 4;
       }
@@ -3329,6 +3396,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
        * @return The encryptStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorage getEncryptStorage() {
         if (encryptStorageBuilder_ == null) {
           if (valueCase_ == 4) {
@@ -3422,6 +3490,7 @@ public final class StorageProtobuf {
       /**
        * <code>.EncryptNotaryStorage encryptStorage = 4;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryStorageOrBuilder getEncryptStorageOrBuilder() {
         if ((valueCase_ == 4) && (encryptStorageBuilder_ != null)) {
           return encryptStorageBuilder_.getMessageOrBuilder();
@@ -3460,6 +3529,7 @@ public final class StorageProtobuf {
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        * @return Whether the encryptShareStorage field is set.
        */
+      @java.lang.Override
       public boolean hasEncryptShareStorage() {
         return valueCase_ == 5;
       }
@@ -3467,6 +3537,7 @@ public final class StorageProtobuf {
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        * @return The encryptShareStorage.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorage getEncryptShareStorage() {
         if (encryptShareStorageBuilder_ == null) {
           if (valueCase_ == 5) {
@@ -3560,6 +3631,7 @@ public final class StorageProtobuf {
       /**
        * <code>.EncryptShareNotaryStorage encryptShareStorage = 5;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptShareNotaryStorageOrBuilder getEncryptShareStorageOrBuilder() {
         if ((valueCase_ == 5) && (encryptShareStorageBuilder_ != null)) {
           return encryptShareStorageBuilder_.getMessageOrBuilder();
@@ -3598,6 +3670,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
        * @return Whether the encryptAdd field is set.
        */
+      @java.lang.Override
       public boolean hasEncryptAdd() {
         return valueCase_ == 6;
       }
@@ -3605,6 +3678,7 @@ public final class StorageProtobuf {
        * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
        * @return The encryptAdd.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAdd getEncryptAdd() {
         if (encryptAddBuilder_ == null) {
           if (valueCase_ == 6) {
@@ -3698,6 +3772,7 @@ public final class StorageProtobuf {
       /**
        * <code>.EncryptNotaryAdd encryptAdd = 6;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.StorageProtobuf.EncryptNotaryAddOrBuilder getEncryptAddOrBuilder() {
         if ((valueCase_ == 6) && (encryptAddBuilder_ != null)) {
           return encryptAddBuilder_.getMessageOrBuilder();
@@ -3735,6 +3810,7 @@ public final class StorageProtobuf {
        * <code>int32 ty = 7;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -3883,7 +3959,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code ContentOnlyNotaryStorage}
    */
-  public  static final class ContentOnlyNotaryStorage extends
+  public static final class ContentOnlyNotaryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ContentOnlyNotaryStorage)
       ContentOnlyNotaryStorageOrBuilder {
@@ -3992,6 +4068,7 @@ public final class StorageProtobuf {
      * <code>bytes content = 1;</code>
      * @return The content.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContent() {
       return content_;
     }
@@ -4006,6 +4083,7 @@ public final class StorageProtobuf {
      * <code>string key = 2;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -4026,6 +4104,7 @@ public final class StorageProtobuf {
      * <code>string key = 2;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -4050,6 +4129,7 @@ public final class StorageProtobuf {
      * <code>int32 op = 3;</code>
      * @return The op.
      */
+    @java.lang.Override
     public int getOp() {
       return op_;
     }
@@ -4064,6 +4144,7 @@ public final class StorageProtobuf {
      * <code>string value = 4;</code>
      * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -4084,6 +4165,7 @@ public final class StorageProtobuf {
      * <code>string value = 4;</code>
      * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -4464,6 +4546,7 @@ public final class StorageProtobuf {
        * <code>bytes content = 1;</code>
        * @return The content.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getContent() {
         return content_;
       }
@@ -4605,6 +4688,7 @@ public final class StorageProtobuf {
        * <code>int32 op = 3;</code>
        * @return The op.
        */
+      @java.lang.Override
       public int getOp() {
         return op_;
       }
@@ -4847,7 +4931,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code HashOnlyNotaryStorage}
    */
-  public  static final class HashOnlyNotaryStorage extends
+  public static final class HashOnlyNotaryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:HashOnlyNotaryStorage)
       HashOnlyNotaryStorageOrBuilder {
@@ -4951,6 +5035,7 @@ public final class StorageProtobuf {
      * <code>bytes hash = 1;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -4965,6 +5050,7 @@ public final class StorageProtobuf {
      * <code>string key = 2;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -4985,6 +5071,7 @@ public final class StorageProtobuf {
      * <code>string key = 2;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -5009,6 +5096,7 @@ public final class StorageProtobuf {
      * <code>string value = 3;</code>
      * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -5029,6 +5117,7 @@ public final class StorageProtobuf {
      * <code>string value = 3;</code>
      * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -5392,6 +5481,7 @@ public final class StorageProtobuf {
        * <code>bytes hash = 1;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -5743,7 +5833,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code LinkNotaryStorage}
    */
-  public  static final class LinkNotaryStorage extends
+  public static final class LinkNotaryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:LinkNotaryStorage)
       LinkNotaryStorageOrBuilder {
@@ -5853,6 +5943,7 @@ public final class StorageProtobuf {
      * <code>bytes link = 1;</code>
      * @return The link.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getLink() {
       return link_;
     }
@@ -5867,6 +5958,7 @@ public final class StorageProtobuf {
      * <code>bytes hash = 2;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -5881,6 +5973,7 @@ public final class StorageProtobuf {
      * <code>string key = 3;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -5901,6 +5994,7 @@ public final class StorageProtobuf {
      * <code>string key = 3;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -5925,6 +6019,7 @@ public final class StorageProtobuf {
      * <code>string value = 4;</code>
      * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -5945,6 +6040,7 @@ public final class StorageProtobuf {
      * <code>string value = 4;</code>
      * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -6325,6 +6421,7 @@ public final class StorageProtobuf {
        * <code>bytes link = 1;</code>
        * @return The link.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getLink() {
         return link_;
       }
@@ -6370,6 +6467,7 @@ public final class StorageProtobuf {
        * <code>bytes hash = 2;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -6731,7 +6829,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code EncryptNotaryStorage}
    */
-  public  static final class EncryptNotaryStorage extends
+  public static final class EncryptNotaryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EncryptNotaryStorage)
       EncryptNotaryStorageOrBuilder {
@@ -6847,6 +6945,7 @@ public final class StorageProtobuf {
      * <code>bytes contentHash = 1;</code>
      * @return The contentHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContentHash() {
       return contentHash_;
     }
@@ -6861,6 +6960,7 @@ public final class StorageProtobuf {
      * <code>bytes encryptContent = 2;</code>
      * @return The encryptContent.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getEncryptContent() {
       return encryptContent_;
     }
@@ -6875,6 +6975,7 @@ public final class StorageProtobuf {
      * <code>bytes nonce = 3;</code>
      * @return The nonce.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getNonce() {
       return nonce_;
     }
@@ -6889,6 +6990,7 @@ public final class StorageProtobuf {
      * <code>string key = 4;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -6909,6 +7011,7 @@ public final class StorageProtobuf {
      * <code>string key = 4;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -6933,6 +7036,7 @@ public final class StorageProtobuf {
      * <code>string value = 5;</code>
      * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -6953,6 +7057,7 @@ public final class StorageProtobuf {
      * <code>string value = 5;</code>
      * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -7350,6 +7455,7 @@ public final class StorageProtobuf {
        * <code>bytes contentHash = 1;</code>
        * @return The contentHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getContentHash() {
         return contentHash_;
       }
@@ -7395,6 +7501,7 @@ public final class StorageProtobuf {
        * <code>bytes encryptContent = 2;</code>
        * @return The encryptContent.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getEncryptContent() {
         return encryptContent_;
       }
@@ -7440,6 +7547,7 @@ public final class StorageProtobuf {
        * <code>bytes nonce = 3;</code>
        * @return The nonce.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getNonce() {
         return nonce_;
       }
@@ -7801,7 +7909,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code EncryptShareNotaryStorage}
    */
-  public  static final class EncryptShareNotaryStorage extends
+  public static final class EncryptShareNotaryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EncryptShareNotaryStorage)
       EncryptShareNotaryStorageOrBuilder {
@@ -7917,6 +8025,7 @@ public final class StorageProtobuf {
      * <code>bytes contentHash = 1;</code>
      * @return The contentHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getContentHash() {
       return contentHash_;
     }
@@ -7931,6 +8040,7 @@ public final class StorageProtobuf {
      * <code>bytes encryptContent = 2;</code>
      * @return The encryptContent.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getEncryptContent() {
       return encryptContent_;
     }
@@ -7945,6 +8055,7 @@ public final class StorageProtobuf {
      * <code>bytes pubKey = 3;</code>
      * @return The pubKey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPubKey() {
       return pubKey_;
     }
@@ -7959,6 +8070,7 @@ public final class StorageProtobuf {
      * <code>string key = 4;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -7979,6 +8091,7 @@ public final class StorageProtobuf {
      * <code>string key = 4;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -8003,6 +8116,7 @@ public final class StorageProtobuf {
      * <code>string value = 5;</code>
      * @return The value.
      */
+    @java.lang.Override
     public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -8023,6 +8137,7 @@ public final class StorageProtobuf {
      * <code>string value = 5;</code>
      * @return The bytes for value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
@@ -8420,6 +8535,7 @@ public final class StorageProtobuf {
        * <code>bytes contentHash = 1;</code>
        * @return The contentHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getContentHash() {
         return contentHash_;
       }
@@ -8465,6 +8581,7 @@ public final class StorageProtobuf {
        * <code>bytes encryptContent = 2;</code>
        * @return The encryptContent.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getEncryptContent() {
         return encryptContent_;
       }
@@ -8510,6 +8627,7 @@ public final class StorageProtobuf {
        * <code>bytes pubKey = 3;</code>
        * @return The pubKey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPubKey() {
         return pubKey_;
       }
@@ -8831,7 +8949,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code EncryptNotaryAdd}
    */
-  public  static final class EncryptNotaryAdd extends
+  public static final class EncryptNotaryAdd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EncryptNotaryAdd)
       EncryptNotaryAddOrBuilder {
@@ -8928,6 +9046,7 @@ public final class StorageProtobuf {
      * <code>string key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -8948,6 +9067,7 @@ public final class StorageProtobuf {
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -8972,6 +9092,7 @@ public final class StorageProtobuf {
      * <code>bytes encryptAdd = 2;</code>
      * @return The encryptAdd.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getEncryptAdd() {
       return encryptAdd_;
     }
@@ -9404,6 +9525,7 @@ public final class StorageProtobuf {
        * <code>bytes encryptAdd = 2;</code>
        * @return The encryptAdd.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getEncryptAdd() {
         return encryptAdd_;
       }
@@ -9515,7 +9637,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code QueryStorage}
    */
-  public  static final class QueryStorage extends
+  public static final class QueryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:QueryStorage)
       QueryStorageOrBuilder {
@@ -9602,6 +9724,7 @@ public final class StorageProtobuf {
      * <code>string txHash = 1;</code>
      * @return The txHash.
      */
+    @java.lang.Override
     public java.lang.String getTxHash() {
       java.lang.Object ref = txHash_;
       if (ref instanceof java.lang.String) {
@@ -9618,6 +9741,7 @@ public final class StorageProtobuf {
      * <code>string txHash = 1;</code>
      * @return The bytes for txHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxHashBytes() {
       java.lang.Object ref = txHash_;
@@ -10102,7 +10226,7 @@ public final class StorageProtobuf {
    *
    * Protobuf type {@code BatchQueryStorage}
    */
-  public  static final class BatchQueryStorage extends
+  public static final class BatchQueryStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:BatchQueryStorage)
       BatchQueryStorageOrBuilder {
@@ -10743,7 +10867,7 @@ public final class StorageProtobuf {
   /**
    * Protobuf type {@code BatchReplyStorage}
    */
-  public  static final class BatchReplyStorage extends
+  public static final class BatchReplyStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:BatchReplyStorage)
       BatchReplyStorageOrBuilder {
@@ -10836,12 +10960,14 @@ public final class StorageProtobuf {
     /**
      * <code>repeated .Storage storages = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage> getStoragesList() {
       return storages_;
     }
     /**
      * <code>repeated .Storage storages = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder> 
         getStoragesOrBuilderList() {
       return storages_;
@@ -10849,18 +10975,21 @@ public final class StorageProtobuf {
     /**
      * <code>repeated .Storage storages = 1;</code>
      */
+    @java.lang.Override
     public int getStoragesCount() {
       return storages_.size();
     }
     /**
      * <code>repeated .Storage storages = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.Storage getStorages(int index) {
       return storages_.get(index);
     }
     /**
      * <code>repeated .Storage storages = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.StorageProtobuf.StorageOrBuilder getStoragesOrBuilder(
         int index) {
       return storages_.get(index);
@@ -11507,7 +11636,7 @@ public final class StorageProtobuf {
   /**
    * Protobuf type {@code ReceiptStorage}
    */
-  public  static final class ReceiptStorage extends
+  public static final class ReceiptStorage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReceiptStorage)
       ReceiptStorageOrBuilder {

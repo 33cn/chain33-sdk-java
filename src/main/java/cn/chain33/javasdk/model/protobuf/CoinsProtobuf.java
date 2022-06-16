@@ -93,7 +93,7 @@ public final class CoinsProtobuf {
    *
    * Protobuf type {@code CoinsAction}
    */
-  public  static final class CoinsAction extends
+  public static final class CoinsAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CoinsAction)
       CoinsActionOrBuilder {
@@ -278,6 +278,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsTransfer transfer = 1;</code>
      * @return Whether the transfer field is set.
      */
+    @java.lang.Override
     public boolean hasTransfer() {
       return valueCase_ == 1;
     }
@@ -285,6 +286,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsTransfer transfer = 1;</code>
      * @return The transfer.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransfer getTransfer() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransfer) value_;
@@ -294,6 +296,7 @@ public final class CoinsProtobuf {
     /**
      * <code>.AssetsTransfer transfer = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferOrBuilder getTransferOrBuilder() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransfer) value_;
@@ -306,6 +309,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsWithdraw withdraw = 4;</code>
      * @return Whether the withdraw field is set.
      */
+    @java.lang.Override
     public boolean hasWithdraw() {
       return valueCase_ == 4;
     }
@@ -313,6 +317,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsWithdraw withdraw = 4;</code>
      * @return The withdraw.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsWithdraw getWithdraw() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsWithdraw) value_;
@@ -322,6 +327,7 @@ public final class CoinsProtobuf {
     /**
      * <code>.AssetsWithdraw withdraw = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsWithdraw) value_;
@@ -334,6 +340,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsGenesis genesis = 2;</code>
      * @return Whether the genesis field is set.
      */
+    @java.lang.Override
     public boolean hasGenesis() {
       return valueCase_ == 2;
     }
@@ -341,6 +348,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsGenesis genesis = 2;</code>
      * @return The genesis.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsGenesis getGenesis() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsGenesis) value_;
@@ -350,6 +358,7 @@ public final class CoinsProtobuf {
     /**
      * <code>.AssetsGenesis genesis = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsGenesisOrBuilder getGenesisOrBuilder() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsGenesis) value_;
@@ -362,6 +371,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsTransferToExec transferToExec = 5;</code>
      * @return Whether the transferToExec field is set.
      */
+    @java.lang.Override
     public boolean hasTransferToExec() {
       return valueCase_ == 5;
     }
@@ -369,6 +379,7 @@ public final class CoinsProtobuf {
      * <code>.AssetsTransferToExec transferToExec = 5;</code>
      * @return The transferToExec.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferToExec getTransferToExec() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferToExec) value_;
@@ -378,6 +389,7 @@ public final class CoinsProtobuf {
     /**
      * <code>.AssetsTransferToExec transferToExec = 5;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferToExec) value_;
@@ -391,6 +403,7 @@ public final class CoinsProtobuf {
      * <code>int32 ty = 3;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -843,6 +856,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsTransfer transfer = 1;</code>
        * @return Whether the transfer field is set.
        */
+      @java.lang.Override
       public boolean hasTransfer() {
         return valueCase_ == 1;
       }
@@ -850,6 +864,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsTransfer transfer = 1;</code>
        * @return The transfer.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransfer getTransfer() {
         if (transferBuilder_ == null) {
           if (valueCase_ == 1) {
@@ -943,6 +958,7 @@ public final class CoinsProtobuf {
       /**
        * <code>.AssetsTransfer transfer = 1;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferOrBuilder getTransferOrBuilder() {
         if ((valueCase_ == 1) && (transferBuilder_ != null)) {
           return transferBuilder_.getMessageOrBuilder();
@@ -981,6 +997,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsWithdraw withdraw = 4;</code>
        * @return Whether the withdraw field is set.
        */
+      @java.lang.Override
       public boolean hasWithdraw() {
         return valueCase_ == 4;
       }
@@ -988,6 +1005,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsWithdraw withdraw = 4;</code>
        * @return The withdraw.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsWithdraw getWithdraw() {
         if (withdrawBuilder_ == null) {
           if (valueCase_ == 4) {
@@ -1081,6 +1099,7 @@ public final class CoinsProtobuf {
       /**
        * <code>.AssetsWithdraw withdraw = 4;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsWithdrawOrBuilder getWithdrawOrBuilder() {
         if ((valueCase_ == 4) && (withdrawBuilder_ != null)) {
           return withdrawBuilder_.getMessageOrBuilder();
@@ -1119,6 +1138,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsGenesis genesis = 2;</code>
        * @return Whether the genesis field is set.
        */
+      @java.lang.Override
       public boolean hasGenesis() {
         return valueCase_ == 2;
       }
@@ -1126,6 +1146,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsGenesis genesis = 2;</code>
        * @return The genesis.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsGenesis getGenesis() {
         if (genesisBuilder_ == null) {
           if (valueCase_ == 2) {
@@ -1219,6 +1240,7 @@ public final class CoinsProtobuf {
       /**
        * <code>.AssetsGenesis genesis = 2;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsGenesisOrBuilder getGenesisOrBuilder() {
         if ((valueCase_ == 2) && (genesisBuilder_ != null)) {
           return genesisBuilder_.getMessageOrBuilder();
@@ -1257,6 +1279,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsTransferToExec transferToExec = 5;</code>
        * @return Whether the transferToExec field is set.
        */
+      @java.lang.Override
       public boolean hasTransferToExec() {
         return valueCase_ == 5;
       }
@@ -1264,6 +1287,7 @@ public final class CoinsProtobuf {
        * <code>.AssetsTransferToExec transferToExec = 5;</code>
        * @return The transferToExec.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferToExec getTransferToExec() {
         if (transferToExecBuilder_ == null) {
           if (valueCase_ == 5) {
@@ -1357,6 +1381,7 @@ public final class CoinsProtobuf {
       /**
        * <code>.AssetsTransferToExec transferToExec = 5;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetsTransferToExecOrBuilder getTransferToExecOrBuilder() {
         if ((valueCase_ == 5) && (transferToExecBuilder_ != null)) {
           return transferToExecBuilder_.getMessageOrBuilder();
@@ -1394,6 +1419,7 @@ public final class CoinsProtobuf {
        * <code>int32 ty = 3;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }

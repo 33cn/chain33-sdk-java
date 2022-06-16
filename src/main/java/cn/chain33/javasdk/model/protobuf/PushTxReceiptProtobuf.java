@@ -109,7 +109,7 @@ public final class PushTxReceiptProtobuf {
   /**
    * Protobuf type {@code TxReceipts4SubscribePerBlk}
    */
-  public  static final class TxReceipts4SubscribePerBlk extends
+  public static final class TxReceipts4SubscribePerBlk extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxReceipts4SubscribePerBlk)
       TxReceipts4SubscribePerBlkOrBuilder {
@@ -248,12 +248,14 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction> getTxList() {
       return tx_;
     }
     /**
      * <code>repeated .Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder> 
         getTxOrBuilderList() {
       return tx_;
@@ -261,18 +263,21 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public int getTxCount() {
       return tx_.size();
     }
     /**
      * <code>repeated .Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTx(int index) {
       return tx_.get(index);
     }
     /**
      * <code>repeated .Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxOrBuilder(
         int index) {
       return tx_.get(index);
@@ -283,12 +288,14 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .ReceiptData receiptData = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData> getReceiptDataList() {
       return receiptData_;
     }
     /**
      * <code>repeated .ReceiptData receiptData = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder> 
         getReceiptDataOrBuilderList() {
       return receiptData_;
@@ -296,18 +303,21 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .ReceiptData receiptData = 2;</code>
      */
+    @java.lang.Override
     public int getReceiptDataCount() {
       return receiptData_.size();
     }
     /**
      * <code>repeated .ReceiptData receiptData = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceiptData(int index) {
       return receiptData_.get(index);
     }
     /**
      * <code>repeated .ReceiptData receiptData = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptDataOrBuilder(
         int index) {
       return receiptData_.get(index);
@@ -323,6 +333,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int64 height = 4;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -333,6 +344,7 @@ public final class PushTxReceiptProtobuf {
      * <code>bytes blockHash = 5;</code>
      * @return The blockHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getBlockHash() {
       return blockHash_;
     }
@@ -343,6 +355,7 @@ public final class PushTxReceiptProtobuf {
      * <code>bytes parentHash = 6;</code>
      * @return The parentHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getParentHash() {
       return parentHash_;
     }
@@ -353,6 +366,7 @@ public final class PushTxReceiptProtobuf {
      * <code>bytes previousHash = 7;</code>
      * @return The previousHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPreviousHash() {
       return previousHash_;
     }
@@ -363,6 +377,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int32 addDelType = 8;</code>
      * @return The addDelType.
      */
+    @java.lang.Override
     public int getAddDelType() {
       return addDelType_;
     }
@@ -373,6 +388,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int64 seqNum = 9;</code>
      * @return The seqNum.
      */
+    @java.lang.Override
     public long getSeqNum() {
       return seqNum_;
     }
@@ -1367,6 +1383,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int64 height = 4;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -1405,6 +1422,7 @@ public final class PushTxReceiptProtobuf {
        * <code>bytes blockHash = 5;</code>
        * @return The blockHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getBlockHash() {
         return blockHash_;
       }
@@ -1438,6 +1456,7 @@ public final class PushTxReceiptProtobuf {
        * <code>bytes parentHash = 6;</code>
        * @return The parentHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getParentHash() {
         return parentHash_;
       }
@@ -1471,6 +1490,7 @@ public final class PushTxReceiptProtobuf {
        * <code>bytes previousHash = 7;</code>
        * @return The previousHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPreviousHash() {
         return previousHash_;
       }
@@ -1504,6 +1524,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int32 addDelType = 8;</code>
        * @return The addDelType.
        */
+      @java.lang.Override
       public int getAddDelType() {
         return addDelType_;
       }
@@ -1534,6 +1555,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int64 seqNum = 9;</code>
        * @return The seqNum.
        */
+      @java.lang.Override
       public long getSeqNum() {
         return seqNum_;
       }
@@ -1642,7 +1664,7 @@ public final class PushTxReceiptProtobuf {
   /**
    * Protobuf type {@code TxReceipts4Subscribe}
    */
-  public  static final class TxReceipts4Subscribe extends
+  public static final class TxReceipts4Subscribe extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxReceipts4Subscribe)
       TxReceipts4SubscribeOrBuilder {
@@ -1735,12 +1757,14 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .TxReceipts4SubscribePerBlk txReceipts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4SubscribePerBlk> getTxReceiptsList() {
       return txReceipts_;
     }
     /**
      * <code>repeated .TxReceipts4SubscribePerBlk txReceipts = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4SubscribePerBlkOrBuilder> 
         getTxReceiptsOrBuilderList() {
       return txReceipts_;
@@ -1748,18 +1772,21 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .TxReceipts4SubscribePerBlk txReceipts = 1;</code>
      */
+    @java.lang.Override
     public int getTxReceiptsCount() {
       return txReceipts_.size();
     }
     /**
      * <code>repeated .TxReceipts4SubscribePerBlk txReceipts = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4SubscribePerBlk getTxReceipts(int index) {
       return txReceipts_.get(index);
     }
     /**
      * <code>repeated .TxReceipts4SubscribePerBlk txReceipts = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4SubscribePerBlkOrBuilder getTxReceiptsOrBuilder(
         int index) {
       return txReceipts_.get(index);
@@ -2418,7 +2445,7 @@ public final class PushTxReceiptProtobuf {
   /**
    * Protobuf type {@code TxHashWithReceiptType}
    */
-  public  static final class TxHashWithReceiptType extends
+  public static final class TxHashWithReceiptType extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxHashWithReceiptType)
       TxHashWithReceiptTypeOrBuilder {
@@ -2509,6 +2536,7 @@ public final class PushTxReceiptProtobuf {
      * <code>bytes hash = 1;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -2519,6 +2547,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int32 ty = 2;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -2847,6 +2876,7 @@ public final class PushTxReceiptProtobuf {
        * <code>bytes hash = 1;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -2880,6 +2910,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int32 ty = 2;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -3018,7 +3049,7 @@ public final class PushTxReceiptProtobuf {
   /**
    * Protobuf type {@code TxResultPerBlock}
    */
-  public  static final class TxResultPerBlock extends
+  public static final class TxResultPerBlock extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxResultPerBlock)
       TxResultPerBlockOrBuilder {
@@ -3138,12 +3169,14 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .TxHashWithReceiptType items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxHashWithReceiptType> getItemsList() {
       return items_;
     }
     /**
      * <code>repeated .TxHashWithReceiptType items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxHashWithReceiptTypeOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -3151,18 +3184,21 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .TxHashWithReceiptType items = 1;</code>
      */
+    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
     /**
      * <code>repeated .TxHashWithReceiptType items = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxHashWithReceiptType getItems(int index) {
       return items_.get(index);
     }
     /**
      * <code>repeated .TxHashWithReceiptType items = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxHashWithReceiptTypeOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -3174,6 +3210,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int64 height = 2;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -3184,6 +3221,7 @@ public final class PushTxReceiptProtobuf {
      * <code>bytes blockHash = 3;</code>
      * @return The blockHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getBlockHash() {
       return blockHash_;
     }
@@ -3194,6 +3232,7 @@ public final class PushTxReceiptProtobuf {
      * <code>bytes parentHash = 4;</code>
      * @return The parentHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getParentHash() {
       return parentHash_;
     }
@@ -3204,6 +3243,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int32 addDelType = 5;</code>
      * @return The addDelType.
      */
+    @java.lang.Override
     public int getAddDelType() {
       return addDelType_;
     }
@@ -3214,6 +3254,7 @@ public final class PushTxReceiptProtobuf {
      * <code>int64 seqNum = 6;</code>
      * @return The seqNum.
      */
+    @java.lang.Override
     public long getSeqNum() {
       return seqNum_;
     }
@@ -3892,6 +3933,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int64 height = 2;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -3922,6 +3964,7 @@ public final class PushTxReceiptProtobuf {
        * <code>bytes blockHash = 3;</code>
        * @return The blockHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getBlockHash() {
         return blockHash_;
       }
@@ -3955,6 +3998,7 @@ public final class PushTxReceiptProtobuf {
        * <code>bytes parentHash = 4;</code>
        * @return The parentHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getParentHash() {
         return parentHash_;
       }
@@ -3988,6 +4032,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int32 addDelType = 5;</code>
        * @return The addDelType.
        */
+      @java.lang.Override
       public int getAddDelType() {
         return addDelType_;
       }
@@ -4018,6 +4063,7 @@ public final class PushTxReceiptProtobuf {
        * <code>int64 seqNum = 6;</code>
        * @return The seqNum.
        */
+      @java.lang.Override
       public long getSeqNum() {
         return seqNum_;
       }
@@ -4126,7 +4172,7 @@ public final class PushTxReceiptProtobuf {
   /**
    * Protobuf type {@code TxResultSeqs}
    */
-  public  static final class TxResultSeqs extends
+  public static final class TxResultSeqs extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxResultSeqs)
       TxResultSeqsOrBuilder {
@@ -4219,12 +4265,14 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .TxResultPerBlock items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultPerBlock> getItemsList() {
       return items_;
     }
     /**
      * <code>repeated .TxResultPerBlock items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultPerBlockOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -4232,18 +4280,21 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>repeated .TxResultPerBlock items = 1;</code>
      */
+    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
     /**
      * <code>repeated .TxResultPerBlock items = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultPerBlock getItems(int index) {
       return items_.get(index);
     }
     /**
      * <code>repeated .TxResultPerBlock items = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultPerBlockOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -4979,7 +5030,7 @@ public final class PushTxReceiptProtobuf {
   /**
    * Protobuf type {@code PushData}
    */
-  public  static final class PushData extends
+  public static final class PushData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:PushData)
       PushDataOrBuilder {
@@ -5183,6 +5234,7 @@ public final class PushTxReceiptProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5199,6 +5251,7 @@ public final class PushTxReceiptProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5218,6 +5271,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.BlockSeqs blockSeqs = 2;</code>
      * @return Whether the blockSeqs field is set.
      */
+    @java.lang.Override
     public boolean hasBlockSeqs() {
       return valueCase_ == 2;
     }
@@ -5225,6 +5279,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.BlockSeqs blockSeqs = 2;</code>
      * @return The blockSeqs.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqs getBlockSeqs() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqs) value_;
@@ -5234,6 +5289,7 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>.BlockSeqs blockSeqs = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqsOrBuilder getBlockSeqsOrBuilder() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqs) value_;
@@ -5246,6 +5302,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.HeaderSeqs headerSeqs = 3;</code>
      * @return Whether the headerSeqs field is set.
      */
+    @java.lang.Override
     public boolean hasHeaderSeqs() {
       return valueCase_ == 3;
     }
@@ -5253,6 +5310,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.HeaderSeqs headerSeqs = 3;</code>
      * @return The headerSeqs.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqs getHeaderSeqs() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqs) value_;
@@ -5262,6 +5320,7 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>.HeaderSeqs headerSeqs = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqsOrBuilder getHeaderSeqsOrBuilder() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqs) value_;
@@ -5274,6 +5333,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.TxReceipts4Subscribe txReceipts = 4;</code>
      * @return Whether the txReceipts field is set.
      */
+    @java.lang.Override
     public boolean hasTxReceipts() {
       return valueCase_ == 4;
     }
@@ -5281,6 +5341,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.TxReceipts4Subscribe txReceipts = 4;</code>
      * @return The txReceipts.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4Subscribe getTxReceipts() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4Subscribe) value_;
@@ -5290,6 +5351,7 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>.TxReceipts4Subscribe txReceipts = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4SubscribeOrBuilder getTxReceiptsOrBuilder() {
       if (valueCase_ == 4) {
          return (cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4Subscribe) value_;
@@ -5302,6 +5364,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.TxResultSeqs txResult = 5;</code>
      * @return Whether the txResult field is set.
      */
+    @java.lang.Override
     public boolean hasTxResult() {
       return valueCase_ == 5;
     }
@@ -5309,6 +5372,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.TxResultSeqs txResult = 5;</code>
      * @return The txResult.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqs getTxResult() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqs) value_;
@@ -5318,6 +5382,7 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>.TxResultSeqs txResult = 5;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqsOrBuilder getTxResultOrBuilder() {
       if (valueCase_ == 5) {
          return (cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqs) value_;
@@ -5330,6 +5395,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.EVMTxLogsInBlks evmLogs = 6;</code>
      * @return Whether the evmLogs field is set.
      */
+    @java.lang.Override
     public boolean hasEvmLogs() {
       return valueCase_ == 6;
     }
@@ -5337,6 +5403,7 @@ public final class PushTxReceiptProtobuf {
      * <code>.EVMTxLogsInBlks evmLogs = 6;</code>
      * @return The evmLogs.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlks getEvmLogs() {
       if (valueCase_ == 6) {
          return (cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlks) value_;
@@ -5346,6 +5413,7 @@ public final class PushTxReceiptProtobuf {
     /**
      * <code>.EVMTxLogsInBlks evmLogs = 6;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlksOrBuilder getEvmLogsOrBuilder() {
       if (valueCase_ == 6) {
          return (cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlks) value_;
@@ -5899,6 +5967,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.BlockSeqs blockSeqs = 2;</code>
        * @return Whether the blockSeqs field is set.
        */
+      @java.lang.Override
       public boolean hasBlockSeqs() {
         return valueCase_ == 2;
       }
@@ -5906,6 +5975,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.BlockSeqs blockSeqs = 2;</code>
        * @return The blockSeqs.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqs getBlockSeqs() {
         if (blockSeqsBuilder_ == null) {
           if (valueCase_ == 2) {
@@ -5999,6 +6069,7 @@ public final class PushTxReceiptProtobuf {
       /**
        * <code>.BlockSeqs blockSeqs = 2;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.BlockSeqsOrBuilder getBlockSeqsOrBuilder() {
         if ((valueCase_ == 2) && (blockSeqsBuilder_ != null)) {
           return blockSeqsBuilder_.getMessageOrBuilder();
@@ -6037,6 +6108,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.HeaderSeqs headerSeqs = 3;</code>
        * @return Whether the headerSeqs field is set.
        */
+      @java.lang.Override
       public boolean hasHeaderSeqs() {
         return valueCase_ == 3;
       }
@@ -6044,6 +6116,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.HeaderSeqs headerSeqs = 3;</code>
        * @return The headerSeqs.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqs getHeaderSeqs() {
         if (headerSeqsBuilder_ == null) {
           if (valueCase_ == 3) {
@@ -6137,6 +6210,7 @@ public final class PushTxReceiptProtobuf {
       /**
        * <code>.HeaderSeqs headerSeqs = 3;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.HeaderSeqsOrBuilder getHeaderSeqsOrBuilder() {
         if ((valueCase_ == 3) && (headerSeqsBuilder_ != null)) {
           return headerSeqsBuilder_.getMessageOrBuilder();
@@ -6175,6 +6249,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.TxReceipts4Subscribe txReceipts = 4;</code>
        * @return Whether the txReceipts field is set.
        */
+      @java.lang.Override
       public boolean hasTxReceipts() {
         return valueCase_ == 4;
       }
@@ -6182,6 +6257,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.TxReceipts4Subscribe txReceipts = 4;</code>
        * @return The txReceipts.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4Subscribe getTxReceipts() {
         if (txReceiptsBuilder_ == null) {
           if (valueCase_ == 4) {
@@ -6275,6 +6351,7 @@ public final class PushTxReceiptProtobuf {
       /**
        * <code>.TxReceipts4Subscribe txReceipts = 4;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4SubscribeOrBuilder getTxReceiptsOrBuilder() {
         if ((valueCase_ == 4) && (txReceiptsBuilder_ != null)) {
           return txReceiptsBuilder_.getMessageOrBuilder();
@@ -6313,6 +6390,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.TxResultSeqs txResult = 5;</code>
        * @return Whether the txResult field is set.
        */
+      @java.lang.Override
       public boolean hasTxResult() {
         return valueCase_ == 5;
       }
@@ -6320,6 +6398,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.TxResultSeqs txResult = 5;</code>
        * @return The txResult.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqs getTxResult() {
         if (txResultBuilder_ == null) {
           if (valueCase_ == 5) {
@@ -6413,6 +6492,7 @@ public final class PushTxReceiptProtobuf {
       /**
        * <code>.TxResultSeqs txResult = 5;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqsOrBuilder getTxResultOrBuilder() {
         if ((valueCase_ == 5) && (txResultBuilder_ != null)) {
           return txResultBuilder_.getMessageOrBuilder();
@@ -6451,6 +6531,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.EVMTxLogsInBlks evmLogs = 6;</code>
        * @return Whether the evmLogs field is set.
        */
+      @java.lang.Override
       public boolean hasEvmLogs() {
         return valueCase_ == 6;
       }
@@ -6458,6 +6539,7 @@ public final class PushTxReceiptProtobuf {
        * <code>.EVMTxLogsInBlks evmLogs = 6;</code>
        * @return The evmLogs.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlks getEvmLogs() {
         if (evmLogsBuilder_ == null) {
           if (valueCase_ == 6) {
@@ -6551,6 +6633,7 @@ public final class PushTxReceiptProtobuf {
       /**
        * <code>.EVMTxLogsInBlks evmLogs = 6;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlksOrBuilder getEvmLogsOrBuilder() {
         if ((valueCase_ == 6) && (evmLogsBuilder_ != null)) {
           return evmLogsBuilder_.getMessageOrBuilder();

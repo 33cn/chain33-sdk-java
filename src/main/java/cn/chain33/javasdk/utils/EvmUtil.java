@@ -8,7 +8,7 @@ import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.evm.Abi;
 import cn.chain33.javasdk.model.evm.compiler.CompilationResult;
 import cn.chain33.javasdk.model.evm.compiler.SolidityCompiler;
-import cn.chain33.javasdk.model.protobuf.EvmService;
+import cn.chain33.javasdk.model.protobuf.EvmProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import cn.chain33.javasdk.model.rpcresult.EvmLog;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
@@ -42,13 +42,13 @@ public class EvmUtil {
      */
     @Deprecated
     public static String createEvmContract(byte[] code, String note, String alias, String privateKey) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
         evmActionBuilder.setContractAddr(TransactionUtil.getToAddress(execer));
 
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign(execer, evmContractAction.toByteArray(),
                 TransactionUtil.DEFAULT_FEE, 0);
@@ -75,13 +75,13 @@ public class EvmUtil {
      */
     @Deprecated
     public static String createEvmContract(byte[] code, String note, String alias, String privateKey, String paraName) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
         evmActionBuilder.setContractAddr(TransactionUtil.getToAddress((paraName + "evm").getBytes()));
 
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
                 EVM_FEE, 0);
@@ -108,13 +108,13 @@ public class EvmUtil {
      * @description 部署合约（平行链的情况下调用，要传paraName（平行链名称））
      */
     public static String createEvmContract(byte[] code, String note, String alias, String privateKey, String paraName, long gas) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
         evmActionBuilder.setContractAddr(TransactionUtil.getToAddress((paraName + "evm").getBytes()));
 
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
         long fee = 0L;
         // 以防用户乱填GAS，导致交易执行不过，设置一个最小的GAS费
         if (gas < EVM_FEE) {
@@ -147,13 +147,13 @@ public class EvmUtil {
      * @return
      */
     public static String getCreateEvmEncode(byte[] code, String note, String alias, String paraName) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
         evmActionBuilder.setContractAddr(TransactionUtil.getToAddress((paraName + "evm").getBytes()));
 
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
                 EVM_FEE, 0);
@@ -170,12 +170,12 @@ public class EvmUtil {
      */
     @Deprecated
     public static String callEvmContract(byte[] parameter, String note, long amount, String contractAddr, String privateKey, String paraName) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(parameter));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAmount(amount);
         evmActionBuilder.setContractAddr(contractAddr);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
                 EVM_FEE, 0);
@@ -200,12 +200,12 @@ public class EvmUtil {
      * @description 调用合约（平行链的情况下调用，要传paraName（平行链名称））
      */
     public static String callEvmContract(byte[] parameter, String note, long amount, String contractAddr, String privateKey, String paraName, long gas) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(parameter));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAmount(amount);
         evmActionBuilder.setContractAddr(contractAddr);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
         long fee = 0L;
         if (gas < EVM_FEE) {
             fee = EVM_FEE;
@@ -235,12 +235,12 @@ public class EvmUtil {
      * @description 调用合约（平行链的情况下调用，要传paraName（平行链名称））
      */
     public static String getCallEvmEncode(byte[] parameter, String note, long amount, String contractAddr, String paraName) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(parameter));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAmount(amount);
         evmActionBuilder.setContractAddr(contractAddr);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(),
                 EVM_FEE, 0);
@@ -256,12 +256,12 @@ public class EvmUtil {
      * @description 部署合约（平行链采用代扣的情况下调用）
      */
     public static String createEvmContractWithhold(byte[] code, String note, String alias, String privateKey, String execer, String contranctAddress, long gas) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
         evmActionBuilder.setContractAddr(contranctAddress);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         long fee = 0L;
         if (gas < EVM_FEE) {
@@ -286,12 +286,12 @@ public class EvmUtil {
      * @description 调用合约（平行链采用代扣的情况下调用）
      */
     public static String callEvmContractWithhold(byte[] parameter, String note, long amount, String exec, String privateKey, String contractAddress) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(parameter));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAmount(amount);
         evmActionBuilder.setContractAddr(contractAddress);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         String createTransferTx = TransactionUtil.createTransferTx(privateKey, TransactionUtil.getToAddress(exec.getBytes()), exec, evmContractAction.toByteArray(), EVM_FEE);
 
@@ -308,12 +308,12 @@ public class EvmUtil {
      * @description 调用合约（平行链采用代扣的情况下调用）
      */
     public static String callEvmContractWithholdByGas(byte[] parameter, String note, long amount, String exec, String privateKey, String contractAddress, long gas) {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(parameter));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAmount(amount);
         evmActionBuilder.setContractAddr(contractAddress);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
 
         long fee = 0L;
         if (gas < EVM_FEE) {
@@ -406,13 +406,13 @@ public class EvmUtil {
             bytes=HexUtil.fromHexString(constructorEncode);
         }
         code = ByteUtil.merge(HexUtil.fromHexString(codeStr), bytes);
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setCode(ByteString.copyFrom(code));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAlias(alias);
         evmActionBuilder.setContractAddr(AddressUtil.getToAddress((paraName + "evm").getBytes(), addressType));
 
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
         long fee = 0L;
         // 以防用户乱填GAS，导致交易执行不过，设置一个最小的GAS费
         if (gas < EVM_FEE) {
@@ -466,12 +466,12 @@ public class EvmUtil {
      * @return
      */
     public static String callEvmContract(String functionEncode, String contractAddr, String note, long amount, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long gas) throws Exception {
-        EvmService.EVMContractAction.Builder evmActionBuilder = EvmService.EVMContractAction.newBuilder();
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(HexUtil.fromHexString(functionEncode)));
         evmActionBuilder.setNote(note);
         evmActionBuilder.setAmount(amount);
         evmActionBuilder.setContractAddr(contractAddr);
-        EvmService.EVMContractAction evmContractAction = evmActionBuilder.build();
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
         long fee = 0L;
         if (gas < EVM_FEE) {
             fee = EVM_FEE;
