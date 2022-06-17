@@ -1,23 +1,28 @@
 package cn.chain33.javasdk.utils;
 
 import cn.chain33.javasdk.model.abi.EventEncoder;
+import cn.chain33.javasdk.model.abi.EventLogDecoder;
 import cn.chain33.javasdk.model.abi.datatypes.Event;
+import cn.chain33.javasdk.model.abi.datatypes.Type;
 import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.enums.ChainID;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.evm.Abi;
 import cn.chain33.javasdk.model.evm.compiler.CompilationResult;
 import cn.chain33.javasdk.model.evm.compiler.SolidityCompiler;
+import cn.chain33.javasdk.model.protobuf.EvmEventProtobuf;
+import cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMLog;
+import cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogPerBlk;
 import cn.chain33.javasdk.model.protobuf.EvmProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
-import cn.chain33.javasdk.model.rpcresult.EvmLog;
-import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
+import cn.chain33.javasdk.model.rpcresult.*;
 import com.alibaba.fastjson.JSONObject;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -386,16 +391,16 @@ public class EvmUtil {
 
 
     /**
-     * @param codeStr     合约代码内容
-     * @param constructorEncode  编码好后的构造参数
-     * @param note        注释
-     * @param alias       合约别名
-     * @param privateKey  签名私钥
-     * @param signType    签名类型 目前支持secep256k1,ETH_secep256k1
-     * @param addressType 地址类型
-     * @param chainID     链ID
-     * @param paraName    平行链名称（如果是主链的情况，此参数填空）
-     * @param gas         gas费
+     * @param codeStr           合约代码内容
+     * @param constructorEncode 编码好后的构造参数
+     * @param note              注释
+     * @param alias             合约别名
+     * @param privateKey        签名私钥
+     * @param signType          签名类型 目前支持secep256k1,ETH_secep256k1
+     * @param addressType       地址类型
+     * @param chainID           链ID
+     * @param paraName          平行链名称（如果是主链的情况，此参数填空）
+     * @param gas               gas费
      * @return hash，即合约名
      * @description 新增一键部署合约方法（平行链的情况下调用，要传paraName（平行链名称））
      */
@@ -403,7 +408,7 @@ public class EvmUtil {
         byte[] code;
         byte[] bytes = new byte[0];
         if (constructorEncode != null) {
-            bytes=HexUtil.fromHexString(constructorEncode);
+            bytes = HexUtil.fromHexString(constructorEncode);
         }
         code = ByteUtil.merge(HexUtil.fromHexString(codeStr), bytes);
         EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
@@ -437,6 +442,7 @@ public class EvmUtil {
 
     /**
      * YCC中构建evm合约交易
+     *
      * @param codeStr
      * @param constructorEncode 编码后的构造函数
      * @param note
@@ -448,11 +454,12 @@ public class EvmUtil {
      * @throws Exception
      */
     public static String createEvmContractForYCC(String codeStr, String constructorEncode, String note, String alias, String privateKey, String paraName, long gas) throws Exception {
-       return createEvmContract(codeStr,constructorEncode,note,alias,privateKey,SignType.ETH_SECP256K1,AddressType.ETH_ADDRESS, ChainID.YCC.getID(),paraName,gas);
+        return createEvmContract(codeStr, constructorEncode, note, alias, privateKey, SignType.ETH_SECP256K1, AddressType.ETH_ADDRESS, ChainID.YCC.getID(), paraName, gas);
     }
 
     /**
      * 新增通用的call evm合约方法（平行链的情况下调用，要传paraName（平行链名称））
+     *
      * @param functionEncode 编码后的调用函数
      * @param contractAddr
      * @param note
@@ -495,6 +502,7 @@ public class EvmUtil {
 
     /**
      * YCC中构建调用evm合约交易
+     *
      * @param functionEncode 编码后的调用函数
      * @param contractAddr
      * @param note
@@ -506,21 +514,22 @@ public class EvmUtil {
      * @throws Exception
      */
     public static String callEvmContractForYCC(String functionEncode, String contractAddr, String note, long amount, String privateKey, String paraName, long gas) throws Exception {
-        return callEvmContract(functionEncode,contractAddr,note,amount,privateKey,SignType.ETH_SECP256K1,AddressType.ETH_ADDRESS, ChainID.YCC.getID(),paraName,gas);
+        return callEvmContract(functionEncode, contractAddr, note, amount, privateKey, SignType.ETH_SECP256K1, AddressType.ETH_ADDRESS, ChainID.YCC.getID(), paraName, gas);
     }
 
     /**
      * 从交易日志中获取指定event的匹配event 日志
+     *
      * @param txResult
      * @param event
      * @return
      */
-    public static List<String> getEvmLogList(QueryTransactionResult txResult, Event event){
+    public static List<String> getEvmLogList(QueryTransactionResult txResult, Event event) {
         List<String> list = Arrays.stream(txResult.getReceipt().getLogs()).filter(log -> {
-            EvmLog evmLog =JSONObject.parseObject(JSONObject.toJSONString(log.getLog())).toJavaObject(EvmLog.class);
+            EvmLog evmLog = JSONObject.parseObject(JSONObject.toJSONString(log.getLog())).toJavaObject(EvmLog.class);
             return log.getTy() == 605 && evmLog.getTopic()[0].equals(EventEncoder.encode(event));
-        }).map(item->{
-            EvmLog evmLog =JSONObject.parseObject(JSONObject.toJSONString(item.getLog())).toJavaObject(EvmLog.class);
+        }).map(item -> {
+            EvmLog evmLog = JSONObject.parseObject(JSONObject.toJSONString(item.getLog())).toJavaObject(EvmLog.class);
             byte[] bytes = new byte[0];
             for (int i = 0; i < evmLog.getTopic().length; i++) {
                 if (i == 0) {
@@ -535,4 +544,80 @@ public class EvmUtil {
         }).collect(Collectors.toList());
         return list;
     }
+
+    /**
+     * 从evmLog中提取完整的evm log 日志
+     *
+     * @param evmLog
+     * @return
+     */
+    public static EventLog merageEvmLog(EVMLog evmLog) {
+        EventLog event = new EventLog();
+        byte[] bytes = new byte[0];
+        for (int i = 0; i < evmLog.getTopicCount(); i++) {
+            if (i == 0) {
+                event.setEventId(HexUtil.toHexString(evmLog.getTopic(0).toByteArray()));
+                continue;
+            }
+            bytes = ByteUtil.merge(bytes, evmLog.getTopic(i).toByteArray());
+        }
+        if (evmLog.getData() != null) {
+            bytes = ByteUtil.merge(bytes, evmLog.getData().toByteArray());
+        }
+        event.setEncodeCode(HexUtil.toHexString(bytes));
+        return event;
+    }
+
+    /**
+     * 单个区块中event日志解析
+     * @param blk
+     * @param eventList
+     * @return
+     */
+    public static EvmLogParseInBlock parseEvmLogInBlock(EVMTxLogPerBlk blk, List<Event> eventList) {
+        EvmLogParseInBlock evmLogParseInBlock = new EvmLogParseInBlock();
+        evmLogParseInBlock.setBlockHeight(blk.getHeight());
+        List<EvmLogParseInTx> evmLogParseInTxList = new ArrayList<EvmLogParseInTx>();
+        for (int i = 0; i < blk.getTxAndLogsCount(); i++) {
+            EvmLogParseInTx inTx = new EvmLogParseInTx();
+            inTx.setTxHash(TransactionUtil.getHash(blk.getTxAndLogs(i).getTx()));
+
+            int size = blk.getTxAndLogs(i).getLogsPerTx().getLogsCount();
+            List<EventParams> eventParamsList = new ArrayList<EventParams>();
+            for (int j = 0; j < size; j++) {
+                EventLog eventLog = merageEvmLog(blk.getTxAndLogs(i).getLogsPerTx().getLogs(j));
+                eventList.stream().filter(event -> EventEncoder.encode(event).equals(eventLog.getEventId())).forEach(
+                        event -> {
+                            List<Type> paramsList = EventLogDecoder.decodeEventParameters(eventLog.getEncodeCode(), event);
+                            EventParams params = new EventParams();
+                            params.setEvent(event);
+                            params.setParams(paramsList);
+                            eventParamsList.add(params);
+                        }
+                );
+            }
+            inTx.setEventParamsList(eventParamsList);
+            evmLogParseInTxList.add(inTx);
+
+        }
+        evmLogParseInBlock.setEvmLogParseInTxeList(evmLogParseInTxList);
+        return evmLogParseInBlock;
+    }
+
+    /**
+     * 多个区块evm event日志解析
+     * @param blks
+     * @param eventList
+     * @return
+     */
+    public static EvmLogParseInBlocks parseEvmLogInBlocks(EvmEventProtobuf.EVMTxLogsInBlks blks, List<Event> eventList) {
+        EvmLogParseInBlocks evmLogParseInBlocks = new EvmLogParseInBlocks();
+        List<EvmLogParseInBlock> evmLogParseInBlockList = new ArrayList<EvmLogParseInBlock>();
+        for (int i = 0; i < blks.getLogs4EVMPerBlkCount(); i++) {
+            evmLogParseInBlockList.add(parseEvmLogInBlock(blks.getLogs4EVMPerBlk(i),eventList));
+        }
+        evmLogParseInBlocks.setEvmLogParseInBlockList(evmLogParseInBlockList);
+        return evmLogParseInBlocks;
+    }
+
 }

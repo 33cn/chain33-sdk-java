@@ -129,7 +129,11 @@
 			<artifactId>grpc-stub</artifactId>
 			<version>1.34.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.googlecode.protobuf-java-format</groupId>
+			<artifactId>protobuf-java-format</artifactId>
+			<version>1.4</version>
+		</dependency>
     </dependencies>
 	
 	<build>
@@ -163,14 +167,14 @@
 				</configuration>
 				<executions>
 					<execution>
-						<!--在执行mvn compile的时候会执行以下操作-->
-						<phase>compile</phase>
-						<goals>
+<!--						&lt;!&ndash;在执行mvn compile的时候会执行以下操作&ndash;&gt;-->
+<!--						<phase>compile</phase>-->
+<!--						<goals>-->
 <!--							&lt;!&ndash;生成OuterClass类&ndash;&gt;-->
 <!--							<goal>compile</goal>-->
 <!--							&lt;!&ndash;生成Grpc类&ndash;&gt;-->
 <!--							<goal>compile-custom</goal>-->
-						</goals>
+<!--						</goals>-->
 					</execution>
 				</executions>
 			</plugin>

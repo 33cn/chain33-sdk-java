@@ -1,10 +1,7 @@
 package cn.chain33.javasdk.server.http.handler;
 
-import cn.chain33.javasdk.model.abi.datatypes.Event;
 import cn.chain33.javasdk.model.enums.EncodeType;
-import cn.chain33.javasdk.model.protobuf.EvmEventProtobuf.EVMTxLogsInBlks;
-import cn.chain33.javasdk.model.rpcresult.EvmLogParseInBlocks;
-import cn.chain33.javasdk.utils.EvmUtil;
+import cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxReceipts4Subscribe;
 import com.googlecode.protobuf.format.JsonFormat;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -12,18 +9,15 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.List;
 import java.util.zip.GZIPInputStream;
 
 /**
  * @authoer lhl
- * @date 2022/6/15 上午9:36
+ * @date 2022/6/17 下午10:24
  */
-public class EvmEventHandler extends Handler implements HttpHandler {
-    //构造函数
-    EvmEventHandler(EncodeType encodeType, List<Event> eventList,Outflow outflow) {
+public class TxReceiptHandler extends Handler implements HttpHandler {
+    TxReceiptHandler(EncodeType encodeType,Outflow outflow){
         this.setEncodeType(encodeType);
-        this.setEventList(eventList);
         this.setOutflow(outflow);
     }
 
@@ -39,27 +33,25 @@ public class EvmEventHandler extends Handler implements HttpHandler {
         }
         //判断编码类型
         if (this.getEncodeType().equals(EncodeType.JSON)) {
-            EVMTxLogsInBlks.Builder builder = EVMTxLogsInBlks.newBuilder();
+            TxReceipts4Subscribe.Builder builder = TxReceipts4Subscribe.newBuilder();
             JsonFormat jsonFormat = new JsonFormat();
             //json编码转protobuf编码
             ByteArrayInputStream inputStream= new ByteArrayInputStream(out.toByteArray());
             jsonFormat.merge(inputStream, builder);
-            EVMTxLogsInBlks evmTxLogsInBlks = builder.build();
-            this.getOutflow().process(EvmUtil.parseEvmLogInBlocks(evmTxLogsInBlks, this.getEventList()));
+            TxReceipts4Subscribe txReceipts4Subscribe = builder.build();
+            this.getOutflow().process(txReceipts4Subscribe);
 
         } else if (this.getEncodeType().equals(EncodeType.PROTOBUFF)) {
             //protobuf解析
-            EVMTxLogsInBlks evmTxLogsInBlks = EVMTxLogsInBlks.parseFrom(out.toByteArray());
+            TxReceipts4Subscribe txReceipts4Subscribe = TxReceipts4Subscribe.parseFrom(out.toByteArray());
             //向外输出解析结果
-            this.getOutflow().process(EvmUtil.parseEvmLogInBlocks(evmTxLogsInBlks, this.getEventList()));
+            this.getOutflow().process(txReceipts4Subscribe);
         }
         httpExchange.getResponseBody().write("ok".getBytes());
 
     }
-
     @Override
     public String getURI() {
-        return "/evmevent/"+super.getURI();
+        return "/txreceipt/"+super.getURI();
     }
-
 }
