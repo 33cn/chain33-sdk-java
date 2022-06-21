@@ -1,7 +1,10 @@
 package cn.chain33.javasdk.server.http.handler;
 
+import cn.chain33.javasdk.model.abi.datatypes.Event;
 import cn.chain33.javasdk.model.enums.EncodeType;
 import cn.chain33.javasdk.model.protobuf.PushTxReceiptProtobuf.TxResultSeqs;
+import cn.chain33.javasdk.server.http.callback.Outflow;
+import com.alibaba.fastjson.JSONObject;
 import com.googlecode.protobuf.format.JsonFormat;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -9,6 +12,7 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.zip.GZIPInputStream;
 
 /**
@@ -16,14 +20,13 @@ import java.util.zip.GZIPInputStream;
  * @date 2022/6/17 下午10:25
  */
 public class TxResultHandler extends Handler implements HttpHandler {
-    TxResultHandler(EncodeType encodeType,Outflow outflow) {
+    public TxResultHandler(EncodeType encodeType, Outflow outflow) {
         this.setEncodeType(encodeType);
         this.setOutflow(outflow);
     }
 
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
-        System.out.println("---url:---- " + httpExchange.getRequestURI().getQuery());
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         GZIPInputStream ungzip = new GZIPInputStream(httpExchange.getRequestBody());
         byte[] buffer = new byte[256];
@@ -36,18 +39,21 @@ public class TxResultHandler extends Handler implements HttpHandler {
             TxResultSeqs.Builder builder = TxResultSeqs.newBuilder();
             JsonFormat jsonFormat = new JsonFormat();
             //json编码转protobuf编码
-            ByteArrayInputStream inputStream= new ByteArrayInputStream(out.toByteArray());
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(JSONObject.parseObject(new String(out.toByteArray())).toJSONString().getBytes());
             jsonFormat.merge(inputStream, builder);
             TxResultSeqs txResultSeqs = builder.build();
-            this.getOutflow().process(txResultSeqs);
+            this.getOutflow().callback(txResultSeqs);
 
         } else if (this.getEncodeType().equals(EncodeType.PROTOBUFF)) {
             //protobuf解析
             TxResultSeqs txResultSeqs  = TxResultSeqs.parseFrom(out.toByteArray());
             //向外输出解析结果
-            this.getOutflow().process(txResultSeqs);
+            this.getOutflow().callback(txResultSeqs);
         }
+        httpExchange.getResponseHeaders().add("Content-Type", "application/json;charset=utf-8");
+        httpExchange.sendResponseHeaders(200, "ok".getBytes().length);
         httpExchange.getResponseBody().write("ok".getBytes());
+        httpExchange.close();
 
     }
 

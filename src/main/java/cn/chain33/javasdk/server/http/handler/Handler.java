@@ -1,25 +1,25 @@
 package cn.chain33.javasdk.server.http.handler;
 
 import cn.chain33.javasdk.model.abi.datatypes.Event;
-import cn.chain33.javasdk.model.abi.datatypes.Type;
 import cn.chain33.javasdk.model.enums.EncodeType;
-import cn.chain33.javasdk.model.rpcresult.EvmLogParseInBlock;
-import cn.chain33.javasdk.model.rpcresult.EvmLogParseInBlocks;
+import cn.chain33.javasdk.server.http.callback.Outflow;
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
 
+import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @authoer lhl
  * @date 2022/6/16 下午5:14
  * 抽象handler类
  */
-public abstract class Handler {
-    private EncodeType encodeType;
+public abstract class Handler implements HttpHandler {
+    public EncodeType encodeType;
 
-    private List<Event> eventList;
+    public List<Event> eventList;
 
-    private Outflow outflow;
+    public Outflow outflow;
 
     public EncodeType getEncodeType() {
         return encodeType;
@@ -48,4 +48,6 @@ public abstract class Handler {
     public String getURI() {
         return encodeType.getType();
     }
+
+    public abstract void handle(HttpExchange httpExchange) throws IOException;
 }

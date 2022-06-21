@@ -1,5 +1,6 @@
 package cn.chain33.javasdk.server.http;
 
+import cn.chain33.javasdk.server.http.handler.Handler;
 import com.sun.net.httpserver.HttpHandler;
 
 import java.util.Map;
@@ -10,7 +11,7 @@ import java.util.Map;
  */
 public interface InnerServer {
 
-    void registerHandlers(Map<String, HttpHandler> map);
+    void registerHandlers(Handler...handlers);
 
     void start();
 

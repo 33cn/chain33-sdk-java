@@ -552,20 +552,20 @@ public class EvmUtil {
      * @return
      */
     public static EventLog merageEvmLog(EVMLog evmLog) {
-        EventLog event = new EventLog();
+        EventLog eventLog = new EventLog();
         byte[] bytes = new byte[0];
         for (int i = 0; i < evmLog.getTopicCount(); i++) {
             if (i == 0) {
-                event.setEventId(HexUtil.toHexString(evmLog.getTopic(0).toByteArray()));
+                eventLog.setEventId(new String(evmLog.getTopic(i).toByteArray()));
                 continue;
             }
-            bytes = ByteUtil.merge(bytes, evmLog.getTopic(i).toByteArray());
+            bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(new String(evmLog.getTopic(i).toByteArray())));
         }
         if (evmLog.getData() != null) {
-            bytes = ByteUtil.merge(bytes, evmLog.getData().toByteArray());
+            bytes = ByteUtil.merge(bytes, HexUtil.fromHexString(new String(evmLog.getData().toByteArray())));
         }
-        event.setEncodeCode(HexUtil.toHexString(bytes));
-        return event;
+        eventLog.setEncodeCode(HexUtil.toHexString(bytes));
+        return eventLog;
     }
 
     /**
