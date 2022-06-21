@@ -12,7 +12,7 @@ import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.protobuf.*;
 import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
-import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ModifyConfig.Builder;
+import cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfig.Builder;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate;
@@ -1315,7 +1315,7 @@ public class TransactionUtil {
      * @return
      */
     public static String createManage(String key, String value, String op, String privateKey, String execer) {
-        Builder managerBuilder = ManageProtobuf.ModifyConfig.newBuilder();
+        Builder managerBuilder = ExecuterProtobuf.ModifyConfig.newBuilder();
         managerBuilder.setKey(key);
         managerBuilder.setValue(value);
         managerBuilder.setOp(op);

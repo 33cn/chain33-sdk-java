@@ -33,7 +33,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code Reply}
    */
-  public  static final class Reply extends
+  public static final class Reply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Reply)
       ReplyOrBuilder {
@@ -124,6 +124,7 @@ public final class CommonProtobuf {
      * <code>bool isOk = 1;</code>
      * @return The isOk.
      */
+    @java.lang.Override
     public boolean getIsOk() {
       return isOk_;
     }
@@ -134,6 +135,7 @@ public final class CommonProtobuf {
      * <code>bytes msg = 2;</code>
      * @return The msg.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getMsg() {
       return msg_;
     }
@@ -463,6 +465,7 @@ public final class CommonProtobuf {
        * <code>bool isOk = 1;</code>
        * @return The isOk.
        */
+      @java.lang.Override
       public boolean getIsOk() {
         return isOk_;
       }
@@ -493,6 +496,7 @@ public final class CommonProtobuf {
        * <code>bytes msg = 2;</code>
        * @return The msg.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getMsg() {
         return msg_;
       }
@@ -592,7 +596,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqString}
    */
-  public  static final class ReqString extends
+  public static final class ReqString extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqString)
       ReqStringOrBuilder {
@@ -679,6 +683,7 @@ public final class CommonProtobuf {
      * <code>string data = 1;</code>
      * @return The data.
      */
+    @java.lang.Override
     public java.lang.String getData() {
       java.lang.Object ref = data_;
       if (ref instanceof java.lang.String) {
@@ -695,6 +700,7 @@ public final class CommonProtobuf {
      * <code>string data = 1;</code>
      * @return The bytes for data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataBytes() {
       java.lang.Object ref = data_;
@@ -1158,7 +1164,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReplyString}
    */
-  public  static final class ReplyString extends
+  public static final class ReplyString extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyString)
       ReplyStringOrBuilder {
@@ -1245,6 +1251,7 @@ public final class CommonProtobuf {
      * <code>string data = 1;</code>
      * @return The data.
      */
+    @java.lang.Override
     public java.lang.String getData() {
       java.lang.Object ref = data_;
       if (ref instanceof java.lang.String) {
@@ -1261,6 +1268,7 @@ public final class CommonProtobuf {
      * <code>string data = 1;</code>
      * @return The bytes for data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDataBytes() {
       java.lang.Object ref = data_;
@@ -1737,7 +1745,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReplyStrings}
    */
-  public  static final class ReplyStrings extends
+  public static final class ReplyStrings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyStrings)
       ReplyStringsOrBuilder {
@@ -2356,7 +2364,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqInt}
    */
-  public  static final class ReqInt extends
+  public static final class ReqInt extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqInt)
       ReqIntOrBuilder {
@@ -2441,6 +2449,7 @@ public final class CommonProtobuf {
      * <code>int64 height = 1;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -2753,6 +2762,7 @@ public final class CommonProtobuf {
        * <code>int64 height = 1;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -2843,7 +2853,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code Int64}
    */
-  public  static final class Int64 extends
+  public static final class Int64 extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Int64)
       Int64OrBuilder {
@@ -2928,6 +2938,7 @@ public final class CommonProtobuf {
      * <code>int64 data = 1;</code>
      * @return The data.
      */
+    @java.lang.Override
     public long getData() {
       return data_;
     }
@@ -3240,6 +3251,7 @@ public final class CommonProtobuf {
        * <code>int64 data = 1;</code>
        * @return The data.
        */
+      @java.lang.Override
       public long getData() {
         return data_;
       }
@@ -3336,7 +3348,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqHash}
    */
-  public  static final class ReqHash extends
+  public static final class ReqHash extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqHash)
       ReqHashOrBuilder {
@@ -3427,6 +3439,7 @@ public final class CommonProtobuf {
      * <code>bytes hash = 1;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -3437,6 +3450,7 @@ public final class CommonProtobuf {
      * <code>bool upgrade = 2;</code>
      * @return The upgrade.
      */
+    @java.lang.Override
     public boolean getUpgrade() {
       return upgrade_;
     }
@@ -3766,6 +3780,7 @@ public final class CommonProtobuf {
        * <code>bytes hash = 1;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -3799,6 +3814,7 @@ public final class CommonProtobuf {
        * <code>bool upgrade = 2;</code>
        * @return The upgrade.
        */
+      @java.lang.Override
       public boolean getUpgrade() {
         return upgrade_;
       }
@@ -3889,7 +3905,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReplyHash}
    */
-  public  static final class ReplyHash extends
+  public static final class ReplyHash extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyHash)
       ReplyHashOrBuilder {
@@ -3975,6 +3991,7 @@ public final class CommonProtobuf {
      * <code>bytes hash = 1;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -4286,6 +4303,7 @@ public final class CommonProtobuf {
        * <code>bytes hash = 1;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -4373,7 +4391,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqNil}
    */
-  public  static final class ReqNil extends
+  public static final class ReqNil extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqNil)
       ReqNilOrBuilder {
@@ -4808,7 +4826,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqHashes}
    */
-  public  static final class ReqHashes extends
+  public static final class ReqHashes extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqHashes)
       ReqHashesOrBuilder {
@@ -4901,6 +4919,7 @@ public final class CommonProtobuf {
      * <code>repeated bytes hashes = 1;</code>
      * @return A list containing the hashes.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getHashesList() {
       return hashes_;
@@ -5404,7 +5423,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReplyHashes}
    */
-  public  static final class ReplyHashes extends
+  public static final class ReplyHashes extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyHashes)
       ReplyHashesOrBuilder {
@@ -5497,6 +5516,7 @@ public final class CommonProtobuf {
      * <code>repeated bytes hashes = 1;</code>
      * @return A list containing the hashes.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getHashesList() {
       return hashes_;
@@ -5995,7 +6015,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code KeyValue}
    */
-  public  static final class KeyValue extends
+  public static final class KeyValue extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:KeyValue)
       KeyValueOrBuilder {
@@ -6087,6 +6107,7 @@ public final class CommonProtobuf {
      * <code>bytes key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getKey() {
       return key_;
     }
@@ -6097,6 +6118,7 @@ public final class CommonProtobuf {
      * <code>bytes value = 2;</code>
      * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
@@ -6425,6 +6447,7 @@ public final class CommonProtobuf {
        * <code>bytes key = 1;</code>
        * @return The key.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getKey() {
         return key_;
       }
@@ -6458,6 +6481,7 @@ public final class CommonProtobuf {
        * <code>bytes value = 2;</code>
        * @return The value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }
@@ -6557,7 +6581,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code TxHash}
    */
-  public  static final class TxHash extends
+  public static final class TxHash extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxHash)
       TxHashOrBuilder {
@@ -6644,6 +6668,7 @@ public final class CommonProtobuf {
      * <code>string hash = 1;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public java.lang.String getHash() {
       java.lang.Object ref = hash_;
       if (ref instanceof java.lang.String) {
@@ -6660,6 +6685,7 @@ public final class CommonProtobuf {
      * <code>string hash = 1;</code>
      * @return The bytes for hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHashBytes() {
       java.lang.Object ref = hash_;
@@ -7141,7 +7167,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code TimeStatus}
    */
-  public  static final class TimeStatus extends
+  public static final class TimeStatus extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TimeStatus)
       TimeStatusOrBuilder {
@@ -7240,6 +7266,7 @@ public final class CommonProtobuf {
      * <code>string ntpTime = 1;</code>
      * @return The ntpTime.
      */
+    @java.lang.Override
     public java.lang.String getNtpTime() {
       java.lang.Object ref = ntpTime_;
       if (ref instanceof java.lang.String) {
@@ -7256,6 +7283,7 @@ public final class CommonProtobuf {
      * <code>string ntpTime = 1;</code>
      * @return The bytes for ntpTime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNtpTimeBytes() {
       java.lang.Object ref = ntpTime_;
@@ -7276,6 +7304,7 @@ public final class CommonProtobuf {
      * <code>string localTime = 2;</code>
      * @return The localTime.
      */
+    @java.lang.Override
     public java.lang.String getLocalTime() {
       java.lang.Object ref = localTime_;
       if (ref instanceof java.lang.String) {
@@ -7292,6 +7321,7 @@ public final class CommonProtobuf {
      * <code>string localTime = 2;</code>
      * @return The bytes for localTime.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLocalTimeBytes() {
       java.lang.Object ref = localTime_;
@@ -7312,6 +7342,7 @@ public final class CommonProtobuf {
      * <code>int64 diff = 3;</code>
      * @return The diff.
      */
+    @java.lang.Override
     public long getDiff() {
       return diff_;
     }
@@ -7810,6 +7841,7 @@ public final class CommonProtobuf {
        * <code>int64 diff = 3;</code>
        * @return The diff.
        */
+      @java.lang.Override
       public long getDiff() {
         return diff_;
       }
@@ -7900,7 +7932,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqKey}
    */
-  public  static final class ReqKey extends
+  public static final class ReqKey extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqKey)
       ReqKeyOrBuilder {
@@ -7986,6 +8018,7 @@ public final class CommonProtobuf {
      * <code>bytes key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getKey() {
       return key_;
     }
@@ -8297,6 +8330,7 @@ public final class CommonProtobuf {
        * <code>bytes key = 1;</code>
        * @return The key.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getKey() {
         return key_;
       }
@@ -8414,7 +8448,7 @@ public final class CommonProtobuf {
   /**
    * Protobuf type {@code ReqRandHash}
    */
-  public  static final class ReqRandHash extends
+  public static final class ReqRandHash extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqRandHash)
       ReqRandHashOrBuilder {
@@ -8517,6 +8551,7 @@ public final class CommonProtobuf {
      * <code>string execName = 1;</code>
      * @return The execName.
      */
+    @java.lang.Override
     public java.lang.String getExecName() {
       java.lang.Object ref = execName_;
       if (ref instanceof java.lang.String) {
@@ -8533,6 +8568,7 @@ public final class CommonProtobuf {
      * <code>string execName = 1;</code>
      * @return The bytes for execName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExecNameBytes() {
       java.lang.Object ref = execName_;
@@ -8553,6 +8589,7 @@ public final class CommonProtobuf {
      * <code>int64 height = 2;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -8563,6 +8600,7 @@ public final class CommonProtobuf {
      * <code>int64 blockNum = 3;</code>
      * @return The blockNum.
      */
+    @java.lang.Override
     public long getBlockNum() {
       return blockNum_;
     }
@@ -8573,6 +8611,7 @@ public final class CommonProtobuf {
      * <code>bytes hash = 4;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -9013,6 +9052,7 @@ public final class CommonProtobuf {
        * <code>int64 height = 2;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -9043,6 +9083,7 @@ public final class CommonProtobuf {
        * <code>int64 blockNum = 3;</code>
        * @return The blockNum.
        */
+      @java.lang.Override
       public long getBlockNum() {
         return blockNum_;
       }
@@ -9073,6 +9114,7 @@ public final class CommonProtobuf {
        * <code>bytes hash = 4;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -9219,7 +9261,7 @@ public final class CommonProtobuf {
    *
    * Protobuf type {@code VersionInfo}
    */
-  public  static final class VersionInfo extends
+  public static final class VersionInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:VersionInfo)
       VersionInfoOrBuilder {
@@ -9332,6 +9374,7 @@ public final class CommonProtobuf {
      * <code>string title = 1;</code>
      * @return The title.
      */
+    @java.lang.Override
     public java.lang.String getTitle() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
@@ -9348,6 +9391,7 @@ public final class CommonProtobuf {
      * <code>string title = 1;</code>
      * @return The bytes for title.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTitleBytes() {
       java.lang.Object ref = title_;
@@ -9368,6 +9412,7 @@ public final class CommonProtobuf {
      * <code>string app = 2;</code>
      * @return The app.
      */
+    @java.lang.Override
     public java.lang.String getApp() {
       java.lang.Object ref = app_;
       if (ref instanceof java.lang.String) {
@@ -9384,6 +9429,7 @@ public final class CommonProtobuf {
      * <code>string app = 2;</code>
      * @return The bytes for app.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAppBytes() {
       java.lang.Object ref = app_;
@@ -9404,6 +9450,7 @@ public final class CommonProtobuf {
      * <code>string chain33 = 3;</code>
      * @return The chain33.
      */
+    @java.lang.Override
     public java.lang.String getChain33() {
       java.lang.Object ref = chain33_;
       if (ref instanceof java.lang.String) {
@@ -9420,6 +9467,7 @@ public final class CommonProtobuf {
      * <code>string chain33 = 3;</code>
      * @return The bytes for chain33.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getChain33Bytes() {
       java.lang.Object ref = chain33_;
@@ -9440,6 +9488,7 @@ public final class CommonProtobuf {
      * <code>string localDb = 4;</code>
      * @return The localDb.
      */
+    @java.lang.Override
     public java.lang.String getLocalDb() {
       java.lang.Object ref = localDb_;
       if (ref instanceof java.lang.String) {
@@ -9456,6 +9505,7 @@ public final class CommonProtobuf {
      * <code>string localDb = 4;</code>
      * @return The bytes for localDb.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLocalDbBytes() {
       java.lang.Object ref = localDb_;
@@ -9476,6 +9526,7 @@ public final class CommonProtobuf {
      * <code>int32 chainID = 5;</code>
      * @return The chainID.
      */
+    @java.lang.Override
     public int getChainID() {
       return chainID_;
     }
@@ -10164,6 +10215,7 @@ public final class CommonProtobuf {
        * <code>int32 chainID = 5;</code>
        * @return The chainID.
        */
+      @java.lang.Override
       public int getChainID() {
         return chainID_;
       }

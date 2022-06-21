@@ -1,5 +1,5 @@
 syntax = "proto3";
-option java_outer_classname = "EvmService";
+option java_outer_classname = "EvmProtobuf";
 option java_package = "cn.chain33.javasdk.model.protobuf";
 
 //合约对象信息

@@ -74,7 +74,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.wasmAction}
    */
-  public  static final class wasmAction extends
+  public static final class wasmAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.wasmAction)
       wasmActionOrBuilder {
@@ -243,6 +243,7 @@ public final class WasmProtobuf {
      * <code>.types.wasmCreate create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return valueCase_ == 1;
     }
@@ -250,6 +251,7 @@ public final class WasmProtobuf {
      * <code>.types.wasmCreate create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
@@ -259,6 +261,7 @@ public final class WasmProtobuf {
     /**
      * <code>.types.wasmCreate create = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder() {
       if (valueCase_ == 1) {
          return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate) value_;
@@ -271,6 +274,7 @@ public final class WasmProtobuf {
      * <code>.types.wasmUpdate update = 2;</code>
      * @return Whether the update field is set.
      */
+    @java.lang.Override
     public boolean hasUpdate() {
       return valueCase_ == 2;
     }
@@ -278,6 +282,7 @@ public final class WasmProtobuf {
      * <code>.types.wasmUpdate update = 2;</code>
      * @return The update.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
@@ -287,6 +292,7 @@ public final class WasmProtobuf {
     /**
      * <code>.types.wasmUpdate update = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder() {
       if (valueCase_ == 2) {
          return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate) value_;
@@ -299,6 +305,7 @@ public final class WasmProtobuf {
      * <code>.types.wasmCall call = 3;</code>
      * @return Whether the call field is set.
      */
+    @java.lang.Override
     public boolean hasCall() {
       return valueCase_ == 3;
     }
@@ -306,6 +313,7 @@ public final class WasmProtobuf {
      * <code>.types.wasmCall call = 3;</code>
      * @return The call.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
@@ -315,6 +323,7 @@ public final class WasmProtobuf {
     /**
      * <code>.types.wasmCall call = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder() {
       if (valueCase_ == 3) {
          return (cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall) value_;
@@ -328,6 +337,7 @@ public final class WasmProtobuf {
      * <code>int32 ty = 4;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -750,6 +760,7 @@ public final class WasmProtobuf {
        * <code>.types.wasmCreate create = 1;</code>
        * @return Whether the create field is set.
        */
+      @java.lang.Override
       public boolean hasCreate() {
         return valueCase_ == 1;
       }
@@ -757,6 +768,7 @@ public final class WasmProtobuf {
        * <code>.types.wasmCreate create = 1;</code>
        * @return The create.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreate getCreate() {
         if (createBuilder_ == null) {
           if (valueCase_ == 1) {
@@ -850,6 +862,7 @@ public final class WasmProtobuf {
       /**
        * <code>.types.wasmCreate create = 1;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCreateOrBuilder getCreateOrBuilder() {
         if ((valueCase_ == 1) && (createBuilder_ != null)) {
           return createBuilder_.getMessageOrBuilder();
@@ -888,6 +901,7 @@ public final class WasmProtobuf {
        * <code>.types.wasmUpdate update = 2;</code>
        * @return Whether the update field is set.
        */
+      @java.lang.Override
       public boolean hasUpdate() {
         return valueCase_ == 2;
       }
@@ -895,6 +909,7 @@ public final class WasmProtobuf {
        * <code>.types.wasmUpdate update = 2;</code>
        * @return The update.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdate getUpdate() {
         if (updateBuilder_ == null) {
           if (valueCase_ == 2) {
@@ -988,6 +1003,7 @@ public final class WasmProtobuf {
       /**
        * <code>.types.wasmUpdate update = 2;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmUpdateOrBuilder getUpdateOrBuilder() {
         if ((valueCase_ == 2) && (updateBuilder_ != null)) {
           return updateBuilder_.getMessageOrBuilder();
@@ -1026,6 +1042,7 @@ public final class WasmProtobuf {
        * <code>.types.wasmCall call = 3;</code>
        * @return Whether the call field is set.
        */
+      @java.lang.Override
       public boolean hasCall() {
         return valueCase_ == 3;
       }
@@ -1033,6 +1050,7 @@ public final class WasmProtobuf {
        * <code>.types.wasmCall call = 3;</code>
        * @return The call.
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCall getCall() {
         if (callBuilder_ == null) {
           if (valueCase_ == 3) {
@@ -1126,6 +1144,7 @@ public final class WasmProtobuf {
       /**
        * <code>.types.wasmCall call = 3;</code>
        */
+      @java.lang.Override
       public cn.chain33.javasdk.model.protobuf.WasmProtobuf.wasmCallOrBuilder getCallOrBuilder() {
         if ((valueCase_ == 3) && (callBuilder_ != null)) {
           return callBuilder_.getMessageOrBuilder();
@@ -1163,6 +1182,7 @@ public final class WasmProtobuf {
        * <code>int32 ty = 4;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -1265,7 +1285,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.wasmCreate}
    */
-  public  static final class wasmCreate extends
+  public static final class wasmCreate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.wasmCreate)
       wasmCreateOrBuilder {
@@ -1358,6 +1378,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1374,6 +1395,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1394,6 +1416,7 @@ public final class WasmProtobuf {
      * <code>bytes code = 2;</code>
      * @return The code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCode() {
       return code_;
     }
@@ -1798,6 +1821,7 @@ public final class WasmProtobuf {
        * <code>bytes code = 2;</code>
        * @return The code.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCode() {
         return code_;
       }
@@ -1903,7 +1927,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.wasmUpdate}
    */
-  public  static final class wasmUpdate extends
+  public static final class wasmUpdate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.wasmUpdate)
       wasmUpdateOrBuilder {
@@ -1996,6 +2020,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2012,6 +2037,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2032,6 +2058,7 @@ public final class WasmProtobuf {
      * <code>bytes code = 2;</code>
      * @return The code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getCode() {
       return code_;
     }
@@ -2436,6 +2463,7 @@ public final class WasmProtobuf {
        * <code>bytes code = 2;</code>
        * @return The code.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getCode() {
         return code_;
       }
@@ -2589,7 +2617,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.wasmCall}
    */
-  public  static final class wasmCall extends
+  public static final class wasmCall extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.wasmCall)
       wasmCallOrBuilder {
@@ -2722,6 +2750,7 @@ public final class WasmProtobuf {
      * <code>string contract = 1;</code>
      * @return The contract.
      */
+    @java.lang.Override
     public java.lang.String getContract() {
       java.lang.Object ref = contract_;
       if (ref instanceof java.lang.String) {
@@ -2738,6 +2767,7 @@ public final class WasmProtobuf {
      * <code>string contract = 1;</code>
      * @return The bytes for contract.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractBytes() {
       java.lang.Object ref = contract_;
@@ -2758,6 +2788,7 @@ public final class WasmProtobuf {
      * <code>string method = 2;</code>
      * @return The method.
      */
+    @java.lang.Override
     public java.lang.String getMethod() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
@@ -2774,6 +2805,7 @@ public final class WasmProtobuf {
      * <code>string method = 2;</code>
      * @return The bytes for method.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMethodBytes() {
       java.lang.Object ref = method_;
@@ -2794,6 +2826,7 @@ public final class WasmProtobuf {
      * <code>repeated int64 parameters = 3;</code>
      * @return A list containing the parameters.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Long>
         getParametersList() {
       return parameters_;
@@ -3662,7 +3695,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.queryCheckContract}
    */
-  public  static final class queryCheckContract extends
+  public static final class queryCheckContract extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.queryCheckContract)
       queryCheckContractOrBuilder {
@@ -3749,6 +3782,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -3765,6 +3799,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4240,7 +4275,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.queryContractDB}
    */
-  public  static final class queryContractDB extends
+  public static final class queryContractDB extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.queryContractDB)
       queryContractDBOrBuilder {
@@ -4334,6 +4369,7 @@ public final class WasmProtobuf {
      * <code>string contract = 1;</code>
      * @return The contract.
      */
+    @java.lang.Override
     public java.lang.String getContract() {
       java.lang.Object ref = contract_;
       if (ref instanceof java.lang.String) {
@@ -4350,6 +4386,7 @@ public final class WasmProtobuf {
      * <code>string contract = 1;</code>
      * @return The bytes for contract.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractBytes() {
       java.lang.Object ref = contract_;
@@ -4370,6 +4407,7 @@ public final class WasmProtobuf {
      * <code>string key = 2;</code>
      * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -4386,6 +4424,7 @@ public final class WasmProtobuf {
      * <code>string key = 2;</code>
      * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -4955,7 +4994,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.customLog}
    */
-  public  static final class customLog extends
+  public static final class customLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.customLog)
       customLogOrBuilder {
@@ -5592,7 +5631,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.createContractLog}
    */
-  public  static final class createContractLog extends
+  public static final class createContractLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.createContractLog)
       createContractLogOrBuilder {
@@ -5686,6 +5725,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5702,6 +5742,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5722,6 +5763,7 @@ public final class WasmProtobuf {
      * <code>string code = 2;</code>
      * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -5738,6 +5780,7 @@ public final class WasmProtobuf {
      * <code>string code = 2;</code>
      * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodeBytes() {
       java.lang.Object ref = code_;
@@ -6306,7 +6349,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.updateContractLog}
    */
-  public  static final class updateContractLog extends
+  public static final class updateContractLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.updateContractLog)
       updateContractLogOrBuilder {
@@ -6400,6 +6443,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6416,6 +6460,7 @@ public final class WasmProtobuf {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6436,6 +6481,7 @@ public final class WasmProtobuf {
      * <code>string code = 2;</code>
      * @return The code.
      */
+    @java.lang.Override
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
       if (ref instanceof java.lang.String) {
@@ -6452,6 +6498,7 @@ public final class WasmProtobuf {
      * <code>string code = 2;</code>
      * @return The bytes for code.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodeBytes() {
       java.lang.Object ref = code_;
@@ -7026,7 +7073,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.callContractLog}
    */
-  public  static final class callContractLog extends
+  public static final class callContractLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.callContractLog)
       callContractLogOrBuilder {
@@ -7125,6 +7172,7 @@ public final class WasmProtobuf {
      * <code>string contract = 1;</code>
      * @return The contract.
      */
+    @java.lang.Override
     public java.lang.String getContract() {
       java.lang.Object ref = contract_;
       if (ref instanceof java.lang.String) {
@@ -7141,6 +7189,7 @@ public final class WasmProtobuf {
      * <code>string contract = 1;</code>
      * @return The bytes for contract.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContractBytes() {
       java.lang.Object ref = contract_;
@@ -7161,6 +7210,7 @@ public final class WasmProtobuf {
      * <code>string method = 2;</code>
      * @return The method.
      */
+    @java.lang.Override
     public java.lang.String getMethod() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
@@ -7177,6 +7227,7 @@ public final class WasmProtobuf {
      * <code>string method = 2;</code>
      * @return The bytes for method.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMethodBytes() {
       java.lang.Object ref = method_;
@@ -7197,6 +7248,7 @@ public final class WasmProtobuf {
      * <code>int32 result = 3;</code>
      * @return The result.
      */
+    @java.lang.Override
     public int getResult() {
       return result_;
     }
@@ -7694,6 +7746,7 @@ public final class WasmProtobuf {
        * <code>int32 result = 3;</code>
        * @return The result.
        */
+      @java.lang.Override
       public int getResult() {
         return result_;
       }
@@ -7790,7 +7843,7 @@ public final class WasmProtobuf {
   /**
    * Protobuf type {@code types.localDataLog}
    */
-  public  static final class localDataLog extends
+  public static final class localDataLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:types.localDataLog)
       localDataLogOrBuilder {
@@ -7882,6 +7935,7 @@ public final class WasmProtobuf {
      * <code>bytes key = 1;</code>
      * @return The key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getKey() {
       return key_;
     }
@@ -7892,6 +7946,7 @@ public final class WasmProtobuf {
      * <code>bytes value = 2;</code>
      * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
@@ -8220,6 +8275,7 @@ public final class WasmProtobuf {
        * <code>bytes key = 1;</code>
        * @return The key.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getKey() {
         return key_;
       }
@@ -8253,6 +8309,7 @@ public final class WasmProtobuf {
        * <code>bytes value = 2;</code>
        * @return The value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getValue() {
         return value_;
       }

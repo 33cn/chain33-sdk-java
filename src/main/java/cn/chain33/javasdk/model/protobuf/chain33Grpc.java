@@ -1,22 +1,30 @@
 package cn.chain33.javasdk.model.protobuf;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.31.1)",
+    value = "by gRPC proto compiler (version 1.32.1)",
     comments = "Source: grpc.proto")
 public final class chain33Grpc {
 
   private chain33Grpc() {}
 
-  public static final String SERVICE_NAME = "types.chain33";
+  public static final String SERVICE_NAME = "chain33";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.BlockchainProtobuf.ReqBlocks,
@@ -1290,29 +1298,29 @@ public final class chain33Grpc {
     return getIsSyncMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq,
-      cn.chain33.javasdk.model.protobuf.P2pService.PeerList> getGetPeerInfoMethod;
+  private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq,
+      cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList> getGetPeerInfoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetPeerInfo",
-      requestType = cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq.class,
-      responseType = cn.chain33.javasdk.model.protobuf.P2pService.PeerList.class,
+      requestType = cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq.class,
+      responseType = cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq,
-      cn.chain33.javasdk.model.protobuf.P2pService.PeerList> getGetPeerInfoMethod() {
-    io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq, cn.chain33.javasdk.model.protobuf.P2pService.PeerList> getGetPeerInfoMethod;
+  public static io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq,
+      cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList> getGetPeerInfoMethod() {
+    io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq, cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList> getGetPeerInfoMethod;
     if ((getGetPeerInfoMethod = chain33Grpc.getGetPeerInfoMethod) == null) {
       synchronized (chain33Grpc.class) {
         if ((getGetPeerInfoMethod = chain33Grpc.getGetPeerInfoMethod) == null) {
           chain33Grpc.getGetPeerInfoMethod = getGetPeerInfoMethod =
-              io.grpc.MethodDescriptor.<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq, cn.chain33.javasdk.model.protobuf.P2pService.PeerList>newBuilder()
+              io.grpc.MethodDescriptor.<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq, cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPeerInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq.getDefaultInstance()))
+                  cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cn.chain33.javasdk.model.protobuf.P2pService.PeerList.getDefaultInstance()))
+                  cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList.getDefaultInstance()))
               .setSchemaDescriptor(new chain33MethodDescriptorSupplier("GetPeerInfo"))
               .build();
         }
@@ -1321,29 +1329,29 @@ public final class chain33Grpc {
     return getGetPeerInfoMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq,
-      cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> getNetInfoMethod;
+  private static volatile io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq,
+      cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo> getNetInfoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "NetInfo",
-      requestType = cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq.class,
-      responseType = cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo.class,
+      requestType = cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq.class,
+      responseType = cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq,
-      cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> getNetInfoMethod() {
-    io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq, cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> getNetInfoMethod;
+  public static io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq,
+      cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo> getNetInfoMethod() {
+    io.grpc.MethodDescriptor<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq, cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo> getNetInfoMethod;
     if ((getNetInfoMethod = chain33Grpc.getNetInfoMethod) == null) {
       synchronized (chain33Grpc.class) {
         if ((getNetInfoMethod = chain33Grpc.getNetInfoMethod) == null) {
           chain33Grpc.getNetInfoMethod = getNetInfoMethod =
-              io.grpc.MethodDescriptor.<cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq, cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo>newBuilder()
+              io.grpc.MethodDescriptor.<cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq, cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "NetInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq.getDefaultInstance()))
+                  cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo.getDefaultInstance()))
+                  cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo.getDefaultInstance()))
               .setSchemaDescriptor(new chain33MethodDescriptorSupplier("NetInfo"))
               .build();
         }
@@ -2326,8 +2334,8 @@ public final class chain33Grpc {
      *获取当前节点连接的其他节点信息
      * </pre>
      */
-    public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request,
-        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> responseObserver) {
+    public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq request,
+        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList> responseObserver) {
       asyncUnimplementedUnaryCall(getGetPeerInfoMethod(), responseObserver);
     }
 
@@ -2336,8 +2344,8 @@ public final class chain33Grpc {
      *获取当前节点的网络信息
      * </pre>
      */
-    public void netInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request,
-        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> responseObserver) {
+    public void netInfo(cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq request,
+        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo> responseObserver) {
       asyncUnimplementedUnaryCall(getNetInfoMethod(), responseObserver);
     }
 
@@ -2795,15 +2803,15 @@ public final class chain33Grpc {
             getGetPeerInfoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq,
-                cn.chain33.javasdk.model.protobuf.P2pService.PeerList>(
+                cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq,
+                cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList>(
                   this, METHODID_GET_PEER_INFO)))
           .addMethod(
             getNetInfoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq,
-                cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo>(
+                cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq,
+                cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo>(
                   this, METHODID_NET_INFO)))
           .addMethod(
             getIsNtpClockSyncMethod(),
@@ -3382,8 +3390,8 @@ public final class chain33Grpc {
      *获取当前节点连接的其他节点信息
      * </pre>
      */
-    public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request,
-        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> responseObserver) {
+    public void getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq request,
+        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request, responseObserver);
     }
@@ -3393,8 +3401,8 @@ public final class chain33Grpc {
      *获取当前节点的网络信息
      * </pre>
      */
-    public void netInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request,
-        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> responseObserver) {
+    public void netInfo(cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq request,
+        io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getNetInfoMethod(), getCallOptions()), request, responseObserver);
     }
@@ -3991,7 +3999,7 @@ public final class chain33Grpc {
      *获取当前节点连接的其他节点信息
      * </pre>
      */
-    public cn.chain33.javasdk.model.protobuf.P2pService.PeerList getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request) {
+    public cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList getPeerInfo(cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq request) {
       return blockingUnaryCall(
           getChannel(), getGetPeerInfoMethod(), getCallOptions(), request);
     }
@@ -4001,7 +4009,7 @@ public final class chain33Grpc {
      *获取当前节点的网络信息
      * </pre>
      */
-    public cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo netInfo(cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request) {
+    public cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo netInfo(cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq request) {
       return blockingUnaryCall(
           getChannel(), getNetInfoMethod(), getCallOptions(), request);
     }
@@ -4622,8 +4630,8 @@ public final class chain33Grpc {
      *获取当前节点连接的其他节点信息
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.PeerList> getPeerInfo(
-        cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList> getPeerInfo(
+        cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq request) {
       return futureUnaryCall(
           getChannel().newCall(getGetPeerInfoMethod(), getCallOptions()), request);
     }
@@ -4633,8 +4641,8 @@ public final class chain33Grpc {
      *获取当前节点的网络信息
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo> netInfo(
-        cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo> netInfo(
+        cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq request) {
       return futureUnaryCall(
           getChannel().newCall(getNetInfoMethod(), getCallOptions()), request);
     }
@@ -5061,12 +5069,12 @@ public final class chain33Grpc {
               (io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.CommonProtobuf.Reply>) responseObserver);
           break;
         case METHODID_GET_PEER_INFO:
-          serviceImpl.getPeerInfo((cn.chain33.javasdk.model.protobuf.P2pService.P2PGetPeerReq) request,
-              (io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.PeerList>) responseObserver);
+          serviceImpl.getPeerInfo((cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetPeerReq) request,
+              (io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pProtobuf.PeerList>) responseObserver);
           break;
         case METHODID_NET_INFO:
-          serviceImpl.netInfo((cn.chain33.javasdk.model.protobuf.P2pService.P2PGetNetInfoReq) request,
-              (io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pService.NodeNetInfo>) responseObserver);
+          serviceImpl.netInfo((cn.chain33.javasdk.model.protobuf.P2pProtobuf.P2PGetNetInfoReq) request,
+              (io.grpc.stub.StreamObserver<cn.chain33.javasdk.model.protobuf.P2pProtobuf.NodeNetInfo>) responseObserver);
           break;
         case METHODID_IS_NTP_CLOCK_SYNC:
           serviceImpl.isNtpClockSync((cn.chain33.javasdk.model.protobuf.CommonProtobuf.ReqNil) request,

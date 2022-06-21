@@ -43,7 +43,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code AssetsGenesis}
    */
-  public  static final class AssetsGenesis extends
+  public static final class AssetsGenesis extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AssetsGenesis)
       AssetsGenesisOrBuilder {
@@ -135,6 +135,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 2;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -145,6 +146,7 @@ public final class TransactionAllProtobuf {
      * <code>string returnAddress = 3;</code>
      * @return The returnAddress.
      */
+    @java.lang.Override
     public java.lang.String getReturnAddress() {
       java.lang.Object ref = returnAddress_;
       if (ref instanceof java.lang.String) {
@@ -161,6 +163,7 @@ public final class TransactionAllProtobuf {
      * <code>string returnAddress = 3;</code>
      * @return The bytes for returnAddress.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getReturnAddressBytes() {
       java.lang.Object ref = returnAddress_;
@@ -504,6 +507,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 2;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -712,7 +716,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code AssetsTransferToExec}
    */
-  public  static final class AssetsTransferToExec extends
+  public static final class AssetsTransferToExec extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AssetsTransferToExec)
       AssetsTransferToExecOrBuilder {
@@ -824,6 +828,7 @@ public final class TransactionAllProtobuf {
      * <code>string cointoken = 1;</code>
      * @return The cointoken.
      */
+    @java.lang.Override
     public java.lang.String getCointoken() {
       java.lang.Object ref = cointoken_;
       if (ref instanceof java.lang.String) {
@@ -840,6 +845,7 @@ public final class TransactionAllProtobuf {
      * <code>string cointoken = 1;</code>
      * @return The bytes for cointoken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCointokenBytes() {
       java.lang.Object ref = cointoken_;
@@ -860,6 +866,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 2;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -870,6 +877,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes note = 3;</code>
      * @return The note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getNote() {
       return note_;
     }
@@ -880,6 +888,7 @@ public final class TransactionAllProtobuf {
      * <code>string execName = 4;</code>
      * @return The execName.
      */
+    @java.lang.Override
     public java.lang.String getExecName() {
       java.lang.Object ref = execName_;
       if (ref instanceof java.lang.String) {
@@ -896,6 +905,7 @@ public final class TransactionAllProtobuf {
      * <code>string execName = 4;</code>
      * @return The bytes for execName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExecNameBytes() {
       java.lang.Object ref = execName_;
@@ -916,6 +926,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 5;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -932,6 +943,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 5;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -1398,6 +1410,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 2;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -1428,6 +1441,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes note = 3;</code>
        * @return The note.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getNote() {
         return note_;
       }
@@ -1715,7 +1729,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code AssetsWithdraw}
    */
-  public  static final class AssetsWithdraw extends
+  public static final class AssetsWithdraw extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AssetsWithdraw)
       AssetsWithdrawOrBuilder {
@@ -1827,6 +1841,7 @@ public final class TransactionAllProtobuf {
      * <code>string cointoken = 1;</code>
      * @return The cointoken.
      */
+    @java.lang.Override
     public java.lang.String getCointoken() {
       java.lang.Object ref = cointoken_;
       if (ref instanceof java.lang.String) {
@@ -1843,6 +1858,7 @@ public final class TransactionAllProtobuf {
      * <code>string cointoken = 1;</code>
      * @return The bytes for cointoken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCointokenBytes() {
       java.lang.Object ref = cointoken_;
@@ -1863,6 +1879,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 2;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -1873,6 +1890,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes note = 3;</code>
      * @return The note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getNote() {
       return note_;
     }
@@ -1883,6 +1901,7 @@ public final class TransactionAllProtobuf {
      * <code>string execName = 4;</code>
      * @return The execName.
      */
+    @java.lang.Override
     public java.lang.String getExecName() {
       java.lang.Object ref = execName_;
       if (ref instanceof java.lang.String) {
@@ -1899,6 +1918,7 @@ public final class TransactionAllProtobuf {
      * <code>string execName = 4;</code>
      * @return The bytes for execName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExecNameBytes() {
       java.lang.Object ref = execName_;
@@ -1919,6 +1939,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 5;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -1935,6 +1956,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 5;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -2401,6 +2423,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 2;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -2431,6 +2454,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes note = 3;</code>
        * @return The note.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getNote() {
         return note_;
       }
@@ -2706,7 +2730,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code AssetsTransfer}
    */
-  public  static final class AssetsTransfer extends
+  public static final class AssetsTransfer extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AssetsTransfer)
       AssetsTransferOrBuilder {
@@ -2811,6 +2835,7 @@ public final class TransactionAllProtobuf {
      * <code>string cointoken = 1;</code>
      * @return The cointoken.
      */
+    @java.lang.Override
     public java.lang.String getCointoken() {
       java.lang.Object ref = cointoken_;
       if (ref instanceof java.lang.String) {
@@ -2827,6 +2852,7 @@ public final class TransactionAllProtobuf {
      * <code>string cointoken = 1;</code>
      * @return The bytes for cointoken.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCointokenBytes() {
       java.lang.Object ref = cointoken_;
@@ -2847,6 +2873,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 2;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -2857,6 +2884,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes note = 3;</code>
      * @return The note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getNote() {
       return note_;
     }
@@ -2867,6 +2895,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 4;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -2883,6 +2912,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 4;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -3332,6 +3362,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 2;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -3362,6 +3393,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes note = 3;</code>
        * @return The note.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getNote() {
         return note_;
       }
@@ -3555,7 +3587,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code Asset}
    */
-  public  static final class Asset extends
+  public static final class Asset extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Asset)
       AssetOrBuilder {
@@ -3654,6 +3686,7 @@ public final class TransactionAllProtobuf {
      * <code>string exec = 1;</code>
      * @return The exec.
      */
+    @java.lang.Override
     public java.lang.String getExec() {
       java.lang.Object ref = exec_;
       if (ref instanceof java.lang.String) {
@@ -3670,6 +3703,7 @@ public final class TransactionAllProtobuf {
      * <code>string exec = 1;</code>
      * @return The bytes for exec.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExecBytes() {
       java.lang.Object ref = exec_;
@@ -3690,6 +3724,7 @@ public final class TransactionAllProtobuf {
      * <code>string symbol = 2;</code>
      * @return The symbol.
      */
+    @java.lang.Override
     public java.lang.String getSymbol() {
       java.lang.Object ref = symbol_;
       if (ref instanceof java.lang.String) {
@@ -3706,6 +3741,7 @@ public final class TransactionAllProtobuf {
      * <code>string symbol = 2;</code>
      * @return The bytes for symbol.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSymbolBytes() {
       java.lang.Object ref = symbol_;
@@ -3726,6 +3762,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 3;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -4224,6 +4261,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 3;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -4386,7 +4424,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code CreateTx}
    */
-  public  static final class CreateTx extends
+  public static final class CreateTx extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CreateTx)
       CreateTxOrBuilder {
@@ -4520,6 +4558,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 1;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -4536,6 +4575,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 1;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -4556,6 +4596,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 2;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -4566,6 +4607,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 fee = 3;</code>
      * @return The fee.
      */
+    @java.lang.Override
     public long getFee() {
       return fee_;
     }
@@ -4576,6 +4618,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes note = 4;</code>
      * @return The note.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getNote() {
       return note_;
     }
@@ -4586,6 +4629,7 @@ public final class TransactionAllProtobuf {
      * <code>bool isWithdraw = 5;</code>
      * @return The isWithdraw.
      */
+    @java.lang.Override
     public boolean getIsWithdraw() {
       return isWithdraw_;
     }
@@ -4596,6 +4640,7 @@ public final class TransactionAllProtobuf {
      * <code>bool isToken = 6;</code>
      * @return The isToken.
      */
+    @java.lang.Override
     public boolean getIsToken() {
       return isToken_;
     }
@@ -4606,6 +4651,7 @@ public final class TransactionAllProtobuf {
      * <code>string tokenSymbol = 7;</code>
      * @return The tokenSymbol.
      */
+    @java.lang.Override
     public java.lang.String getTokenSymbol() {
       java.lang.Object ref = tokenSymbol_;
       if (ref instanceof java.lang.String) {
@@ -4622,6 +4668,7 @@ public final class TransactionAllProtobuf {
      * <code>string tokenSymbol = 7;</code>
      * @return The bytes for tokenSymbol.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTokenSymbolBytes() {
       java.lang.Object ref = tokenSymbol_;
@@ -4642,6 +4689,7 @@ public final class TransactionAllProtobuf {
      * <code>string execName = 8;</code>
      * @return The execName.
      */
+    @java.lang.Override
     public java.lang.String getExecName() {
       java.lang.Object ref = execName_;
       if (ref instanceof java.lang.String) {
@@ -4658,6 +4706,7 @@ public final class TransactionAllProtobuf {
      * <code>string execName = 8;</code>
      * @return The bytes for execName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExecNameBytes() {
       java.lang.Object ref = execName_;
@@ -4678,6 +4727,7 @@ public final class TransactionAllProtobuf {
      * <code>string execer = 9;</code>
      * @return The execer.
      */
+    @java.lang.Override
     public java.lang.String getExecer() {
       java.lang.Object ref = execer_;
       if (ref instanceof java.lang.String) {
@@ -4694,6 +4744,7 @@ public final class TransactionAllProtobuf {
      * <code>string execer = 9;</code>
      * @return The bytes for execer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExecerBytes() {
       java.lang.Object ref = execer_;
@@ -5231,6 +5282,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 2;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -5261,6 +5313,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 fee = 3;</code>
        * @return The fee.
        */
+      @java.lang.Override
       public long getFee() {
         return fee_;
       }
@@ -5291,6 +5344,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes note = 4;</code>
        * @return The note.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getNote() {
         return note_;
       }
@@ -5324,6 +5378,7 @@ public final class TransactionAllProtobuf {
        * <code>bool isWithdraw = 5;</code>
        * @return The isWithdraw.
        */
+      @java.lang.Override
       public boolean getIsWithdraw() {
         return isWithdraw_;
       }
@@ -5354,6 +5409,7 @@ public final class TransactionAllProtobuf {
        * <code>bool isToken = 6;</code>
        * @return The isToken.
        */
+      @java.lang.Override
       public boolean getIsToken() {
         return isToken_;
       }
@@ -5722,7 +5778,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReWriteRawTx}
    */
-  public  static final class ReWriteRawTx extends
+  public static final class ReWriteRawTx extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReWriteRawTx)
       ReWriteRawTxOrBuilder {
@@ -5833,6 +5889,7 @@ public final class TransactionAllProtobuf {
      * <code>string tx = 1;</code>
      * @return The tx.
      */
+    @java.lang.Override
     public java.lang.String getTx() {
       java.lang.Object ref = tx_;
       if (ref instanceof java.lang.String) {
@@ -5849,6 +5906,7 @@ public final class TransactionAllProtobuf {
      * <code>string tx = 1;</code>
      * @return The bytes for tx.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxBytes() {
       java.lang.Object ref = tx_;
@@ -5873,6 +5931,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 3;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -5893,6 +5952,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 3;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -5913,6 +5973,7 @@ public final class TransactionAllProtobuf {
      * <code>string expire = 4;</code>
      * @return The expire.
      */
+    @java.lang.Override
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
       if (ref instanceof java.lang.String) {
@@ -5929,6 +5990,7 @@ public final class TransactionAllProtobuf {
      * <code>string expire = 4;</code>
      * @return The bytes for expire.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExpireBytes() {
       java.lang.Object ref = expire_;
@@ -5949,6 +6011,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 fee = 5;</code>
      * @return The fee.
      */
+    @java.lang.Override
     public long getFee() {
       return fee_;
     }
@@ -5959,6 +6022,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 index = 6;</code>
      * @return The index.
      */
+    @java.lang.Override
     public int getIndex() {
       return index_;
     }
@@ -6587,6 +6651,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 fee = 5;</code>
        * @return The fee.
        */
+      @java.lang.Override
       public long getFee() {
         return fee_;
       }
@@ -6617,6 +6682,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 index = 6;</code>
        * @return The index.
        */
+      @java.lang.Override
       public int getIndex() {
         return index_;
       }
@@ -6726,7 +6792,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code CreateTransactionGroup}
    */
-  public  static final class CreateTransactionGroup extends
+  public static final class CreateTransactionGroup extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:CreateTransactionGroup)
       CreateTransactionGroupOrBuilder {
@@ -7345,7 +7411,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code UnsignTx}
    */
-  public  static final class UnsignTx extends
+  public static final class UnsignTx extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:UnsignTx)
       UnsignTxOrBuilder {
@@ -7431,6 +7497,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes data = 1;</code>
      * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -7742,6 +7809,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes data = 1;</code>
        * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
@@ -7894,7 +7962,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code NoBalanceTxs}
    */
-  public  static final class NoBalanceTxs extends
+  public static final class NoBalanceTxs extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:NoBalanceTxs)
       NoBalanceTxsOrBuilder {
@@ -8044,6 +8112,7 @@ public final class TransactionAllProtobuf {
      * <code>string payAddr = 2;</code>
      * @return The payAddr.
      */
+    @java.lang.Override
     public java.lang.String getPayAddr() {
       java.lang.Object ref = payAddr_;
       if (ref instanceof java.lang.String) {
@@ -8060,6 +8129,7 @@ public final class TransactionAllProtobuf {
      * <code>string payAddr = 2;</code>
      * @return The bytes for payAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPayAddrBytes() {
       java.lang.Object ref = payAddr_;
@@ -8080,6 +8150,7 @@ public final class TransactionAllProtobuf {
      * <code>string privkey = 3;</code>
      * @return The privkey.
      */
+    @java.lang.Override
     public java.lang.String getPrivkey() {
       java.lang.Object ref = privkey_;
       if (ref instanceof java.lang.String) {
@@ -8096,6 +8167,7 @@ public final class TransactionAllProtobuf {
      * <code>string privkey = 3;</code>
      * @return The bytes for privkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPrivkeyBytes() {
       java.lang.Object ref = privkey_;
@@ -8116,6 +8188,7 @@ public final class TransactionAllProtobuf {
      * <code>string expire = 4;</code>
      * @return The expire.
      */
+    @java.lang.Override
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
       if (ref instanceof java.lang.String) {
@@ -8132,6 +8205,7 @@ public final class TransactionAllProtobuf {
      * <code>string expire = 4;</code>
      * @return The bytes for expire.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExpireBytes() {
       java.lang.Object ref = expire_;
@@ -8971,7 +9045,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code NoBalanceTx}
    */
-  public  static final class NoBalanceTx extends
+  public static final class NoBalanceTx extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:NoBalanceTx)
       NoBalanceTxOrBuilder {
@@ -9079,6 +9153,7 @@ public final class TransactionAllProtobuf {
      * <code>string txHex = 1;</code>
      * @return The txHex.
      */
+    @java.lang.Override
     public java.lang.String getTxHex() {
       java.lang.Object ref = txHex_;
       if (ref instanceof java.lang.String) {
@@ -9095,6 +9170,7 @@ public final class TransactionAllProtobuf {
      * <code>string txHex = 1;</code>
      * @return The bytes for txHex.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxHexBytes() {
       java.lang.Object ref = txHex_;
@@ -9115,6 +9191,7 @@ public final class TransactionAllProtobuf {
      * <code>string payAddr = 2;</code>
      * @return The payAddr.
      */
+    @java.lang.Override
     public java.lang.String getPayAddr() {
       java.lang.Object ref = payAddr_;
       if (ref instanceof java.lang.String) {
@@ -9131,6 +9208,7 @@ public final class TransactionAllProtobuf {
      * <code>string payAddr = 2;</code>
      * @return The bytes for payAddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPayAddrBytes() {
       java.lang.Object ref = payAddr_;
@@ -9151,6 +9229,7 @@ public final class TransactionAllProtobuf {
      * <code>string privkey = 3;</code>
      * @return The privkey.
      */
+    @java.lang.Override
     public java.lang.String getPrivkey() {
       java.lang.Object ref = privkey_;
       if (ref instanceof java.lang.String) {
@@ -9167,6 +9246,7 @@ public final class TransactionAllProtobuf {
      * <code>string privkey = 3;</code>
      * @return The bytes for privkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPrivkeyBytes() {
       java.lang.Object ref = privkey_;
@@ -9187,6 +9267,7 @@ public final class TransactionAllProtobuf {
      * <code>string expire = 4;</code>
      * @return The expire.
      */
+    @java.lang.Override
     public java.lang.String getExpire() {
       java.lang.Object ref = expire_;
       if (ref instanceof java.lang.String) {
@@ -9203,6 +9284,7 @@ public final class TransactionAllProtobuf {
      * <code>string expire = 4;</code>
      * @return The bytes for expire.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getExpireBytes() {
       java.lang.Object ref = expire_;
@@ -10030,7 +10112,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code Transaction}
    */
-  public  static final class Transaction extends
+  public static final class Transaction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Transaction)
       TransactionOrBuilder {
@@ -10179,6 +10261,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes execer = 1;</code>
      * @return The execer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getExecer() {
       return execer_;
     }
@@ -10189,6 +10272,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes payload = 2;</code>
      * @return The payload.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPayload() {
       return payload_;
     }
@@ -10199,6 +10283,7 @@ public final class TransactionAllProtobuf {
      * <code>.Signature signature = 3;</code>
      * @return Whether the signature field is set.
      */
+    @java.lang.Override
     public boolean hasSignature() {
       return signature_ != null;
     }
@@ -10206,12 +10291,14 @@ public final class TransactionAllProtobuf {
      * <code>.Signature signature = 3;</code>
      * @return The signature.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Signature getSignature() {
       return signature_ == null ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Signature.getDefaultInstance() : signature_;
     }
     /**
      * <code>.Signature signature = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.SignatureOrBuilder getSignatureOrBuilder() {
       return getSignature();
     }
@@ -10222,6 +10309,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 fee = 4;</code>
      * @return The fee.
      */
+    @java.lang.Override
     public long getFee() {
       return fee_;
     }
@@ -10232,6 +10320,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 expire = 5;</code>
      * @return The expire.
      */
+    @java.lang.Override
     public long getExpire() {
       return expire_;
     }
@@ -10246,6 +10335,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 nonce = 6;</code>
      * @return The nonce.
      */
+    @java.lang.Override
     public long getNonce() {
       return nonce_;
     }
@@ -10260,6 +10350,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 7;</code>
      * @return The to.
      */
+    @java.lang.Override
     public java.lang.String getTo() {
       java.lang.Object ref = to_;
       if (ref instanceof java.lang.String) {
@@ -10280,6 +10371,7 @@ public final class TransactionAllProtobuf {
      * <code>string to = 7;</code>
      * @return The bytes for to.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getToBytes() {
       java.lang.Object ref = to_;
@@ -10300,6 +10392,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 groupCount = 8;</code>
      * @return The groupCount.
      */
+    @java.lang.Override
     public int getGroupCount() {
       return groupCount_;
     }
@@ -10310,6 +10403,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes header = 9;</code>
      * @return The header.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHeader() {
       return header_;
     }
@@ -10320,6 +10414,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes next = 10;</code>
      * @return The next.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getNext() {
       return next_;
     }
@@ -10330,6 +10425,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 chainID = 11;</code>
      * @return The chainID.
      */
+    @java.lang.Override
     public int getChainID() {
       return chainID_;
     }
@@ -10827,6 +10923,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes execer = 1;</code>
        * @return The execer.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getExecer() {
         return execer_;
       }
@@ -10860,6 +10957,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes payload = 2;</code>
        * @return The payload.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPayload() {
         return payload_;
       }
@@ -11012,6 +11110,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 fee = 4;</code>
        * @return The fee.
        */
+      @java.lang.Override
       public long getFee() {
         return fee_;
       }
@@ -11042,6 +11141,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 expire = 5;</code>
        * @return The expire.
        */
+      @java.lang.Override
       public long getExpire() {
         return expire_;
       }
@@ -11076,6 +11176,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 nonce = 6;</code>
        * @return The nonce.
        */
+      @java.lang.Override
       public long getNonce() {
         return nonce_;
       }
@@ -11210,6 +11311,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 groupCount = 8;</code>
        * @return The groupCount.
        */
+      @java.lang.Override
       public int getGroupCount() {
         return groupCount_;
       }
@@ -11240,6 +11342,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes header = 9;</code>
        * @return The header.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHeader() {
         return header_;
       }
@@ -11273,6 +11376,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes next = 10;</code>
        * @return The next.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getNext() {
         return next_;
       }
@@ -11306,6 +11410,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 chainID = 11;</code>
        * @return The chainID.
        */
+      @java.lang.Override
       public int getChainID() {
         return chainID_;
       }
@@ -11414,7 +11519,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code Transactions}
    */
-  public  static final class Transactions extends
+  public static final class Transactions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Transactions)
       TransactionsOrBuilder {
@@ -11507,12 +11612,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction> getTxsList() {
       return txs_;
     }
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder> 
         getTxsOrBuilderList() {
       return txs_;
@@ -11520,18 +11627,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public int getTxsCount() {
       return txs_.size();
     }
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTxs(int index) {
       return txs_.get(index);
     }
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxsOrBuilder(
         int index) {
       return txs_.get(index);
@@ -12206,7 +12316,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code RingSignature}
    */
-  public  static final class RingSignature extends
+  public static final class RingSignature extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RingSignature)
       RingSignatureOrBuilder {
@@ -12299,12 +12409,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .RingSignatureItem items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.RingSignatureItem> getItemsList() {
       return items_;
     }
     /**
      * <code>repeated .RingSignatureItem items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.RingSignatureItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -12312,18 +12424,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .RingSignatureItem items = 1;</code>
      */
+    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
     /**
      * <code>repeated .RingSignatureItem items = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.RingSignatureItem getItems(int index) {
       return items_.get(index);
     }
     /**
      * <code>repeated .RingSignatureItem items = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.RingSignatureItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -13012,7 +13127,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code RingSignatureItem}
    */
-  public  static final class RingSignatureItem extends
+  public static final class RingSignatureItem extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RingSignatureItem)
       RingSignatureItemOrBuilder {
@@ -13117,6 +13232,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bytes pubkey = 1;</code>
      * @return A list containing the pubkey.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getPubkeyList() {
       return pubkey_;
@@ -13143,6 +13259,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bytes signature = 2;</code>
      * @return A list containing the signature.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getSignatureList() {
       return signature_;
@@ -13788,7 +13905,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code Signature}
    */
-  public  static final class Signature extends
+  public static final class Signature extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Signature)
       SignatureOrBuilder {
@@ -13885,6 +14002,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 ty = 1;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -13895,6 +14013,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes pubkey = 2;</code>
      * @return The pubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPubkey() {
       return pubkey_;
     }
@@ -13909,6 +14028,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes signature = 3;</code>
      * @return The signature.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSignature() {
       return signature_;
     }
@@ -14267,6 +14387,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 ty = 1;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -14297,6 +14418,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes pubkey = 2;</code>
        * @return The pubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPubkey() {
         return pubkey_;
       }
@@ -14334,6 +14456,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes signature = 3;</code>
        * @return The signature.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSignature() {
         return signature_;
       }
@@ -14447,7 +14570,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code AddrOverview}
    */
-  public  static final class AddrOverview extends
+  public static final class AddrOverview extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AddrOverview)
       AddrOverviewOrBuilder {
@@ -14542,6 +14665,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 reciver = 1;</code>
      * @return The reciver.
      */
+    @java.lang.Override
     public long getReciver() {
       return reciver_;
     }
@@ -14552,6 +14676,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 balance = 2;</code>
      * @return The balance.
      */
+    @java.lang.Override
     public long getBalance() {
       return balance_;
     }
@@ -14562,6 +14687,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 txCount = 3;</code>
      * @return The txCount.
      */
+    @java.lang.Override
     public long getTxCount() {
       return txCount_;
     }
@@ -14910,6 +15036,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 reciver = 1;</code>
        * @return The reciver.
        */
+      @java.lang.Override
       public long getReciver() {
         return reciver_;
       }
@@ -14940,6 +15067,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 balance = 2;</code>
        * @return The balance.
        */
+      @java.lang.Override
       public long getBalance() {
         return balance_;
       }
@@ -14970,6 +15098,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 txCount = 3;</code>
        * @return The txCount.
        */
+      @java.lang.Override
       public long getTxCount() {
         return txCount_;
       }
@@ -15100,7 +15229,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReqAddr}
    */
-  public  static final class ReqAddr extends
+  public static final class ReqAddr extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqAddr)
       ReqAddrOrBuilder {
@@ -15212,6 +15341,7 @@ public final class TransactionAllProtobuf {
      * <code>string addr = 1;</code>
      * @return The addr.
      */
+    @java.lang.Override
     public java.lang.String getAddr() {
       java.lang.Object ref = addr_;
       if (ref instanceof java.lang.String) {
@@ -15228,6 +15358,7 @@ public final class TransactionAllProtobuf {
      * <code>string addr = 1;</code>
      * @return The bytes for addr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAddrBytes() {
       java.lang.Object ref = addr_;
@@ -15252,6 +15383,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 flag = 2;</code>
      * @return The flag.
      */
+    @java.lang.Override
     public int getFlag() {
       return flag_;
     }
@@ -15262,6 +15394,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 count = 3;</code>
      * @return The count.
      */
+    @java.lang.Override
     public int getCount() {
       return count_;
     }
@@ -15272,6 +15405,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 direction = 4;</code>
      * @return The direction.
      */
+    @java.lang.Override
     public int getDirection() {
       return direction_;
     }
@@ -15282,6 +15416,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 height = 5;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -15292,6 +15427,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 index = 6;</code>
      * @return The index.
      */
+    @java.lang.Override
     public long getIndex() {
       return index_;
     }
@@ -15770,6 +15906,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 flag = 2;</code>
        * @return The flag.
        */
+      @java.lang.Override
       public int getFlag() {
         return flag_;
       }
@@ -15808,6 +15945,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 count = 3;</code>
        * @return The count.
        */
+      @java.lang.Override
       public int getCount() {
         return count_;
       }
@@ -15838,6 +15976,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 direction = 4;</code>
        * @return The direction.
        */
+      @java.lang.Override
       public int getDirection() {
         return direction_;
       }
@@ -15868,6 +16007,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 height = 5;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -15898,6 +16038,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 index = 6;</code>
        * @return The index.
        */
+      @java.lang.Override
       public long getIndex() {
         return index_;
       }
@@ -15994,7 +16135,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code HexTx}
    */
-  public  static final class HexTx extends
+  public static final class HexTx extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:HexTx)
       HexTxOrBuilder {
@@ -16081,6 +16222,7 @@ public final class TransactionAllProtobuf {
      * <code>string tx = 1;</code>
      * @return The tx.
      */
+    @java.lang.Override
     public java.lang.String getTx() {
       java.lang.Object ref = tx_;
       if (ref instanceof java.lang.String) {
@@ -16097,6 +16239,7 @@ public final class TransactionAllProtobuf {
      * <code>string tx = 1;</code>
      * @return The bytes for tx.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxBytes() {
       java.lang.Object ref = tx_;
@@ -16590,7 +16733,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReplyTxInfo}
    */
-  public  static final class ReplyTxInfo extends
+  public static final class ReplyTxInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyTxInfo)
       ReplyTxInfoOrBuilder {
@@ -16700,6 +16843,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes hash = 1;</code>
      * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -16710,6 +16854,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 height = 2;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -16720,6 +16865,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 index = 3;</code>
      * @return The index.
      */
+    @java.lang.Override
     public long getIndex() {
       return index_;
     }
@@ -16729,12 +16875,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Asset assets = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Asset> getAssetsList() {
       return assets_;
     }
     /**
      * <code>repeated .Asset assets = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetOrBuilder> 
         getAssetsOrBuilderList() {
       return assets_;
@@ -16742,18 +16890,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Asset assets = 4;</code>
      */
+    @java.lang.Override
     public int getAssetsCount() {
       return assets_.size();
     }
     /**
      * <code>repeated .Asset assets = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Asset getAssets(int index) {
       return assets_.get(index);
     }
     /**
      * <code>repeated .Asset assets = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetOrBuilder getAssetsOrBuilder(
         int index) {
       return assets_.get(index);
@@ -17159,6 +17310,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes hash = 1;</code>
        * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
@@ -17192,6 +17344,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 height = 2;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -17222,6 +17375,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 index = 3;</code>
        * @return The index.
        */
+      @java.lang.Override
       public long getIndex() {
         return index_;
       }
@@ -17552,7 +17706,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReqTxList}
    */
-  public  static final class ReqTxList extends
+  public static final class ReqTxList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqTxList)
       ReqTxListOrBuilder {
@@ -17637,6 +17791,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 count = 1;</code>
      * @return The count.
      */
+    @java.lang.Override
     public long getCount() {
       return count_;
     }
@@ -17949,6 +18104,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 count = 1;</code>
        * @return The count.
        */
+      @java.lang.Override
       public long getCount() {
         return count_;
       }
@@ -18057,7 +18213,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReplyTxList}
    */
-  public  static final class ReplyTxList extends
+  public static final class ReplyTxList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyTxList)
       ReplyTxListOrBuilder {
@@ -18150,12 +18306,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction> getTxsList() {
       return txs_;
     }
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder> 
         getTxsOrBuilderList() {
       return txs_;
@@ -18163,18 +18321,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public int getTxsCount() {
       return txs_.size();
     }
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTxs(int index) {
       return txs_.get(index);
     }
     /**
      * <code>repeated .Transaction txs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxsOrBuilder(
         int index) {
       return txs_.get(index);
@@ -18827,7 +18988,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReqGetMempool}
    */
-  public  static final class ReqGetMempool extends
+  public static final class ReqGetMempool extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqGetMempool)
       ReqGetMempoolOrBuilder {
@@ -18912,6 +19073,7 @@ public final class TransactionAllProtobuf {
      * <code>bool isAll = 1;</code>
      * @return The isAll.
      */
+    @java.lang.Override
     public boolean getIsAll() {
       return isAll_;
     }
@@ -19224,6 +19386,7 @@ public final class TransactionAllProtobuf {
        * <code>bool isAll = 1;</code>
        * @return The isAll.
        */
+      @java.lang.Override
       public boolean getIsAll() {
         return isAll_;
       }
@@ -19320,7 +19483,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReqProperFee}
    */
-  public  static final class ReqProperFee extends
+  public static final class ReqProperFee extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqProperFee)
       ReqProperFeeOrBuilder {
@@ -19410,6 +19573,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 txCount = 1;</code>
      * @return The txCount.
      */
+    @java.lang.Override
     public int getTxCount() {
       return txCount_;
     }
@@ -19420,6 +19584,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 txSize = 2;</code>
      * @return The txSize.
      */
+    @java.lang.Override
     public int getTxSize() {
       return txSize_;
     }
@@ -19748,6 +19913,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 txCount = 1;</code>
        * @return The txCount.
        */
+      @java.lang.Override
       public int getTxCount() {
         return txCount_;
       }
@@ -19778,6 +19944,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 txSize = 2;</code>
        * @return The txSize.
        */
+      @java.lang.Override
       public int getTxSize() {
         return txSize_;
       }
@@ -19868,7 +20035,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReplyProperFee}
    */
-  public  static final class ReplyProperFee extends
+  public static final class ReplyProperFee extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyProperFee)
       ReplyProperFeeOrBuilder {
@@ -19953,6 +20120,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 properFee = 1;</code>
      * @return The properFee.
      */
+    @java.lang.Override
     public long getProperFee() {
       return properFee_;
     }
@@ -20265,6 +20433,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 properFee = 1;</code>
        * @return The properFee.
        */
+      @java.lang.Override
       public long getProperFee() {
         return properFee_;
       }
@@ -20389,7 +20558,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code TxHashList}
    */
-  public  static final class TxHashList extends
+  public static final class TxHashList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxHashList)
       TxHashListOrBuilder {
@@ -20512,6 +20681,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bytes hashes = 1;</code>
      * @return A list containing the hashes.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getHashesList() {
       return hashes_;
@@ -20538,6 +20708,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 count = 2;</code>
      * @return The count.
      */
+    @java.lang.Override
     public long getCount() {
       return count_;
     }
@@ -20548,6 +20719,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated int64 expire = 3;</code>
      * @return A list containing the expire.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Long>
         getExpireList() {
       return expire_;
@@ -21044,6 +21216,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 count = 2;</code>
        * @return The count.
        */
+      @java.lang.Override
       public long getCount() {
         return count_;
       }
@@ -21231,7 +21404,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReplyTxInfos}
    */
-  public  static final class ReplyTxInfos extends
+  public static final class ReplyTxInfos extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyTxInfos)
       ReplyTxInfosOrBuilder {
@@ -21324,12 +21497,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .ReplyTxInfo txInfos = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfo> getTxInfosList() {
       return txInfos_;
     }
     /**
      * <code>repeated .ReplyTxInfo txInfos = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfoOrBuilder> 
         getTxInfosOrBuilderList() {
       return txInfos_;
@@ -21337,18 +21512,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .ReplyTxInfo txInfos = 1;</code>
      */
+    @java.lang.Override
     public int getTxInfosCount() {
       return txInfos_.size();
     }
     /**
      * <code>repeated .ReplyTxInfo txInfos = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfo getTxInfos(int index) {
       return txInfos_.get(index);
     }
     /**
      * <code>repeated .ReplyTxInfo txInfos = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReplyTxInfoOrBuilder getTxInfosOrBuilder(
         int index) {
       return txInfos_.get(index);
@@ -22007,7 +22185,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReceiptLog}
    */
-  public  static final class ReceiptLog extends
+  public static final class ReceiptLog extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReceiptLog)
       ReceiptLogOrBuilder {
@@ -22098,6 +22276,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 ty = 1;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -22108,6 +22287,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes log = 2;</code>
      * @return The log.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getLog() {
       return log_;
     }
@@ -22436,6 +22616,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 ty = 1;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -22466,6 +22647,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes log = 2;</code>
        * @return The log.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getLog() {
         return log_;
       }
@@ -22613,7 +22795,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code Receipt}
    */
-  public  static final class Receipt extends
+  public static final class Receipt extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Receipt)
       ReceiptOrBuilder {
@@ -22725,6 +22907,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 ty = 1;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -22734,12 +22917,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .KeyValue KV = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValue> getKVList() {
       return kV_;
     }
     /**
      * <code>repeated .KeyValue KV = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValueOrBuilder> 
         getKVOrBuilderList() {
       return kV_;
@@ -22747,18 +22932,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .KeyValue KV = 2;</code>
      */
+    @java.lang.Override
     public int getKVCount() {
       return kV_.size();
     }
     /**
      * <code>repeated .KeyValue KV = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValue getKV(int index) {
       return kV_.get(index);
     }
     /**
      * <code>repeated .KeyValue KV = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.CommonProtobuf.KeyValueOrBuilder getKVOrBuilder(
         int index) {
       return kV_.get(index);
@@ -22769,12 +22957,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLog> getLogsList() {
       return logs_;
     }
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLogOrBuilder> 
         getLogsOrBuilderList() {
       return logs_;
@@ -22782,18 +22972,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public int getLogsCount() {
       return logs_.size();
     }
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLog getLogs(int index) {
       return logs_.get(index);
     }
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLogOrBuilder getLogsOrBuilder(
         int index) {
       return logs_.get(index);
@@ -23224,6 +23417,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 ty = 1;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -23818,7 +24012,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReceiptData}
    */
-  public  static final class ReceiptData extends
+  public static final class ReceiptData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReceiptData)
       ReceiptDataOrBuilder {
@@ -23917,6 +24111,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 ty = 1;</code>
      * @return The ty.
      */
+    @java.lang.Override
     public int getTy() {
       return ty_;
     }
@@ -23926,12 +24121,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLog> getLogsList() {
       return logs_;
     }
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLogOrBuilder> 
         getLogsOrBuilderList() {
       return logs_;
@@ -23939,18 +24136,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public int getLogsCount() {
       return logs_.size();
     }
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLog getLogs(int index) {
       return logs_.get(index);
     }
     /**
      * <code>repeated .ReceiptLog logs = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptLogOrBuilder getLogsOrBuilder(
         int index) {
       return logs_.get(index);
@@ -24320,6 +24520,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 ty = 1;</code>
        * @return The ty.
        */
+      @java.lang.Override
       public int getTy() {
         return ty_;
       }
@@ -24704,7 +24905,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code TxResult}
    */
-  public  static final class TxResult extends
+  public static final class TxResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxResult)
       TxResultOrBuilder {
@@ -24832,6 +25033,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 height = 1;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -24842,6 +25044,7 @@ public final class TransactionAllProtobuf {
      * <code>int32 index = 2;</code>
      * @return The index.
      */
+    @java.lang.Override
     public int getIndex() {
       return index_;
     }
@@ -24852,6 +25055,7 @@ public final class TransactionAllProtobuf {
      * <code>.Transaction tx = 3;</code>
      * @return Whether the tx field is set.
      */
+    @java.lang.Override
     public boolean hasTx() {
       return tx_ != null;
     }
@@ -24859,12 +25063,14 @@ public final class TransactionAllProtobuf {
      * <code>.Transaction tx = 3;</code>
      * @return The tx.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTx() {
       return tx_ == null ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction.getDefaultInstance() : tx_;
     }
     /**
      * <code>.Transaction tx = 3;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxOrBuilder() {
       return getTx();
     }
@@ -24875,6 +25081,7 @@ public final class TransactionAllProtobuf {
      * <code>.ReceiptData receiptdate = 4;</code>
      * @return Whether the receiptdate field is set.
      */
+    @java.lang.Override
     public boolean hasReceiptdate() {
       return receiptdate_ != null;
     }
@@ -24882,12 +25089,14 @@ public final class TransactionAllProtobuf {
      * <code>.ReceiptData receiptdate = 4;</code>
      * @return The receiptdate.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceiptdate() {
       return receiptdate_ == null ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData.getDefaultInstance() : receiptdate_;
     }
     /**
      * <code>.ReceiptData receiptdate = 4;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptdateOrBuilder() {
       return getReceiptdate();
     }
@@ -24898,6 +25107,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 blocktime = 5;</code>
      * @return The blocktime.
      */
+    @java.lang.Override
     public long getBlocktime() {
       return blocktime_;
     }
@@ -24908,6 +25118,7 @@ public final class TransactionAllProtobuf {
      * <code>string actionName = 6;</code>
      * @return The actionName.
      */
+    @java.lang.Override
     public java.lang.String getActionName() {
       java.lang.Object ref = actionName_;
       if (ref instanceof java.lang.String) {
@@ -24924,6 +25135,7 @@ public final class TransactionAllProtobuf {
      * <code>string actionName = 6;</code>
      * @return The bytes for actionName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getActionNameBytes() {
       java.lang.Object ref = actionName_;
@@ -25358,6 +25570,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 height = 1;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -25388,6 +25601,7 @@ public final class TransactionAllProtobuf {
        * <code>int32 index = 2;</code>
        * @return The index.
        */
+      @java.lang.Override
       public int getIndex() {
         return index_;
       }
@@ -25656,6 +25870,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 blocktime = 5;</code>
        * @return The blocktime.
        */
+      @java.lang.Override
       public long getBlocktime() {
         return blocktime_;
       }
@@ -25965,7 +26180,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code TransactionDetail}
    */
-  public  static final class TransactionDetail extends
+  public static final class TransactionDetail extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TransactionDetail)
       TransactionDetailOrBuilder {
@@ -26150,6 +26365,7 @@ public final class TransactionAllProtobuf {
      * <code>.Transaction tx = 1;</code>
      * @return Whether the tx field is set.
      */
+    @java.lang.Override
     public boolean hasTx() {
       return tx_ != null;
     }
@@ -26157,12 +26373,14 @@ public final class TransactionAllProtobuf {
      * <code>.Transaction tx = 1;</code>
      * @return The tx.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction getTx() {
       return tx_ == null ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Transaction.getDefaultInstance() : tx_;
     }
     /**
      * <code>.Transaction tx = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionOrBuilder getTxOrBuilder() {
       return getTx();
     }
@@ -26173,6 +26391,7 @@ public final class TransactionAllProtobuf {
      * <code>.ReceiptData receipt = 2;</code>
      * @return Whether the receipt field is set.
      */
+    @java.lang.Override
     public boolean hasReceipt() {
       return receipt_ != null;
     }
@@ -26180,12 +26399,14 @@ public final class TransactionAllProtobuf {
      * <code>.ReceiptData receipt = 2;</code>
      * @return The receipt.
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData getReceipt() {
       return receipt_ == null ? cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptData.getDefaultInstance() : receipt_;
     }
     /**
      * <code>.ReceiptData receipt = 2;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.ReceiptDataOrBuilder getReceiptOrBuilder() {
       return getReceipt();
     }
@@ -26196,6 +26417,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bytes proofs = 3;</code>
      * @return A list containing the proofs.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getProofsList() {
       return proofs_;
@@ -26222,6 +26444,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 height = 4;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -26232,6 +26455,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 index = 5;</code>
      * @return The index.
      */
+    @java.lang.Override
     public long getIndex() {
       return index_;
     }
@@ -26242,6 +26466,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 blocktime = 6;</code>
      * @return The blocktime.
      */
+    @java.lang.Override
     public long getBlocktime() {
       return blocktime_;
     }
@@ -26252,6 +26477,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 amount = 7;</code>
      * @return The amount.
      */
+    @java.lang.Override
     public long getAmount() {
       return amount_;
     }
@@ -26262,6 +26488,7 @@ public final class TransactionAllProtobuf {
      * <code>string fromaddr = 8;</code>
      * @return The fromaddr.
      */
+    @java.lang.Override
     public java.lang.String getFromaddr() {
       java.lang.Object ref = fromaddr_;
       if (ref instanceof java.lang.String) {
@@ -26278,6 +26505,7 @@ public final class TransactionAllProtobuf {
      * <code>string fromaddr = 8;</code>
      * @return The bytes for fromaddr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFromaddrBytes() {
       java.lang.Object ref = fromaddr_;
@@ -26298,6 +26526,7 @@ public final class TransactionAllProtobuf {
      * <code>string actionName = 9;</code>
      * @return The actionName.
      */
+    @java.lang.Override
     public java.lang.String getActionName() {
       java.lang.Object ref = actionName_;
       if (ref instanceof java.lang.String) {
@@ -26314,6 +26543,7 @@ public final class TransactionAllProtobuf {
      * <code>string actionName = 9;</code>
      * @return The bytes for actionName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getActionNameBytes() {
       java.lang.Object ref = actionName_;
@@ -26333,12 +26563,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Asset assets = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Asset> getAssetsList() {
       return assets_;
     }
     /**
      * <code>repeated .Asset assets = 10;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetOrBuilder> 
         getAssetsOrBuilderList() {
       return assets_;
@@ -26346,18 +26578,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .Asset assets = 10;</code>
      */
+    @java.lang.Override
     public int getAssetsCount() {
       return assets_.size();
     }
     /**
      * <code>repeated .Asset assets = 10;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.Asset getAssets(int index) {
       return assets_.get(index);
     }
     /**
      * <code>repeated .Asset assets = 10;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.AssetOrBuilder getAssetsOrBuilder(
         int index) {
       return assets_.get(index);
@@ -26368,12 +26603,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .TxProof txProofs = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TxProof> getTxProofsList() {
       return txProofs_;
     }
     /**
      * <code>repeated .TxProof txProofs = 11;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TxProofOrBuilder> 
         getTxProofsOrBuilderList() {
       return txProofs_;
@@ -26381,18 +26618,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .TxProof txProofs = 11;</code>
      */
+    @java.lang.Override
     public int getTxProofsCount() {
       return txProofs_.size();
     }
     /**
      * <code>repeated .TxProof txProofs = 11;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TxProof getTxProofs(int index) {
       return txProofs_.get(index);
     }
     /**
      * <code>repeated .TxProof txProofs = 11;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TxProofOrBuilder getTxProofsOrBuilder(
         int index) {
       return txProofs_.get(index);
@@ -26404,6 +26644,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes fullHash = 12;</code>
      * @return The fullHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getFullHash() {
       return fullHash_;
     }
@@ -27351,6 +27592,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 height = 4;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -27381,6 +27623,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 index = 5;</code>
        * @return The index.
        */
+      @java.lang.Override
       public long getIndex() {
         return index_;
       }
@@ -27411,6 +27654,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 blocktime = 6;</code>
        * @return The blocktime.
        */
+      @java.lang.Override
       public long getBlocktime() {
         return blocktime_;
       }
@@ -27441,6 +27685,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 amount = 7;</code>
        * @return The amount.
        */
+      @java.lang.Override
       public long getAmount() {
         return amount_;
       }
@@ -28103,6 +28348,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes fullHash = 12;</code>
        * @return The fullHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getFullHash() {
         return fullHash_;
       }
@@ -28214,7 +28460,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code TransactionDetails}
    */
-  public  static final class TransactionDetails extends
+  public static final class TransactionDetails extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TransactionDetails)
       TransactionDetailsOrBuilder {
@@ -28307,12 +28553,14 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .TransactionDetail txs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail> getTxsList() {
       return txs_;
     }
     /**
      * <code>repeated .TransactionDetail txs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetailOrBuilder> 
         getTxsOrBuilderList() {
       return txs_;
@@ -28320,18 +28568,21 @@ public final class TransactionAllProtobuf {
     /**
      * <code>repeated .TransactionDetail txs = 1;</code>
      */
+    @java.lang.Override
     public int getTxsCount() {
       return txs_.size();
     }
     /**
      * <code>repeated .TransactionDetail txs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetail getTxs(int index) {
       return txs_.get(index);
     }
     /**
      * <code>repeated .TransactionDetail txs = 1;</code>
      */
+    @java.lang.Override
     public cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf.TransactionDetailOrBuilder getTxsOrBuilder(
         int index) {
       return txs_.get(index);
@@ -29003,7 +29254,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReqAddrs}
    */
-  public  static final class ReqAddrs extends
+  public static final class ReqAddrs extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqAddrs)
       ReqAddrsOrBuilder {
@@ -29628,7 +29879,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReqDecodeRawTransaction}
    */
-  public  static final class ReqDecodeRawTransaction extends
+  public static final class ReqDecodeRawTransaction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqDecodeRawTransaction)
       ReqDecodeRawTransactionOrBuilder {
@@ -29715,6 +29966,7 @@ public final class TransactionAllProtobuf {
      * <code>string txHex = 1;</code>
      * @return The txHex.
      */
+    @java.lang.Override
     public java.lang.String getTxHex() {
       java.lang.Object ref = txHex_;
       if (ref instanceof java.lang.String) {
@@ -29731,6 +29983,7 @@ public final class TransactionAllProtobuf {
      * <code>string txHex = 1;</code>
      * @return The bytes for txHex.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTxHexBytes() {
       java.lang.Object ref = txHex_;
@@ -30206,7 +30459,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code UserWrite}
    */
-  public  static final class UserWrite extends
+  public static final class UserWrite extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:UserWrite)
       UserWriteOrBuilder {
@@ -30300,6 +30553,7 @@ public final class TransactionAllProtobuf {
      * <code>string topic = 1;</code>
      * @return The topic.
      */
+    @java.lang.Override
     public java.lang.String getTopic() {
       java.lang.Object ref = topic_;
       if (ref instanceof java.lang.String) {
@@ -30316,6 +30570,7 @@ public final class TransactionAllProtobuf {
      * <code>string topic = 1;</code>
      * @return The bytes for topic.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTopicBytes() {
       java.lang.Object ref = topic_;
@@ -30336,6 +30591,7 @@ public final class TransactionAllProtobuf {
      * <code>string content = 2;</code>
      * @return The content.
      */
+    @java.lang.Override
     public java.lang.String getContent() {
       java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
@@ -30352,6 +30608,7 @@ public final class TransactionAllProtobuf {
      * <code>string content = 2;</code>
      * @return The bytes for content.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getContentBytes() {
       java.lang.Object ref = content_;
@@ -30920,7 +31177,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code UpgradeMeta}
    */
-  public  static final class UpgradeMeta extends
+  public static final class UpgradeMeta extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:UpgradeMeta)
       UpgradeMetaOrBuilder {
@@ -31017,6 +31274,7 @@ public final class TransactionAllProtobuf {
      * <code>bool starting = 1;</code>
      * @return The starting.
      */
+    @java.lang.Override
     public boolean getStarting() {
       return starting_;
     }
@@ -31027,6 +31285,7 @@ public final class TransactionAllProtobuf {
      * <code>string version = 2;</code>
      * @return The version.
      */
+    @java.lang.Override
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
@@ -31043,6 +31302,7 @@ public final class TransactionAllProtobuf {
      * <code>string version = 2;</code>
      * @return The bytes for version.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getVersionBytes() {
       java.lang.Object ref = version_;
@@ -31063,6 +31323,7 @@ public final class TransactionAllProtobuf {
      * <code>int64 height = 3;</code>
      * @return The height.
      */
+    @java.lang.Override
     public long getHeight() {
       return height_;
     }
@@ -31410,6 +31671,7 @@ public final class TransactionAllProtobuf {
        * <code>bool starting = 1;</code>
        * @return The starting.
        */
+      @java.lang.Override
       public boolean getStarting() {
         return starting_;
       }
@@ -31516,6 +31778,7 @@ public final class TransactionAllProtobuf {
        * <code>int64 height = 3;</code>
        * @return The height.
        */
+      @java.lang.Override
       public long getHeight() {
         return height_;
       }
@@ -31635,7 +31898,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code ReqTxHashList}
    */
-  public  static final class ReqTxHashList extends
+  public static final class ReqTxHashList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqTxHashList)
       ReqTxHashListOrBuilder {
@@ -31769,6 +32032,7 @@ public final class TransactionAllProtobuf {
      * <code>bool isShortHash = 2;</code>
      * @return The isShortHash.
      */
+    @java.lang.Override
     public boolean getIsShortHash() {
       return isShortHash_;
     }
@@ -32231,6 +32495,7 @@ public final class TransactionAllProtobuf {
        * <code>bool isShortHash = 2;</code>
        * @return The isShortHash.
        */
+      @java.lang.Override
       public boolean getIsShortHash() {
         return isShortHash_;
       }
@@ -32348,7 +32613,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code TxProof}
    */
-  public  static final class TxProof extends
+  public static final class TxProof extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:TxProof)
       TxProofOrBuilder {
@@ -32452,6 +32717,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bytes proofs = 1;</code>
      * @return A list containing the proofs.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getProofsList() {
       return proofs_;
@@ -32478,6 +32744,7 @@ public final class TransactionAllProtobuf {
      * <code>uint32 index = 2;</code>
      * @return The index.
      */
+    @java.lang.Override
     public int getIndex() {
       return index_;
     }
@@ -32488,6 +32755,7 @@ public final class TransactionAllProtobuf {
      * <code>bytes rootHash = 3;</code>
      * @return The rootHash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getRootHash() {
       return rootHash_;
     }
@@ -32942,6 +33210,7 @@ public final class TransactionAllProtobuf {
        * <code>uint32 index = 2;</code>
        * @return The index.
        */
+      @java.lang.Override
       public int getIndex() {
         return index_;
       }
@@ -32972,6 +33241,7 @@ public final class TransactionAllProtobuf {
        * <code>bytes rootHash = 3;</code>
        * @return The rootHash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getRootHash() {
         return rootHash_;
       }
@@ -33080,7 +33350,7 @@ public final class TransactionAllProtobuf {
    *
    * Protobuf type {@code ReqCheckTxsExist}
    */
-  public  static final class ReqCheckTxsExist extends
+  public static final class ReqCheckTxsExist extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReqCheckTxsExist)
       ReqCheckTxsExistOrBuilder {
@@ -33173,6 +33443,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bytes txHashes = 1;</code>
      * @return A list containing the txHashes.
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.ByteString>
         getTxHashesList() {
       return txHashes_;
@@ -33702,7 +33973,7 @@ public final class TransactionAllProtobuf {
   /**
    * Protobuf type {@code ReplyCheckTxsExist}
    */
-  public  static final class ReplyCheckTxsExist extends
+  public static final class ReplyCheckTxsExist extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ReplyCheckTxsExist)
       ReplyCheckTxsExistOrBuilder {
@@ -33817,6 +34088,7 @@ public final class TransactionAllProtobuf {
      * <code>repeated bool existFlags = 1;</code>
      * @return A list containing the existFlags.
      */
+    @java.lang.Override
     public java.util.List<java.lang.Boolean>
         getExistFlagsList() {
       return existFlags_;
@@ -33856,6 +34128,7 @@ public final class TransactionAllProtobuf {
      * <code>uint32 existCount = 2;</code>
      * @return The existCount.
      */
+    @java.lang.Override
     public int getExistCount() {
       return existCount_;
     }
@@ -34322,6 +34595,7 @@ public final class TransactionAllProtobuf {
        * <code>uint32 existCount = 2;</code>
        * @return The existCount.
        */
+      @java.lang.Override
       public int getExistCount() {
         return existCount_;
       }

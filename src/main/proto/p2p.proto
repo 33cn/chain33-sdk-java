@@ -4,7 +4,7 @@ import "transaction.proto";
 import "common.proto";
 import "blockchain.proto";
 
-option java_outer_classname = "P2pService";
+option java_outer_classname = "P2pProtobuf";
 option java_package = "cn.chain33.javasdk.model.protobuf";
 
 service p2pgservice {
