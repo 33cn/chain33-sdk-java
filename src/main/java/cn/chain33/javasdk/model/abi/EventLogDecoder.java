@@ -4,7 +4,10 @@ import cn.chain33.javasdk.model.abi.datatypes.Event;
 import cn.chain33.javasdk.model.abi.datatypes.Type;
 import cn.chain33.javasdk.model.abi.spi.FunctionReturnDecoderProvider;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ServiceLoader;
 
 /**
  * @authoer lhl
@@ -22,6 +25,7 @@ public abstract class EventLogDecoder {
 
         decoder = iterator.hasNext() ? iterator.next().get() : new DefaultFunctionReturnDecoder();
     }
+
     /**
      * 反向解析Event日志参数值
      *
@@ -30,8 +34,20 @@ public abstract class EventLogDecoder {
      * @return
      */
     public static List<Type> decodeEventParameters(
-            String rawInput, Event event){
-        return decoder.decodeEventParameters(rawInput,event.getParameters());
+            String rawInput, Event event) {
+       //解析参数要按顺位返回
+        List<Type> values= decoder.decodeEventParameters(rawInput, event.getParsedParameters());
+        List<Type> parsedValues =  new ArrayList<Type>();
+        List<Integer> indexs = event.getParsedParametersIndex();
+        if (event.isRecordered()){
+            for(int i=0;i<values.size();i++){
+               parsedValues.set(indexs.get(i), values.get(i));
+            }
+            return parsedValues;
+        }
+
+        return values;
     }
+    //TODO 后面有时间的话indexed 和noindexed 参数解析接口也要单独实现
 }
 

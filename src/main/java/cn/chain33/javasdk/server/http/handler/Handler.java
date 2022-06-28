@@ -15,11 +15,11 @@ import java.util.List;
  * 抽象handler类
  */
 public abstract class Handler implements HttpHandler {
-    public EncodeType encodeType;
+    private EncodeType encodeType;
 
-    public List<Event> eventList;
+    private List<Event> eventList;
 
-    public Outflow outflow;
+    private Outflow outflow;
 
     public EncodeType getEncodeType() {
         return encodeType;
