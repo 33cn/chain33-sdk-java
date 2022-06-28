@@ -12,9 +12,6 @@ import com.google.protobuf.InvalidProtocolBufferException;
  * @date 2022/6/24 上午9:57
  */
 public class CoinsUtil {
-
-    //TODO 有时间重构交易构造及签名
-
     /**
      * 普通coins主币交易转账
      *
@@ -51,8 +48,8 @@ public class CoinsUtil {
         txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
-        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProtobuf(tx, privateKey, signType);
-        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
+        String hexString = HexUtil.toHexString(signedProtobufTx.toByteArray());
         return hexString;
     }
 
@@ -100,8 +97,8 @@ public class CoinsUtil {
 
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
-        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProtobuf(tx, privateKey, signType);
-        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
+        String hexString = HexUtil.toHexString(signedProtobufTx.toByteArray());
         return hexString;
     }
 
@@ -140,11 +137,15 @@ public class CoinsUtil {
         txBuilder.setFee(fee);
         txBuilder.setNonce(TransactionUtil.getRandomNonce());
         txBuilder.setPayload(ByteString.copyFrom(coinsAction.toByteArray()));
-        txBuilder.setTo(AddressUtil.getToAddress(execName.getBytes(), addressType));
+        if (paraName.isEmpty()){
+            txBuilder.setTo(AddressUtil.getToAddress(execName.getBytes(), addressType));
+        }else{
+            txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
+        }
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
-        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProtobuf(tx, privateKey, signType);
-        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
+        String hexString = HexUtil.toHexString(signedProtobufTx.toByteArray());
         return hexString;
     }
 }

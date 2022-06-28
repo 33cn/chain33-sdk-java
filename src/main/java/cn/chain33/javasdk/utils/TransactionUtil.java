@@ -1263,9 +1263,8 @@ public class TransactionUtil {
      * @param signType   目前只支持secp256k1格式签名
      * @return
      */
-    public static TransactionAllProtobuf.Transaction signProtobuf(TransactionAllProtobuf.Transaction tx, String privateKey, SignType signType) {
-        TransactionAllProtobuf.Transaction encodeTx = getSignProbuf(tx);
-        byte[] protobufData = encodeTx.toByteArray();
+    public static TransactionAllProtobuf.Transaction signedProtobufTx(TransactionAllProtobuf.Transaction tx, String privateKey, SignType signType) {
+        byte[] protobufData = tx.toByteArray();
         byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
         Signature btcCoinSign = btcCoinSign(protobufData, privateKeyBytes, signType);
         TransactionAllProtobuf.Transaction.Builder builder = tx.toBuilder();
@@ -1273,8 +1272,7 @@ public class TransactionUtil {
         signatureBuilder.setPubkey(ByteString.copyFrom(btcCoinSign.getPubkey()));
         signatureBuilder.setTy(btcCoinSign.getTy());
         signatureBuilder.setSignature(ByteString.copyFrom(btcCoinSign.getSignature())); // 序列化
-        TransactionAllProtobuf.Transaction.Builder setSignature = builder.setSignature(signatureBuilder.build());
-        return setSignature.build();
+        return builder.setSignature(signatureBuilder.build()).build();
     }
 
     /**
@@ -1512,32 +1510,28 @@ public class TransactionUtil {
     }
 
     /**
-     * 通用的构建未签名的交易方法
-     *
+     * 构建通用的签过名的交易方法
      * @param execer
      * @param payLoad
+     * @param privateKey
+     * @param signType
      * @param addressType
      * @param chainID
      * @param fee
-     * @param txHeight
+     * @param paraName
      * @return
      */
-    public static String createTxWithoutSign(byte[] execer, byte[] payLoad, AddressType addressType, int chainID, long fee, long txHeight) {
-        Transaction transaction = new Transaction();
-        transaction.setExecer(execer);
-        transaction.setPayload(payLoad);
-        transaction.setFee(fee);
-        transaction.setExpire(TX_HEIGHT_OFFSET + txHeight);
-        transaction.setNonce(TransactionUtil.getRandomNonce());
-        transaction.setChainID(chainID);
-        // 计算To
-        String toAddress = AddressUtil.getToAddress(execer, addressType);
-        transaction.setTo(toAddress);
-        // 签名
-        byte[] protobufData = encodeProtobuf(transaction);
-
-        // 序列化
-        String transactionStr = HexUtil.toHexString(protobufData);
-        return transactionStr;
+    public static String buildSignedTx(String execer,byte[] payLoad,String privateKey,SignType signType,AddressType addressType,int chainID,long fee,String paraName) {
+        TransactionAllProtobuf.Transaction.Builder txBuilder = TransactionAllProtobuf.Transaction.newBuilder();
+        txBuilder.setExecer(ByteString.copyFrom((paraName + execer).getBytes()));
+        txBuilder.setFee(fee);
+        txBuilder.setNonce(TransactionUtil.getRandomNonce());
+        txBuilder.setPayload(ByteString.copyFrom(payLoad));
+        txBuilder.setTo(AddressUtil.getToAddress((paraName + execer).getBytes(), addressType));
+        txBuilder.setChainID(chainID);
+        TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        return hexString;
     }
 }
