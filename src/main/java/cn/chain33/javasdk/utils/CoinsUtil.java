@@ -45,7 +45,11 @@ public class CoinsUtil {
         txBuilder.setFee(fee);
         txBuilder.setNonce(TransactionUtil.getRandomNonce());
         txBuilder.setPayload(ByteString.copyFrom(coinsAction.toByteArray()));
-        txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
+        if (paraName.isEmpty()){
+            txBuilder.setTo(to);
+        }else{
+            txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
+        }
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
         TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
@@ -70,7 +74,7 @@ public class CoinsUtil {
      * @return
      * @throws Exception
      */
-    public static String createTransferToExecTx(String coinsToken, long amount, String execName, String to, String note, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long fee) throws Exception {
+    public static String createTransferToExecTx(String coinsToken, long amount, String execName, String to, String note, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long fee)  {
         TransactionAllProtobuf.AssetsTransferToExec.Builder builder = TransactionAllProtobuf.AssetsTransferToExec.newBuilder();
         builder.setAmount(amount);
         builder.setTo(to);
@@ -119,7 +123,7 @@ public class CoinsUtil {
      * @return
      * @throws Exception
      */
-    public static String createWithdrawTx(String coinsToken, long amount, String execName, String to, String note, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long fee) throws Exception {
+    public static String createWithdrawTx(String coinsToken, long amount, String execName, String to, String note, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long fee) {
         TransactionAllProtobuf.AssetsWithdraw.Builder builder = TransactionAllProtobuf.AssetsWithdraw.newBuilder();
         builder.setAmount(amount);
         builder.setTo(to);
