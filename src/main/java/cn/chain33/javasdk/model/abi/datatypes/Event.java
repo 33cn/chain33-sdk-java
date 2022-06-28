@@ -14,6 +14,7 @@ package cn.chain33.javasdk.model.abi.datatypes;
 
 import cn.chain33.javasdk.model.abi.TypeReference;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,5 +46,54 @@ public class Event {
 
     public List<TypeReference<Type>> getNonIndexedParameters() {
         return parameters.stream().filter(p -> !p.isIndexed()).collect(Collectors.toList());
+    }
+
+    /**
+     * 参数解析结果是否需要重新排序
+     *
+     * @return
+     */
+    public boolean isRecordered() {
+        if (getIndexedParameters().size() == 0) {
+            return false;
+        }
+        for (int i = 0; i < getIndexedParameters().size(); i++) {
+            if (!getParameters().get(i).isIndexed()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 获取参数位置索引list
+     *
+     * @return
+     */
+    public List<Integer> getParsedParametersIndex() {
+        ArrayList<Integer> indexedList = new ArrayList<Integer>();
+        ArrayList<Integer> noIndexedList = new ArrayList<Integer>();
+        ArrayList<Integer> parsedParametersIndex = new ArrayList<Integer>();
+        for (int i = 0; i < getParameters().size(); i++) {
+            if (getParameters().get(i).isIndexed()) {
+                indexedList.add(i);
+                continue;
+            }
+            noIndexedList.add(i);
+        }
+        parsedParametersIndex.addAll(indexedList);
+        parsedParametersIndex.addAll(noIndexedList);
+        return parsedParametersIndex;
+    }
+
+    /**
+     * 获取排序后的event 参数列表
+     *
+     * @return
+     */
+    public List<TypeReference<Type>> getParsedParameters() {
+        List<TypeReference<Type>> paramters = getIndexedParameters();
+        paramters.addAll(getNonIndexedParameters());
+        return paramters;
     }
 }

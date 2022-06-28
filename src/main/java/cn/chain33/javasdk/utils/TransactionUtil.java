@@ -1531,7 +1531,7 @@ public class TransactionUtil {
         transaction.setNonce(TransactionUtil.getRandomNonce());
         transaction.setChainID(chainID);
         // 计算To
-        String toAddress = getToAddress(execer, addressType);
+        String toAddress = AddressUtil.getToAddress(execer, addressType);
         transaction.setTo(toAddress);
         // 签名
         byte[] protobufData = encodeProtobuf(transaction);
