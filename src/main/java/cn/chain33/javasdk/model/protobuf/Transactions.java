@@ -2,11 +2,10 @@ package cn.chain33.javasdk.model.protobuf;
 
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.utils.HexUtil;
-import cn.chain33.javasdk.utils.TransactionUtil;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,122 +13,154 @@ import java.util.List;
  * @date 2022/7/1 上午8:30
  */
 public class Transactions {
-    private TransactionAllProtobuf.Transactions txs;
+    private List<Transaction> list;
 
     //提供一些常用的构造函数
     public Transactions(TransactionAllProtobuf.Transactions txs) throws Exception {
         if (txs.getTxsCount() > 20 || txs.getTxsCount() <= 1) {
             throw new Exception("ErrTxGroupCount");
         }
-        this.txs = txs;
+        ArrayList<Transaction> arrayList = new ArrayList<Transaction>();
+        boolean isPara=false;
+        boolean isMain=false;
+        for(int i=0;i<txs.getTxsCount();i++){
+            if (txs.getTxs(i).getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))){
+                isPara=true;
+            }else{
+                isMain=true;
+            }
+            arrayList.add(new Transaction(txs.getTxs(i)));
+        }
+        if (isMain&&isPara){
+            throw new Exception("ErrTxGroupParaMainMixed");
+        }
+        this.list = arrayList;
     }
+
     //使用时需要重构交易组
     public Transactions(TransactionAllProtobuf.Transaction... txs) throws Exception {
         if (txs.length > 20 || txs.length <= 1) {
             throw new Exception("ErrTxGroupCount");
 
         }
-        TransactionAllProtobuf.Transactions.Builder builder = TransactionAllProtobuf.Transactions.newBuilder();
-        for (int i = 0; i < txs.length; i++) {
-            builder.addTxs(txs[i]);
+        boolean isPara=false;
+        boolean isMain=false;
+        ArrayList<Transaction> arrayList = new ArrayList<Transaction>();
+        for(int i=0;i<txs.length;i++){
+            if (txs[i].getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))){
+                isPara=true;
+            }else{
+                isMain=true;
+            }
+            arrayList.add(new Transaction(txs[i]));
         }
-        this.txs = builder.build();
+        if (isMain&&isPara){
+            throw new Exception("ErrTxGroupParaMainMixed");
+        }
+        this.list = arrayList;
     }
+
+
     //使用时需要重构交易组
     public Transactions(String... txs) throws Exception {
         if (txs.length > 20 || txs.length <= 1) {
             throw new Exception("ErrTxGroupCount");
         }
-        TransactionAllProtobuf.Transactions.Builder builder = TransactionAllProtobuf.Transactions.newBuilder();
+        boolean isPara=false;
+        boolean isMain=false;
+        ArrayList<Transaction> arrayList = new ArrayList<Transaction>();
         for (int i = 0; i < txs.length; i++) {
-            builder.addTxs(TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(txs[i])));
+            TransactionAllProtobuf.Transaction tx=TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(txs[i]));
+            if (tx.getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))){
+                isPara=true;
+            }else{
+                isMain=true;
+            }
+            arrayList.add(new Transaction(tx));
         }
-        this.txs = builder.build();
+        if (isMain&&isPara){
+            throw new Exception("ErrTxGroupParaMainMixed");
+        }
+        this.list = arrayList;
     }
-   //重新构建交易组
-    public void reBuildGroup(long feeRate) throws Exception {
-        TransactionAllProtobuf.Transactions.Builder builder = TransactionAllProtobuf.Transactions.newBuilder();
-        List<TransactionAllProtobuf.Transaction.Builder> builderList = new ArrayList<TransactionAllProtobuf.Transaction.Builder>();
-        for (int i = 0; i < txs.getTxsCount(); i++) {
-            builderList.add(txs.getTxs(i).toBuilder());
-        }
+
+    public List<Transaction> getTxList() {
+        return this.list;
+    }
+
+    //重新构建交易组
+    public void reBuild(long feeRate) throws Exception {
         long totalFee = 0;
         long minFee = 0;
-        byte[] header = new byte[0];
-        try {
-            header = TransactionUtil.getTxHash(txs.getTxs(0));
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
-            throw new Exception(e.getMessage());
-        }
-        for (int i = txs.getTxsCount() - 1; i >= 0; i--) {
-            builderList.get(i).setGroupCount(txs.getTxsCount());
-            totalFee += txs.getTxs(i).getFee();
-            builderList.get(i).clearSignature().setHeader(ByteString.copyFrom(header));
+        byte[] header = list.get(0).hash();
+        for (int i = list.size() - 1; i >= 0; i--) {
+            list.get(i).setGroupCount(list.size());
+            totalFee += list.get(i).getFee();
+            list.get(i).setHeader(header);
             if (i == 0) {
-                builderList.get(i).setFee(1 << 62);
+                list.get(i).setFee(1 << 62);
             } else {
-                builderList.get(i).setFee(0);
+                list.get(i).setFee(0);
             }
-            long realFee = TransactionUtil.getRealFee(builderList.get(i).build(), feeRate);
+            long realFee = list.get(i).getRealFee(feeRate);
             minFee += realFee;
             if (i == 0) {
                 if (totalFee < minFee) {
                     totalFee = minFee;
                 }
-                builderList.get(i).setFee(totalFee);
-                header = TransactionUtil.getTxHash(builderList.get(i).build());
+                list.get(i).setFee(totalFee);
+                header = list.get(i).hash();
             } else {
-                builderList.get(i).setFee(0);
-                builderList.get(i - 1).setNext(ByteString.copyFrom(TransactionUtil.getTxHash(builderList.get(i).build())));
+                list.get(i).setFee(0);
+                list.get(i - 1).setNext(getTxList().get(i).hash());
             }
 
         }
-        for (int i = 0; i < txs.getTxsCount(); i++) {
-            builderList.get(i).setHeader(ByteString.copyFrom(header));
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).setHeader(header);
         }
-        for (int i = 0; i < txs.getTxsCount(); i++) {
-            builder.addTxs(builderList.get(i).build());
-        }
-        this.txs = builder.build();
     }
 
-    public TransactionAllProtobuf.Transactions getTxs() {
-        return this.txs;
-    }
 
     /**
      * 对交易组中交易签名
-     * @param n  当n小于0时表示对所有交易签名
+     *
+     * @param n          当n小于0时表示对所有交易签名
      * @param signType
      * @param privateKey
      * @throws Exception
      */
     public void signN(int n, SignType signType, String privateKey) throws Exception {
-        if (n >= getTxs().getTxsCount()) {
+        if (n >= list.size()) {
             throw new Exception("ErrIndex");
         }
-        if (n<0){
-            for (int i=0;i<txs.getTxsCount();i++){
-                Transaction tx = new Transaction(txs.getTxs(i));
-                tx.sign(signType, privateKey);
-                this.txs = txs.toBuilder().setTxs(i, tx.getTx()).build();
+        if (n < 0) {
+            for (int i = 0; i < list.size(); i++) {
+                list.get(i).sign(signType, privateKey);
             }
             return;
         }
-        Transaction tx = new Transaction(txs.getTxs(n));
-        tx.sign(signType, privateKey);
-        this.txs = txs.toBuilder().setTxs(n, tx.getTx()).build();
+        list.get(n).sign(signType, privateKey);
     }
 
     public Transaction toTransaction() throws Exception {
-        if (getTxs().getTxsCount() < 2) {
+        if (getTxList().size() < 2) {
             throw new Exception("ErrInvalidParam");
         }
         //利用序列化进行深拷贝
-        TransactionAllProtobuf.Transaction copytx = TransactionAllProtobuf.Transaction.parseFrom(txs.getTxs(0).toByteArray());
+        TransactionAllProtobuf.Transaction copytx = TransactionAllProtobuf.Transaction.parseFrom(getTxList().get(0).getTx().toByteArray());
         //放到header中不影响交易的Hash
-        return new Transaction(copytx.toBuilder().setHeader(ByteString.copyFrom(txs.toByteArray())).build());
+        return new Transaction(copytx.toBuilder().setHeader(ByteString.copyFrom(getTxGroup().toByteArray())).build());
+    }
+
+    public TransactionAllProtobuf.Transactions getTxGroup() {
+        TransactionAllProtobuf.Transactions.Builder builder = TransactionAllProtobuf.Transactions.newBuilder();
+        getTxList().forEach(
+                tx -> {
+                    builder.addTxs(tx.getTx());
+                }
+        );
+        return builder.build();
     }
 
 }

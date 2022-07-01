@@ -154,6 +154,10 @@ public class EvmTest {
         System.out.println("执行结果 = " + txResult.getReceipt().getTyname());
     }
 
+    @Test
+    public void testGetProperFeeRate()throws Exception{
+       System.out.println(client.getProperFeeRate(100,10000));
+    }
     /**
      * 平行链模式下，需要先将主链代币跨链到平行链上面，然后再将跨链的主币转移到evm中使用
      * evm执行器中使用案例，后面跨链内容补充完再完善用例

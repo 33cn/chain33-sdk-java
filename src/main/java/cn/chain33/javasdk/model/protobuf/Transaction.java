@@ -4,6 +4,7 @@ import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.utils.HashUtil;
 import cn.chain33.javasdk.utils.HexUtil;
 import cn.chain33.javasdk.utils.TransactionUtil;
+import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 /**
@@ -11,6 +12,8 @@ import com.google.protobuf.InvalidProtocolBufferException;
  * @date 2022/6/30 下午8:20
  */
 public class Transaction {
+
+    private static final long MAXTXSIZE = 100000;
     private TransactionAllProtobuf.Transaction tx;
 
     public Transaction(TransactionAllProtobuf.Transaction tx) {
@@ -26,9 +29,8 @@ public class Transaction {
         }
     }
 
-    public TransactionAllProtobuf.Transaction sign(SignType signType, String privateKey) {
-        this.tx = TransactionUtil.signedProtobufTx(this.tx, privateKey, signType);
-        return getTx();
+    public void sign(SignType signType, String privateKey) {
+        this.tx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
     }
 
     public TransactionAllProtobuf.Transaction getTx() {
@@ -36,7 +38,7 @@ public class Transaction {
     }
 
     public String hexString() {
-        return HexUtil.toHexString(this.tx.toByteArray());
+        return HexUtil.toHexString(tx.toByteArray());
     }
 
     public byte[] hash() throws Exception {
@@ -55,19 +57,59 @@ public class Transaction {
 
     //暂时只支持设置时间
     public void setExpire(long expire) {
-        this.tx = getTx().toBuilder().setExpire(TransactionUtil.getExpire(expire)).build();
+        this.tx=tx.toBuilder().setExpire(TransactionUtil.getExpire(expire)).build();
     }
 
+    public void setGroupCount(int groupCount){
+        this.tx=tx.toBuilder().setGroupCount(groupCount).build();
+    }
+
+    public void setHeader(byte[] header){
+        this.tx=tx.toBuilder().setHeader(ByteString.copyFrom(header)).build();
+    }
+
+    public void setNext(byte[] next){
+        this.tx=tx.toBuilder().setNext(ByteString.copyFrom(next)).build();
+    }
+
+    public byte[]getExecer(){
+        return tx.getExecer().toByteArray();
+    }
     public Transactions toTransactions() throws Exception {
-        if (getTx().getGroupCount() < 0 || getTx().getGroupCount() == 1 || getTx().getGroupCount() > 20) {
+        if (tx.getGroupCount() < 0 || tx.getGroupCount() == 1 || tx.getGroupCount() > 20) {
             throw new Exception("ErrTxGroupCount");
         }
-        if (getTx().getGroupCount() > 0) {
-            return new Transactions(TransactionAllProtobuf.Transactions.parseFrom(getTx().getHeader()));
+        if (tx.getGroupCount() > 0) {
+            return new Transactions(TransactionAllProtobuf.Transactions.parseFrom(tx.getHeader()));
         }
-        if (!getTx().getNext().isEmpty() || !getTx().getHeader().isEmpty()) {
+        if (!tx.getNext().isEmpty() || !tx.getHeader().isEmpty()) {
             throw new Exception("ErrNomalTx");
         }
         return null;
+    }
+
+    public int size(){
+       return tx.toByteArray().length;
+    }
+    public long getFee(){
+        return tx.getFee();
+    }
+    //获取真实fee
+    public long getRealFee(long feeRate) throws Exception{
+        int txSize = tx.toByteArray().length;
+        //如果签名为空，那么加上签名的空间
+        if (tx.getSignature() == null) {
+            txSize += 300;
+        }
+        if (size() > MAXTXSIZE) {
+            throw new Exception("ErrTxMsgSizeTooBig");
+        }
+        // 检查交易费是否小于最低值
+        long realFee = (txSize / 1000 + 1) * feeRate;
+        return realFee;
+    }
+
+    public void setFee(long fee){
+        this.tx=tx.toBuilder().setFee(fee).build();
     }
 }

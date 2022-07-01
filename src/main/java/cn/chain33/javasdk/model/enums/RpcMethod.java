@@ -25,6 +25,8 @@ public enum RpcMethod {
 	GET_BLOCK_DETAIL("Chain33.GetBlockOverview"),
 	
 	GET_PEER_INFO("Chain33.GetPeerInfo"),
+
+	GET_PROPER_FEE("Chain33.GetProperFee"),
 	
 	GET_NET_INFO("Chain33.GetNetInfo"),
 	

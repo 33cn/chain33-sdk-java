@@ -53,8 +53,8 @@ public class NoBalanceTxTest {
         String AddrA = "14KEKbYtKKQm4wMthSK9J4La4nAiidGozt";
         String AddrB = "193TZpLVKoJE9nqggiGtDFKcv34faKRBF5";
         //step1 构造代扣交易
-        String tx1 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 1000000);
-        String tx2 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 1000000);
+        String tx1 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 100000);
+        String tx2 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 100000);
         ArrayList<TransactionAllProtobuf.Transaction> txsList = new ArrayList<TransactionAllProtobuf.Transaction>();
         txsList.add(TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(tx1)));
         txsList.add(TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(tx2)));
@@ -80,15 +80,14 @@ public class NoBalanceTxTest {
         String AddrB = "193TZpLVKoJE9nqggiGtDFKcv34faKRBF5";
 
         //step1 构造交易组
-        String tx1 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 1000000);
-        String tx2 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 1000000);
+        String tx1 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 100000);
+        String tx2 = CoinsUtil.createTransferTx("", 200000000, AddrB, "", "", SignType.SECP256K1, AddressType.BTC_ADDRESS, 0, "", 100000);
 
 
         Transactions txs = new Transactions(tx1,tx2);
-        txs.reBuildGroup(100000);
-        System.out.println(txs.getTxs());
+        txs.reBuild(1000000);
         txs.signN(-1,SignType.SECP256K1, PrivateKey);
-        System.out.println(txs.toTransaction().hexString());
+        System.out.println("end:"+txs.toTransaction().hexString());
         String txhash = client.submitTransaction(txs.toTransaction().hexString());
         System.out.println("转账交易组交易哈希： = " + txhash);
         Thread.sleep(20000);

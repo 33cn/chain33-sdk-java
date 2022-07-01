@@ -49,32 +49,20 @@ import java.util.Random;
  */
 public class TransactionUtil {
 
-    private static final SignType DEFAULT_SIGNTYPE = SignType.SECP256K1;
-
     public static final long DEFAULT_FEE = 1000000;
-
     public static final long PARA_CREATE_EVM_FEE = 3000000;
-
     public static final long PARA_CALL_EVM_FEE = 200000;
-
+    private static final SignType DEFAULT_SIGNTYPE = SignType.SECP256K1;
     private final static Long TX_HEIGHT_OFFSET = 1L << 62;
 
     private final static Long LowAllowPackHeight = 30L;
-
-    private static byte[] addrSeed = "address seed bytes for public key".getBytes();
-
     private static final long DURATION = 1;
-
     private static final long MICROSECOND = DURATION * 1000;
-
     private static final long MILLISECOND = MICROSECOND * 1000;
-
     private static final long SECOND = MILLISECOND * 1000;
-
     private static final long EXPIREBOUND = 1000000000;
-
     private static final long MAXTXSIZE = 100000;
-
+    private static byte[] addrSeed = "address seed bytes for public key".getBytes();
 
     /**
      * @param expire 单位为秒
@@ -1576,6 +1564,7 @@ public class TransactionUtil {
 
     /**
      * 构建代扣交易组
+     *
      * @param noBalanceTxs
      * @param signType
      * @param addressType
@@ -1585,7 +1574,7 @@ public class TransactionUtil {
      * @return
      * @throws Exception
      */
-    public static String createNoBalanceTx(TransactionAllProtobuf.Transaction tx,String withHoldPrivateKey,String fromAddressPrivateKey, SignType signType, AddressType addressType, int chainID, long feeRate, String paraName) throws Exception {
+    public static String createNoBalanceTx(TransactionAllProtobuf.Transaction tx, String withHoldPrivateKey, String fromAddressPrivateKey, SignType signType, AddressType addressType, int chainID, long feeRate, String paraName) throws Exception {
         TransactionAllProtobuf.Transaction.Builder builder = TransactionAllProtobuf.Transaction.newBuilder();
         builder.setExecer(ByteString.copyFrom((paraName + "none").getBytes()));
         builder.setPayload(ByteString.copyFrom("no-fee-transaction".getBytes()));
@@ -1597,17 +1586,17 @@ public class TransactionUtil {
         ArrayList<TransactionAllProtobuf.Transaction> list = new ArrayList<TransactionAllProtobuf.Transaction>();
         list.add(builder.build());
         list.add(tx);
-        TransactionAllProtobuf.Transactions txs=createTxGroup(list, feeRate);
-        TransactionAllProtobuf.Transactions.Builder txsBuiler=txs.toBuilder();
-        for (int i=0;i<txs.getTxsCount();i++){
-            if (i==0){
-                txsBuiler.setTxs(i,signedProtobufTx(txs.getTxs(i),withHoldPrivateKey,signType));
+        TransactionAllProtobuf.Transactions txs = createTxGroup(list, feeRate);
+        TransactionAllProtobuf.Transactions.Builder txsBuiler = txs.toBuilder();
+        for (int i = 0; i < txs.getTxsCount(); i++) {
+            if (i == 0) {
+                txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), withHoldPrivateKey, signType));
                 continue;
             }
-            txsBuiler.setTxs(i,signedProtobufTx(txs.getTxs(i),fromAddressPrivateKey,signType));
+            txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), fromAddressPrivateKey, signType));
         }
         tx = getTxFromTxGroup(txsBuiler.build());
-        return  HexUtil.toHexString(tx.toByteArray());
+        return HexUtil.toHexString(tx.toByteArray());
     }
 
     /**
@@ -1629,6 +1618,7 @@ public class TransactionUtil {
         }
 
     }
+
     public static byte[] getTxHash(TransactionAllProtobuf.Transaction tx) throws InvalidProtocolBufferException {
         return HashUtil.sha256(TransactionAllProtobuf.Transaction.parseFrom(tx.toByteArray()).toBuilder().clearHeader().clearSignature().build().toByteArray());
     }
@@ -1696,7 +1686,7 @@ public class TransactionUtil {
         return copytx.toBuilder().setHeader(ByteString.copyFrom(txs.toByteArray())).build();
     }
 
-    public static long getRealFee(TransactionAllProtobuf.Transaction tx, long minFee) throws Exception {
+    public static long getRealFee(TransactionAllProtobuf.Transaction tx, long minFeeRate) throws Exception {
         int txSize = tx.toByteArray().length;
         //如果签名为空，那么加上签名的空间
         if (tx.getSignature() == null) {
@@ -1706,7 +1696,7 @@ public class TransactionUtil {
             throw new Exception("ErrTxMsgSizeTooBig");
         }
         // 检查交易费是否小于最低值
-        long realFee = (txSize / 1000 + 1) * minFee;
+        long realFee = (txSize / 1000 + 1) * minFeeRate;
         return realFee;
     }
 
@@ -1726,6 +1716,7 @@ public class TransactionUtil {
 
     /**
      * 交易组签名（这块后面要统一重构）
+     *
      * @param transaction
      * @param privateKey
      * @param signType

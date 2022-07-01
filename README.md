@@ -57,7 +57,7 @@ client.run(o->o.method(builder));
    [EvmUtil](./src/main/java/cn/chain33/javasdk/utils/EvmUtil.java)|evm相关交易构造|[EvmTest](./src/test/java/cn/chain33/javasdk/model/EvmTest.java)
    [AddressUtil](./src/main/java/cn/chain33/javasdk/utils/AddressUtil.java)|地址相关操作工具|
    [TransactionUtil](./src/main/java/cn/chain33/javasdk/utils/TransactionUtil.java)|交易相关操作工具|
-   [http](./src/main/java/cn/chain33/javasdk/server/http)|http日志定义服务|[httpTest](./src/test/java/cn/chain33/javasdk/server/http)
+   [http](./src/main/java/cn/chain33/javasdk/server/http)|http日志订阅服务|[httpTest](./src/test/java/cn/chain33/javasdk/server/http)
 # 接口列表
 下面罗列的是java sdk提供的接口，具体调用可以参考测试代码里的例子
 
