@@ -10,7 +10,6 @@ import cn.chain33.javasdk.utils.CoinsUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,13 +41,14 @@ public class CoinsTest {
         List<String> list = new ArrayList<String>();
         list.add(Addr);
         List<AccountAccResult> results = client.getCoinsBalance(list, "evm");
-        results.forEach(a->{
-            System.out.println("addr: "+a.getAddr()+ " balance:"+a.getBalance());
+        results.forEach(a -> {
+            System.out.println("addr: " + a.getAddr() + " balance:" + a.getBalance());
         });
     }
 
     /**
      * 测试从其他执行器中回提coins代币
+     *
      * @throws Exception
      */
     @Test
@@ -64,8 +64,8 @@ public class CoinsTest {
         List<String> list = new ArrayList<String>();
         list.add(Addr);
         List<AccountAccResult> results = client.getCoinsBalance(list, "evm");
-        results.forEach(a->{
-            System.out.println("addr: "+a.getAddr()+ " balance:"+a.getBalance());
+        results.forEach(a -> {
+            System.out.println("addr: " + a.getAddr() + " balance:" + a.getBalance());
         });
     }
 
@@ -87,8 +87,8 @@ public class CoinsTest {
         list.add(AddrA);
         list.add(AddrB);
         List<AccountAccResult> results = client.queryBalance(list, "coins");
-        results.forEach(a->{
-            System.out.println("addr: "+a.getAddr()+ " balance:"+a.getBalance());
+        results.forEach(a -> {
+            System.out.println("addr: " + a.getAddr() + " balance:" + a.getBalance());
         });
     }
 }

@@ -5,7 +5,6 @@ import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.CoinsProtobuf;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 /**
  * @authoer lhl
@@ -45,13 +44,16 @@ public class CoinsUtil {
         txBuilder.setFee(fee);
         txBuilder.setNonce(TransactionUtil.getRandomNonce());
         txBuilder.setPayload(ByteString.copyFrom(coinsAction.toByteArray()));
-        if (paraName.isEmpty()){
+        if (paraName.isEmpty()) {
             txBuilder.setTo(to);
-        }else{
+        } else {
             txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
         }
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        if (privateKey.isEmpty()){
+            return HexUtil.toHexString(tx.toByteArray());
+        }
         TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
         String hexString = HexUtil.toHexString(signedProtobufTx.toByteArray());
         return hexString;
@@ -74,7 +76,7 @@ public class CoinsUtil {
      * @return
      * @throws Exception
      */
-    public static String createTransferToExecTx(String coinsToken, long amount, String execName, String to, String note, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long fee)  {
+    public static String createTransferToExecTx(String coinsToken, long amount, String execName, String to, String note, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long fee) {
         TransactionAllProtobuf.AssetsTransferToExec.Builder builder = TransactionAllProtobuf.AssetsTransferToExec.newBuilder();
         builder.setAmount(amount);
         builder.setTo(to);
@@ -93,14 +95,17 @@ public class CoinsUtil {
         txBuilder.setFee(fee);
         txBuilder.setNonce(TransactionUtil.getRandomNonce());
         txBuilder.setPayload(ByteString.copyFrom(coinsAction.toByteArray()));
-        if (paraName.isEmpty()){
+        if (paraName.isEmpty()) {
             txBuilder.setTo(AddressUtil.getToAddress(execName.getBytes(), addressType));
-        }else{
+        } else {
             txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
         }
 
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        if (privateKey.isEmpty()){
+            return HexUtil.toHexString(tx.toByteArray());
+        }
         TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
         String hexString = HexUtil.toHexString(signedProtobufTx.toByteArray());
         return hexString;
@@ -141,13 +146,16 @@ public class CoinsUtil {
         txBuilder.setFee(fee);
         txBuilder.setNonce(TransactionUtil.getRandomNonce());
         txBuilder.setPayload(ByteString.copyFrom(coinsAction.toByteArray()));
-        if (paraName.isEmpty()){
+        if (paraName.isEmpty()) {
             txBuilder.setTo(AddressUtil.getToAddress(execName.getBytes(), addressType));
-        }else{
+        } else {
             txBuilder.setTo(AddressUtil.getToAddress((paraName + "coins").getBytes(), addressType));
         }
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        if (privateKey.isEmpty()){
+            return HexUtil.toHexString(tx.toByteArray());
+        }
         TransactionAllProtobuf.Transaction signedProtobufTx = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
         String hexString = HexUtil.toHexString(signedProtobufTx.toByteArray());
         return hexString;
