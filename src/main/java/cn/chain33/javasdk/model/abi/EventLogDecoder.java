@@ -35,19 +35,41 @@ public abstract class EventLogDecoder {
      */
     public static List<Type> decodeEventParameters(
             String rawInput, Event event) {
-       //解析参数要按顺位返回
-        List<Type> values= decoder.decodeEventParameters(rawInput, event.getParsedParameters());
-        List<Type> parsedValues =  new ArrayList<Type>();
+        //解析参数要按顺位返回
+        List<Type> values = decoder.decodeEventParameters(rawInput, event.getParsedParameters());
+        List<Type> parsedValues = new ArrayList<Type>();
         List<Integer> indexs = event.getParsedParametersIndex();
-        if (event.isRecordered()){
-            for(int i=0;i<values.size();i++){
-               parsedValues.set(indexs.get(i), values.get(i));
+        if (event.isRecordered()) {
+            for (int i = 0; i < values.size(); i++) {
+                parsedValues.set(indexs.get(i), values.get(i));
             }
             return parsedValues;
         }
-
         return values;
     }
-    //TODO 后面有时间的话indexed 和noindexed 参数解析接口也要单独实现
+
+    /**
+     * 解析topics
+     *
+     * @param rawInput chain33中 evmLog topics merge
+     * @param event
+     * @return
+     */
+    public static List<Type> decodeEventIndexedParameters(
+            String rawInput, Event event) {
+        return decoder.decodeEventParameters(rawInput, event.getIndexedParameters());
+    }
+
+    /**
+     * 解析非Indexed参数值
+     *
+     * @param rawInput chain33 中evmLog data字段
+     * @param event
+     * @return
+     */
+    public static List<Type> decodeEventNonIndexedParameters(
+            String rawInput, Event event) {
+        return decoder.decodeEventParameters(rawInput, event.getNonIndexedParameters());
+    }
 }
 

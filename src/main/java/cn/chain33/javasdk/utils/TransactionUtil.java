@@ -11,8 +11,8 @@ import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.gm.SM2KeyPair;
 import cn.chain33.javasdk.model.gm.SM2Util;
 import cn.chain33.javasdk.model.protobuf.*;
-import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
 import cn.chain33.javasdk.model.protobuf.ExecuterProtobuf.ModifyConfig.Builder;
+import cn.chain33.javasdk.model.protobuf.ManageProtobuf.ManageAction;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenAction;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenFinishCreate;
 import cn.chain33.javasdk.model.protobuf.TokenActionProtoBuf.TokenPreCreate;
@@ -39,6 +39,8 @@ import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -71,6 +73,9 @@ public class TransactionUtil {
 
     private static final long EXPIREBOUND = 1000000000;
 
+    private static final long MAXTXSIZE = 100000;
+
+
     /**
      * @param expire 单位为秒
      * @return
@@ -82,7 +87,7 @@ public class TransactionUtil {
             if (expire < SECOND * 120) {
                 expire = SECOND * 120;
             }
-            expire = System.currentTimeMillis() / 1000l + expire / SECOND;
+            expire = System.currentTimeMillis() / 1000 + expire / SECOND;
             return expire;
         } else {
             return expire;
@@ -161,11 +166,12 @@ public class TransactionUtil {
 
     /**
      * 将ETH地址转成BTC地址
+     *
      * @param ethAddress eth格式地址
      * @return
      */
     public static String convertETHToBTC(String ethAddress) {
-       return encodeAddress(HexUtil.fromHexString(ethAddress));
+        return encodeAddress(HexUtil.fromHexString(ethAddress));
     }
 
     /**
@@ -176,12 +182,13 @@ public class TransactionUtil {
      */
     public static String convertBTCToETH(String btcAddress) {
         try {
-            return "0x"+HexUtil.toHexString(decodeAddress(btcAddress));
-        }catch (Exception e){
+            return "0x" + HexUtil.toHexString(decodeAddress(btcAddress));
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
+
     /**
      * 将base58编码的地址转成evm地址
      *
@@ -1263,9 +1270,8 @@ public class TransactionUtil {
      * @param signType   目前只支持secp256k1格式签名
      * @return
      */
-    public static TransactionAllProtobuf.Transaction signProtobuf(TransactionAllProtobuf.Transaction tx, String privateKey, SignType signType) {
-        TransactionAllProtobuf.Transaction encodeTx = getSignProbuf(tx);
-        byte[] protobufData = encodeTx.toByteArray();
+    public static TransactionAllProtobuf.Transaction signedProtobufTx(TransactionAllProtobuf.Transaction tx, String privateKey, SignType signType) {
+        byte[] protobufData = tx.toBuilder().clearSignature().build().toByteArray();
         byte[] privateKeyBytes = HexUtil.fromHexString(privateKey);
         Signature btcCoinSign = btcCoinSign(protobufData, privateKeyBytes, signType);
         TransactionAllProtobuf.Transaction.Builder builder = tx.toBuilder();
@@ -1273,8 +1279,7 @@ public class TransactionUtil {
         signatureBuilder.setPubkey(ByteString.copyFrom(btcCoinSign.getPubkey()));
         signatureBuilder.setTy(btcCoinSign.getTy());
         signatureBuilder.setSignature(ByteString.copyFrom(btcCoinSign.getSignature())); // 序列化
-        TransactionAllProtobuf.Transaction.Builder setSignature = builder.setSignature(signatureBuilder.build());
-        return setSignature.build();
+        return builder.setSignature(signatureBuilder.build()).build();
     }
 
     /**
@@ -1512,32 +1517,254 @@ public class TransactionUtil {
     }
 
     /**
-     * 通用的构建未签名的交易方法
+     * 构建通用的签过名的交易方法
      *
      * @param execer
      * @param payLoad
+     * @param privateKey
+     * @param signType
      * @param addressType
      * @param chainID
      * @param fee
-     * @param txHeight
+     * @param paraName
      * @return
      */
-    public static String createTxWithoutSign(byte[] execer, byte[] payLoad, AddressType addressType, int chainID, long fee, long txHeight) {
-        Transaction transaction = new Transaction();
-        transaction.setExecer(execer);
-        transaction.setPayload(payLoad);
-        transaction.setFee(fee);
-        transaction.setExpire(TX_HEIGHT_OFFSET + txHeight);
-        transaction.setNonce(TransactionUtil.getRandomNonce());
-        transaction.setChainID(chainID);
-        // 计算To
-        String toAddress = AddressUtil.getToAddress(execer, addressType);
-        transaction.setTo(toAddress);
-        // 签名
-        byte[] protobufData = encodeProtobuf(transaction);
+    public static String buildSignedTx(String execer, byte[] payLoad, String privateKey, SignType signType, AddressType addressType, int chainID, long fee, String paraName) {
+        TransactionAllProtobuf.Transaction.Builder txBuilder = TransactionAllProtobuf.Transaction.newBuilder();
+        txBuilder.setExecer(ByteString.copyFrom((paraName + execer).getBytes()));
+        txBuilder.setFee(fee);
+        txBuilder.setNonce(TransactionUtil.getRandomNonce());
+        txBuilder.setPayload(ByteString.copyFrom(payLoad));
+        txBuilder.setTo(AddressUtil.getToAddress((paraName + execer).getBytes(), addressType));
+        txBuilder.setChainID(chainID);
+        TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
+        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
+        return hexString;
+    }
 
-        // 序列化
-        String transactionStr = HexUtil.toHexString(protobufData);
-        return transactionStr;
+    /**
+     * 解析逾期字符串
+     *
+     * @param expire
+     * @return
+     */
+    public static long parseExpire(String expire) throws Exception {
+        if (expire.isEmpty()) {
+            throw new Exception("ErrInvalidParam");
+        }
+
+        if (expire.charAt(0) == 'H' && expire.charAt(1) == ':') {
+            long txHeight = Long.parseLong(expire.substring(2, expire.length() - 1));
+            if (txHeight <= 0) {
+                throw new Exception("ErrHeightLessZero");
+            }
+            //溢出
+            if (txHeight + TX_HEIGHT_OFFSET < txHeight) {
+                throw new Exception("ErrHeightOverflow");
+            }
+            return txHeight + TX_HEIGHT_OFFSET;
+        }
+        try {
+            long blockHeight = Long.parseLong(expire);
+            return blockHeight;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return Duration.parse(expire).getNano();
+    }
+
+    /**
+     * 构建代扣交易组
+     * @param noBalanceTxs
+     * @param signType
+     * @param addressType
+     * @param chainID
+     * @param fee
+     * @param paraName
+     * @return
+     * @throws Exception
+     */
+    public static String createNoBalanceTx(TransactionAllProtobuf.Transaction tx,String withHoldPrivateKey,String fromAddressPrivateKey, SignType signType, AddressType addressType, int chainID, long feeRate, String paraName) throws Exception {
+        TransactionAllProtobuf.Transaction.Builder builder = TransactionAllProtobuf.Transaction.newBuilder();
+        builder.setExecer(ByteString.copyFrom((paraName + "none").getBytes()));
+        builder.setPayload(ByteString.copyFrom("no-fee-transaction".getBytes()));
+        builder.setTo(AddressUtil.getToAddress((paraName + "none").getBytes(), addressType));
+        builder.setChainID(chainID);
+        builder.setFee(feeRate);
+        builder.setNonce(getRandomNonce());
+        builder.setExpire(0);
+        ArrayList<TransactionAllProtobuf.Transaction> list = new ArrayList<TransactionAllProtobuf.Transaction>();
+        list.add(builder.build());
+        list.add(tx);
+        TransactionAllProtobuf.Transactions txs=createTxGroup(list, feeRate);
+        TransactionAllProtobuf.Transactions.Builder txsBuiler=txs.toBuilder();
+        for (int i=0;i<txs.getTxsCount();i++){
+            if (i==0){
+                txsBuiler.setTxs(i,signedProtobufTx(txs.getTxs(i),withHoldPrivateKey,signType));
+                continue;
+            }
+            txsBuiler.setTxs(i,signedProtobufTx(txs.getTxs(i),fromAddressPrivateKey,signType));
+        }
+        tx = getTxFromTxGroup(txsBuiler.build());
+        return  HexUtil.toHexString(tx.toByteArray());
+    }
+
+    /**
+     * @param expire
+     * @return
+     * @description 获取逾期值
+     */
+    public static long toExpire(long expire) {
+        if (expire > TX_HEIGHT_OFFSET) {
+            return expire;
+        } else if (expire > EXPIREBOUND) {
+            if (expire < SECOND * 120) {
+                expire = SECOND * 120;
+            }
+            expire = System.currentTimeMillis() / 1000 + expire / SECOND;
+            return expire;
+        } else {
+            return expire;
+        }
+
+    }
+    public static byte[] getTxHash(TransactionAllProtobuf.Transaction tx) throws InvalidProtocolBufferException {
+        return HashUtil.sha256(TransactionAllProtobuf.Transaction.parseFrom(tx.toByteArray()).toBuilder().clearHeader().clearSignature().build().toByteArray());
+    }
+
+    /**
+     * 构建交易组
+     *
+     * @param txs
+     * @param feeRate
+     * @return
+     */
+    public static TransactionAllProtobuf.Transactions createTxGroup(List<TransactionAllProtobuf.Transaction> txs, long feeRate) throws Exception {
+        if (txs.size() < 2) {
+            throw new Exception("ErrTxGroupCountLessThanTwo");
+        }
+        TransactionAllProtobuf.Transactions.Builder builder = TransactionAllProtobuf.Transactions.newBuilder();
+        List<TransactionAllProtobuf.Transaction.Builder> builderList = new ArrayList<TransactionAllProtobuf.Transaction.Builder>();
+        for (int i = 0; i < txs.size(); i++) {
+            builderList.add(txs.get(i).toBuilder());
+        }
+        long totalFee = 0;
+        long minFee = 0;
+        byte[] header = getTxHash(txs.get(0));
+        for (int i = txs.size() - 1; i >= 0; i--) {
+            builderList.get(i).setGroupCount(txs.size());
+            totalFee += txs.get(i).getFee();
+            builderList.get(i).clearSignature().setHeader(ByteString.copyFrom(header));
+            if (i == 0) {
+                builderList.get(i).setFee(1 << 62);
+            } else {
+                builderList.get(i).setFee(0);
+            }
+            long realFee = getRealFee(builderList.get(i).build(), feeRate);
+            minFee += realFee;
+            if (i == 0) {
+                if (totalFee < minFee) {
+                    totalFee = minFee;
+                }
+                builderList.get(i).setFee(totalFee);
+                header = getTxHash(builderList.get(i).build());
+            } else {
+                builderList.get(i).setFee(0);
+                builderList.get(i - 1).setNext(ByteString.copyFrom(getTxHash(builderList.get(i).build())));
+            }
+
+        }
+        for (int i = 0; i < txs.size(); i++) {
+            builderList.get(i).setHeader(ByteString.copyFrom(header));
+        }
+        for (int i = 0; i < txs.size(); i++) {
+            builder.addTxs(builderList.get(i).build());
+        }
+        return builder.build();
+    }
+
+    public static TransactionAllProtobuf.Transaction getTxFromTxGroup(TransactionAllProtobuf.Transactions txs) throws Exception {
+        if (txs.getTxsCount() < 2) {
+            throw new Exception("ErrInvalidParam");
+        }
+        TransactionAllProtobuf.Transaction headerTx = txs.getTxs(0);
+        //利用序列化进行深拷贝
+        //不会影响原来的tx
+        TransactionAllProtobuf.Transaction copytx = TransactionAllProtobuf.Transaction.parseFrom(headerTx.toByteArray());
+        //放到header中不影响交易的Hash
+        return copytx.toBuilder().setHeader(ByteString.copyFrom(txs.toByteArray())).build();
+    }
+
+    public static long getRealFee(TransactionAllProtobuf.Transaction tx, long minFee) throws Exception {
+        int txSize = tx.toByteArray().length;
+        //如果签名为空，那么加上签名的空间
+        if (tx.getSignature() == null) {
+            txSize += 300;
+        }
+        if (txSize > MAXTXSIZE) {
+            throw new Exception("ErrTxMsgSizeTooBig");
+        }
+        // 检查交易费是否小于最低值
+        long realFee = (txSize / 1000 + 1) * minFee;
+        return realFee;
+    }
+
+    public static TransactionAllProtobuf.Transactions getTxGroup(TransactionAllProtobuf.Transaction transaction) throws Exception {
+        int groupCount = transaction.getGroupCount();
+        if (groupCount < 0 || groupCount == 1 || groupCount > 20) {
+            throw new Exception("ErrTxGroupCount");
+        } else if (groupCount > 0) {
+            TransactionAllProtobuf.Transactions txs = TransactionAllProtobuf.Transactions.parseFrom(transaction.getHeader().toByteArray());
+            return txs;
+        } else if (!transaction.getNext().isEmpty() || !transaction.getHeader().isEmpty()) {
+            throw new Exception("ErrNomalTx");
+        }
+        return null;
+    }
+
+
+    /**
+     * 交易组签名（这块后面要统一重构）
+     * @param transaction
+     * @param privateKey
+     * @param signType
+     * @param expire
+     * @param index
+     * @return
+     * @throws Exception
+     */
+    public static String signProtoBufTxs(TransactionAllProtobuf.Transaction transaction, String privateKey, SignType signType, long expire, Integer index) throws Exception {
+        // 1.检查私钥是否存在 ->存在：->byte
+        if (StringUtil.isEmpty(privateKey)) {
+            throw new Exception("privateKey not Exist");
+        }
+        TransactionAllProtobuf.Transaction.Builder txBuilder = transaction.toBuilder();
+        long changedExpire = getExpire(expire);
+        txBuilder.setExpire(changedExpire);
+
+        TransactionAllProtobuf.Transactions txs = getTxGroup(transaction);
+        if (txs == null) {
+            //普通交易签名
+            TransactionAllProtobuf.Transaction tx = signedProtobufTx(transaction, privateKey, signType);
+            return HexUtil.toHexString(tx.toByteArray());
+        }
+
+        if (index > txs.getTxsCount()) {
+            throw new Exception("ErrIndex");
+        }
+        //重构txgroup
+        TransactionAllProtobuf.Transactions.Builder txsBuiler = txs.toBuilder();
+        if (index <= 0) {
+            for (int i = 0; i < txs.getTxsCount(); i++) {
+                TransactionAllProtobuf.Transaction signedTx = signedProtobufTx(txs.getTxs(i), privateKey, signType);
+                txsBuiler.setTxs(i, signedTx);
+            }
+            return HexUtil.toHexString(getTxFromTxGroup(txsBuiler.build()).toByteArray());
+        }
+        index--;
+        TransactionAllProtobuf.Transaction signedTx = signedProtobufTx(txs.getTxs(index), privateKey, signType);
+        txsBuiler.setTxs(index, signedTx);
+        return HexUtil.toHexString(getTxFromTxGroup(txsBuiler.build()).toByteArray());
     }
 }

@@ -1,0 +1,317 @@
+syntax = "proto3";
+
+import "transaction.proto";
+import "common.proto";
+import "blockchain.proto";
+
+import "paraminer.proto";
+import "paranodegroup.proto";
+
+option java_outer_classname = "ParacrossProtobuf";
+option java_package = "cn.chain33.javasdk.model.protobuf";
+
+// stateDB
+message ParacrossStatusDetails {
+    repeated string addrs    = 1;
+    repeated bytes blockHash = 2;
+}
+
+//记录不同blockHash的详细数据
+message ParacrossStatusBlockDetails {
+    repeated bytes blockHashs = 1;
+    repeated bytes txResults  = 2;
+}
+
+message ParacrossHeightStatus {
+    // ing, done
+    int32                       status              = 1;
+    string                      title               = 2;
+    int64                       height              = 3;
+    ParacrossStatusDetails      details             = 4;
+    int64                       mainHeight          = 5;
+    bytes                       mainHash            = 6;
+    ParacrossStatusBlockDetails blockDetails        = 7;
+    ParacrossStatusDetails      supervisionDetails  = 8;
+}
+
+message ParacrossHeightStatusRsp {
+    int32    status                            = 1;
+    string   title                             = 2;
+    int64    height                            = 3;
+    int64    mainHeight                        = 4;
+    string   mainHash                          = 5;
+    repeated string commitAddrs                = 6;
+    repeated string commitBlockHash            = 7;
+    repeated string commitSupervisionAddrs     = 8;
+    repeated string commitSupervisionBlockHash = 9;
+}
+
+message ParacrossStatus {
+    string title      = 1;
+    int64  height     = 2;
+    bytes  blockHash  = 3;
+    int64  mainHeight = 4;
+    bytes  mainHash   = 5;
+}
+
+message ParacrossConsensusStatus {
+    string title            = 1;
+    int64  chainHeight      = 2;
+    int64  consensHeight    = 3;
+    string consensBlockHash = 4;
+}
+
+
+message ParaBlock2MainMap {
+    int64  height     = 1;
+    string blockHash  = 2;
+    int64  mainHeight = 3;
+    string mainHash   = 4;
+}
+
+message ParaBlock2MainInfo {
+    repeated ParaBlock2MainMap items = 1;
+}
+
+// action
+message ParacrossNodeStatus {
+    bytes    mainBlockHash           = 1;
+    int64    mainBlockHeight         = 2;
+    string   title                   = 3;
+    int64    height                  = 4;
+    bytes    preBlockHash            = 5;
+    bytes    blockHash               = 6;
+    bytes    preStateHash            = 7;
+    bytes    stateHash               = 8;
+    uint32   txCounts                = 9;
+    bytes    txResult                = 10;
+    repeated bytes txHashs           = 11;
+    bytes          crossTxResult     = 12;
+    repeated bytes crossTxHashs      = 13;
+    uint32         nonCommitTxCounts = 14;
+}
+
+message SelfConsensStages {
+    repeated SelfConsensStage items = 1;
+}
+
+message SelfConsensStage {
+    int64  startHeight = 1;
+    uint32 enable      = 2;
+}
+
+message SelfConsensStageInfo {
+    string             id         = 1;
+    uint32             status     = 2;
+    SelfConsensStage   stage      = 3;
+    string             fromAddr   = 4;
+    int64              execHeight = 5;
+    ParaNodeVoteDetail votes      = 6;
+}
+
+message LocalSelfConsStageInfo {
+    SelfConsensStageInfo stage   = 1;
+    string               txIndex = 2;
+}
+
+message ConfigVoteInfo {
+    string id = 1;
+    // 投票值　１:ok 2:nok
+    uint32 value = 2;
+}
+
+message ConfigCancelInfo {
+    string id = 1;
+}
+
+//广义配置类型
+message ParaStageConfig {
+    string title = 1;
+    // 配置类型
+    uint32 ty = 2;
+    oneof  value {
+        SelfConsensStage stage  = 10;
+        ConfigVoteInfo   vote   = 11;
+        ConfigCancelInfo cancel = 12;
+    }
+}
+
+message ReceiptSelfConsStageConfig {
+    SelfConsensStageInfo prev    = 1;
+    SelfConsensStageInfo current = 2;
+}
+
+message ReceiptSelfConsStageVoteDone {
+    string           id         = 1;
+    SelfConsensStage stage      = 2;
+    int32            totalNodes = 3;
+    int32            totalVote  = 4;
+    int32            mostVote   = 5;
+    string           voteRst    = 6;
+}
+
+message ReceiptSelfConsStagesUpdate {
+    SelfConsensStages prev    = 1;
+    SelfConsensStages current = 2;
+}
+
+// query
+message ReqQuerySelfStages {
+    uint32 status    = 1;
+    string id        = 2;
+    int32  count     = 3;
+    int32  direction = 4;
+    int64  height    = 5;
+    int32  index     = 6;
+}
+
+message ReplyQuerySelfStages {
+    repeated SelfConsensStageInfo stageInfo = 1;
+}
+
+message ParacrossCommitBlsInfo {
+    bytes   sign           = 1;
+    bytes   addrsMap       = 2;  //addrs' bitmap
+    repeated string addrs  = 3; //addr's array
+}
+
+message ParacrossCommitAction {
+    ParacrossNodeStatus status = 1;
+    ParacrossCommitBlsInfo bls = 2;
+}
+
+message ParacrossMinerAction {
+    ParacrossNodeStatus status          = 1;
+    bool                isSelfConsensus = 2;
+    int64               addIssueCoins   = 3;
+}
+
+message ParaMinerReward{
+    string addr = 1;
+    int64 amount = 2;
+}
+
+message CrossAssetTransfer {
+    string assetExec    = 1;
+    string assetSymbol  = 2;
+    int64  amount       = 3;
+    //default signed addr
+    string toAddr       = 4;
+    string note         = 5;
+}
+
+message ParacrossAction {
+    oneof value {
+        ParacrossCommitAction commit          = 1;
+        ParacrossMinerAction  miner           = 3;
+        AssetsTransfer        assetTransfer   = 4;
+        AssetsWithdraw        assetWithdraw   = 5;
+        AssetsTransfer        transfer        = 6;
+        AssetsWithdraw        withdraw        = 7;
+        AssetsTransferToExec  transferToExec  = 8;
+        ParaNodeAddrConfig    nodeConfig      = 9;
+        ParaNodeGroupConfig   nodeGroupConfig = 10;
+        ParaStageConfig       selfStageConfig = 11;
+        CrossAssetTransfer    crossAssetTransfer    = 12;
+        ParaBindMinerCmd      paraBindMiner         = 13;
+        ParaNodeGroupConfig   supervisionNodeConfig = 14;
+    }
+    int32 ty = 2;
+}
+
+// logs
+message ReceiptParacrossCommit {
+    string                addr    = 1;
+    ParacrossNodeStatus   status  = 2;
+    ParacrossHeightStatus prev    = 3;
+    ParacrossHeightStatus current = 4;
+}
+
+message ReceiptParacrossMiner {
+    ParacrossNodeStatus status = 1;
+}
+
+message ReceiptParacrossDone {
+    int32    totalNodes            = 1;
+    int32    totalCommit           = 2;
+    int32    mostSameCommit        = 3;
+    string   title                 = 4;
+    int64    height                = 5;
+    bytes    stateHash             = 6;
+    uint32   txCounts              = 7;
+    bytes    txResult              = 8;
+    bytes    blockHash             = 9;
+    repeated bytes txHashs         = 10;
+    bytes          crossTxResult   = 11;
+    repeated bytes crossTxHashs    = 12;
+    bytes          mainBlockHash   = 13;
+    int64          mainBlockHeight = 14;
+    int64          chainExecHeight = 15;
+    int32 totalSupervisionNodes    = 16;
+    int32 totalSupervisionCommit   = 17;
+    int32 mostSupervisionCommit    = 18;
+}
+
+message ReceiptParacrossRecord {
+    string              addr   = 1;
+    ParacrossNodeStatus status = 2;
+}
+
+// LocalDB
+// title-height-addr : txHash
+message ParacrossTx {
+    string txHash = 1;
+}
+
+// query
+message ReqParacrossTitleHeight {
+    string title  = 1;
+    int64  height = 2;
+}
+
+message RespParacrossDone {
+    int32  totalNodes     = 1;
+    int32  totalCommit    = 2;
+    int32  mostSameCommit = 3;
+    string title          = 4;
+    int64  height         = 5;
+    string stateHash      = 6;
+    uint32 txCounts       = 7;
+    string txResult       = 8;
+    // commitDone chainHeight
+    int64 chainExecHeight = 9;
+}
+
+message RespParacrossTitles {
+    repeated RespParacrossDone titles = 1;
+}
+
+message ReqParacrossTitleHash {
+    string title     = 1;
+    bytes  blockHash = 2;
+}
+
+// 跨链转账相关
+message ParacrossAsset {
+    // input
+    string from       = 1;
+    string to         = 2;
+    bool   isWithdraw = 3;
+    string txHash     = 4;
+    int64  amount     = 5;
+    string exec       = 6;
+    string symbol     = 7;
+    //跨链类型　0:to para, 1:to main
+    uint32 crossType       = 8;
+    // 主链部分
+    int64 height = 10;
+    // 平行链部分
+    int64 commitDoneHeight = 21;
+    int64 paraHeight       = 22;
+    bool  success          = 23;
+}
+
+
+service paracross {
+    rpc IsSync(ReqNil) returns (IsCaughtUp) {}
+}

@@ -35,7 +35,7 @@ public class EvmUtil {
 
     public static byte[] execer = "evm".getBytes();
 
-    private static final long EVM_FEE = 1000000;
+    private static final long EVM_FEE = 100000L;
 
     /**
      * @param code       合约代码内容
@@ -404,7 +404,7 @@ public class EvmUtil {
      * @return hash，即合约名
      * @description 新增一键部署合约方法（平行链的情况下调用，要传paraName（平行链名称））
      */
-    public static String createEvmContract(String codeStr, String constructorEncode, String note, String alias, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long gas) throws Exception {
+    public static String createEvmContract(String codeStr, String constructorEncode, String note, String alias, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long gas){
         byte[] code;
         byte[] bytes = new byte[0];
         if (constructorEncode != null) {
@@ -425,19 +425,7 @@ public class EvmUtil {
         } else {
             fee = gas + 100000L;
         }
-
-        String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(), addressType, chainID,
-                fee, 0);
-        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionAllProtobuf.Transaction parseFrom = null;
-        try {
-            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
-        }
-        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProtobuf(parseFrom, privateKey, signType);
-        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
-        return hexString;
+        return TransactionUtil.buildSignedTx("evm",evmContractAction.toByteArray(),privateKey,signType,addressType,chainID,fee,paraName);
     }
 
     /**
@@ -472,7 +460,7 @@ public class EvmUtil {
      * @param gas
      * @return
      */
-    public static String callEvmContract(String functionEncode, String contractAddr, String note, long amount, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long gas) throws Exception {
+    public static String callEvmContract(String functionEncode, String contractAddr, String note, long amount, String privateKey, SignType signType, AddressType addressType, int chainID, String paraName, long gas){
         EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
         evmActionBuilder.setPara(ByteString.copyFrom(HexUtil.fromHexString(functionEncode)));
         evmActionBuilder.setNote(note);
@@ -486,18 +474,7 @@ public class EvmUtil {
             fee = gas + 100000L;
         }
 
-        String createTxWithoutSign = TransactionUtil.createTxWithoutSign((paraName + "evm").getBytes(), evmContractAction.toByteArray(), addressType, chainID,
-                fee, 0);
-        byte[] fromHexString = HexUtil.fromHexString(createTxWithoutSign);
-        TransactionAllProtobuf.Transaction parseFrom = null;
-        try {
-            parseFrom = TransactionAllProtobuf.Transaction.parseFrom(fromHexString);
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
-        }
-        TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signProtobuf(parseFrom, privateKey, signType);
-        String hexString = HexUtil.toHexString(signProbuf.toByteArray());
-        return hexString;
+        return TransactionUtil.buildSignedTx("evm",evmContractAction.toByteArray(),privateKey,signType,addressType,chainID,fee,paraName);
     }
 
     /**
