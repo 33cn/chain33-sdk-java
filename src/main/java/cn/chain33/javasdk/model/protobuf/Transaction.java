@@ -72,6 +72,10 @@ public class Transaction {
         this.tx=tx.toBuilder().setNext(ByteString.copyFrom(next)).build();
     }
 
+    public void setChainId(int chainId){
+        this.tx=tx.toBuilder().setChainID(chainId).build();
+    }
+
     public byte[]getExecer(){
         return tx.getExecer().toByteArray();
     }

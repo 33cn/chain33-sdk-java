@@ -1505,11 +1505,11 @@ public class TransactionUtil {
     }
 
     /**
-     * 构建通用的签过名的交易方法
+     * 构建通用的签过名/或者未签名的交易方法
      *
      * @param execer
      * @param payLoad
-     * @param privateKey
+     * @param privateKey 为空或者空字符串时，表示构建未签名交易
      * @param signType
      * @param addressType
      * @param chainID
@@ -1517,7 +1517,7 @@ public class TransactionUtil {
      * @param paraName
      * @return
      */
-    public static String buildSignedTx(String execer, byte[] payLoad, String privateKey, SignType signType, AddressType addressType, int chainID, long fee, String paraName) {
+    public static String buildTx(String execer, byte[] payLoad, String privateKey, SignType signType, AddressType addressType, int chainID, long fee, String paraName) {
         TransactionAllProtobuf.Transaction.Builder txBuilder = TransactionAllProtobuf.Transaction.newBuilder();
         txBuilder.setExecer(ByteString.copyFrom((paraName + execer).getBytes()));
         txBuilder.setFee(fee);
@@ -1526,6 +1526,9 @@ public class TransactionUtil {
         txBuilder.setTo(AddressUtil.getToAddress((paraName + execer).getBytes(), addressType));
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        if(privateKey.isEmpty()){
+            return HexUtil.toHexString(tx.toByteArray());
+        }
         TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
@@ -1598,6 +1601,42 @@ public class TransactionUtil {
         tx = getTxFromTxGroup(txsBuiler.build());
         return HexUtil.toHexString(tx.toByteArray());
     }
+
+    /**
+     * 构建YCC代扣交易组
+     *
+     * @param noBalanceTxs
+     * @param fee
+     * @param paraName
+     * @return
+     * @throws Exception
+     */
+    public static String createNoBalanceTxForYCC(TransactionAllProtobuf.Transaction tx, String withHoldPrivateKey, String fromAddressPrivateKey, long feeRate, String paraName) throws Exception {
+        TransactionAllProtobuf.Transaction.Builder builder = TransactionAllProtobuf.Transaction.newBuilder();
+        builder.setExecer(ByteString.copyFrom((paraName + "none").getBytes()));
+        builder.setPayload(ByteString.copyFrom("no-fee-transaction".getBytes()));
+        builder.setTo(AddressUtil.getToAddress((paraName + "none").getBytes(), AddressType.ETH_ADDRESS));
+        builder.setChainID(999);
+        builder.setFee(feeRate);
+        builder.setNonce(getRandomNonce());
+        builder.setExpire(0);
+        ArrayList<TransactionAllProtobuf.Transaction> list = new ArrayList<TransactionAllProtobuf.Transaction>();
+        tx=tx.toBuilder().setChainID(999).build();
+        list.add(builder.build());
+        list.add(tx);
+        TransactionAllProtobuf.Transactions txs = createTxGroup(list, feeRate);
+        TransactionAllProtobuf.Transactions.Builder txsBuiler = txs.toBuilder();
+        for (int i = 0; i < txs.getTxsCount(); i++) {
+            if (i == 0) {
+                txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), withHoldPrivateKey, SignType.ETH_SECP256K1));
+                continue;
+            }
+            txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), fromAddressPrivateKey, SignType.ETH_SECP256K1));
+        }
+        tx = getTxFromTxGroup(txsBuiler.build());
+        return HexUtil.toHexString(tx.toByteArray());
+    }
+
 
     /**
      * @param expire

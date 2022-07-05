@@ -22,6 +22,7 @@ import static cn.chain33.javasdk.model.evm.SolidityType.IntType.encodeInt;
 import static com.fasterxml.jackson.annotation.JsonInclude.Include;
 import static java.lang.String.format;
 
+import cn.chain33.javasdk.utils.HexUtil;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.ListUtils;
 import org.apache.commons.collections4.Predicate;

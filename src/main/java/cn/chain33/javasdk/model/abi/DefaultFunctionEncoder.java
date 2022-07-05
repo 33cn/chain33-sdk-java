@@ -27,7 +27,6 @@ public class DefaultFunctionEncoder extends FunctionEncoder {
 
         final String methodSignature = buildMethodSignature(function.getName(), parameters);
         final String methodId = buildMethodId(methodSignature);
-
         final StringBuilder result = new StringBuilder(methodId);
 
         return encodeParameters(parameters, result);
@@ -55,7 +54,6 @@ public class DefaultFunctionEncoder extends FunctionEncoder {
 
     private static String encodeParameters(
             final List<Type> parameters, final StringBuilder result) {
-
         int dynamicDataOffset = getLength(parameters) * Type.MAX_BYTE_LENGTH;
         final StringBuilder dynamicData = new StringBuilder();
 

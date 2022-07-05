@@ -253,6 +253,27 @@ public class EvmUtil {
     }
 
     /**
+     * 构造YCC上面EVM调用函数
+     * @param parameter
+     * @param note
+     * @param amount
+     * @param contractAddr
+     * @param paraName
+     * @return
+     */
+    public static String getCallEvmEncodeForYcc(byte[] parameter, String note, long amount, String contractAddr, String paraName) {
+        EvmProtobuf.EVMContractAction.Builder evmActionBuilder = EvmProtobuf.EVMContractAction.newBuilder();
+        evmActionBuilder.setPara(ByteString.copyFrom(parameter));
+        evmActionBuilder.setNote(note);
+        evmActionBuilder.setAmount(amount);
+        evmActionBuilder.setContractAddr(contractAddr);
+        EvmProtobuf.EVMContractAction evmContractAction = evmActionBuilder.build();
+
+        String createTxWithoutSign = TransactionUtil.buildTx("evm", evmContractAction.toByteArray(),"",SignType.ETH_SECP256K1,AddressType.ETH_ADDRESS,999,
+                EVM_FEE, paraName);
+        return createTxWithoutSign;
+    }
+    /**
      * @param code       合约代码内容
      * @param note       注释
      * @param alias      合约别名
@@ -425,7 +446,7 @@ public class EvmUtil {
         } else {
             fee = gas + 100000L;
         }
-        return TransactionUtil.buildSignedTx("evm",evmContractAction.toByteArray(),privateKey,signType,addressType,chainID,fee,paraName);
+        return TransactionUtil.buildTx("evm",evmContractAction.toByteArray(),privateKey,signType,addressType,chainID,fee,paraName);
     }
 
     /**
@@ -474,7 +495,7 @@ public class EvmUtil {
             fee = gas + 100000L;
         }
 
-        return TransactionUtil.buildSignedTx("evm",evmContractAction.toByteArray(),privateKey,signType,addressType,chainID,fee,paraName);
+        return TransactionUtil.buildTx("evm",evmContractAction.toByteArray(),privateKey,signType,addressType,chainID,fee,paraName);
     }
 
     /**
@@ -484,7 +505,7 @@ public class EvmUtil {
      * @param contractAddr
      * @param note
      * @param amount
-     * @param privateKey
+     * @param privateKey 为空的话表示构建未签名交易
      * @param paraName
      * @param gas
      * @return

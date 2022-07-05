@@ -1,6 +1,8 @@
 package cn.chain33.javasdk.model;
 
 import cn.chain33.javasdk.client.RpcClient;
+import cn.chain33.javasdk.model.abi.datatypes.AddressBTC;
+import cn.chain33.javasdk.model.abi.datatypes.AddressETH;
 import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
@@ -91,4 +93,5 @@ public class CoinsTest {
             System.out.println("addr: " + a.getAddr() + " balance:" + a.getBalance());
         });
     }
+
 }
