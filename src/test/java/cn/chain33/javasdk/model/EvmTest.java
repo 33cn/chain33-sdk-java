@@ -10,6 +10,7 @@ import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
 import cn.chain33.javasdk.model.enums.AddressType;
 import cn.chain33.javasdk.model.enums.SignType;
 import cn.chain33.javasdk.model.protobuf.TransactionAllProtobuf;
+import cn.chain33.javasdk.model.rpcresult.AccountAccResult;
 import cn.chain33.javasdk.model.rpcresult.EvmLog;
 import cn.chain33.javasdk.model.rpcresult.QueryTransactionResult;
 import cn.chain33.javasdk.utils.*;
@@ -35,12 +36,13 @@ public class EvmTest {
     String TestB_ABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"Fallback\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Received\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"testA\",\"type\":\"address\"}],\"name\":\"SetAddress\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"value1\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value2\",\"type\":\"uint256\"}],\"name\":\"SetValue\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"CallTransTest\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"_A\",\"outputs\":[{\"internalType\":\"contract TestA\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalanceOfContract\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTestA\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"a\",\"type\":\"address\"}],\"name\":\"setTestA\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"setValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw1\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw2\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]";
     String PrivateKey = "cc38546e9e659d15e6b4893f0ab32a06d103931a8230b0bde71459d2b27d6944";
     String WithHoldPrivateKey="0x42c87f281b2cd101a5dc54b85fa6b753579be3f5770f1cf9b166188bf0c41b72";
+    String paraName = "user.p.parademo.";
 
     //先部署B合约（不带构造参数）
     @Test
     public void testEvmContractForYCC() throws Exception {
         //部署合约B（无参构造函数合约部署）
-        String tx = EvmUtil.createEvmContractForYCC(TestB_BIN, FunctionEncoder.encodeConstructor(Collections.emptyList()), "this is test B deploy", "", PrivateKey, "user.p.parademo.", 1000000);
+        String tx = EvmUtil.createEvmContractForYCC(TestB_BIN, FunctionEncoder.encodeConstructor(Collections.emptyList()), "this is test B deploy", "", PrivateKey, paraName, 1000000);
         String txhash = client.submitTransaction(tx);
         System.out.print("部署合约交易hash = " + txhash);
         Thread.sleep(20000);
@@ -59,7 +61,7 @@ public class EvmTest {
 
         //部署A合约（有参构造函数合约部署）
         String code = FunctionEncoder.encodeConstructor(Arrays.asList(new AddressETH(TestB_addr)));
-        tx = EvmUtil.createEvmContractForYCC(TestA_BIN, code, "this is test B deploy", "", PrivateKey, "user.p.parademo.", 1000000);
+        tx = EvmUtil.createEvmContractForYCC(TestA_BIN, code, "this is test B deploy", "", PrivateKey, paraName, 1000000);
         txhash = client.submitTransaction(tx);
         System.out.println("Test A 合约交易hash = " + txhash);
         Thread.sleep(20000);
@@ -71,7 +73,7 @@ public class EvmTest {
 
         //调用B合约(把合约A的地址加入到B合约中）
         String encodeParams = FunctionEncoder.encode(new Function("setTestA", Arrays.asList(new AddressETH(TestA_addr)), Collections.emptyList()));
-        tx = EvmUtil.callEvmContractForYCC(encodeParams, TestB_addr, "this is test B Set A address", 0, PrivateKey, "user.p.parademo.", 1000000);
+        tx = EvmUtil.callEvmContractForYCC(encodeParams, TestB_addr, "this is test B Set A address", 0, PrivateKey, paraName, 1000000);
         txhash = client.submitTransaction(tx);
         System.out.print("添加地址交易哈希 = " + txhash);
         Thread.sleep(20000);
@@ -102,7 +104,7 @@ public class EvmTest {
 
         //通过B合约接口给A合约中Value设置
         encodeParams = FunctionEncoder.encode(new Function("setValue", Arrays.asList(new Uint256(BigInteger.valueOf(123456789L))), Collections.emptyList()));
-        tx = EvmUtil.callEvmContractForYCC(encodeParams, TestB_addr, "this is test B Set A value", 0, PrivateKey, "user.p.parademo.", 1000000);
+        tx = EvmUtil.callEvmContractForYCC(encodeParams, TestB_addr, "this is test B Set A value", 0, PrivateKey, paraName, 1000000);
         txhash = client.submitTransaction(tx);
         System.out.print("设置Value交易哈希 = " + txhash);
         Thread.sleep(20000);
@@ -141,9 +143,9 @@ public class EvmTest {
 
     @Test
     public void testNobalanceTx()throws Exception{
-        String tx = EvmUtil.createEvmContractForYCC(TestB_BIN, FunctionEncoder.encodeConstructor(Collections.emptyList()), "this is test B deploy", "", PrivateKey, "user.p.parademo.", 1000000);
+        String tx = EvmUtil.createEvmContractForYCC(TestB_BIN, FunctionEncoder.encodeConstructor(Collections.emptyList()), "this is test B deploy", "", PrivateKey, paraName, 1000000);
 
-        String noBalanceTx = TransactionUtil.createNoBalanceTx(TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(tx)), WithHoldPrivateKey,PrivateKey, SignType.ETH_SECP256K1, AddressType.ETH_ADDRESS, 999, 100000, "user.p.parademo.");
+        String noBalanceTx = TransactionUtil.createNoBalanceTx(TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(tx)), WithHoldPrivateKey,PrivateKey, SignType.ETH_SECP256K1, AddressType.ETH_ADDRESS, 999, 100000, paraName);
         System.out.println(noBalanceTx);
         client.submitTransaction(noBalanceTx);
         String txhash = HexUtil.toHexString(TransactionUtil.getTxHash(TransactionAllProtobuf.Transactions.parseFrom(TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(noBalanceTx)).getHeader().toByteArray()).getTxs(1)));
@@ -154,6 +156,10 @@ public class EvmTest {
         System.out.println("执行结果 = " + txResult.getReceipt().getTyname());
     }
 
+    @Test
+    public void testGetProperFeeRate()throws Exception{
+       System.out.println(client.getProperFeeRate(100,10000));
+    }
     /**
      * 平行链模式下，需要先将主链代币跨链到平行链上面，然后再将跨链的主币转移到evm中使用
      * evm执行器中使用案例，后面跨链内容补充完再完善用例
@@ -303,5 +309,42 @@ public class EvmTest {
         Assert.assertEquals(funcEncode1, funcEncode2);
         System.out.println(new AddressETH("0xf39e69a8f2c1041edd7616cf079c7084bb7a5242").toBTCAddress());
         System.out.println(new AddressBTC("1PD8yKphczWERv8KnjQrdHjLxDWqXkBLgN").toETHAddress());
+    }
+
+    /**
+     * 测试YCC上coins普通地址转账
+     */
+    @Test
+    public void testTransferForYcc() throws Exception {
+        String managerPrivateKey = "7dfe80684f7007b2829a28c85be681304f7f4cf6081303dbace925826e2891d1";
+        String withholdPrivateKey = "56d1272fcf806c3c5105f3536e39c8b33f88cb8971011dfe5886159201884763";
+
+        client.setUrl(ip, 9901);
+        System.out.println(AddressUtil.genAddress(managerPrivateKey, AddressType.ETH_ADDRESS));
+        System.out.println(AddressUtil.genAddress(withholdPrivateKey, AddressType.ETH_ADDRESS));
+        String AddrA = AddressUtil.genAddress(managerPrivateKey, AddressType.ETH_ADDRESS);
+        String AddrB = AddressUtil.genAddress(withholdPrivateKey, AddressType.ETH_ADDRESS);
+        //step1 给地址A打钱
+        String tx = CoinsUtil.createTransferTx("", 10000000000L, AddrA, "", PrivateKey, SignType.ETH_SECP256K1, AddressType.ETH_ADDRESS, 999, "", 1000000);
+        String txhash = client.submitTransaction(tx);
+        System.out.println("转移到AddrB的主币交易哈希 = " + txhash);
+        Thread.sleep(20000);
+        QueryTransactionResult txResult = client.queryTransaction(txhash);
+        Assert.assertEquals(txResult.getReceipt().getTyname(), "ExecOk");
+
+        //step2 给地址B打钱
+        tx = CoinsUtil.createTransferTx("", 10000000000L, AddrB, "", PrivateKey, SignType.ETH_SECP256K1, AddressType.ETH_ADDRESS, 999, "", 1000000);
+        txhash = client.submitTransaction(tx);
+        System.out.println("转移到AddrB的主币交易哈希 = " + txhash);
+        Thread.sleep(20000);
+        txResult = client.queryTransaction(txhash);
+        Assert.assertEquals(txResult.getReceipt().getTyname(), "ExecOk");
+        List<String> list = new ArrayList<String>();
+        list.add(AddrA);
+        list.add(AddrB);
+        List<AccountAccResult> results = client.queryBalance(list, "coins");
+        results.forEach(a -> {
+            System.out.println("addr: " + a.getAddr() + " balance:" + a.getBalance());
+        });
     }
 }

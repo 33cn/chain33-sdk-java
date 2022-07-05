@@ -284,6 +284,29 @@ public class RpcClient {
     }
 
     /**
+     * 获取主链交易费率
+     * @param txCount
+     * @param txSize
+     * @return
+     * @throws IOException
+     */
+    public int getProperFeeRate(int txCount,int txSize) throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("txCount", txCount);
+        jsonObject.put("txSize", txSize);
+        RpcRequest postData = getPostData(RpcMethod.GET_PROPER_FEE);
+        postData.addJsonParams(jsonObject);
+        String result = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+        if (StringUtil.isNotEmpty(result)) {
+            JSONObject parseObject = JSONObject.parseObject(result);
+            if (messageValidate(parseObject))
+                return 0;
+            int feeRate = parseObject.getJSONObject("result").getIntValue("properFee");
+            return feeRate;
+        }
+        return 0;
+    }
+    /**
      * @param hashIdList 交易ID列表
      * @return 交易结果对象列表
      * @throws IOException

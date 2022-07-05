@@ -49,32 +49,20 @@ import java.util.Random;
  */
 public class TransactionUtil {
 
-    private static final SignType DEFAULT_SIGNTYPE = SignType.SECP256K1;
-
     public static final long DEFAULT_FEE = 1000000;
-
     public static final long PARA_CREATE_EVM_FEE = 3000000;
-
     public static final long PARA_CALL_EVM_FEE = 200000;
-
+    private static final SignType DEFAULT_SIGNTYPE = SignType.SECP256K1;
     private final static Long TX_HEIGHT_OFFSET = 1L << 62;
 
     private final static Long LowAllowPackHeight = 30L;
-
-    private static byte[] addrSeed = "address seed bytes for public key".getBytes();
-
     private static final long DURATION = 1;
-
     private static final long MICROSECOND = DURATION * 1000;
-
     private static final long MILLISECOND = MICROSECOND * 1000;
-
     private static final long SECOND = MILLISECOND * 1000;
-
     private static final long EXPIREBOUND = 1000000000;
-
     private static final long MAXTXSIZE = 100000;
-
+    private static byte[] addrSeed = "address seed bytes for public key".getBytes();
 
     /**
      * @param expire 单位为秒
@@ -1517,11 +1505,11 @@ public class TransactionUtil {
     }
 
     /**
-     * 构建通用的签过名的交易方法
+     * 构建通用的签过名/或者未签名的交易方法
      *
      * @param execer
      * @param payLoad
-     * @param privateKey
+     * @param privateKey 为空或者空字符串时，表示构建未签名交易
      * @param signType
      * @param addressType
      * @param chainID
@@ -1529,7 +1517,7 @@ public class TransactionUtil {
      * @param paraName
      * @return
      */
-    public static String buildSignedTx(String execer, byte[] payLoad, String privateKey, SignType signType, AddressType addressType, int chainID, long fee, String paraName) {
+    public static String buildTx(String execer, byte[] payLoad, String privateKey, SignType signType, AddressType addressType, int chainID, long fee, String paraName) {
         TransactionAllProtobuf.Transaction.Builder txBuilder = TransactionAllProtobuf.Transaction.newBuilder();
         txBuilder.setExecer(ByteString.copyFrom((paraName + execer).getBytes()));
         txBuilder.setFee(fee);
@@ -1538,6 +1526,9 @@ public class TransactionUtil {
         txBuilder.setTo(AddressUtil.getToAddress((paraName + execer).getBytes(), addressType));
         txBuilder.setChainID(chainID);
         TransactionAllProtobuf.Transaction tx = txBuilder.build();
+        if(privateKey.isEmpty()){
+            return HexUtil.toHexString(tx.toByteArray());
+        }
         TransactionAllProtobuf.Transaction signProbuf = TransactionUtil.signedProtobufTx(tx, privateKey, signType);
         String hexString = HexUtil.toHexString(signProbuf.toByteArray());
         return hexString;
@@ -1576,6 +1567,7 @@ public class TransactionUtil {
 
     /**
      * 构建代扣交易组
+     *
      * @param noBalanceTxs
      * @param signType
      * @param addressType
@@ -1585,7 +1577,7 @@ public class TransactionUtil {
      * @return
      * @throws Exception
      */
-    public static String createNoBalanceTx(TransactionAllProtobuf.Transaction tx,String withHoldPrivateKey,String fromAddressPrivateKey, SignType signType, AddressType addressType, int chainID, long feeRate, String paraName) throws Exception {
+    public static String createNoBalanceTx(TransactionAllProtobuf.Transaction tx, String withHoldPrivateKey, String fromAddressPrivateKey, SignType signType, AddressType addressType, int chainID, long feeRate, String paraName) throws Exception {
         TransactionAllProtobuf.Transaction.Builder builder = TransactionAllProtobuf.Transaction.newBuilder();
         builder.setExecer(ByteString.copyFrom((paraName + "none").getBytes()));
         builder.setPayload(ByteString.copyFrom("no-fee-transaction".getBytes()));
@@ -1597,18 +1589,54 @@ public class TransactionUtil {
         ArrayList<TransactionAllProtobuf.Transaction> list = new ArrayList<TransactionAllProtobuf.Transaction>();
         list.add(builder.build());
         list.add(tx);
-        TransactionAllProtobuf.Transactions txs=createTxGroup(list, feeRate);
-        TransactionAllProtobuf.Transactions.Builder txsBuiler=txs.toBuilder();
-        for (int i=0;i<txs.getTxsCount();i++){
-            if (i==0){
-                txsBuiler.setTxs(i,signedProtobufTx(txs.getTxs(i),withHoldPrivateKey,signType));
+        TransactionAllProtobuf.Transactions txs = createTxGroup(list, feeRate);
+        TransactionAllProtobuf.Transactions.Builder txsBuiler = txs.toBuilder();
+        for (int i = 0; i < txs.getTxsCount(); i++) {
+            if (i == 0) {
+                txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), withHoldPrivateKey, signType));
                 continue;
             }
-            txsBuiler.setTxs(i,signedProtobufTx(txs.getTxs(i),fromAddressPrivateKey,signType));
+            txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), fromAddressPrivateKey, signType));
         }
         tx = getTxFromTxGroup(txsBuiler.build());
-        return  HexUtil.toHexString(tx.toByteArray());
+        return HexUtil.toHexString(tx.toByteArray());
     }
+
+    /**
+     * 构建YCC代扣交易组
+     *
+     * @param noBalanceTxs
+     * @param fee
+     * @param paraName
+     * @return
+     * @throws Exception
+     */
+    public static String createNoBalanceTxForYCC(TransactionAllProtobuf.Transaction tx, String withHoldPrivateKey, String fromAddressPrivateKey, long feeRate, String paraName) throws Exception {
+        TransactionAllProtobuf.Transaction.Builder builder = TransactionAllProtobuf.Transaction.newBuilder();
+        builder.setExecer(ByteString.copyFrom((paraName + "none").getBytes()));
+        builder.setPayload(ByteString.copyFrom("no-fee-transaction".getBytes()));
+        builder.setTo(AddressUtil.getToAddress((paraName + "none").getBytes(), AddressType.ETH_ADDRESS));
+        builder.setChainID(999);
+        builder.setFee(feeRate);
+        builder.setNonce(getRandomNonce());
+        builder.setExpire(0);
+        ArrayList<TransactionAllProtobuf.Transaction> list = new ArrayList<TransactionAllProtobuf.Transaction>();
+        tx=tx.toBuilder().setChainID(999).build();
+        list.add(builder.build());
+        list.add(tx);
+        TransactionAllProtobuf.Transactions txs = createTxGroup(list, feeRate);
+        TransactionAllProtobuf.Transactions.Builder txsBuiler = txs.toBuilder();
+        for (int i = 0; i < txs.getTxsCount(); i++) {
+            if (i == 0) {
+                txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), withHoldPrivateKey, SignType.ETH_SECP256K1));
+                continue;
+            }
+            txsBuiler.setTxs(i, signedProtobufTx(txs.getTxs(i), fromAddressPrivateKey, SignType.ETH_SECP256K1));
+        }
+        tx = getTxFromTxGroup(txsBuiler.build());
+        return HexUtil.toHexString(tx.toByteArray());
+    }
+
 
     /**
      * @param expire
@@ -1629,6 +1657,7 @@ public class TransactionUtil {
         }
 
     }
+
     public static byte[] getTxHash(TransactionAllProtobuf.Transaction tx) throws InvalidProtocolBufferException {
         return HashUtil.sha256(TransactionAllProtobuf.Transaction.parseFrom(tx.toByteArray()).toBuilder().clearHeader().clearSignature().build().toByteArray());
     }
@@ -1696,7 +1725,7 @@ public class TransactionUtil {
         return copytx.toBuilder().setHeader(ByteString.copyFrom(txs.toByteArray())).build();
     }
 
-    public static long getRealFee(TransactionAllProtobuf.Transaction tx, long minFee) throws Exception {
+    public static long getRealFee(TransactionAllProtobuf.Transaction tx, long minFeeRate) throws Exception {
         int txSize = tx.toByteArray().length;
         //如果签名为空，那么加上签名的空间
         if (tx.getSignature() == null) {
@@ -1706,7 +1735,7 @@ public class TransactionUtil {
             throw new Exception("ErrTxMsgSizeTooBig");
         }
         // 检查交易费是否小于最低值
-        long realFee = (txSize / 1000 + 1) * minFee;
+        long realFee = (txSize / 1000 + 1) * minFeeRate;
         return realFee;
     }
 
@@ -1726,6 +1755,7 @@ public class TransactionUtil {
 
     /**
      * 交易组签名（这块后面要统一重构）
+     *
      * @param transaction
      * @param privateKey
      * @param signType

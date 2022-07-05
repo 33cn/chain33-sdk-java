@@ -20,4 +20,7 @@ public class Uint256 extends Uint {
     public Uint256(long value) {
         this(BigInteger.valueOf(value));
     }
+    public Uint256(int value){
+        this(BigInteger.valueOf(value));
+    }
 }

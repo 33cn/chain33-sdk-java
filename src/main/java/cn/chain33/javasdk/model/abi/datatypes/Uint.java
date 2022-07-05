@@ -31,6 +31,14 @@ public class Uint extends IntType {
         this(MAX_BIT_LENGTH, value);
     }
 
+    public Uint(int value) {
+        this(BigInteger.valueOf(value));
+    }
+
+    public Uint(long value){
+        this(BigInteger.valueOf(value));
+    }
+
     @Override
     protected boolean valid() {
         return super.valid() && 0 <= value.signum();
