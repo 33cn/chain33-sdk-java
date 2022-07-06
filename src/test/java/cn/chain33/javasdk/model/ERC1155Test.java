@@ -118,37 +118,38 @@ public class ERC1155Test {
         // =======>  step3: 调用合约发行NFT,假设为2件游戏道具各生成100个NFT资产, id从10000开始
 
         int lenght = 100;
+
+
         // tokenId数组
-        int[] ids = new int[lenght];
+        List<Uint256> idList = new ArrayList<Uint256>();
         // 同一个tokenid发行多少份
-        int[] amounts = new int[lenght];
+        List<Uint256> amountList = new ArrayList<Uint256>();
         // 每一个tokenid对应的URI信息（一般对应存放图片的描述信息，图片内容的一个url）
-        String[] uris = new String[lenght];
+        List<Utf8String> uriList = new ArrayList<Utf8String>();
         for (int i = 0; i < lenght; i++) {
-            ids[i] = 10000 + i;
-            amounts[i] = 100;
+            idList.add(new Uint256(10000 + i));
+            amountList.add(new Uint256(100));
             // 例子为了简化处理，让所有ID都固定一个地址，
-            uris[i] = "{\"图片描述\":\"由xxx创作\";\"创作时间\":\"2022/12/25\";\"图片存放路径\":\"http://www.baidu.com\"}";
+            uriList.add(new Utf8String("{\"图片描述\":\"由xxx创作\";\"创作时间\":\"2022/12/25\";\"图片存放路径\":\"http://www.baidu.com\"}"));
         }
+        //         构造合约调用, mint对应solidity合约里的方法名， useraAddress, ids, amounts这三项对应合约里的参数。  将NFT发行在用户A地址下
+        String encodeParam = FunctionEncoder.encode(new Function("mint", Arrays.asList(new AddressETH(useraAddress), new DynamicArray(idList), new DynamicArray(amountList), new DynamicArray(uriList)), Collections.emptyList()));
 
-
-//         构造合约调用, mint对应solidity合约里的方法名， useraAddress, ids, amounts这三项对应合约里的参数。  将NFT发行在用户A地址下
-        byte[] initNFT = EvmUtil.encodeParameter(abi_Manager_1155, "mint", useraAddress, ids, amounts, uris);
-
-        txhash = callContract(initNFT, contractAddress, managerAddress, managerPrivateKey, paraName);
+        txhash = callContract(encodeParam, contractAddress, managerAddress, managerPrivateKey, paraName);
         System.out.println("调用合约交易哈希：" + txhash);
         // =======>  查询用户A地址下的余额
-        List<Type> result = client.callEVMContractReadOnlyFunc(contractAddress, new Function("balanceOf", Arrays.asList(new AddressETH(useraAddress), new Uint256(ids[0])), Collections.singletonList(new TypeReference<Uint256>() {
+        List<Type> result = client.callEVMContractReadOnlyFunc(contractAddress, new Function("balanceOf", Arrays.asList(new AddressETH(useraAddress), idList.get(0)), Collections.singletonList(new TypeReference<Uint256>() {
         })));
-        System.out.println("转账前用户A,NFT  ID:" + ids[0] + "balance: " + result.get(0).getValue());
+        System.out.println("转账前用户A,NFT  ID:" + idList.get(0).getValue() + " balance: " + result.get(0).getValue());
 
 
         // =======>  从A地址向B地址转账,使用代扣交易
 
         // 用户A将第1个NFT中的50个转给用户B
-        byte[] transfer = EvmUtil.encodeParameter(abi_Manager_1155, "transferArtNFT", userbAddress, ids[0], 50);
+        encodeParam = FunctionEncoder.encode(new Function("transferArtNFT", Arrays.asList(new AddressETH(userbAddress), idList.get(0), new Uint256(50)), Collections.emptyList()));
+
         // 构造转账交易体，先用用户A对此笔交易签名，
-        String txEncode = EvmUtil.callEvmContractForYCC(HexUtil.encodeHexString(transfer), contractAddress, "", 0, useraPrivateKey, paraName, 100000L);
+        String txEncode = EvmUtil.callEvmContractForYCC(encodeParam, contractAddress, "", 0, useraPrivateKey, paraName, 100000L);
         //查看预估费用
         long gas = client.queryEVMGas(paraName + "evm", txEncode, useraAddress);
         System.out.println("Gas fee is:" + gas);
@@ -165,6 +166,7 @@ public class ERC1155Test {
             feeRate = 100000;
         }
         String noBalanceTx = TransactionUtil.createNoBalanceTxForYCC(tx.getTx(), withholdPrivateKey, useraPrivateKey, feeRate, paraName);
+        System.out.println("代扣交易手续费设置为：" + new Transaction(noBalanceTx).getFee());
         String hash = client.submitTransaction(noBalanceTx);
         Thread.sleep(5000);
         String nextString = "";
@@ -191,20 +193,20 @@ public class ERC1155Test {
             System.out.println("合约调用失败，一般失败原因可能是因为地址下手续费不够");
         }
         // =======>  查询用户A地址下的余额
-        List<Type> results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("balanceOf", Arrays.asList(new AddressETH(useraAddress), new Uint256(ids[0])), Collections.singletonList(new TypeReference<Uint256>() {
+        List<Type> results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("balanceOf", Arrays.asList(new AddressETH(useraAddress), idList.get(0)), Collections.singletonList(new TypeReference<Uint256>() {
         })));
-        System.out.println("转账后用户A, NFT id:" + ids[0] + "余额：" + results.get(0).getValue());
+        System.out.println("转账后用户A, NFT id:" + idList.get(0).getValue() + "余额：" + results.get(0).getValue());
 
 
         // =======>  查询用户B地址下的余额
-        results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("balanceOf", Arrays.asList(new AddressETH(userbAddress), new Uint256(ids[0])), Collections.singletonList(new TypeReference<Uint256>() {
+        results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("balanceOf", Arrays.asList(new AddressETH(userbAddress), idList.get(0)), Collections.singletonList(new TypeReference<Uint256>() {
         })));
-        System.out.println("转账后用户B, NFT id:" + ids[0] + "余额：" + results.get(0).getValue());
+        System.out.println("转账后用户B, NFT id:" + idList.get(0).getValue() + "余额：" + results.get(0).getValue());
 
         // =======>  查询指定tokenid的uri信息
-        results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("uri", Arrays.asList(new Uint256(ids[0])), Collections.singletonList(new TypeReference<Uint256>() {
+        results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("uri", Arrays.asList(idList.get(0)), Collections.singletonList(new TypeReference<Uint256>() {
         })));
-        System.out.println("转账后用户B, NFT id:" + ids[0] + "URI ：" + results.get(0).getValue());
+        System.out.println("转账后用户B, NFT id:" + idList.get(0).getValue() + "URI ：" + results.get(0).getValue());
 
 
     }
@@ -213,7 +215,7 @@ public class ERC1155Test {
     public void testFunctionEncodeCompare() throws Exception {
         String contractAddress = "0x3b1aa87f63df11917d6a81adcd521ce4f7313075";
 
-        int lenght = 10;
+        int lenght = 100;
         // tokenId数组
         int[] ids = new int[lenght];
         // 同一个tokenid发行多少份
@@ -253,7 +255,7 @@ public class ERC1155Test {
         System.out.println("abi encode: " + encodeParam + " len:" + encodeParam.length());
 
         System.out.println("编码是否相等：" + encodeParam1.equals(encodeParam));
-        //TODO 动态数组encode时,编码有bug
+        //FIXED String encode时,编码有bug,已经修复
         if (!encodeParam1.equals(encodeParam)) {
             for (int i = 0; i < encodeParam.length(); i++) {
                 if (!(encodeParam.charAt(i) == encodeParam1.charAt(i))) {
@@ -336,14 +338,14 @@ public class ERC1155Test {
      * @return
      * @throws Exception
      */
-    private String callContract(byte[] functionEncode, String contractAddr, String address, String privateKey, String paraName) throws Exception {
+    private String callContract(String functionEncode, String contractAddr, String address, String privateKey, String paraName) throws Exception {
 
         // 调用合约
         String txEncode;
         String txhash = "";
         QueryTransactionResult txResult = new QueryTransactionResult();
         // 估算合约执行GAS费
-        String evmTx = EvmUtil.getCallEvmEncodeForYcc(functionEncode, "", 0, contractAddr, paraName);
+        String evmTx = EvmUtil.callEvmContractForYCC(functionEncode, contractAddr, "", 0, "", paraName, 100000L);
         long gas = client.queryEVMGas(paraName + "evm", evmTx, address);
         System.out.println("Gas fee is:" + gas);
         //TODO 需要查询链上实时的feeRate然后进行比较
@@ -353,11 +355,11 @@ public class ERC1155Test {
         long fee = gas + 100000;
         Transaction tx = new Transaction(evmTx);
 
-        long realFee=TransactionUtil.getRealFee(tx.getTx(),feeRate);
+        long realFee = TransactionUtil.getRealFee(tx.getTx(), feeRate);
         // 利用tx包装类,完成evm交易手续费的设置与签名
         if (fee > realFee) {
             tx.setFee(fee);
-        }else{
+        } else {
             tx.setFee(realFee);
         }
         tx.sign(SignType.ETH_SECP256K1, privateKey);

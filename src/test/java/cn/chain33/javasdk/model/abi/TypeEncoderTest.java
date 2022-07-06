@@ -1517,4 +1517,19 @@ public class TypeEncoderTest {
                 expectedEncoding,
                 encode(AbiV2TestFixture.addDynamicBytesArrayFunction.getInputParameters().get(0)));
     }
+
+    @Test
+    public void testDynamicArrayStringForChinese(){
+       String hex= TypeEncoder.encodeDynamicArray(new DynamicArray<>(
+                Utf8String.class,
+                new Utf8String("你好,世界!"),
+                new Utf8String("world! Hello,")));
+       assertEquals("0000000000000000000000000000000000000000000000000000000000000002" // length
+               + "0000000000000000000000000000000000000000000000000000000000000040"
+               + "0000000000000000000000000000000000000000000000000000000000000080"
+               + "000000000000000000000000000000000000000000000000000000000000000e"
+               + "e4bda0e5a5bd2ce4b896e7958c21000000000000000000000000000000000000"
+               + "000000000000000000000000000000000000000000000000000000000000000d"
+               + "776f726c64212048656c6c6f2c00000000000000000000000000000000000000",hex);
+    }
 }

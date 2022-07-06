@@ -1157,4 +1157,19 @@ public class TypeDecoderTest {
         row1 = staticArray3StaticArray3.getValue().get(1).getValue().get(1);
         assertEquals(row1.getValue().get(1), (new Uint256(2)));
     }
+
+    @Test
+    public void testDynamicArrayStringForChinese(){
+        DynamicArray<Utf8String> array=TypeDecoder.decodeDynamicArray("0000000000000000000000000000000000000000000000000000000000000002" // length
+                + "0000000000000000000000000000000000000000000000000000000000000040"
+                + "0000000000000000000000000000000000000000000000000000000000000080"
+                + "000000000000000000000000000000000000000000000000000000000000000e"
+                + "e4bda0e5a5bd2ce4b896e7958c21000000000000000000000000000000000000"
+                + "000000000000000000000000000000000000000000000000000000000000000d"
+                + "776f726c64212048656c6c6f2c00000000000000000000000000000000000000",0,new TypeReference<DynamicArray<Utf8String>>() {});
+       assertEquals(new DynamicArray<>(
+               Utf8String.class,
+               new Utf8String("你好,世界!"),
+               new Utf8String("world! Hello,")),array);
+    }
 }
