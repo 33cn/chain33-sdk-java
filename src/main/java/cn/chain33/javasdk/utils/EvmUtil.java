@@ -35,7 +35,7 @@ public class EvmUtil {
 
     public static byte[] execer = "evm".getBytes();
 
-    private static final long EVM_FEE = 100000L;
+    private static final long EVM_FEE = 300000L;
 
     /**
      * @param code       合约代码内容
