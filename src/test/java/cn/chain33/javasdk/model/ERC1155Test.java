@@ -146,7 +146,7 @@ public class ERC1155Test {
         // =======>  从A地址向B地址转账,使用代扣交易
 
         // 用户A将第1个NFT中的50个转给用户B
-        encodeParam = FunctionEncoder.encode(new Function("transferArtNFT",Arrays.asList(new AddressETH(userbAddress),idList.get(0),new Uint256(50)),Collections.emptyList()));
+        encodeParam = FunctionEncoder.encode(new Function("transferArtNFT", Arrays.asList(new AddressETH(userbAddress), idList.get(0), new Uint256(50)), Collections.emptyList()));
 
         // 构造转账交易体，先用用户A对此笔交易签名，
         String txEncode = EvmUtil.callEvmContractForYCC(encodeParam, contractAddress, "", 0, useraPrivateKey, paraName, 100000L);
@@ -166,7 +166,7 @@ public class ERC1155Test {
             feeRate = 100000;
         }
         String noBalanceTx = TransactionUtil.createNoBalanceTxForYCC(tx.getTx(), withholdPrivateKey, useraPrivateKey, feeRate, paraName);
-        System.out.println("代扣交易手续费设置为："+new Transaction(noBalanceTx).getFee());
+        System.out.println("代扣交易手续费设置为：" + new Transaction(noBalanceTx).getFee());
         String hash = client.submitTransaction(noBalanceTx);
         Thread.sleep(5000);
         String nextString = "";
@@ -345,7 +345,7 @@ public class ERC1155Test {
         String txhash = "";
         QueryTransactionResult txResult = new QueryTransactionResult();
         // 估算合约执行GAS费
-        String evmTx = EvmUtil.callEvmContractForYCC(functionEncode,  contractAddr,"",0,"", paraName,100000L);
+        String evmTx = EvmUtil.callEvmContractForYCC(functionEncode, contractAddr, "", 0, "", paraName, 100000L);
         long gas = client.queryEVMGas(paraName + "evm", evmTx, address);
         System.out.println("Gas fee is:" + gas);
         //TODO 需要查询链上实时的feeRate然后进行比较
@@ -355,11 +355,11 @@ public class ERC1155Test {
         long fee = gas + 100000;
         Transaction tx = new Transaction(evmTx);
 
-        long realFee=TransactionUtil.getRealFee(tx.getTx(),feeRate);
+        long realFee = TransactionUtil.getRealFee(tx.getTx(), feeRate);
         // 利用tx包装类,完成evm交易手续费的设置与签名
         if (fee > realFee) {
             tx.setFee(fee);
-        }else{
+        } else {
             tx.setFee(realFee);
         }
         tx.sign(SignType.ETH_SECP256K1, privateKey);

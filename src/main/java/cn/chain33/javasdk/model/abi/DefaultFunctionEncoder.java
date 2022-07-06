@@ -21,37 +21,6 @@ import static cn.chain33.javasdk.model.abi.Utils.staticStructNestedPublicFieldsF
 
 public class DefaultFunctionEncoder extends FunctionEncoder {
 
-    @Override
-    public String encodeFunction(final Function function) {
-        final List<Type> parameters = function.getInputParameters();
-
-        final String methodSignature = buildMethodSignature(function.getName(), parameters);
-        final String methodId = buildMethodId(methodSignature);
-        final StringBuilder result = new StringBuilder(methodId);
-
-        return encodeParameters(parameters, result);
-    }
-
-    @Override
-    public String encodeParameters(final List<Type> parameters) {
-        return encodeParameters(parameters, new StringBuilder());
-    }
-
-    public String encodeWithSelector(String methodId, List<Type> parameters) {
-        final StringBuilder result = new StringBuilder(methodId);
-
-        return encodeParameters(parameters, result);
-    }
-
-    @Override
-    protected String encodePackedParameters(List<Type> parameters) {
-        final StringBuilder result = new StringBuilder();
-        for (Type parameter : parameters) {
-            result.append(TypeEncoder.encodePacked(parameter));
-        }
-        return result.toString();
-    }
-
     private static String encodeParameters(
             final List<Type> parameters, final StringBuilder result) {
         int dynamicDataOffset = getLength(parameters) * Type.MAX_BYTE_LENGTH;
@@ -97,5 +66,36 @@ public class DefaultFunctionEncoder extends FunctionEncoder {
             }
         }
         return count;
+    }
+
+    @Override
+    public String encodeFunction(final Function function) {
+        final List<Type> parameters = function.getInputParameters();
+
+        final String methodSignature = buildMethodSignature(function.getName(), parameters);
+        final String methodId = buildMethodId(methodSignature);
+        final StringBuilder result = new StringBuilder(methodId);
+
+        return encodeParameters(parameters, result);
+    }
+
+    @Override
+    public String encodeParameters(final List<Type> parameters) {
+        return encodeParameters(parameters, new StringBuilder());
+    }
+
+    public String encodeWithSelector(String methodId, List<Type> parameters) {
+        final StringBuilder result = new StringBuilder(methodId);
+
+        return encodeParameters(parameters, result);
+    }
+
+    @Override
+    protected String encodePackedParameters(List<Type> parameters) {
+        final StringBuilder result = new StringBuilder();
+        for (Type parameter : parameters) {
+            result.append(TypeEncoder.encodePacked(parameter));
+        }
+        return result.toString();
     }
 }
