@@ -59,7 +59,6 @@ public class DefaultFunctionEncoder extends FunctionEncoder {
 
         for (Type parameter : parameters) {
             final String encodedValue = TypeEncoder.encode(parameter);
-
             if (TypeEncoder.isDynamic(parameter)) {
                 final String encodedDataOffset =
                         TypeEncoder.encodeNumeric(new Uint(BigInteger.valueOf(dynamicDataOffset)));

@@ -301,7 +301,6 @@ public class TypeEncoder {
         String encodedLength = encode(new Uint(BigInteger.valueOf(size)));
         String valuesOffsets = encodeArrayValuesOffsets(value);
         String encodedValues = encodeArrayValues(value);
-
         StringBuilder result = new StringBuilder();
         result.append(encodedLength);
         result.append(valuesOffsets);
@@ -341,7 +340,7 @@ public class TypeEncoder {
                     int bytesLength =
                             arrayOfBytes
                                     ? ((byte[]) value.getValue().get(i - 1).getValue()).length
-                                    : ((String) value.getValue().get(i - 1).getValue()).length();
+                                    : ((String) value.getValue().get(i - 1).getValue()).getBytes().length;
                     int numberOfWords = (bytesLength + MAX_BYTE_LENGTH - 1) / MAX_BYTE_LENGTH;
                     int totalBytesLength = numberOfWords * MAX_BYTE_LENGTH;
                     offset += totalBytesLength + MAX_BYTE_LENGTH;
@@ -349,7 +348,7 @@ public class TypeEncoder {
                 result.append(
                         Numeric.toHexStringNoPrefix(
                                 Numeric.toBytesPadded(
-                                        new BigInteger(Long.toString(offset)), MAX_BYTE_LENGTH)));
+                                        BigInteger.valueOf(offset), MAX_BYTE_LENGTH)));
             }
         } else if (arrayOfDynamicStructs) {
             result.append(encodeStructsArraysOffsets(value));
