@@ -8,15 +8,16 @@ Chain33的Java SDK提供交易构造、交易签名、数据加密、发送交�
 兼容国密标准SM2、SM3和SM4。  
 支持原生存证、积分发行和转账等能力。  
 支持EVM合约部署，调用能力
+支持web3j abi库与chain33的适配工作
 
 # 使用
 1.下载最新的JAVA-SDK版本  
-下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.16/chain33-sdk-java-1.0.16.zip  
+下载地址：https://github.com/33cn/chain33-sdk-java/releases/download/1.0.18/chain33-sdk-java-1.0.18.zip  
 
 2.将SDK压缩包中的JAR包安装到本地仓库。 
 在JAR包所在目录，执行以下命令：  
 ``` java 
-mvn install:install-file -Dfile=chain33-sdk-java.jar -DgroupId=cn.chain33 -DartifactId=chain33-sdk-java -Dversion=1.0.16 -Dpackaging=jar
+mvn install:install-file -Dfile=chain33-sdk-java.jar -DgroupId=cn.chain33 -DartifactId=chain33-sdk-java -Dversion=1.0.18 -Dpackaging=jar
 ```
 执行结果中打印BUILD SUCCESS，表明添加成功。
 如果time out导致构建失败，可以再次执行以上命令，直至构建成功。
