@@ -120,7 +120,9 @@ client.run(o->o.method(builder));
  - SeedUtil.createAccountBy33PATH  根据助记词离线生成私钥和地址
  
  # 通过SDK部署调用EVM合约样例
- https://github.com/andyYuanFZM/NFTDemo/tree/main/src/test/java/com/chain33/cn
+ POS公链：  https://github.com/andyYuanFZM/btyDemo  
+ 联盟链： https://github.com/andyYuanFZM/consortiumDemo   
+ POS33公链： https://github.com/andyYuanFZM/yccDemo  
  
 
 
