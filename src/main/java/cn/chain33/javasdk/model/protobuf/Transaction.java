@@ -57,28 +57,29 @@ public class Transaction {
 
     //暂时只支持设置时间
     public void setExpire(long expire) {
-        this.tx=tx.toBuilder().setExpire(TransactionUtil.getExpire(expire)).build();
+        this.tx = tx.toBuilder().setExpire(TransactionUtil.getExpire(expire)).build();
     }
 
-    public void setGroupCount(int groupCount){
-        this.tx=tx.toBuilder().setGroupCount(groupCount).build();
+    public void setGroupCount(int groupCount) {
+        this.tx = tx.toBuilder().setGroupCount(groupCount).build();
     }
 
-    public void setHeader(byte[] header){
-        this.tx=tx.toBuilder().setHeader(ByteString.copyFrom(header)).build();
+    public void setHeader(byte[] header) {
+        this.tx = tx.toBuilder().setHeader(ByteString.copyFrom(header)).build();
     }
 
-    public void setNext(byte[] next){
-        this.tx=tx.toBuilder().setNext(ByteString.copyFrom(next)).build();
+    public void setNext(byte[] next) {
+        this.tx = tx.toBuilder().setNext(ByteString.copyFrom(next)).build();
     }
 
-    public void setChainId(int chainId){
-        this.tx=tx.toBuilder().setChainID(chainId).build();
+    public void setChainId(int chainId) {
+        this.tx = tx.toBuilder().setChainID(chainId).build();
     }
 
-    public byte[]getExecer(){
+    public byte[] getExecer() {
         return tx.getExecer().toByteArray();
     }
+
     public Transactions toTransactions() throws Exception {
         if (tx.getGroupCount() < 0 || tx.getGroupCount() == 1 || tx.getGroupCount() > 20) {
             throw new Exception("ErrTxGroupCount");
@@ -92,14 +93,16 @@ public class Transaction {
         return null;
     }
 
-    public int size(){
-       return tx.toByteArray().length;
+    public int size() {
+        return tx.toByteArray().length;
     }
-    public long getFee(){
+
+    public long getFee() {
         return tx.getFee();
     }
+
     //获取真实fee
-    public long getRealFee(long feeRate) throws Exception{
+    public long getRealFee(long feeRate) throws Exception {
         int txSize = tx.toByteArray().length;
         //如果签名为空，那么加上签名的空间
         if (tx.getSignature() == null) {
@@ -113,7 +116,16 @@ public class Transaction {
         return realFee;
     }
 
-    public void setFee(long fee){
-        this.tx=tx.toBuilder().setFee(fee).build();
+    //通过链上费率直接设置手续费
+    public void setFeeRate(long feeRate) throws Exception {
+        long realFee = getRealFee(feeRate);
+        if (tx.getFee() < realFee) {
+            setFee(realFee);
+        }
+    }
+
+
+    public void setFee(long fee) {
+        this.tx = tx.toBuilder().setFee(fee).build();
     }
 }

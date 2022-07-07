@@ -1,14 +1,13 @@
 package cn.chain33.javasdk.model.abi;
 
-import java.util.Arrays;
-import java.util.List;
-
 import cn.chain33.javasdk.model.abi.datatypes.AddressETH;
+import cn.chain33.javasdk.model.abi.datatypes.Event;
 import cn.chain33.javasdk.model.abi.datatypes.Type;
+import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
 import org.junit.jupiter.api.Test;
 
-import cn.chain33.javasdk.model.abi.datatypes.Event;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -26,19 +25,22 @@ public class EventLogDecoderTest {
         Event event = new Event(
                 "SetValue",
                 Arrays.asList(
-                        new TypeReference<AddressETH>() {},
-                        new TypeReference<Uint256>() {},
-                        new TypeReference<Uint256>() {}
+                        new TypeReference<AddressETH>() {
+                        },
+                        new TypeReference<Uint256>() {
+                        },
+                        new TypeReference<Uint256>() {
+                        }
                 )
         );
 
-        List<Type> result= Arrays.asList(
+        List<Type> result = Arrays.asList(
                 new AddressETH("0xf39e69a8f2c1041edd7616cf079c7084bb7a5242"),
                 new Uint256(123456789L),
                 new Uint256(123456789L));
         //解析evmLog
         assertEquals(
                 result,
-                EventLogDecoder.decodeEventParameters(eventLog,event));
+                EventLogDecoder.decodeEventParameters(eventLog, event));
     }
 }

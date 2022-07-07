@@ -13,10 +13,10 @@
 package cn.chain33.javasdk.model.abi.datatypes.ens;
 
 import org.junit.jupiter.api.Test;
-
 import org.web3j.utils.Numeric;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class OffchainLookupTest {
     public static String LOOKUP_HEX =

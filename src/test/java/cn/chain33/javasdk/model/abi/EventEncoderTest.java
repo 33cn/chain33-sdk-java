@@ -12,19 +12,18 @@
  */
 package cn.chain33.javasdk.model.abi;
 
-import java.util.Arrays;
-import java.util.List;
-
 import cn.chain33.javasdk.model.abi.datatypes.Address;
 import cn.chain33.javasdk.model.abi.datatypes.AddressBTC;
 import cn.chain33.javasdk.model.abi.datatypes.AddressETH;
-import org.junit.jupiter.api.Test;
-
 import cn.chain33.javasdk.model.abi.datatypes.Event;
 import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.Arrays;
+import java.util.List;
+
 import static cn.chain33.javasdk.model.abi.Utils.convert;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EventEncoderTest {
 
@@ -46,7 +45,9 @@ public class EventEncoderTest {
                 new Event(
                         "Notify",
                         Arrays.<TypeReference<?>>asList(
-                                new TypeReference<Address>() {}, new TypeReference<Uint256>() {}));
+                                new TypeReference<Address>() {
+                                }, new TypeReference<Uint256>() {
+                                }));
 
         assertEquals(
                 EventEncoder.encode(event),
@@ -56,7 +57,9 @@ public class EventEncoderTest {
                 new Event(
                         "Notify",
                         Arrays.<TypeReference<?>>asList(
-                                new TypeReference<AddressETH>() {}, new TypeReference<Uint256>() {}));
+                                new TypeReference<AddressETH>() {
+                                }, new TypeReference<Uint256>() {
+                                }));
         assertEquals(
                 EventEncoder.encode(event),
                 "0x534b8c68fce1c341e67c2f4a3e2cebe2c8c749e662eb7a303cfb265e63141dec");
@@ -64,7 +67,9 @@ public class EventEncoderTest {
                 new Event(
                         "Notify",
                         Arrays.<TypeReference<?>>asList(
-                                new TypeReference<AddressBTC>() {}, new TypeReference<Uint256>() {}));
+                                new TypeReference<AddressBTC>() {
+                                }, new TypeReference<Uint256>() {
+                                }));
         assertEquals(
                 EventEncoder.encode(event),
                 "0x534b8c68fce1c341e67c2f4a3e2cebe2c8c749e662eb7a303cfb265e63141dec");
@@ -76,21 +81,27 @@ public class EventEncoderTest {
     public void testBuildMethodSignature() {
         List<TypeReference<?>> parameters =
                 Arrays.<TypeReference<?>>asList(
-                        new TypeReference<Address>() {}, new TypeReference<Uint256>() {});
+                        new TypeReference<Address>() {
+                        }, new TypeReference<Uint256>() {
+                        });
 
         assertEquals(
                 EventEncoder.buildMethodSignature("Notify", convert(parameters)),
                 "Notify(address,uint256)");
         parameters =
                 Arrays.<TypeReference<?>>asList(
-                        new TypeReference<AddressETH>() {}, new TypeReference<Uint256>() {});
+                        new TypeReference<AddressETH>() {
+                        }, new TypeReference<Uint256>() {
+                        });
 
         assertEquals(
                 EventEncoder.buildMethodSignature("Notify", convert(parameters)),
                 "Notify(address,uint256)");
-         parameters =
+        parameters =
                 Arrays.<TypeReference<?>>asList(
-                        new TypeReference<AddressBTC>() {}, new TypeReference<Uint256>() {});
+                        new TypeReference<AddressBTC>() {
+                        }, new TypeReference<Uint256>() {
+                        });
 
         assertEquals(
                 EventEncoder.buildMethodSignature("Notify", convert(parameters)),

@@ -12,14 +12,13 @@
  */
 package cn.chain33.javasdk.model.abi.datatypes;
 
+import cn.chain33.javasdk.model.abi.TypeReference;
+import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-
-import org.junit.jupiter.api.Test;
-
-import cn.chain33.javasdk.model.abi.TypeReference;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -30,7 +29,9 @@ public class EventTest {
 
         List<TypeReference<?>> parameters =
                 Arrays.<TypeReference<?>>asList(
-                        new TypeReference<Address>() {}, new TypeReference<Uint256>() {});
+                        new TypeReference<Address>() {
+                        }, new TypeReference<Uint256>() {
+                        });
         Event event = new Event("testName", parameters);
 
         assertEquals(event.getName(), "testName");

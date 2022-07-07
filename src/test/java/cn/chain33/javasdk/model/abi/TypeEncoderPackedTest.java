@@ -12,84 +12,16 @@
  */
 package cn.chain33.javasdk.model.abi;
 
-import java.math.BigInteger;
-
 import cn.chain33.javasdk.model.abi.datatypes.*;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes1;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes4;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes6;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int104;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int112;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int120;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int128;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int136;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int144;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int152;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int16;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int160;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int168;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int176;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int184;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int192;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int200;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int208;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int216;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int224;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int232;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int24;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int240;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int248;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int32;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int40;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int48;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int56;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int64;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int72;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int8;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int80;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int88;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int96;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray0;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray2;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray3;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint104;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint112;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint120;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint128;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint136;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint144;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint152;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint16;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint160;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint168;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint176;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint184;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint192;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint200;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint208;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint216;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint224;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint232;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint24;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint240;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint248;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint32;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint40;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint48;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint56;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint64;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint72;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint8;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint80;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint88;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint96;
+import cn.chain33.javasdk.model.abi.datatypes.generated.*;
 import cn.chain33.javasdk.model.abi.datatypes.primitive.Byte;
 import cn.chain33.javasdk.model.abi.datatypes.primitive.Char;
 import cn.chain33.javasdk.model.abi.datatypes.primitive.Long;
 import cn.chain33.javasdk.model.abi.datatypes.primitive.Short;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -786,13 +718,13 @@ class TypeEncoderPackedTest {
 
     @Test
     public void testStaticBytesEncodePacked() {
-        Bytes staticBytes = new Bytes6(new byte[] {0, 1, 2, 3, 4, 5});
+        Bytes staticBytes = new Bytes6(new byte[]{0, 1, 2, 3, 4, 5});
         assertEquals(TypeEncoder.encodePacked(staticBytes), ("000102030405"));
 
-        Bytes empty = new Bytes1(new byte[] {0});
+        Bytes empty = new Bytes1(new byte[]{0});
         assertEquals(TypeEncoder.encodePacked(empty), ("00"));
 
-        Bytes ones = new Bytes1(new byte[] {127});
+        Bytes ones = new Bytes1(new byte[]{127});
         assertEquals(TypeEncoder.encodePacked(ones), ("7f"));
 
         Bytes dave = new Bytes4("dave".getBytes());
@@ -893,12 +825,12 @@ class TypeEncoderPackedTest {
 
     @Test
     public void testDynamicBytesEncodePacked() {
-        DynamicBytes dynamicBytes = new DynamicBytes(new byte[] {0, 1, 2, 3, 4, 5});
+        DynamicBytes dynamicBytes = new DynamicBytes(new byte[]{0, 1, 2, 3, 4, 5});
         assertEquals(
                 "0001020304050000000000000000000000000000000000000000000000000000",
                 TypeEncoder.encodePacked(dynamicBytes));
 
-        DynamicBytes empty = new DynamicBytes(new byte[] {0});
+        DynamicBytes empty = new DynamicBytes(new byte[]{0});
         assertEquals(
                 "0000000000000000000000000000000000000000000000000000000000000000",
                 TypeEncoder.encodePacked(empty));
@@ -911,12 +843,12 @@ class TypeEncoderPackedTest {
         DynamicBytes loremIpsum =
                 new DynamicBytes(
                         ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
-                                        + "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
-                                        + "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex "
-                                        + "ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-                                        + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur "
-                                        + "sint occaecat cupidatat non proident, sunt in culpa qui officia "
-                                        + "deserunt mollit anim id est laborum.")
+                                + "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+                                + "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex "
+                                + "ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+                                + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur "
+                                + "sint occaecat cupidatat non proident, sunt in culpa qui officia "
+                                + "deserunt mollit anim id est laborum.")
                                 .getBytes());
         assertEquals(
                 ("4c6f72656d20697073756d20646f6c6f722073697420616d65742c20636f6e73"

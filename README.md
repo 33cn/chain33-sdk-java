@@ -61,6 +61,7 @@ client.run(o->o.method(builder));
    [http](./src/main/java/cn/chain33/javasdk/server/http)|http日志订阅服务|[httpTest](./src/test/java/cn/chain33/javasdk/server/http)
    [Transaction](./src/main/java/cn/chain33/javasdk/model/protobuf/Transaction.java)|交易包装类,交易签名重构等一系列方法|
    [Transactions](./src/main/java/cn/chain33/javasdk/model/protobuf/Transactions.java)|交易组的包装类,交易组签名重构等一系列方法|
+   [abi](./src/main/java/cn/chain33/javasdk/model/abi)|兼容chain33系统的abi库|
 # 接口列表
 下面罗列的是java sdk提供的接口，具体调用可以参考测试代码里的例子
 

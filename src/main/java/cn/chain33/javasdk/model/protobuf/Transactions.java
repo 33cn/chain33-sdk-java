@@ -5,7 +5,6 @@ import cn.chain33.javasdk.utils.HexUtil;
 import com.google.protobuf.ByteString;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,17 +20,17 @@ public class Transactions {
             throw new Exception("ErrTxGroupCount");
         }
         ArrayList<Transaction> arrayList = new ArrayList<Transaction>();
-        boolean isPara=false;
-        boolean isMain=false;
-        for(int i=0;i<txs.getTxsCount();i++){
-            if (txs.getTxs(i).getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))){
-                isPara=true;
-            }else{
-                isMain=true;
+        boolean isPara = false;
+        boolean isMain = false;
+        for (int i = 0; i < txs.getTxsCount(); i++) {
+            if (txs.getTxs(i).getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))) {
+                isPara = true;
+            } else {
+                isMain = true;
             }
             arrayList.add(new Transaction(txs.getTxs(i)));
         }
-        if (isMain&&isPara){
+        if (isMain && isPara) {
             throw new Exception("ErrTxGroupParaMainMixed");
         }
         this.list = arrayList;
@@ -43,18 +42,18 @@ public class Transactions {
             throw new Exception("ErrTxGroupCount");
 
         }
-        boolean isPara=false;
-        boolean isMain=false;
+        boolean isPara = false;
+        boolean isMain = false;
         ArrayList<Transaction> arrayList = new ArrayList<Transaction>();
-        for(int i=0;i<txs.length;i++){
-            if (txs[i].getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))){
-                isPara=true;
-            }else{
-                isMain=true;
+        for (int i = 0; i < txs.length; i++) {
+            if (txs[i].getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))) {
+                isPara = true;
+            } else {
+                isMain = true;
             }
             arrayList.add(new Transaction(txs[i]));
         }
-        if (isMain&&isPara){
+        if (isMain && isPara) {
             throw new Exception("ErrTxGroupParaMainMixed");
         }
         this.list = arrayList;
@@ -66,19 +65,19 @@ public class Transactions {
         if (txs.length > 20 || txs.length <= 1) {
             throw new Exception("ErrTxGroupCount");
         }
-        boolean isPara=false;
-        boolean isMain=false;
+        boolean isPara = false;
+        boolean isMain = false;
         ArrayList<Transaction> arrayList = new ArrayList<Transaction>();
         for (int i = 0; i < txs.length; i++) {
-            TransactionAllProtobuf.Transaction tx=TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(txs[i]));
-            if (tx.getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))){
-                isPara=true;
-            }else{
-                isMain=true;
+            TransactionAllProtobuf.Transaction tx = TransactionAllProtobuf.Transaction.parseFrom(HexUtil.fromHexString(txs[i]));
+            if (tx.getExecer().startsWith(ByteString.copyFrom("user.p.".getBytes()))) {
+                isPara = true;
+            } else {
+                isMain = true;
             }
             arrayList.add(new Transaction(tx));
         }
-        if (isMain&&isPara){
+        if (isMain && isPara) {
             throw new Exception("ErrTxGroupParaMainMixed");
         }
         this.list = arrayList;

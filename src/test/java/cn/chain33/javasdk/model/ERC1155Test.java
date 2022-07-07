@@ -160,7 +160,7 @@ public class ERC1155Test {
         }
 
         //查看链上实时费率
-        int feeRate = client.getProperFeeRate(0, 0);
+        long feeRate = client.getProperFeeRate(0, 0);
         System.out.println("链上实时费率为：" + feeRate);
         if (feeRate < 100000) {
             feeRate = 100000;
@@ -296,11 +296,14 @@ public class ERC1155Test {
         String evmTx = EvmUtil.createEvmContractForYCC(byteCode_Manager_1155, FunctionEncoder.encodeConstructor(Collections.emptyList()), "deploy erc1155 by manager.", "", "", paraName, 0);
         long gas = client.queryEVMGas(paraName + "evm", evmTx, address);
         System.out.println("Gas fee is:" + gas);
-        //TODO 需要查询链上实时的feeRate然后进行比较
-
+        //查询链上实时的feeRate然后进行比较
+        long feeRate = client.getProperFeeRate(0, 0);
+        System.out.println("feeRate:" + feeRate);
         // 利用tx包装类,完成evm交易手续费的设置与签名
         Transaction tx = new Transaction(evmTx);
-        tx.setFee(gas);
+        tx.setFee(gas+100000);
+        //设置链上费率，防止手续费不够
+        tx.setFeeRate(feeRate);
         tx.sign(SignType.ETH_SECP256K1, privateKey);
         // 将构造并签好名的交易通过rpc接口发送到平行链上
         txhash = client.submitTransaction(tx.hexString());
@@ -345,23 +348,19 @@ public class ERC1155Test {
         String txhash = "";
         QueryTransactionResult txResult = new QueryTransactionResult();
         // 估算合约执行GAS费
-        String evmTx = EvmUtil.callEvmContractForYCC(functionEncode, contractAddr, "", 0, "", paraName, 100000L);
+        String evmTx = EvmUtil.callEvmContractForYCC(functionEncode, contractAddr, "", 0, "", paraName, TransactionUtil.PARA_CALL_EVM_FEE);
         long gas = client.queryEVMGas(paraName + "evm", evmTx, address);
         System.out.println("Gas fee is:" + gas);
-        //TODO 需要查询链上实时的feeRate然后进行比较
-        int feeRate = client.getProperFeeRate(0, 0);
+        //查询链上实时的feeRate然后进行比较
+        long feeRate = client.getProperFeeRate(0, 0);
         System.out.println("feeRate:" + feeRate);
-
-        long fee = gas + 100000;
         Transaction tx = new Transaction(evmTx);
 
-        long realFee = TransactionUtil.getRealFee(tx.getTx(), feeRate);
         // 利用tx包装类,完成evm交易手续费的设置与签名
-        if (fee > realFee) {
-            tx.setFee(fee);
-        } else {
-            tx.setFee(realFee);
-        }
+        //gas费用是估算的所以要加100000作为预留空间，充分保证交易不会因为手续费过低执行失败
+        tx.setFee(gas+100000L);
+        //设置链上费率，防止手续费不够
+        tx.setFeeRate(feeRate);
         tx.sign(SignType.ETH_SECP256K1, privateKey);
         txhash = client.submitTransaction(tx.hexString());
         System.out.println("调用合约hash = " + txhash);
