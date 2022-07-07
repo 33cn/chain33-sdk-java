@@ -12,84 +12,13 @@
  */
 package cn.chain33.javasdk.model.abi;
 
-import java.math.BigInteger;
-
 import cn.chain33.javasdk.model.abi.datatypes.*;
+import cn.chain33.javasdk.model.abi.datatypes.generated.*;
 import org.junit.jupiter.api.Test;
 
-import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes1;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes4;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes6;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int104;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int112;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int120;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int128;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int136;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int144;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int152;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int16;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int160;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int168;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int176;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int184;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int192;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int200;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int208;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int216;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int224;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int232;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int24;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int240;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int248;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int256;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int32;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int40;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int48;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int56;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int64;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int72;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int8;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int80;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int88;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int96;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray2;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray3;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint104;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint112;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint120;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint128;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint136;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint144;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint152;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint16;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint160;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint168;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint176;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint184;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint192;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint200;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint208;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint216;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint224;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint232;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint24;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint240;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint248;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint32;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint40;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint48;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint56;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint64;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint72;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint8;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint80;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint88;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint96;
+import java.math.BigInteger;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TypeDecoderTest {
 
@@ -904,7 +833,7 @@ public class TypeDecoderTest {
 
     @Test
     public void testStaticBytes() throws Exception {
-        byte[] testbytes = new byte[] {0, 1, 2, 3, 4, 5};
+        byte[] testbytes = new byte[]{0, 1, 2, 3, 4, 5};
         Bytes6 staticBytes = new Bytes6(testbytes);
         assertEquals(
                 TypeDecoder.decodeBytes(
@@ -912,7 +841,7 @@ public class TypeDecoderTest {
                         Bytes6.class),
                 (staticBytes));
 
-        Bytes empty = new Bytes1(new byte[] {0});
+        Bytes empty = new Bytes1(new byte[]{0});
         assertEquals(
                 TypeDecoder.decodeBytes(
                         "0000000000000000000000000000000000000000000000000000000000000000",
@@ -931,7 +860,7 @@ public class TypeDecoderTest {
 
     @Test
     public void testDynamicBytes() throws Exception {
-        byte[] testbytes = new byte[] {0, 1, 2, 3, 4, 5};
+        byte[] testbytes = new byte[]{0, 1, 2, 3, 4, 5};
         DynamicBytes dynamicBytes = new DynamicBytes(testbytes);
         assertEquals(
                 TypeDecoder.decodeDynamicBytes(
@@ -940,7 +869,7 @@ public class TypeDecoderTest {
                         0),
                 (dynamicBytes));
 
-        DynamicBytes empty = new DynamicBytes(new byte[] {0});
+        DynamicBytes empty = new DynamicBytes(new byte[]{0});
         assertEquals(
                 TypeDecoder.decodeDynamicBytes(
                         "0000000000000000000000000000000000000000000000000000000000000001"
@@ -959,12 +888,12 @@ public class TypeDecoderTest {
         DynamicBytes loremIpsum =
                 new DynamicBytes(
                         ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
-                                        + "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
-                                        + "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex "
-                                        + "ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-                                        + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur "
-                                        + "sint occaecat cupidatat non proident, sunt in culpa qui officia "
-                                        + "deserunt mollit anim id est laborum.")
+                                + "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+                                + "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex "
+                                + "ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+                                + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur "
+                                + "sint occaecat cupidatat non proident, sunt in culpa qui officia "
+                                + "deserunt mollit anim id est laborum.")
                                 .getBytes());
 
         assertEquals(
@@ -1034,7 +963,8 @@ public class TypeDecoderTest {
                         "000000000000000000000000000000000000000000000000000000000000000a"
                                 + "0000000000000000000000000000000000000000000000007fffffffffffffff",
                         0,
-                        new TypeReference.StaticArrayTypeReference<StaticArray<Uint256>>(2) {},
+                        new TypeReference.StaticArrayTypeReference<StaticArray<Uint256>>(2) {
+                        },
                         2),
                 (new StaticArray2<>(
                         Uint256.class,
@@ -1050,14 +980,15 @@ public class TypeDecoderTest {
                                 + "000000000000000000000000000000000000000000000000000000000000000d"
                                 + "776f726c64212048656c6c6f2c00000000000000000000000000000000000000",
                         0,
-                        new TypeReference.StaticArrayTypeReference<StaticArray<Utf8String>>(2) {},
+                        new TypeReference.StaticArrayTypeReference<StaticArray<Utf8String>>(2) {
+                        },
                         2),
                 (new StaticArray2<>(
                         Utf8String.class,
                         new Utf8String("Hello, world!"),
                         new Utf8String("world! Hello,"))));
 
-        Type arr = TypeDecoder.instantiateType("uint256[2]", new long[] {10, Long.MAX_VALUE});
+        Type arr = TypeDecoder.instantiateType("uint256[2]", new long[]{10, Long.MAX_VALUE});
 
         assertTrue(arr instanceof StaticArray2);
         StaticArray2 staticArray2 = (StaticArray2) arr;
@@ -1078,7 +1009,8 @@ public class TypeDecoderTest {
                                 "0000000000000000000000000000000000000000000000000000000000000000",
                                 0,
                                 new TypeReference.StaticArrayTypeReference<StaticArray<Uint256>>(
-                                        0) {},
+                                        0) {
+                                },
                                 0));
     }
 
@@ -1088,7 +1020,8 @@ public class TypeDecoderTest {
                 TypeDecoder.decodeDynamicArray(
                         "0000000000000000000000000000000000000000000000000000000000000000", // length
                         0,
-                        new TypeReference<DynamicArray<Uint256>>() {}),
+                        new TypeReference<DynamicArray<Uint256>>() {
+                        }),
                 (new DynamicArray<>(Uint256.class)));
 
         assertEquals(
@@ -1097,7 +1030,8 @@ public class TypeDecoderTest {
                                 + "000000000000000000000000000000000000000000000000000000000000000a"
                                 + "0000000000000000000000000000000000000000000000007fffffffffffffff",
                         0,
-                        new TypeReference<DynamicArray<Uint256>>() {}),
+                        new TypeReference<DynamicArray<Uint256>>() {
+                        }),
                 (new DynamicArray<>(
                         Uint256.class,
                         new Uint256(BigInteger.TEN),
@@ -1113,7 +1047,8 @@ public class TypeDecoderTest {
                                 + "000000000000000000000000000000000000000000000000000000000000000d"
                                 + "776f726c64212048656c6c6f2c00000000000000000000000000000000000000",
                         0,
-                        new TypeReference<DynamicArray<Utf8String>>() {}),
+                        new TypeReference<DynamicArray<Utf8String>>() {
+                        }),
                 (new DynamicArray<>(
                         Utf8String.class,
                         new Utf8String("Hello, world!"),
@@ -1121,7 +1056,7 @@ public class TypeDecoderTest {
 
         Type arr =
                 TypeDecoder.instantiateType(
-                        "string[]", new String[] {"Hello, world!", "world! Hello,"});
+                        "string[]", new String[]{"Hello, world!", "world! Hello,"});
         assertTrue(arr instanceof DynamicArray);
         DynamicArray dynamicArray = (DynamicArray) arr;
 
@@ -1135,9 +1070,9 @@ public class TypeDecoderTest {
     @SuppressWarnings("unchecked")
     @Test
     public void multiDimArrays() throws Exception {
-        byte[] bytes1d = new byte[] {1, 2, 3};
-        byte[][] bytes2d = new byte[][] {bytes1d, bytes1d, bytes1d};
-        final byte[][][] bytes3d = new byte[][][] {bytes2d, bytes2d, bytes2d};
+        byte[] bytes1d = new byte[]{1, 2, 3};
+        byte[][] bytes2d = new byte[][]{bytes1d, bytes1d, bytes1d};
+        final byte[][][] bytes3d = new byte[][][]{bytes2d, bytes2d, bytes2d};
 
         assertEquals(TypeDecoder.instantiateType("bytes", bytes1d), (new DynamicBytes(bytes1d)));
 
@@ -1159,17 +1094,18 @@ public class TypeDecoderTest {
     }
 
     @Test
-    public void testDynamicArrayStringForChinese(){
-        DynamicArray<Utf8String> array=TypeDecoder.decodeDynamicArray("0000000000000000000000000000000000000000000000000000000000000002" // length
+    public void testDynamicArrayStringForChinese() {
+        DynamicArray<Utf8String> array = TypeDecoder.decodeDynamicArray("0000000000000000000000000000000000000000000000000000000000000002" // length
                 + "0000000000000000000000000000000000000000000000000000000000000040"
                 + "0000000000000000000000000000000000000000000000000000000000000080"
                 + "000000000000000000000000000000000000000000000000000000000000000e"
                 + "e4bda0e5a5bd2ce4b896e7958c21000000000000000000000000000000000000"
                 + "000000000000000000000000000000000000000000000000000000000000000d"
-                + "776f726c64212048656c6c6f2c00000000000000000000000000000000000000",0,new TypeReference<DynamicArray<Utf8String>>() {});
-       assertEquals(new DynamicArray<>(
-               Utf8String.class,
-               new Utf8String("你好,世界!"),
-               new Utf8String("world! Hello,")),array);
+                + "776f726c64212048656c6c6f2c00000000000000000000000000000000000000", 0, new TypeReference<DynamicArray<Utf8String>>() {
+        });
+        assertEquals(new DynamicArray<>(
+                Utf8String.class,
+                new Utf8String("你好,世界!"),
+                new Utf8String("world! Hello,")), array);
     }
 }

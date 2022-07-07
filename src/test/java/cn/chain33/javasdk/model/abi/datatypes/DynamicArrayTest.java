@@ -12,13 +12,12 @@
  */
 package cn.chain33.javasdk.model.abi.datatypes;
 
+import cn.chain33.javasdk.model.abi.datatypes.generated.Uint8;
+import org.junit.jupiter.api.Test;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
-
-import org.junit.jupiter.api.Test;
-
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint8;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

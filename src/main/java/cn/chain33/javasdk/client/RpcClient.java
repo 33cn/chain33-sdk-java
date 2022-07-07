@@ -290,7 +290,7 @@ public class RpcClient {
      * @return
      * @throws IOException
      */
-    public int getProperFeeRate(int txCount,int txSize) throws IOException {
+    public long getProperFeeRate(int txCount,int txSize) throws IOException {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("txCount", txCount);
         jsonObject.put("txSize", txSize);
@@ -301,7 +301,7 @@ public class RpcClient {
             JSONObject parseObject = JSONObject.parseObject(result);
             if (messageValidate(parseObject))
                 return 0;
-            int feeRate = parseObject.getJSONObject("result").getIntValue("properFee");
+            long feeRate = parseObject.getJSONObject("result").getLongValue("properFee");
             return feeRate;
         }
         return 0;

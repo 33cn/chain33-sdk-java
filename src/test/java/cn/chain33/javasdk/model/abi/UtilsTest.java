@@ -12,50 +12,52 @@
  */
 package cn.chain33.javasdk.model.abi;
 
+import cn.chain33.javasdk.model.abi.datatypes.*;
+import cn.chain33.javasdk.model.abi.datatypes.generated.Int64;
+import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray2;
+import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
+import cn.chain33.javasdk.model.abi.datatypes.generated.Uint64;
+import org.junit.jupiter.api.Test;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
-
-import cn.chain33.javasdk.model.abi.datatypes.Bool;
-import cn.chain33.javasdk.model.abi.datatypes.DynamicArray;
-import cn.chain33.javasdk.model.abi.datatypes.DynamicBytes;
-import cn.chain33.javasdk.model.abi.datatypes.Fixed;
-import cn.chain33.javasdk.model.abi.datatypes.Int;
-import cn.chain33.javasdk.model.abi.datatypes.StaticArray;
-import cn.chain33.javasdk.model.abi.datatypes.Ufixed;
-import cn.chain33.javasdk.model.abi.datatypes.Uint;
-import cn.chain33.javasdk.model.abi.datatypes.Utf8String;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Int64;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray2;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint64;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static cn.chain33.javasdk.model.abi.Utils.typeMap;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UtilsTest {
 
     @Test
     public void testGetTypeName() {
-        assertEquals(Utils.getTypeName(new TypeReference<Uint>() {}), ("uint256"));
-        assertEquals(Utils.getTypeName(new TypeReference<Int>() {}), ("int256"));
-        assertEquals(Utils.getTypeName(new TypeReference<Ufixed>() {}), ("ufixed256"));
-        assertEquals(Utils.getTypeName(new TypeReference<Fixed>() {}), ("fixed256"));
+        assertEquals(Utils.getTypeName(new TypeReference<Uint>() {
+        }), ("uint256"));
+        assertEquals(Utils.getTypeName(new TypeReference<Int>() {
+        }), ("int256"));
+        assertEquals(Utils.getTypeName(new TypeReference<Ufixed>() {
+        }), ("ufixed256"));
+        assertEquals(Utils.getTypeName(new TypeReference<Fixed>() {
+        }), ("fixed256"));
 
-        assertEquals(Utils.getTypeName(new TypeReference<Uint64>() {}), ("uint64"));
-        assertEquals(Utils.getTypeName(new TypeReference<Int64>() {}), ("int64"));
-        assertEquals(Utils.getTypeName(new TypeReference<Bool>() {}), ("bool"));
-        assertEquals(Utils.getTypeName(new TypeReference<Utf8String>() {}), ("string"));
-        assertEquals(Utils.getTypeName(new TypeReference<DynamicBytes>() {}), ("bytes"));
+        assertEquals(Utils.getTypeName(new TypeReference<Uint64>() {
+        }), ("uint64"));
+        assertEquals(Utils.getTypeName(new TypeReference<Int64>() {
+        }), ("int64"));
+        assertEquals(Utils.getTypeName(new TypeReference<Bool>() {
+        }), ("bool"));
+        assertEquals(Utils.getTypeName(new TypeReference<Utf8String>() {
+        }), ("string"));
+        assertEquals(Utils.getTypeName(new TypeReference<DynamicBytes>() {
+        }), ("bytes"));
 
         assertEquals(
                 Utils.getTypeName(
-                        new TypeReference.StaticArrayTypeReference<StaticArray<Uint>>(5) {}),
+                        new TypeReference.StaticArrayTypeReference<StaticArray<Uint>>(5) {
+                        }),
                 ("uint256[5]"));
-        assertEquals(Utils.getTypeName(new TypeReference<DynamicArray<Uint>>() {}), ("uint256[]"));
+        assertEquals(Utils.getTypeName(new TypeReference<DynamicArray<Uint>>() {
+        }), ("uint256[]"));
     }
 
     @Test

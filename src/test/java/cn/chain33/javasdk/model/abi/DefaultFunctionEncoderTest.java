@@ -12,16 +12,17 @@
  */
 package cn.chain33.javasdk.model.abi;
 
-import java.lang.reflect.InvocationTargetException;
-import java.math.BigInteger;
-import java.util.*;
-
 import cn.chain33.javasdk.model.abi.datatypes.*;
-import org.junit.jupiter.api.Test;
-
 import cn.chain33.javasdk.model.abi.datatypes.generated.Bytes10;
 import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
 import cn.chain33.javasdk.model.abi.datatypes.generated.Uint32;
+import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.InvocationTargetException;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -729,13 +730,14 @@ public class DefaultFunctionEncoderTest {
     @Test
     public void testMakeFunction()
             throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException,
-                    InstantiationException, IllegalAccessException {
+            InstantiationException, IllegalAccessException {
 
         Function expectedFunction =
                 new Function(
                         "function",
                         Arrays.asList(new Bool(true)),
-                        Arrays.asList(new TypeReference<Uint256>() {}));
+                        Arrays.asList(new TypeReference<Uint256>() {
+                        }));
 
         Function actualFunction =
                 FunctionEncoder.makeFunction(

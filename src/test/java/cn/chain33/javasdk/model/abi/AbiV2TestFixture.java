@@ -12,22 +12,12 @@
  */
 package cn.chain33.javasdk.model.abi;
 
+import cn.chain33.javasdk.model.abi.datatypes.*;
+import cn.chain33.javasdk.model.abi.datatypes.generated.*;
+
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
-
-import cn.chain33.javasdk.model.abi.datatypes.DynamicArray;
-import cn.chain33.javasdk.model.abi.datatypes.DynamicBytes;
-import cn.chain33.javasdk.model.abi.datatypes.DynamicStruct;
-import cn.chain33.javasdk.model.abi.datatypes.Function;
-import cn.chain33.javasdk.model.abi.datatypes.StaticStruct;
-import cn.chain33.javasdk.model.abi.datatypes.Type;
-import cn.chain33.javasdk.model.abi.datatypes.Utf8String;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray1;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray2;
-import cn.chain33.javasdk.model.abi.datatypes.generated.StaticArray3;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint256;
-import cn.chain33.javasdk.model.abi.datatypes.generated.Uint32;
 
 public class AbiV2TestFixture {
 
@@ -137,48 +127,60 @@ public class AbiV2TestFixture {
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
-                    FUNC_GETFOO, Arrays.<Type>asList(), Arrays.asList(new TypeReference<Foo>() {}));
+                    FUNC_GETFOO, Arrays.<Type>asList(), Arrays.asList(new TypeReference<Foo>() {
+            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooUintFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOUINT,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<Foo>() {}, new TypeReference<Uint256>() {}));
+                    Arrays.asList(new TypeReference<Foo>() {
+                    }, new TypeReference<Uint256>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooStaticArray1Function =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOSTATICARRAY1,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<StaticArray1<Foo>>() {}));
+                    Arrays.asList(new TypeReference<StaticArray1<Foo>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooStaticArray2Function =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOSTATICARRAY2,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<StaticArray2<Foo>>() {}));
+                    Arrays.asList(new TypeReference<StaticArray2<Foo>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooStaticArray3Function =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOSTATICARRAY3,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<StaticArray3<Foo>>() {}));
+                    Arrays.asList(new TypeReference<StaticArray3<Foo>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooDynamicArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOODYNAMICARRAY,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<DynamicArray<Foo>>() {}));
+                    Arrays.asList(new TypeReference<DynamicArray<Foo>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getNarBarFooNarFooDynamicArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETNARBARFOONARFOODYNAMICARRAY,
                     Arrays.<Type>asList(),
                     Arrays.asList(
-                            new TypeReference<StaticArray3<Nar>>() {},
-                            new TypeReference<StaticArray3<Bar>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {},
-                            new TypeReference<DynamicArray<Nar>>() {},
-                            new TypeReference<StaticArray3<Foo>>() {}));
+                            new TypeReference<StaticArray3<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Bar>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function idNarBarFooNarFooDynamicArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
@@ -221,23 +223,30 @@ public class AbiV2TestFixture {
                                     new AbiV2TestFixture.Foo("id", "name"),
                                     new AbiV2TestFixture.Foo("id", "name"))),
                     Arrays.asList(
-                            new TypeReference<StaticArray3<Nar>>() {},
-                            new TypeReference<StaticArray3<Bar>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {},
-                            new TypeReference<DynamicArray<Nar>>() {},
-                            new TypeReference<StaticArray3<Foo>>() {}));
+                            new TypeReference<StaticArray3<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Bar>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getBarDynamicArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETBARDYNAMICARRAY,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<DynamicArray<Bar>>() {}));
+                    Arrays.asList(new TypeReference<DynamicArray<Bar>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getBarStaticArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETBARSTATICARRAY,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<StaticArray3<Bar>>() {}));
+                    Arrays.asList(new TypeReference<StaticArray3<Bar>>() {
+                    }));
 
     @SuppressWarnings("unchecked")
     public static final cn.chain33.javasdk.model.abi.datatypes.Function setBarStaticArrayFunction =
@@ -273,29 +282,35 @@ public class AbiV2TestFixture {
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETNARDYNAMICARRAY,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<DynamicArray<Nar>>() {}));
+                    Arrays.asList(new TypeReference<DynamicArray<Nar>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getNarStaticArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETNARSTATICARRAY,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<StaticArray3<Nar>>() {}));
+                    Arrays.asList(new TypeReference<StaticArray3<Nar>>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooMultipleStaticArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOMULTIPLESTATICARRAY,
                     Arrays.<Type>asList(),
                     Arrays.asList(
-                            new TypeReference<StaticArray3<Foo>>() {},
-                            new TypeReference<StaticArray2<Foo>>() {}));
+                            new TypeReference<StaticArray3<Foo>>() {
+                            },
+                            new TypeReference<StaticArray2<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooMultipleDynamicArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOMULTIPLEDYNAMICARRAY,
                     Arrays.<Type>asList(),
                     Arrays.asList(
-                            new TypeReference<DynamicArray<Foo>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {}));
+                            new TypeReference<DynamicArray<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function idNarBarFooNarFooArraysFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
@@ -336,11 +351,16 @@ public class AbiV2TestFixture {
                                     AbiV2TestFixture.Foo.class,
                                     new AbiV2TestFixture.Foo("id", "name"))),
                     Arrays.<TypeReference<?>>asList(
-                            new TypeReference<DynamicArray<Nar>>() {},
-                            new TypeReference<StaticArray3<Bar>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {},
-                            new TypeReference<DynamicArray<Nar>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {}));
+                            new TypeReference<DynamicArray<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Bar>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Nar>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function idNarBarFooNarFooArraysFunction2 =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
@@ -384,11 +404,16 @@ public class AbiV2TestFixture {
                                     new AbiV2TestFixture.Foo("id", "name"),
                                     new AbiV2TestFixture.Foo("id", "name"))),
                     Arrays.<TypeReference<?>>asList(
-                            new TypeReference<StaticArray3<Nar>>() {},
-                            new TypeReference<DynamicArray<Bar>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {},
-                            new TypeReference<DynamicArray<Nar>>() {},
-                            new TypeReference<StaticArray3<Foo>>() {}));
+                            new TypeReference<StaticArray3<Nar>>() {
+                            },
+                            new TypeReference<DynamicArray<Bar>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function idBarNarFooNarFooArraysFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
@@ -431,19 +456,26 @@ public class AbiV2TestFixture {
                                     new AbiV2TestFixture.Foo("id", "name"),
                                     new AbiV2TestFixture.Foo("id", "name"))),
                     Arrays.<TypeReference<?>>asList(
-                            new TypeReference<StaticArray3<Bar>>() {},
-                            new TypeReference<StaticArray3<Nar>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {},
-                            new TypeReference<DynamicArray<Nar>>() {},
-                            new TypeReference<StaticArray3<Foo>>() {}));
+                            new TypeReference<StaticArray3<Bar>>() {
+                            },
+                            new TypeReference<StaticArray3<Nar>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Nar>>() {
+                            },
+                            new TypeReference<StaticArray3<Foo>>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooMultipleDynamicStaticArrayFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOMULTIPLEDYNAMICSTATICARRAY,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(
-                            new TypeReference<StaticArray3<Foo>>() {},
-                            new TypeReference<DynamicArray<Foo>>() {}));
+                            new TypeReference<StaticArray3<Foo>>() {
+                            },
+                            new TypeReference<DynamicArray<Foo>>() {
+                            }));
 
     public static class Bar extends StaticStruct {
         public BigInteger id;
@@ -475,50 +507,70 @@ public class AbiV2TestFixture {
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETBAR,
                     Arrays.<Type>asList(),
-                    Arrays.<TypeReference<?>>asList(new TypeReference<Bar>() {}));
+                    Arrays.<TypeReference<?>>asList(new TypeReference<Bar>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooBarFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOBAR,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(
-                            new TypeReference<Foo>() {}, new TypeReference<Bar>() {}));
+                            new TypeReference<Foo>() {
+                            }, new TypeReference<Bar>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooBarBarFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOBARBAR,
                     Arrays.<Type>asList(),
                     Arrays.asList(
-                            new TypeReference<Foo>() {},
-                            new TypeReference<Bar>() {},
-                            new TypeReference<Bar>() {}));
+                            new TypeReference<Foo>() {
+                            },
+                            new TypeReference<Bar>() {
+                            },
+                            new TypeReference<Bar>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFooFooBarBarFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFOOFOOBARBAR,
                     Arrays.<Type>asList(),
                     Arrays.asList(
-                            new TypeReference<Foo>() {},
-                            new TypeReference<Foo>() {},
-                            new TypeReference<Bar>() {},
-                            new TypeReference<Bar>() {}));
+                            new TypeReference<Foo>() {
+                            },
+                            new TypeReference<Foo>() {
+                            },
+                            new TypeReference<Bar>() {
+                            },
+                            new TypeReference<Bar>() {
+                            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function
             getNarBarBarFuzzFooNarFuzzNuuFooFuzzFunction =
-                    new cn.chain33.javasdk.model.abi.datatypes.Function(
-                            FUNC_GETNARBARBARFUZZFOONARFUZZNUUFOOFUZZFUNCTION,
-                            Arrays.<Type>asList(),
-                            Arrays.asList(
-                                    new TypeReference<Nar>() {},
-                                    new TypeReference<Bar>() {},
-                                    new TypeReference<Bar>() {},
-                                    new TypeReference<Fuzz>() {},
-                                    new TypeReference<Foo>() {},
-                                    new TypeReference<Nar>() {},
-                                    new TypeReference<Fuzz>() {},
-                                    new TypeReference<Nuu>() {},
-                                    new TypeReference<Foo>() {},
-                                    new TypeReference<Fuzz>() {}));
+            new cn.chain33.javasdk.model.abi.datatypes.Function(
+                    FUNC_GETNARBARBARFUZZFOONARFUZZNUUFOOFUZZFUNCTION,
+                    Arrays.<Type>asList(),
+                    Arrays.asList(
+                            new TypeReference<Nar>() {
+                            },
+                            new TypeReference<Bar>() {
+                            },
+                            new TypeReference<Bar>() {
+                            },
+                            new TypeReference<Fuzz>() {
+                            },
+                            new TypeReference<Foo>() {
+                            },
+                            new TypeReference<Nar>() {
+                            },
+                            new TypeReference<Fuzz>() {
+                            },
+                            new TypeReference<Nuu>() {
+                            },
+                            new TypeReference<Foo>() {
+                            },
+                            new TypeReference<Fuzz>() {
+                            }));
 
     public static class Baz extends DynamicStruct {
         public String id;
@@ -576,7 +628,8 @@ public class AbiV2TestFixture {
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_SETBOZ,
                     Collections.<Type>emptyList(),
-                    Arrays.<TypeReference<?>>asList(new TypeReference<Boz>() {}));
+                    Arrays.<TypeReference<?>>asList(new TypeReference<Boz>() {
+                    }));
 
     public static class Fuzz extends StaticStruct {
         public Bar bar;
@@ -624,13 +677,16 @@ public class AbiV2TestFixture {
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFUZZ,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<Fuzz>() {}));
+                    Arrays.asList(new TypeReference<Fuzz>() {
+                    }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getFuzzFuzzFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_GETFUZZFUZZ,
                     Arrays.<Type>asList(),
-                    Arrays.asList(new TypeReference<Fuzz>() {}, new TypeReference<Fuzz>() {}));
+                    Arrays.asList(new TypeReference<Fuzz>() {
+                    }, new TypeReference<Fuzz>() {
+                    }));
 
     public static class Nuu extends DynamicStruct {
         public Foo foo;
@@ -651,7 +707,8 @@ public class AbiV2TestFixture {
             new cn.chain33.javasdk.model.abi.datatypes.Function(
                     FUNC_SETNUU,
                     Collections.<Type>emptyList(),
-                    Arrays.<TypeReference<?>>asList(new TypeReference<Nuu>() {}));
+                    Arrays.<TypeReference<?>>asList(new TypeReference<Nuu>() {
+                    }));
 
     public static class Nar extends DynamicStruct {
         public Nuu nuu;
@@ -707,11 +764,13 @@ public class AbiV2TestFixture {
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getNazFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
-                    FUNC_GETNAZ, Arrays.<Type>asList(), Arrays.asList(new TypeReference<Naz>() {}));
+                    FUNC_GETNAZ, Arrays.<Type>asList(), Arrays.asList(new TypeReference<Naz>() {
+            }));
 
     public static final cn.chain33.javasdk.model.abi.datatypes.Function getNarFunction =
             new cn.chain33.javasdk.model.abi.datatypes.Function(
-                    FUNC_GETNAR, Arrays.<Type>asList(), Arrays.asList(new TypeReference<Nar>() {}));
+                    FUNC_GETNAR, Arrays.<Type>asList(), Arrays.asList(new TypeReference<Nar>() {
+            }));
 
     public static class Wiz extends DynamicStruct {
         public Foo foo;
