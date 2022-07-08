@@ -204,9 +204,9 @@ public class ERC1155Test {
         System.out.println("转账后用户B, NFT id:" + idList.get(0).getValue() + "余额：" + results.get(0).getValue());
 
         // =======>  查询指定tokenid的uri信息
-        results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("uri", Arrays.asList(idList.get(0)), Collections.singletonList(new TypeReference<Uint256>() {
+        results = client.callEVMContractReadOnlyFunc(contractAddress, new Function("uri", Arrays.asList(idList.get(0)), Collections.singletonList(new TypeReference<Utf8String>() {
         })));
-        System.out.println("转账后用户B, NFT id:" + idList.get(0).getValue() + "URI ：" + results.get(0).getValue());
+        System.out.println("转账后用户B, NFT id:" + idList.get(0).getValue() + "  URI ：" + results.get(0).getValue());
 
 
     }
