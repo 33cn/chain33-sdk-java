@@ -145,8 +145,8 @@ public class ERC1155Test {
 
         // =======>  从A地址向B地址转账,使用代扣交易
 
-        // 用户A将第1个NFT中的50个转给用户B
-        encodeParam = FunctionEncoder.encode(new Function("transferArtNFT", Arrays.asList(new AddressETH(userbAddress), idList.get(0), new Uint256(50)), Collections.emptyList()));
+        // 用户A将第1个NFT中的50个转给用户B  分两次转账
+        encodeParam = FunctionEncoder.encode(new Function("transferArtNFT", Arrays.asList(new AddressETH(userbAddress), idList.get(0), new Uint256(20)), Collections.emptyList()));
 
         // 构造转账交易体，先用用户A对此笔交易签名，
         String txEncode = EvmUtil.callEvmContractForYCC(encodeParam, contractAddress, "", 0, useraPrivateKey, paraName, 100000L);
@@ -159,13 +159,27 @@ public class ERC1155Test {
             tx.setFee(fee);
         }
 
+        //第二次转30
+        encodeParam = FunctionEncoder.encode(new Function("transferArtNFT", Arrays.asList(new AddressETH(userbAddress), idList.get(0), new Uint256(30)), Collections.emptyList()));
+
+        // 构造转账交易体，先用用户A对此笔交易签名，
+        String txEncode2 = EvmUtil.callEvmContractForYCC(encodeParam, contractAddress, "", 0, useraPrivateKey, paraName, 100000L);
+        //查看预估费用
+        long gas2 = client.queryEVMGas(paraName + "evm", txEncode2, useraAddress);
+        System.out.println("Gas2 fee is:" + gas2);
+        Transaction tx2 = new Transaction(txEncode2);
+        long fee2 = gas2 + 100000L;
+        if (fee2 > 100000L) {
+            tx2.setFee(fee2);
+        }
+
         //查看链上实时费率
         long feeRate = client.getProperFeeRate(0, 0);
         System.out.println("链上实时费率为：" + feeRate);
         if (feeRate < 100000) {
             feeRate = 100000;
         }
-        String noBalanceTx = TransactionUtil.createNoBalanceTxForYCC(tx.getTx(), withholdPrivateKey, useraPrivateKey, feeRate, paraName);
+        String noBalanceTx = TransactionUtil.createNoBalanceTxForYCC(withholdPrivateKey, useraPrivateKey, feeRate, paraName,tx.getTx(),tx2.getTx());
         System.out.println("代扣交易手续费设置为：" + new Transaction(noBalanceTx).getFee());
         String hash = client.submitTransaction(noBalanceTx);
         Thread.sleep(5000);
