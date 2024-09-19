@@ -110,6 +110,8 @@ public enum RpcMethod {
 
 	GET_PUSH_SEQ_LAST_NUM("Chain33.GetPushSeqLastNum"),
 	
+	CREATE_BIND_MINER("ticket.CreateBindMiner"),
+	
 	VERSION("Chain33.Version");
 	
 	private String method;

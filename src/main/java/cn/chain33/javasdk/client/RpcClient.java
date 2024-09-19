@@ -1716,6 +1716,33 @@ public class RpcClient {
 		}
 		return null;
 	}
+	
+	/**
+	 * 绑定挖矿地址
+	 * 
+	 * @param bindAddr
+	 * @param originAddr
+	 * @return
+	 * @throws IOException
+	 */
+	public String CreateBindMiner(String bindAddr, String originAddr) throws IOException {
+		RpcRequest postData = getPostData(RpcMethod.CREATE_BIND_MINER);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("bindAddr", bindAddr);
+		requestParam.put("originAddr", originAddr);
+		requestParam.put("amount", 0);
+		requestParam.put("checkBalance", false);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject))
+				return null;
+			String result = parseObject.getString("result");
+			return result;
+		}
+		return null;
+	}
 
 	/**
 	 * @param hash: hash
@@ -1782,6 +1809,33 @@ public class RpcClient {
 		requestParam.put("funcName", "QueryAccountsByStatus");
 		JSONObject payloadJson = new JSONObject();
 		payloadJson.put("status", status);
+		requestParam.put("payload", payloadJson);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject))
+				return null;
+			JSONObject resultJson = parseObject.getJSONObject("result");
+			return resultJson;
+		}
+		return null;
+	}
+	
+	/**
+	 * 获取绑定节点地址
+	 * 
+	 * @param addr
+	 * @return
+	 * @throws IOException
+	 */
+	public JSONObject queryMinerAddress(String addr) throws IOException {
+		RpcRequest postData = getPostData(RpcMethod.QUERY);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("execer", "ticket");
+		requestParam.put("funcName", "MinerAddress");
+		JSONObject payloadJson = new JSONObject();
+		payloadJson.put("data", addr);
 		requestParam.put("payload", payloadJson);
 		postData.addJsonParams(requestParam);
 		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
