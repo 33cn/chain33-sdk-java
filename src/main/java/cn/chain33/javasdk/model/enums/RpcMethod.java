@@ -58,6 +58,8 @@ public enum RpcMethod {
 	
 	SIGN_RAW_TRANSACTION("Chain33.SignRawTx"),
 	
+	GET_ALL_BALANCE("Chain33.GetAllExecBalance"),
+	
 	GET_TOKEN_BALANCE("token.GetTokenBalance"),
 	
 	QUERY("Chain33.Query"),

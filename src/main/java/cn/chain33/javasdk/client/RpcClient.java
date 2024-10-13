@@ -1,6 +1,7 @@
 package cn.chain33.javasdk.client;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,8 +10,10 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
 
 import cn.chain33.javasdk.model.RpcRequest;
 import cn.chain33.javasdk.model.RpcResponse;
@@ -1132,6 +1135,65 @@ public class RpcClient {
 		}
 		return null;
 	}
+	
+	/**
+	 * 创建ticket挖矿交易
+	 * 
+	 * @param to ticket合约地址
+	 * @param amount 挖矿投入金额
+	 * @param execName 合约名称："ticket"
+	 * @param exec "coins"
+	 * @return
+	 * @throws IOException
+	 */
+	public String createMinerRawTransaction(String to, Long amount, String execName, String exec) throws IOException {
+		RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TX);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("to", to);
+		requestParam.put("amount", new BigDecimal(amount));
+		requestParam.put("execName", execName);
+		requestParam.put("exec", exec);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject))
+				return null;
+			String result = parseObject.getString("result");
+			return result;
+		}
+		return null;
+	}
+	
+	/**
+	 * 创建合约提币交易
+	 * 
+	 * @param to ticket合约地址
+	 * @param amount 挖矿投入金额
+	 * @param execName 合约名称："ticket"
+	 * @param exec "coins"
+	 * @return
+	 * @throws IOException
+	 */
+	public String createWithdrawRawTransaction(String to, Long amount, String execName, String exec) throws IOException {
+		RpcRequest postData = getPostData(RpcMethod.TOKEN_CREATE_RAW_TX);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("to", to);
+		requestParam.put("amount", new BigDecimal(amount));
+		requestParam.put("isWithdraw", true);
+		requestParam.put("execName", execName);
+		requestParam.put("exec", exec);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject))
+				return null;
+			String result = parseObject.getString("result");
+			return result;
+		}
+		return null;
+	}
 
 	/**
 	 * @param txHex:   由上一步的createRawTx生成的交易再传入（比如，CreateRawTokenPreCreateTx：token预创建；CreateRawTokenFinishTx：token完成；CreateRawTransaction：转移token）
@@ -1219,6 +1281,44 @@ public class RpcClient {
 			List<AccountAccResult> javaList = resultArray.toJavaList(AccountAccResult.class);
 			return javaList;
 		}
+		return null;
+	}
+	
+	/**
+	 * 查询地址下ticket的资产
+	 * 
+	 * @param addresses
+	 * @return
+	 * @throws IOException
+	 */
+	public AccountAccResult getTicketBalance(String addresses) throws IOException {
+		RpcRequest postData = getPostData(RpcMethod.GET_ALL_BALANCE);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("addr", addresses);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject)) {
+				return null;
+			}
+			// 获取"result"对象
+	        JSONObject resultObj = parseObject.getJSONObject("result");
+	        // 获取"execAccount"数组
+	        JSONArray execAccountArray = resultObj.getJSONArray("execAccount");
+	        if (execAccountArray == null) {
+	        	return null;
+	        }
+	        // 遍历数组找到execer为"ticket"的account对象
+	        for (int i = 0; i < execAccountArray.size(); i++) {
+	            JSONObject execAccount = execAccountArray.getJSONObject(i);
+	            if ("ticket".equals(execAccount.getString("execer"))) {
+	                // 假设AccountAccResult类中有对应的getter方法来创建Account对象
+	            	AccountAccResult ticketAccount = JSON.parseObject(execAccount.getString("account"), new TypeReference<AccountAccResult>() {});
+	                return ticketAccount;
+	            }
+	        }
+	    }
 		return null;
 	}
 
