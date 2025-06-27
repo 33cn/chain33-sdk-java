@@ -1843,6 +1843,34 @@ public class RpcClient {
 		}
 		return null;
 	}
+	
+	/**
+	 * 获取节点下票数
+	 * 
+	 * @param bindAddr
+	 * @return
+	 * @throws IOException
+	 */
+	public JSONObject getTicketList(String bindAddr) throws IOException {
+		RpcRequest postData = getPostData(RpcMethod.QUERY);
+		JSONObject requestParam = new JSONObject();
+		requestParam.put("execer", "ticket");
+		requestParam.put("funcName", "TicketList");
+		JSONObject payloadJson = new JSONObject();
+		payloadJson.put("addr", bindAddr);
+		payloadJson.put("status", 1);
+		requestParam.put("payload", payloadJson);
+		postData.addJsonParams(requestParam);
+		String requestResult = HttpUtil.httpPost(getUrl(), postData.toJsonString());
+		if (StringUtil.isNotEmpty(requestResult)) {
+			JSONObject parseObject = JSONObject.parseObject(requestResult);
+			if (messageValidate(parseObject))
+				return null;
+			JSONObject resultJson = parseObject.getJSONObject("result");
+			return resultJson;
+		}
+		return null;
+	}
 
 	/**
 	 * @param hash: hash
